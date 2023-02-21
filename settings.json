@@ -1,0 +1,21 @@
+{
+  "port": 3000,
+  "database": {
+    "instance": "sqlite3",
+    "name": "database.db",
+    "schema": {
+      "location": "db",
+      "filename": "schema.json"
+    },
+    "migrations": {
+      "location": "db",
+      "filename": "migrate.js"
+    }
+  },
+  "routers": {
+    "location": "routers"
+  },
+  "models": {
+    "location": "models"
+  }
+}

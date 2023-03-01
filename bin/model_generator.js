@@ -2,10 +2,10 @@
 // npm run model:generate Animal legs:number eyes:number name:string
 // """
 
-import { writeFileSync, appendFileSync, existsSync } from "fs";
+import { writeFileSync, appendFileSync, existsSync, mkdirSync } from "fs";
 import { join } from "path";
 import "./string_utils.js";
-import { COLUMN_TYPES, CONSTRAINTS } from "./constants.js";
+import { SQLITE_COLUMN_TYPES, SQLITE_COLUMN_CONSTRAINTS } from "./constants.js";
 import {
   GeneratorError,
   InvalidColumnConstraintError,
@@ -18,7 +18,12 @@ import settings from "./settings.js";
 const argvs = process.argv.slice(2);
 const [modelName, ...args] = argvs;
 const attributesObj = {};
-const file = join(".", settings.models.location, `${modelName}.js`);
+const folderName = join(".", settings.models.location);
+const file = join(folderName, `${modelName}.js`);
+
+if (!existsSync(folderName)) {
+  mkdirSync(folderName);
+}
 
 if (existsSync(file)) {
   throw new GeneratorError(`Model '${modelName}' already exists in '${file}'`);
@@ -31,13 +36,13 @@ if (!modelName || args.length === 0) {
 try {
   args.forEach((arg) => {
     const [attributeName, dataType, ...constraints] = arg.trim().split(":");
-    if (!(dataType.trim().toUpperCase() in COLUMN_TYPES)) {
+    if (!(dataType.trim().toUpperCase() in SQLITE_COLUMN_TYPES)) {
       throw new InvalidDataTypeError(
         `Unknown data type provided for column '${attributeName}': '${dataType}'`
       );
     }
     attributesObj[attributeName.trim()] = {
-      type: COLUMN_TYPES[dataType.trim().toUpperCase()],
+      type: SQLITE_COLUMN_TYPES[dataType.trim().toUpperCase()],
       constraints,
     };
   });
@@ -64,7 +69,7 @@ export default ${modelName}
   );
 
   // Add migration
-  const allConstraints = Object.keys(CONSTRAINTS);
+  const allConstraints = Object.keys(SQLITE_COLUMN_CONSTRAINTS);
   const dbColumns = Object.entries(attributesObj)
     .map(([columnName, columnData]) => {
       const dbColumnConstraints = columnData.constraints
@@ -74,7 +79,9 @@ export default ${modelName}
               `Invalid column constraint provided for column: '${constraint}'`
             );
           }
-          return `.withConstraint("${CONSTRAINTS[constraint.toUpperCase()]}")`;
+          return `.withConstraint("${
+            SQLITE_COLUMN_CONSTRAINTS[constraint.toUpperCase()]
+          }")`;
         })
         .join(" ");
       return `new Column("${columnName}", "${columnData.type.capitalize()}")${

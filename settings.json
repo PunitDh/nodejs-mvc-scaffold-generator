@@ -1,5 +1,6 @@
 {
   "port": 3000,
+  "api": false,
   "database": {
     "instance": "sqlite3",
     "name": "database.db",
@@ -17,5 +18,8 @@
   },
   "models": {
     "location": "models"
+  },
+  "views": {
+    "location": "views"
   }
 }

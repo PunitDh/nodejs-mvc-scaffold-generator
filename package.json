@@ -11,6 +11,8 @@
     "db:migrate": "chmod u+x ./bin/db_migrate.sh && ./bin/db_migrate.sh",
     "model:generate": "node ./bin/model_generator.js",
     "router:generate": "node ./bin/router_generator.js",
+    "views:generate": "node ./bin/views_generator.js",
+    "scaffold:generate": "chmod u+x ./bin/scaffold_generate.sh && ./bin/scaffold_generate.sh",
     "auth:generate": "node ./bin/auth_generator.js",
     "test": "node test.js"
   },

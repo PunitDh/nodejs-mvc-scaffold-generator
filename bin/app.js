@@ -10,13 +10,12 @@ import ejs from "ejs";
 import path from "path";
 
 config();
-app.engine('html', ejs.renderFile);
-app.set('view engine', 'html');
-// app.set('views', path.join(".", "views"));
+app.engine("html", ejs.renderFile);
+app.set("view engine", "html");
 app.set("view engine", "ejs");
-app.use(express.static(path.join(".", "views")));
+app.use(express.static(path.join(".", settings.views.location)));
 app.use(json());
-app.use(express.urlencoded())
+app.use(express.urlencoded());
 app.use(routeLogger);
 app.use("/", appRouter);
 // app.use(dbErrorHandler);

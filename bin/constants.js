@@ -1,4 +1,4 @@
-export const COLUMN_TYPES = {
+export const SQLITE_COLUMN_TYPES = {
   INT: "INTEGER",
   INTEGER: "INTEGER",
   TINYINT: "INTEGER",
@@ -62,7 +62,7 @@ export const TERMINAL_COLORS = {
   BgGray: "\x1b[100m",
 };
 
-export const CONSTRAINTS = {
+export const SQLITE_COLUMN_CONSTRAINTS = {
   PRIMARY_KEY: "PRIMARY KEY",
   AUTOINCREMENT: "AUTOINCREMENT",
   NOT_NULL: "NOT NULL",
@@ -70,5 +70,15 @@ export const CONSTRAINTS = {
   DEFAULT: "DEFAULT",
   PRIMARYKEY: "PRIMARY KEY",
   AUTO_INCREMENT: "AUTOINCREMENT",
-  NOTNULL: "NOT NULL"
-}
+  NOTNULL: "NOT NULL",
+};
+
+export const HTMLInputTypes = {
+  NUMERIC: "number",
+  INTEGER: "number",
+  TEXT: "text",
+  BLOB: "file",
+  REAL: "text",
+  NULL: "hidden",
+  BOOLEAN: "checkbox",
+};

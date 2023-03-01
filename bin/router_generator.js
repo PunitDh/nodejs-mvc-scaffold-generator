@@ -13,7 +13,6 @@ import { join } from "path";
 import { GeneratorError, UnknownModelError } from "./errors.js";
 import "pluralizer";
 import SETTINGS from "./settings.js";
-import settings from "./settings.js";
 
 const argvs = process.argv.slice(2);
 const modelName = argvs[0];
@@ -28,16 +27,16 @@ if (existsSync(file))
     `Router for model '${modelName}' already exists in '${file}'`
   );
 
-if (!existsSync(join(".", settings.models.location, `${modelName}.js`))) {
+if (!existsSync(join(".", SETTINGS.models.location, `${modelName}.js`))) {
   throw new UnknownModelError(`Unknown model: '${modelName}'`);
 }
 
 try {
   writeFileSync(
     file,
-    settings.api
+    SETTINGS.api
       ? `import { Router } from "express";
-import ${modelName} from "../${settings.models.location}/${modelName}.js";
+import ${modelName} from "../${SETTINGS.models.location}/${modelName}.js";
 const ${routeName} = Router();
 
 ${routeName}.get("/", async (_, res) => {
@@ -91,7 +90,7 @@ export default ${routeName};
   `
       : `
 import { Router } from "express";
-import ${modelName} from "../${settings.models.location}/${modelName}.js";
+import ${modelName} from "../${SETTINGS.models.location}/${modelName}.js";
 const ${routeName} = Router();
 
 ${routeName}.get("/", async (_, res) => {

@@ -1,14 +1,14 @@
 import { readFileSync, writeFileSync } from "fs";
 import DB from "./db.js";
 import { join } from "path";
-import settings from "./settings.js";
+import SETTINGS from "./settings.js";
 import LOGGER from "./logger.js";
 
 (function schemaWriter() {
   const schemaFile = join(
     ".",
-    settings.database.schema.location,
-    settings.database.schema.filename
+    SETTINGS.database.schema.location,
+    SETTINGS.database.schema.filename
   );
   const schema = JSON.parse(readFileSync(schemaFile));
   const schemaTables = Object.keys(schema);
@@ -20,7 +20,6 @@ import LOGGER from "./logger.js";
 
     schemaTables.forEach((schemaTable) => {
       if (!tableNames.includes(schemaTable)) {
-        console.log(`${schemaTable} not in tableNames`);
         delete schema[schemaTable];
         writeFileSync(schemaFile, JSON.stringify(schema, null, 2));
       }

@@ -46,10 +46,13 @@ Folder Structure
 The generated scaffold follows a standard MVC folder structure, as follows:
 
 ```
-├── controllers
+├── routers
 │   └── people.js
-├── database
-│   └── database.sqlite
+├── instance
+│   └── database.db
+├── db
+│   └── migrations.js
+│   └── schema.json
 ├── models
 │   └── person.js
 ├── views
@@ -61,7 +64,7 @@ The generated scaffold follows a standard MVC folder structure, as follows:
 │   │   └── flash_messages.ejs
 │   ├── error.ejs
 │   └── layout.ejs
-├── app.js
+├── index.js
 └── package.json
 ```
 

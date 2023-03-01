@@ -114,7 +114,9 @@ ${columns
       inputType === "checkbox" ? `checked="false"` : ``
     } name="${column.name}" ${
       inputType !== "checkbox" && `class="form-control"`
-    } id="${column.name}" placeholder="Enter ${column.name}" autocomplete="off">
+    } id="${
+      column.name
+    }" placeholder="Enter ${column.name.capitalize()}" autocomplete="off">
             </div>
           `;
   })

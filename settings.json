@@ -10,7 +10,7 @@
     },
     "migrations": {
       "location": "db",
-      "filename": "migrate.js"
+      "filename": "migrations.js"
     }
   },
   "routers": {

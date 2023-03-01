@@ -4,7 +4,6 @@ const app = express();
 import settings from "./settings.js";
 import LOGGER from "./logger.js";
 import { routeLogger } from "./logger.js";
-import dbErrorHandler from "./errorhandler.js";
 import { config } from "dotenv";
 import ejs from "ejs";
 import path from "path";
@@ -18,7 +17,6 @@ app.use(json());
 app.use(express.urlencoded());
 app.use(routeLogger);
 app.use("/", appRouter);
-// app.use(dbErrorHandler);
 
 app.listen(settings.port, () =>
   LOGGER.info("Server started on port", settings.port)

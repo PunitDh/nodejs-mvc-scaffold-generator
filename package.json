@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "setup": "chmod u+x ./bin/*",
+    "setup": "chmod u+x ./bin/setup.sh && ./bin/setup.sh",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "db:migrate": "chmod u+x ./bin/db_migrate.sh && ./bin/db_migrate.sh",

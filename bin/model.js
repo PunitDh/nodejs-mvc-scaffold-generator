@@ -27,35 +27,13 @@ class Model {
   }
 
   static async all() {
-    const sqlQuery = `SELECT * FROM ${this.__tablename__};`;
-    const _Model = this.prototype.constructor;
-    return new Promise(function (resolve, reject) {
-      LOGGER.query(sqlQuery);
-      DB.all(sqlQuery, function (err, rows) {
-        if (err) {
-          LOGGER.error(err);
-          return reject(err);
-        }
-        const constructed = rows.map((row) => new _Model(row));
-        return resolve(constructed);
-      });
-    });
+    const query = `SELECT * FROM ${this.__tablename__};`;
+    return await this.databaseOperation(query);
   }
 
   static async find(id) {
-    const sqlQuery = `SELECT * FROM ${this.__tablename__} WHERE id=$id;`;
-    const _Model = this.prototype.constructor;
-    return new Promise(function (resolve, reject) {
-      LOGGER.query(sqlQuery);
-      DB.all(sqlQuery, [id], function (err, rows) {
-        if (err) {
-          LOGGER.error(err);
-          return reject(err);
-        }
-        const constructed = rows.map((row) => new _Model(row));
-        return resolve(constructed.length > 0 ? constructed[0] : {});
-      });
-    });
+    const query = `SELECT * FROM ${this.__tablename__} WHERE id=$id;`;
+    return await this.databaseOperation(query, [id], true);
   }
 
   static async findBy(obj) {
@@ -64,161 +42,92 @@ class Model {
   }
 
   static async search(searchTerm) {
-    ////////////////
-    const columns = await this.__columns__;
-    const columnNames = columns
+    const columnNames = (await this.__columns__)
       .filter((column) => !SearchExcludedColumns.includes(column.name))
       .map((column) => `${column.name} LIKE '%${searchTerm}%'`);
-    const sqlQuery = `SELECT * FROM ${
-      this.__tablename__
-    } WHERE ${columnNames.join(" OR ")};`;
-    const _Model = this.prototype.constructor;
-    return new Promise(function (resolve, reject) {
-      LOGGER.query(sqlQuery);
-      DB.all(sqlQuery, [], function (err, rows) {
-        if (err) {
-          LOGGER.error(err);
-          return reject(err);
-        }
-        const constructed = rows.map((row) =>
-          new _Model(row)
-        );
-        return resolve(constructed);
-      });
-    });
+    const query = `SELECT * FROM ${this.__tablename__} WHERE ${columnNames.join(
+      " OR "
+    )};`;
+    return await this.databaseOperation(query);
   }
 
   static async exists(id) {
-    const sqlQuery = `SELECT COUNT(id) FROM ${this.__tablename__} WHERE id=$id;`;
-    return new Promise(function (resolve, reject) {
-      LOGGER.query(sqlQuery);
-      DB.all(sqlQuery, [id], function (err, rows) {
-        const count = Object.values(rows[0])[0];
-        if (err) {
-          LOGGER.error(err);
-          return reject(err);
-        }
-        return resolve(count >= 1);
-      });
-    });
+    const query = `SELECT * FROM ${this.__tablename__} WHERE id=$id;`;
+    const result = await this.databaseOperation(query, [id]);
+    return result.length > 0;
   }
 
   static async create(object) {
     const columns = Object.keys(object);
-    const values = Object.values(object);
-    const valueString = columns.map((column) => `$${column}`).join(", ");
-    const _Model = this.prototype.constructor;
     const datetime = parseInt(new Date().getTime());
-    const sqlQuery = `INSERT INTO ${this.__tablename__} (${columns.join(
+    const values = [...Object.values(object), datetime];
+    const valueString = columns.map((column) => `$${column}`).join(", ");
+    const query = `INSERT INTO ${this.__tablename__} (${columns.join(
       ","
     )}, created_at, updated_at) VALUES (${valueString}, $datetime, $datetime) RETURNING *;`;
-    LOGGER.query(sqlQuery);
-    return new Promise(function (resolve, reject) {
-      DB.all(sqlQuery, [...values, datetime], function (err, rows) {
-        if (err) {
-          LOGGER.error(err);
-          return reject(err);
-        }
-        const constructed = rows.map((row) => new _Model(row));
-        return resolve(constructed.length > 0 ? constructed[0] : {});
-      });
-    });
+    return await this.databaseOperation(query, values, true);
   }
 
   static async update(id, object) {
     const columns = Object.keys(object);
-    const values = Object.values(object);
-    const _Model = this.prototype.constructor;
+    const datetime = parseInt(new Date().getTime());
+    const values = [...Object.values(object), datetime, id];
     const valueString = columns
       .map((column) => `${column}=$${column}`)
       .join(", ");
-    const datetime = parseInt(new Date().getTime());
-    const sqlQuery = `UPDATE ${this.__tablename__} SET ${valueString}, updated_at=$datetime WHERE id=$id RETURNING *;`;
-    LOGGER.query(sqlQuery);
-    return new Promise(function (resolve, reject) {
-      DB.all(sqlQuery, [...values, datetime, id], function (err, rows) {
-        if (err) {
-          LOGGER.error(err);
-          return reject(err);
-        }
-        const constructed = rows.map((row) => new _Model(row));
-        return resolve(constructed.length > 0 ? constructed[0] : {});
-      });
-    });
+    const query = `UPDATE ${this.__tablename__} SET ${valueString}, updated_at=$datetime WHERE id=$id RETURNING *;`;
+    return await this.databaseOperation(query, values, true);
   }
 
   static async where(obj) {
     const valueString = Object.keys(obj)
       .map((column) => `${column}=$${column}`)
       .join(" AND ");
-    const sqlQuery = `SELECT * FROM ${this.__tablename__} WHERE ${valueString};`;
-    const _Model = this.prototype.constructor;
-    return new Promise(function (resolve, reject) {
-      LOGGER.query(sqlQuery);
-      DB.all(sqlQuery, Object.values(obj), function (err, rows) {
-        if (err) {
-          LOGGER.error(err);
-          return reject(err);
-        }
-        const constructed = rows.map((row) => new _Model(row));
-        return resolve(constructed);
-      });
-    });
+    const query = `SELECT * FROM ${this.__tablename__} WHERE ${valueString};`;
+    return await this.databaseOperation(query, Object.values(obj));
   }
 
   static async delete(id) {
-    const sqlQuery = `DELETE FROM ${this.__tablename__} WHERE id=$0 RETURNING *;`;
-    const _Model = this.prototype.constructor;
-    LOGGER.query(sqlQuery);
-    return new Promise(function (resolve, reject) {
-      DB.all(sqlQuery, [id], function (err, rows) {
-        if (err) {
-          LOGGER.error(err);
-          return reject(err);
-        }
-        const constructed = rows.map((row) => new _Model(row));
-        return resolve(constructed.length > 0 ? constructed[0] : {});
-      });
-    });
+    const query = `DELETE FROM ${this.__tablename__} WHERE id=$0 RETURNING *;`;
+    return await this.databaseOperation(query, [id], true);
   }
 
   async save() {
-    const _Model = this.constructor;
+    const dateTime = parseInt(new Date().getTime());
     const columns = Object.keys(this).filter(
       (column) => !ReadOnlyColumns.includes(column)
     );
     const colString = columns
       .map((column) => `${column}=$${column}`)
       .join(", ");
-    const values = columns.map((column) => this[column]);
-    values.push(parseInt(new Date().getTime()));
-    values.push(this.id);
-    const sqlQuery = `UPDATE ${_Model.__tablename__} SET ${colString}, updated_at=$updated_at WHERE id=$id RETURNING *;`;
-    LOGGER.query(sqlQuery);
-    return new Promise((resolve, reject) => {
-      DB.all(sqlQuery, values, function (err, rows) {
-        if (err) {
-          LOGGER.error(err);
-          return reject(err);
-        }
-        const constructed = rows.map((row) => new _Model(row));
-        return resolve(constructed.length > 0 ? constructed[0] : {});
-      });
-    });
+    const query = `UPDATE ${this.constructor.__tablename__} SET ${colString}, updated_at=$updated_at WHERE id=$id RETURNING *;`;
+    const values = [
+      ...columns.map((column) => this[column]),
+      dateTime,
+      this.id,
+    ];
+    return await this.constructor.databaseOperation(query, values, true);
   }
 
   async delete() {
-    const _Model = this.constructor;
-    const sqlQuery = `DELETE FROM ${this.constructor.__tablename__} WHERE id=$id RETURNING *;`;
-    LOGGER.query(sqlQuery);
-    return new Promise((resolve, reject) => {
-      DB.all(sqlQuery, [this.id], function (err, rows) {
+    const query = `DELETE FROM ${this.constructor.__tablename__} WHERE id=$id RETURNING *;`;
+    return await this.constructor.databaseOperation(query, [this.id]);
+  }
+
+  static databaseOperation(query, values = [], singular = false) {
+    const _Model = this.prototype.constructor;
+    return new Promise(function (resolve, reject) {
+      LOGGER.query(query);
+      DB.all(query, values, function (err, rows) {
         if (err) {
           LOGGER.error(err);
           return reject(err);
         }
-        const constructed = rows.map((row) => new _Model(row));
-        return resolve(constructed.length > 0 ? constructed[0] : {});
+        const result = rows.map((row) => new _Model(row));
+
+        return singular
+          ? resolve(result.length > 0 ? result[0] : {})
+          : resolve(result);
       });
     });
   }

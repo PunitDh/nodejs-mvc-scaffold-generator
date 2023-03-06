@@ -23,10 +23,10 @@
     "location": "views",
     "pages": {
       "form": {
-        "excludedFields": ["id", "created_at", "updated_at"]
+        "excludedFields": ["id", "created_at", "updated_at", "_csrf_token"]
       },
       "index": {
-        "excludedFields": ["id"]
+        "excludedFields": ["id", "_csrf_token"]
       },
       "create": {},
       "edit": {}

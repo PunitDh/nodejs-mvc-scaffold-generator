@@ -1,0 +1,12 @@
+
+await Migrations(
+  new Migration(
+    new Table("{{tableName}}")
+      .withColumns(
+        {{#columns}}
+        new Column("{{name}}", "{{type}}"){{#constraints}}.withConstraint("{{.}}"){{/constraints}}{{#references}}{{#column}}.withForeignKey("{{table}}", "{{column}}"){{/column}}{{^column}}.withForeignKey("{{table}}"){{/column}}{{/references}},
+        {{/columns}}
+      )
+      .create()
+  )
+).run();

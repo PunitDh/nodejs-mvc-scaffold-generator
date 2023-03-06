@@ -1,0 +1,18 @@
+<% if (create) { %>
+<form action="/{{router}} %>" method="POST">
+<% } else { %>
+<form action="/{{router}}/edit/<%= {{singular}}.id %>" method="POST">
+<% } %>
+  {{#formColumns}}
+  <div class="form-group d-flex row mb-2">
+    <label for="{{name}}" class="form-label">
+      <div class="mb-2">{{Name}}</div>
+      <input type="{{input.type}}" value="<%= create ? '' : {{singular}}.{{name}} %>" name="{{name}}" {{checked}} class="{{input.class}} form-control" id="{{name}}" placeholder="Enter {{Name}}" autocomplete="off">
+    </label>
+  </div>
+  {{/formColumns}}
+  <div class="form-group mb-2">
+    <button type="submit" class="btn btn-primary"><%= page %> {{model}}</button>
+    <a href="/{{router}}" class="btn btn-danger">Back</a>
+  </div>
+</form>

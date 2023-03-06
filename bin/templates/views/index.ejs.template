@@ -1,0 +1,36 @@
+<%- include('./_head.ejs') %>
+  <div class="container mt-4">
+    <h1>{{heading}}</h1>
+    <table class="table mb-4">
+      <thead>
+        {{#indexColumns}}
+        <th>{{Name}}</th>
+        {{/indexColumns}}
+        <th colspan="2">Actions</th>
+      </thead>
+      <tbody>
+        <% for (const it of {{router}}) { %>
+        <tr>
+          {{#indexColumns}}
+            {{#date}}
+          <td><%= formatDate(it.{{name}}) %></td>
+            {{/date}}
+            {{^date}}
+          <td><%= it.{{name}} %></td>
+            {{/date}}
+          {{/indexColumns}}
+          <td><a href="/{{router}}/edit/<%= it.id %>" class="btn btn-success">Edit</a></td>
+          <td>
+            <form action="/{{router}}/delete/<%= it.id %>" method="POST">
+              <button type="submit" class="btn btn-danger">
+                Delete
+              </button>
+            </form>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <a href="/{{router}}/create" class="btn btn-primary">New {{model}}</a>
+  </div>
+  <%- include('../_layouts/_tail.ejs') %>

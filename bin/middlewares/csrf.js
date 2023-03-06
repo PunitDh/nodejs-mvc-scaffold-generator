@@ -1,14 +1,15 @@
-import { v4 as uuid } from "uuid";
 import { UnauthorizedRequestError } from "../errors.js";
-
-let token = uuid();
+import { uuid } from "../utils/uuid.js";
 
 function csrf(req, res, next) {
+  const token = uuid();
+  req._csrf = token;
   if (req.method.toUpperCase() === "GET") {
     res.locals._csrf = token;
     next();
-  } else if (req.body._csrf !== token) {
-    res.sendStatus(401);
+  } else if (req.body._csrf !== req._csrf) {
+    console.log(req.body._csrf, req._csrf)
+    res.status(401).send("Unauthorized access: CSRF tokens do not match");
     throw new UnauthorizedRequestError(
       "Unauthorized access: CSRF tokens do not match"
     );

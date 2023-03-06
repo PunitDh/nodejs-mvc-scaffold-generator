@@ -17,7 +17,7 @@ async function authorize(req, res, next) {
     res.locals.currentUser = decoded;
     next();
   } catch (e) {
-    res.status(401).cookie("app", "").redirect("/users/login");
+    res.status(401).clearCookie("app").redirect("/users/login");
   }
 }
 

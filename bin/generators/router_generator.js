@@ -45,7 +45,7 @@ const apiTemplate = readFileSync(templateDirectory, "api.js.template");
 const viewsTemplate = readFileSync(templateDirectory, "views.js.template");
 
 const templateProps = {
-  model,
+  model: model.toLowerCase(),
   Model: model.capitalize(),
   route,
   location: SETTINGS.models.location,

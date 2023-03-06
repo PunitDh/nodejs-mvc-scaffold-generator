@@ -1,0 +1,3 @@
+
+import {{route}} from "./routers/{{route}}.js";
+app.use("/{{route}}", {{route}});

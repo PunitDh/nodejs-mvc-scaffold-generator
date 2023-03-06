@@ -1,7 +1,7 @@
 import sqlite3 from "sqlite3";
 import { join } from "path";
 import LOGGER from "./logger.js";
-import settings from "./settings.js";
+import settings from "./utils/settings.js";
 sqlite3.verbose();
 
 let DB;

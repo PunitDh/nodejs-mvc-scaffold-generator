@@ -1,0 +1,6 @@
+<%- include('./_head.ejs') %>
+  <div class="container mt-4">
+    <h1>{{page}} {{model}}</h1>
+    <%- include ('./_form.ejs', { create: false, page: "{{page}}" }) %>
+  </div>
+<%- include('../_layouts/_tail.ejs') %>

@@ -1,0 +1,71 @@
+import { Router } from "express";
+import {{Model}} from "../{{location}}/{{Model}}.js";
+const {{route}} = Router();
+
+{{route}}.get("/", async (_, res) => {
+  try {
+    const {{route}} = await {{Model}}.all();
+    res.render("{{route}}/index", { {{route}} });
+  } catch (e) {
+    return res.status(400).send(e.message);
+  }
+});
+
+{{route}}.get("/create", async (_, res) => {
+  try {
+    res.render("{{route}}/create");
+  } catch (e) {
+    return res.status(400).send(e.message);
+  }
+});
+
+{{route}}.get("/edit/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const {{model}} = (await {{Model}}.find(id))[0];
+    return res.render("{{route}}/edit", { {{model}} });
+  } catch (e) {
+    return res.status(400).send(e.message);
+  }
+});
+
+{{route}}.post("/edit/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    await {{Model}}.update(id, req.body);
+    return res.redirect("/{{route}}");
+  } catch (e) {
+    return res.status(400).send(e.message);
+  }
+});
+
+{{route}}.post("/delete/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    await {{Model}}.delete(id);
+    return res.redirect("/{{route}}");
+  } catch (e) {
+    return res.status(400).send(e.message);
+  }
+});
+
+{{route}}.get("/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const {{model}} = await {{Model}}.find(id);
+    return res.status(200).send({{model}});
+  } catch (e) {
+    return res.status(400).send(e.message);
+  }
+});
+
+{{route}}.post("/", async (req, res) => {
+  try {
+    await {{Model}}.create(req.body);
+    return res.redirect("/{{route}}");
+  } catch (e) {
+    return res.status(400).send(e.message);
+  }
+});
+
+export default {{route}};

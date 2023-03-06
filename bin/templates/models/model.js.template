@@ -1,0 +1,12 @@
+import Model from '../bin/model.js'
+
+class {{model}} extends Model {
+  constructor(data) {
+    super(data);
+    {{#columns}}
+    this.{{.}} = data.{{.}};
+    {{/columns}}
+  }
+}
+
+export default {{model}};

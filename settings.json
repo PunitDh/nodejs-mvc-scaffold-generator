@@ -20,6 +20,16 @@
     "location": "models"
   },
   "views": {
-    "location": "views"
+    "location": "views",
+    "pages": {
+      "form": {
+        "excludedFields": ["id", "created_at", "updated_at"]
+      },
+      "index": {
+        "excludedFields": ["id"]
+      },
+      "create": {},
+      "edit": {}
+    }
   }
 }

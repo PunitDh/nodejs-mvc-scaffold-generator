@@ -89,21 +89,35 @@ export class Table {
   }
 
   dropColumn(column) {
+    // DO NOT USE
     return `ALTER TABLE ${this.name} DROP COLUMN ${column}`;
   }
 
   create() {
-    const columnsClause = this.columns
-      .map(
-        (column) =>
-          `${column.name} ${column.type} ${
-            column.constraints
-              ?.map((constraint) => constraint.type)
-              .join(" ") || ""
-          }`
-      )
-      .join(", ");
-    return `CREATE TABLE IF NOT EXISTS ${this.name} (id INTEGER PRIMARY KEY AUTOINCREMENT, ${columnsClause})`;
+    const columns = this.columns.map(
+      (column) =>
+        `${column.name} ${column.type} ${
+          column.constraints?.map((constraint) => constraint.type).join(" ") ||
+          ""
+        }`
+    );
+    let columnClauses = [
+      "id INTEGER PRIMARY KEY AUTOINCREMENT",
+      ...columns,
+      "created_at NUMERIC",
+      "updated_at NUMERIC",
+    ];
+    const foreignKey = this.columns.map(
+      (column) =>
+        column.reference &&
+        `FOREIGN KEY(${column.name}) REFERENCES ${
+          column.reference.referenceTable
+        }(${column.reference.referenceColumn || "id"})`
+    ).filter(col => Boolean(col));
+    if (foreignKey) {
+      columnClauses = [...columnClauses, ...foreignKey];
+    }
+    return `CREATE TABLE IF NOT EXISTS ${this.name} (${columnClauses.join(", ")})`;
   }
 }
 
@@ -120,6 +134,7 @@ export class Column {
       );
     }
     this.constraints = [];
+    this.reference = null;
   }
 
   addConstraint(constraint) {
@@ -129,6 +144,15 @@ export class Column {
 
   withConstraint(constraint) {
     return this.addConstraint(constraint);
+  }
+
+  addForeignKey(table, column) {
+    this.reference = new ForeignKey(table, column);
+    return this;
+  }
+
+  withForeignKey(table, column) {
+    return this.addForeignKey(table, column);
   }
 }
 
@@ -141,5 +165,12 @@ export class Constraint {
         `Invalid column constraint provided for column: '${type}'`
       );
     }
+  }
+}
+
+export class ForeignKey {
+  constructor(referenceTable, referenceColumn) {
+    this.referenceTable = referenceTable;
+    this.referenceColumn = referenceColumn;
   }
 }

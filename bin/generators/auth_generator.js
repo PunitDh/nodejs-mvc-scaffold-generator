@@ -4,16 +4,16 @@
 
 import { writeFileSync, appendFileSync, existsSync } from "fs";
 import { join } from "path";
-import "./string_utils.js";
-import { SQLITE_COLUMN_TYPES, SQLITE_COLUMN_CONSTRAINTS } from "./constants.js";
+import "../utils/string_utils.js";
+import { SQLITE_COLUMN_TYPES, SQLITE_COLUMN_CONSTRAINTS } from "../constants.js";
 import {
   GeneratorError,
   InvalidColumnConstraintError,
   InvalidDataTypeError,
-} from "./errors.js";
-import LOGGER from "./logger.js";
-import SETTINGS from "./settings.js";
-import settings from "./settings.js";
+} from "../errors.js";
+import LOGGER from "../logger.js";
+import SETTINGS from "../utils/settings.js";
+import settings from "../utils/settings.js";
 
 const argvs = process.argv.slice(2);
 const [modelName, ...args] = argvs;

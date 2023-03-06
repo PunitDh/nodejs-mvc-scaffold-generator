@@ -64,13 +64,13 @@ export const TERMINAL_COLORS = {
 
 export const SQLITE_COLUMN_CONSTRAINTS = {
   PRIMARY_KEY: "PRIMARY KEY",
-  AUTOINCREMENT: "AUTOINCREMENT",
+  AUTO_INCREMENT: "AUTOINCREMENT",
   NOT_NULL: "NOT NULL",
   UNIQUE: "UNIQUE",
   DEFAULT: "DEFAULT",
+  AUTOINCREMENT: "AUTOINCREMENT",
   PRIMARYKEY: "PRIMARY KEY",
-  AUTO_INCREMENT: "AUTOINCREMENT",
-  NOTNULL: "NOT NULL",
+  NOTNULL: "NOT NULL"
 };
 
 export const HTMLInputTypes = {
@@ -82,3 +82,7 @@ export const HTMLInputTypes = {
   NULL: "hidden",
   BOOLEAN: "checkbox",
 };
+
+export const ReadOnlyColumns = ["id", "created_at", "updated_at"];
+
+export const SearchExcludedColumns = ["id", "created_at", "updated_at", "password"];

@@ -2,69 +2,69 @@ import { Router } from "express";
 import {{Model}} from "../{{location}}/{{Model}}.js";
 const {{route}} = Router();
 
-{{route}}.get("/", async (_, res) => {
+{{route}}.get("/", async (req, res) => {
   try {
     const {{route}} = await {{Model}}.all();
-    res.render("{{route}}/index", { {{route}} });
-  } catch (e) {
-    return res.status(400).send(e.message);
-  }
+    return res.render("{{route}}/index", { {{route}} });
+  } catch (e) {}
 });
 
-{{route}}.get("/create", async (_, res) => {
+{{route}}.get("/create", async (req, res) => {
   try {
-    res.render("{{route}}/create");
+    return res.render("{{route}}/create");
   } catch (e) {
-    return res.status(400).send(e.message);
+    req.flash("error", e.message);
+    return res.redirect("/{{route}}");
   }
 });
 
 {{route}}.get("/edit/:id", async (req, res) => {
   try {
-    const { id } = req.params;
-    const {{model}} = (await {{Model}}.find(id));
+    const {{model}} = await {{Model}}.find(req.params.id);
     return res.render("{{route}}/edit", { {{model}} });
   } catch (e) {
-    return res.status(400).send(e.message);
+    req.flash("error", e.message);
   }
 });
 
 {{route}}.post("/edit/:id", async (req, res) => {
   try {
-    const { id } = req.params;
-    await {{Model}}.update(id, req.body);
-    return res.redirect("/{{route}}");
+    await {{Model}}.update(req.params.id, req.body);
+    req.flash("success", "{{Model}} has been updated");
+    return res.redirect(`/{{route}}`);
   } catch (e) {
-    return res.status(400).send(e.message);
+    req.flash("error", e.message);
+    return res.redirect(`/{{route}}/edit/${req.params.id}`);
   }
 });
 
 {{route}}.post("/delete/:id", async (req, res) => {
   try {
-    const { id } = req.params;
-    await {{Model}}.delete(id);
+    await {{Model}}.delete(req.params.id);
+    req.flash("success", "{{Model}} has been deleted");
     return res.redirect("/{{route}}");
   } catch (e) {
-    return res.status(400).send(e.message);
+    req.flash("error", e.message);
   }
 });
 
 {{route}}.get("/:id", async (req, res) => {
-  const { id } = req.params;
   try {
-    const {{model}} = await {{Model}}.find(id);
-    return res.status(200).send({{model}});
+    const {{model}} = await {{Model}}.find(req.params.id);
+    return res.render("{{route}}/{{model}}", { {{model}} });
   } catch (e) {
-    return res.status(400).send(e.message);
+    req.flash("error", e.message);
   }
 });
 
 {{route}}.post("/", async (req, res) => {
   try {
     await {{Model}}.create(req.body);
-    return res.redirect("/{{route}}");
+    req.flash("success", "{{Model}} has been added");
+    return res.redirect(`/{{route}}`);
   } catch (e) {
-    return res.status(400).send(e.message);
+    req.flash("error", e.message);
+    return res.redirect("{{route}}/create");
   }
 });
 

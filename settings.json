@@ -22,6 +22,7 @@
   "views": {
     "location": "views",
     "pages": {
+      "dateFields": ["created_at", "updated_at"],
       "form": {
         "excludedFields": ["id", "created_at", "updated_at", "_csrf_token"]
       },
@@ -29,7 +30,8 @@
         "excludedFields": ["id", "_csrf_token"]
       },
       "create": {},
-      "edit": {}
+      "edit": {},
+      "single": {}
     }
   }
 }

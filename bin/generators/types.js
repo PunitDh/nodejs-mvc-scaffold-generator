@@ -8,7 +8,7 @@ import {
   InvalidDataTypeError,
 } from "../errors.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
-import "../utils/string_utils.js";
+import "../utils/js_utils.js";
 
 class ViewColumnInput {
   constructor(type) {
@@ -67,4 +67,12 @@ class MigrationInfo {
   }
 }
 
-export { ViewColumn, MigrationInfo };
+class ModelInfo {
+  constructor(model, columnsInfo) {
+    this.model = model;
+    this.columns = Object.keys(columnsInfo);
+    this.args = this.columns.join(", ");
+  }
+}
+
+export { ViewColumn, MigrationInfo, ModelInfo };

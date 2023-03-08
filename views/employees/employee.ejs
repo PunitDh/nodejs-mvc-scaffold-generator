@@ -1,0 +1,51 @@
+<%- include('./_head.ejs') %>
+<div class="container mt-4">
+  <h1>Employee</h1>
+  <table class="w-50 my-4">
+    <tbody>
+      <tr>
+        <td class="h6">First Name</td>
+        <td><%= employee.first_name %></td>
+      </tr>
+      <tr>
+        <td class="h6">Last Name</td>
+        <td><%= employee.last_name %></td>
+      </tr>
+      <tr>
+        <td class="h6">Title</td>
+        <td><%= employee.title %></td>
+      </tr>
+      <tr>
+        <td class="h6">Salary</td>
+        <td><%= employee.salary %></td>
+      </tr>
+      <tr>
+        <td class="h6">Sick Leave Hours</td>
+        <td><%= employee.sick_leave_hours %></td>
+      </tr>
+      <tr>
+        <td class="h6">Annual Leave Hours</td>
+        <td><%= employee.annual_leave_hours %></td>
+      </tr>
+      <tr>
+        <td class="h6">Created At</td>
+        <td><%= formatDate(employee.created_at) %></td>
+      </tr>
+      <tr>
+        <td class="h6">Updated At</td>
+        <td><%= formatDate(employee.updated_at) %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="form-group mb-2">
+    <div class="d-flex align-items-center" style="gap: 1rem">
+      <a href="/employees/edit/<%= employee.id %>" class="btn btn-primary">Edit Employee</a>
+      <form action="/employees/delete/<%= employee.id %>" method="POST">
+        <button type="submit" class="btn btn-danger">Delete Employee</button>
+      </form>
+      <a href="/employees" class="btn btn-danger">Back</a>
+    </div>
+  </div>
+</div>
+<%- include('../_layouts/_tail.ejs') %>

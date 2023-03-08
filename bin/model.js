@@ -1,8 +1,10 @@
 import DB from "./db.js";
 import LOGGER from "./logger.js";
 import "pluralizer";
-import SQLiteColumn from "./types/SQLiteColumn.js";
+import SQLiteColumn from "./domain/SQLiteColumn.js";
 import { ReadOnlyColumns, SearchExcludedColumns } from "./constants.js";
+import { getNewDate } from "./utils/date_utils.js";
+import SQLiteTable from "./domain/SQLiteTable.js";
 
 class Model {
   constructor({ id, created_at, updated_at }) {
@@ -26,14 +28,28 @@ class Model {
     return (async () => await SQLiteColumn.getColumns(this.__tablename__))();
   }
 
+  static get __foreignKeys__() {
+    return SQLiteTable.getForeignKeys(this.__tablename__);
+  }
+
   static async all() {
     const query = `SELECT * FROM ${this.__tablename__};`;
-    return await this.databaseOperation(query);
+    return await this.dbQuery(query);
+  }
+
+  static async first() {
+    const query = `SELECT * FROM ${this.__tablename__} LIMIT 1;`;
+    return await this.dbQuery(query, [], true);
+  }
+
+  static async last() {
+    const result = await this.all();
+    return result[result.length - 1];
   }
 
   static async find(id) {
     const query = `SELECT * FROM ${this.__tablename__} WHERE id=$id;`;
-    return await this.databaseOperation(query, [id], true);
+    return await this.dbQuery(query, [id], true);
   }
 
   static async findBy(obj) {
@@ -42,41 +58,40 @@ class Model {
   }
 
   static async search(searchTerm) {
+    const sanitizedSearchTerm = searchTerm.replace("'", "''");
     const columnNames = (await this.__columns__)
       .filter((column) => !SearchExcludedColumns.includes(column.name))
-      .map((column) => `${column.name} LIKE '%${searchTerm}%'`);
+      .map((column) => `${column.name} LIKE '%${sanitizedSearchTerm}%'`);
     const query = `SELECT * FROM ${this.__tablename__} WHERE ${columnNames.join(
       " OR "
     )};`;
-    return await this.databaseOperation(query);
+    return await this.dbQuery(query);
   }
 
-  static async exists(id) {
-    const query = `SELECT * FROM ${this.__tablename__} WHERE id=$id;`;
-    const result = await this.databaseOperation(query, [id]);
+  static async exists(obj) {
+    const result = await this.where(obj);
     return result.length > 0;
   }
 
   static async create(object) {
     const columns = Object.keys(object);
-    const datetime = parseInt(new Date().getTime());
+    const datetime = getNewDate();
     const values = [...Object.values(object), datetime];
-    const valueString = columns.map((column) => `$${column}`).join(", ");
-    const query = `INSERT INTO ${this.__tablename__} (${columns.join(
-      ","
-    )}, created_at, updated_at) VALUES (${valueString}, $datetime, $datetime) RETURNING *;`;
-    return await this.databaseOperation(query, values, true);
+    const valString = columns.map((column) => `$${column}`).join(", ");
+    const colString = columns.join(",");
+    const query = `INSERT INTO ${this.__tablename__} (${colString}, created_at, updated_at) VALUES (${valString}, $datetime, $datetime) RETURNING *;`;
+    return await this.dbQuery(query, values, true);
   }
 
   static async update(id, object) {
     const columns = Object.keys(object);
-    const datetime = parseInt(new Date().getTime());
+    const datetime = getNewDate();
     const values = [...Object.values(object), datetime, id];
-    const valueString = columns
+    const valString = columns
       .map((column) => `${column}=$${column}`)
       .join(", ");
-    const query = `UPDATE ${this.__tablename__} SET ${valueString}, updated_at=$datetime WHERE id=$id RETURNING *;`;
-    return await this.databaseOperation(query, values, true);
+    const query = `UPDATE ${this.__tablename__} SET ${valString}, updated_at=$datetime WHERE id=$id RETURNING *;`;
+    return await this.dbQuery(query, values, true);
   }
 
   static async where(obj) {
@@ -84,16 +99,16 @@ class Model {
       .map((column) => `${column}=$${column}`)
       .join(" AND ");
     const query = `SELECT * FROM ${this.__tablename__} WHERE ${valueString};`;
-    return await this.databaseOperation(query, Object.values(obj));
+    return await this.dbQuery(query, Object.values(obj));
   }
 
   static async delete(id) {
     const query = `DELETE FROM ${this.__tablename__} WHERE id=$0 RETURNING *;`;
-    return await this.databaseOperation(query, [id], true);
+    return await this.dbQuery(query, [id], true);
   }
 
   async save() {
-    const dateTime = parseInt(new Date().getTime());
+    const dateTime = getNewDate();
     const columns = Object.keys(this).filter(
       (column) => !ReadOnlyColumns.includes(column)
     );
@@ -106,15 +121,15 @@ class Model {
       dateTime,
       this.id,
     ];
-    return await this.constructor.databaseOperation(query, values, true);
+    return await this.constructor.dbQuery(query, values, true);
   }
 
   async delete() {
     const query = `DELETE FROM ${this.constructor.__tablename__} WHERE id=$id RETURNING *;`;
-    return await this.constructor.databaseOperation(query, [this.id]);
+    return await this.constructor.dbQuery(query, [this.id]);
   }
 
-  static databaseOperation(query, values = [], singular = false) {
+  static dbQuery(query, values = [], singular = false) {
     const _Model = this.prototype.constructor;
     return new Promise(function (resolve, reject) {
       LOGGER.query(query);

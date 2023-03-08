@@ -4,12 +4,13 @@ import User from "../../models/User.js";
 async function authorize(req, res, next) {
   const token = req.cookies.app;
   if (!token) {
+    res.locals.currentUser = null;
     return res.status(401).redirect("/users/login");
   }
 
   try {
     const decoded = JWT.verify(token, process.env.JWT_SECRET);
-    const userExists = await User.exists(decoded.id);
+    const userExists = await User.exists({ id: decoded.id });
     if (!userExists) {
       return res.status(401).redirect("/users/login");
     }
@@ -17,6 +18,7 @@ async function authorize(req, res, next) {
     res.locals.currentUser = decoded;
     next();
   } catch (e) {
+    res.locals.currentUser = null;
     res.status(401).clearCookie("app").redirect("/users/login");
   }
 }

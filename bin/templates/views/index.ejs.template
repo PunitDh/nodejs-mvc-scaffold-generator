@@ -6,7 +6,7 @@
         {{#indexColumns}}
         <th>{{Name}}</th>
         {{/indexColumns}}
-        <th colspan="2">Actions</th>
+        <th colspan="3">Actions</th>
       </thead>
       <tbody>
         <% for (const it of {{router}}) { %>
@@ -19,6 +19,7 @@
           <td><%= it.{{name}} %></td>
             {{/date}}
           {{/indexColumns}}
+          <td><a href="/{{router}}/<%= it.id %>" class="btn btn-primary">Show</a></td>
           <td><a href="/{{router}}/edit/<%= it.id %>" class="btn btn-success">Edit</a></td>
           <td>
             <form action="/{{router}}/delete/<%= it.id %>" method="POST">

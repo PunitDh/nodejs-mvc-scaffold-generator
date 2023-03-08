@@ -15,7 +15,7 @@ class SQLiteColumn {
     return (async () => {
       try {
         return new Promise((resolve, reject) => {
-          DB.all(`pragma table_info('${table}')`, function (err, rows) {
+          DB.all(`PRAGMA table_info('${table}')`, function (err, rows) {
             if (err) {
               LOGGER.error(err);
               return reject(err);

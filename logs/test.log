@@ -10710,3 +10710,6 @@
 [INFO] [09/03/2023, 01:47:44]: Successfully connected to database: 'database.db'
 [INFO] [09/03/2023, 01:47:44]: Server started on port 3000
 [INFO] [09/03/2023, 01:47:44]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 01:49:23]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 01:49:23]: Server started on port 3000
+[INFO] [09/03/2023, 01:49:23]: Foreign keys have been turned ON 

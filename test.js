@@ -62,7 +62,6 @@ const tableProps = {
       otherColumn: "id",
       deleteCascade: true,
       updateCascade: false,
-      last: false,
     },
     {
       thisColumn: "user_id",
@@ -70,7 +69,6 @@ const tableProps = {
       otherColumn: "id",
       deleteCascade: false,
       updateCascade: true,
-      last: true,
     },
   ],
 };

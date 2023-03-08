@@ -26,7 +26,13 @@
       <% } %>
     </tbody>
   </table>
+  <% if ( currentUser ) { %>
+  <form action="/users/logout" method="POST">
+    <button type="submit" class="btn btn-primary">Logout</button>
+  </form>
+  <% } else { %>
   <a href="/users/login" class="btn btn-primary">Login</a>
   <a href="/users/register" class="btn btn-outline-primary">Register</a>
+  <% } %>
 </div>
 <%- include('../_layouts/_tail.ejs') %>

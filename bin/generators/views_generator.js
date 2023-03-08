@@ -7,13 +7,13 @@ import path from "path";
 import { UnknownModelError } from "../errors.js";
 import "pluralizer";
 import SETTINGS from "../utils/settings.js";
-import "../utils/string_utils.js";
+import "../utils/js_utils.js";
 import LOGGER from "../logger.js";
-import Mustache from "mustache";
+import Handlebars from "../utils/handlebars.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
 import { ViewColumn } from "./types.js";
-import SQLiteColumn from "../types/SQLiteColumn.js";
-import { getSchema } from "../schema.js";
+import SQLiteColumn from "../domain/SQLiteColumn.js";
+import { getSchema } from "../utils/schema_utils.js";
 import { readFileSync } from "../utils/file_utils.js";
 
 const argvs = process.argv.slice(2);
@@ -31,9 +31,12 @@ const templates = [
   "create.ejs.template",
   "edit.ejs.template",
   "index.ejs.template",
+  "{{singular}}.ejs.template",
 ];
 const files = templates.map((template) => {
-  const filename = template.split(".").slice(0, 2).join(".");
+  const filename = Handlebars.compile(
+    template.split(".").slice(0, 2).join(".")
+  )({ singular });
   return {
     location: path.join(viewsDirectory, filename),
     template: path.join(templateDirectory, template),
@@ -48,7 +51,10 @@ const navLinksTemplate = readFileSync(
 );
 const navLinks = routers
   .map((router) =>
-    Mustache.render(navLinksTemplate, { router, heading: router.capitalize() })
+    Handlebars.compile(navLinksTemplate)({
+      router,
+      heading: router.capitalize(),
+    })
   )
   .join("\n");
 
@@ -85,7 +91,7 @@ try {
     const page = path.parse(file.location).name.toString().capitalize();
     fs.writeFileSync(
       file.location,
-      Mustache.render(readFileSync(file.template), {
+      Handlebars.compileFile(file.template)({
         ...templateProps,
         page,
       })

@@ -11,28 +11,24 @@
 // Generate models Blog and Comment, with a foreign key in Comment blog_id referencing a blog
 // ------------------------------------------------------------------------------------------
 // npm run model:generate Blog title:string body:string
-// npm run model:generate Comment blog_id:references:Blog body:string
-// npm run model:generate Comment blog_id:references:Blog.id body:string
+// npm run model:generate Comment Blog:references body:string
+// npm run model:generate Comment Blog:references:blog_id body:string
 //
 // """
 
 import fs from "fs";
 import path from "path";
 import "pluralizer";
-import "../utils/string_utils.js";
-import {
-  SQLITE_COLUMN_TYPES,
-} from "../constants.js";
-import {
-  ForeignKeyError,
-  GeneratorError,
-} from "../errors.js";
+import "../utils/js_utils.js";
+import { SQLITE_COLUMN_TYPES } from "../constants.js";
+import { ForeignKeyError, GeneratorError } from "../errors.js";
 import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
-import Mustache from "mustache";
+import Handlebars from "../utils/handlebars.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
-import { MigrationInfo } from "./types.js";
+import { MigrationInfo, ModelInfo } from "./types.js";
 import { readFileSync } from "../utils/file_utils.js";
+import SQLiteTable from "../domain/SQLiteTable.js";
 const argvs = process.argv.slice(2);
 const [model, ...args] = argvs;
 const folderName = path.join(".", SETTINGS.models.location);
@@ -49,7 +45,7 @@ if (!fs.existsSync(folderName)) {
   fs.mkdirSync(folderName);
 }
 
-if (fs.existsSync(modelFilePath)) {
+if (await modelExists(model)) {
   throw new GeneratorError(
     `Model '${model}' already exists in '${modelFilePath}'`
   );
@@ -61,21 +57,15 @@ if (!model || args.length === 0) {
 
 try {
   const columnsInfo = parseArguments(args);
-  const columns = Object.keys(columnsInfo);
 
   // Write model file
   fs.writeFileSync(
     modelFilePath,
-    Mustache.render(readFileSync(modelTemplate), {
-      model,
-      args: columns.join(", "),
-      columns,
-    })
+    Handlebars.compileFile(modelTemplate)(new ModelInfo(model, columnsInfo))
   );
 
   // Add migration
-  const migration = Mustache.render(
-    readFileSync(migrationTemplate),
+  const migration = Handlebars.compileFile(migrationTemplate)(
     new MigrationInfo(model, columnsInfo)
   );
 
@@ -97,20 +87,15 @@ function parseArguments(args) {
     const [column, dataType, ...constraints] = arg.trim().split(":");
     const dataTypeTrim = dataType.trim().toUpperCase();
 
-    // Check for foreign key
+    // Check for references
     if (dataTypeTrim === "REFERENCES") {
-      const [referenceTable, referenceColumn] = constraints[0].split(".");
-      if (!referenceTable) {
-        throw new ForeignKeyError(
-          `No model name provided for foreign key reference: '${column}'`
-        );
-      }
-      columnsInfo[column.trim()] = {
+      const columnName = column.trim().toLowerCase() + "_id";
+      columnsInfo[columnName] = {
         type: "INTEGER",
         constraints: [],
         references: {
-          table: getTableNameFromModel(referenceTable),
-          column: referenceColumn || "id",
+          table: getTableNameFromModel(column),
+          column: "id",
         },
       };
     } else {
@@ -120,4 +105,15 @@ function parseArguments(args) {
   }
 
   return columnsInfo;
+}
+
+async function modelExists(model) {
+  const modelFilePath = path.join(folderName, `${model}.js`);
+  if (fs.existsSync(modelFilePath)) {
+    return true;
+  }
+  if (await SQLiteTable.exists(getTableNameFromModel(model))) {
+    return true;
+  }
+  return false;
 }

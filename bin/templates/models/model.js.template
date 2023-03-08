@@ -7,6 +7,18 @@ class {{model}} extends Model {
     this.{{.}} = data.{{.}};
     {{/columns}}
   }
+  {{#references}}
+
+  get {{fnName}}() {
+    return {{referenceModel}}.find(this.{{thisColumn}});
+  }
+  {{/references}}
+  {{#backref}}
+
+  get {{fnName}}() {
+    return {{referenceModel}}.where({ {{otherColumn}}_id: this.id });
+  }
+  {{/backref}}
 }
 
 export default {{model}};

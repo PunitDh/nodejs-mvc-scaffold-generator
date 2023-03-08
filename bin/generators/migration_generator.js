@@ -3,10 +3,9 @@
 // npm run migration:generate animals drop     # To drop the table
 // """
 
-import fs from "fs";
 import path from "path";
 import "pluralizer";
-import "../utils/string_utils.js";
+import "../utils/js_utils.js";
 import {
   SQLITE_COLUMN_TYPES,
   SQLITE_COLUMN_CONSTRAINTS,
@@ -18,7 +17,7 @@ import {
 } from "../errors.js";
 import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
-import Mustache from "mustache";
+import Handlebars from "handlebars";
 
 const argvs = process.argv.slice(2);
 const [table, action, ...args] = argvs;
@@ -71,9 +70,8 @@ try {
   // Write model file
   fs.writeFileSync(
     file,
-    Mustache.render(fs.readFileSync(modelTemplate, "utf-8"), {
+    Handlebars.compile(fs.readFileSync(modelTemplate, "utf-8"))({
       model: table,
-      args: attributes.join(", "),
       attributes,
     })
   );
@@ -84,8 +82,7 @@ try {
     columns: generateColumns(attributesObj),
   };
 
-  const migration = Mustache.render(
-    fs.readFileSync(migrationTemplate, "utf-8"),
+  const migration = Handlebars.compile(readFileSync(migrationTemplate))(
     migrationInfo
   );
 

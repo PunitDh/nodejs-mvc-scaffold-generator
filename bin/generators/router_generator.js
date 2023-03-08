@@ -7,11 +7,11 @@ import path, { join } from "path";
 import { GeneratorError, UnknownModelError } from "../errors.js";
 import "pluralizer";
 import SETTINGS from "../utils/settings.js";
-import Mustache from "mustache";
-import "../utils/string_utils.js";
+import Handlebars from "../utils/handlebars.js";
+import "../utils/js_utils.js";
 import LOGGER from "../logger.js";
-import { getSchema, saveSchema } from "../schema.js";
 import { readFileSync } from "../utils/file_utils.js";
+import { getSchema, saveSchema } from "../utils/schema_utils.js";
 
 const argvs = process.argv.slice(2);
 const model = argvs[0];
@@ -25,10 +25,8 @@ if (!schema.routers) {
   schema.routers = [];
 }
 
-if (!schema.routers.includes(route)) {
-  schema.routers.push(route);
-  saveSchema(schema);
-}
+schema.routers = [...new Set([...schema.routers, route])];
+saveSchema(schema);
 
 if (!existsSync(routerDirectory)) mkdirSync(routerDirectory);
 
@@ -41,8 +39,7 @@ if (!existsSync(join(".", SETTINGS.models.location, `${model}.js`))) {
   throw new UnknownModelError(`Unknown model: '${model}'`);
 }
 
-const apiTemplate = readFileSync(templateDirectory, "api.js.template");
-const viewsTemplate = readFileSync(templateDirectory, "views.js.template");
+const template = SETTINGS.api ? "api.js.template" : "views.js.template";
 
 const templateProps = {
   model: model.toLowerCase(),
@@ -54,17 +51,20 @@ const templateProps = {
 try {
   writeFileSync(
     routerFile,
-    Mustache.render(SETTINGS.api ? apiTemplate : viewsTemplate, templateProps)
+    Handlebars.compileFile(templateDirectory, template)(templateProps)
   );
 
   const indexFile = join(".", "index.js");
   const indexFileData = readFileSync(indexFile);
-  const indexFileTemplate = readFileSync(
-    templateDirectory,
-    "_indexFile.js.template"
-  );
+
   if (!indexFileData.includes(`import ${route} from "./routers/${route}.js"`)) {
-    appendFileSync(indexFile, Mustache.render(indexFileTemplate, { route }));
+    appendFileSync(
+      indexFile,
+      Handlebars.compileFile(
+        templateDirectory,
+        "_indexFile.js.template"
+      )({ route })
+    );
   }
 } catch (e) {
   LOGGER.error(`Unable to be generate router for '${model}'`, e);

@@ -107,17 +107,23 @@ export class Table {
       "created_at NUMERIC",
       "updated_at NUMERIC",
     ];
-    const foreignKey = this.columns.map(
-      (column) =>
-        column.reference &&
-        `FOREIGN KEY(${column.name}) REFERENCES ${
-          column.reference.referenceTable
-        }(${column.reference.referenceColumn || "id"})`
-    ).filter(col => Boolean(col));
+    const foreignKey = this.columns
+      .map(
+        (column) =>
+          column.reference &&
+          `FOREIGN KEY(${column.name}) REFERENCES ${
+            column.reference.referenceTable
+          }(${column.reference.referenceColumn || "id"})${
+            column.reference.deleteCascade ? " ON DELETE CASCADE" : ""
+          }${column.reference.updateCascade ? " ON UPDATE CASCADE" : ""}`
+      )
+      .filter((col) => Boolean(col));
     if (foreignKey) {
       columnClauses = [...columnClauses, ...foreignKey];
     }
-    return `CREATE TABLE IF NOT EXISTS ${this.name} (${columnClauses.join(", ")})`;
+    return `CREATE TABLE IF NOT EXISTS ${this.name} (${columnClauses.join(
+      ", "
+    )})`;
   }
 }
 
@@ -146,13 +152,21 @@ export class Column {
     return this.addConstraint(constraint);
   }
 
-  addForeignKey(table, column) {
-    this.reference = new ForeignKey(table, column);
+  addForeignKey(
+    table,
+    column,
+    cascadeOptions = { deleteCascade: true, updateCascade: true }
+  ) {
+    this.reference = new ForeignKey(table, column, true, true);
     return this;
   }
 
-  withForeignKey(table, column) {
-    return this.addForeignKey(table, column);
+  withForeignKey(
+    table,
+    column,
+    cascadeOptions = { deleteCascade: true, updateCascade: true }
+  ) {
+    return this.addForeignKey(table, column, cascadeOptions);
   }
 }
 
@@ -169,8 +183,10 @@ export class Constraint {
 }
 
 export class ForeignKey {
-  constructor(referenceTable, referenceColumn) {
+  constructor(referenceTable, referenceColumn, deleteCascade, updateCascade) {
     this.referenceTable = referenceTable;
     this.referenceColumn = referenceColumn;
+    this.deleteCascade = deleteCascade;
+    this.updateCascade = updateCascade;
   }
 }

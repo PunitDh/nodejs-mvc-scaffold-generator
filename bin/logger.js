@@ -2,24 +2,26 @@ import { appendFileSync } from "fs";
 import { join } from "path";
 import { TERMINAL_COLORS } from "./constants.js";
 
-export function routeLogger(req, res, next) {
-  const startTime = new Date();
-  LOGGER.info(
-    "Started",
-    req.method,
-    `"${req.url}"`,
-    "at",
-    startTime.toLocaleString()
-  );
-  next();
-  LOGGER.info(
-    "Completed",
-    res.statusCode,
-    res.statusMessage,
-    "in",
-    new Date() - startTime,
-    "ms"
-  );
+export function routeLogger() {
+  return (req, res, next) => {
+    const startTime = new Date();
+    LOGGER.info(
+      "Started",
+      req.method,
+      `"${req.url}"`,
+      "at",
+      startTime.toLocaleString()
+    );
+    next();
+    LOGGER.info(
+      "Completed",
+      res.statusCode,
+      res.statusMessage,
+      "in",
+      new Date() - startTime,
+      "ms"
+    );
+  };
 }
 
 function logMessage() {

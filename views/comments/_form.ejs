@@ -1,0 +1,22 @@
+<% if (page === "Create") { %>
+<form action="/comments %>" method="POST">
+<% } else { %>
+<form action="/comments/edit/<%= comment.id %>" method="POST">
+<% } %>
+  <div class="form-group d-flex row mb-2">
+    <label for="blog_id" class="form-label">
+      <div class="mb-2">Blog Id</div>
+      <input type="INTEGER" value="<%= page === "Create" ? '' : comment.blog_id %>" name="blog_id"  class="form-control form-control" id="blog_id" placeholder="Enter Blog Id" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group d-flex row mb-2">
+    <label for="body" class="form-label">
+      <div class="mb-2">Body</div>
+      <input type="TEXT" value="<%= page === "Create" ? '' : comment.body %>" name="body"  class="form-control form-control" id="body" placeholder="Enter Body" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group mb-2">
+    <button type="submit" class="btn btn-primary"><%= page %> Comment</button>
+    <a href="/comments" class="btn btn-danger">Back</a>
+  </div>
+</form>

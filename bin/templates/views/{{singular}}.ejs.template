@@ -1,0 +1,30 @@
+<%- include('./_head.ejs') %>
+<div class="container mt-4">
+  <h1>{{model}}</h1>
+  <table class="w-50 my-4">
+    <tbody>
+      {{#indexColumns}}
+      <tr>
+        <td class="h6">{{Name}}</td>
+        {{#date}}
+        <td><%= formatDate({{singular}}.{{name}}) %></td>
+        {{/date}}
+        {{^date}}
+        <td><%= {{singular}}.{{name}} %></td>
+        {{/date}}
+      </tr>
+      {{/indexColumns}}
+    </tbody>
+  </table>
+
+  <div class="form-group mb-2">
+    <div class="d-flex align-items-center" style="gap: 1rem">
+      <a href="/{{router}}/edit/<%= {{singular}}.id %>" class="btn btn-primary">Edit {{model}}</a>
+      <form action="/{{router}}/delete/<%= {{singular}}.id %>" method="POST">
+        <button type="submit" class="btn btn-danger">Delete {{model}}</button>
+      </form>
+      <a href="/{{router}}" class="btn btn-danger">Back</a>
+    </div>
+  </div>
+</div>
+<%- include('../_layouts/_tail.ejs') %>

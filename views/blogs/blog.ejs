@@ -1,0 +1,67 @@
+<%- include('./_head.ejs') %>
+<div class="container mt-4">
+  <h1>Blog</h1>
+  <table class="w-50 my-4">
+    <tbody>
+      <tr>
+        <td class="h6">Title</td>
+        <td><%= blog.title %></td>
+      </tr>
+      <tr>
+        <td class="h6">Body</td>
+        <td><%= blog.body %></td>
+      </tr>
+      <tr>
+        <td class="h6">Created At</td>
+        <td><%= formatDate(blog.created_at) %></td>
+      </tr>
+      <tr>
+        <td class="h6">Updated At</td>
+        <td><%= formatDate(blog.updated_at) %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="container">
+    <h3>Comments</h3>
+    <% for (comment of comments) { %>
+    <table class="w-50 my-4">
+      <tbody>
+        <% Object.entries(comment).reverse().forEach(([key, value]) => { %>
+        <tr>
+          <td class="h6"><%= capitalize(key) %></td>
+          <td><%= dateFields.includes(key) ? formatDate(value) : value %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% } %> <% if (currentUser) { %>
+    <div class="my-4">
+      <form action="/blogs/comment/" method="POST">
+        <div class="d-flex w-50" style="gap: 0.25rem">
+          <input type="hidden" name="blog_id" value="<%= blog.id %>" />
+          <input
+            type="text"
+            name="body"
+            class="form-control w-50"
+            placeholder="Add comment"
+            autocomplete="off"
+          />
+          <button type="submit" class="btn btn-success">Add Comment</button>
+        </div>
+      </form>
+    </div>
+    <% } %>
+  </div>
+
+  <div class="form-group mb-2">
+    <div class="d-flex align-items-center" style="gap: 1rem">
+      <a href="/blogs/edit/<%= blog.id %>" class="btn btn-primary">Edit Blog</a>
+      <form action="/blogs/delete/<%= blog.id %>" method="POST">
+        <button type="submit" class="btn btn-danger">Delete Blog</button>
+      </form>
+      <a href="/blogs" class="btn btn-danger">Back</a>
+    </div>
+  </div>
+</div>
+<%- include('../_layouts/_tail.ejs') %>

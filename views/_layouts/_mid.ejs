@@ -1,14 +1,12 @@
 </head>
 <body>
   <%- include('./_navbar.ejs') %>
-  <% if (typeof flash !== 'undefined') { %>
-    <% if (flash.success) { %>
+    <% if (flash.success.length) { %>
       <div class="d-flex justify-content-center align-items-center mt-4">
         <div class="alert alert-success w-75" role="alert"><%= flash.success %></div>
       </div>
-    <% } else if (flash.error) { %>
+    <% } else if (flash.error.length) { %>
       <div class="d-flex justify-content-center align-items-center mt-4">
         <div class="alert alert-danger w-75" role="alert"><%= flash.error %></div>
       </div>
     <% } %>
-  <% } %>

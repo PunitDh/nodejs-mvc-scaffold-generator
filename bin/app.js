@@ -8,22 +8,38 @@ import { config } from "dotenv";
 import ejs from "ejs";
 import path from "path";
 import cookieParser from "cookie-parser";
-import flash from "./middlewares/flash.js";
-import formatUtils from "./middlewares/formatUtils.js";
+import flash from "connect-flash";
+import session from "express-session";
+import appUtils from "./middlewares/appUtils.js";
 
+// Load config
 config();
+
+// Set view engine
 app.engine("html", ejs.renderFile);
 app.set("view engine", "html");
 app.set("view engine", "ejs");
+
+// Package Middleware
 app.use(express.static(path.join(".", SETTINGS.views.location)));
 app.use(json());
 app.use(express.urlencoded());
 app.use(cookieParser());
-app.use(routeLogger);
-app.use(flash);
-app.use(formatUtils);
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    saveUninitialized: true,
+    resave: true,
+  })
+);
+app.use(flash());
+
+// Custom Middleware
+app.use(routeLogger());
+app.use(appUtils());
 app.use("/", appRouter);
 
+// Start server
 app.listen(SETTINGS.port, () =>
   LOGGER.info("Server started on port", SETTINGS.port)
 );

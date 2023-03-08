@@ -1,2 +1,2 @@
-import { readFileSync } from "fs";
-export default JSON.parse(readFileSync("./settings.json"));
+import fs from "fs";
+export default JSON.parse(fs.readFileSync("./settings.json"));

@@ -70,7 +70,7 @@ export const SQLITE_COLUMN_CONSTRAINTS = {
   DEFAULT: "DEFAULT",
   AUTOINCREMENT: "AUTOINCREMENT",
   PRIMARYKEY: "PRIMARY KEY",
-  NOTNULL: "NOT NULL"
+  NOTNULL: "NOT NULL",
 };
 
 export const HTMLInputTypes = {
@@ -85,4 +85,12 @@ export const HTMLInputTypes = {
 
 export const ReadOnlyColumns = ["id", "created_at", "updated_at"];
 
-export const SearchExcludedColumns = ["id", "created_at", "updated_at", "password"];
+export const SearchExcludedColumns = [
+  "id",
+  "created_at",
+  "updated_at",
+  "password",
+  "_csrf_token",
+];
+
+export const SearchResultExcludedColumns = ["password", "_csrf_token"];

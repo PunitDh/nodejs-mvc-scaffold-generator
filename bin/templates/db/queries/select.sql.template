@@ -1,0 +1,1 @@
+SELECT {{columns}} FROM {{table}}{{#where}} WHERE {{#clauses}}{{column}}=${{column}}{{/clauses}}{{/where}};

@@ -12613,3 +12613,347 @@
 [INFO] [10/03/2023, 12:45:30 am]: Successfully connected to database: 'database.db'
 [INFO] [10/03/2023, 12:45:30 am]: Server started on port 3000
 [INFO] [10/03/2023, 12:45:30 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:47:14 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:47:14 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:47:14 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:49:43 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:49:43 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:49:43 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:51:42 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:51:42 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:51:42 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:51:55 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:51:55 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:51:55 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:55:55 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:55:55 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:55:55 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:55:58 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:55:58 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:55:58 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:57:15 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:57:15 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:57:15 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:58:06 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:58:06 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:58:06 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:58:10 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:58:10 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:58:10 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:59:37 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:59:37 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:59:37 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:59:56 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:59:56 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:59:56 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:00:34 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:00:34 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:00:34 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:03:55 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:03:56 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:03:56 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:04:10 am]: Started GET "/comments/" at 10/03/2023, 1:04:10 am
+[QUERY] [10/03/2023, 1:04:10 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:04:10 am]: Completed 200  in 5 ms
+[INFO] [10/03/2023, 1:04:14 am]: Started POST "/comments/delete/33" at 10/03/2023, 1:04:14 am
+[QUERY] [10/03/2023, 1:04:14 am]: DELETE FROM comments WHERE id=$id RETURNING *;
+[INFO] [10/03/2023, 1:04:14 am]: Completed 200  in 12 ms
+[INFO] [10/03/2023, 1:04:14 am]: Started GET "/comments/" at 10/03/2023, 1:04:14 am
+[QUERY] [10/03/2023, 1:04:14 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:04:14 am]: Completed 200  in 1 ms
+[INFO] [10/03/2023, 1:05:00 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:05:00 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:05:00 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:05:06 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:05:06 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:05:06 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:09:54 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:09:54 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:09:54 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:10:01 am]: Started GET "/users/" at 10/03/2023, 1:10:01 am
+[INFO] [10/03/2023, 1:10:01 am]: Completed 302 Found in 7 ms
+[INFO] [10/03/2023, 1:10:01 am]: Started GET "/users/login?referer=%2Fusers%2F" at 10/03/2023, 1:10:01 am
+[INFO] [10/03/2023, 1:10:01 am]: Completed 304 Not Modified in 4 ms
+[INFO] [10/03/2023, 1:10:02 am]: Started POST "/users/login?referer=/users/" at 10/03/2023, 1:10:02 am
+[QUERY] [10/03/2023, 1:10:02 am]: SELECT  FROM users WHERE email=$email;
+[INFO] [10/03/2023, 1:10:02 am]: Completed 200  in 9 ms
+[ERROR] [10/03/2023, 1:10:02 am]: Error: SQLITE_ERROR: near "FROM": syntax error
+[INFO] [10/03/2023, 1:10:51 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:10:51 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:10:51 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:10:56 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:10:56 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:10:56 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:11:01 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:11:01 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:11:01 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:11:23 am]: Started POST "/users/login?referer=/users/" at 10/03/2023, 1:11:23 am
+[QUERY] [10/03/2023, 1:11:24 am]: SELECT * FROM users WHERE email=$email;
+[INFO] [10/03/2023, 1:11:24 am]: Completed 200  in 16 ms
+[QUERY] [10/03/2023, 1:11:24 am]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [10/03/2023, 1:11:24 am]: Started GET "/users/" at 10/03/2023, 1:11:24 am
+[QUERY] [10/03/2023, 1:11:24 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:11:24 am]: Completed 200  in 2 ms
+[QUERY] [10/03/2023, 1:11:24 am]: SELECT * FROM users;
+[INFO] [10/03/2023, 1:11:30 am]: Started POST "/users/logout" at 10/03/2023, 1:11:30 am
+[INFO] [10/03/2023, 1:11:30 am]: Completed 200 OK in 18 ms
+[INFO] [10/03/2023, 1:12:33 am]: Started POST "/users/login" at 10/03/2023, 1:12:33 am
+[QUERY] [10/03/2023, 1:12:33 am]: SELECT * FROM users WHERE email=$email;
+[INFO] [10/03/2023, 1:12:33 am]: Completed 200  in 3 ms
+[QUERY] [10/03/2023, 1:12:33 am]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [10/03/2023, 1:12:33 am]: Started GET "/users/" at 10/03/2023, 1:12:33 am
+[QUERY] [10/03/2023, 1:12:33 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:12:33 am]: Completed 200  in 1 ms
+[QUERY] [10/03/2023, 1:12:33 am]: SELECT * FROM users;
+[INFO] [10/03/2023, 1:12:38 am]: Started POST "/users/logout" at 10/03/2023, 1:12:38 am
+[INFO] [10/03/2023, 1:12:38 am]: Completed 200 OK in 10 ms
+[INFO] [10/03/2023, 1:12:38 am]: Started POST "/users/login" at 10/03/2023, 1:12:38 am
+[QUERY] [10/03/2023, 1:12:38 am]: SELECT * FROM users WHERE email=$email;
+[INFO] [10/03/2023, 1:12:38 am]: Completed 200  in 3 ms
+[QUERY] [10/03/2023, 1:12:39 am]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [10/03/2023, 1:12:39 am]: Started GET "/users/" at 10/03/2023, 1:12:39 am
+[QUERY] [10/03/2023, 1:12:39 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:12:39 am]: Completed 200  in 1 ms
+[QUERY] [10/03/2023, 1:12:39 am]: SELECT * FROM users;
+[INFO] [10/03/2023, 1:12:43 am]: Started GET "/blogs/" at 10/03/2023, 1:12:43 am
+[QUERY] [10/03/2023, 1:12:43 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:12:43 am]: Completed 200  in 3 ms
+[QUERY] [10/03/2023, 1:12:43 am]: SELECT * FROM blogs;
+[INFO] [10/03/2023, 1:12:45 am]: Started GET "/comments/" at 10/03/2023, 1:12:45 am
+[QUERY] [10/03/2023, 1:12:45 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:12:45 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 1:12:46 am]: Started GET "/blogs/" at 10/03/2023, 1:12:46 am
+[QUERY] [10/03/2023, 1:12:46 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:12:46 am]: Completed 200  in 5 ms
+[QUERY] [10/03/2023, 1:12:46 am]: SELECT * FROM blogs;
+[INFO] [10/03/2023, 1:12:47 am]: Started GET "/animals/" at 10/03/2023, 1:12:47 am
+[QUERY] [10/03/2023, 1:12:47 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:12:47 am]: Completed 200  in 6 ms
+[QUERY] [10/03/2023, 1:12:47 am]: SELECT * FROM animals;
+[INFO] [10/03/2023, 1:15:27 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:15:27 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:15:27 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:15:32 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:15:32 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:15:32 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:15:42 am]: Started GET "/users/" at 10/03/2023, 1:15:42 am
+[QUERY] [10/03/2023, 1:15:42 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:15:42 am]: Completed 200  in 18 ms
+[QUERY] [10/03/2023, 1:15:42 am]: SELECT * FROM users;
+[INFO] [10/03/2023, 1:15:43 am]: Started POST "/users/logout" at 10/03/2023, 1:15:43 am
+[INFO] [10/03/2023, 1:15:43 am]: Completed 200 OK in 9 ms
+[INFO] [10/03/2023, 1:15:44 am]: Started POST "/users/login" at 10/03/2023, 1:15:44 am
+[QUERY] [10/03/2023, 1:15:44 am]: SELECT * FROM users WHERE email=$email;
+[INFO] [10/03/2023, 1:15:44 am]: Completed 200  in 4 ms
+[QUERY] [10/03/2023, 1:15:44 am]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [10/03/2023, 1:15:44 am]: Started GET "/users/" at 10/03/2023, 1:15:44 am
+[QUERY] [10/03/2023, 1:15:44 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:15:44 am]: Completed 200  in 1 ms
+[QUERY] [10/03/2023, 1:15:44 am]: SELECT * FROM users;
+[INFO] [10/03/2023, 1:15:47 am]: Started GET "/blogs/" at 10/03/2023, 1:15:47 am
+[QUERY] [10/03/2023, 1:15:47 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:15:47 am]: Completed 200  in 5 ms
+[QUERY] [10/03/2023, 1:15:47 am]: SELECT * FROM blogs;
+[INFO] [10/03/2023, 1:15:50 am]: Started GET "/animals/" at 10/03/2023, 1:15:50 am
+[QUERY] [10/03/2023, 1:15:50 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:15:50 am]: Completed 200  in 4 ms
+[QUERY] [10/03/2023, 1:15:50 am]: SELECT * FROM animals;
+[INFO] [10/03/2023, 1:15:54 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:15:54 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:15:54 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:15:56 am]: Started GET "/comments/" at 10/03/2023, 1:15:56 am
+[QUERY] [10/03/2023, 1:15:56 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:15:56 am]: Completed 200  in 6 ms
+[INFO] [10/03/2023, 1:15:57 am]: Started GET "/users/" at 10/03/2023, 1:15:57 am
+[QUERY] [10/03/2023, 1:15:57 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:15:57 am]: Completed 200  in 27 ms
+[QUERY] [10/03/2023, 1:15:57 am]: SELECT * FROM users;
+[INFO] [10/03/2023, 1:15:58 am]: Started POST "/users/logout" at 10/03/2023, 1:15:58 am
+[INFO] [10/03/2023, 1:15:58 am]: Completed 200 OK in 2 ms
+[INFO] [10/03/2023, 1:15:59 am]: Started POST "/users/login" at 10/03/2023, 1:15:59 am
+[QUERY] [10/03/2023, 1:15:59 am]: SELECT * FROM users WHERE email=$email;
+[INFO] [10/03/2023, 1:15:59 am]: Completed 200  in 4 ms
+[QUERY] [10/03/2023, 1:15:59 am]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [10/03/2023, 1:15:59 am]: Started GET "/users/" at 10/03/2023, 1:15:59 am
+[QUERY] [10/03/2023, 1:15:59 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:15:59 am]: Completed 200  in 2 ms
+[QUERY] [10/03/2023, 1:15:59 am]: SELECT * FROM users;
+[INFO] [10/03/2023, 1:16:02 am]: Started GET "/users/edit/1" at 10/03/2023, 1:16:02 am
+[QUERY] [10/03/2023, 1:16:02 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:16:02 am]: Completed 200  in 3 ms
+[INFO] [10/03/2023, 1:16:03 am]: Started GET "/users/" at 10/03/2023, 1:16:03 am
+[QUERY] [10/03/2023, 1:16:03 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 1:16:03 am]: Completed 200  in 6 ms
+[QUERY] [10/03/2023, 1:16:03 am]: SELECT * FROM users;
+[INFO] [10/03/2023, 1:16:05 am]: Started GET "/comments/" at 10/03/2023, 1:16:05 am
+[QUERY] [10/03/2023, 1:16:05 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:16:05 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 1:16:07 am]: Started GET "/comments/edit/30" at 10/03/2023, 1:16:07 am
+[QUERY] [10/03/2023, 1:16:07 am]: SELECT * FROM comments WHERE id=$id;
+[INFO] [10/03/2023, 1:16:07 am]: Completed 200  in 4 ms
+[INFO] [10/03/2023, 1:16:08 am]: Started POST "/comments/edit/30" at 10/03/2023, 1:16:08 am
+[QUERY] [10/03/2023, 1:16:08 am]: UPDATE comments SET blog_id=$blog_id, body=$body, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [10/03/2023, 1:16:08 am]: Completed 200  in 3 ms
+[INFO] [10/03/2023, 1:16:08 am]: Started GET "/comments/" at 10/03/2023, 1:16:08 am
+[QUERY] [10/03/2023, 1:16:08 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:16:08 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 1:17:05 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:17:05 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:17:05 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:18:27 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:18:27 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:18:27 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:18:30 am]: Started GET "/comments/" at 10/03/2023, 1:18:30 am
+[INFO] [10/03/2023, 1:18:30 am]: Completed 200  in 12 ms
+[INFO] [10/03/2023, 1:18:31 am]: Started GET "/comments/" at 10/03/2023, 1:18:30 am
+[INFO] [10/03/2023, 1:18:31 am]: Completed 200  in 8 ms
+[INFO] [10/03/2023, 1:18:43 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:18:43 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:18:43 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:18:43 am]: Started GET "/comments/" at 10/03/2023, 1:18:43 am
+[QUERY] [10/03/2023, 1:18:43 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:18:43 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 1:18:51 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:18:51 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:18:51 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:18:54 am]: Started GET "/comments/" at 10/03/2023, 1:18:54 am
+[INFO] [10/03/2023, 1:18:54 am]: Completed 200  in 10 ms
+[INFO] [10/03/2023, 1:19:05 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:19:05 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:19:05 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:19:06 am]: Started GET "/comments/" at 10/03/2023, 1:19:06 am
+[INFO] [10/03/2023, 1:19:06 am]: Completed 200  in 4 ms
+[INFO] [10/03/2023, 1:19:07 am]: Started GET "/comments/" at 10/03/2023, 1:19:07 am
+[INFO] [10/03/2023, 1:19:07 am]: Completed 200  in 9 ms
+[INFO] [10/03/2023, 1:19:30 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:19:30 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:19:30 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:19:32 am]: Started GET "/comments/" at 10/03/2023, 1:19:32 am
+[QUERY] [10/03/2023, 1:19:32 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:19:32 am]: Completed 200  in 4 ms
+[INFO] [10/03/2023, 1:19:46 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:19:46 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:19:46 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:19:48 am]: Started GET "/comments/" at 10/03/2023, 1:19:48 am
+[INFO] [10/03/2023, 1:19:48 am]: Completed 200  in 15 ms
+[INFO] [10/03/2023, 1:20:59 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:20:59 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:20:59 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:21:00 am]: Started GET "/comments/" at 10/03/2023, 1:21:00 am
+[INFO] [10/03/2023, 1:21:00 am]: Completed 200  in 4 ms
+[INFO] [10/03/2023, 1:21:06 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:21:06 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:21:06 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:21:11 am]: Started GET "/comments/" at 10/03/2023, 1:21:11 am
+[QUERY] [10/03/2023, 1:21:11 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:21:11 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 1:25:07 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:25:07 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:25:07 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:26:08 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:26:08 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:26:08 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:26:12 am]: Started GET "/comments/" at 10/03/2023, 1:26:12 am
+[QUERY] [10/03/2023, 1:26:12 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:26:12 am]: Completed 200  in 17 ms
+[INFO] [10/03/2023, 1:26:32 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:26:32 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:26:32 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:26:34 am]: Started GET "/comments/" at 10/03/2023, 1:26:34 am
+[QUERY] [10/03/2023, 1:26:34 am]: SELECT * FROM comments LIMIT 1;
+[INFO] [10/03/2023, 1:26:34 am]: Completed 200  in 18 ms
+[INFO] [10/03/2023, 1:26:45 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:26:45 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:26:45 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:26:47 am]: Started GET "/comments/" at 10/03/2023, 1:26:47 am
+[QUERY] [10/03/2023, 1:26:47 am]: SELECT * FROM comments LIMIT 10;
+[INFO] [10/03/2023, 1:26:47 am]: Completed 200  in 16 ms
+[INFO] [10/03/2023, 1:26:51 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:26:51 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:26:51 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:26:53 am]: Started GET "/comments/" at 10/03/2023, 1:26:53 am
+[QUERY] [10/03/2023, 1:26:53 am]: SELECT * FROM comments LIMIT 4;
+[INFO] [10/03/2023, 1:26:53 am]: Completed 200  in 21 ms
+[INFO] [10/03/2023, 1:26:59 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:26:59 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:26:59 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:27:00 am]: Started GET "/comments/" at 10/03/2023, 1:27:00 am
+[QUERY] [10/03/2023, 1:27:00 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:27:00 am]: Completed 200  in 16 ms
+[INFO] [10/03/2023, 1:27:45 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:27:45 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:27:45 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:27:48 am]: Started GET "/comments/1" at 10/03/2023, 1:27:48 am
+[QUERY] [10/03/2023, 1:27:48 am]: SELECT * FROM comments WHERE id=$id;
+[INFO] [10/03/2023, 1:27:48 am]: Completed 200  in 18 ms
+[INFO] [10/03/2023, 1:27:49 am]: Started GET "/comments/" at 10/03/2023, 1:27:49 am
+[QUERY] [10/03/2023, 1:27:49 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:27:49 am]: Completed 200  in 5 ms
+[INFO] [10/03/2023, 1:27:50 am]: Started GET "/comments/30" at 10/03/2023, 1:27:50 am
+[QUERY] [10/03/2023, 1:27:50 am]: SELECT * FROM comments WHERE id=$id;
+[INFO] [10/03/2023, 1:27:50 am]: Completed 200  in 3 ms
+[INFO] [10/03/2023, 1:27:52 am]: Started GET "/comments/" at 10/03/2023, 1:27:52 am
+[QUERY] [10/03/2023, 1:27:52 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:27:52 am]: Completed 200  in 1 ms
+[INFO] [10/03/2023, 1:28:11 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:28:11 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:28:11 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:31:22 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:31:22 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:31:22 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:31:26 am]: Started GET "/comments/create" at 10/03/2023, 1:31:26 am
+[INFO] [10/03/2023, 1:31:26 am]: Completed 200 OK in 17 ms
+[INFO] [10/03/2023, 1:31:28 am]: Started POST "/comments" at 10/03/2023, 1:31:28 am
+[QUERY] [10/03/2023, 1:31:28 am]: INSERT INTO  (blog_id, body, created_at, updated_at) VALUES ($blog_id, $body, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [10/03/2023, 1:31:28 am]: Completed 200  in 11 ms
+[ERROR] [10/03/2023, 1:31:28 am]: Error: SQLITE_ERROR: near "(": syntax error
+[INFO] [10/03/2023, 1:31:28 am]: Started GET "/comments/create" at 10/03/2023, 1:31:28 am
+[INFO] [10/03/2023, 1:31:28 am]: Completed 200 OK in 3 ms
+[INFO] [10/03/2023, 1:31:56 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:31:56 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:31:56 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:32:27 am]: Started POST "/comments" at 10/03/2023, 1:32:27 am
+[QUERY] [10/03/2023, 1:32:27 am]: INSERT INTO  (blog_id, body, created_at, updated_at) VALUES ($blog_id, $body, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [10/03/2023, 1:32:27 am]: Completed 200  in 9 ms
+[ERROR] [10/03/2023, 1:32:27 am]: Error: SQLITE_ERROR: near "(": syntax error
+[INFO] [10/03/2023, 1:32:27 am]: Started GET "/comments/create" at 10/03/2023, 1:32:27 am
+[INFO] [10/03/2023, 1:32:27 am]: Completed 304 Not Modified in 5 ms
+[INFO] [10/03/2023, 1:32:38 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:32:38 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:32:38 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:32:44 am]: Started POST "/comments" at 10/03/2023, 1:32:44 am
+[QUERY] [10/03/2023, 1:32:44 am]: INSERT INTO comments (blog_id, body, created_at, updated_at) VALUES ($blog_id, $body, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [10/03/2023, 1:32:44 am]: Completed 200  in 7 ms
+[INFO] [10/03/2023, 1:32:44 am]: Started GET "/comments/" at 10/03/2023, 1:32:44 am
+[QUERY] [10/03/2023, 1:32:44 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:32:44 am]: Completed 200  in 4 ms
+[INFO] [10/03/2023, 1:32:48 am]: Started POST "/comments/delete/38" at 10/03/2023, 1:32:48 am
+[QUERY] [10/03/2023, 1:32:48 am]: DELETE FROM comments WHERE id=$id RETURNING *;
+[INFO] [10/03/2023, 1:32:48 am]: Completed 200  in 12 ms
+[INFO] [10/03/2023, 1:32:48 am]: Started GET "/comments/" at 10/03/2023, 1:32:48 am
+[QUERY] [10/03/2023, 1:32:48 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:32:48 am]: Completed 200  in 0 ms
+[INFO] [10/03/2023, 1:35:03 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:35:03 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:35:03 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:35:24 am]: Started GET "/comments/1" at 10/03/2023, 1:35:24 am
+[QUERY] [10/03/2023, 1:35:24 am]: SELECT * FROM comments WHERE id=$id;
+[INFO] [10/03/2023, 1:35:24 am]: Completed 200  in 21 ms
+[INFO] [10/03/2023, 1:35:27 am]: Started GET "/comments/edit/1" at 10/03/2023, 1:35:27 am
+[QUERY] [10/03/2023, 1:35:27 am]: SELECT * FROM comments WHERE id=$id;
+[INFO] [10/03/2023, 1:35:27 am]: Completed 200  in 7 ms
+[INFO] [10/03/2023, 1:35:28 am]: Started POST "/comments/edit/1" at 10/03/2023, 1:35:28 am
+[QUERY] [10/03/2023, 1:35:28 am]: UPDATE comments SET blog_id=$blog_id, body=$body,  updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [10/03/2023, 1:35:28 am]: Completed 200  in 8 ms
+[INFO] [10/03/2023, 1:35:28 am]: Started GET "/comments/" at 10/03/2023, 1:35:28 am
+[QUERY] [10/03/2023, 1:35:28 am]: SELECT * FROM comments;
+[INFO] [10/03/2023, 1:35:28 am]: Completed 200  in 1 ms
+[INFO] [10/03/2023, 1:35:42 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:35:42 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:35:42 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:36:40 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:36:40 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:36:40 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 1:36:53 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 1:36:53 am]: Server started on port 3000
+[INFO] [10/03/2023, 1:36:53 am]: Foreign keys have been turned ON 

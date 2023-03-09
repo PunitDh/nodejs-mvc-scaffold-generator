@@ -1,5 +1,6 @@
 import "./bin/utils/js_utils.js";
 import Handlebars from "handlebars";
+import { Query } from "./bin/utils/model_utils.js";
 
 Handlebars.registerHelper("joinComma", (arr) => arr.join(","));
 
@@ -57,3 +58,5 @@ const selectQuery = Handlebars.compile(
 });
 
 console.log(createTable, selectQuery);
+
+console.log(Query.SELECT({table: "test"}))

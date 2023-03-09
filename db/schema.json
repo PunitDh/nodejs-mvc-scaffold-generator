@@ -274,99 +274,7 @@
         "pk": 0
       }
     ],
-    "comment2s": [
-      {
-        "cid": 0,
-        "name": "id",
-        "type": "INTEGER",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 1
-      },
-      {
-        "cid": 1,
-        "name": "blog_id",
-        "type": "INTEGER",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 0
-      },
-      {
-        "cid": 2,
-        "name": "body",
-        "type": "TEXT",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 0
-      },
-      {
-        "cid": 3,
-        "name": "created_at",
-        "type": "NUMERIC",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 0
-      },
-      {
-        "cid": 4,
-        "name": "updated_at",
-        "type": "NUMERIC",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 0
-      }
-    ],
     "companies": [
-      {
-        "cid": 0,
-        "name": "id",
-        "type": "INTEGER",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 1
-      },
-      {
-        "cid": 1,
-        "name": "name",
-        "type": "TEXT",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 0
-      },
-      {
-        "cid": 2,
-        "name": "address",
-        "type": "TEXT",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 0
-      },
-      {
-        "cid": 3,
-        "name": "number_of_employees",
-        "type": "NUMERIC",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 0
-      },
-      {
-        "cid": 4,
-        "name": "created_at",
-        "type": "NUMERIC",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 0
-      },
-      {
-        "cid": 5,
-        "name": "updated_at",
-        "type": "NUMERIC",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 0
-      }
-    ],
-    "company1s": [
       {
         "cid": 0,
         "name": "id",
@@ -417,12 +325,5 @@
       }
     ]
   },
-  "routers": [
-    "users",
-    "blogs",
-    "comments",
-    "animals",
-    "employees",
-    "companies"
-  ]
+  "routers": ["users", "blogs", "comments", "animals", "employees", "companies"]
 }

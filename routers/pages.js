@@ -12,21 +12,24 @@ pages.get("/about", (_, res) => {
 });
 
 pages.get("/search", async (req, res) => {
-  if (req.query.q) {
+  if (req.query.q !== null) {
     const results = await SearchResult.search(req.query.q);
-
-    const markedResults = results.map((result) => {
-      const markedResult = {};
-      markedResult.table = result.table;
-      markedResult.data = {};
-      Object.entries(result.data).forEach(([key, value]) => {
-        const regex = new RegExp(`(${req.query.q})`, "gi");
-        markedResult.data[key] = value
-          .toString()
-          .replace(regex, "<span class='mark'>$1</span>");
-      });
-      return markedResult;
-    });
+    const markedResults =
+      req.query.q.length > 0
+        ? results.map((result) => {
+            const markedResult = {};
+            markedResult.table = result.table;
+            markedResult.data = {};
+            Object.entries(result.data).forEach(([key, value]) => {
+              const regex = new RegExp(`(${req.query.q})`, "gi");
+              markedResult.data[key] =
+                value
+                  ?.toString()
+                  .replace(regex, "<span class='mark'>$1</span>") || value;
+            });
+            return markedResult;
+          })
+        : results;
 
     res.render("pages/search", {
       results: JSON.stringify(markedResults, null, 2),

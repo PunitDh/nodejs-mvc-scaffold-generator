@@ -1,0 +1,28 @@
+<% if (page === "Create") { %>
+<form action="/companies %>" method="POST">
+<% } else { %>
+<form action="/companies/edit/<%= company.id %>" method="POST">
+<% } %>
+  <div class="form-group d-flex row mb-2">
+    <label for="name" class="form-label">
+      <div class="mb-2">Name</div>
+      <input type="TEXT" value="<%= page === 'Create' ? '' : company.name %>" name="name"  class="form-control form-control" id="name" placeholder="Enter Name" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group d-flex row mb-2">
+    <label for="address" class="form-label">
+      <div class="mb-2">Address</div>
+      <input type="TEXT" value="<%= page === 'Create' ? '' : company.address %>" name="address"  class="form-control form-control" id="address" placeholder="Enter Address" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group d-flex row mb-2">
+    <label for="number_of_employees" class="form-label">
+      <div class="mb-2">Number Of Employees</div>
+      <input type="NUMERIC" value="<%= page === 'Create' ? '' : company.number_of_employees %>" name="number_of_employees"  class="form-control form-control" id="number_of_employees" placeholder="Enter Number Of Employees" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group mb-2">
+    <button type="submit" class="btn btn-primary"><%= page %> Company</button>
+    <a href="/companies" class="btn btn-danger">Back</a>
+  </div>
+</form>

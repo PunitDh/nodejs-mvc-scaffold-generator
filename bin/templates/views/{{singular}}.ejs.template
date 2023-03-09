@@ -7,10 +7,10 @@
       <tr>
         <td class="h6">{{Name}}</td>
         {{#date}}
-        <td><%= formatDate({{singular}}.{{name}}) %></td>
+        <td><%= formatDate({{../singular}}.{{name}}) %></td>
         {{/date}}
         {{^date}}
-        <td><%= {{singular}}.{{name}} %></td>
+        <td><%= {{../singular}}.{{name}} %></td>
         {{/date}}
       </tr>
       {{/indexColumns}}

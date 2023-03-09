@@ -11448,3 +11448,1013 @@
 [INFO] [09/03/2023, 9:42:33 pm]: Successfully connected to database: 'database.db'
 [INFO] [09/03/2023, 9:42:33 pm]: Server started on port 3000
 [INFO] [09/03/2023, 9:42:33 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:50:28 pm]: Started POST "/users/logout" at 09/03/2023, 9:50:28 pm
+[INFO] [09/03/2023, 9:50:28 pm]: Completed 200 OK in 8 ms
+[INFO] [09/03/2023, 9:50:30 pm]: Started GET "/blogs/" at 09/03/2023, 9:50:30 pm
+[INFO] [09/03/2023, 9:50:30 pm]: Completed 302 Found in 4 ms
+[INFO] [09/03/2023, 9:50:30 pm]: Started GET "/users/login" at 09/03/2023, 9:50:30 pm
+[INFO] [09/03/2023, 9:50:30 pm]: Completed 200 OK in 4 ms
+[INFO] [09/03/2023, 9:50:31 pm]: Started POST "/users/login" at 09/03/2023, 9:50:31 pm
+[QUERY] [09/03/2023, 9:50:31 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 9:50:31 pm]: Completed 200  in 8 ms
+[QUERY] [09/03/2023, 9:50:31 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 9:50:31 pm]: Started GET "/users/?login=success" at 09/03/2023, 9:50:31 pm
+[QUERY] [09/03/2023, 9:50:31 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 9:50:31 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 9:50:31 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 9:50:50 pm]: Started POST "/users/logout" at 09/03/2023, 9:50:50 pm
+[INFO] [09/03/2023, 9:50:50 pm]: Completed 200 OK in 4 ms
+[INFO] [09/03/2023, 9:52:46 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:52:46 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:52:46 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:52:50 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:52:50 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:52:50 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:53:00 pm]: Started GET "/blogs/" at 09/03/2023, 9:53:00 pm
+[INFO] [09/03/2023, 9:53:00 pm]: Completed 200  in 3 ms
+[INFO] [09/03/2023, 9:53:14 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:53:14 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:53:14 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:53:16 pm]: Started GET "/blogs/" at 09/03/2023, 9:53:16 pm
+[INFO] [09/03/2023, 9:53:16 pm]: Completed 302 Found in 14 ms
+[INFO] [09/03/2023, 9:53:16 pm]: Started GET "/users/login" at 09/03/2023, 9:53:16 pm
+[INFO] [09/03/2023, 9:53:16 pm]: Completed 200 OK in 4 ms
+[INFO] [09/03/2023, 9:53:49 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:53:49 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:53:49 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:53:50 pm]: Started GET "/blogs/" at 09/03/2023, 9:53:50 pm
+[INFO] [09/03/2023, 9:53:50 pm]: Completed 302 Found in 8 ms
+[INFO] [09/03/2023, 9:53:50 pm]: Started GET "/users/login" at 09/03/2023, 9:53:50 pm
+[INFO] [09/03/2023, 9:53:50 pm]: Completed 304 Not Modified in 6 ms
+[INFO] [09/03/2023, 9:54:23 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:54:23 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:54:23 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:54:27 pm]: Started GET "/blogs/" at 09/03/2023, 9:54:27 pm
+[INFO] [09/03/2023, 9:54:27 pm]: Completed 302 Found in 8 ms
+[INFO] [09/03/2023, 9:54:27 pm]: Started GET "/users/login" at 09/03/2023, 9:54:27 pm
+[INFO] [09/03/2023, 9:54:27 pm]: Completed 304 Not Modified in 6 ms
+[INFO] [09/03/2023, 9:55:16 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:55:16 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:55:16 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:55:19 pm]: Started GET "/blogs/" at 09/03/2023, 9:55:19 pm
+[INFO] [09/03/2023, 9:55:19 pm]: Completed 302 Found in 9 ms
+[INFO] [09/03/2023, 9:55:19 pm]: Started GET "/users/login" at 09/03/2023, 9:55:19 pm
+[INFO] [09/03/2023, 9:55:19 pm]: Completed 304 Not Modified in 8 ms
+[INFO] [09/03/2023, 9:55:56 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:55:56 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:55:56 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:55:59 pm]: Started GET "/blogs/" at 09/03/2023, 9:55:59 pm
+[INFO] [09/03/2023, 9:55:59 pm]: Completed 302 Found in 8 ms
+[INFO] [09/03/2023, 9:55:59 pm]: Started GET "/users/login" at 09/03/2023, 9:55:59 pm
+[INFO] [09/03/2023, 9:55:59 pm]: Completed 304 Not Modified in 5 ms
+[INFO] [09/03/2023, 9:56:22 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:56:22 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:56:22 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:56:23 pm]: Started GET "/blogs/" at 09/03/2023, 9:56:23 pm
+[INFO] [09/03/2023, 9:56:24 pm]: Completed 302 Found in 13 ms
+[INFO] [09/03/2023, 9:56:24 pm]: Started GET "/users/login" at 09/03/2023, 9:56:24 pm
+[INFO] [09/03/2023, 9:56:24 pm]: Completed 304 Not Modified in 5 ms
+[INFO] [09/03/2023, 9:56:31 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:56:31 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:56:31 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:56:47 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:56:47 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:56:47 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:56:55 pm]: Started GET "/blogs/" at 09/03/2023, 9:56:55 pm
+[INFO] [09/03/2023, 9:56:55 pm]: Completed 302 Found in 13 ms
+[INFO] [09/03/2023, 9:56:55 pm]: Started GET "/users/login" at 09/03/2023, 9:56:55 pm
+[INFO] [09/03/2023, 9:56:55 pm]: Completed 304 Not Modified in 5 ms
+[INFO] [09/03/2023, 9:57:08 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:57:08 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:57:08 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:57:10 pm]: Started GET "/blogs/" at 09/03/2023, 9:57:10 pm
+[INFO] [09/03/2023, 9:57:10 pm]: Completed 302 Found in 8 ms
+[INFO] [09/03/2023, 9:57:10 pm]: Started GET "/users/login" at 09/03/2023, 9:57:10 pm
+[INFO] [09/03/2023, 9:57:10 pm]: Completed 304 Not Modified in 3 ms
+[INFO] [09/03/2023, 9:57:32 pm]: Started GET "/blogs/" at 09/03/2023, 9:57:32 pm
+[INFO] [09/03/2023, 9:57:32 pm]: Completed 302 Found in 2 ms
+[INFO] [09/03/2023, 9:57:32 pm]: Started GET "/users/login" at 09/03/2023, 9:57:32 pm
+[INFO] [09/03/2023, 9:57:32 pm]: Completed 304 Not Modified in 2 ms
+[INFO] [09/03/2023, 9:58:22 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:58:22 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:58:22 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:58:24 pm]: Started GET "/blogs/" at 09/03/2023, 9:58:24 pm
+[INFO] [09/03/2023, 9:58:24 pm]: Completed 302 Found in 7 ms
+[INFO] [09/03/2023, 9:58:24 pm]: Started GET "/users/login" at 09/03/2023, 9:58:24 pm
+[INFO] [09/03/2023, 9:58:24 pm]: Completed 304 Not Modified in 6 ms
+[INFO] [09/03/2023, 9:59:02 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:59:02 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:59:02 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:59:05 pm]: Started GET "/blogs/" at 09/03/2023, 9:59:05 pm
+[INFO] [09/03/2023, 9:59:05 pm]: Completed 302 Found in 12 ms
+[INFO] [09/03/2023, 9:59:05 pm]: Started GET "/users/login" at 09/03/2023, 9:59:05 pm
+[INFO] [09/03/2023, 9:59:05 pm]: Completed 304 Not Modified in 5 ms
+[INFO] [09/03/2023, 9:59:47 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:59:47 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:59:47 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:59:53 pm]: Started GET "/blogs/" at 09/03/2023, 9:59:53 pm
+[INFO] [09/03/2023, 9:59:53 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 10:00:03 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:00:03 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:00:03 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:00:14 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:00:14 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:00:14 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:00:16 pm]: Started GET "/blogs/" at 09/03/2023, 10:00:16 pm
+[INFO] [09/03/2023, 10:00:16 pm]: Completed 200  in 4 ms
+[INFO] [09/03/2023, 10:00:30 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:00:30 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:00:30 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:00:31 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:00:31 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:00:31 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:00:35 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:00:35 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:00:35 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:00:38 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:00:38 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:00:38 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:00:40 pm]: Started GET "/blogs/" at 09/03/2023, 10:00:40 pm
+[INFO] [09/03/2023, 10:00:40 pm]: Completed 200  in 2 ms
+[INFO] [09/03/2023, 10:00:42 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:00:42 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:00:42 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:00:43 pm]: Started GET "/blogs/" at 09/03/2023, 10:00:43 pm
+[INFO] [09/03/2023, 10:00:43 pm]: Completed 302 Found in 4 ms
+[INFO] [09/03/2023, 10:00:43 pm]: Started GET "/users/login" at 09/03/2023, 10:00:43 pm
+[INFO] [09/03/2023, 10:00:43 pm]: Completed 304 Not Modified in 5 ms
+[INFO] [09/03/2023, 10:00:45 pm]: Started GET "/blogs/" at 09/03/2023, 10:00:45 pm
+[INFO] [09/03/2023, 10:00:45 pm]: Completed 302 Found in 3 ms
+[INFO] [09/03/2023, 10:00:45 pm]: Started GET "/users/login" at 09/03/2023, 10:00:45 pm
+[INFO] [09/03/2023, 10:00:45 pm]: Completed 304 Not Modified in 5 ms
+[INFO] [09/03/2023, 10:01:51 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:01:51 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:01:51 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:01:54 pm]: Started GET "/blogs/" at 09/03/2023, 10:01:54 pm
+[INFO] [09/03/2023, 10:01:54 pm]: Completed 302 Found in 12 ms
+[INFO] [09/03/2023, 10:01:54 pm]: Started GET "/users/login?referer=/blogs/" at 09/03/2023, 10:01:54 pm
+[INFO] [09/03/2023, 10:01:54 pm]: Completed 200 OK in 6 ms
+[INFO] [09/03/2023, 10:03:04 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:03:04 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:03:04 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:03:05 pm]: Started GET "/users/login?referer=/blogs/" at 09/03/2023, 10:03:05 pm
+[INFO] [09/03/2023, 10:03:05 pm]: Completed 304 Not Modified in 13 ms
+[INFO] [09/03/2023, 10:03:07 pm]: Started GET "/users/login?referer=/blogs/" at 09/03/2023, 10:03:07 pm
+[INFO] [09/03/2023, 10:03:07 pm]: Completed 304 Not Modified in 5 ms
+[INFO] [09/03/2023, 10:03:09 pm]: Started GET "/blogs/" at 09/03/2023, 10:03:09 pm
+[INFO] [09/03/2023, 10:03:09 pm]: Completed 302 Found in 5 ms
+[INFO] [09/03/2023, 10:03:09 pm]: Started GET "/users/login?referer=referer=%2Fblogs%2F" at 09/03/2023, 10:03:09 pm
+[INFO] [09/03/2023, 10:03:09 pm]: Completed 200 OK in 3 ms
+[INFO] [09/03/2023, 10:03:14 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:03:14 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:03:14 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:03:15 pm]: Started GET "/users/login?referer=referer=%2Fblogs%2F" at 09/03/2023, 10:03:15 pm
+[INFO] [09/03/2023, 10:03:15 pm]: Completed 304 Not Modified in 22 ms
+[INFO] [09/03/2023, 10:03:17 pm]: Started GET "/blogs/" at 09/03/2023, 10:03:17 pm
+[INFO] [09/03/2023, 10:03:17 pm]: Completed 302 Found in 6 ms
+[INFO] [09/03/2023, 10:03:17 pm]: Started GET "/users/login?referer=%2Fblogs%2F" at 09/03/2023, 10:03:17 pm
+[INFO] [09/03/2023, 10:03:17 pm]: Completed 200 OK in 7 ms
+[INFO] [09/03/2023, 10:03:26 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:03:26 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:03:26 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:03:33 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:03:33 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:03:33 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:03:41 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:03:41 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:03:41 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:04:57 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:04:57 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:04:57 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:05:11 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:05:11 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:05:11 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:07:16 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:07:16 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:07:16 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:07:18 pm]: Started GET "/blogs/" at 09/03/2023, 10:07:18 pm
+[INFO] [09/03/2023, 10:07:18 pm]: Completed 302 Found in 11 ms
+[INFO] [09/03/2023, 10:07:18 pm]: Started GET "/users/login?referer=%2Fblogs%2F" at 09/03/2023, 10:07:18 pm
+[INFO] [09/03/2023, 10:07:18 pm]: Completed 304 Not Modified in 6 ms
+[INFO] [09/03/2023, 10:07:20 pm]: Started POST "/users/login" at 09/03/2023, 10:07:20 pm
+[QUERY] [09/03/2023, 10:07:20 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:07:20 pm]: Completed 200  in 5 ms
+[QUERY] [09/03/2023, 10:07:20 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:07:20 pm]: Started GET "/users/" at 09/03/2023, 10:07:20 pm
+[QUERY] [09/03/2023, 10:07:20 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:07:20 pm]: Completed 200  in 2 ms
+[QUERY] [09/03/2023, 10:07:20 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 10:07:40 pm]: Started GET "/blogs/" at 09/03/2023, 10:07:40 pm
+[QUERY] [09/03/2023, 10:07:40 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:07:40 pm]: Completed 200  in 4 ms
+[QUERY] [09/03/2023, 10:07:40 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 10:07:43 pm]: Started POST "/users/logout" at 09/03/2023, 10:07:43 pm
+[INFO] [09/03/2023, 10:07:43 pm]: Completed 200 OK in 4 ms
+[INFO] [09/03/2023, 10:07:48 pm]: Started GET "/blogs/" at 09/03/2023, 10:07:48 pm
+[INFO] [09/03/2023, 10:07:48 pm]: Completed 302 Found in 2 ms
+[INFO] [09/03/2023, 10:07:48 pm]: Started GET "/users/login?referer=%2Fblogs%2F" at 09/03/2023, 10:07:48 pm
+[INFO] [09/03/2023, 10:07:48 pm]: Completed 304 Not Modified in 3 ms
+[INFO] [09/03/2023, 10:07:50 pm]: Started POST "/users/login" at 09/03/2023, 10:07:50 pm
+[QUERY] [09/03/2023, 10:07:50 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:07:50 pm]: Completed 200  in 3 ms
+[QUERY] [09/03/2023, 10:07:50 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:07:50 pm]: Started GET "/users/" at 09/03/2023, 10:07:50 pm
+[QUERY] [09/03/2023, 10:07:50 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:07:50 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:07:50 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 10:08:06 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:08:06 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:08:06 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:08:08 pm]: Started GET "/blogs/" at 09/03/2023, 10:08:08 pm
+[QUERY] [09/03/2023, 10:08:08 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:08:08 pm]: Completed 200  in 8 ms
+[QUERY] [09/03/2023, 10:08:08 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 10:08:13 pm]: Started POST "/users/logout" at 09/03/2023, 10:08:13 pm
+[INFO] [09/03/2023, 10:08:13 pm]: Completed 200 OK in 6 ms
+[INFO] [09/03/2023, 10:08:15 pm]: Started POST "/users/login" at 09/03/2023, 10:08:15 pm
+[QUERY] [09/03/2023, 10:08:15 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:08:15 pm]: Completed 200  in 2 ms
+[QUERY] [09/03/2023, 10:08:15 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:08:15 pm]: Started GET "/users/" at 09/03/2023, 10:08:15 pm
+[QUERY] [09/03/2023, 10:08:15 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:08:15 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:08:15 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 10:08:22 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:08:22 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:08:22 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:08:27 pm]: Started POST "/users/logout" at 09/03/2023, 10:08:27 pm
+[INFO] [09/03/2023, 10:08:27 pm]: Completed 200 OK in 8 ms
+[INFO] [09/03/2023, 10:08:29 pm]: Started POST "/users/login" at 09/03/2023, 10:08:29 pm
+[QUERY] [09/03/2023, 10:08:29 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:08:29 pm]: Completed 200  in 5 ms
+[QUERY] [09/03/2023, 10:08:29 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:08:29 pm]: Started GET "/users/" at 09/03/2023, 10:08:29 pm
+[QUERY] [09/03/2023, 10:08:29 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:08:29 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:08:29 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 10:09:59 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:09:59 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:09:59 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:10:10 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:10:10 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:10:10 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:10:13 pm]: Started POST "/users/logout" at 09/03/2023, 10:10:13 pm
+[INFO] [09/03/2023, 10:10:13 pm]: Completed 200 OK in 9 ms
+[INFO] [09/03/2023, 10:10:14 pm]: Started GET "/blogs/" at 09/03/2023, 10:10:14 pm
+[INFO] [09/03/2023, 10:10:14 pm]: Completed 302 Found in 4 ms
+[INFO] [09/03/2023, 10:10:14 pm]: Started GET "/users/login?referer=%2Fblogs%2F" at 09/03/2023, 10:10:14 pm
+[INFO] [09/03/2023, 10:10:14 pm]: Completed 304 Not Modified in 8 ms
+[INFO] [09/03/2023, 10:10:42 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:10:42 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:10:42 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:11:38 pm]: Started GET "/users/" at 09/03/2023, 10:11:38 pm
+[INFO] [09/03/2023, 10:11:38 pm]: Completed 302 Found in 7 ms
+[INFO] [09/03/2023, 10:11:38 pm]: Started GET "/users/login?referer=%2Fusers%2F" at 09/03/2023, 10:11:38 pm
+[INFO] [09/03/2023, 10:11:38 pm]: Completed 200 OK in 6 ms
+[INFO] [09/03/2023, 10:11:40 pm]: Started POST "/users/login" at 09/03/2023, 10:11:40 pm
+[QUERY] [09/03/2023, 10:11:40 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:11:40 pm]: Completed 200  in 4 ms
+[QUERY] [09/03/2023, 10:11:40 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:11:40 pm]: Started GET "/users/" at 09/03/2023, 10:11:40 pm
+[QUERY] [09/03/2023, 10:11:40 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:11:40 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:11:40 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 10:11:44 pm]: Started POST "/users/logout" at 09/03/2023, 10:11:44 pm
+[INFO] [09/03/2023, 10:11:44 pm]: Completed 200  in 7 ms
+[INFO] [09/03/2023, 10:12:18 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:12:18 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:12:18 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:12:22 pm]: Started GET "/users/logout" at 09/03/2023, 10:12:22 pm
+[QUERY] [09/03/2023, 10:12:22 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:12:22 pm]: Completed 200  in 5 ms
+[INFO] [09/03/2023, 10:12:22 pm]: Started GET "/favicon.ico" at 09/03/2023, 10:12:22 pm
+[INFO] [09/03/2023, 10:12:22 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 10:12:24 pm]: Started GET "/users/" at 09/03/2023, 10:12:24 pm
+[INFO] [09/03/2023, 10:12:24 pm]: Completed 302 Found in 7 ms
+[INFO] [09/03/2023, 10:12:24 pm]: Started GET "/users/login?referer=%2Fusers%2F" at 09/03/2023, 10:12:24 pm
+[INFO] [09/03/2023, 10:12:24 pm]: Completed 304 Not Modified in 3 ms
+[INFO] [09/03/2023, 10:12:27 pm]: Started POST "/users/login" at 09/03/2023, 10:12:27 pm
+[QUERY] [09/03/2023, 10:12:27 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:12:27 pm]: Completed 200  in 7 ms
+[QUERY] [09/03/2023, 10:12:27 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:12:27 pm]: Started GET "/users/" at 09/03/2023, 10:12:27 pm
+[QUERY] [09/03/2023, 10:12:27 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:12:27 pm]: Completed 200  in 2 ms
+[QUERY] [09/03/2023, 10:12:27 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 10:12:29 pm]: Started POST "/users/logout" at 09/03/2023, 10:12:29 pm
+[INFO] [09/03/2023, 10:12:29 pm]: Completed 200  in 5 ms
+[INFO] [09/03/2023, 10:13:27 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:13:27 pm]: Server started on port 3000
+[INFO] [09/03/2023, 10:13:27 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:15:08 pm]: Started GET "/users/logout" at 09/03/2023, 10:15:08 pm
+[QUERY] [09/03/2023, 10:15:08 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:15:08 pm]: Completed 200  in 8 ms
+[INFO] [09/03/2023, 10:15:10 pm]: Started GET "/users/" at 09/03/2023, 10:15:10 pm
+[INFO] [09/03/2023, 10:15:10 pm]: Completed 302 Found in 7 ms
+[INFO] [09/03/2023, 10:15:10 pm]: Started GET "/users/login?referer=%2Fusers%2F" at 09/03/2023, 10:15:10 pm
+[INFO] [09/03/2023, 10:15:10 pm]: Completed 200 OK in 4 ms
+[INFO] [09/03/2023, 10:15:12 pm]: Started POST "/users/login?referer=/users/" at 09/03/2023, 10:15:12 pm
+[QUERY] [09/03/2023, 10:15:12 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:15:12 pm]: Completed 200  in 5 ms
+[QUERY] [09/03/2023, 10:15:12 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:15:12 pm]: Started GET "/users/" at 09/03/2023, 10:15:12 pm
+[QUERY] [09/03/2023, 10:15:12 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:15:12 pm]: Completed 200  in 2 ms
+[QUERY] [09/03/2023, 10:15:12 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 10:15:16 pm]: Started POST "/users/logout" at 09/03/2023, 10:15:16 pm
+[INFO] [09/03/2023, 10:15:16 pm]: Completed 200 OK in 4 ms
+[INFO] [09/03/2023, 10:15:20 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 09/03/2023, 10:15:20 pm
+[INFO] [09/03/2023, 10:15:20 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 10:15:20 pm]: Started GET "/assets/css/bootstrap.min.css.map" at 09/03/2023, 10:15:20 pm
+[INFO] [09/03/2023, 10:15:20 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 10:15:26 pm]: Started GET "/blogs/" at 09/03/2023, 10:15:26 pm
+[INFO] [09/03/2023, 10:15:26 pm]: Completed 302 Found in 1 ms
+[INFO] [09/03/2023, 10:15:26 pm]: Started GET "/users/login?referer=%2Fblogs%2F" at 09/03/2023, 10:15:26 pm
+[INFO] [09/03/2023, 10:15:26 pm]: Completed 200 OK in 1 ms
+[INFO] [09/03/2023, 10:15:32 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 09/03/2023, 10:15:32 pm
+[INFO] [09/03/2023, 10:15:32 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 10:15:32 pm]: Started GET "/assets/css/bootstrap.min.css.map" at 09/03/2023, 10:15:32 pm
+[INFO] [09/03/2023, 10:15:32 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 10:15:43 pm]: Started POST "/users/login?referer=/blogs/" at 09/03/2023, 10:15:43 pm
+[QUERY] [09/03/2023, 10:15:43 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:15:43 pm]: Completed 200  in 3 ms
+[QUERY] [09/03/2023, 10:15:43 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:15:43 pm]: Started GET "/blogs/" at 09/03/2023, 10:15:43 pm
+[QUERY] [09/03/2023, 10:15:43 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:15:43 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:15:43 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 10:15:43 pm]: Started GET "/assets/css/bootstrap.min.css.map" at 09/03/2023, 10:15:43 pm
+[INFO] [09/03/2023, 10:15:43 pm]: Completed 200  in 0 ms
+[INFO] [09/03/2023, 10:15:43 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 09/03/2023, 10:15:43 pm
+[INFO] [09/03/2023, 10:15:43 pm]: Completed 200  in 0 ms
+[INFO] [09/03/2023, 10:16:30 pm]: Started POST "/users/logout" at 09/03/2023, 10:16:30 pm
+[INFO] [09/03/2023, 10:16:30 pm]: Completed 200 OK in 2 ms
+[INFO] [09/03/2023, 10:16:34 pm]: Started GET "/comments/" at 09/03/2023, 10:16:34 pm
+[QUERY] [09/03/2023, 10:16:34 pm]: SELECT * FROM comments;
+[INFO] [09/03/2023, 10:16:34 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 10:16:36 pm]: Started GET "/blogs/" at 09/03/2023, 10:16:36 pm
+[INFO] [09/03/2023, 10:16:36 pm]: Completed 302 Found in 1 ms
+[INFO] [09/03/2023, 10:16:36 pm]: Started GET "/users/login?referer=%2Fblogs%2F" at 09/03/2023, 10:16:36 pm
+[INFO] [09/03/2023, 10:16:36 pm]: Completed 304 Not Modified in 4 ms
+[INFO] [09/03/2023, 10:16:37 pm]: Started POST "/users/login?referer=/blogs/" at 09/03/2023, 10:16:37 pm
+[QUERY] [09/03/2023, 10:16:37 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:16:37 pm]: Completed 200  in 2 ms
+[QUERY] [09/03/2023, 10:16:37 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:16:37 pm]: Started GET "/blogs/" at 09/03/2023, 10:16:37 pm
+[QUERY] [09/03/2023, 10:16:37 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:16:37 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:16:37 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 10:16:41 pm]: Started POST "/users/logout" at 09/03/2023, 10:16:41 pm
+[INFO] [09/03/2023, 10:16:41 pm]: Completed 200 OK in 4 ms
+[INFO] [09/03/2023, 10:16:43 pm]: Started GET "/about" at 09/03/2023, 10:16:43 pm
+[INFO] [09/03/2023, 10:16:43 pm]: Completed 200 OK in 5 ms
+[INFO] [09/03/2023, 10:16:45 pm]: Started GET "/users/" at 09/03/2023, 10:16:45 pm
+[INFO] [09/03/2023, 10:16:45 pm]: Completed 302 Found in 2 ms
+[INFO] [09/03/2023, 10:16:45 pm]: Started GET "/users/login?referer=%2Fusers%2F" at 09/03/2023, 10:16:45 pm
+[INFO] [09/03/2023, 10:16:45 pm]: Completed 304 Not Modified in 2 ms
+[INFO] [09/03/2023, 10:16:47 pm]: Started GET "/blogs/" at 09/03/2023, 10:16:47 pm
+[INFO] [09/03/2023, 10:16:47 pm]: Completed 302 Found in 2 ms
+[INFO] [09/03/2023, 10:16:47 pm]: Started GET "/users/login?referer=%2Fblogs%2F" at 09/03/2023, 10:16:47 pm
+[INFO] [09/03/2023, 10:16:47 pm]: Completed 304 Not Modified in 2 ms
+[INFO] [09/03/2023, 10:17:34 pm]: Started POST "/users/login?referer=/blogs/" at 09/03/2023, 10:17:34 pm
+[QUERY] [09/03/2023, 10:17:34 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:17:34 pm]: Completed 200  in 3 ms
+[QUERY] [09/03/2023, 10:17:34 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:17:34 pm]: Started GET "/blogs/" at 09/03/2023, 10:17:34 pm
+[QUERY] [09/03/2023, 10:17:34 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:17:34 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:17:34 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 10:17:39 pm]: Started POST "/users/logout" at 09/03/2023, 10:17:39 pm
+[INFO] [09/03/2023, 10:17:39 pm]: Completed 200 OK in 5 ms
+[INFO] [09/03/2023, 10:17:41 pm]: Started GET "/animals/" at 09/03/2023, 10:17:41 pm
+[INFO] [09/03/2023, 10:17:41 pm]: Completed 302 Found in 1 ms
+[INFO] [09/03/2023, 10:17:41 pm]: Started GET "/users/login?referer=%2Fanimals%2F" at 09/03/2023, 10:17:41 pm
+[INFO] [09/03/2023, 10:17:41 pm]: Completed 200 OK in 4 ms
+[INFO] [09/03/2023, 10:17:43 pm]: Started POST "/users/login?referer=/animals/" at 09/03/2023, 10:17:43 pm
+[QUERY] [09/03/2023, 10:17:43 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:17:43 pm]: Completed 200  in 2 ms
+[QUERY] [09/03/2023, 10:17:43 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:17:43 pm]: Started GET "/animals/" at 09/03/2023, 10:17:43 pm
+[QUERY] [09/03/2023, 10:17:43 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:17:43 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:17:43 pm]: SELECT * FROM animals;
+[INFO] [09/03/2023, 10:18:03 pm]: Started POST "/users/logout" at 09/03/2023, 10:18:03 pm
+[INFO] [09/03/2023, 10:18:03 pm]: Completed 200 OK in 5 ms
+[INFO] [09/03/2023, 10:18:06 pm]: Started GET "/about" at 09/03/2023, 10:18:06 pm
+[INFO] [09/03/2023, 10:18:06 pm]: Completed 304 Not Modified in 4 ms
+[INFO] [09/03/2023, 10:18:07 pm]: Started GET "/users/" at 09/03/2023, 10:18:07 pm
+[INFO] [09/03/2023, 10:18:07 pm]: Completed 302 Found in 1 ms
+[INFO] [09/03/2023, 10:18:07 pm]: Started GET "/users/login?referer=%2Fusers%2F" at 09/03/2023, 10:18:07 pm
+[INFO] [09/03/2023, 10:18:07 pm]: Completed 304 Not Modified in 3 ms
+[INFO] [09/03/2023, 10:18:08 pm]: Started GET "/blogs/" at 09/03/2023, 10:18:08 pm
+[INFO] [09/03/2023, 10:18:08 pm]: Completed 302 Found in 1 ms
+[INFO] [09/03/2023, 10:18:08 pm]: Started GET "/users/login?referer=%2Fblogs%2F" at 09/03/2023, 10:18:08 pm
+[INFO] [09/03/2023, 10:18:08 pm]: Completed 304 Not Modified in 7 ms
+[INFO] [09/03/2023, 10:18:31 pm]: Started GET "/users/" at 09/03/2023, 10:18:31 pm
+[INFO] [09/03/2023, 10:18:31 pm]: Completed 302 Found in 1 ms
+[INFO] [09/03/2023, 10:18:31 pm]: Started GET "/users/login?referer=%2Fusers%2F" at 09/03/2023, 10:18:31 pm
+[INFO] [09/03/2023, 10:18:31 pm]: Completed 304 Not Modified in 5 ms
+[INFO] [09/03/2023, 10:18:33 pm]: Started GET "/users/" at 09/03/2023, 10:18:33 pm
+[INFO] [09/03/2023, 10:18:33 pm]: Completed 302 Found in 2 ms
+[INFO] [09/03/2023, 10:18:33 pm]: Started GET "/users/login?referer=%2Fusers%2F" at 09/03/2023, 10:18:33 pm
+[INFO] [09/03/2023, 10:18:33 pm]: Completed 304 Not Modified in 6 ms
+[INFO] [09/03/2023, 10:18:35 pm]: Started POST "/users/login?referer=/users/" at 09/03/2023, 10:18:35 pm
+[QUERY] [09/03/2023, 10:18:35 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:18:35 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:18:35 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:18:35 pm]: Started GET "/users/" at 09/03/2023, 10:18:35 pm
+[QUERY] [09/03/2023, 10:18:35 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:18:35 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:18:35 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 10:18:38 pm]: Started GET "/employees/" at 09/03/2023, 10:18:38 pm
+[QUERY] [09/03/2023, 10:18:38 pm]: SELECT * FROM employees;
+[INFO] [09/03/2023, 10:18:38 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 10:18:40 pm]: Started GET "/users/" at 09/03/2023, 10:18:40 pm
+[QUERY] [09/03/2023, 10:18:40 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:18:40 pm]: Completed 200  in 3 ms
+[QUERY] [09/03/2023, 10:18:40 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 10:18:41 pm]: Started POST "/users/logout" at 09/03/2023, 10:18:41 pm
+[INFO] [09/03/2023, 10:18:41 pm]: Completed 200 OK in 3 ms
+[INFO] [09/03/2023, 10:20:29 pm]: Started GET "/users/" at 09/03/2023, 10:20:29 pm
+[INFO] [09/03/2023, 10:20:29 pm]: Completed 302 Found in 2 ms
+[INFO] [09/03/2023, 10:20:29 pm]: Started GET "/users/login?referer=%2Fusers%2F" at 09/03/2023, 10:20:29 pm
+[INFO] [09/03/2023, 10:20:29 pm]: Completed 304 Not Modified in 6 ms
+[INFO] [09/03/2023, 10:20:30 pm]: Started POST "/users/login?referer=/users/" at 09/03/2023, 10:20:30 pm
+[QUERY] [09/03/2023, 10:20:30 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:20:30 pm]: Completed 200  in 2 ms
+[QUERY] [09/03/2023, 10:20:30 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:20:30 pm]: Started GET "/users/" at 09/03/2023, 10:20:30 pm
+[QUERY] [09/03/2023, 10:20:30 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:20:30 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:20:30 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 10:20:34 pm]: Started POST "/users/logout" at 09/03/2023, 10:20:34 pm
+[INFO] [09/03/2023, 10:20:34 pm]: Completed 200 OK in 4 ms
+[INFO] [09/03/2023, 10:21:04 pm]: Started GET "/about" at 09/03/2023, 10:21:04 pm
+[INFO] [09/03/2023, 10:21:04 pm]: Completed 304 Not Modified in 3 ms
+[INFO] [09/03/2023, 10:21:06 pm]: Started GET "/users/" at 09/03/2023, 10:21:06 pm
+[INFO] [09/03/2023, 10:21:06 pm]: Completed 302 Found in 2 ms
+[INFO] [09/03/2023, 10:21:06 pm]: Started GET "/users/login?referer=%2Fusers%2F" at 09/03/2023, 10:21:06 pm
+[INFO] [09/03/2023, 10:21:06 pm]: Completed 304 Not Modified in 2 ms
+[INFO] [09/03/2023, 10:21:07 pm]: Started GET "/blogs/" at 09/03/2023, 10:21:07 pm
+[INFO] [09/03/2023, 10:21:07 pm]: Completed 302 Found in 2 ms
+[INFO] [09/03/2023, 10:21:07 pm]: Started GET "/users/login?referer=%2Fblogs%2F" at 09/03/2023, 10:21:07 pm
+[INFO] [09/03/2023, 10:21:07 pm]: Completed 304 Not Modified in 2 ms
+[INFO] [09/03/2023, 10:21:08 pm]: Started GET "/comments/" at 09/03/2023, 10:21:08 pm
+[QUERY] [09/03/2023, 10:21:08 pm]: SELECT * FROM comments;
+[INFO] [09/03/2023, 10:21:08 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 10:21:10 pm]: Started GET "/animals/" at 09/03/2023, 10:21:10 pm
+[INFO] [09/03/2023, 10:21:10 pm]: Completed 302 Found in 1 ms
+[INFO] [09/03/2023, 10:21:10 pm]: Started GET "/users/login?referer=%2Fanimals%2F" at 09/03/2023, 10:21:10 pm
+[INFO] [09/03/2023, 10:21:10 pm]: Completed 304 Not Modified in 1 ms
+[INFO] [09/03/2023, 10:21:12 pm]: Started GET "/employees/" at 09/03/2023, 10:21:12 pm
+[QUERY] [09/03/2023, 10:21:12 pm]: SELECT * FROM employees;
+[INFO] [09/03/2023, 10:21:12 pm]: Completed 200  in 2 ms
+[INFO] [09/03/2023, 10:21:13 pm]: Started GET "/animals/" at 09/03/2023, 10:21:13 pm
+[INFO] [09/03/2023, 10:21:13 pm]: Completed 302 Found in 1 ms
+[INFO] [09/03/2023, 10:21:13 pm]: Started GET "/users/login?referer=%2Fanimals%2F" at 09/03/2023, 10:21:13 pm
+[INFO] [09/03/2023, 10:21:13 pm]: Completed 304 Not Modified in 3 ms
+[INFO] [09/03/2023, 10:21:14 pm]: Started POST "/users/login?referer=/animals/" at 09/03/2023, 10:21:14 pm
+[QUERY] [09/03/2023, 10:21:14 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 10:21:14 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:21:15 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 10:21:15 pm]: Started GET "/animals/" at 09/03/2023, 10:21:15 pm
+[QUERY] [09/03/2023, 10:21:15 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 10:21:15 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 10:21:15 pm]: SELECT * FROM animals;
+[INFO] [09/03/2023, 10:21:20 pm]: Started POST "/users/logout" at 09/03/2023, 10:21:20 pm
+[INFO] [09/03/2023, 10:21:20 pm]: Completed 200 OK in 2 ms
+[INFO] [09/03/2023, 10:21:32 pm]: Started GET "/" at 09/03/2023, 10:21:32 pm
+[INFO] [09/03/2023, 10:21:32 pm]: Completed 200 OK in 3 ms
+[INFO] [09/03/2023, 10:21:33 pm]: Started GET "/about" at 09/03/2023, 10:21:33 pm
+[INFO] [09/03/2023, 10:21:33 pm]: Completed 304 Not Modified in 4 ms
+[INFO] [09/03/2023, 10:21:34 pm]: Started GET "/users/" at 09/03/2023, 10:21:34 pm
+[INFO] [09/03/2023, 10:21:34 pm]: Completed 302 Found in 1 ms
+[INFO] [09/03/2023, 10:21:34 pm]: Started GET "/users/login?referer=%2Fusers%2F" at 09/03/2023, 10:21:34 pm
+[INFO] [09/03/2023, 10:21:34 pm]: Completed 304 Not Modified in 4 ms
+[INFO] [09/03/2023, 10:21:35 pm]: Started GET "/blogs/" at 09/03/2023, 10:21:35 pm
+[INFO] [09/03/2023, 10:21:35 pm]: Completed 302 Found in 1 ms
+[INFO] [09/03/2023, 10:21:35 pm]: Started GET "/users/login?referer=%2Fblogs%2F" at 09/03/2023, 10:21:35 pm
+[INFO] [09/03/2023, 10:21:35 pm]: Completed 304 Not Modified in 7 ms
+[INFO] [09/03/2023, 10:21:36 pm]: Started GET "/comments/" at 09/03/2023, 10:21:36 pm
+[QUERY] [09/03/2023, 10:21:36 pm]: SELECT * FROM comments;
+[INFO] [09/03/2023, 10:21:36 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 10:21:37 pm]: Started GET "/animals/" at 09/03/2023, 10:21:37 pm
+[INFO] [09/03/2023, 10:21:37 pm]: Completed 302 Found in 2 ms
+[INFO] [09/03/2023, 10:21:37 pm]: Started GET "/users/login?referer=%2Fanimals%2F" at 09/03/2023, 10:21:37 pm
+[INFO] [09/03/2023, 10:21:37 pm]: Completed 304 Not Modified in 4 ms
+[INFO] [09/03/2023, 10:21:38 pm]: Started GET "/employees/" at 09/03/2023, 10:21:38 pm
+[QUERY] [09/03/2023, 10:21:38 pm]: SELECT * FROM employees;
+[INFO] [09/03/2023, 10:21:38 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 10:21:39 pm]: Started GET "/animals/" at 09/03/2023, 10:21:39 pm
+[INFO] [09/03/2023, 10:21:39 pm]: Completed 302 Found in 1 ms
+[INFO] [09/03/2023, 10:21:39 pm]: Started GET "/users/login?referer=%2Fanimals%2F" at 09/03/2023, 10:21:39 pm
+[INFO] [09/03/2023, 10:21:39 pm]: Completed 304 Not Modified in 6 ms
+[INFO] [09/03/2023, 11:46:21 pm]: Started POST "/users/login?referer=/animals/" at 09/03/2023, 11:46:21 pm
+[QUERY] [09/03/2023, 11:46:21 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 11:46:21 pm]: Completed 200  in 5 ms
+[QUERY] [09/03/2023, 11:46:21 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 11:46:21 pm]: Started GET "/animals/" at 09/03/2023, 11:46:21 pm
+[QUERY] [09/03/2023, 11:46:21 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:46:21 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 11:46:21 pm]: SELECT * FROM animals;
+[INFO] [09/03/2023, 11:46:27 pm]: Started GET "/users/" at 09/03/2023, 11:46:27 pm
+[QUERY] [09/03/2023, 11:46:27 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:46:27 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 11:46:27 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 11:46:27 pm]: Started GET "/blogs/" at 09/03/2023, 11:46:27 pm
+[QUERY] [09/03/2023, 11:46:27 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:46:27 pm]: Completed 200  in 7 ms
+[QUERY] [09/03/2023, 11:46:27 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 11:46:49 pm]: Started GET "/employees/" at 09/03/2023, 11:46:49 pm
+[QUERY] [09/03/2023, 11:46:49 pm]: SELECT * FROM employees;
+[INFO] [09/03/2023, 11:46:49 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 11:46:50 pm]: Started GET "/animals/" at 09/03/2023, 11:46:50 pm
+[QUERY] [09/03/2023, 11:46:50 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:46:50 pm]: Completed 200  in 5 ms
+[QUERY] [09/03/2023, 11:46:50 pm]: SELECT * FROM animals;
+[INFO] [09/03/2023, 11:46:51 pm]: Started GET "/comments/" at 09/03/2023, 11:46:51 pm
+[QUERY] [09/03/2023, 11:46:51 pm]: SELECT * FROM comments;
+[INFO] [09/03/2023, 11:46:51 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 11:46:53 pm]: Started GET "/blogs/" at 09/03/2023, 11:46:53 pm
+[QUERY] [09/03/2023, 11:46:53 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:46:53 pm]: Completed 200  in 4 ms
+[QUERY] [09/03/2023, 11:46:53 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 11:46:54 pm]: Started GET "/users/" at 09/03/2023, 11:46:54 pm
+[QUERY] [09/03/2023, 11:46:54 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:46:54 pm]: Completed 200  in 6 ms
+[QUERY] [09/03/2023, 11:46:54 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 11:47:02 pm]: Started GET "/search?q=test" at 09/03/2023, 11:47:02 pm
+[INFO] [09/03/2023, 11:47:02 pm]: Completed 200  in 2 ms
+[INFO] [09/03/2023, 11:47:13 pm]: Started GET "/employees/" at 09/03/2023, 11:47:13 pm
+[QUERY] [09/03/2023, 11:47:13 pm]: SELECT * FROM employees;
+[INFO] [09/03/2023, 11:47:13 pm]: Completed 200  in 6 ms
+[INFO] [09/03/2023, 11:47:14 pm]: Started GET "/blogs/" at 09/03/2023, 11:47:14 pm
+[QUERY] [09/03/2023, 11:47:14 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:47:14 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 11:47:14 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 11:47:18 pm]: Started POST "/users/logout" at 09/03/2023, 11:47:18 pm
+[INFO] [09/03/2023, 11:47:18 pm]: Completed 200 OK in 6 ms
+[INFO] [09/03/2023, 11:48:22 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:48:22 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:48:22 pm]: Updating schema for 'employees'
+[INFO] [09/03/2023, 11:48:22 pm]: Updating schema for 'users'
+[INFO] [09/03/2023, 11:48:22 pm]: Updating schema for 'comments'
+[INFO] [09/03/2023, 11:48:22 pm]: Updating schema for 'blogs'
+[INFO] [09/03/2023, 11:48:22 pm]: Updating schema for 'animals'
+[INFO] [09/03/2023, 11:48:22 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:48:22 pm]: Server started on port 3000
+[INFO] [09/03/2023, 11:48:22 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:49:19 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:49:19 pm]: Server started on port 3000
+[INFO] [09/03/2023, 11:49:19 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:49:32 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:49:32 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:49:32 pm]: Updating schema for 'employees'
+[INFO] [09/03/2023, 11:49:32 pm]: Updating schema for 'users'
+[INFO] [09/03/2023, 11:49:32 pm]: Updating schema for 'comments'
+[INFO] [09/03/2023, 11:49:32 pm]: Updating schema for 'blogs'
+[INFO] [09/03/2023, 11:49:32 pm]: Updating schema for 'animals'
+[INFO] [09/03/2023, 11:49:32 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:49:32 pm]: Server started on port 3000
+[INFO] [09/03/2023, 11:49:32 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:49:52 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:49:52 pm]: Server started on port 3000
+[INFO] [09/03/2023, 11:49:52 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:49:57 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:49:57 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:49:58 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:49:58 pm]: Server started on port 3000
+[INFO] [09/03/2023, 11:49:58 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:49:58 pm]: Server started on port 3000
+[INFO] [09/03/2023, 11:49:58 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:49:58 pm]: Successfully connected to database: 'database.db'
+[QUERY] [09/03/2023, 11:49:58 pm]: CREATE TABLE IF NOT EXISTS comment2s (id INTEGER PRIMARY KEY AUTOINCREMENT, blog_id INTEGER , body TEXT , created_at NUMERIC, updated_at NUMERIC, FOREIGN KEY(blog_id) REFERENCES blogs(id) ON DELETE CASCADE ON UPDATE CASCADE)
+[QUERY] [09/03/2023, 11:49:58 pm]: CREATE TABLE IF NOT EXISTS companies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , address TEXT , number_of_employees NUMERIC , created_at NUMERIC, updated_at NUMERIC)
+[INFO] [09/03/2023, 11:49:58 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:49:58 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:49:58 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:49:58 pm]: Updating schema for 'companies'
+[INFO] [09/03/2023, 11:49:58 pm]: Updating schema for 'comment2s'
+[INFO] [09/03/2023, 11:49:58 pm]: Updating schema for 'employees'
+[INFO] [09/03/2023, 11:49:58 pm]: Updating schema for 'users'
+[INFO] [09/03/2023, 11:49:58 pm]: Updating schema for 'comments'
+[INFO] [09/03/2023, 11:49:58 pm]: Updating schema for 'blogs'
+[INFO] [09/03/2023, 11:49:58 pm]: Updating schema for 'animals'
+[INFO] [09/03/2023, 11:49:58 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:49:58 pm]: Server started on port 3000
+[INFO] [09/03/2023, 11:49:58 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:49:58 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:49:58 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:50:26 pm]: Started GET "/users/logout" at 09/03/2023, 11:50:26 pm
+[QUERY] [09/03/2023, 11:50:26 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:50:26 pm]: Completed 200  in 6 ms
+[INFO] [09/03/2023, 11:50:29 pm]: Started GET "/users/" at 09/03/2023, 11:50:29 pm
+[INFO] [09/03/2023, 11:50:29 pm]: Completed 302 Found in 10 ms
+[INFO] [09/03/2023, 11:50:29 pm]: Started GET "/users/login?referer=%2Fusers%2F" at 09/03/2023, 11:50:29 pm
+[INFO] [09/03/2023, 11:50:29 pm]: Completed 200 OK in 4 ms
+[INFO] [09/03/2023, 11:50:33 pm]: Started GET "/companies/" at 09/03/2023, 11:50:33 pm
+[QUERY] [09/03/2023, 11:50:33 pm]: SELECT * FROM companies;
+[INFO] [09/03/2023, 11:50:33 pm]: Completed 200  in 14 ms
+[INFO] [09/03/2023, 11:50:35 pm]: Started GET "/companies/create" at 09/03/2023, 11:50:35 pm
+[INFO] [09/03/2023, 11:50:35 pm]: Completed 200  in 8 ms
+[INFO] [09/03/2023, 11:50:42 pm]: Started GET "/companies/" at 09/03/2023, 11:50:42 pm
+[QUERY] [09/03/2023, 11:50:42 pm]: SELECT * FROM companies;
+[INFO] [09/03/2023, 11:50:42 pm]: Completed 200  in 7 ms
+[INFO] [09/03/2023, 11:50:46 pm]: Started GET "/blogs/" at 09/03/2023, 11:50:46 pm
+[INFO] [09/03/2023, 11:50:46 pm]: Completed 302 Found in 2 ms
+[INFO] [09/03/2023, 11:50:46 pm]: Started GET "/users/login?referer=%2Fblogs%2F" at 09/03/2023, 11:50:46 pm
+[INFO] [09/03/2023, 11:50:46 pm]: Completed 200 OK in 10 ms
+[INFO] [09/03/2023, 11:50:47 pm]: Started POST "/users/login?referer=/blogs/" at 09/03/2023, 11:50:47 pm
+[QUERY] [09/03/2023, 11:50:47 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 11:50:47 pm]: Completed 200  in 4 ms
+[QUERY] [09/03/2023, 11:50:47 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 11:50:47 pm]: Started GET "/blogs/" at 09/03/2023, 11:50:47 pm
+[QUERY] [09/03/2023, 11:50:47 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:50:47 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 11:50:47 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 11:50:52 pm]: Started GET "/blogs/create" at 09/03/2023, 11:50:52 pm
+[QUERY] [09/03/2023, 11:50:52 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:50:52 pm]: Completed 200  in 7 ms
+[INFO] [09/03/2023, 11:50:57 pm]: Started POST "/blogs" at 09/03/2023, 11:50:57 pm
+[QUERY] [09/03/2023, 11:50:57 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:50:57 pm]: Completed 200  in 7 ms
+[QUERY] [09/03/2023, 11:50:57 pm]: INSERT INTO blogs (title,body, created_at, updated_at) VALUES ($title, $body, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [09/03/2023, 11:50:57 pm]: Started GET "/blogs/" at 09/03/2023, 11:50:57 pm
+[QUERY] [09/03/2023, 11:50:57 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:50:57 pm]: Completed 200  in 2 ms
+[QUERY] [09/03/2023, 11:50:57 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 11:51:13 pm]: Started GET "/blogs/4" at 09/03/2023, 11:51:13 pm
+[QUERY] [09/03/2023, 11:51:13 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:51:13 pm]: Completed 200  in 5 ms
+[QUERY] [09/03/2023, 11:51:13 pm]: SELECT * FROM blogs WHERE id=$id;
+[QUERY] [09/03/2023, 11:51:13 pm]: SELECT * FROM comments WHERE blog_id=$blog_id;
+[INFO] [09/03/2023, 11:51:16 pm]: Started GET "/blogs/" at 09/03/2023, 11:51:16 pm
+[QUERY] [09/03/2023, 11:51:16 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 11:51:16 pm]: Completed 200  in 5 ms
+[QUERY] [09/03/2023, 11:51:16 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 11:51:19 pm]: Started GET "/companies/" at 09/03/2023, 11:51:19 pm
+[QUERY] [09/03/2023, 11:51:20 pm]: SELECT * FROM companies;
+[INFO] [09/03/2023, 11:51:20 pm]: Completed 200  in 4 ms
+[INFO] [09/03/2023, 11:51:20 pm]: Started GET "/companies/create" at 09/03/2023, 11:51:20 pm
+[INFO] [09/03/2023, 11:51:21 pm]: Completed 200  in 5 ms
+[INFO] [09/03/2023, 11:52:24 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:52:24 pm]: Foreign keys have been turned ON 
+[ERROR] [09/03/2023, 11:52:24 pm]: Model 'Company' already exists in 'models/Company.js'
+[ERROR] [09/03/2023, 11:52:24 pm]: Unknown model: 'Company'
+[INFO] [09/03/2023, 11:52:24 pm]: Successfully connected to database: 'database.db'
+[QUERY] [09/03/2023, 11:52:24 pm]: CREATE TABLE IF NOT EXISTS comment2s (id INTEGER PRIMARY KEY AUTOINCREMENT, blog_id INTEGER , body TEXT , created_at NUMERIC, updated_at NUMERIC, FOREIGN KEY(blog_id) REFERENCES blogs(id) ON DELETE CASCADE ON UPDATE CASCADE)
+[QUERY] [09/03/2023, 11:52:24 pm]: CREATE TABLE IF NOT EXISTS companies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , address TEXT , number_of_employees NUMERIC , created_at NUMERIC, updated_at NUMERIC)
+[INFO] [09/03/2023, 11:52:24 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:52:24 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:52:24 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:52:24 pm]: Updating schema for 'companies'
+[INFO] [09/03/2023, 11:52:24 pm]: Updating schema for 'comment2s'
+[INFO] [09/03/2023, 11:52:24 pm]: Updating schema for 'employees'
+[INFO] [09/03/2023, 11:52:24 pm]: Updating schema for 'users'
+[INFO] [09/03/2023, 11:52:24 pm]: Updating schema for 'comments'
+[INFO] [09/03/2023, 11:52:24 pm]: Updating schema for 'blogs'
+[INFO] [09/03/2023, 11:52:24 pm]: Updating schema for 'animals'
+[INFO] [09/03/2023, 11:52:24 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:52:24 pm]: Foreign keys have been turned ON 
+[ERROR] [09/03/2023, 11:52:24 pm]: Unknown model: 'Company'
+[INFO] [09/03/2023, 11:53:01 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:53:01 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:53:02 pm]: Successfully connected to database: 'database.db'
+[QUERY] [09/03/2023, 11:53:02 pm]: CREATE TABLE IF NOT EXISTS comment2s (id INTEGER PRIMARY KEY AUTOINCREMENT, blog_id INTEGER , body TEXT , created_at NUMERIC, updated_at NUMERIC, FOREIGN KEY(blog_id) REFERENCES blogs(id) ON DELETE CASCADE ON UPDATE CASCADE)
+[QUERY] [09/03/2023, 11:53:02 pm]: CREATE TABLE IF NOT EXISTS companies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , address TEXT , number_of_employees NUMERIC , created_at NUMERIC, updated_at NUMERIC)
+[QUERY] [09/03/2023, 11:53:02 pm]: CREATE TABLE IF NOT EXISTS company1s (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , address TEXT , number_of_employees NUMERIC , created_at NUMERIC, updated_at NUMERIC)
+[INFO] [09/03/2023, 11:53:02 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:53:02 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:53:02 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:53:02 pm]: Updating schema for 'company1s'
+[INFO] [09/03/2023, 11:53:02 pm]: Updating schema for 'animals'
+[INFO] [09/03/2023, 11:53:02 pm]: Updating schema for 'comments'
+[INFO] [09/03/2023, 11:53:02 pm]: Updating schema for 'users'
+[INFO] [09/03/2023, 11:53:02 pm]: Updating schema for 'employees'
+[INFO] [09/03/2023, 11:53:02 pm]: Updating schema for 'comment2s'
+[INFO] [09/03/2023, 11:53:02 pm]: Updating schema for 'blogs'
+[INFO] [09/03/2023, 11:53:02 pm]: Updating schema for 'companies'
+[INFO] [09/03/2023, 11:53:02 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:53:02 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:54:31 pm]: Successfully connected to database: 'database.db'
+[QUERY] [09/03/2023, 11:54:31 pm]: CREATE TABLE IF NOT EXISTS comment2s (id INTEGER PRIMARY KEY AUTOINCREMENT, blog_id INTEGER , body TEXT , created_at NUMERIC, updated_at NUMERIC, FOREIGN KEY(blog_id) REFERENCES blogs(id) ON DELETE CASCADE ON UPDATE CASCADE)
+[QUERY] [09/03/2023, 11:54:31 pm]: DROP TABLE companies
+[INFO] [09/03/2023, 11:54:31 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:54:31 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:54:31 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:54:31 pm]: Updating schema for 'company1s'
+[INFO] [09/03/2023, 11:54:31 pm]: Updating schema for 'comment2s'
+[INFO] [09/03/2023, 11:54:31 pm]: Updating schema for 'employees'
+[INFO] [09/03/2023, 11:54:31 pm]: Updating schema for 'users'
+[INFO] [09/03/2023, 11:54:31 pm]: Updating schema for 'comments'
+[INFO] [09/03/2023, 11:54:31 pm]: Updating schema for 'blogs'
+[INFO] [09/03/2023, 11:54:31 pm]: Updating schema for 'animals'
+[INFO] [09/03/2023, 11:55:07 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:55:07 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:55:08 pm]: Successfully connected to database: 'database.db'
+[QUERY] [09/03/2023, 11:55:08 pm]: CREATE TABLE IF NOT EXISTS comment2s (id INTEGER PRIMARY KEY AUTOINCREMENT, blog_id INTEGER , body TEXT , created_at NUMERIC, updated_at NUMERIC, FOREIGN KEY(blog_id) REFERENCES blogs(id) ON DELETE CASCADE ON UPDATE CASCADE)
+[QUERY] [09/03/2023, 11:55:08 pm]: DROP TABLE companies
+[QUERY] [09/03/2023, 11:55:08 pm]: CREATE TABLE IF NOT EXISTS companies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , address TEXT , number_of_employees NUMERIC , created_at NUMERIC, updated_at NUMERIC)
+[INFO] [09/03/2023, 11:55:08 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:55:08 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:55:08 pm]: Updating schema for 'company1s'
+[INFO] [09/03/2023, 11:55:08 pm]: Updating schema for 'comment2s'
+[INFO] [09/03/2023, 11:55:08 pm]: Updating schema for 'employees'
+[INFO] [09/03/2023, 11:55:08 pm]: Updating schema for 'users'
+[INFO] [09/03/2023, 11:55:08 pm]: Updating schema for 'comments'
+[INFO] [09/03/2023, 11:55:08 pm]: Updating schema for 'blogs'
+[INFO] [09/03/2023, 11:55:08 pm]: Updating schema for 'animals'
+[INFO] [09/03/2023, 11:55:08 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:55:08 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:56:00 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:56:00 pm]: Server started on port 3000
+[INFO] [09/03/2023, 11:56:00 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:56:03 pm]: Started GET "/companies/create" at 09/03/2023, 11:56:03 pm
+[INFO] [09/03/2023, 11:56:03 pm]: Completed 200 OK in 14 ms
+[INFO] [09/03/2023, 11:56:09 pm]: Started POST "/companies" at 09/03/2023, 11:56:09 pm
+[QUERY] [09/03/2023, 11:56:09 pm]: INSERT INTO companies (, created_at, updated_at) VALUES (, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [09/03/2023, 11:56:09 pm]: Completed 200  in 6 ms
+[ERROR] [09/03/2023, 11:56:09 pm]: Error: SQLITE_ERROR: near ",": syntax error
+[INFO] [09/03/2023, 11:56:09 pm]: Started GET "/companies/create" at 09/03/2023, 11:56:09 pm
+[INFO] [09/03/2023, 11:56:09 pm]: Completed 200 OK in 4 ms
+[INFO] [09/03/2023, 11:59:19 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:59:19 pm]: Server started on port 3000
+[INFO] [09/03/2023, 11:59:19 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:59:22 pm]: Successfully connected to database: 'database.db'
+[QUERY] [09/03/2023, 11:59:22 pm]: CREATE TABLE IF NOT EXISTS comment2s (id INTEGER PRIMARY KEY AUTOINCREMENT, blog_id INTEGER , body TEXT , created_at NUMERIC, updated_at NUMERIC, FOREIGN KEY(blog_id) REFERENCES blogs(id) ON DELETE CASCADE ON UPDATE CASCADE)
+[QUERY] [09/03/2023, 11:59:22 pm]: DROP TABLE companies
+[INFO] [09/03/2023, 11:59:22 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:59:22 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:59:22 pm]: Updating schema for 'company1s'
+[INFO] [09/03/2023, 11:59:22 pm]: Updating schema for 'comment2s'
+[INFO] [09/03/2023, 11:59:22 pm]: Updating schema for 'employees'
+[INFO] [09/03/2023, 11:59:22 pm]: Updating schema for 'users'
+[INFO] [09/03/2023, 11:59:22 pm]: Updating schema for 'comments'
+[INFO] [09/03/2023, 11:59:22 pm]: Updating schema for 'blogs'
+[INFO] [09/03/2023, 11:59:22 pm]: Updating schema for 'animals'
+[INFO] [09/03/2023, 11:59:22 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:59:22 pm]: Server started on port 3000
+[INFO] [09/03/2023, 11:59:22 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:59:56 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:59:56 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:59:57 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:59:57 pm]: Server started on port 3000
+[INFO] [09/03/2023, 11:59:57 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:59:57 pm]: Successfully connected to database: 'database.db'
+[QUERY] [09/03/2023, 11:59:57 pm]: CREATE TABLE IF NOT EXISTS comment2s (id INTEGER PRIMARY KEY AUTOINCREMENT, blog_id INTEGER , body TEXT , created_at NUMERIC, updated_at NUMERIC, FOREIGN KEY(blog_id) REFERENCES blogs(id) ON DELETE CASCADE ON UPDATE CASCADE)
+[QUERY] [09/03/2023, 11:59:57 pm]: DROP TABLE companies
+[QUERY] [09/03/2023, 11:59:57 pm]: CREATE TABLE IF NOT EXISTS companies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , address TEXT , number_of_employees NUMERIC , created_at NUMERIC, updated_at NUMERIC)
+[INFO] [09/03/2023, 11:59:57 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:59:57 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:59:57 pm]: Updating schema for 'company1s'
+[INFO] [09/03/2023, 11:59:57 pm]: Updating schema for 'comment2s'
+[INFO] [09/03/2023, 11:59:57 pm]: Updating schema for 'employees'
+[INFO] [09/03/2023, 11:59:57 pm]: Updating schema for 'users'
+[INFO] [09/03/2023, 11:59:57 pm]: Updating schema for 'comments'
+[INFO] [09/03/2023, 11:59:57 pm]: Updating schema for 'blogs'
+[INFO] [09/03/2023, 11:59:57 pm]: Updating schema for 'animals'
+[INFO] [09/03/2023, 11:59:57 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:59:57 pm]: Server started on port 3000
+[INFO] [09/03/2023, 11:59:57 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:59:57 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:59:57 pm]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:02:25 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:02:25 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:02:25 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:02:28 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:02:28 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:03:12 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:03:12 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:03:12 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:04:13 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:04:13 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:04:13 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:04:22 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:04:22 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:05:04 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:05:04 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:05:04 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:05:12 am]: Successfully connected to database: 'database.db'
+[ERROR] [10/03/2023, 12:05:12 am]: Model 'Company' already exists in 'models/Company.js'
+[ERROR] [10/03/2023, 12:05:12 am]: Router for model 'Company' already exists in 'routers/companies.js'
+[INFO] [10/03/2023, 12:05:12 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:05:12 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:05:12 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:05:12 am]: Successfully connected to database: 'database.db'
+[QUERY] [10/03/2023, 12:05:12 am]: CREATE TABLE IF NOT EXISTS comment2s (id INTEGER PRIMARY KEY AUTOINCREMENT, blog_id INTEGER , body TEXT , created_at NUMERIC, updated_at NUMERIC, FOREIGN KEY(blog_id) REFERENCES blogs(id) ON DELETE CASCADE ON UPDATE CASCADE)
+[QUERY] [10/03/2023, 12:05:12 am]: DROP TABLE companies
+[QUERY] [10/03/2023, 12:05:12 am]: CREATE TABLE IF NOT EXISTS companies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , address TEXT , number_of_employees NUMERIC , created_at NUMERIC, updated_at NUMERIC)
+[INFO] [10/03/2023, 12:05:12 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:05:12 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:05:12 am]: Updating schema for 'company1s'
+[INFO] [10/03/2023, 12:05:12 am]: Updating schema for 'comment2s'
+[INFO] [10/03/2023, 12:05:12 am]: Updating schema for 'employees'
+[INFO] [10/03/2023, 12:05:12 am]: Updating schema for 'users'
+[INFO] [10/03/2023, 12:05:12 am]: Updating schema for 'comments'
+[INFO] [10/03/2023, 12:05:12 am]: Updating schema for 'blogs'
+[INFO] [10/03/2023, 12:05:12 am]: Updating schema for 'animals'
+[INFO] [10/03/2023, 12:05:13 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:05:13 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:05:13 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:05:13 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:05:13 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:07:46 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:07:46 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:07:46 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:09:07 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:09:07 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:09:08 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:09:08 am]: Successfully connected to database: 'database.db'
+[QUERY] [10/03/2023, 12:09:08 am]: CREATE TABLE IF NOT EXISTS companies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , address TEXT , number_of_employees NUMERIC , created_at NUMERIC, updated_at NUMERIC)
+[INFO] [10/03/2023, 12:09:08 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:09:08 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:09:08 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:09:08 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:09:08 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:09:08 am]: Updating schema for 'companies'
+[INFO] [10/03/2023, 12:09:08 am]: Updating schema for 'employees'
+[INFO] [10/03/2023, 12:09:08 am]: Updating schema for 'users'
+[INFO] [10/03/2023, 12:09:08 am]: Updating schema for 'comments'
+[INFO] [10/03/2023, 12:09:08 am]: Updating schema for 'blogs'
+[INFO] [10/03/2023, 12:09:08 am]: Updating schema for 'animals'
+[INFO] [10/03/2023, 12:09:08 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:09:08 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:09:08 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:09:08 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:09:08 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:12:37 am]: Successfully connected to database: 'database.db'
+[QUERY] [10/03/2023, 12:12:37 am]: DROP TABLE companies
+[INFO] [10/03/2023, 12:12:37 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:12:37 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:12:37 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:12:37 am]: Updating schema for 'employees'
+[INFO] [10/03/2023, 12:12:37 am]: Updating schema for 'users'
+[INFO] [10/03/2023, 12:12:37 am]: Updating schema for 'comments'
+[INFO] [10/03/2023, 12:12:37 am]: Updating schema for 'blogs'
+[INFO] [10/03/2023, 12:12:37 am]: Updating schema for 'animals'
+[INFO] [10/03/2023, 12:13:08 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:13:08 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:13:08 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:13:12 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:13:12 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:13:13 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:13:13 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:13:13 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:13:13 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:13:13 am]: Successfully connected to database: 'database.db'
+[QUERY] [10/03/2023, 12:13:13 am]: CREATE TABLE IF NOT EXISTS companies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , address TEXT , number_of_employees NUMERIC , created_at NUMERIC, updated_at NUMERIC)
+[INFO] [10/03/2023, 12:13:13 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:13:13 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:13:13 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:13:13 am]: Updating schema for 'companies'
+[INFO] [10/03/2023, 12:13:13 am]: Updating schema for 'employees'
+[INFO] [10/03/2023, 12:13:13 am]: Updating schema for 'users'
+[INFO] [10/03/2023, 12:13:13 am]: Updating schema for 'comments'
+[INFO] [10/03/2023, 12:13:13 am]: Updating schema for 'blogs'
+[INFO] [10/03/2023, 12:13:13 am]: Updating schema for 'animals'
+[INFO] [10/03/2023, 12:13:13 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:13:13 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:13:13 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:13:13 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:13:13 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:13:20 am]: Started GET "/companies/create" at 10/03/2023, 12:13:20 am
+[INFO] [10/03/2023, 12:13:20 am]: Completed 200 OK in 11 ms
+[INFO] [10/03/2023, 12:13:28 am]: Started POST "/companies" at 10/03/2023, 12:13:28 am
+[QUERY] [10/03/2023, 12:13:28 am]: INSERT INTO companies (name,address,number_of_employees, created_at, updated_at) VALUES ($name, $address, $number_of_employees, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [10/03/2023, 12:13:28 am]: Completed 200  in 5 ms
+[INFO] [10/03/2023, 12:13:28 am]: Started GET "/companies/" at 10/03/2023, 12:13:28 am
+[QUERY] [10/03/2023, 12:13:28 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:13:28 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 12:13:31 am]: Started GET "/companies/1" at 10/03/2023, 12:13:31 am
+[QUERY] [10/03/2023, 12:13:31 am]: SELECT * FROM companies WHERE id=$id;
+[INFO] [10/03/2023, 12:13:31 am]: Completed 200  in 5 ms
+[INFO] [10/03/2023, 12:13:58 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:13:58 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:14:17 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:14:17 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:14:17 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:14:20 am]: Started GET "/companies/1" at 10/03/2023, 12:14:20 am
+[QUERY] [10/03/2023, 12:14:20 am]: SELECT * FROM companies WHERE id=$id;
+[INFO] [10/03/2023, 12:14:20 am]: Completed 200  in 7 ms
+[INFO] [10/03/2023, 12:14:24 am]: Started GET "/companies/edit/1" at 10/03/2023, 12:14:24 am
+[QUERY] [10/03/2023, 12:14:24 am]: SELECT * FROM companies WHERE id=$id;
+[INFO] [10/03/2023, 12:14:24 am]: Completed 200  in 9 ms
+[INFO] [10/03/2023, 12:14:27 am]: Started POST "/companies/edit/1" at 10/03/2023, 12:14:27 am
+[QUERY] [10/03/2023, 12:14:27 am]: UPDATE companies SET name=$name, address=$address, number_of_employees=$number_of_employees, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [10/03/2023, 12:14:27 am]: Completed 200  in 10 ms
+[INFO] [10/03/2023, 12:14:27 am]: Started GET "/companies/" at 10/03/2023, 12:14:27 am
+[QUERY] [10/03/2023, 12:14:27 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:14:27 am]: Completed 200  in 1 ms
+[INFO] [10/03/2023, 12:14:30 am]: Started GET "/companies/edit/1" at 10/03/2023, 12:14:30 am
+[QUERY] [10/03/2023, 12:14:30 am]: SELECT * FROM companies WHERE id=$id;
+[INFO] [10/03/2023, 12:14:30 am]: Completed 200  in 3 ms
+[INFO] [10/03/2023, 12:14:31 am]: Started GET "/companies/" at 10/03/2023, 12:14:31 am
+[QUERY] [10/03/2023, 12:14:31 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:14:31 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 12:14:32 am]: Started GET "/companies/create" at 10/03/2023, 12:14:32 am
+[INFO] [10/03/2023, 12:14:32 am]: Completed 304 Not Modified in 8 ms
+[INFO] [10/03/2023, 12:14:37 am]: Started POST "/companies" at 10/03/2023, 12:14:37 am
+[QUERY] [10/03/2023, 12:14:37 am]: INSERT INTO companies (name,address,number_of_employees, created_at, updated_at) VALUES ($name, $address, $number_of_employees, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [10/03/2023, 12:14:37 am]: Completed 200  in 6 ms
+[INFO] [10/03/2023, 12:14:37 am]: Started GET "/companies/" at 10/03/2023, 12:14:37 am
+[QUERY] [10/03/2023, 12:14:37 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:14:37 am]: Completed 200  in 1 ms
+[INFO] [10/03/2023, 12:14:56 am]: Started GET "/companies/" at 10/03/2023, 12:14:56 am
+[QUERY] [10/03/2023, 12:14:56 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:14:56 am]: Completed 200  in 3 ms
+[INFO] [10/03/2023, 12:15:10 am]: Started GET "/companies/2" at 10/03/2023, 12:15:10 am
+[QUERY] [10/03/2023, 12:15:10 am]: SELECT * FROM companies WHERE id=$id;
+[INFO] [10/03/2023, 12:15:10 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 12:15:11 am]: Started GET "/companies/" at 10/03/2023, 12:15:11 am
+[QUERY] [10/03/2023, 12:15:11 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:15:11 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 12:15:14 am]: Started POST "/companies/delete/2" at 10/03/2023, 12:15:14 am
+[QUERY] [10/03/2023, 12:15:14 am]: DELETE FROM companies WHERE id=$0 RETURNING *;
+[INFO] [10/03/2023, 12:15:14 am]: Completed 200  in 3 ms
+[INFO] [10/03/2023, 12:15:14 am]: Started GET "/companies/" at 10/03/2023, 12:15:14 am
+[QUERY] [10/03/2023, 12:15:14 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:15:14 am]: Completed 200  in 1 ms
+[INFO] [10/03/2023, 12:15:16 am]: Started GET "/companies/create" at 10/03/2023, 12:15:16 am
+[INFO] [10/03/2023, 12:15:16 am]: Completed 200 OK in 6 ms
+[INFO] [10/03/2023, 12:15:16 am]: Started POST "/companies" at 10/03/2023, 12:15:16 am
+[QUERY] [10/03/2023, 12:15:16 am]: INSERT INTO companies (name,address,number_of_employees, created_at, updated_at) VALUES ($name, $address, $number_of_employees, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [10/03/2023, 12:15:16 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 12:15:16 am]: Started GET "/companies/" at 10/03/2023, 12:15:16 am
+[QUERY] [10/03/2023, 12:15:16 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:15:16 am]: Completed 200  in 1 ms
+[INFO] [10/03/2023, 12:15:20 am]: Started POST "/companies/delete/3" at 10/03/2023, 12:15:20 am
+[QUERY] [10/03/2023, 12:15:20 am]: DELETE FROM companies WHERE id=$0 RETURNING *;
+[INFO] [10/03/2023, 12:15:20 am]: Completed 200  in 1 ms
+[INFO] [10/03/2023, 12:15:20 am]: Started GET "/companies/" at 10/03/2023, 12:15:20 am
+[QUERY] [10/03/2023, 12:15:20 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:15:20 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 12:16:24 am]: Successfully connected to database: 'database.db'
+[ERROR] [10/03/2023, 12:16:24 am]: Model 'Company' already exists in 'models/Company.js'
+[ERROR] [10/03/2023, 12:16:24 am]: Router for model 'Company' already exists in 'routers/companies.js'
+[INFO] [10/03/2023, 12:16:25 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:16:25 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:16:25 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:16:25 am]: Successfully connected to database: 'database.db'
+[QUERY] [10/03/2023, 12:16:25 am]: CREATE TABLE IF NOT EXISTS companies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , address TEXT , number_of_employees NUMERIC , created_at NUMERIC, updated_at NUMERIC)
+[INFO] [10/03/2023, 12:16:25 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:16:25 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:16:25 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:16:25 am]: Updating schema for 'companies'
+[INFO] [10/03/2023, 12:16:25 am]: Updating schema for 'employees'
+[INFO] [10/03/2023, 12:16:25 am]: Updating schema for 'users'
+[INFO] [10/03/2023, 12:16:25 am]: Updating schema for 'comments'
+[INFO] [10/03/2023, 12:16:25 am]: Updating schema for 'blogs'
+[INFO] [10/03/2023, 12:16:25 am]: Updating schema for 'animals'
+[INFO] [10/03/2023, 12:16:25 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:16:25 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:16:25 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:16:25 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:16:25 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:17:03 am]: Started GET "/companies/" at 10/03/2023, 12:17:03 am
+[QUERY] [10/03/2023, 12:17:03 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:17:03 am]: Completed 200  in 5 ms
+[INFO] [10/03/2023, 12:17:05 am]: Started GET "/companies/edit/1" at 10/03/2023, 12:17:05 am
+[QUERY] [10/03/2023, 12:17:05 am]: SELECT * FROM companies WHERE id=$id;
+[INFO] [10/03/2023, 12:17:05 am]: Completed 200  in 10 ms
+[INFO] [10/03/2023, 12:17:07 am]: Started GET "/companies/" at 10/03/2023, 12:17:07 am
+[QUERY] [10/03/2023, 12:17:07 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:17:07 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 12:17:08 am]: Started GET "/companies/1" at 10/03/2023, 12:17:08 am
+[QUERY] [10/03/2023, 12:17:08 am]: SELECT * FROM companies WHERE id=$id;
+[INFO] [10/03/2023, 12:17:08 am]: Completed 200  in 4 ms
+[INFO] [10/03/2023, 12:17:09 am]: Started GET "/companies/" at 10/03/2023, 12:17:09 am
+[QUERY] [10/03/2023, 12:17:09 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:17:09 am]: Completed 200  in 1 ms
+[INFO] [10/03/2023, 12:18:10 am]: Started GET "/companies/1" at 10/03/2023, 12:18:10 am
+[QUERY] [10/03/2023, 12:18:10 am]: SELECT * FROM companies WHERE id=$id;
+[INFO] [10/03/2023, 12:18:10 am]: Completed 200  in 3 ms
+[INFO] [10/03/2023, 12:18:12 am]: Started GET "/companies/" at 10/03/2023, 12:18:12 am
+[QUERY] [10/03/2023, 12:18:12 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:18:12 am]: Completed 200  in 1 ms
+[INFO] [10/03/2023, 12:18:16 am]: Started GET "/companies/edit/1" at 10/03/2023, 12:18:16 am
+[QUERY] [10/03/2023, 12:18:16 am]: SELECT * FROM companies WHERE id=$id;
+[INFO] [10/03/2023, 12:18:16 am]: Completed 200  in 3 ms
+[INFO] [10/03/2023, 12:18:18 am]: Started GET "/companies/" at 10/03/2023, 12:18:18 am
+[QUERY] [10/03/2023, 12:18:18 am]: SELECT * FROM companies;
+[INFO] [10/03/2023, 12:18:18 am]: Completed 200  in 5 ms
+[INFO] [10/03/2023, 12:18:21 am]: Started GET "/users/" at 10/03/2023, 12:18:21 am
+[QUERY] [10/03/2023, 12:18:21 am]: SELECT * FROM users WHERE id=$id;
+[INFO] [10/03/2023, 12:18:21 am]: Completed 200  in 12 ms
+[QUERY] [10/03/2023, 12:18:21 am]: SELECT * FROM users;
+[INFO] [10/03/2023, 12:18:23 am]: Started POST "/users/logout" at 10/03/2023, 12:18:23 am
+[INFO] [10/03/2023, 12:18:23 am]: Completed 200 OK in 7 ms
+[INFO] [10/03/2023, 12:18:43 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:18:43 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:18:43 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:19:02 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:19:02 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:19:02 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:19:24 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:19:24 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:19:24 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:20:04 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:20:04 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:20:04 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:21:17 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:21:17 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:21:17 am]: Foreign keys have been turned ON 

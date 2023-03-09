@@ -1,12 +1,12 @@
 import { Migration, Migrations, Table, Column } from "../bin/migration.js";
 
-
 await Migrations(
   new Migration(
-    new Table("comment2s")
+    new Table("companies")
       .withColumns(
-        new Column("blog_id", "INTEGER").withForeignKey("blogs", "id"),
-        new Column("body", "TEXT"),
+        new Column("name", "TEXT"),
+        new Column("address", "TEXT"),
+        new Column("number_of_employees", "NUMERIC"),
       )
       .create()
   )

@@ -11,24 +11,17 @@ class SQLiteColumn {
     this.primaryKey = Boolean(pk);
   }
 
-  static getColumns(table) {
-    return (async () => {
-      try {
-        return new Promise((resolve, reject) => {
-          DB.all(`PRAGMA table_info('${table}')`, function (err, rows) {
-            if (err) {
-              LOGGER.error(err);
-              return reject(err);
-            }
-            const columns = rows.map((row) => new SQLiteColumn(row));
-            resolve(columns);
-          });
-        });
-      } catch (e) {
-        LOGGER.error(e);
-        return null; // fallback value
-      }
-    })();
+  static async getColumns(table) {
+    return new Promise((resolve, reject) => {
+      DB.all(`PRAGMA table_info('${table}')`, function (err, rows) {
+        if (err) {
+          LOGGER.error(err);
+          return reject(err);
+        }
+        const columns = rows.map((row) => new SQLiteColumn(row));
+        resolve(columns);
+      });
+    });
   }
 
   static async getColumnNames(table) {

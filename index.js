@@ -17,3 +17,7 @@ app.use("/comments", comments);
 
 import employees from "./routers/employees.js";
 app.use("/employees", employees);
+
+
+import companies from "./routers/companies.js";
+app.use("/companies", companies);

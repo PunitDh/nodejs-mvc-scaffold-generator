@@ -1,7 +1,7 @@
 import {
   HTMLInputTypes,
-  SQLITE_COLUMN_CONSTRAINTS,
-  SQLITE_COLUMN_TYPES,
+  SQLColumnContraints,
+  SQLColumnTypes,
 } from "../constants.js";
 import {
   InvalidColumnConstraintError,
@@ -38,7 +38,7 @@ class ColumnsInfo {
 
   generateColumnTypeForMigration(name, data) {
     const dataType = data.type.trim().toUpperCase();
-    if (dataType in SQLITE_COLUMN_TYPES) {
+    if (dataType in SQLColumnTypes) {
       return dataType.capitalize();
     }
     throw new InvalidDataTypeError(
@@ -48,12 +48,12 @@ class ColumnsInfo {
 
   generateConstraintsForMigration(constraints) {
     return constraints.map((constraint) => {
-      if (!constraint.toUpperCase() in SQLITE_COLUMN_CONSTRAINTS) {
+      if (!constraint.toUpperCase() in SQLColumnContraints) {
         throw new InvalidColumnConstraintError(
           `Invalid column constraint provided for column: '${constraint}'`
         );
       }
-      return SQLITE_COLUMN_CONSTRAINTS[constraint.toUpperCase()];
+      return SQLColumnContraints[constraint.toUpperCase()];
     });
   }
 }

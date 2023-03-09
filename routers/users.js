@@ -8,11 +8,7 @@ const users = Router();
 
 users.get("/", authorize, async (req, res) => {
   try {
-    const users = (await User.all()).map(user => user.exclude("password"));
-    if (req.query.login === "success") {
-      res.locals.flash.success = "Login success";
-      return res.render("users/index", { users });
-    }
+    const users = (await User.all()).map((user) => user.exclude("password"));
     return res.render("users/index", { users });
   } catch (e) {
     res.locals.flash.error = e.message;
@@ -60,9 +56,10 @@ users.post("/edit/:id", async (req, res) => {
   }
 });
 
-users.get("/login", async (_, res) => {
+users.get("/login", async (req, res) => {
   try {
-    return res.render("users/login");
+    const { referer } = req.query;
+    return res.render("users/login", { referer });
   } catch (e) {
     return res.status(400).send(e.message);
   }
@@ -89,7 +86,9 @@ users.post("/login", async (req, res) => {
         expiresIn: process.env.COOKIE_EXPIRY,
       })
     );
-    return res.redirect(`/users?login=success`);
+    req.flash("success", "Logged in successfully");
+    if (req.query.referer) return res.redirect(req.query.referer);
+    return res.redirect(`/users`);
   } catch (e) {
     return res.status(400).send(e.message);
   }

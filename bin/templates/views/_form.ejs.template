@@ -7,7 +7,7 @@
   <div class="form-group d-flex row mb-2">
     <label for="{{name}}" class="form-label">
       <div class="mb-2">{{Name}}</div>
-      <input type="{{input.type}}" value="<%= page === "Create" ? '' : {{singular}}.{{name}} %>" name="{{name}}" {{checked}} class="{{input.class}} form-control" id="{{name}}" placeholder="Enter {{Name}}" autocomplete="off">
+      <input type="{{input.type}}" value="<%= page === 'Create' ? '' : {{../singular}}.{{name}} %>" name="{{name}}" {{checked}} class="{{input.class}} form-control" id="{{name}}" placeholder="Enter {{Name}}" autocomplete="off">
     </label>
   </div>
   {{/formColumns}}

@@ -1,6 +1,6 @@
 import DB from "./db.js";
 import LOGGER from "./logger.js";
-import { SQLITE_COLUMN_TYPES, SQLITE_COLUMN_CONSTRAINTS } from "./constants.js";
+import { SQLColumnTypes, SQLColumnContraints } from "./constants.js";
 import {
   InvalidColumnConstraintError,
   InvalidDataTypeError,
@@ -131,9 +131,9 @@ export class Column {
   constructor(name, dataType) {
     this.name = name;
     if (typeof dataType === "function") {
-      this.type = SQLITE_COLUMN_TYPES[dataType.name.toUpperCase()];
-    } else if (SQLITE_COLUMN_TYPES[dataType.toUpperCase()]) {
-      this.type = SQLITE_COLUMN_TYPES[dataType.toUpperCase()];
+      this.type = SQLColumnTypes[dataType.name.toUpperCase()];
+    } else if (SQLColumnTypes[dataType.toUpperCase()]) {
+      this.type = SQLColumnTypes[dataType.toUpperCase()];
     } else {
       throw new InvalidDataTypeError(
         `Unknown data type provided for column '${name}': '${dataType}'`
@@ -172,8 +172,8 @@ export class Column {
 
 export class Constraint {
   constructor(type) {
-    if (SQLITE_COLUMN_CONSTRAINTS[type]) {
-      this.type = SQLITE_COLUMN_CONSTRAINTS[type];
+    if (SQLColumnContraints[type]) {
+      this.type = SQLColumnContraints[type];
     } else {
       throw new InvalidColumnConstraintError(
         `Invalid column constraint provided for column: '${type}'`

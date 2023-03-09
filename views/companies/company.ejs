@@ -1,0 +1,39 @@
+<%- include('./_head.ejs') %>
+<div class="container mt-4">
+  <h1>Company</h1>
+  <table class="w-50 my-4">
+    <tbody>
+      <tr>
+        <td class="h6">Name</td>
+        <td><%= company.name %></td>
+      </tr>
+      <tr>
+        <td class="h6">Address</td>
+        <td><%= company.address %></td>
+      </tr>
+      <tr>
+        <td class="h6">Number Of Employees</td>
+        <td><%= company.number_of_employees %></td>
+      </tr>
+      <tr>
+        <td class="h6">Created At</td>
+        <td><%= formatDate(company.created_at) %></td>
+      </tr>
+      <tr>
+        <td class="h6">Updated At</td>
+        <td><%= formatDate(company.updated_at) %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="form-group mb-2">
+    <div class="d-flex align-items-center" style="gap: 1rem">
+      <a href="/companies/edit/<%= company.id %>" class="btn btn-primary">Edit Company</a>
+      <form action="/companies/delete/<%= company.id %>" method="POST">
+        <button type="submit" class="btn btn-danger">Delete Company</button>
+      </form>
+      <a href="/companies" class="btn btn-danger">Back</a>
+    </div>
+  </div>
+</div>
+<%- include('../_layouts/_tail.ejs') %>

@@ -1,4 +1,4 @@
-import { SQLITE_COLUMN_CONSTRAINTS, SQLITE_COLUMN_TYPES } from "./constants.js";
+import { SQLColumnContraints, SQLColumnTypes } from "./constants.js";
 import LOGGER from "./logger.js";
 
 class ApplicationError extends Error {
@@ -25,7 +25,7 @@ export class InvalidDataTypeError extends ApplicationError {
     super(...arguments);
     LOGGER.error(
       "Available column types are:",
-      Object.keys(SQLITE_COLUMN_TYPES).join(", ")
+      Object.keys(SQLColumnTypes).join(", ")
     );
   }
 }
@@ -65,7 +65,7 @@ export class InvalidColumnConstraintError extends ApplicationError {
     super(...arguments);
     LOGGER.error(
       "Available constraint types are:",
-      Object.keys(SQLITE_COLUMN_CONSTRAINTS).join(", ")
+      Object.keys(SQLColumnContraints).join(", ")
     );
   }
 }

@@ -1,0 +1,36 @@
+<%- include('./_head.ejs') %>
+  <div class="container mt-4">
+    <h1>Companies</h1>
+    <table class="table mb-4">
+      <thead>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Number Of Employees</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+        <th colspan="3">Actions</th>
+      </thead>
+      <tbody>
+        <% for (const it of companies) { %>
+        <tr>
+          <td><%= it.name %></td>
+          <td><%= it.address %></td>
+          <td><%= it.number_of_employees %></td>
+          <td><%= formatDate(it.created_at) %></td>
+          <td><%= formatDate(it.updated_at) %></td>
+          <td><a href="/companies/<%= it.id %>" class="btn btn-primary">Show</a></td>
+          <td><a href="/companies/edit/<%= it.id %>" class="btn btn-success">Edit</a></td>
+          <td>
+            <form action="/companies/delete/<%= it.id %>" method="POST">
+              <button type="submit" class="btn btn-danger">
+                Delete
+              </button>
+            </form>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <a href="/companies/create" class="btn btn-primary">New Company</a>
+  </div>
+  <%- include('../_layouts/_tail.ejs') %>

@@ -5,7 +5,7 @@
 import { writeFileSync, appendFileSync, existsSync } from "fs";
 import { join } from "path";
 import "../utils/js_utils.js";
-import { SQLITE_COLUMN_TYPES, SQLITE_COLUMN_CONSTRAINTS } from "../constants.js";
+import { SQLColumnTypes, SQLColumnContraints } from "../constants.js";
 import {
   GeneratorError,
   InvalidColumnConstraintError,

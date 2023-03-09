@@ -149,3 +149,8 @@ export const MigrationActions = {
     DROP: "DROP",
   },
 };
+
+export const Flash = {
+  SUCCESS: "success",
+  ERROR: "error"
+}

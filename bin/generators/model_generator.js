@@ -19,7 +19,7 @@
 import fs from "fs";
 import path from "path";
 import "../utils/js_utils.js";
-import { SQLITE_COLUMN_TYPES } from "../constants.js";
+import { SQLColumnTypes } from "../constants.js";
 import { GeneratorError } from "../errors.js";
 import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
@@ -97,7 +97,7 @@ function parseArguments(args) {
         },
       };
     } else {
-      const type = SQLITE_COLUMN_TYPES[dataTypeTrim];
+      const type = SQLColumnTypes[dataTypeTrim];
       columnsInfo[column.trim()] = { type, constraints };
     }
   }

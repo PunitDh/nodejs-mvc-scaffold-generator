@@ -6,8 +6,8 @@
 import path from "path";
 import "../utils/js_utils.js";
 import {
-  SQLITE_COLUMN_TYPES,
-  SQLITE_COLUMN_CONSTRAINTS,
+  SQLColumnTypes,
+  SQLColumnContraints,
 } from "../constants.js";
 import {
   GeneratorError,
@@ -54,13 +54,13 @@ if (!table || args.length === 0) {
 try {
   args.forEach((arg) => {
     const [attributeName, dataType, ...constraints] = arg.trim().split(":");
-    if (!(dataType.trim().toUpperCase() in SQLITE_COLUMN_TYPES)) {
+    if (!(dataType.trim().toUpperCase() in SQLColumnTypes)) {
       throw new InvalidDataTypeError(
         `Unknown data type provided for column '${attributeName}': '${dataType}'`
       );
     }
     attributesObj[attributeName.trim()] = {
-      type: SQLITE_COLUMN_TYPES[dataType.trim().toUpperCase()],
+      type: SQLColumnTypes[dataType.trim().toUpperCase()],
       constraints,
     };
   });
@@ -108,7 +108,7 @@ function generateColumns(attributesObj) {
   });
 
   function generateColumnType(name, type) {
-    if (!(type.trim().toUpperCase() in SQLITE_COLUMN_TYPES)) {
+    if (!(type.trim().toUpperCase() in SQLColumnTypes)) {
       throw new InvalidDataTypeError(
         `Unknown data type provided for column '${name}': '${type}'`
       );
@@ -117,14 +117,14 @@ function generateColumns(attributesObj) {
   }
 
   function generateConstraints(constraints) {
-    const allConstraints = Object.keys(SQLITE_COLUMN_CONSTRAINTS);
+    const allConstraints = Object.keys(SQLColumnContraints);
     return constraints.map((constraint) => {
       if (!allConstraints.includes(constraint.toUpperCase())) {
         throw new InvalidColumnConstraintError(
           `Invalid column constraint provided for column: '${constraint}'`
         );
       }
-      return SQLITE_COLUMN_CONSTRAINTS[constraint.toUpperCase()];
+      return SQLColumnContraints[constraint.toUpperCase()];
     });
   }
 }

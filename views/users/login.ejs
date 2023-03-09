@@ -1,7 +1,7 @@
 <%- include('./_head.ejs') %>
 <div class="container">
   <h1>Login User</h1>
-  <form action="/users/login" method="POST">
+  <form action="/users/login<%= typeof referer !== 'undefined' ? '?referer=' + referer : '' %>" method="POST">
     <div class="form-group mb-2">
       <label for="email" class="form-label">Email</label>
       <input

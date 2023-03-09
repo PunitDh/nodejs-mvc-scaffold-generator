@@ -1,10 +1,9 @@
 import DB from "./db.js";
 import LOGGER from "./logger.js";
-import "pluralizer";
 import SQLiteColumn from "./domain/SQLiteColumn.js";
 import { ReadOnlyColumns, SearchExcludedColumns } from "./constants.js";
-import { getNewDate } from "./utils/date_utils.js";
 import SQLiteTable from "./domain/SQLiteTable.js";
+import { getTableNameFromModel } from "./utils/model_utils.js";
 
 class Model {
   constructor({ id, created_at, updated_at }) {
@@ -21,7 +20,7 @@ class Model {
   }
 
   static get __tablename__() {
-    return this.name.toLowerCase().pluralize();
+    return getTableNameFromModel(this.name.toLowerCase());
   }
 
   static get __columns__() {
@@ -75,22 +74,20 @@ class Model {
 
   static async create(object) {
     const columns = Object.keys(object);
-    const datetime = getNewDate();
-    const values = [...Object.values(object), datetime];
+    const values = [...Object.values(object)];
     const valString = columns.map((column) => `$${column}`).join(", ");
     const colString = columns.join(",");
-    const query = `INSERT INTO ${this.__tablename__} (${colString}, created_at, updated_at) VALUES (${valString}, $datetime, $datetime) RETURNING *;`;
+    const query = `INSERT INTO ${this.__tablename__} (${colString}, created_at, updated_at) VALUES (${valString}, DATETIME('now'), DATETIME('now')) RETURNING *;`;
     return await this.dbQuery(query, values, true);
   }
 
   static async update(id, object) {
     const columns = Object.keys(object);
-    const datetime = getNewDate();
-    const values = [...Object.values(object), datetime, id];
+    const values = [...Object.values(object), id];
     const valString = columns
       .map((column) => `${column}=$${column}`)
       .join(", ");
-    const query = `UPDATE ${this.__tablename__} SET ${valString}, updated_at=$datetime WHERE id=$id RETURNING *;`;
+    const query = `UPDATE ${this.__tablename__} SET ${valString}, updated_at=DATETIME('now') WHERE id=$id RETURNING *;`;
     return await this.dbQuery(query, values, true);
   }
 
@@ -108,17 +105,15 @@ class Model {
   }
 
   async save() {
-    const dateTime = getNewDate();
     const columns = Object.keys(this).filter(
       (column) => !ReadOnlyColumns.includes(column)
     );
     const colString = columns
       .map((column) => `${column}=$${column}`)
       .join(", ");
-    const query = `UPDATE ${this.constructor.__tablename__} SET ${colString}, updated_at=$updated_at WHERE id=$id RETURNING *;`;
+    const query = `UPDATE ${this.constructor.__tablename__} SET ${colString}, updated_at=DATETIME('now') WHERE id=$id RETURNING *;`;
     const values = [
       ...columns.map((column) => this[column]),
-      dateTime,
       this.id,
     ];
     return await this.constructor.dbQuery(query, values, true);

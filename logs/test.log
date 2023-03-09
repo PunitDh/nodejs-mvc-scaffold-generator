@@ -10713,3 +10713,738 @@
 [INFO] [09/03/2023, 01:49:23]: Successfully connected to database: 'database.db'
 [INFO] [09/03/2023, 01:49:23]: Server started on port 3000
 [INFO] [09/03/2023, 01:49:23]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 08:43:33]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 08:43:33]: Server started on port 3000
+[INFO] [09/03/2023, 08:43:33]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 08:46:05]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 08:46:05]: Server started on port 3000
+[INFO] [09/03/2023, 08:46:05]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 08:46:12]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 08:46:12]: Server started on port 3000
+[INFO] [09/03/2023, 08:46:12]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 08:47:24]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 08:47:24]: Server started on port 3000
+[INFO] [09/03/2023, 08:47:24]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:13:49]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:13:49]: Server started on port 3000
+[INFO] [09/03/2023, 09:13:49]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:13:52]: Started GET "/blogs/" at 09/03/2023, 09:13:52
+[INFO] [09/03/2023, 09:13:52]: Completed 302 Found in 12 ms
+[INFO] [09/03/2023, 09:13:52]: Started GET "/users/login" at 09/03/2023, 09:13:52
+[INFO] [09/03/2023, 09:13:52]: Completed 200 OK in 7 ms
+[INFO] [09/03/2023, 09:13:54]: Started GET "/comments/" at 09/03/2023, 09:13:54
+[QUERY] [09/03/2023, 09:13:54]: SELECT * FROM comments;
+[INFO] [09/03/2023, 09:13:54]: Completed 200  in 6 ms
+[INFO] [09/03/2023, 09:13:55]: Started GET "/blogs/" at 09/03/2023, 09:13:55
+[INFO] [09/03/2023, 09:13:55]: Completed 302 Found in 1 ms
+[INFO] [09/03/2023, 09:13:55]: Started GET "/users/login" at 09/03/2023, 09:13:55
+[INFO] [09/03/2023, 09:13:55]: Completed 304 Not Modified in 4 ms
+[INFO] [09/03/2023, 09:13:57]: Started POST "/users/login" at 09/03/2023, 09:13:57
+[QUERY] [09/03/2023, 09:13:57]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 09:13:57]: Completed 200  in 2 ms
+[QUERY] [09/03/2023, 09:13:57]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=$updated_at WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 09:13:57]: Started GET "/users/?login=success" at 09/03/2023, 09:13:57
+[QUERY] [09/03/2023, 09:13:57]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 09:13:57]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 09:13:57]: SELECT * FROM users;
+[INFO] [09/03/2023, 09:14:01]: Started GET "/blogs/" at 09/03/2023, 09:14:01
+[QUERY] [09/03/2023, 09:14:01]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 09:14:01]: Completed 200  in 9 ms
+[QUERY] [09/03/2023, 09:14:01]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 09:14:05]: Started GET "/blogs/1" at 09/03/2023, 09:14:05
+[QUERY] [09/03/2023, 09:14:05]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 09:14:05]: Completed 200  in 3 ms
+[QUERY] [09/03/2023, 09:14:05]: SELECT * FROM blogs WHERE id=$id;
+[QUERY] [09/03/2023, 09:14:05]: SELECT * FROM comments WHERE blog_id=$blog_id;
+[INFO] [09/03/2023, 09:14:25]: Started GET "/blogs/1" at 09/03/2023, 09:14:25
+[QUERY] [09/03/2023, 09:14:25]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 09:14:25]: Completed 200  in 3 ms
+[QUERY] [09/03/2023, 09:14:25]: SELECT * FROM blogs WHERE id=$id;
+[QUERY] [09/03/2023, 09:14:25]: SELECT * FROM comments WHERE blog_id=$blog_id;
+[INFO] [09/03/2023, 09:16:03]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:16:03]: Server started on port 3000
+[INFO] [09/03/2023, 09:16:03]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:16:09]: Started POST "/blogs/comment/" at 09/03/2023, 09:16:09
+[QUERY] [09/03/2023, 09:16:09]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 09:16:09]: Completed 200  in 4 ms
+[QUERY] [09/03/2023, 09:16:09]: INSERT INTO comments (blog_id,body, created_at, updated_at) VALUES ($blog_id, $body, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [09/03/2023, 09:16:09]: Started GET "/blogs/1" at 09/03/2023, 09:16:09
+[QUERY] [09/03/2023, 09:16:09]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 09:16:09]: Completed 200  in 2 ms
+[QUERY] [09/03/2023, 09:16:09]: SELECT * FROM blogs WHERE id=$id;
+[QUERY] [09/03/2023, 09:16:09]: SELECT * FROM comments WHERE blog_id=$blog_id;
+[INFO] [09/03/2023, 09:16:12]: Started GET "/blogs/1" at 09/03/2023, 09:16:12
+[QUERY] [09/03/2023, 09:16:12]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 09:16:12]: Completed 200  in 5 ms
+[QUERY] [09/03/2023, 09:16:12]: SELECT * FROM blogs WHERE id=$id;
+[QUERY] [09/03/2023, 09:16:12]: SELECT * FROM comments WHERE blog_id=$blog_id;
+[INFO] [09/03/2023, 09:16:28]: Started POST "/blogs/comment/" at 09/03/2023, 09:16:28
+[QUERY] [09/03/2023, 09:16:28]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 09:16:28]: Completed 200  in 3 ms
+[QUERY] [09/03/2023, 09:16:28]: INSERT INTO comments (blog_id,body, created_at, updated_at) VALUES ($blog_id, $body, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [09/03/2023, 09:16:28]: Started GET "/blogs/1" at 09/03/2023, 09:16:28
+[QUERY] [09/03/2023, 09:16:28]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 09:16:28]: Completed 200  in 5 ms
+[QUERY] [09/03/2023, 09:16:28]: SELECT * FROM blogs WHERE id=$id;
+[QUERY] [09/03/2023, 09:16:28]: SELECT * FROM comments WHERE blog_id=$blog_id;
+[INFO] [09/03/2023, 09:17:05]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:17:06]: Server started on port 3000
+[INFO] [09/03/2023, 09:17:06]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:17:29]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:17:29]: Server started on port 3000
+[INFO] [09/03/2023, 09:17:29]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:17:35]: Started POST "/users/logout" at 09/03/2023, 09:17:35
+[INFO] [09/03/2023, 09:17:35]: Completed 200 OK in 8 ms
+[INFO] [09/03/2023, 09:17:38]: Started POST "/users/login" at 09/03/2023, 09:17:38
+[QUERY] [09/03/2023, 09:17:38]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 09:17:38]: Completed 200  in 5 ms
+[QUERY] [09/03/2023, 09:17:38]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 09:17:38]: Started GET "/users/?login=success" at 09/03/2023, 09:17:38
+[QUERY] [09/03/2023, 09:17:38]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 09:17:38]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 09:17:38]: SELECT * FROM users;
+[INFO] [09/03/2023, 09:21:46]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:21:46]: Server started on port 3000
+[INFO] [09/03/2023, 09:21:46]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:23:14]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:23:14]: Server started on port 3000
+[INFO] [09/03/2023, 09:23:14]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:28:21]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:28:21]: Server started on port 3000
+[INFO] [09/03/2023, 09:28:21]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:30:15]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:30:15]: Server started on port 3000
+[INFO] [09/03/2023, 09:30:15]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:31:43]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:31:43]: Server started on port 3000
+[INFO] [09/03/2023, 09:31:43]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:32:16]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:32:16]: Server started on port 3000
+[INFO] [09/03/2023, 09:32:16]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:33:03]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:33:04]: Server started on port 3000
+[INFO] [09/03/2023, 09:33:04]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:34:02]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:34:02]: Server started on port 3000
+[INFO] [09/03/2023, 09:34:02]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:34:29]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:34:29]: Server started on port 3000
+[INFO] [09/03/2023, 09:34:29]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:36:30]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:36:30]: Server started on port 3000
+[INFO] [09/03/2023, 09:36:30]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:36:47]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:36:47]: Server started on port 3000
+[INFO] [09/03/2023, 09:36:47]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:36:53]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:36:53]: Server started on port 3000
+[INFO] [09/03/2023, 09:36:53]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:37:10]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:37:10]: Server started on port 3000
+[INFO] [09/03/2023, 09:37:10]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:37:30]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:37:30]: Server started on port 3000
+[INFO] [09/03/2023, 09:37:30]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:38:49]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:38:49]: Server started on port 3000
+[INFO] [09/03/2023, 09:38:49]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:38:53]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:38:53]: Server started on port 3000
+[INFO] [09/03/2023, 09:38:53]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:39:45]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:39:45]: Server started on port 3000
+[INFO] [09/03/2023, 09:39:45]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:40:07]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:40:07]: Server started on port 3000
+[INFO] [09/03/2023, 09:40:07]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:40:29]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:40:29]: Server started on port 3000
+[INFO] [09/03/2023, 09:40:29]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:40:48]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:40:48]: Server started on port 3000
+[INFO] [09/03/2023, 09:40:48]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:41:15]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:41:15]: Server started on port 3000
+[INFO] [09/03/2023, 09:41:15]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:42:14]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:42:14]: Server started on port 3000
+[INFO] [09/03/2023, 09:42:14]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:42:57]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:42:57]: Server started on port 3000
+[INFO] [09/03/2023, 09:42:57]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:43:08]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:43:08]: Server started on port 3000
+[INFO] [09/03/2023, 09:43:08]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:43:48]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:43:48]: Server started on port 3000
+[INFO] [09/03/2023, 09:43:48]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:44:37]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:44:37]: Server started on port 3000
+[INFO] [09/03/2023, 09:44:37]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:46:12]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:46:12]: Server started on port 3000
+[INFO] [09/03/2023, 09:46:12]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:46:37]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:46:37]: Server started on port 3000
+[INFO] [09/03/2023, 09:46:37]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:51:00]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:51:00]: Server started on port 3000
+[INFO] [09/03/2023, 09:51:00]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:52:37]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:52:37]: Server started on port 3000
+[INFO] [09/03/2023, 09:52:37]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:53:30]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:53:30]: Server started on port 3000
+[INFO] [09/03/2023, 09:53:30]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:54:07]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:54:07]: Server started on port 3000
+[INFO] [09/03/2023, 09:54:07]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:54:21]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:54:21]: Server started on port 3000
+[INFO] [09/03/2023, 09:54:21]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:54:39]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:54:39]: Server started on port 3000
+[INFO] [09/03/2023, 09:54:39]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:55:47]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:55:47]: Server started on port 3000
+[INFO] [09/03/2023, 09:55:47]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:55:55]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:55:55]: Server started on port 3000
+[INFO] [09/03/2023, 09:55:55]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:55:57]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:55:57]: Server started on port 3000
+[INFO] [09/03/2023, 09:55:57]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:56:57]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:56:57]: Server started on port 3000
+[INFO] [09/03/2023, 09:56:57]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:56:59]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:56:59]: Server started on port 3000
+[INFO] [09/03/2023, 09:56:59]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:57:32]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:57:32]: Server started on port 3000
+[INFO] [09/03/2023, 09:57:32]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:57:48]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:57:48]: Server started on port 3000
+[INFO] [09/03/2023, 09:57:48]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:57:52]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:57:52]: Server started on port 3000
+[INFO] [09/03/2023, 09:57:52]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:58:08]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:58:08]: Server started on port 3000
+[INFO] [09/03/2023, 09:58:08]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:59:29]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:59:29]: Server started on port 3000
+[INFO] [09/03/2023, 09:59:29]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 09:59:41]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 09:59:41]: Server started on port 3000
+[INFO] [09/03/2023, 09:59:41]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:04:10]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:04:10]: Server started on port 3000
+[INFO] [09/03/2023, 10:04:10]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:04:33]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:04:33]: Server started on port 3000
+[INFO] [09/03/2023, 10:04:33]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:04:46]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:04:46]: Server started on port 3000
+[INFO] [09/03/2023, 10:04:46]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:05:25]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:05:25]: Server started on port 3000
+[INFO] [09/03/2023, 10:05:25]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:07:40]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:07:40]: Server started on port 3000
+[INFO] [09/03/2023, 10:07:40]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:07:49]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:07:49]: Server started on port 3000
+[INFO] [09/03/2023, 10:07:49]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:09:50]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:09:50]: Server started on port 3000
+[INFO] [09/03/2023, 10:09:50]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:12:33]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:12:33]: Server started on port 3000
+[INFO] [09/03/2023, 10:12:33]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:13:16]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:13:16]: Server started on port 3000
+[INFO] [09/03/2023, 10:13:16]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:13:31]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:13:31]: Server started on port 3000
+[INFO] [09/03/2023, 10:13:31]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:13:38]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:13:38]: Server started on port 3000
+[INFO] [09/03/2023, 10:13:38]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:14:15]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:14:15]: Server started on port 3000
+[INFO] [09/03/2023, 10:14:15]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:15:19]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:15:19]: Server started on port 3000
+[INFO] [09/03/2023, 10:15:19]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:18:59]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:18:59]: Server started on port 3000
+[INFO] [09/03/2023, 10:18:59]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:20:49]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:20:49]: Server started on port 3000
+[INFO] [09/03/2023, 10:20:49]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:21:22]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:21:22]: Server started on port 3000
+[INFO] [09/03/2023, 10:21:22]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:21:39]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:21:39]: Server started on port 3000
+[INFO] [09/03/2023, 10:21:39]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:29:12]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:29:12]: Server started on port 3000
+[INFO] [09/03/2023, 10:29:12]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:30:04]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:30:04]: Server started on port 3000
+[INFO] [09/03/2023, 10:30:04]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:30:24]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:30:24]: Server started on port 3000
+[INFO] [09/03/2023, 10:30:24]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:30:42]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:30:42]: Server started on port 3000
+[INFO] [09/03/2023, 10:30:42]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:30:51]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:30:51]: Server started on port 3000
+[INFO] [09/03/2023, 10:30:51]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:31:06]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:31:06]: Server started on port 3000
+[INFO] [09/03/2023, 10:31:06]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:31:54]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:31:54]: Server started on port 3000
+[INFO] [09/03/2023, 10:31:54]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:32:23]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:32:23]: Server started on port 3000
+[INFO] [09/03/2023, 10:32:23]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:32:27]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:32:27]: Server started on port 3000
+[INFO] [09/03/2023, 10:32:27]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:33:14]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:33:14]: Server started on port 3000
+[INFO] [09/03/2023, 10:33:14]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:33:33]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:33:33]: Server started on port 3000
+[INFO] [09/03/2023, 10:33:33]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:34:06]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:34:06]: Server started on port 3000
+[INFO] [09/03/2023, 10:34:06]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:34:30]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:34:30]: Server started on port 3000
+[INFO] [09/03/2023, 10:34:30]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:35:02]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:35:02]: Server started on port 3000
+[INFO] [09/03/2023, 10:35:02]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:35:10]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:35:10]: Server started on port 3000
+[INFO] [09/03/2023, 10:35:10]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:35:54]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:35:54]: Server started on port 3000
+[INFO] [09/03/2023, 10:35:54]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:36:07]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:36:07]: Server started on port 3000
+[INFO] [09/03/2023, 10:36:07]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:37:09]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:37:09]: Server started on port 3000
+[INFO] [09/03/2023, 10:37:09]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:42:03]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:42:03]: Server started on port 3000
+[INFO] [09/03/2023, 10:42:03]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:44:30]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:44:30]: Server started on port 3000
+[INFO] [09/03/2023, 10:44:30]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:45:55]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:45:55]: Server started on port 3000
+[INFO] [09/03/2023, 10:45:55]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:49:49]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:49:49]: Server started on port 3000
+[INFO] [09/03/2023, 10:49:49]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:49:52]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:49:52]: Server started on port 3000
+[INFO] [09/03/2023, 10:49:52]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:51:50]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:51:50]: Server started on port 3000
+[INFO] [09/03/2023, 10:51:50]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:56:45]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:56:45]: Server started on port 3000
+[INFO] [09/03/2023, 10:56:45]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:57:34]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:57:34]: Server started on port 3000
+[INFO] [09/03/2023, 10:57:34]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 10:59:30]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 10:59:30]: Server started on port 3000
+[INFO] [09/03/2023, 10:59:30]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:00:58]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:00:58]: Server started on port 3000
+[INFO] [09/03/2023, 11:00:58]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:02:46]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:02:46]: Server started on port 3000
+[INFO] [09/03/2023, 11:02:46]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:03:03]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:03:03]: Server started on port 3000
+[INFO] [09/03/2023, 11:03:03]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:03:07]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:03:07]: Server started on port 3000
+[INFO] [09/03/2023, 11:03:07]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:05:30]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:05:30]: Server started on port 3000
+[INFO] [09/03/2023, 11:05:30]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:08:41]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:08:41]: Server started on port 3000
+[INFO] [09/03/2023, 11:08:41]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:09:24]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:09:24]: Server started on port 3000
+[INFO] [09/03/2023, 11:09:24]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:09:37]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:09:37]: Server started on port 3000
+[INFO] [09/03/2023, 11:09:37]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:10:09]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:10:09]: Server started on port 3000
+[INFO] [09/03/2023, 11:10:09]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:11:03]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:11:03]: Server started on port 3000
+[INFO] [09/03/2023, 11:11:03]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:11:09]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:11:09]: Server started on port 3000
+[INFO] [09/03/2023, 11:11:09]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:11:43]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:11:43]: Server started on port 3000
+[INFO] [09/03/2023, 11:11:43]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:13:51]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:13:51]: Server started on port 3000
+[INFO] [09/03/2023, 11:13:51]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:17:46]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:17:46]: Server started on port 3000
+[INFO] [09/03/2023, 11:17:46]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:18:03]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:18:03]: Server started on port 3000
+[INFO] [09/03/2023, 11:18:03]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:18:48]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:18:48]: Server started on port 3000
+[INFO] [09/03/2023, 11:18:48]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:21:12]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:21:12]: Server started on port 3000
+[INFO] [09/03/2023, 11:21:12]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:21:32]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:21:32]: Server started on port 3000
+[INFO] [09/03/2023, 11:21:32]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:23:33]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:23:33]: Server started on port 3000
+[INFO] [09/03/2023, 11:23:33]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:24:14]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:24:14]: Server started on port 3000
+[INFO] [09/03/2023, 11:24:14]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:24:23]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:24:23]: Server started on port 3000
+[INFO] [09/03/2023, 11:24:23]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:25:07]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:25:07]: Server started on port 3000
+[INFO] [09/03/2023, 11:25:07]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:28:29]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:28:29]: Server started on port 3000
+[INFO] [09/03/2023, 11:28:29]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:29:29]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:29:29]: Server started on port 3000
+[INFO] [09/03/2023, 11:29:29]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:29:34]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:29:34]: Server started on port 3000
+[INFO] [09/03/2023, 11:29:34]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:29:47]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:29:47]: Server started on port 3000
+[INFO] [09/03/2023, 11:29:47]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:34:11]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:34:11]: Server started on port 3000
+[INFO] [09/03/2023, 11:34:11]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:37:18]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:37:18]: Server started on port 3000
+[INFO] [09/03/2023, 11:37:18]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:41:42]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:41:43]: Server started on port 3000
+[INFO] [09/03/2023, 11:41:43]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 11:42:45]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 11:42:45]: Server started on port 3000
+[INFO] [09/03/2023, 11:42:45]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:37:08 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:37:08 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:37:08 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:37:12 pm]: Started GET "/animals/" at 09/03/2023, 8:37:12 pm
+[INFO] [09/03/2023, 8:37:12 pm]: Completed 302 Found in 13 ms
+[INFO] [09/03/2023, 8:37:12 pm]: Started GET "/users/login" at 09/03/2023, 8:37:12 pm
+[INFO] [09/03/2023, 8:37:12 pm]: Completed 200 OK in 3 ms
+[INFO] [09/03/2023, 8:37:14 pm]: Started POST "/users/login" at 09/03/2023, 8:37:14 pm
+[QUERY] [09/03/2023, 8:37:14 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 8:37:14 pm]: Completed 200  in 3 ms
+[QUERY] [09/03/2023, 8:37:14 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 8:37:14 pm]: Started GET "/users/?login=success" at 09/03/2023, 8:37:14 pm
+[QUERY] [09/03/2023, 8:37:14 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 8:37:14 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 8:37:14 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 8:37:17 pm]: Started GET "/blogs/" at 09/03/2023, 8:37:17 pm
+[QUERY] [09/03/2023, 8:37:17 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 8:37:17 pm]: Completed 200  in 4 ms
+[QUERY] [09/03/2023, 8:37:17 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 8:37:19 pm]: Started GET "/blogs/create" at 09/03/2023, 8:37:19 pm
+[QUERY] [09/03/2023, 8:37:19 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 8:37:19 pm]: Completed 200  in 1 ms
+[INFO] [09/03/2023, 8:37:27 pm]: Started POST "/blogs" at 09/03/2023, 8:37:27 pm
+[QUERY] [09/03/2023, 8:37:27 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 8:37:27 pm]: Completed 200  in 4 ms
+[QUERY] [09/03/2023, 8:37:27 pm]: INSERT INTO blogs (title,body, created_at, updated_at) VALUES ($title, $body, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [09/03/2023, 8:37:27 pm]: Started GET "/blogs/" at 09/03/2023, 8:37:27 pm
+[QUERY] [09/03/2023, 8:37:27 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 8:37:27 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 8:37:27 pm]: SELECT * FROM blogs;
+[INFO] [09/03/2023, 8:37:30 pm]: Started GET "/blogs/3" at 09/03/2023, 8:37:30 pm
+[QUERY] [09/03/2023, 8:37:30 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 8:37:30 pm]: Completed 200  in 4 ms
+[QUERY] [09/03/2023, 8:37:30 pm]: SELECT * FROM blogs WHERE id=$id;
+[QUERY] [09/03/2023, 8:37:30 pm]: SELECT * FROM comments WHERE blog_id=$blog_id;
+[INFO] [09/03/2023, 8:37:34 pm]: Started POST "/blogs/comment/" at 09/03/2023, 8:37:34 pm
+[QUERY] [09/03/2023, 8:37:34 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 8:37:34 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 8:37:34 pm]: INSERT INTO comments (blog_id,body, created_at, updated_at) VALUES ($blog_id, $body, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [09/03/2023, 8:37:34 pm]: Started GET "/blogs/3" at 09/03/2023, 8:37:34 pm
+[QUERY] [09/03/2023, 8:37:34 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 8:37:34 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 8:37:34 pm]: SELECT * FROM blogs WHERE id=$id;
+[QUERY] [09/03/2023, 8:37:34 pm]: SELECT * FROM comments WHERE blog_id=$blog_id;
+[INFO] [09/03/2023, 8:37:41 pm]: Started POST "/blogs/comment/" at 09/03/2023, 8:37:41 pm
+[QUERY] [09/03/2023, 8:37:41 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 8:37:41 pm]: Completed 200  in 3 ms
+[QUERY] [09/03/2023, 8:37:41 pm]: INSERT INTO comments (blog_id,body, created_at, updated_at) VALUES ($blog_id, $body, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [09/03/2023, 8:37:41 pm]: Started GET "/blogs/3" at 09/03/2023, 8:37:41 pm
+[QUERY] [09/03/2023, 8:37:41 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 8:37:41 pm]: Completed 200  in 4 ms
+[QUERY] [09/03/2023, 8:37:41 pm]: SELECT * FROM blogs WHERE id=$id;
+[QUERY] [09/03/2023, 8:37:41 pm]: SELECT * FROM comments WHERE blog_id=$blog_id;
+[INFO] [09/03/2023, 8:37:44 pm]: Started POST "/users/logout" at 09/03/2023, 8:37:44 pm
+[INFO] [09/03/2023, 8:37:44 pm]: Completed 200 OK in 7 ms
+[INFO] [09/03/2023, 8:37:46 pm]: Started POST "/users/login" at 09/03/2023, 8:37:46 pm
+[QUERY] [09/03/2023, 8:37:46 pm]: SELECT * FROM users WHERE email=$email;
+[INFO] [09/03/2023, 8:37:46 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 8:37:46 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token, updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [09/03/2023, 8:37:46 pm]: Started GET "/users/?login=success" at 09/03/2023, 8:37:46 pm
+[QUERY] [09/03/2023, 8:37:46 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [09/03/2023, 8:37:46 pm]: Completed 200  in 1 ms
+[QUERY] [09/03/2023, 8:37:46 pm]: SELECT * FROM users;
+[INFO] [09/03/2023, 8:39:10 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:39:10 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:39:10 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:39:36 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:39:36 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:39:36 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:39:54 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:39:54 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:39:54 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:40:01 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:40:01 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:40:01 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:40:09 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:40:09 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:40:09 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:40:41 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:40:41 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:40:41 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:41:47 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:41:47 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:41:47 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:43:00 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:43:00 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:43:00 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:43:37 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:43:37 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:43:37 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:43:42 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:43:42 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:43:42 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:43:47 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:43:47 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:43:47 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:45:27 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:45:27 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:45:27 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:45:51 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:45:51 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:45:51 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:45:54 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:45:54 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:45:54 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:46:08 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:46:08 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:46:08 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:46:45 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:46:45 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:46:45 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:48:50 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:48:50 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:48:50 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:49:20 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:49:20 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:49:20 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:50:40 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:50:40 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:50:40 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:52:26 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:52:26 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:52:26 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:54:09 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:54:09 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:54:09 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:55:10 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:55:10 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:55:10 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:55:28 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:55:28 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:55:28 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:55:54 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:55:54 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:55:54 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:57:27 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:57:27 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:57:27 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 8:59:29 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 8:59:29 pm]: Server started on port 3000
+[INFO] [09/03/2023, 8:59:29 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:01:18 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:01:18 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:01:18 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:01:39 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:01:39 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:01:39 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:02:02 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:02:02 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:02:02 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:02:06 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:02:06 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:02:06 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:03:31 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:03:31 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:03:31 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:03:56 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:03:56 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:03:56 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:04:41 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:04:41 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:04:41 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:04:54 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:04:54 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:04:54 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:06:57 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:06:57 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:06:57 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:07:44 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:07:45 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:07:45 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:08:24 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:08:24 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:08:24 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:08:37 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:08:37 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:08:37 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:09:12 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:09:12 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:09:12 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:10:53 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:10:53 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:10:53 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:11:13 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:11:13 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:11:13 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:11:24 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:11:24 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:11:24 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:11:36 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:11:36 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:11:36 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:12:17 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:12:17 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:12:17 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:13:43 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:13:43 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:13:43 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:14:42 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:14:42 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:14:42 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:15:09 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:15:09 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:15:09 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:15:14 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:15:14 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:15:14 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:19:06 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:19:06 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:19:06 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:19:17 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:19:17 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:19:17 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:19:48 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:19:48 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:19:48 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:20:14 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:20:14 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:20:14 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:20:17 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:20:17 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:20:17 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:20:23 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:20:23 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:20:23 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:20:42 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:20:42 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:20:42 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:21:39 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:21:39 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:21:39 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:21:55 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:21:55 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:21:55 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:22:16 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:22:16 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:22:16 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:23:05 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:23:06 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:23:06 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:23:24 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:23:24 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:23:24 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:23:31 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:23:31 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:23:31 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:23:37 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:23:37 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:23:37 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:23:42 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:23:42 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:23:42 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:25:50 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:25:50 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:25:50 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:26:16 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:26:16 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:26:16 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:26:47 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:26:47 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:26:47 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:29:08 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:29:08 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:29:08 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:29:25 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:29:25 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:29:25 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:31:09 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:31:09 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:31:09 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:31:13 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:31:13 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:31:13 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:31:16 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:31:16 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:31:16 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:31:41 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:31:41 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:31:41 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:33:52 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:33:52 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:33:52 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:33:59 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:33:59 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:33:59 pm]: Foreign keys have been turned ON 
+[INFO] [09/03/2023, 9:42:33 pm]: Successfully connected to database: 'database.db'
+[INFO] [09/03/2023, 9:42:33 pm]: Server started on port 3000
+[INFO] [09/03/2023, 9:42:33 pm]: Foreign keys have been turned ON 

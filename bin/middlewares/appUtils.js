@@ -1,6 +1,6 @@
 import SETTINGS from "../utils/settings.js";
 import "../utils/js_utils.js";
-import "pluralizer";
+import pluralize from "pluralize";
 
 export default function () {
   return function (req, res, next) {
@@ -22,7 +22,7 @@ export default function () {
     };
     res.locals.dateFields = SETTINGS.views.pages.dateFields;
     res.locals.capitalize = (text) => text.capitalize();
-    res.locals.pluralize = (text) => text.pluralize();
+    res.locals.pluralize = (text) => pluralize.plural(text);
     next();
   };
 }

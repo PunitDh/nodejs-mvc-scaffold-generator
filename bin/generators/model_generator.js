@@ -18,16 +18,14 @@
 
 import fs from "fs";
 import path from "path";
-import "pluralizer";
 import "../utils/js_utils.js";
 import { SQLITE_COLUMN_TYPES } from "../constants.js";
-import { ForeignKeyError, GeneratorError } from "../errors.js";
+import { GeneratorError } from "../errors.js";
 import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
 import Handlebars from "../utils/handlebars.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
 import { MigrationInfo, ModelInfo } from "./types.js";
-import { readFileSync } from "../utils/file_utils.js";
 import SQLiteTable from "../domain/SQLiteTable.js";
 const argvs = process.argv.slice(2);
 const [model, ...args] = argvs;

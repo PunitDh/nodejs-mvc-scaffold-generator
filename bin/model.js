@@ -3,7 +3,7 @@ import LOGGER from "./logger.js";
 import SQLiteColumn from "./domain/SQLiteColumn.js";
 import { ReadOnlyColumns, SearchExcludedColumns } from "./constants.js";
 import SQLiteTable from "./domain/SQLiteTable.js";
-import { getTableNameFromModel } from "./utils/model_utils.js";
+import { Query, getTableNameFromModel } from "./utils/model_utils.js";
 
 class Model {
   constructor({ id, created_at, updated_at }) {
@@ -32,12 +32,12 @@ class Model {
   }
 
   static async all() {
-    const query = `SELECT * FROM ${this.__tablename__};`;
+    const query = Query.SELECT({ table: this.__tablename__ });
     return await this.dbQuery(query);
   }
 
   static async first() {
-    const query = `SELECT * FROM ${this.__tablename__} LIMIT 1;`;
+    const query = Query.SELECT({ table: this.__tablename__, limit: 1 });
     return await this.dbQuery(query, [], true);
   }
 
@@ -47,7 +47,7 @@ class Model {
   }
 
   static async find(id) {
-    const query = `SELECT * FROM ${this.__tablename__} WHERE id=$id;`;
+    const query = Query.SELECT({ table: this.__tablename__, where: ["id"] });
     return await this.dbQuery(query, [id], true);
   }
 
@@ -73,34 +73,32 @@ class Model {
   }
 
   static async create(object) {
-    const columns = Object.keys(object);
-    const values = [...Object.values(object)];
-    const valString = columns.map((column) => `$${column}`).join(", ");
-    const colString = columns.join(",");
-    const query = `INSERT INTO ${this.__tablename__} (${colString}, created_at, updated_at) VALUES (${valString}, DATETIME('now'), DATETIME('now')) RETURNING *;`;
-    return await this.dbQuery(query, values, true);
+    const query = Query.INSERT({
+      table: this.__tablename__,
+      columns: Object.keys(object),
+    });
+    return await this.dbQuery(query, Object.values(object), true);
   }
 
   static async update(id, object) {
-    const columns = Object.keys(object);
     const values = [...Object.values(object), id];
-    const valString = columns
-      .map((column) => `${column}=$${column}`)
-      .join(", ");
-    const query = `UPDATE ${this.__tablename__} SET ${valString}, updated_at=DATETIME('now') WHERE id=$id RETURNING *;`;
+    const query = Query.UPDATE({
+      table: this.__tablename__,
+      columns: Object.keys(object),
+    });
     return await this.dbQuery(query, values, true);
   }
 
   static async where(obj) {
-    const valueString = Object.keys(obj)
-      .map((column) => `${column}=$${column}`)
-      .join(" AND ");
-    const query = `SELECT * FROM ${this.__tablename__} WHERE ${valueString};`;
+    const query = Query.SELECT({
+      table: this.__tablename__,
+      where: Object.keys(obj),
+    });
     return await this.dbQuery(query, Object.values(obj));
   }
 
   static async delete(id) {
-    const query = `DELETE FROM ${this.__tablename__} WHERE id=$0 RETURNING *;`;
+    const query = Query.DELETE({ table: this.__tablename__, where: ["id"] });
     return await this.dbQuery(query, [id], true);
   }
 
@@ -108,19 +106,19 @@ class Model {
     const columns = Object.keys(this).filter(
       (column) => !ReadOnlyColumns.includes(column)
     );
-    const colString = columns
-      .map((column) => `${column}=$${column}`)
-      .join(", ");
-    const query = `UPDATE ${this.constructor.__tablename__} SET ${colString}, updated_at=DATETIME('now') WHERE id=$id RETURNING *;`;
-    const values = [
-      ...columns.map((column) => this[column]),
-      this.id,
-    ];
+    const query = Query.UPDATE({
+      table: this.constructor.__tablename__,
+      columns: Object.keys(object),
+    });
+    const values = [...columns.map((column) => this[column]), this.id];
     return await this.constructor.dbQuery(query, values, true);
   }
 
   async delete() {
-    const query = `DELETE FROM ${this.constructor.__tablename__} WHERE id=$id RETURNING *;`;
+    const query = Query.DELETE({
+      table: this.constructor.__tablename__,
+      where: ["id"],
+    });
     return await this.constructor.dbQuery(query, [this.id]);
   }
 

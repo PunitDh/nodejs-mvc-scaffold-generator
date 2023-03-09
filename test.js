@@ -5,6 +5,8 @@ import "./bin/utils/js_utils.js";
 import Blog from "./models/Blog.js";
 import Comment from "./models/Comment.js";
 import Handlebars from "./bin/utils/handlebars.js";
+import { getModelNameFromTable } from "./bin/utils/model_utils.js";
+import pluralize from "pluralize";
 // import SQLiteColumn from "./bin/domain/SQLiteColumn.js";
 // import Animal from "./models/Animal.js";
 // import Blog from "./models/Blog.js";
@@ -89,3 +91,5 @@ console.log(
 );
 
 // console.log(query);
+
+console.log( getModelNameFromTable("employees") );

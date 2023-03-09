@@ -1,0 +1,1 @@
+UPDATE {{tablename}} SET {{#columns}}{{.}}=${{.}}, {{/columns}}, updated_at=DATETIME('now') WHERE id=$id RETURNING *;

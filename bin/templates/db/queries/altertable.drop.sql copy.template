@@ -1,0 +1,1 @@
+{{#columns}}ALTER TABLE {{../table}} DROP COLUMN {{name}};\n{{/columns}}

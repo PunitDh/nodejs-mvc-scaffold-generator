@@ -4,7 +4,6 @@
 // """
 
 import path from "path";
-import "pluralizer";
 import "../utils/js_utils.js";
 import {
   SQLITE_COLUMN_TYPES,
@@ -18,6 +17,7 @@ import {
 import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
 import Handlebars from "handlebars";
+import pluralize from "pluralize";
 
 const argvs = process.argv.slice(2);
 const [table, action, ...args] = argvs;
@@ -78,7 +78,7 @@ try {
 
   // Add migration
   const migrationInfo = {
-    tableName: table.toLowerCase().pluralize(),
+    tableName: pluralize.plural(table.toLowerCase()),
     columns: generateColumns(attributesObj),
   };
 

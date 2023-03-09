@@ -1,0 +1,1 @@
+{{#columns}}ALTER TABLE {{../table}} ADD COLUMN {{name}} {{type}}{{#constraints}} {{{.}}}{{/constraints}}{{#@root.foreignKeys}}{{#if @first}}{{#ifEquals thisColumn ../name}} REFERENCES {{otherTable}}({{otherColumn}}){{#deleteCascade}} ON DELETE CASCADE{{/deleteCascade}}{{#updateCascade}} ON UPDATE CASCADE{{/updateCascade}}{{/ifEquals}}{{/if}}{{/@root.foreignKeys}};\n{{/columns}}

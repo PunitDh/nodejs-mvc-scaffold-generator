@@ -5,17 +5,17 @@
 import { writeFileSync, appendFileSync, existsSync, mkdirSync } from "fs";
 import path, { join } from "path";
 import { GeneratorError, UnknownModelError } from "../errors.js";
-import "pluralizer";
 import SETTINGS from "../utils/settings.js";
 import Handlebars from "../utils/handlebars.js";
 import "../utils/js_utils.js";
 import LOGGER from "../logger.js";
 import { readFileSync } from "../utils/file_utils.js";
 import { getSchema, saveSchema } from "../utils/schema_utils.js";
+import pluralize from "pluralize";
 
 const argvs = process.argv.slice(2);
 const model = argvs[0];
-const route = model.toLowerCase().pluralize();
+const route = pluralize.plural(model.toLowerCase());
 const routerDirectory = join(".", SETTINGS.routers.location);
 const templateDirectory = path.join(".", "bin", "templates", "routers");
 const routerFile = join(routerDirectory, `${route}.js`);

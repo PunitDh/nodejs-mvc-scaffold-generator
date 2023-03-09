@@ -1,4 +1,4 @@
-export const SQLITE_COLUMN_TYPES = {
+export const SQLColumnTypes = {
   INT: "INTEGER",
   INTEGER: "INTEGER",
   TINYINT: "INTEGER",
@@ -30,6 +30,8 @@ export const SQLITE_COLUMN_TYPES = {
   DATE: "NUMERIC",
   TIMESTAMP: "NUMERIC",
   DATETIME: "NUMERIC",
+  PASSWORD: "TEXT",
+  EMAIL: "TEXT",
 };
 
 export const TERMINAL_COLORS = {
@@ -62,7 +64,7 @@ export const TERMINAL_COLORS = {
   BgGray: "\x1b[100m",
 };
 
-export const SQLITE_COLUMN_CONSTRAINTS = {
+export const SQLColumnContraints = {
   PRIMARY_KEY: "PRIMARY KEY",
   AUTO_INCREMENT: "AUTOINCREMENT",
   NOT_NULL: "NOT NULL",
@@ -75,12 +77,54 @@ export const SQLITE_COLUMN_CONSTRAINTS = {
 
 export const HTMLInputTypes = {
   NUMERIC: "number",
+  NUMBER: "number",
+  DECIMAL: "number",
   INTEGER: "number",
-  TEXT: "text",
+  TEXT: "textarea",
+  STRING: "text",
   BLOB: "file",
-  REAL: "text",
+  REAL: "number",
   NULL: "hidden",
   BOOLEAN: "checkbox",
+  PASSWORD: "password",
+  DATE: "date",
+  EMAIL: "email",
+};
+
+export const ColumnFormat = {
+  INT: "number",
+  INTEGER: "number",
+  TINYINT: "number",
+  SMALLINT: "number",
+  MEDIUMINT: "number",
+  BIGINT: "number",
+  "UNSIGNED BIG INT": "number",
+  INT2: "number",
+  INT8: "number",
+  CHARACTER: "text",
+  VARCHAR: "text",
+  "VARYING CHARACTER": "text",
+  NCHAR: "text",
+  "NATIVE CHARACTER": "text",
+  NVARCHAR: "text",
+  TEXT: "textarea",
+  CLOB: "text",
+  STRING: "text",
+  NULL: "hidden",
+  BLOB: "file",
+  REAL: "number",
+  DOUBLE: "number",
+  "DOUBLE PRECISION": "number",
+  FLOAT: "number",
+  NUMERIC: "number",
+  NUMBER: "number",
+  DECIMAL: "number",
+  BOOLEAN: "checkbox",
+  DATE: "date",
+  TIMESTAMP: "time",
+  DATETIME: "datetime-local",
+  PASSWORD: "password",
+  EMAIL: "email",
 };
 
 export const ReadOnlyColumns = ["id", "created_at", "updated_at"];
@@ -94,3 +138,14 @@ export const SearchExcludedColumns = [
 ];
 
 export const SearchResultExcludedColumns = ["password", "_csrf_token"];
+
+export const MigrationActions = {
+  CREATE: "CREATE",
+  ALTER: "ALTER",
+  DROP: "DROP",
+  UPDATE: "UPDATE",
+  subAction: {
+    ADD: "ADD",
+    DROP: "DROP",
+  },
+};

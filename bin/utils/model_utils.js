@@ -1,6 +1,8 @@
-import "pluralizer";
 import "./js_utils.js";
+import pluralize from "pluralize";
 
-export const getTableNameFromModel = (model) => model.toLowerCase().pluralize();
+export const getTableNameFromModel = (model) =>
+  pluralize.plural(model.toLowerCase());
 
-export const getModelNameFromTable = (table) => table.pluralize(table, 1).capitalize();
+export const getModelNameFromTable = (table) =>
+  pluralize.singular(table).capitalize();

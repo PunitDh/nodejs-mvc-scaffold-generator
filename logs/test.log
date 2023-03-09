@@ -12458,3 +12458,158 @@
 [INFO] [10/03/2023, 12:21:17 am]: Successfully connected to database: 'database.db'
 [INFO] [10/03/2023, 12:21:17 am]: Server started on port 3000
 [INFO] [10/03/2023, 12:21:17 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:28:52 am]: Started GET "/search?q=" at 10/03/2023, 12:28:52 am
+[INFO] [10/03/2023, 12:28:52 am]: Completed 200 OK in 12 ms
+[INFO] [10/03/2023, 12:29:12 am]: Started GET "/search?q=t" at 10/03/2023, 12:29:12 am
+[INFO] [10/03/2023, 12:29:12 am]: Completed 200  in 5 ms
+[INFO] [10/03/2023, 12:30:51 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:30:51 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:30:51 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:30:56 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:30:56 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:30:56 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:31:00 am]: Started GET "/search?q=t" at 10/03/2023, 12:31:00 am
+[INFO] [10/03/2023, 12:31:00 am]: Completed 200  in 2 ms
+[INFO] [10/03/2023, 12:31:11 am]: Started GET "/search?q=" at 10/03/2023, 12:31:11 am
+[INFO] [10/03/2023, 12:31:11 am]: Completed 304 Not Modified in 16 ms
+[INFO] [10/03/2023, 12:31:30 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:31:30 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:31:30 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:31:33 am]: Started GET "/search?q=" at 10/03/2023, 12:31:33 am
+[INFO] [10/03/2023, 12:31:33 am]: Completed 304 Not Modified in 11 ms
+[INFO] [10/03/2023, 12:31:55 am]: Started GET "/search?q=p" at 10/03/2023, 12:31:55 am
+[INFO] [10/03/2023, 12:31:55 am]: Completed 200  in 3 ms
+[INFO] [10/03/2023, 12:31:59 am]: Started GET "/search?q=" at 10/03/2023, 12:31:59 am
+[INFO] [10/03/2023, 12:31:59 am]: Completed 304 Not Modified in 8 ms
+[INFO] [10/03/2023, 12:32:49 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:32:49 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:32:49 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:32:50 am]: Started GET "/search?q=" at 10/03/2023, 12:32:50 am
+[INFO] [10/03/2023, 12:32:50 am]: Completed 304 Not Modified in 11 ms
+[INFO] [10/03/2023, 12:33:19 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:33:19 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:33:19 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:33:22 am]: Started GET "/search?q=" at 10/03/2023, 12:33:22 am
+[INFO] [10/03/2023, 12:33:22 am]: Completed 304 Not Modified in 12 ms
+[INFO] [10/03/2023, 12:33:43 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:33:43 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:33:43 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:33:46 am]: Started GET "/search?q=" at 10/03/2023, 12:33:46 am
+[INFO] [10/03/2023, 12:33:46 am]: Completed 304 Not Modified in 11 ms
+[INFO] [10/03/2023, 12:33:52 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:33:52 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:33:52 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:33:54 am]: Started GET "/search?q=" at 10/03/2023, 12:33:54 am
+[INFO] [10/03/2023, 12:33:54 am]: Completed 304 Not Modified in 12 ms
+[INFO] [10/03/2023, 12:34:14 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:34:14 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:34:14 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:34:17 am]: Started GET "/search?q=" at 10/03/2023, 12:34:17 am
+[INFO] [10/03/2023, 12:34:17 am]: Completed 304 Not Modified in 7 ms
+[INFO] [10/03/2023, 12:34:41 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:34:41 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:34:41 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:34:43 am]: Started GET "/search?q=" at 10/03/2023, 12:34:43 am
+[INFO] [10/03/2023, 12:34:43 am]: Completed 304 Not Modified in 14 ms
+[INFO] [10/03/2023, 12:35:06 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:35:06 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:35:06 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:35:11 am]: Started GET "/search?q=" at 10/03/2023, 12:35:11 am
+[INFO] [10/03/2023, 12:35:11 am]: Completed 200  in 1 ms
+[QUERY] [10/03/2023, 12:35:11 am]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%';
+[QUERY] [10/03/2023, 12:35:11 am]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%';
+[QUERY] [10/03/2023, 12:35:11 am]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%';
+[QUERY] [10/03/2023, 12:35:11 am]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%';
+[QUERY] [10/03/2023, 12:35:11 am]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%';
+[QUERY] [10/03/2023, 12:35:11 am]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%';
+[INFO] [10/03/2023, 12:36:18 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:36:18 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:36:18 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:36:20 am]: Started GET "/search?q=" at 10/03/2023, 12:36:20 am
+[INFO] [10/03/2023, 12:36:20 am]: Completed 200  in 1 ms
+[QUERY] [10/03/2023, 12:36:20 am]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%';
+[QUERY] [10/03/2023, 12:36:20 am]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%';
+[QUERY] [10/03/2023, 12:36:20 am]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%';
+[QUERY] [10/03/2023, 12:36:20 am]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%';
+[QUERY] [10/03/2023, 12:36:20 am]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%';
+[QUERY] [10/03/2023, 12:36:20 am]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%';
+[INFO] [10/03/2023, 12:36:21 am]: Started GET "/search?q=" at 10/03/2023, 12:36:21 am
+[INFO] [10/03/2023, 12:36:21 am]: Completed 200  in 3 ms
+[QUERY] [10/03/2023, 12:36:21 am]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%';
+[QUERY] [10/03/2023, 12:36:21 am]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%';
+[QUERY] [10/03/2023, 12:36:21 am]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%';
+[QUERY] [10/03/2023, 12:36:21 am]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%';
+[QUERY] [10/03/2023, 12:36:21 am]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%';
+[QUERY] [10/03/2023, 12:36:21 am]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%';
+[INFO] [10/03/2023, 12:37:10 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:37:10 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:37:10 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:37:37 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:37:37 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:37:37 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:37:41 am]: Started GET "/search?q=" at 10/03/2023, 12:37:41 am
+[INFO] [10/03/2023, 12:37:41 am]: Completed 200  in 3 ms
+[QUERY] [10/03/2023, 12:37:41 am]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%';
+[QUERY] [10/03/2023, 12:37:41 am]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%';
+[QUERY] [10/03/2023, 12:37:41 am]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%';
+[QUERY] [10/03/2023, 12:37:41 am]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%';
+[QUERY] [10/03/2023, 12:37:41 am]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%';
+[QUERY] [10/03/2023, 12:37:41 am]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%';
+[INFO] [10/03/2023, 12:37:49 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:37:49 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:37:49 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:37:50 am]: Started GET "/search?q=" at 10/03/2023, 12:37:50 am
+[INFO] [10/03/2023, 12:37:50 am]: Completed 200  in 0 ms
+[QUERY] [10/03/2023, 12:37:50 am]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%';
+[QUERY] [10/03/2023, 12:37:50 am]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%';
+[QUERY] [10/03/2023, 12:37:50 am]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%';
+[QUERY] [10/03/2023, 12:37:50 am]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%';
+[QUERY] [10/03/2023, 12:37:50 am]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%';
+[QUERY] [10/03/2023, 12:37:50 am]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%';
+[INFO] [10/03/2023, 12:39:06 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:39:06 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:39:06 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:39:08 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:39:08 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:39:08 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:39:14 am]: Started GET "/search?q=" at 10/03/2023, 12:39:14 am
+[INFO] [10/03/2023, 12:39:14 am]: Completed 200  in 2 ms
+[QUERY] [10/03/2023, 12:39:14 am]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%';
+[QUERY] [10/03/2023, 12:39:14 am]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%';
+[QUERY] [10/03/2023, 12:39:14 am]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%';
+[QUERY] [10/03/2023, 12:39:14 am]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%';
+[QUERY] [10/03/2023, 12:39:14 am]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%';
+[QUERY] [10/03/2023, 12:39:14 am]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%';
+[INFO] [10/03/2023, 12:40:03 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:40:03 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:40:03 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:40:10 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:40:10 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:40:10 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:40:14 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:40:14 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:40:14 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:40:37 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:40:37 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:40:37 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:42:35 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:42:36 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:42:36 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:43:40 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:43:40 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:43:40 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:43:56 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:43:56 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:43:57 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:44:17 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:44:17 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:44:17 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:44:24 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:44:24 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:44:24 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:44:29 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:44:29 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:44:29 am]: Foreign keys have been turned ON 
+[INFO] [10/03/2023, 12:45:30 am]: Successfully connected to database: 'database.db'
+[INFO] [10/03/2023, 12:45:30 am]: Server started on port 3000
+[INFO] [10/03/2023, 12:45:30 am]: Foreign keys have been turned ON 

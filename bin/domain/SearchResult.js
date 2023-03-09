@@ -2,6 +2,7 @@ import { SearchExcludedColumns, SearchResultExcludedColumns } from "../constants
 import DB from "../db.js";
 import SQLiteTable from "./SQLiteTable.js";
 import "../utils/js_utils.js"
+import LOGGER from "../logger.js";
 
 class SearchResult {
   constructor(table, data) {
@@ -30,6 +31,7 @@ class SearchResult {
         .filter((column) => !SearchExcludedColumns.includes(column.name))
         .map((column) => `${column.name} LIKE '%${sanitizedSearchTerm}%'`);
       const query = `SELECT * FROM ${table.name} WHERE ${searchQuery.join(" OR ")};`;
+      LOGGER.query(query);
       return new Promise((resolve, reject) => {
         DB.all(query, [], (err, rows) => {
           if (err) return reject(err);

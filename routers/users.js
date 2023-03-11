@@ -3,6 +3,7 @@ import User from "../models/User.js";
 import { compare, hashed } from "../bin/utils/bcrypt.js";
 import JWT from "jsonwebtoken";
 import authorize from "../bin/middlewares/authorize.js";
+import { Flash } from "../bin/constants.js";
 
 const users = Router();
 
@@ -11,7 +12,7 @@ users.get("/", authorize, async (req, res) => {
     const users = (await User.all()).map((user) => user.exclude("password"));
     return res.render("users/index", { users });
   } catch (e) {
-    res.locals.flash.error = e.message;
+    req.flash(Flash.ERROR, e.message);
     return res.render("users/index", { users: [] });
   }
 });
@@ -40,11 +41,11 @@ users.post("/edit/:id", async (req, res) => {
   try {
     const { oldPassword, passwordConfirmation, ...body } = req.body;
     if (!compare(oldPassword, user.password)) {
-      res.locals.flash.error = "Old password does not match";
+      req.flash(Flash.ERROR, "Old password does not match");
       return res.render("users/edit", { user });
     }
     if (body.password !== passwordConfirmation) {
-      res.locals.flash.error = "New passwords do not match";
+      req.flash(Flash.ERROR, "New passwords do not match");
       return res.render("users/edit", { user });
     }
     const updated = { ...body, password: hashed(body.password) };
@@ -70,13 +71,13 @@ users.post("/login", async (req, res) => {
     const { email, password } = req.body;
     const dbUser = await User.findBy({ email });
     if (!dbUser) {
-      res.locals.flash.error = "User not found";
+      req.flash(Flash.ERROR, "User not found");
       return res.render("users/login");
     }
     const { password: userPassword, ...user } = dbUser;
 
     if (!compare(password, userPassword)) {
-      res.locals.flash.error = "Wrong password";
+      req.flash(Flash.ERROR, "Wrong password");
       return res.render("users/login");
     }
     await dbUser.save();
@@ -86,7 +87,7 @@ users.post("/login", async (req, res) => {
         expiresIn: process.env.COOKIE_EXPIRY,
       })
     );
-    req.flash("success", "Logged in successfully");
+    req.flash(Flash.SUCCESS, "Logged in successfully");
     if (req.query.referer) return res.redirect(req.query.referer);
     return res.redirect(`/users`);
   } catch (e) {
@@ -97,7 +98,7 @@ users.post("/login", async (req, res) => {
 users.post("/logout", async (req, res) => {
   try {
     res.clearCookie("app");
-    res.locals.flash.success = "User logged out";
+    req.flash(Flash.SUCCESS, "User logged out");
     res.render("users/login");
   } catch (e) {
     return res.status(400).send(e.message);
@@ -128,14 +129,14 @@ users.post("/", async (req, res) => {
   try {
     const { passwordConfirmation, ...body } = req.body;
     if (passwordConfirmation !== body.password) {
-      res.locals.flash.error = "Passwords do not match";
+      req.flash(Flash.ERROR, "Passwords do not match");
       return res.render("users/register");
     }
     const user = { ...body, password: hashed(body.password) };
     await User.create(user);
     return res.redirect("/users");
   } catch (e) {
-    res.locals.flash.error = e.message;
+    req.flash(Flash.ERROR, e.message);
     return res.render("users/register");
   }
 });

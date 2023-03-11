@@ -139,6 +139,8 @@ export const SearchExcludedColumns = [
 
 export const SearchResultExcludedColumns = ["password", "_csrf_token"];
 
+// export const SearchResultTitleColumns = ['name', 'title', 'first_name', 'firstname', 'last_name', 'lastname']
+
 export const MigrationActions = {
   CREATE: "CREATE",
   ALTER: "ALTER",

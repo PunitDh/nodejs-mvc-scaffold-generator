@@ -23,6 +23,8 @@ export default function () {
     res.locals.dateFields = SETTINGS.views.pages.dateFields;
     res.locals.capitalize = (text) => text.capitalize();
     res.locals.pluralize = (text) => pluralize.plural(text);
+    res.locals.__host__ = `${req.protocol}://${req.headers.host}`
+    res.locals.stringify = JSON.stringify
     next();
   };
 }

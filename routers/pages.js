@@ -12,34 +12,17 @@ pages.get("/about", (_, res) => {
 });
 
 pages.get("/search", async (req, res) => {
-  if (req.query.q !== null) {
-    const results = await SearchResult.search(req.query.q);
-    const markedResults =
-      req.query.q.length > 0
-        ? results.map((result) => {
-            const markedResult = {};
-            markedResult.table = result.table;
-            markedResult.data = {};
-            Object.entries(result.data).forEach(([key, value]) => {
-              const regex = new RegExp(`(${req.query.q})`, "gi");
-              markedResult.data[key] =
-                value
-                  ?.toString()
-                  .replace(regex, "<span class='mark'>$1</span>") || value;
-            });
-            return markedResult;
-          })
-        : results;
-
-    res.render("pages/search", {
-      results: JSON.stringify(markedResults, null, 2),
-      query: req.query.q,
-    });
-  } else {
-    res.render("pages/search", {
-      results: [],
-    });
-  }
+  const startTime = process.hrtime();
+  const results = await SearchResult.search(req.query.q);
+  res.render("pages/search", {
+    results,
+    query: req.query.q || "",
+    time: (() => {
+      const [seconds, nanoseconds] = process.hrtime(startTime);
+      const milliseconds = seconds * 1000 + nanoseconds / 1000000;
+      return Math.round(milliseconds * 100) / 100000;
+    })(),
+  });
 });
 
 export default pages;

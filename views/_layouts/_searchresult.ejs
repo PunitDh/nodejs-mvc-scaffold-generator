@@ -1,0 +1,39 @@
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="search-result-box card-box">
+          <!-- end row -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="home">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="search-item mb-4">
+                    <h4 class="mb-1">
+                      <a href="<%= locals.result.link %>"
+                        ><%= locals.capitalize(locals.result.table) %> - <%= locals.result.title %></a
+                      >
+                    </h4>
+                    <div class="font-13 text-success mb-3">
+                      <%- locals.__host__ %>/<%- locals.result.link %>
+                    </div>
+                    <code>
+                      <pre>
+<%- locals.stringify(locals.result.data, null, 2) %>
+                    </pre
+                      >
+                    </code>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <!-- end Users tab -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- container -->
+    </div>
+  </div>
+</div>

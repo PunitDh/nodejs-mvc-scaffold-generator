@@ -1,12 +1,8 @@
-import SQLiteTable from "./bin/domain/SQLiteTable.js";
-import SearchResult from "./bin/domain/SearchResult.js";
-import Model from "./bin/model.js";
-import "./bin/utils/js_utils.js";
-import Blog from "./models/Blog.js";
-import Comment from "./models/Comment.js";
-import Handlebars from "./bin/utils/handlebars.js";
-import { getModelNameFromTable } from "./bin/utils/model_utils.js";
-import pluralize from "pluralize";
+import "../bin/utils/js_utils.js";
+import Blog from "../models/Blog.js";
+import Comment from "../models/Comment.js";
+import Handlebars from "../bin/utils/handlebars.js";
+import { getModelNameFromTable } from "../bin/utils/model_utils.js";
 // import SQLiteColumn from "./bin/domain/SQLiteColumn.js";
 // import Animal from "./models/Animal.js";
 // import Blog from "./models/Blog.js";
@@ -92,4 +88,24 @@ console.log(
 
 // console.log(query);
 
-console.log( getModelNameFromTable("employees") );
+// console.log( getModelNameFromTable("employees") );
+
+function ln() {
+  var e = new Error();
+  if (!e.stack)
+    try {
+      throw e;
+    } catch (e) {
+      if (!e.stack) {
+        return 0;
+      }
+    }
+  var stack = e.stack.toString().split(/\r\n|\n/);
+  var frameRE = /:(\d+):(?:\d+)[^\d]*$/;
+  do {
+    var frame = stack.shift();
+  } while (!frameRE.exec(frame) && stack.length);
+  return frameRE.exec(stack.shift())[1];
+}
+
+console.log(ln());

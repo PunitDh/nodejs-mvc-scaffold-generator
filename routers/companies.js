@@ -1,7 +1,12 @@
 import { Router } from "express";
 import Company from "../models/Company.js";
 import { Flash } from "../bin/constants.js";
+import BaseRouter from "../bin/BaseRouter.js";
 const companies = Router();
+
+class CompanyRouter extends BaseRouter {
+  
+}
 
 companies.get("/", async (req, res) => {
   try {

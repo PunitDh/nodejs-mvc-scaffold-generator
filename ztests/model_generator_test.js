@@ -21,9 +21,9 @@ import {
   MigrationActions,
   SQLColumnContraints,
   SQLColumnTypes,
-} from "./bin/constants.js";
-import Handlebars from "./bin/utils/handlebars.js";
-import { getTableNameFromModel } from "./bin/utils/model_utils.js";
+} from "../bin/constants.js";
+import Handlebars from "../bin/utils/handlebars.js";
+import { getTableNameFromModel } from "../bin/utils/model_utils.js";
 import pluralize from "pluralize";
 
 Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {

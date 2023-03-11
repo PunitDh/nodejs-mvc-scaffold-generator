@@ -14,11 +14,16 @@ Array.prototype.forEachAsync = async function (callback) {
 };
 
 Object.prototype.exclude = function () {
-  [...arguments].forEach(argument => {
-    delete this[argument]
-  })
+  [...arguments].forEach((argument) => {
+    delete this[argument];
+  });
   return this;
-}
+};
+
+Array.prototype.exclude = function () {
+  const exclusions = [...arguments];
+  return this.filter((item) => !exclusions.includes(item));
+};
 
 String.prototype.capitalize = function () {
   return this.split("_")

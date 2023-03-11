@@ -108,7 +108,7 @@ class Model {
     );
     const query = Query.UPDATE({
       table: this.constructor.__tablename__,
-      columns: Object.keys(object),
+      columns,
     });
     const values = [...columns.map((column) => this[column]), this.id];
     return await this.constructor.dbQuery(query, values, true);

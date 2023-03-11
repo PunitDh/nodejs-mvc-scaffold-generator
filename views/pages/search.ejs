@@ -3,8 +3,33 @@
 <%- include('../_layouts/_mid.ejs') %> <%- include('../_layouts/_tail.ejs') %>
 
 <div class="container mt-4">
-  <h2>Search Results</h2>
-  <code>
-    <pre><%- results %></pre>
-  </code>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="pt-3 pb-4">
+        <form action="/search" method="GET" class="form-group d-flex" style="gap:0.2rem;">
+          <input
+            type="search"
+            id="search"
+            name="q"
+            class="form-control"
+            value="<%= locals.query %>"
+            autocomplete="off"
+          />
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-outline-success">
+              <i class="fa fa-search mr-1"></i> Search
+            </button>
+          </div>
+        </form>
+        <% if (locals.query) { %>
+        <div class="mt-4 text-center">
+          <h4>Search Results For "<%= locals.query %>"</h4>
+          <div class="search-result-time"><%= locals.results?.length %> results (<%= locals.time %> s)</div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <% if (locals.results) { %> <% for (result of locals.results) { %> <%-
+  include('../_layouts/_searchresult.ejs', { result }) %> <% } %> <% } %>
 </div>

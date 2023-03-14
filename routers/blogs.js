@@ -13,9 +13,9 @@ blogs.get("/", async (req, res) => {
   } catch (e) {}
 });
 
-blogs.get("/create", async (req, res) => {
+blogs.get("/new", async (req, res) => {
   try {
-    return res.render("blogs/create");
+    return res.render("blogs/new");
   } catch (e) {
     req.flash("error", e.message);
     return res.redirect("/blogs");
@@ -69,7 +69,7 @@ blogs.post("/", async (req, res) => {
     return res.redirect(`/blogs`);
   } catch (e) {
     req.flash("error", e.message);
-    return res.redirect("/blogs/create");
+    return res.redirect("/blogs/new");
   }
 });
 

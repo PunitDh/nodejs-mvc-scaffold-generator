@@ -325,5 +325,12 @@
       }
     ]
   },
-  "routers": ["users", "blogs", "comments", "animals", "employees", "companies"]
+  "routers": [
+    "users",
+    "blogs",
+    "comments",
+    "animals",
+    "employees",
+    "companies"
+  ]
 }

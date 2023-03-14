@@ -9,9 +9,9 @@ comments.get("/", async (req, res) => {
   } catch (e) {}
 });
 
-comments.get("/create", async (req, res) => {
+comments.get("/new", async (req, res) => {
   try {
-    return res.render("comments/create");
+    return res.render("comments/new");
   } catch (e) {
     req.flash("error", e.message);
     return res.redirect("/comments");
@@ -64,7 +64,7 @@ comments.post("/", async (req, res) => {
     return res.redirect(`/comments`);
   } catch (e) {
     req.flash("error", e.message);
-    return res.redirect("comments/create");
+    return res.redirect("comments/new");
   }
 });
 

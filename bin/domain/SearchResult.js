@@ -50,10 +50,9 @@ class SearchResult {
     const results = await tables.mapAsync(async (table) => {
       const searchQuery = (await table.columns)
         .filter((column) => !SearchExcludedColumns.includes(column.name))
-        .map((column) => `${column.name} LIKE '%${sanitizedSearchTerm}%'`);
-      const query = `SELECT * FROM ${table.name} WHERE ${searchQuery.join(
-        " OR "
-      )} ORDER BY updated_at DESC;`;
+        .map((column) => `${column.name} LIKE '%${sanitizedSearchTerm}%'`)
+        .join(" OR ");
+      const query = `SELECT * FROM ${table.name} WHERE ${searchQuery} ORDER BY updated_at DESC;`;
       LOGGER.query(query);
       return new Promise((resolve, reject) => {
         DB.all(query, [], (err, rows) => {

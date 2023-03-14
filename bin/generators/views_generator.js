@@ -28,7 +28,7 @@ const templateDirectory = path.join(".", "bin", "templates", "views");
 const templates = [
   "_form.ejs.template",
   "_head.ejs.template",
-  "create.ejs.template",
+  "new.ejs.template",
   "edit.ejs.template",
   "index.ejs.template",
   "{{singular}}.ejs.template",
@@ -68,9 +68,9 @@ const navLinksFile = path.join(
 fs.writeFileSync(navLinksFile, navLinks);
 
 const templateProps = {
-  model,
+  Model: model,
+  model: singular,
   router,
-  singular,
   heading: router.capitalize(),
   indexColumns: await getColumnsFromSchema(
     model,

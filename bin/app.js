@@ -11,6 +11,7 @@ import cookieParser from "cookie-parser";
 import flash from "connect-flash";
 import session from "express-session";
 import appUtils from "./middlewares/appUtils.js";
+import csrf from "./middlewares/csrf.js";
 
 // Load config
 config();
@@ -35,6 +36,7 @@ app.use(
 app.use(flash());
 
 // Custom Middleware
+// app.use(csrf());
 app.use(routeLogger());
 app.use(appUtils());
 app.use("/", appRouter);

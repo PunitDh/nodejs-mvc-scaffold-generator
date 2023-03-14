@@ -15,9 +15,9 @@ const fish = Router();
 //   }
 // });
 
-// fish.get("/create", authorize, async (_, res) => {
+// fish.get("/new", authorize, async (_, res) => {
 //   try {
-//     res.render("fish/create", { _csrf: res.locals._csrf });
+//     res.render("fish/new", { _csrf: res.locals._csrf });
 //   } catch (e) {
 //     return res.status(400).send(e.message);
 //   }

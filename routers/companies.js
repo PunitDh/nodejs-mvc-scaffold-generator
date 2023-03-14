@@ -1,23 +1,21 @@
 import { Router } from "express";
 import Company from "../models/Company.js";
 import { Flash } from "../bin/constants.js";
-import BaseRouter from "../bin/BaseRouter.js";
 const companies = Router();
-
-class CompanyRouter extends BaseRouter {
-  
-}
 
 companies.get("/", async (req, res) => {
   try {
     const companies = await Company.all();
     return res.render("companies/index", { companies });
-  } catch (e) {}
+  } catch (e) {
+    req.flash(Flash.ERROR, e.message);
+  }
 });
 
-companies.get("/create", async (req, res) => {
+companies.get("/new", async (req, res) => {
   try {
-    return res.render("companies/create");
+    const company = new Company();
+    return res.render("companies/new", { company, action: "/" });
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
     return res.redirect("/companies");
@@ -27,7 +25,7 @@ companies.get("/create", async (req, res) => {
 companies.get("/edit/:id", async (req, res) => {
   try {
     const company = await Company.find(req.params.id);
-    return res.render("companies/edit", { company });
+    return res.render("companies/edit", { company, action: `/edit/${req.params.id}` });
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
   }
@@ -70,7 +68,7 @@ companies.post("/", async (req, res) => {
     return res.redirect(`/companies`);
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
-    return res.redirect("companies/create");
+    return res.redirect("companies/new");
   }
 });
 

@@ -1,10 +1,10 @@
 import { Router } from "express";
 import Blog from "../models/Blog.js";
 import Comment from "../models/Comment.js";
-import authorize from "../bin/middleware/authorize.js";
+import authenticated from "../bin/middleware/authenticated.js";
 const blogs = Router();
 
-blogs.use(authorize);
+blogs.use(authenticated);
 
 blogs.get("/", async (req, res) => {
   try {
@@ -55,7 +55,9 @@ blogs.post("/delete/:id", async (req, res) => {
 blogs.get("/:id", async (req, res) => {
   try {
     const blog = await Blog.find(req.params.id);
-    const comments = (await blog.comments).map(comment => comment.exclude("id", "blog_id", "updated_at"));
+    const comments = (await blog.comments).map((comment) =>
+      comment.exclude("id", "blog_id", "updated_at")
+    );
     return res.render("blogs/blog", { blog, comments });
   } catch (e) {
     req.flash("error", e.message);

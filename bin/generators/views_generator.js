@@ -13,7 +13,6 @@ import { getTableNameFromModel } from "../utils/model_utils.js";
 import { ViewColumn } from "./types.js";
 import SQLiteColumn from "../domain/SQLiteColumn.js";
 import { getSchema } from "../utils/schema_utils.js";
-import { readFileSync } from "../utils/file_utils.js";
 import pluralize from "pluralize";
 
 const argvs = process.argv.slice(2);
@@ -42,31 +41,33 @@ const files = templates.map((template) => {
     template: path.join(templateDirectory, template),
   };
 });
-const { routers } = getSchema();
 
-const navLinksTemplate = readFileSync(
-  templateDirectory,
-  "_layouts",
-  "_navLinks.ejs.template"
-);
-const navLinks = routers
-  .sort()
-  .map((router) =>
-    Handlebars.compile(navLinksTemplate)({
+if (SETTINGS.views.pages.navLinks.overwrite) {
+  const { routers } = getSchema();
+
+  const navLinks = routers
+    .sort()
+    .map((router) => ({
       router,
       heading: router.capitalize(),
-    })
-  )
-  .join("\n");
+    }))
+    .join("\n");
 
-const navLinksFile = path.join(
-  ".",
-  SETTINGS.views.location,
-  "_layouts",
-  "_navLinks.ejs"
-);
+  const navLinksContents = Handlebars.compileFile(
+    templateDirectory,
+    "_layouts",
+    "_navLinks.ejs.template"
+  )({ navLinks });
 
-fs.writeFileSync(navLinksFile, navLinks);
+  const navLinksFile = path.join(
+    ".",
+    SETTINGS.views.location,
+    "_layouts",
+    "_navLinks.ejs"
+  );
+
+  fs.writeFileSync(navLinksFile, navLinksContents);
+}
 
 const templateProps = {
   Model: model,

@@ -31,7 +31,10 @@
       },
       "new": {},
       "edit": {},
-      "single": {}
+      "singular": {},
+      "navLinks": {
+        "overwrite": true
+      }
     }
   }
 }

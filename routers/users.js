@@ -2,12 +2,12 @@ import { Router } from "express";
 import User from "../models/User.js";
 import { compare, hashed } from "../bin/utils/bcrypt.js";
 import JWT from "jsonwebtoken";
-import authorize from "../bin/middleware/authorize.js";
+import authenticated from "../bin/middleware/authenticated.js";
 import { Flash } from "../bin/constants.js";
 
 const users = Router();
 
-users.get("/", authorize, async (req, res) => {
+users.get("/", authenticated, async (req, res) => {
   try {
     const users = (await User.all()).map((user) => user.exclude("password"));
     return res.render("users/index", { users });

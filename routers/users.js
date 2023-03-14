@@ -2,7 +2,7 @@ import { Router } from "express";
 import User from "../models/User.js";
 import { compare, hashed } from "../bin/utils/bcrypt.js";
 import JWT from "jsonwebtoken";
-import authorize from "../bin/middlewares/authorize.js";
+import authorize from "../bin/middleware/authorize.js";
 import { Flash } from "../bin/constants.js";
 
 const users = Router();

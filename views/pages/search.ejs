@@ -6,7 +6,12 @@
   <div class="row">
     <div class="col-md-8 offset-md-2">
       <div class="pt-3 pb-4">
-        <form action="/search" method="GET" class="form-group d-flex" style="gap:0.2rem;">
+        <form
+          action="/search"
+          method="GET"
+          class="form-group d-flex"
+          style="gap: 0.2rem"
+        >
           <input
             type="search"
             id="search"
@@ -24,7 +29,9 @@
         <% if (locals.query) { %>
         <div class="mt-4 text-center">
           <h4>Search Results For "<%= locals.query %>"</h4>
-          <div class="search-result-time"><%= locals.results?.length %> results (<%= locals.time %> s)</div>
+          <div class="search-result-time">
+            <%= locals.results?.length %> results (<%= locals.time %> s)
+          </div>
         </div>
         <% } %>
       </div>

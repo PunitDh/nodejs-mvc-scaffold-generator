@@ -27,10 +27,14 @@ class SearchResult {
       "created_at",
       "updated_at"
     );
-    this.title = data[resultColumns[0]];
+    this.title = data[resultColumns.first()];
     this.link = `${table}/${data.id}`;
   }
 
+  /**
+   * @description Get all tables currently in the database
+   * @returns A list of SQLiteTable
+   */
   static get __tables__() {
     return new Promise((resolve, reject) => {
       DB.all(`PRAGMA table_list`, function (err, tables) {
@@ -44,9 +48,14 @@ class SearchResult {
     });
   }
 
+  /**
+   * @description Searches through all the tables in the database for a specified search term
+   * @param {string} searchTerm 
+   * @returns List of SearchResult
+   */
   static async search(searchTerm) {
     const tables = await this.__tables__;
-    const sanitizedSearchTerm = searchTerm.replace("'", "''");
+    const sanitizedSearchTerm = searchTerm?.replaceAll("'", "''");
     const results = await tables.mapAsync(async (table) => {
       const searchQuery = (await table.columns)
         .filter((column) => !SearchExcludedColumns.includes(column.name))

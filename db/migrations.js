@@ -11,3 +11,14 @@ await Migrations(
       .create()
   )
 ).run();
+
+await Migrations(
+  new Migration(
+    new Table("sneakers")
+      .withColumns(
+        new Column("name", "TEXT"),
+        new Column("color", "TEXT"),
+      )
+      .create()
+  )
+).run();

@@ -16,7 +16,7 @@ pages.get("/search", async (req, res) => {
   const results = await SearchResult.search(req.query.q);
   res.render("pages/search", {
     results,
-    query: req.query.q || "",
+    query: req.query.q,
     time: (() => {
       const [seconds, nanoseconds] = process.hrtime(startTime);
       const milliseconds = seconds * 1000 + nanoseconds / 1000000;

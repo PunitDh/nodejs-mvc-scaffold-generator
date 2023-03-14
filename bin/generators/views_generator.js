@@ -17,7 +17,7 @@ import { readFileSync } from "../utils/file_utils.js";
 import pluralize from "pluralize";
 
 const argvs = process.argv.slice(2);
-const model = argvs[0];
+const model = argvs.first();
 const singular = model.toLowerCase();
 const router = pluralize.plural(singular);
 const viewsDirectory = path.join(".", SETTINGS.views.location, router);
@@ -50,6 +50,7 @@ const navLinksTemplate = readFileSync(
   "_navLinks.ejs.template"
 );
 const navLinks = routers
+  .sort()
   .map((router) =>
     Handlebars.compile(navLinksTemplate)({
       router,

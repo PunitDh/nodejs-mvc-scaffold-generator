@@ -1,7 +1,7 @@
 import Model from '../bin/model.js'
 
 class Employee extends Model {
-  constructor(data) {
+  constructor(data = {}) {
     super(data);
     this.first_name = data.first_name;
     this.last_name = data.last_name;

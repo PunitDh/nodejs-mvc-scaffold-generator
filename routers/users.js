@@ -52,7 +52,7 @@ users.post("/edit/:id", async (req, res) => {
     await User.update(id, updated);
     return res.redirect("/users");
   } catch (e) {
-    res.locals.flash.error = e.message;
+    req.flash(Flash.ERROR, e.message);
     return res.render("users/edit", { user });
   }
 });

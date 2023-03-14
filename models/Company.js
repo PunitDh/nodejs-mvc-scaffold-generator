@@ -1,7 +1,7 @@
-import Model from '../bin/model.js'
+import Model from "../bin/model.js";
 
 class Company extends Model {
-  constructor(data) {
+  constructor(data = {}) {
     super(data);
     this.name = data.name;
     this.address = data.address;

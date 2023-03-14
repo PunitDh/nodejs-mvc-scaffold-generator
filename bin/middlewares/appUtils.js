@@ -1,12 +1,13 @@
 import SETTINGS from "../utils/settings.js";
 import "../utils/js_utils.js";
 import pluralize from "pluralize";
+import { uuid } from "../utils/uuid.js";
 
 export default function () {
   return function (req, res, next) {
     res.locals.formatDate = (date) => new Date(date).toJSON() || date;
-    res.locals.formatCurrency = (amount, decimals = 2, currency = "USD") =>
-      new Intl.NumberFormat("en-US", {
+    res.locals.formatCurrency = (amount, decimals = 2, currency = "AUD") =>
+      new Intl.NumberFormat("en-AU", {
         style: "currency",
         currency,
         minimumFractionDigits: decimals,
@@ -23,8 +24,8 @@ export default function () {
     res.locals.dateFields = SETTINGS.views.pages.dateFields;
     res.locals.capitalize = (text) => text.capitalize();
     res.locals.pluralize = (text) => pluralize.plural(text);
-    res.locals.__host__ = `${req.protocol}://${req.headers.host}`
-    res.locals.stringify = JSON.stringify
+    res.locals.__host__ = `${req.protocol}://${req.headers.host}`;
+    res.locals.stringify = JSON.stringify;
     next();
   };
 }

@@ -1,72 +1,27 @@
 import { Router } from "express";
 import Employee from "../models/Employee.js";
+import csrf from "../bin/middlewares/csrf.js";
+import Controller from "../bin/domain/Controller.js";
 const employees = Router();
 
+employees.use(csrf(true));
 
-employees.get("/", async (_, res) => {
-  try {
-    const employees = await Employee.all();
-    res.render("employees/index", { employees });
-  } catch (e) {
-    return res.status(400).send(e.message);
-  }
-});
+const employeesController = new Controller(Employee);
 
-employees.get("/create", async (_, res) => {
-  try {
-    res.render("employees/create");
-  } catch (e) {
-    return res.status(400).send(e.message);
-  }
-});
+employees.route("/").get(employeesController.index());
 
-employees.get("/edit/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const employee = (await Employee.find(id));
-    return res.render("employees/edit", { employee });
-  } catch (e) {
-    return res.status(400).send(e.message);
-  }
-});
+employees
+  .route("/new")
+  .get(employeesController.newPage())
+  .post(employeesController.create());
 
-employees.post("/edit/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    await Employee.update(id, req.body);
-    return res.redirect("/employees");
-  } catch (e) {
-    return res.status(400).send(e.message);
-  }
-});
+employees
+  .route("/edit/:id")
+  .get(employeesController.edit())
+  .post(employeesController.update());
 
-employees.post("/delete/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    await Employee.delete(id);
-    return res.redirect("/employees");
-  } catch (e) {
-    return res.status(400).send(e.message);
-  }
-});
+employees.route("/:id").get(employeesController.show());
 
-employees.get("/:id", async (req, res) => {
-  const { id } = req.params;
-  try {
-    const employee = (await Employee.find(id));
-    return res.render("employees/employee", { employee });
-  } catch (e) {
-    return res.status(400).send(e.message);
-  }
-});
-
-employees.post("/", async (req, res) => {
-  try {
-    await Employee.create(req.body);
-    return res.redirect("/employees");
-  } catch (e) {
-    return res.status(400).send(e.message);
-  }
-});
+employees.route("/delete/:id").post(employeesController.destroy());
 
 export default employees;

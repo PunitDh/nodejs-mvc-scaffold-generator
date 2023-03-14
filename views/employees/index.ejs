@@ -19,7 +19,7 @@
           <td><%= it.first_name %></td>
           <td><%= it.last_name %></td>
           <td><%= it.title %></td>
-          <td><%= it.salary %></td>
+          <td><%= formatCurrency(it.salary) %></td>
           <td><%= it.sick_leave_hours %></td>
           <td><%= it.annual_leave_hours %></td>
           <td><%= formatDate(it.created_at) %></td>
@@ -28,6 +28,7 @@
           <td><a href="/employees/edit/<%= it.id %>" class="btn btn-success">Edit</a></td>
           <td>
             <form action="/employees/delete/<%= it.id %>" method="POST">
+              <input type="hidden" name="_csrf_token" value="<%= locals._csrf_token %>">
               <button type="submit" class="btn btn-danger">
                 Delete
               </button>
@@ -37,6 +38,6 @@
         <% } %>
       </tbody>
     </table>
-    <a href="/employees/create" class="btn btn-primary">New Employee</a>
+    <a href="/employees/new" class="btn btn-primary">New Employee</a>
   </div>
   <%- include('../_layouts/_tail.ejs') %>

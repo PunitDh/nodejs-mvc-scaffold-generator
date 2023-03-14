@@ -1,71 +1,73 @@
 import { Router } from "express";
 import Animal from "../models/Animal.js";
-import authorize from "../bin/middlewares/authorize.js";
+import { Flash } from "../bin/constants.js";
 const animals = Router();
 
-animals.get("/", authorize, async (_, res) => {
+animals.get("/", async (req, res) => {
   try {
     const animals = await Animal.all();
-    res.render("animals/index", { animals });
-  } catch (e) {
-    return res.status(400).send(e.message);
-  }
+    return res.render("animals/index", { animals });
+  } catch (e) {}
 });
 
-animals.get("/create", async (_, res) => {
+animals.get("/new", async (req, res) => {
   try {
-    res.render("animals/create");
+    const animal = new Animal();
+    return res.render("animals/new", { animal, action: "/" });
   } catch (e) {
-    return res.status(400).send(e.message);
+    req.flash(Flash.ERROR, e.message);
+    return res.redirect("/animals");
   }
 });
 
 animals.get("/edit/:id", async (req, res) => {
   try {
-    const { id } = req.params;
-    const animal = await Animal.find(id);
-    return res.render("animals/edit", { animal });
+    const animal = await Animal.find(req.params.id);
+    return res.render("animals/edit", { animal, action: `/edit/${req.params.id}` });
   } catch (e) {
-    return res.status(400).send(e.message);
+    req.flash(Flash.ERROR, e.message);
   }
 });
 
 animals.post("/edit/:id", async (req, res) => {
   try {
-    const { id } = req.params;
-    await Animal.update(id, req.body);
-    return res.redirect("/animals");
+    await Animal.update(req.params.id, req.body);
+    req.flash(Flash.SUCCESS, "Animal has been updated");
+    return res.redirect(`/animals`);
   } catch (e) {
-    return res.status(400).send(e.message);
+    req.flash(Flash.ERROR, e.message);
+    return res.redirect(`/animals/edit/${req.params.id}`);
   }
 });
 
 animals.post("/delete/:id", async (req, res) => {
   try {
-    const { id } = req.params;
-    await Animal.delete(id);
+    await Animal.delete(req.params.id);
+    req.flash(Flash.SUCCESS, "Animal has been deleted");
     return res.redirect("/animals");
   } catch (e) {
-    return res.status(400).send(e.message);
+    req.flash(Flash.ERROR, e.message);
   }
 });
 
 animals.get("/:id", async (req, res) => {
-  const { id } = req.params;
   try {
-    const animal = await Animal.find(id);
-    return res.status(200).send(animal);
+    const animal = await Animal.find(req.params.id);
+    return res.render("animals/animal", { animal });
   } catch (e) {
-    return res.status(400).send(e.message);
+    req.flash(Flash.ERROR, e.message);
   }
 });
 
 animals.post("/", async (req, res) => {
   try {
-    await Animal.create(req.body);
-    return res.redirect("/animals");
+    const animal = new Animal(req.body);
+    await animal.save();
+    req.flash(Flash.SUCCESS, "Animal has been added");
+    return res.redirect(`/animals`);
   } catch (e) {
-    return res.status(400).send(e.message);
+    req.flash(Flash.ERROR, e.message);
+    return res.redirect("animals/new");
   }
 });
 

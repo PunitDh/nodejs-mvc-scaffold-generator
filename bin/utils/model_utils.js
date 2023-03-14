@@ -22,3 +22,13 @@ export const Query = {
     "./bin/templates/db/queries/delete.sql.template"
   ),
 };
+
+export const sanitizeObject = (obj) => {
+  const sanitized = {};
+  Object.entries(obj).forEach(([key, value]) => {
+    if (Boolean(value)) {
+      sanitized[key] = value;
+    }
+  });
+  return sanitized;
+};

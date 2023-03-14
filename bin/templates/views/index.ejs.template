@@ -23,6 +23,7 @@
           <td><a href="/{{router}}/edit/<%= it.id %>" class="btn btn-success">Edit</a></td>
           <td>
             <form action="/{{router}}/delete/<%= it.id %>" method="POST">
+              <input type="hidden" name="_csrf_token" value="<%= locals._csrf_token %>">
               <button type="submit" class="btn btn-danger">
                 Delete
               </button>
@@ -32,6 +33,6 @@
         <% } %>
       </tbody>
     </table>
-    <a href="/{{router}}/create" class="btn btn-primary">New {{model}}</a>
+    <a href="/{{router}}/new" class="btn btn-primary">New {{Model}}</a>
   </div>
   <%- include('../_layouts/_tail.ejs') %>

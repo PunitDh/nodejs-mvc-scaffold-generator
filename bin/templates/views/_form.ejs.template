@@ -1,18 +1,15 @@
-<% if (page === "Create") { %>
-<form action="/{{router}} %>" method="POST">
-<% } else { %>
-<form action="/{{router}}/edit/<%= {{singular}}.id %>" method="POST">
-<% } %>
+<form action="/{{router}}/<%= action %>" method="POST">
   {{#formColumns}}
   <div class="form-group d-flex row mb-2">
     <label for="{{name}}" class="form-label">
       <div class="mb-2">{{Name}}</div>
-      <input type="{{input.type}}" value="<%= page === 'Create' ? '' : {{../singular}}.{{name}} %>" name="{{name}}" {{checked}} class="{{input.class}} form-control" id="{{name}}" placeholder="Enter {{Name}}" autocomplete="off">
+      <input type="{{input.type}}" value="<%= {{../model}}.{{name}} %>" name="{{name}}" {{checked}} class="{{input.class}} form-control" id="{{name}}" placeholder="Enter {{Name}}" autocomplete="off">
     </label>
   </div>
   {{/formColumns}}
   <div class="form-group mb-2">
-    <button type="submit" class="btn btn-primary"><%= page %> {{model}}</button>
+    <input type="hidden" name="_csrf_token" value="<%= locals._csrf_token %>">
+    <button type="submit" class="btn btn-primary">Submit {{Model}}</button>
     <a href="/{{router}}" class="btn btn-danger">Back</a>
   </div>
 </form>

@@ -3,13 +3,18 @@ import LOGGER from "./logger.js";
 import SQLiteColumn from "./domain/SQLiteColumn.js";
 import { ReadOnlyColumns, SearchExcludedColumns } from "./constants.js";
 import SQLiteTable from "./domain/SQLiteTable.js";
-import { Query, getTableNameFromModel } from "./utils/model_utils.js";
+import {
+  Query,
+  getTableNameFromModel,
+  sanitizeObject,
+} from "./utils/model_utils.js";
+import "./utils/js_utils.js";
 
 class Model {
-  constructor({ id, created_at, updated_at }) {
-    this.id = id;
-    this.created_at = created_at;
-    this.updated_at = updated_at;
+  constructor(data) {
+    this.id = data.id;
+    this.created_at = data.created_at;
+    this.updated_at = data.updated_at;
   }
 
   exclude() {
@@ -73,18 +78,24 @@ class Model {
   }
 
   static async create(object) {
+    const sanitizedObject = sanitizeObject(
+      new this.prototype.constructor(object)
+    );
     const query = Query.INSERT({
       table: this.__tablename__,
-      columns: Object.keys(object),
+      columns: Object.keys(sanitizedObject),
     });
-    return await this.dbQuery(query, Object.values(object), true);
+    return await this.dbQuery(query, Object.values(sanitizedObject), true);
   }
 
   static async update(id, object) {
-    const values = [...Object.values(object), id];
+    const sanitizedObject = sanitizeObject(
+      new this.prototype.constructor(object)
+    );
+    const values = [...Object.values(sanitizedObject), id];
     const query = Query.UPDATE({
       table: this.__tablename__,
-      columns: Object.keys(object),
+      columns: Object.keys(sanitizedObject),
     });
     return await this.dbQuery(query, values, true);
   }
@@ -106,10 +117,13 @@ class Model {
     const columns = Object.keys(this).filter(
       (column) => !ReadOnlyColumns.includes(column)
     );
-    const query = Query.UPDATE({
-      table: this.constructor.__tablename__,
-      columns,
-    });
+
+    const query = this.id
+      ? Query.UPDATE({
+          table: this.constructor.__tablename__,
+          columns,
+        })
+      : Query.INSERT({ table: this.constructor.__tablename__, columns });
     const values = [...columns.map((column) => this[column]), this.id];
     return await this.constructor.dbQuery(query, values, true);
   }

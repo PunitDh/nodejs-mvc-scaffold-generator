@@ -1,8 +1,4 @@
-<% if (page === "Create") { %>
-<form action="/employees %>" method="POST">
-<% } else { %>
-<form action="/employees/edit/<%= employee.id %>" method="POST">
-<% } %>
+<form method="POST">
   <div class="form-group d-flex row mb-2">
     <label for="first_name" class="form-label">
       <div class="mb-2">First Name</div>
@@ -39,6 +35,7 @@
       <input type="NUMERIC" value="<%= page === "Create" ? '' : employee.annual_leave_hours %>" name="annual_leave_hours"  class="form-control form-control" id="annual_leave_hours" placeholder="Enter Annual Leave Hours" autocomplete="off">
     </label>
   </div>
+  <input type="hidden" name="_csrf_token" value="<%= locals._csrf_token %>">
   <div class="form-group mb-2">
     <button type="submit" class="btn btn-primary"><%= page %> Employee</button>
     <a href="/employees" class="btn btn-danger">Back</a>

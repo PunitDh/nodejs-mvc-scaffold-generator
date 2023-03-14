@@ -38,3 +38,7 @@ String.prototype.capitalize = function () {
     .map((part) => part[0]?.toUpperCase() + part.slice(1))
     .join(" ");
 };
+
+String.prototype.equalsIgnoreCase = function (str) {
+  return this.toLowerCase() === str.toLowerCase();
+};

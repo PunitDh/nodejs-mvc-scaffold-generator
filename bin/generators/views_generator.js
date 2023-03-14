@@ -51,7 +51,8 @@ if (SETTINGS.views.pages.navLinks.overwrite) {
       router,
       heading: router.capitalize(),
     }))
-    .join("\n");
+
+    console.log({navLinks})
 
   const navLinksContents = Handlebars.compileFile(
     templateDirectory,

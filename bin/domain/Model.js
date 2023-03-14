@@ -1,14 +1,14 @@
-import DB from "./db.js";
-import LOGGER from "./logger.js";
-import SQLiteColumn from "./domain/SQLiteColumn.js";
-import { ReadOnlyColumns, SearchExcludedColumns } from "./constants.js";
-import SQLiteTable from "./domain/SQLiteTable.js";
+import DB from "../db.js";
+import LOGGER from "../logger.js";
+import SQLiteColumn from "./SQLiteColumn.js";
+import { ReadOnlyColumns, SearchExcludedColumns } from "../constants.js";
+import SQLiteTable from "./SQLiteTable.js";
 import {
   Query,
   getTableNameFromModel,
   sanitizeObject,
-} from "./utils/model_utils.js";
-import "./utils/js_utils.js";
+} from "../utils/model_utils.js";
+import "../utils/js_utils.js";
 
 /**
  * @description Base model class
@@ -66,7 +66,7 @@ class Model {
   }
 
   /**
-   * 
+   *
    * @returns The first item in the table
    */
   static async first() {
@@ -75,7 +75,7 @@ class Model {
   }
 
   /**
-   * 
+   *
    * @returns The last item in the table
    */
   static async last() {
@@ -84,8 +84,8 @@ class Model {
   }
 
   /**
-   * 
-   * @param {integer} id 
+   *
+   * @param {integer} id
    * @returns A single item with the specified id
    */
   static async find(id) {
@@ -95,33 +95,32 @@ class Model {
 
   /**
    * @description Query the model using an object, e.g. { id: 1, name: 'Tim' }
-   * @param {Object} obj 
-   * @returns A single row or an empty object
+   * @param {Object} obj
+   * @returns A single row or null
    */
   static async findBy(obj) {
     const result = await this.where(obj);
-    return result.length > 0 ? result.first() : {};
+    return result.length ? result.first() : null;
   }
 
   /**
    * @description Searches the model's table for the specified searchTerm
-   * @param {string} searchTerm 
+   * @param {string} searchTerm
    * @returns A list of rows
    */
   static async search(searchTerm) {
-    const sanitizedSearchTerm = searchTerm.replace("'", "''");
-    const columnNames = (await this.__columns__)
+    const sanitizedSearchTerm = searchTerm?.replaceAll("'", "''");
+    const columns = (await this.__columns__)
       .filter((column) => !SearchExcludedColumns.includes(column.name))
-      .map((column) => `${column.name} LIKE '%${sanitizedSearchTerm}%'`);
-    const query = `SELECT * FROM ${this.__tablename__} WHERE ${columnNames.join(
-      " OR "
-    )};`;
+      .map((column) => `${column.name} LIKE '%${sanitizedSearchTerm}%'`)
+      .join(" OR ");
+    const query = `SELECT * FROM ${this.__tablename__} WHERE ${columns};`;
     return await this.dbQuery(query);
   }
 
   /**
    * @description Checks if a row exists given the specified conditions in the obj, e.g. { id: 1, name: 'Tim' }
-   * @param {Object} obj 
+   * @param {Object} obj
    * @returns Boolean
    */
   static async exists(obj) {
@@ -147,9 +146,9 @@ class Model {
 
   /**
    * @description Updates a row in the model's database given and id and columns as object, e.g. { id: 1, name: 'Tim' }
-   * @param {integer} id 
-   * @param {Object} object 
-   * @returns 
+   * @param {integer} id
+   * @param {Object} object
+   * @returns
    */
   static async update(id, object) {
     const sanitizedObject = sanitizeObject(
@@ -165,7 +164,7 @@ class Model {
 
   /**
    * @description Query the model's table using an object, e.g. { id: 1, name: 'Tim' }
-   * @param {Object} obj 
+   * @param {Object} obj
    * @returns A list of rows that matches the conditions { id: 1, name: 'Tim' }
    */
   static async where(obj) {
@@ -178,7 +177,7 @@ class Model {
 
   /**
    * @description Deletes a row from the model's table
-   * @param {integer} id 
+   * @param {integer} id
    * @returns The deleted row
    */
   static async delete(id) {
@@ -219,9 +218,9 @@ class Model {
 
   /**
    * @description Runs an SQL query on the model's table
-   * @param {string} query 
-   * @param {Array<string>} values 
-   * @param {Boolean} singular 
+   * @param {string} query
+   * @param {Array<string>} values
+   * @param {Boolean} singular
    * @returns The result of the SQL query
    */
   static dbQuery(query, values = [], singular = false) {

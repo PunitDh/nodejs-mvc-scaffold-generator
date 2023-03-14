@@ -3,7 +3,7 @@ Started {{method}} "{{path}}" at {{dateTime}}
 Processing by {{router}}#{{action}}
   Parameters: {{{body}}}
   ↳ {{file}}:{{line}}
-  {{#query}}{{../model}} {{action}} {{color}}{{{string}}} [{{#values}}{{.}}{{#unless @last}}, {{/unless}}{{/values}}]{{/query}}
+  {{#query}}{{../model}} {{action}} {{color}}{{{string}}}{{../resetColor}} [{{#values}}{{.}}{{#unless @last}}, {{/unless}}{{/values}}]{{/query}}
   ↳ {{file}}:{{line}}
 {{#redirect}}Redirected to {{.}}{{/redirect}}
 Completed {{statusCode}} {{statusText}} in {{time}}ms

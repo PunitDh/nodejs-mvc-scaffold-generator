@@ -26,14 +26,14 @@
             </button>
           </div>
         </form>
-        <% if (locals.query) { %>
         <div class="mt-4 text-center">
+          <% if (locals.query) { %>
           <h4>Search Results For "<%= locals.query %>"</h4>
+          <% } %>
           <div class="search-result-time">
             <%= locals.results?.length %> results (<%= locals.time %> s)
           </div>
         </div>
-        <% } %>
       </div>
     </div>
   </div>

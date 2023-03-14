@@ -19740,3 +19740,21 @@ COMMIT;
 [INFO] [14/03/2023, 9:59:20 pm]: Successfully connected to database: 'database.db'
 [INFO] [14/03/2023, 9:59:20 pm]: Server started on port 3000
 [INFO] [14/03/2023, 9:59:20 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:44:16 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:44:16 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:44:16 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:44:30 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:44:30 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:44:30 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:44:53 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:44:53 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:44:53 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:45:02 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:45:02 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:45:02 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:45:34 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:45:34 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:45:34 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:45:37 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:45:37 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:45:37 am]: Foreign keys have been turned ON 

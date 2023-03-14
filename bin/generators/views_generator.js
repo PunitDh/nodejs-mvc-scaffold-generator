@@ -46,7 +46,6 @@ if (SETTINGS.views.pages.navLinks.overwrite) {
   const { routers } = getSchema();
 
   const navLinks = routers
-    .sort()
     .map((router) => ({
       router,
       heading: router.capitalize(),

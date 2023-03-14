@@ -9,7 +9,7 @@ import { getSchema, saveSchema } from "./utils/schema_utils.js";
   DB.all(`PRAGMA table_list`, function (_, tables) {
     schema.routers = tables
       .map((r) => r.name)
-      .filter((r) => !r.includes("sqlite_"));
+      .filter((r) => !r.includes("sqlite_")).sort();
 
     schemaTables.forEach((schemaTable) => {
       if (!schema.routers.includes(schemaTable)) {

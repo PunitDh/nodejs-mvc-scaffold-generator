@@ -19,12 +19,12 @@
           <td><%= it.{{name}} %></td>
             {{/date}}
           {{/indexColumns}}
-          <td><a href="/{{router}}/<%= it.id %>" class="btn btn-primary">Show</a></td>
-          <td><a href="/{{router}}/edit/<%= it.id %>" class="btn btn-success">Edit</a></td>
+          <td><a href="/{{router}}/<%= it.id %>" class="btn btn-primary" title="Show">Show</a></td>
+          <td><a href="/{{router}}/edit/<%= it.id %>" class="btn btn-success" title="Edit">Edit</a></td>
           <td>
             <form action="/{{router}}/delete/<%= it.id %>" method="POST">
-              <input type="hidden" name="_csrf_token" value="<%= locals._csrf_token %>">
-              <button type="submit" class="btn btn-danger">
+              <%- include('../_layouts/_csrf_field.ejs') %>
+              <button type="submit" class="btn btn-danger" title="Delete">
                 Delete
               </button>
             </form>

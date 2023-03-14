@@ -127,6 +127,14 @@ export const ColumnFormat = {
   EMAIL: "email",
 };
 
+export const HttpMethods = {
+  GET: "GET",
+  POST: "POST",
+  PUT: "PUT",
+  PATCH: "PATCH",
+  DELETE: "DELETE"
+}
+
 export const ReadOnlyColumns = ["id", "created_at", "updated_at"];
 
 export const SearchExcludedColumns = [

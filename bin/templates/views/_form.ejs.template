@@ -8,8 +8,8 @@
   </div>
   {{/formColumns}}
   <div class="form-group mb-2">
-    <input type="hidden" name="_csrf_token" value="<%= locals._csrf_token %>">
-    <button type="submit" class="btn btn-primary">Submit {{Model}}</button>
+    <%- include('../_layouts/_csrf_field.ejs') %>
+    <button type="submit" class="btn btn-primary" title="Submit">Submit {{Model}}</button>
     <a href="/{{router}}" class="btn btn-danger">Back</a>
   </div>
 </form>

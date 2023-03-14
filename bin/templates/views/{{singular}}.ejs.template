@@ -19,10 +19,10 @@
 
   <div class="form-group mb-2">
     <div class="d-flex align-items-center" style="gap: 1rem">
-      <a href="/{{router}}/edit/<%= {{model}}.id %>" class="btn btn-primary">Edit {{Model}}</a>
+      <a href="/{{router}}/edit/<%= {{model}}.id %>" class="btn btn-primary" title="Edit {{Model}}">Edit {{Model}}</a>
       <form action="/{{router}}/delete/<%= {{model}}.id %>" method="POST">
-        <input type="hidden" name="_csrf_token" value="<%= locals._csrf_token %>">
-        <button type="submit" class="btn btn-danger">Delete {{Model}}</button>
+        <%- include('../_layouts/_csrf_field.ejs') %>
+        <button type="submit" class="btn btn-danger" title="Delete {{Model}}">Delete {{Model}}</button>
       </form>
       <a href="/{{router}}" class="btn btn-danger">Back</a>
     </div>

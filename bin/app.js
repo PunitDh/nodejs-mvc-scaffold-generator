@@ -11,6 +11,7 @@ import flash from "connect-flash";
 import session from "express-session";
 import appUtils from "./middleware/appUtils.js";
 import routeLogger from "./middleware/logger.js";
+import errorHandler from "./middleware/errorHandler.js";
 
 // Load config
 config();
@@ -35,9 +36,14 @@ app.use(
 app.use(flash());
 
 // Custom Middleware
-app.use(routeLogger());
 app.use(appUtils());
+app.use(routeLogger());
+
+// Main Router
 app.use("/", appRouter);
+
+// Error handler middleware
+app.use(errorHandler());
 
 // Start server
 app.listen(SETTINGS.port, () =>

@@ -22,8 +22,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
-        <%- include('./_navlinks.ejs') %> <% if (currentUser != null) { %> <%-
-        include('./_dropdown.ejs') %> <% } %>
+        <%- include('./_navlinks.ejs') %> <%- include('./_dropdown.ejs') %>
       </ul>
 
       <form class="d-flex" action="/search" method="GET">
@@ -34,6 +33,7 @@
           aria-label="Search"
           name="q"
           autocomplete="off"
+          value="<%= locals.query %>"
         />
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>

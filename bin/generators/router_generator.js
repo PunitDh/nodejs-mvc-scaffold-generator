@@ -14,7 +14,7 @@ import { getSchema, saveSchema } from "../utils/schema_utils.js";
 import pluralize from "pluralize";
 
 const argvs = process.argv.slice(2);
-const model = argvs[0];
+const model = argvs.first();
 const route = pluralize.plural(model.toLowerCase());
 const routerDirectory = join(".", SETTINGS.routers.location);
 const templateDirectory = path.join(".", "bin", "templates", "routers");

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import Blog from "../models/Blog.js";
 import Comment from "../models/Comment.js";
-import authorize from "../bin/middlewares/authorize.js";
+import authorize from "../bin/middleware/authorize.js";
 const blogs = Router();
 
 blogs.use(authorize);

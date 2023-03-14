@@ -1,6 +1,6 @@
 import { Router } from "express";
 import Employee from "../models/Employee.js";
-import csrf from "../bin/middlewares/csrf.js";
+import csrf from "../bin/middleware/csrf.js";
 import Controller from "../bin/domain/Controller.js";
 const employees = Router();
 

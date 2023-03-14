@@ -1,7 +1,6 @@
 import SETTINGS from "../utils/settings.js";
 import "../utils/js_utils.js";
 import pluralize from "pluralize";
-import { uuid } from "../utils/uuid.js";
 
 export default function () {
   return function (req, res, next) {

@@ -13,17 +13,29 @@ const {{route}} = Router();
 {{route}}.get("/new", async (req, res) => {
   try {
     const {{model}} = new {{Model}}();
-    return res.render("{{route}}/new", { {{model}}, action: "/" });
+    return res.render("{{route}}/new", { {{model}} });
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
     return res.redirect("/{{route}}");
   }
 });
 
+{{route}}.post("/new", async (req, res) => {
+  try {
+    const {{model}} = new {{Model}}(req.body);
+    await {{model}}.save();
+    req.flash(Flash.SUCCESS, "{{Model}} has been added");
+    return res.redirect(`/{{route}}`);
+  } catch (e) {
+    req.flash(Flash.ERROR, e.message);
+    return res.redirect("{{route}}/new");
+  }
+});
+
 {{route}}.get("/edit/:id", async (req, res) => {
   try {
     const {{model}} = await {{Model}}.find(req.params.id);
-    return res.render("{{route}}/edit", { {{model}}, action: `/edit/${req.params.id}` });
+    return res.render("{{route}}/edit", { {{model}} });
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
   }
@@ -57,18 +69,6 @@ const {{route}} = Router();
     return res.render("{{route}}/{{model}}", { {{model}} });
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
-  }
-});
-
-{{route}}.post("/", async (req, res) => {
-  try {
-    const {{model}} = new {{Model}}(req.body);
-    await {{model}}.save();
-    req.flash(Flash.SUCCESS, "{{Model}} has been added");
-    return res.redirect(`/{{route}}`);
-  } catch (e) {
-    req.flash(Flash.ERROR, e.message);
-    return res.redirect("{{route}}/new");
   }
 });
 

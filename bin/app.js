@@ -3,15 +3,14 @@ const appRouter = Router();
 const app = express();
 import SETTINGS from "./utils/settings.js";
 import LOGGER from "./logger.js";
-import { routeLogger } from "./logger.js";
 import { config } from "dotenv";
 import ejs from "ejs";
 import path from "path";
 import cookieParser from "cookie-parser";
 import flash from "connect-flash";
 import session from "express-session";
-import appUtils from "./middlewares/appUtils.js";
-import csrf from "./middlewares/csrf.js";
+import appUtils from "./middleware/appUtils.js";
+import routeLogger from "./middleware/logger.js";
 
 // Load config
 config();
@@ -36,7 +35,6 @@ app.use(
 app.use(flash());
 
 // Custom Middleware
-// app.use(csrf());
 app.use(routeLogger());
 app.use(appUtils());
 app.use("/", appRouter);

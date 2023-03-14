@@ -1,3 +1,11 @@
+Array.prototype.first = function () {
+  return this[0];
+};
+
+Array.prototype.last = function () {
+  return this[this.length - 1];
+};
+
 Array.prototype.mapAsync = async function (callback) {
   let result = [];
   for (const it of this) {

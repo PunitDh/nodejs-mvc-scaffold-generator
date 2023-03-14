@@ -1,7 +1,7 @@
 import JWT from "jsonwebtoken";
 import User from "../../models/User.js";
 
-async function authorize(req, res, next) {
+async function authenticated(req, res, next) {
   const token = req.cookies.app;
   const referer = new URLSearchParams();
   referer.append("referer", req.originalUrl);
@@ -26,4 +26,4 @@ async function authorize(req, res, next) {
   }
 }
 
-export default authorize;
+export default authenticated;

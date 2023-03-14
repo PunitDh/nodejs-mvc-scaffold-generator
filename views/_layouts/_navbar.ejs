@@ -22,7 +22,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
-        <%- include('./_navlinks.ejs') %> <% if (currentUser) { %> <%-
+        <%- include('./_navlinks.ejs') %> <% if (currentUser != null) { %> <%-
         include('./_dropdown.ejs') %> <% } %>
       </ul>
 

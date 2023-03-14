@@ -1,6 +1,7 @@
 import SETTINGS from "../utils/settings.js";
 import "../utils/js_utils.js";
 import pluralize from "pluralize";
+import JWT from "jsonwebtoken";
 
 export default function () {
   return function (req, res, next) {
@@ -15,7 +16,15 @@ export default function () {
         //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
         //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
       }).format(amount);
-    res.locals.currentUser = null;
+    try {
+      res.locals.currentUser = JWT.verify(
+        req.cookies.app,
+        process.env.JWT_SECRET
+      );
+    } catch {
+      res.clearCookie("app");
+      res.locals.currentUser = null;
+    }
     res.locals.flash = {
       success: req.flash("success"),
       error: req.flash("error"),

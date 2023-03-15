@@ -38,7 +38,7 @@
     <% } %> <% if (currentUser) { %>
     <div class="my-4">
       <form action="/blogs/comment/" method="POST">
-        <div class="d-flex w-50" style="gap: 0.25rem">
+        <div class="d-flex w-100" style="gap: 0.25rem">
           <input type="hidden" name="blog_id" value="<%= blog.id %>" />
           <input
             type="text"

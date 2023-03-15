@@ -11,6 +11,11 @@ class SQLiteColumn {
     this.primaryKey = Boolean(pk);
   }
 
+  /**
+   * Returns the columns for a specified table
+   * @param {string} table - The table name to search for
+   * @returns A list of SQLiteColumn
+   */
   static async getColumns(table) {
     return new Promise((resolve, reject) => {
       DB.all(`PRAGMA table_info('${table}')`, function (err, rows) {
@@ -24,11 +29,22 @@ class SQLiteColumn {
     });
   }
 
+  /**
+   * Returns a list of column names for the specified table
+   * @param {string} table - The table to search
+   * @returns A list of string
+   */
   static async getColumnNames(table) {
     const cols = await this.getColumns(table);
     return cols.map((column) => column.name);
   }
 
+  /**
+   * Returns the column data type for the specified column in the table
+   * @param {string} table 
+   * @param {string} column 
+   * @returns The data type of the column, e.g. string
+   */
   static async getColumnType(table, column) {
     const cols = await this.getColumns(table);
     return cols.find((tableColumn) => tableColumn.name === column).type;

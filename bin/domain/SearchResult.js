@@ -59,8 +59,10 @@ class SearchResult {
   }
 
   /**
-   * @description Searches through all the tables in the database for a specified search term
-   * @param {string} searchTerm
+   * @description Searches through all the tables in the database for a specified search term.
+   * Also sorts it by "priority", i.e. how often the search term appears in a given record
+   * @param {String} searchTerm - The search term to search for
+   * @param {Integer} limit - A limit for the number of records returned
    * @returns List of SearchResult
    */
   static async search(searchTerm, limit) {

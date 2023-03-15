@@ -13,6 +13,11 @@ class SQLiteTable {
     this.columns = SQLiteColumn.getColumns(this.name);
   }
 
+  /**
+   * Checks if a table exists in the database
+   * @param {string} tableName - The table name to find
+   * @returns Boolean
+   */
   static exists(tableName) {
     return new Promise((resolve, reject) => {
       DB.all(`PRAGMA table_list`, function (err, tables) {
@@ -22,6 +27,11 @@ class SQLiteTable {
     });
   }
 
+  /**
+   * Gets the list of all foreign keys in the database
+   * @param {string} tableName 
+   * @returns A list of SQLiteForeignKey
+   */
   static getForeignKeys(tableName) {
     return new Promise((resolve, reject) => {
       DB.all(

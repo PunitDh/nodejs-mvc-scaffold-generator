@@ -2,6 +2,11 @@ import { randomInteger } from "../utils/num_utils.js";
 import "../utils/js_utils.js";
 
 class ObjectCollection {
+  /**
+   * Creates an ObjectCollection object that takes in a count and a class
+   * @param {Integer} count - The number of instances to be created
+   * @param {Class} Model - The class of instances to be created
+   */
   constructor(count, Model) {
     this.count = count;
     this.instances = [];
@@ -9,7 +14,7 @@ class ObjectCollection {
   }
 
   /**
-   * Saves all models to the database
+   * Saves all instances of the model to the database
    * @returns Saved instances as promises
    */
   async saveAll() {
@@ -19,8 +24,8 @@ class ObjectCollection {
   /**
    * Applies props to the given object class
    * The propsObject must have the exact column signature as the defined model
-   * @param {object} propsObject
-   * @returns
+   * @param {any} propsObject - The object or function that populates the columns
+   * @returns {ObjectCollection}
    */
   withProps(propsObject) {
     const resultObj =
@@ -40,9 +45,9 @@ class ObjectCollection {
 
 /**
  * When applied with .withProps(), returns a number of specified objects with the prop values
- * @param {integer} count
- * @param {Class} ModelClass
- * @returns ObjectCollection
+ * @param {Integer} count - The number of instances to create
+ * @param {Class} ModelClass - The class of the instance to be created
+ * @returns new ObjectCollection
  */
 export function CollectionOf(count, ModelClass) {
   return new ObjectCollection(count, ModelClass);
@@ -50,9 +55,9 @@ export function CollectionOf(count, ModelClass) {
 
 /**
  * When applied with .withProps(), returns a random number of specified objects with the prop values
- * @param {integer} maxCount
- * @param {Class} ModelClass
- * @returns
+ * @param {integer} maxCount - The max number of instances to create
+ * @param {Class} ModelClass - The class of the instance to be created
+ * @returns new ObjectCollection
  */
 export function RandomCollectionOf(maxCount, ModelClass) {
   return new ObjectCollection(randomInteger(1, maxCount), ModelClass);

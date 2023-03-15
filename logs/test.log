@@ -19758,3 +19758,54 @@ COMMIT;
 [INFO] [15/03/2023, 10:45:37 am]: Successfully connected to database: 'database.db'
 [INFO] [15/03/2023, 10:45:37 am]: Server started on port 3000
 [INFO] [15/03/2023, 10:45:37 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:55:08 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:55:09 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:55:09 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:58:01 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:58:01 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:58:01 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:58:33 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:58:33 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:58:33 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:59:04 am]: Successfully connected to database: 'database.db'
+[QUERY] [15/03/2023, 10:59:04 am]: CREATE TABLE IF NOT EXISTS companies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , address TEXT , number_of_employees NUMERIC , created_at NUMERIC, updated_at NUMERIC)
+[QUERY] [15/03/2023, 10:59:04 am]: CREATE TABLE IF NOT EXISTS sneakers (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , color TEXT , created_at NUMERIC, updated_at NUMERIC)
+[INFO] [15/03/2023, 10:59:04 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:59:04 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:59:04 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:59:04 am]: Updating schema for 'animals'
+[INFO] [15/03/2023, 10:59:04 am]: Updating schema for 'blogs'
+[INFO] [15/03/2023, 10:59:04 am]: Updating schema for 'comments'
+[INFO] [15/03/2023, 10:59:04 am]: Updating schema for 'companies'
+[INFO] [15/03/2023, 10:59:04 am]: Updating schema for 'employees'
+[INFO] [15/03/2023, 10:59:04 am]: Updating schema for 'sneakers'
+[INFO] [15/03/2023, 10:59:04 am]: Updating schema for 'users'
+[INFO] [15/03/2023, 10:59:04 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:59:04 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:59:04 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:59:20 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:59:20 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:59:20 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:59:31 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:59:31 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:59:31 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:59:32 am]: Successfully connected to database: 'database.db'
+[QUERY] [15/03/2023, 10:59:32 am]: DROP TABLE sneakers
+[INFO] [15/03/2023, 10:59:32 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:59:33 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:59:33 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 10:59:33 am]: Updating schema for 'animals'
+[INFO] [15/03/2023, 10:59:33 am]: Updating schema for 'blogs'
+[INFO] [15/03/2023, 10:59:33 am]: Updating schema for 'comments'
+[INFO] [15/03/2023, 10:59:33 am]: Updating schema for 'companies'
+[INFO] [15/03/2023, 10:59:33 am]: Updating schema for 'employees'
+[INFO] [15/03/2023, 10:59:33 am]: Updating schema for 'users'
+[INFO] [15/03/2023, 10:59:33 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 10:59:33 am]: Server started on port 3000
+[INFO] [15/03/2023, 10:59:33 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 11:00:30 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 11:00:30 am]: Server started on port 3000
+[INFO] [15/03/2023, 11:00:30 am]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 11:00:33 am]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 11:00:34 am]: Server started on port 3000
+[INFO] [15/03/2023, 11:00:34 am]: Foreign keys have been turned ON 

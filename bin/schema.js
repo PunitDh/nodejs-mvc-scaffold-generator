@@ -3,13 +3,15 @@ import LOGGER from "./logger.js";
 import { getSchema, saveSchema } from "./utils/schema_utils.js";
 
 (() => {
+  LOGGER.info("Updating schema");
   const schema = getSchema();
   const schemaTables = Object.keys(schema.tables);
 
   DB.all(`PRAGMA table_list`, function (_, tables) {
     schema.routers = tables
       .map((r) => r.name)
-      .filter((r) => !r.includes("sqlite_")).sort();
+      .filter((r) => !r.includes("sqlite_"))
+      .sort();
 
     schemaTables.forEach((schemaTable) => {
       if (!schema.routers.includes(schemaTable)) {

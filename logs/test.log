@@ -41142,3 +41142,105 @@ Cannot read properties of undefined (reading 'first_name')
 [QUERY] [15/03/2023, 22:58:04]: SELECT * FROM users WHERE id=$id ORDER BY id DESC;
 [QUERY] [15/03/2023, 22:58:04]: SELECT * FROM blogs WHERE id=$id ORDER BY id DESC;
 [INFO] [15/03/2023, 22:58:04]: Success 200 OK in 13.86 ms
+[INFO] [15/03/2023, 23:01:53]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:01:53]: Server started on port 3000
+[INFO] [15/03/2023, 23:01:53]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:02:33]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:02:33]: Server started on port 3000
+[INFO] [15/03/2023, 23:02:33]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:02:37]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:02:37]: Server started on port 3000
+[INFO] [15/03/2023, 23:02:37]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:02:40]: Started GET "/comments/" at 15/03/2023, 23:02:40
+[QUERY] [15/03/2023, 23:02:40]: SELECT * FROM comments ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:02:40]: Success 200 OK in 25.42 ms
+[INFO] [15/03/2023, 23:02:41]: Started GET "/comments/edit/134" at 15/03/2023, 23:02:41
+[QUERY] [15/03/2023, 23:02:41]: SELECT * FROM comments WHERE id=$id ORDER BY id DESC;
+[QUERY] [15/03/2023, 23:02:41]: SELECT * FROM blogs ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:02:41]: Success 200 OK in 21.45 ms
+[INFO] [15/03/2023, 23:03:18]: Started GET "/comments/edit/134" at 15/03/2023, 23:03:18
+[QUERY] [15/03/2023, 23:03:18]: SELECT * FROM comments WHERE id=$id ORDER BY id DESC;
+[QUERY] [15/03/2023, 23:03:18]: SELECT * FROM blogs ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:03:18]: Success 200 OK in 18.99 ms
+[INFO] [15/03/2023, 23:05:13]: Started GET "/comments/edit/134" at 15/03/2023, 23:05:13
+[QUERY] [15/03/2023, 23:05:13]: SELECT * FROM comments WHERE id=$id ORDER BY id DESC;
+[QUERY] [15/03/2023, 23:05:13]: SELECT * FROM blogs ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:05:13]: Success 200 OK in 20.14 ms
+[INFO] [15/03/2023, 23:05:35]: Started GET "/comments/" at 15/03/2023, 23:05:35
+[QUERY] [15/03/2023, 23:05:35]: SELECT * FROM comments ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:05:35]: Success 200 OK in 17.14 ms
+[INFO] [15/03/2023, 23:05:36]: Started GET "/comments/new" at 15/03/2023, 23:05:36
+[QUERY] [15/03/2023, 23:05:36]: SELECT * FROM blogs ORDER BY updated_at desc;
+[ERROR] [15/03/2023, 23:05:36]: 400 ReferenceError: /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/comments/new.ejs:4
+    2|   <div class="container mt-4">
+    3|     <h1>Create Comment</h1>
+ >> 4|     <%- include ('./_form.ejs', { page: "Create" }) %>
+    5|   </div>
+    6| <%- include('../_layouts/_tail.ejs') %>
+    7| 
+
+/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/comments/_form.ejs:16
+    14|       <label for="body" class="form-label">
+    15|         <div class="mb-2 fw-bold">Body</div>
+ >> 16|         <input type="TEXT" value="<%= comment.body %>"
+    17|         name="body" class="form-control form-control" id="body"
+    18|         placeholder="Enter Body" autocomplete="off">
+    19|       </label>
+
+comment is not defined
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/comments/_form.ejs":23:26)
+    at _form (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at include (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:701:39)
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/comments/new.ejs":13:17)
+    at new (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:274:36)
+    at exports.renderFile [as engine] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/view.js:135:8)
+    at tryRender (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/application.js:657:10)
+    at Function.render (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/application.js:609:3)
+[INFO] [15/03/2023, 23:05:36]: Redirected 302 Found in 18.82 ms
+[INFO] [15/03/2023, 23:05:37]: Started GET "/comments/new" at 15/03/2023, 23:05:37
+[QUERY] [15/03/2023, 23:05:37]: SELECT * FROM blogs ORDER BY updated_at desc;
+[ERROR] [15/03/2023, 23:05:37]: 400 ReferenceError: /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/comments/new.ejs:4
+    2|   <div class="container mt-4">
+    3|     <h1>Create Comment</h1>
+ >> 4|     <%- include ('./_form.ejs', { page: "Create" }) %>
+    5|   </div>
+    6| <%- include('../_layouts/_tail.ejs') %>
+    7| 
+
+/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/comments/_form.ejs:16
+    14|       <label for="body" class="form-label">
+    15|         <div class="mb-2 fw-bold">Body</div>
+ >> 16|         <input type="TEXT" value="<%= comment.body %>"
+    17|         name="body" class="form-control form-control" id="body"
+    18|         placeholder="Enter Body" autocomplete="off">
+    19|       </label>
+
+comment is not defined
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/comments/_form.ejs":23:26)
+    at _form (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at include (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:701:39)
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/comments/new.ejs":13:17)
+    at new (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:274:36)
+    at exports.renderFile [as engine] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/view.js:135:8)
+    at tryRender (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/application.js:657:10)
+    at Function.render (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/application.js:609:3)
+[INFO] [15/03/2023, 23:05:37]: Redirected 302 Found in 20.76 ms
+[INFO] [15/03/2023, 23:06:27]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:06:27]: Server started on port 3000
+[INFO] [15/03/2023, 23:06:27]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:06:35]: Started GET "/comments/" at 15/03/2023, 23:06:35
+[QUERY] [15/03/2023, 23:06:35]: SELECT * FROM comments ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:06:35]: Success 200 OK in 31.02 ms
+[INFO] [15/03/2023, 23:06:38]: Started GET "/comments/new" at 15/03/2023, 23:06:38
+[QUERY] [15/03/2023, 23:06:38]: SELECT * FROM blogs ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:06:38]: Success 200 OK in 18.25 ms
+[INFO] [15/03/2023, 23:06:41]: Started GET "/comments/" at 15/03/2023, 23:06:41
+[QUERY] [15/03/2023, 23:06:41]: SELECT * FROM comments ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:06:41]: Success 200 OK in 12.07 ms
+[INFO] [15/03/2023, 23:06:42]: Started GET "/comments/new" at 15/03/2023, 23:06:42
+[QUERY] [15/03/2023, 23:06:42]: SELECT * FROM blogs ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:06:42]: Success 200 OK in 12.98 ms

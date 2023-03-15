@@ -1,6 +1,7 @@
 import { Router } from "express";
 import Comment from "../models/Comment.js";
 import csrf from "../bin/middleware/csrf.js";
+import Blog from "../models/Blog.js";
 const comments = Router();
 
 comments.use(csrf());
@@ -14,7 +15,9 @@ comments.get("/", async (req, res) => {
 
 comments.get("/new", async (req, res) => {
   try {
-    return res.render("comments/new");
+    const blogs = await Blog.all();
+    const comment = new Comment();
+    return res.render("comments/new", { comment, blogs });
   } catch (e) {
     req.flash("error", e.message);
     return res.redirect("/comments");
@@ -24,7 +27,8 @@ comments.get("/new", async (req, res) => {
 comments.get("/edit/:id", async (req, res) => {
   try {
     const comment = await Comment.find(req.params.id);
-    return res.render("comments/edit", { comment });
+    const blogs = await Blog.all();
+    return res.render("comments/edit", { comment, blogs });
   } catch (e) {
     req.flash("error", e.message);
   }

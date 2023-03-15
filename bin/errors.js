@@ -11,12 +11,14 @@ class ApplicationError extends Error {
 export class NotFoundError extends ApplicationError {
   constructor() {
     super(...arguments);
+    this.status = 404;
   }
 }
 
 export class UnauthorizedRequestError extends ApplicationError {
   constructor() {
     super(...arguments);
+    this.status = 401;
   }
 }
 
@@ -27,6 +29,7 @@ export class InvalidDataTypeError extends ApplicationError {
       "Available column types are:",
       Object.keys(SQLColumnTypes).join(", ")
     );
+    this.status = 400;
   }
 }
 

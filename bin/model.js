@@ -66,7 +66,7 @@ class Model {
   }
 
   /**
-   * 
+   *
    * @returns The first item in the table
    */
   static async first() {
@@ -75,7 +75,7 @@ class Model {
   }
 
   /**
-   * 
+   *
    * @returns The last item in the table
    */
   static async last() {
@@ -84,8 +84,8 @@ class Model {
   }
 
   /**
-   * 
-   * @param {integer} id 
+   *
+   * @param {integer} id
    * @returns A single item with the specified id
    */
   static async find(id) {
@@ -95,17 +95,17 @@ class Model {
 
   /**
    * @description Query the model using an object, e.g. { id: 1, name: 'Tim' }
-   * @param {Object} obj 
+   * @param {Object} obj
    * @returns A single row or an empty object
    */
   static async findBy(obj) {
     const result = await this.where(obj);
-    return result.length > 0 ? result.first() : {};
+    return result.length > 0 ? result.first() : null;
   }
 
   /**
    * @description Searches the model's table for the specified searchTerm
-   * @param {string} searchTerm 
+   * @param {string} searchTerm
    * @returns A list of rows
    */
   static async search(searchTerm) {
@@ -121,7 +121,7 @@ class Model {
 
   /**
    * @description Checks if a row exists given the specified conditions in the obj, e.g. { id: 1, name: 'Tim' }
-   * @param {Object} obj 
+   * @param {Object} obj
    * @returns Boolean
    */
   static async exists(obj) {
@@ -147,9 +147,9 @@ class Model {
 
   /**
    * @description Updates a row in the model's database given and id and columns as object, e.g. { id: 1, name: 'Tim' }
-   * @param {integer} id 
-   * @param {Object} object 
-   * @returns 
+   * @param {integer} id
+   * @param {Object} object
+   * @returns
    */
   static async update(id, object) {
     const sanitizedObject = sanitizeObject(
@@ -165,7 +165,7 @@ class Model {
 
   /**
    * @description Query the model's table using an object, e.g. { id: 1, name: 'Tim' }
-   * @param {Object} obj 
+   * @param {Object} obj
    * @returns A list of rows that matches the conditions { id: 1, name: 'Tim' }
    */
   static async where(obj) {
@@ -178,7 +178,7 @@ class Model {
 
   /**
    * @description Deletes a row from the model's table
-   * @param {integer} id 
+   * @param {integer} id
    * @returns The deleted row
    */
   static async delete(id) {
@@ -219,9 +219,9 @@ class Model {
 
   /**
    * @description Runs an SQL query on the model's table
-   * @param {string} query 
-   * @param {Array<string>} values 
-   * @param {Boolean} singular 
+   * @param {string} query
+   * @param {Array<string>} values
+   * @param {Boolean} singular
    * @returns The result of the SQL query
    */
   static dbQuery(query, values = [], singular = false) {
@@ -234,9 +234,8 @@ class Model {
           return reject(err);
         }
         const result = rows.map((row) => new _Model(row));
-
         return singular
-          ? resolve(result.length > 0 ? result.first() : {})
+          ? resolve(result.length ? result.first() : {})
           : resolve(result);
       });
     });

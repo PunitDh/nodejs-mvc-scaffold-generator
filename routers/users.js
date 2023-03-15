@@ -9,7 +9,7 @@ const users = Router();
 
 users.get("/", authenticated, async (req, res) => {
   try {
-    const users = (await User.all()).map((user) => user.exclude("password"));
+    const users = (await User.all()).map((user) => user?.exclude("password"));
     return res.render("users/index", { users });
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
@@ -25,13 +25,14 @@ users.get("/register", async (_, res) => {
   }
 });
 
-users.get("/edit/:id", async (req, res) => {
+users.get("/edit/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
-    const { password, ...user } = (await User.find(id)).exclude("password");
+    const { password, ...user } = (await User.find(id))?.exclude("password");
     return res.render("users/edit", { user });
   } catch (e) {
-    return res.status(400).send(e.message);
+    e.status = 404;
+    next(e);
   }
 });
 
@@ -127,13 +128,15 @@ users.post("/delete/:id", async (req, res) => {
   }
 });
 
-users.get("/:id", async (req, res) => {
-  const { id } = req.params;
+users.get("/:id", async (req, res, next) => {
   try {
-    const user = (await User.find(id)).exclude("password", "_csrf_token");
+    const user = (await User.find(req.params.id)).exclude(
+      "password",
+      "_csrf_token"
+    );
     return res.status(200).render("users/user", { user });
   } catch (e) {
-    return res.status(400).send(e.message);
+    next(e);
   }
 });
 

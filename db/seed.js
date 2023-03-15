@@ -3,10 +3,7 @@ import "../bin/utils/js_utils.js";
 import Animal from "../models/Animal.js";
 import { faker } from "@faker-js/faker";
 import { LoremIpsum } from "lorem-ipsum";
-import {
-  CollectionOf,
-  RandomCollectionOf,
-} from "../bin/domain/ObjectCollection.js";
+import { RandomCollectionOf } from "../bin/domain/ObjectCollection.js";
 import Blog from "../models/Blog.js";
 import Comment from "../models/Comment.js";
 import Company from "../models/Company.js";
@@ -15,38 +12,38 @@ import { hashed } from "../bin/utils/bcrypt.js";
 import { generateCsrfToken } from "../bin/utils/token_generator.js";
 
 const lorem = new LoremIpsum();
-const maxInts = 10;
+const maxCount = 10;
 
-const animals = RandomCollectionOf(maxInts, Animal).withProps({
+const animals = RandomCollectionOf(maxCount, Animal).withProps({
   name: () => faker.animal.type().capitalize(),
   color: () => faker.color.human().capitalize(),
 });
-// .save();
+// .saveAll();
 
-const blogs = RandomCollectionOf(maxInts, Blog).withProps({
+const blogs = RandomCollectionOf(maxCount, Blog).withProps({
   title: () => lorem.generateWords(3).capitalize(),
   body: () => lorem.generateSentences(5),
 });
-// .save();
+// .saveAll();
 
 const blogIds = (await Blog.all()).map((blog) => blog.id);
 
-const comments = RandomCollectionOf(maxInts, Comment).withProps({
+const comments = RandomCollectionOf(maxCount, Comment).withProps({
   blog_id: () => randomChoice(blogIds),
   body: () => lorem.generateSentences(1),
 });
-// .save();
+// .saveAll();
 
-const companies = RandomCollectionOf(maxInts, Company).withProps({
+const companies = RandomCollectionOf(maxCount, Company).withProps({
   name: () => faker.company.name().capitalize(),
   address: () =>
     `${faker.address.streetAddress()}, ${faker.address.city()}, ${faker.address.state()}, ${faker.address.zipCode()}`,
   number_of_employees: () => randomInteger(5, 150),
 });
 
-// .save();
+// .saveAll();
 
-const users = RandomCollectionOf(maxInts, User).withProps(() => {
+const users = RandomCollectionOf(maxCount, User).withProps(() => {
   const first_name = () => faker.name.firstName();
   const last_name = () => faker.name.lastName();
   return {
@@ -57,6 +54,6 @@ const users = RandomCollectionOf(maxInts, User).withProps(() => {
     _csrf_token: () => generateCsrfToken(),
   };
 });
-// .save();
+// .saveAll();
 
 console.log(animals, blogs, blogIds, comments, companies, users);

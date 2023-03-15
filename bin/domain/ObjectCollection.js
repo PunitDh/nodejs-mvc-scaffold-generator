@@ -8,12 +8,23 @@ class ObjectCollection {
     this.Model = Model;
   }
 
-  async save() {
+  /**
+   * Saves all models to the database
+   * @returns Saved instances as promises
+   */
+  async saveAll() {
     return this.instances.mapAsync((instance) => instance.save());
   }
 
-  withProps(object) {
-    const resultObj = typeof object === "function" ? object() : object;
+  /**
+   * Applies props to the given object class
+   * The propsObject must have the exact column signature as the defined model
+   * @param {object} propsObject
+   * @returns
+   */
+  withProps(propsObject) {
+    const resultObj =
+      typeof propsObject === "function" ? propsObject() : propsObject;
     Array(this.count)
       .fill(null)
       .map(() => {
@@ -27,10 +38,22 @@ class ObjectCollection {
   }
 }
 
-export function CollectionOf(count, Model) {
-  return new ObjectCollection(count, Model);
+/**
+ * When applied with .withProps(), returns a number of specified objects with the prop values
+ * @param {integer} count
+ * @param {Class} ModelClass
+ * @returns ObjectCollection
+ */
+export function CollectionOf(count, ModelClass) {
+  return new ObjectCollection(count, ModelClass);
 }
 
-export function RandomCollectionOf(count, Model) {
-  return new ObjectCollection(randomInteger(1, count), Model);
+/**
+ * When applied with .withProps(), returns a random number of specified objects with the prop values
+ * @param {integer} maxCount
+ * @param {Class} ModelClass
+ * @returns
+ */
+export function RandomCollectionOf(maxCount, ModelClass) {
+  return new ObjectCollection(randomInteger(1, maxCount), ModelClass);
 }

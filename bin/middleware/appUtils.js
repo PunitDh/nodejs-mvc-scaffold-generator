@@ -36,7 +36,7 @@ export default function () {
     res.locals.__host__ = `${req.protocol}://${req.headers.host}`;
     res.locals.stringify = JSON.stringify;
     res.locals.LayoutPages = LayoutPages;
-    res.locals.referer = req.headers.referer;
+    res.locals.referer = req.query.referer;
     next();
   };
 }

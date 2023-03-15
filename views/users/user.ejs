@@ -1,0 +1,42 @@
+<%- include('./_head.ejs') %>
+<div class="container mt-4">
+  <h1>User</h1>
+  <table class="w-50 my-4">
+    <tbody>
+      <tr>
+        <td class="h6">First Name</td>
+        <td><%= user.first_name %></td>
+      </tr>
+      <tr>
+        <td class="h6">Last Name</td>
+        <td><%= user.last_name %></td>
+      </tr>
+      <tr>
+        <td class="h6">Title</td>
+        <td><%= user.email %></td>
+      </tr>
+      <tr>
+        <td class="h6">Created At</td>
+        <td><%= formatDate(user.created_at) %></td>
+      </tr>
+      <tr>
+        <td class="h6">Updated At</td>
+        <td><%= formatDate(user.updated_at) %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="form-group mb-2">
+    <div class="d-flex align-items-center" style="gap: 1rem">
+      <a href="/users/edit/<%= user.id %>" class="btn btn-primary"
+        >Edit user</a
+      >
+      <form action="/users/delete/<%= user.id %>" method="POST">
+        <%- include(locals.LayoutPages._csrf) %>
+        <button type="submit" class="btn btn-danger">Delete User</button>
+      </form>
+      <a href="<%= locals.referer || "/users" %>" class="btn btn-danger">Back</a>
+    </div>
+  </div>
+</div>
+<%- include('../_layouts/_tail.ejs') %>

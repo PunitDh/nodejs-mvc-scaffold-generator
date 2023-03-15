@@ -6,7 +6,7 @@
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
-      <th colspan="2">Actions</th>
+      <th colspan="3">Actions</th>
     </thead>
     <tbody>
       <% for (const it of users) { %>
@@ -14,6 +14,7 @@
         <td><%= it.first_name %></td>
         <td><%= it.last_name %></td>
         <td><%= it.email %></td>
+        <td><a href="/users/<%= it.id %>" class="btn btn-primary">Show</a></td>
         <td>
           <a href="/users/edit/<%= it.id %>" class="btn btn-success">Edit</a>
         </td>

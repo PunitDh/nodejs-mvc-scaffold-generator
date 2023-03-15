@@ -5,10 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "setup": "chmod u+x ./bin/setup.sh && ./bin/setup.sh",
+    "setup": "chmod u+x ./bin/generators/setup.sh && ./bin/generators/setup.sh",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "db:migrate": "chmod u+x ./bin/db_migrate.sh && ./bin/db_migrate.sh",
+    "db:migrate": "chmod u+x ./bin/generators/db_migrate.sh && ./bin/generators/db_migrate.sh",
     "model:generate": "node ./bin/generators/model_generator.js",
     "router:generate": "node ./bin/generators/router_generator.js",
     "views:generate": "node ./bin/generators/views_generator.js",

@@ -27013,3 +27013,93 @@ COMMIT;
 [INFO] [15/03/2023, 5:12:17 pm]: Successfully connected to database: 'database.db'
 [INFO] [15/03/2023, 5:12:17 pm]: Server started on port 3000
 [INFO] [15/03/2023, 5:12:17 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:14:53 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:14:53 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:14:53 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:14:56 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:14:56 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:14:56 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:14:58 pm]: Started GET "/users/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 5:14:58 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [15/03/2023, 5:14:58 pm]: Completed 200
+[QUERY] [15/03/2023, 5:14:58 pm]: SELECT * FROM users;
+[INFO] [15/03/2023, 5:14:58 pm]: Completed 304 Not Modified in 22.34 ms
+[INFO] [15/03/2023, 5:15:00 pm]: Started GET "/users/2" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 5:15:00 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [15/03/2023, 5:15:00 pm]: Completed 200
+[INFO] [15/03/2023, 5:15:00 pm]: Completed 200 OK in 7.38 ms
+[INFO] [15/03/2023, 5:15:18 pm]: Started POST "/users/delete/2" at Wed Mar 15 2023
+[INFO] [15/03/2023, 5:15:18 pm]: Completed 302
+[INFO] [15/03/2023, 5:15:18 pm]: Completed 302 Found in 3.97 ms
+[INFO] [15/03/2023, 5:15:18 pm]: Started GET "/users/2" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 5:15:18 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [15/03/2023, 5:15:18 pm]: Completed 200
+[INFO] [15/03/2023, 5:15:18 pm]: Completed 200 OK in 5.22 ms
+[INFO] [15/03/2023, 5:15:28 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:15:28 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:15:28 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:15:43 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:15:43 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:15:43 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:15:57 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:15:57 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:15:57 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:16:00 pm]: Started GET "/users/2" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 5:16:01 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [15/03/2023, 5:16:01 pm]: Completed 200 OK in 20.77 ms
+[INFO] [15/03/2023, 5:16:29 pm]: Started POST "/users/delete/2" at Wed Mar 15 2023
+[INFO] [15/03/2023, 5:16:29 pm]: Completed 302 Found in 4.04 ms
+[INFO] [15/03/2023, 5:16:29 pm]: Started GET "/users/2" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 5:16:29 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [15/03/2023, 5:16:29 pm]: Completed 200 OK in 5.84 ms
+[INFO] [15/03/2023, 5:21:33 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:21:33 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:21:33 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:21:51 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:21:51 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:21:51 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:21:54 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:21:54 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:21:54 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:21:57 pm]: Started GET "/users/2" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 5:21:57 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [15/03/2023, 5:21:57 pm]: Success 200 OK in 17.66 ms
+[INFO] [15/03/2023, 5:22:07 pm]: Started POST "/users/delete/2" at Wed Mar 15 2023
+[INFO] [15/03/2023, 5:22:07 pm]: Redirected 302 Found in 3.39 ms
+[INFO] [15/03/2023, 5:22:07 pm]: Started GET "/users/2" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 5:22:07 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [15/03/2023, 5:22:07 pm]: Success 200 OK in 6.22 ms
+[INFO] [15/03/2023, 5:22:28 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:22:28 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:22:28 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:22:29 pm]: Started POST "/users/delete/2" at 15/03/2023, 5:22:29 pm
+[INFO] [15/03/2023, 5:22:29 pm]: Redirected 302 Found in 5.36 ms
+[INFO] [15/03/2023, 5:22:29 pm]: Started GET "/users/2" at 15/03/2023, 5:22:29 pm
+[QUERY] [15/03/2023, 5:22:29 pm]: SELECT * FROM users WHERE id=$id;
+[INFO] [15/03/2023, 5:22:29 pm]: Redirected 304 Not Modified in 12.25 ms
+[INFO] [15/03/2023, 5:22:45 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:22:45 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:22:45 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:22:49 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:22:49 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:22:49 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:22:57 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:22:57 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:22:57 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:23:01 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:23:01 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:23:01 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:23:05 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 5:23:05 pm]: Server started on port 3000
+[INFO] [15/03/2023, 5:23:05 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 5:23:57 pm]: Started GET "/users/" at 15/03/2023, 5:23:57 pm
+[QUERY] [15/03/2023, 5:23:57 pm]: SELECT * FROM users WHERE id=$id;
+[QUERY] [15/03/2023, 5:23:57 pm]: SELECT * FROM users;
+[INFO] [15/03/2023, 5:23:57 pm]: Success 200 OK in 18.43 ms
+[INFO] [15/03/2023, 5:24:03 pm]: Started GET "/comments/" at 15/03/2023, 5:24:03 pm
+[QUERY] [15/03/2023, 5:24:03 pm]: SELECT * FROM comments;
+[INFO] [15/03/2023, 5:24:03 pm]: Success 200 OK in 7.19 ms
+[INFO] [15/03/2023, 5:24:06 pm]: Started GET "/users/" at 15/03/2023, 5:24:06 pm
+[QUERY] [15/03/2023, 5:24:06 pm]: SELECT * FROM users WHERE id=$id;
+[QUERY] [15/03/2023, 5:24:06 pm]: SELECT * FROM users;
+[INFO] [15/03/2023, 5:24:06 pm]: Redirected 304 Not Modified in 4.22 ms

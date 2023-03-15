@@ -28,4 +28,4 @@
     </div>
   </div>
 </div>
-<%- include('../_layouts/_tail.ejs') %>
+<%- include(locals.LayoutPages._tail) %>

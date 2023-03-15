@@ -115,7 +115,6 @@ users.post("/logout", async (req, res) => {
 
 users.post("/delete/:id", async (req, res) => {
   try {
-    console.log(res.locals.currentUser);
     if (res.locals.currentUser !== req.params.id) {
       req.flash(Flash.ERROR, "You are not authorized to perform this action");
       return res.status(403).redirect(req.headers.referer);

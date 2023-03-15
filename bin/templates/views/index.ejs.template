@@ -35,4 +35,4 @@
     </table>
     <a href="/{{router}}/new" class="btn btn-primary">New {{Model}}</a>
   </div>
-  <%- include('../_layouts/_tail.ejs') %>
+  <%- include(locals.LayoutPages._tail) %>

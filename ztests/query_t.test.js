@@ -60,19 +60,7 @@ class SQLQueryBuilder {
   }
 
   where() {
-    this.where = {
-      columns: [],
-      vals: [],
-    };
-    [...arguments].forEach((argument) => {
-      if (typeof argument === "object") {
-        this.where.columns = Object.keys(arguments[0]);
-        this.where.vals = Object.values(arguments[0]);
-      } else if (typeof argument === "string" || argument instanceof String) {
-        this.where.columns.push(argument.split("=")[0]);
-        this.where.vals.push(argument.split("=")[1]);
-      }
-    });
+    this.where = [...arguments];
     return this;
   }
 
@@ -80,9 +68,8 @@ class SQLQueryBuilder {
     return this.delete().from(table);
   }
 
-  set(obj) {
-    this.columns = Object.keys(obj);
-    this.vals = Object.values(obj);
+  set() {
+    this.columns = [...arguments];
     return this;
   }
 
@@ -94,9 +81,8 @@ class SQLQueryBuilder {
     return this;
   }
 
-  values(obj) {
-    this.columns = Object.keys(obj);
-    this.vals = Object.values(obj);
+  values() {
+    this.vals = [...arguments];
     return this;
   }
 
@@ -115,12 +101,9 @@ class SQLQueryBuilder {
   }
 
   build() {
-    const whereClause =
-      this.where.columns?.length && this.where.vals?.length
-        ? ` WHERE ${this.where.columns
-            .map((col, i) => `${col}='${this.where.vals[i]}'`)
-            .join(" AND ")}`
-        : "";
+    const whereClause = this.where?.length
+      ? ` WHERE ${this.where.map((col) => `${col}=$${col}`).join(" AND ")}`
+      : "";
     const returningClause = this.returningValue
       ? ` RETURNING ${this.returningValue.join(", ")}`
       : "";
@@ -128,9 +111,7 @@ class SQLQueryBuilder {
     const valueMap = this.vals?.map((val) => `'${val}'`);
     const setClause =
       valueMap &&
-      ` SET ${this.columns
-        .map((col, i) => `${col}=${valueMap[i]}`)
-        .join(", ")}`;
+      ` SET ${this.columns?.map((col) => `${col}=$${col}`).join(", ")}`;
     const limitClause = this.lim ? ` LIMIT ${this.lim}` : "";
     const orderBy = this.order?.columns
       .map((column, i) => `${column} ${this.order.type[i]}`)
@@ -147,7 +128,7 @@ class SQLQueryBuilder {
       setClause,
       limitClause,
       values,
-      orderClause
+      orderClause,
     });
 
     switch (this.action) {
@@ -168,7 +149,7 @@ class SQLQueryBuilder {
 const select = new SQLQueryBuilder()
   .select("*")
   .from("animals")
-  .where({ id: 1, name: "cat" })
+  .where("id", "name")
   .limit(25)
   .orderBy({ id: "ASC", name: "DESC" })
   .build();
@@ -176,28 +157,28 @@ const select = new SQLQueryBuilder()
 const insert = new SQLQueryBuilder()
   .insert()
   .into("animals")
-  .values({ name: "cat", legs: 4 })
+  .values("name", "legs")
   .returning("*")
   .build();
 
 const update = new SQLQueryBuilder()
   .update("animals")
-  .set({ name: "mouse" })
-  .where({ id: 2 })
+  .set("name", "legs")
+  .where("id")
   .returning("*")
   .build();
 
 const del = new SQLQueryBuilder()
   .delete()
   .from("animals")
-  .where({ id: 2 })
+  .where("id")
   .returning("*")
   .build();
 
 const test = new SQLQueryBuilder()
   .update("animals")
-  .set({ id: 1 })
-  .where({ id: 1 })
+  .set("id")
+  .where("id")
   .build();
 
 console.log(select, insert, update, del, test);

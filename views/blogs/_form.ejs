@@ -1,18 +1,31 @@
-<% if (page === "Create") { %>
-<form action="/blogs %>" method="POST">
-<% } else { %>
-<form action="/blogs/edit/<%= blog.id %>" method="POST">
-<% } %>
+<form method="POST">
   <div class="form-group d-flex row mb-2">
     <label for="title" class="form-label">
-      <div class="mb-2">Title</div>
-      <input type="TEXT" value="<%= page === "Create" ? '' : blog.title %>" name="title"  class="form-control form-control" id="title" placeholder="Enter Title" autocomplete="off">
+      <div class="mb-2 fw-bold">Title</div>
+      <input
+        type="TEXT"
+        value="<%= blog.title %>"
+        name="title"
+        class="form-control form-control"
+        id="title"
+        placeholder="Enter Title"
+        autocomplete="off"
+      />
     </label>
   </div>
   <div class="form-group d-flex row mb-2">
     <label for="body" class="form-label">
-      <div class="mb-2">Body</div>
-      <input type="TEXT" value="<%= page === "Create" ? '' : blog.body %>" name="body"  class="form-control form-control" id="body" placeholder="Enter Body" autocomplete="off">
+      <div class="mb-2 fw-bold">Body</div>
+      <textarea
+        name="body"
+        class="form-control form-control"
+        id="body"
+        cols="30"
+        rows="10"
+        placeholder="Enter Body"
+      >
+<%= blog.body %></textarea
+      >
     </label>
   </div>
   <div class="form-group mb-2">

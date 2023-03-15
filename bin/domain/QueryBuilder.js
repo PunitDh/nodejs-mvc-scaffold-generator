@@ -1,3 +1,5 @@
+import "../utils/js_utils.js";
+
 const QueryAction = {
   SELECT: "SELECT",
   INSERT: "INSERT INTO",
@@ -5,12 +7,7 @@ const QueryAction = {
   DELETE: "DELETE FROM",
 };
 
-("SELECT * FROM animals where id=$id LIMIT 25");
-("INSERT INTO animals (name, legs) VALUES ($name, $legs) RETURNING *");
-("UPDATE animals SET name=$name, legs=$legs WHERE id=$id");
-("DELETE FROM animals where id=id");
-
-function QueryBuilder() {
+export function QueryBuilder() {
   return new SQLQueryBuilder();
 }
 
@@ -69,8 +66,8 @@ class SQLQueryBuilder {
         this.where.columns = Object.keys(arguments[0]);
         this.where.vals = Object.values(arguments[0]);
       } else if (typeof argument === "string" || argument instanceof String) {
-        this.where.columns.push(argument.split("=")[0]);
-        this.where.vals.push(argument.split("=")[1]);
+        this.where.columns.push(argument.split("=").first());
+        this.where.vals.push(argument.split("=").second());
       }
     });
     return this;
@@ -147,7 +144,7 @@ class SQLQueryBuilder {
       setClause,
       limitClause,
       values,
-      orderClause
+      orderClause,
     });
 
     switch (this.action) {
@@ -164,40 +161,3 @@ class SQLQueryBuilder {
     }
   }
 }
-
-const select = new SQLQueryBuilder()
-  .select("*")
-  .from("animals")
-  .where({ id: 1, name: "cat" })
-  .limit(25)
-  .orderBy({ id: "ASC", name: "DESC" })
-  .build();
-
-const insert = new SQLQueryBuilder()
-  .insert()
-  .into("animals")
-  .values({ name: "cat", legs: 4 })
-  .returning("*")
-  .build();
-
-const update = new SQLQueryBuilder()
-  .update("animals")
-  .set({ name: "mouse" })
-  .where({ id: 2 })
-  .returning("*")
-  .build();
-
-const del = new SQLQueryBuilder()
-  .delete()
-  .from("animals")
-  .where({ id: 2 })
-  .returning("*")
-  .build();
-
-const test = new SQLQueryBuilder()
-  .update("animals")
-  .set({ id: 1 })
-  .where({ id: 1 })
-  .build();
-
-console.log(select, insert, update, del, test);

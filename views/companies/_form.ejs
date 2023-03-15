@@ -1,20 +1,44 @@
 <form action="/companies<%= action %>" method="POST">
   <div class="form-group d-flex row mb-2">
     <label for="name" class="form-label">
-      <div class="mb-2">Name</div>
-      <input type="TEXT" value="<%= company.name %>" name="name"  class="form-control form-control" id="name" placeholder="Enter Name" autocomplete="off">
+      <div class="mb-2 fw-bold">Name</div>
+      <input
+        type="TEXT"
+        value="<%= company.name %>"
+        name="name"
+        class="form-control form-control"
+        id="name"
+        placeholder="Enter Name"
+        autocomplete="off"
+      />
     </label>
   </div>
   <div class="form-group d-flex row mb-2">
     <label for="address" class="form-label">
-      <div class="mb-2">Address</div>
-      <input type="TEXT" value="<%= company.address %>" name="address"  class="form-control form-control" id="address" placeholder="Enter Address" autocomplete="off">
+      <div class="mb-2 fw-bold">Address</div>
+      <input
+        type="TEXT"
+        value="<%= company.address %>"
+        name="address"
+        class="form-control form-control"
+        id="address"
+        placeholder="Enter Address"
+        autocomplete="off"
+      />
     </label>
   </div>
   <div class="form-group d-flex row mb-2">
     <label for="number_of_employees" class="form-label">
-      <div class="mb-2">Number Of Employees</div>
-      <input type="NUMERIC" value="<%= company.number_of_employees %>" name="number_of_employees"  class="form-control form-control" id="number_of_employees" placeholder="Enter Number Of Employees" autocomplete="off">
+      <div class="mb-2 fw-bold">Number Of Employees</div>
+      <input
+        type="NUMERIC"
+        value="<%= company.number_of_employees %>"
+        name="number_of_employees"
+        class="form-control form-control"
+        id="number_of_employees"
+        placeholder="Enter Number Of Employees"
+        autocomplete="off"
+      />
     </label>
   </div>
   <div class="form-group mb-2">

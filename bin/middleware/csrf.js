@@ -1,12 +1,11 @@
 import { Flash } from "../constants.js";
-import { UnauthorizedRequestError } from "../errors.js";
-import crypto from "crypto";
+import { generateCsrfToken } from "../utils/token_generator.js";
 
 export default function (active = true) {
   return (req, res, next) => {
     if (active) {
       if (req.method.toUpperCase() === "GET") {
-        req.session._csrf_token = crypto.randomBytes(100).toString("base64");
+        req.session._csrf_token = generateCsrfToken();
         res.locals._csrf_token = req.session._csrf_token;
         return next();
       } else if (req.method.toUpperCase() === "POST") {

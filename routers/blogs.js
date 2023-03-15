@@ -66,7 +66,7 @@ blogs.get("/:id", async (req, res) => {
   }
 });
 
-blogs.post("/", async (req, res) => {
+blogs.post("/new", async (req, res) => {
   try {
     await Blog.create(req.body);
     req.flash("success", "Blog has been added");

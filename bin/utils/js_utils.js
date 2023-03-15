@@ -2,6 +2,10 @@ Array.prototype.first = function () {
   return this[0];
 };
 
+Array.prototype.second = function () {
+  return this[1];
+};
+
 Array.prototype.last = function () {
   return this[this.length - 1];
 };
@@ -34,7 +38,7 @@ Array.prototype.exclude = function () {
 };
 
 String.prototype.capitalize = function () {
-  return this.split("_")
+  return this.split(/_| /)
     .map((part) => part[0]?.toUpperCase() + part.slice(1))
     .join(" ");
 };

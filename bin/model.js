@@ -3,11 +3,7 @@ import LOGGER from "./logger.js";
 import SQLiteColumn from "./domain/SQLiteColumn.js";
 import { ReadOnlyColumns, SearchExcludedColumns } from "./constants.js";
 import SQLiteTable from "./domain/SQLiteTable.js";
-import {
-  Query,
-  getTableNameFromModel,
-  sanitizeObject,
-} from "./utils/model_utils.js";
+import { getTableNameFromModel, sanitizeObject } from "./utils/model_utils.js";
 import "./utils/js_utils.js";
 import { QueryBuilder } from "./domain/QueryBuilder.js";
 
@@ -62,10 +58,6 @@ class Model {
    * @returns List of rows
    */
   static async all() {
-    // const query = Query.SELECT({
-    //   table: this.__tablename__,
-    //   order: { column: "updated_at", type: "desc" },
-    // });
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
@@ -79,7 +71,6 @@ class Model {
    * @returns The first item in the table
    */
   static async first() {
-    // const query = Query.SELECT({ table: this.__tablename__, limit: 1 });
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
@@ -103,7 +94,6 @@ class Model {
    * @returns A single item with the specified id
    */
   static async find(id) {
-    // const query = Query.SELECT({ table: this.__tablename__, where: ["id"] });
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
@@ -157,10 +147,6 @@ class Model {
     const sanitizedObject = sanitizeObject(
       new this.prototype.constructor(object)
     );
-    // const query = Query.INSERT({
-    //   table: this.__tablename__,
-    //   columns: Object.keys(sanitizedObject),
-    // });
     const query = QueryBuilder()
       .insert()
       .into(this.__tablename__)
@@ -180,10 +166,6 @@ class Model {
       new this.prototype.constructor(object)
     );
     const values = [...Object.values(sanitizedObject), id];
-    // const query = Query.UPDATE({
-    //   table: this.__tablename__,
-    //   columns: Object.keys(sanitizedObject),
-    // });
     const query = QueryBuilder()
       .update(this.__tablename__)
       .set(Object.keys(sanitizedObject))
@@ -199,10 +181,6 @@ class Model {
    */
   static async where(obj) {
     const sanitizedObject = sanitizeObject(new this.prototype.constructor(obj));
-    // const query = Query.SELECT({
-    //   table: this.__tablename__,
-    //   where: Object.keys(obj),
-    // });
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
@@ -217,11 +195,11 @@ class Model {
    * @returns The deleted row
    */
   static async delete(id) {
-    // const query = Query.DELETE({ table: this.__tablename__, where: ["id"] });
     const query = QueryBuilder()
       .delete()
       .from(this.__tablename__)
       .where("id")
+      .returning("*")
       .build();
     return await this.dbQuery(query, [id], true);
   }
@@ -247,12 +225,6 @@ class Model {
       .values(columns)
       .returning("*");
 
-    // const query = this.id
-    //   ? Query.UPDATE({
-    //       table: this.constructor.__tablename__,
-    //       columns,
-    //     })
-    //   : Query.INSERT({ table: this.constructor.__tablename__, columns });
     const query = this.id ? updateQuery : insertQuery;
     const values = [...columns.map((column) => this[column]), this.id];
     console.log(values);
@@ -264,10 +236,6 @@ class Model {
    * @returns The deleted row
    */
   async delete() {
-    // const query = Query.DELETE({
-    //   table: this.constructor.__tablename__,
-    //   where: ["id"],
-    // });
     const query = QueryBuilder()
       .delete()
       .from(this.constructor.__tablename__)

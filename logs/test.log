@@ -26425,3 +26425,195 @@ COMMIT;
 [INFO] [15/03/2023, 4:47:11 pm]: Started GET "/companies/" at Wed Mar 15 2023
 [QUERY] [15/03/2023, 4:47:11 pm]: SELECT * FROM companies;
 [INFO] [15/03/2023, 4:47:11 pm]: Completed 200 OK in 3.54 ms
+[INFO] [15/03/2023, 4:48:15 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 4:48:15 pm]: Server started on port 3000
+[INFO] [15/03/2023, 4:48:15 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 4:51:58 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 4:51:58 pm]: Server started on port 3000
+[INFO] [15/03/2023, 4:51:58 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 4:52:01 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 4:52:01 pm]: Server started on port 3000
+[INFO] [15/03/2023, 4:52:01 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 4:52:21 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 4:52:21 pm]: Server started on port 3000
+[INFO] [15/03/2023, 4:52:21 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 4:53:00 pm]: Started GET "/companies/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:53:00 pm]: SELECT * FROM companies;
+[INFO] [15/03/2023, 4:53:00 pm]: Completed 304 Not Modified in 22.59 ms
+[INFO] [15/03/2023, 4:53:03 pm]: Started GET "/companies/new" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:53:03 pm]: Completed 200 OK in 5.7 ms
+[INFO] [15/03/2023, 4:53:06 pm]: Started POST "/companies/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:53:06 pm]: INSERT INTO companies (name, address, number_of_employees, created_at, updated_at) VALUES ($name, $address, $number_of_employees, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [15/03/2023, 4:53:06 pm]: Completed 302 Found in 6.02 ms
+[INFO] [15/03/2023, 4:53:06 pm]: Started GET "/companies/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:53:06 pm]: SELECT * FROM companies;
+[INFO] [15/03/2023, 4:53:06 pm]: Completed 200 OK in 3.16 ms
+[INFO] [15/03/2023, 4:53:08 pm]: Started POST "/companies/delete/6" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:53:08 pm]: DELETE FROM companies WHERE id=$id RETURNING *;
+[INFO] [15/03/2023, 4:53:08 pm]: Completed 302 Found in 19.88 ms
+[INFO] [15/03/2023, 4:53:08 pm]: Started GET "/companies/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:53:08 pm]: SELECT * FROM companies;
+[INFO] [15/03/2023, 4:53:08 pm]: Completed 200 OK in 3.67 ms
+[INFO] [15/03/2023, 4:53:09 pm]: Started GET "/companies/new" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:53:09 pm]: Completed 304 Not Modified in 3.05 ms
+[INFO] [15/03/2023, 4:53:12 pm]: Started POST "/companies/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:53:12 pm]: INSERT INTO companies (name, address, number_of_employees, created_at, updated_at) VALUES ($name, $address, $number_of_employees, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [15/03/2023, 4:53:12 pm]: Completed 302 Found in 16.16 ms
+[INFO] [15/03/2023, 4:53:12 pm]: Started GET "/companies/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:53:12 pm]: SELECT * FROM companies;
+[INFO] [15/03/2023, 4:53:12 pm]: Completed 200 OK in 12.61 ms
+[INFO] [15/03/2023, 4:53:17 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:53:17 pm]: Completed 404 Not Found in 2.23 ms
+[INFO] [15/03/2023, 4:53:17 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:53:17 pm]: Completed 404 Not Found in 1.72 ms
+[INFO] [15/03/2023, 4:54:26 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 4:54:26 pm]: Server started on port 3000
+[INFO] [15/03/2023, 4:54:26 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 4:54:30 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 4:54:31 pm]: Server started on port 3000
+[INFO] [15/03/2023, 4:54:31 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 4:54:43 pm]: Started GET "/animals/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:54:43 pm]: SELECT * FROM animals;
+[INFO] [15/03/2023, 4:54:43 pm]: Completed 200 OK in 28.3 ms
+[INFO] [15/03/2023, 4:54:43 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:54:43 pm]: Completed 404 Not Found in 3.8 ms
+[INFO] [15/03/2023, 4:54:43 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:54:43 pm]: Completed 404 Not Found in 2.62 ms
+[INFO] [15/03/2023, 4:54:45 pm]: Started POST "/animals/delete/12" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:54:45 pm]: DELETE FROM animals WHERE id=$id RETURNING *;
+[INFO] [15/03/2023, 4:54:45 pm]: Completed 302 Found in 4.74 ms
+[INFO] [15/03/2023, 4:54:45 pm]: Started GET "/animals/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:54:45 pm]: SELECT * FROM animals;
+[INFO] [15/03/2023, 4:54:45 pm]: Completed 200 OK in 3.63 ms
+[INFO] [15/03/2023, 4:54:45 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:54:45 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:54:45 pm]: Completed 404 Not Found in 2.03 ms
+[INFO] [15/03/2023, 4:54:48 pm]: Started GET "/animals/edit/11" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:54:48 pm]: SELECT * FROM animals WHERE id=$id;
+[INFO] [15/03/2023, 4:54:48 pm]: Completed 200 OK in 21.66 ms
+[INFO] [15/03/2023, 4:54:48 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:54:48 pm]: Completed 404 Not Found in 1.96 ms
+[INFO] [15/03/2023, 4:54:48 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:54:48 pm]: Completed 404 Not Found in 1.7 ms
+[INFO] [15/03/2023, 4:54:49 pm]: Started POST "/animals/edit/11" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:54:49 pm]: UPDATE animals SET name=$name, color=$color,  updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [15/03/2023, 4:54:49 pm]: Completed 302 Found in 17.3 ms
+[INFO] [15/03/2023, 4:54:49 pm]: Started GET "/animals/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:54:49 pm]: SELECT * FROM animals;
+[INFO] [15/03/2023, 4:54:49 pm]: Completed 200 OK in 8.61 ms
+[INFO] [15/03/2023, 4:54:50 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:54:50 pm]: Completed 404 Not Found in 2.01 ms
+[INFO] [15/03/2023, 4:54:50 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:54:50 pm]: Completed 404 Not Found in 2.37 ms
+[INFO] [15/03/2023, 4:55:41 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 4:55:41 pm]: Server started on port 3000
+[INFO] [15/03/2023, 4:55:41 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 4:55:45 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 4:55:45 pm]: Server started on port 3000
+[INFO] [15/03/2023, 4:55:45 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 4:55:50 pm]: Started GET "/comments/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:55:50 pm]: SELECT * FROM comments;
+[INFO] [15/03/2023, 4:55:50 pm]: Completed 200 OK in 30.3 ms
+[INFO] [15/03/2023, 4:55:50 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:55:50 pm]: Completed 404 Not Found in 3.49 ms
+[INFO] [15/03/2023, 4:55:50 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:55:50 pm]: Completed 404 Not Found in 2.5 ms
+[INFO] [15/03/2023, 4:55:52 pm]: Started GET "/comments/new" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:55:52 pm]: Completed 200 OK in 3.38 ms
+[INFO] [15/03/2023, 4:55:52 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:55:52 pm]: Completed 404 Not Found in 2.67 ms
+[INFO] [15/03/2023, 4:55:52 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:55:52 pm]: Completed 404 Not Found in 1.87 ms
+[INFO] [15/03/2023, 4:55:54 pm]: Started POST "/comments/new" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:55:54 pm]: INSERT INTO comments (blog_id, body, created_at, updated_at) VALUES ($blog_id, $body, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [15/03/2023, 4:55:54 pm]: Completed 302 Found in 14.72 ms
+[INFO] [15/03/2023, 4:55:54 pm]: Started GET "/comments/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:55:54 pm]: SELECT * FROM comments;
+[INFO] [15/03/2023, 4:55:54 pm]: Completed 200 OK in 2.89 ms
+[INFO] [15/03/2023, 4:55:54 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:55:54 pm]: Completed 404 Not Found in 2.29 ms
+[INFO] [15/03/2023, 4:55:54 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:55:54 pm]: Completed 404 Not Found in 2.07 ms
+[INFO] [15/03/2023, 4:55:56 pm]: Started POST "/comments/delete/51" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:55:56 pm]: DELETE FROM comments WHERE id=$id RETURNING *;
+[INFO] [15/03/2023, 4:55:56 pm]: Completed 302 Found in 3.49 ms
+[INFO] [15/03/2023, 4:55:56 pm]: Started GET "/comments/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:55:56 pm]: SELECT * FROM comments;
+[INFO] [15/03/2023, 4:55:56 pm]: Completed 200 OK in 10.35 ms
+[INFO] [15/03/2023, 4:55:56 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:55:56 pm]: Completed 404 Not Found in 13.96 ms
+[INFO] [15/03/2023, 4:55:56 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:55:56 pm]: Completed 404 Not Found in 2.37 ms
+[INFO] [15/03/2023, 4:55:59 pm]: Started POST "/comments/delete/34" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:55:59 pm]: DELETE FROM comments WHERE id=$id RETURNING *;
+[INFO] [15/03/2023, 4:55:59 pm]: Completed 302 Found in 13.61 ms
+[INFO] [15/03/2023, 4:55:59 pm]: Started GET "/comments/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:55:59 pm]: SELECT * FROM comments;
+[INFO] [15/03/2023, 4:55:59 pm]: Completed 200 OK in 1.9 ms
+[INFO] [15/03/2023, 4:55:59 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:55:59 pm]: Completed 404 Not Found in 5.67 ms
+[INFO] [15/03/2023, 4:55:59 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:55:59 pm]: Completed 404 Not Found in 2.04 ms
+[INFO] [15/03/2023, 4:56:00 pm]: Started POST "/comments/delete/19" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:56:00 pm]: DELETE FROM comments WHERE id=$id RETURNING *;
+[INFO] [15/03/2023, 4:56:00 pm]: Completed 302 Found in 18.44 ms
+[INFO] [15/03/2023, 4:56:00 pm]: Started GET "/comments/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:56:00 pm]: SELECT * FROM comments;
+[INFO] [15/03/2023, 4:56:00 pm]: Completed 200 OK in 11.04 ms
+[INFO] [15/03/2023, 4:56:01 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:56:01 pm]: Completed 404 Not Found in 12.3 ms
+[INFO] [15/03/2023, 4:56:01 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:56:01 pm]: Completed 404 Not Found in 2.55 ms
+[INFO] [15/03/2023, 4:56:23 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 4:56:34 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 4:56:34 pm]: Server started on port 3000
+[INFO] [15/03/2023, 4:56:34 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 4:56:35 pm]: Started GET "/comments/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:56:35 pm]: SELECT * FROM comments;
+[INFO] [15/03/2023, 4:56:35 pm]: Completed 200 OK in 22 ms
+[INFO] [15/03/2023, 4:56:35 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:56:35 pm]: Completed 404 Not Found in 3.6 ms
+[INFO] [15/03/2023, 4:56:35 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:56:35 pm]: Completed 404 Not Found in 3.25 ms
+[INFO] [15/03/2023, 4:56:37 pm]: Started GET "/comments/new" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:56:37 pm]: Completed 200 OK in 20.67 ms
+[INFO] [15/03/2023, 4:56:38 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:56:38 pm]: Completed 404 Not Found in 2.52 ms
+[INFO] [15/03/2023, 4:56:38 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:56:38 pm]: Completed 404 Not Found in 1.97 ms
+[INFO] [15/03/2023, 4:56:39 pm]: Started POST "/comments/new" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:56:39 pm]: INSERT INTO comments (blog_id, body, created_at, updated_at) VALUES ($blog_id, $body, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [15/03/2023, 4:56:39 pm]: Completed 302 Found in 5.31 ms
+[INFO] [15/03/2023, 4:56:39 pm]: Started GET "/comments/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:56:39 pm]: SELECT * FROM comments;
+[INFO] [15/03/2023, 4:56:39 pm]: Completed 200 OK in 2.61 ms
+[INFO] [15/03/2023, 4:56:39 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:56:39 pm]: Completed 404 Not Found in 2.73 ms
+[INFO] [15/03/2023, 4:56:39 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:56:39 pm]: Completed 404 Not Found in 3.28 ms
+[INFO] [15/03/2023, 4:56:41 pm]: Started POST "/comments/delete/52" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:56:41 pm]: Completed 302 Found in 6.33 ms
+[INFO] [15/03/2023, 4:56:41 pm]: Started GET "/comments/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:56:41 pm]: SELECT * FROM comments;
+[INFO] [15/03/2023, 4:56:41 pm]: Completed 200 OK in 5.34 ms
+[INFO] [15/03/2023, 4:56:41 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:56:41 pm]: Completed 404 Not Found in 8.03 ms
+[INFO] [15/03/2023, 4:56:41 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:56:41 pm]: Completed 404 Not Found in 8.67 ms
+[INFO] [15/03/2023, 4:57:11 pm]: Started GET "/comments/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:57:11 pm]: SELECT * FROM comments;
+[INFO] [15/03/2023, 4:57:11 pm]: Completed 200 OK in 4.65 ms
+[INFO] [15/03/2023, 4:57:11 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:57:11 pm]: Completed 404 Not Found in 2.14 ms
+[INFO] [15/03/2023, 4:57:11 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:57:11 pm]: Completed 404 Not Found in 2.62 ms
+[INFO] [15/03/2023, 4:57:19 pm]: Started POST "/comments/delete/52" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:57:19 pm]: DELETE FROM comments WHERE id=$id RETURNING *;
+[INFO] [15/03/2023, 4:57:19 pm]: Completed 302 Found in 22.84 ms
+[INFO] [15/03/2023, 4:57:19 pm]: Started GET "/comments/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:57:19 pm]: SELECT * FROM comments;
+[INFO] [15/03/2023, 4:57:19 pm]: Completed 200 OK in 4.04 ms
+[INFO] [15/03/2023, 4:57:20 pm]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:57:20 pm]: Completed 404 Not Found in 1.81 ms
+[INFO] [15/03/2023, 4:57:20 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:57:20 pm]: Completed 404 Not Found in 1.94 ms

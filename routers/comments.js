@@ -1,6 +1,9 @@
 import { Router } from "express";
 import Comment from "../models/Comment.js";
+import csrf from "../bin/middleware/csrf.js";
 const comments = Router();
+
+comments.use(csrf());
 
 comments.get("/", async (req, res) => {
   try {
@@ -57,7 +60,7 @@ comments.get("/:id", async (req, res) => {
   }
 });
 
-comments.post("/", async (req, res) => {
+comments.post("/new", async (req, res) => {
   try {
     await Comment.create(req.body);
     req.flash("success", "Comment has been added");

@@ -22,6 +22,7 @@
           <td><a href="/companies/edit/<%= it.id %>" class="btn btn-success">Edit</a></td>
           <td>
             <form action="/companies/delete/<%= it.id %>" method="POST">
+            <%- include(locals.LayoutPages._csrf) %>
               <button type="submit" class="btn btn-danger">
                 Delete
               </button>

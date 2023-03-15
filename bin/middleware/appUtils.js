@@ -2,8 +2,7 @@ import SETTINGS from "../utils/settings.js";
 import "../utils/js_utils.js";
 import pluralize from "pluralize";
 import JWT from "jsonwebtoken";
-import { resolveInclude } from "ejs";
-import { readFileSync } from "../utils/file_utils.js";
+import { LayoutPages } from "../constants.js";
 
 export default function () {
   return function (req, res, next) {
@@ -36,7 +35,7 @@ export default function () {
     res.locals.pluralize = (text) => pluralize.plural(text);
     res.locals.__host__ = `${req.protocol}://${req.headers.host}`;
     res.locals.stringify = JSON.stringify;
-    res.locals._csrf_field = "../_layouts/partials/_csrf.ejs";
+    res.locals.LayoutPages = LayoutPages;
     res.locals.referer = req.headers.referer;
     next();
   };

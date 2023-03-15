@@ -1,7 +1,10 @@
 import { Router } from "express";
 import Animal from "../models/Animal.js";
 import { Flash } from "../bin/constants.js";
+import csrf from "../bin/middleware/csrf.js";
 const animals = Router();
+
+animals.use(csrf());
 
 animals.get("/", async (req, res) => {
   try {
@@ -23,7 +26,10 @@ animals.get("/new", async (req, res) => {
 animals.get("/edit/:id", async (req, res) => {
   try {
     const animal = await Animal.find(req.params.id);
-    return res.render("animals/edit", { animal, action: `/edit/${req.params.id}` });
+    return res.render("animals/edit", {
+      animal,
+      action: `/edit/${req.params.id}`,
+    });
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
   }

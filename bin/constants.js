@@ -187,3 +187,10 @@ export const Flash = {
 export const MediaType = {
   APPLICATION_JSON: "application/json",
 };
+
+export const LayoutPages = {
+  _csrf: "../_layouts/partials/_csrf.ejs",
+  _head: "../_layouts/_head.ejs",
+  _tail: "../_layouts/_tail.ejs",
+  _mid: "../_layouts/_mid.ejs",
+};

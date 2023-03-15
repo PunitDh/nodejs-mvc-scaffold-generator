@@ -3,7 +3,7 @@
 */
 
 import { writeFileSync, appendFileSync, existsSync, mkdirSync } from "fs";
-import path, { join } from "path";
+import path from "path";
 import { GeneratorError, UnknownModelError } from "../errors.js";
 import SETTINGS from "../utils/settings.js";
 import Handlebars from "../utils/handlebars.js";
@@ -12,13 +12,19 @@ import LOGGER from "../logger.js";
 import { readFileSync } from "../utils/file_utils.js";
 import { getSchema, saveSchema } from "../utils/schema_utils.js";
 import pluralize from "pluralize";
+import { PATHS } from "../constants.js";
 
 const argvs = process.argv.slice(2);
 const model = argvs.first();
 const route = pluralize.plural(model.toLowerCase());
-const routerDirectory = join(".", SETTINGS.routers.location);
-const templateDirectory = path.join(".", "bin", "templates", "routers");
-const routerFile = join(routerDirectory, `${route}.js`);
+const routerDirectory = path.join(".", SETTINGS.routers.location);
+const templateDirectory = path.join(
+  PATHS.root,
+  PATHS.bin,
+  PATHS.templates,
+  PATHS.routers
+);
+const routerFile = path.join(routerDirectory, `${route}.js`);
 const schema = getSchema();
 
 if (!schema.routers) {
@@ -35,11 +41,11 @@ if (existsSync(routerFile))
     `Router for model '${model}' already exists in '${routerFile}'`
   );
 
-if (!existsSync(join(".", SETTINGS.models.location, `${model}.js`))) {
+if (!existsSync(path.join(".", SETTINGS.models.location, `${model}.js`))) {
   throw new UnknownModelError(`Unknown model: '${model}'`);
 }
 
-const template = SETTINGS.api ? "api.js.template" : "views.js.template";
+const template = SETTINGS.api ? PATHS.apiJsTemplate : PATHS.viewsJsTemplate;
 
 const templateProps = {
   model: model.toLowerCase(),
@@ -54,7 +60,7 @@ try {
     Handlebars.compileFile(templateDirectory, template)(templateProps)
   );
 
-  const indexFile = join(".", "index.js");
+  const indexFile = path.join(PATHS.root, PATHS.indexJs);
   const indexFileData = readFileSync(indexFile);
 
   if (!indexFileData.includes(`import ${route} from "./routers/${route}.js"`)) {
@@ -62,7 +68,7 @@ try {
       indexFile,
       Handlebars.compileFile(
         templateDirectory,
-        "_indexFile.js.template"
+        PATHS.indexFileJsTemplate
       )({ route })
     );
   }

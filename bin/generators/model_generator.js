@@ -19,7 +19,7 @@
 import fs from "fs";
 import path from "path";
 import "../utils/js_utils.js";
-import { SQLColumnTypes } from "../constants.js";
+import { PATHS, SQLColumnTypes } from "../constants.js";
 import { GeneratorError } from "../errors.js";
 import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
@@ -29,14 +29,18 @@ import { MigrationInfo, ModelInfo } from "./types.js";
 import SQLiteTable from "../domain/SQLiteTable.js";
 const argvs = process.argv.slice(2);
 const [model, ...args] = argvs;
-const folderName = path.join(".", SETTINGS.models.location);
+const folderName = path.join(PATHS.root, SETTINGS.models.location);
 const modelFilePath = path.join(folderName, `${model}.js`);
-const templatePath = path.join(".", "bin", "templates");
-const modelTemplate = path.join(templatePath, "models", "model.js.template");
+const templatePath = path.join(PATHS.root, PATHS.bin, PATHS.templates);
+const modelTemplate = path.join(
+  templatePath,
+  PATHS.models,
+  PATHS.modelJsTemplate
+);
 const migrationTemplate = path.join(
   templatePath,
-  "db",
-  "_migration.js.template"
+  PATHS.db,
+  PATHS.migrationJsTemplate
 );
 
 if (!fs.existsSync(folderName)) {
@@ -69,7 +73,7 @@ try {
 
   fs.appendFileSync(
     path.join(
-      ".",
+      PATHS.root,
       SETTINGS.database.migrations.location,
       SETTINGS.database.migrations.filename
     ),

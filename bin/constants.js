@@ -127,6 +127,25 @@ export const ColumnFormat = {
   EMAIL: "email",
 };
 
+export const PATHS = {
+  root: ".",
+  bin: "bin",
+  templates: "templates",
+  views: "views",
+  routers: "routers",
+  _layouts: "_layouts",
+  _navLinksEjsTemplate: "_navLinks.ejs.template",
+  _navLinksEjs: "_navLinks.ejs",
+  apiJsTemplate: "api.js.template",
+  viewsJsTemplate: "views.js.template",
+  indexFileJsTemplate: "_indexFile.js.template",
+  indexJs: "index.js",
+  models: "models",
+  modelJsTemplate: "model.js.template",
+  db: "db",
+  migrationJsTemplate: "_migration.js.template",
+};
+
 export const ReadOnlyColumns = ["id", "created_at", "updated_at"];
 
 export const SearchExcludedColumns = [
@@ -154,5 +173,5 @@ export const MigrationActions = {
 
 export const Flash = {
   SUCCESS: "success",
-  ERROR: "error"
-}
+  ERROR: "error",
+};

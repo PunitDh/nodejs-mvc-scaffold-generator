@@ -143,7 +143,14 @@ export const PATHS = {
   models: "models",
   modelJsTemplate: "model.js.template",
   db: "db",
+  instance: "instance",
   migrationJsTemplate: "_migration.js.template",
+  logs: "logs",
+  queries: "queries",
+  selectSqlTemplate: "select.sql.template",
+  insertSqlTemplate: "insert.sql.template",
+  updateSqlTemplate: "update.sql.template",
+  deleteSqlTemplate: "delete.sql.template"
 };
 
 export const ReadOnlyColumns = ["id", "created_at", "updated_at"];

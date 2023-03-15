@@ -5,10 +5,7 @@
 
 import path from "path";
 import "../utils/js_utils.js";
-import {
-  SQLColumnTypes,
-  SQLColumnContraints,
-} from "../constants.js";
+import { SQLColumnTypes, SQLColumnContraints, PATHS } from "../constants.js";
 import {
   GeneratorError,
   InvalidColumnConstraintError,
@@ -18,25 +15,26 @@ import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
 import Handlebars from "handlebars";
 import pluralize from "pluralize";
+import { readFileSync } from "../utils/file_utils.js";
 
 const argvs = process.argv.slice(2);
 const [table, action, ...args] = argvs;
 const attributesObj = {};
-const folderName = path.join(".", SETTINGS.models.location);
+const folderName = path.join(PATHS.root, SETTINGS.models.location);
 const file = path.join(folderName, `${table}.js`);
 const modelTemplate = path.join(
-  ".",
-  "bin",
-  "templates",
-  "models",
-  "model.js.template"
+  PATHS.root,
+  PATHS.bin,
+  PATHS.templates,
+  PATHS.models,
+  PATHS.modelJsTemplate
 );
 const migrationTemplate = path.join(
-  ".",
-  "bin",
-  "templates",
-  "db",
-  "_migration.js.template"
+  PATHS.root,
+  PATHS.bin,
+  PATHS.templates,
+  PATHS.db,
+  PATHS.migrationJsTemplate
 );
 
 if (!fs.existsSync(folderName)) {
@@ -70,7 +68,7 @@ try {
   // Write model file
   fs.writeFileSync(
     file,
-    Handlebars.compile(fs.readFileSync(modelTemplate, "utf-8"))({
+    Handlebars.compile(readFileSync(modelTemplate))({
       model: table,
       attributes,
     })
@@ -88,7 +86,7 @@ try {
 
   fs.appendFileSync(
     path.join(
-      ".",
+      PATHS.root,
       SETTINGS.database.migrations.location,
       SETTINGS.database.migrations.filename
     ),

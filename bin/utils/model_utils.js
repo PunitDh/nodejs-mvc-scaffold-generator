@@ -1,6 +1,8 @@
 import Handlebars from "./handlebars.js";
 import "./js_utils.js";
 import pluralize from "pluralize";
+import path from "path";
+import { PATHS } from "../constants.js";
 
 export const getTableNameFromModel = (model) =>
   pluralize.plural(model.toLowerCase());
@@ -8,18 +10,26 @@ export const getTableNameFromModel = (model) =>
 export const getModelNameFromTable = (table) =>
   pluralize.singular(table).capitalize();
 
+const queryTemplatePath = path.join(
+  PATHS.root,
+  PATHS.bin,
+  PATHS.templates,
+  PATHS.db,
+  PATHS.queries
+);
+
 export const Query = {
   SELECT: Handlebars.compileFile(
-    "./bin/templates/db/queries/select.sql.template"
+    path.join(queryTemplatePath, PATHS.selectSqlTemplate)
   ),
   INSERT: Handlebars.compileFile(
-    "./bin/templates/db/queries/insert.sql.template"
+    path.join(queryTemplatePath, PATHS.insertSqlTemplate)
   ),
   UPDATE: Handlebars.compileFile(
-    "./bin/templates/db/queries/update.sql.template"
+    path.join(queryTemplatePath, PATHS.updateSqlTemplate)
   ),
   DELETE: Handlebars.compileFile(
-    "./bin/templates/db/queries/delete.sql.template"
+    path.join(queryTemplatePath, PATHS.deleteSqlTemplate)
   ),
 };
 

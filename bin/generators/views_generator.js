@@ -20,7 +20,7 @@ const argvs = process.argv.slice(2);
 const model = argvs.first();
 const singular = model.toLowerCase();
 const router = pluralize.plural(singular);
-const viewsDirectory = path.join(".", SETTINGS.views.location, router);
+const viewsDirectory = path.join(PATHS.root, SETTINGS.views.location, router);
 if (!fs.existsSync(viewsDirectory)) {
   fs.mkdirSync(viewsDirectory);
 }

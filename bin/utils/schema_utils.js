@@ -3,7 +3,7 @@ import SETTINGS from "./settings.js";
 import { readFileSync, writeFileSync } from "fs";
 
 export const schemaFile = join(
-  ".",
+  PATHS.root,
   SETTINGS.database.schema.location,
   SETTINGS.database.schema.filename
 );

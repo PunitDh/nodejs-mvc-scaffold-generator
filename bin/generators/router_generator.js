@@ -17,7 +17,7 @@ import { PATHS } from "../constants.js";
 const argvs = process.argv.slice(2);
 const model = argvs.first();
 const route = pluralize.plural(model.toLowerCase());
-const routerDirectory = path.join(".", SETTINGS.routers.location);
+const routerDirectory = path.join(PATHS.root, SETTINGS.routers.location);
 const templateDirectory = path.join(
   PATHS.root,
   PATHS.bin,
@@ -41,7 +41,7 @@ if (existsSync(routerFile))
     `Router for model '${model}' already exists in '${routerFile}'`
   );
 
-if (!existsSync(path.join(".", SETTINGS.models.location, `${model}.js`))) {
+if (!existsSync(path.join(PATHS.root, SETTINGS.models.location, `${model}.js`))) {
   throw new UnknownModelError(`Unknown model: '${model}'`);
 }
 

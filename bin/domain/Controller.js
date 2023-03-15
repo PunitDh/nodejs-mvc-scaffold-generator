@@ -1,4 +1,3 @@
-
 import pluralize from "pluralize";
 import { Flash } from "../constants.js";
 
@@ -15,7 +14,7 @@ export default class Controller {
         const result = await this.Model.all();
         return res.render(`${this.router}/index`, { [this.router]: result });
       } catch (e) {
-        next(e)
+        next(e);
       }
     };
   }
@@ -28,7 +27,7 @@ export default class Controller {
           [this.model]: result,
         });
       } catch (e) {
-        next(e)
+        next(e);
       }
     };
   }
@@ -39,7 +38,7 @@ export default class Controller {
         const result = new this.Model();
         return res.render(`${this.router}/new`, { [this.model]: result });
       } catch (e) {
-        next(e)
+        next(e);
       }
     };
   }
@@ -52,8 +51,7 @@ export default class Controller {
           [this.model]: result,
         });
       } catch (e) {
-        next(e)
-
+        next(e);
       }
     };
   }
@@ -65,8 +63,7 @@ export default class Controller {
         req.flash(Flash.SUCCESS, `${this.Model.name} has been created`);
         return res.redirect(`/${this.router}`);
       } catch (e) {
-        next(e)
-
+        next(e);
       }
     };
   }
@@ -79,8 +76,7 @@ export default class Controller {
         req.flash(Flash.SUCCESS, `${this.Model.name} has been updated`);
         return res.redirect(`/${this.router}`);
       } catch (e) {
-        next(e)
-
+        next(e);
       }
     };
   }
@@ -92,8 +88,7 @@ export default class Controller {
         req.flash(Flash.SUCCESS, `${this.Model.name} has been deleted`);
         return res.redirect(`/${this.router}`);
       } catch (e) {
-        next(e)
-
+        next(e);
       }
     };
   }

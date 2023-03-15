@@ -36,7 +36,8 @@ export default function () {
     res.locals.pluralize = (text) => pluralize.plural(text);
     res.locals.__host__ = `${req.protocol}://${req.headers.host}`;
     res.locals.stringify = JSON.stringify;
-    res.locals._csrf_field = "../_layouts/partials/_csrf.ejs"
+    res.locals._csrf_field = "../_layouts/partials/_csrf.ejs";
+    res.locals.referer = req.headers.referer;
     next();
   };
 }

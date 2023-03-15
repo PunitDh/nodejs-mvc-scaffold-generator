@@ -47,7 +47,7 @@
         <%- include(locals._csrf_field) %>
         <button type="submit" class="btn btn-danger">Delete Employee</button>
       </form>
-      <a href="/employees" class="btn btn-danger">Back</a>
+      <a href="<%= locals.referer || "/employees" %>" class="btn btn-danger">Back</a>
     </div>
   </div>
 </div>

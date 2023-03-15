@@ -151,7 +151,7 @@ export const PATHS = {
   selectSqlTemplate: "select.sql.template",
   insertSqlTemplate: "insert.sql.template",
   updateSqlTemplate: "update.sql.template",
-  deleteSqlTemplate: "delete.sql.template"
+  deleteSqlTemplate: "delete.sql.template",
 };
 
 export const ReadOnlyColumns = ["id", "created_at", "updated_at"];
@@ -182,4 +182,8 @@ export const MigrationActions = {
 export const Flash = {
   SUCCESS: "success",
   ERROR: "error",
+};
+
+export const MediaType = {
+  APPLICATION_JSON: "application/json",
 };

@@ -28,7 +28,7 @@
       <form action="/comments/delete/<%= comment.id %>" method="POST">
         <button type="submit" class="btn btn-danger">Delete Comment</button>
       </form>
-      <a href="/comments" class="btn btn-danger">Back</a>
+      <a href="<%= locals.referer || "/comments" %>" class="btn btn-danger">Back</a>
     </div>
   </div>
 </div>

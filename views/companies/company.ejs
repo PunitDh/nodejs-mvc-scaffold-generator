@@ -32,7 +32,7 @@
       <form action="/companies/delete/<%= company.id %>" method="POST">
         <button type="submit" class="btn btn-danger">Delete Company</button>
       </form>
-      <a href="/companies" class="btn btn-danger">Back</a>
+      <a href="<%= locals.referer || "/companies" %>" class="btn btn-danger">Back</a>
     </div>
   </div>
 </div>

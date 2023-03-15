@@ -29,7 +29,7 @@
         <%- include('../_layouts/partials/_csrf.ejs') %>
         <button type="submit" class="btn btn-danger">Delete Animal</button>
       </form>
-      <a href="/animals" class="btn btn-danger">Back</a>
+      <a href="<%= locals.referer || "/animals" %>" class="btn btn-danger">Back</a>
     </div>
   </div>
 </div>

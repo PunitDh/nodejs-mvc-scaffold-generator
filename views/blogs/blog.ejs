@@ -61,7 +61,7 @@
       <form action="/blogs/delete/<%= blog.id %>" method="POST">
         <button type="submit" class="btn btn-danger">Delete Blog</button>
       </form>
-      <a href="/blogs" class="btn btn-danger">Back</a>
+      <a href="<%= locals.referer || "/blogs" %>" class="btn btn-danger">Back</a>
     </div>
   </div>
 </div>

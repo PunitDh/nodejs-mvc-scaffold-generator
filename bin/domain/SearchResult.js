@@ -27,8 +27,10 @@ class SearchResult {
       "created_at",
       "updated_at"
     );
-    this.title = data[resultColumns.first()];
-    this.link = `${table}/${data.id}`;
+    this.title = `${this.table.capitalize()} - ${data[resultColumns.first()]}`;
+    const urlSearchParam = new URLSearchParams();
+    urlSearchParam.append("referer", `/search?q=${searchTerm}`);
+    this.link = `${table}/${data.id}?${urlSearchParam.toString()}`;
   }
 
   /**
@@ -50,7 +52,7 @@ class SearchResult {
 
   /**
    * @description Searches through all the tables in the database for a specified search term
-   * @param {string} searchTerm 
+   * @param {string} searchTerm
    * @returns List of SearchResult
    */
   static async search(searchTerm) {

@@ -40,6 +40,10 @@ app.use(routeLogger());
 app.use(appUtils());
 app.use("/", appRouter);
 
+app.get("*", function (req, res) {
+  res.status(404).render("pages/404");
+});
+
 // Start server
 app.listen(SETTINGS.port, () =>
   LOGGER.info("Server started on port", SETTINGS.port)

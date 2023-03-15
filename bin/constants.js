@@ -134,6 +134,7 @@ export const PATHS = {
   views: "views",
   routers: "routers",
   _layouts: "_layouts",
+  partials: "partials",
   _navLinksEjsTemplate: "_navLinks.ejs.template",
   _navLinksEjs: "_navLinks.ejs",
   apiJsTemplate: "api.js.template",

@@ -56,6 +56,7 @@ if (SETTINGS.views.pages.navLinks.overwrite) {
   const navLinksContents = Handlebars.compileFile(
     templateDirectory,
     PATHS._layouts,
+    PATHS.partials,
     PATHS._navLinksEjsTemplate
   )({ navLinks });
 
@@ -63,6 +64,7 @@ if (SETTINGS.views.pages.navLinks.overwrite) {
     PATHS.root,
     SETTINGS.views.location,
     PATHS._layouts,
+    PATHS.partials,
     PATHS._navLinksEjs
   );
 

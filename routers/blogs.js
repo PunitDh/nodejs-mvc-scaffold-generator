@@ -2,9 +2,11 @@ import { Router } from "express";
 import Blog from "../models/Blog.js";
 import Comment from "../models/Comment.js";
 import authenticated from "../bin/middleware/authenticated.js";
+import csrf from "../bin/middleware/csrf.js";
 const blogs = Router();
 
 blogs.use(authenticated);
+blogs.use(csrf());
 
 blogs.get("/", async (req, res) => {
   try {

@@ -20,7 +20,7 @@
           <td><a href="/animals/edit/<%= it.id %>" class="btn btn-success">Edit</a></td>
           <td>
             <form action="/animals/delete/<%= it.id %>" method="POST">
-              <input type="hidden" name="_csrf_token" value="<%= locals._csrf_token %>">
+              <%- include(locals._csrf_field) %>
               <button type="submit" class="btn btn-danger">
                 Delete
               </button>

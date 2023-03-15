@@ -26,7 +26,7 @@
     <div class="d-flex align-items-center" style="gap: 1rem">
       <a href="/animals/edit/<%= animal.id %>" class="btn btn-primary">Edit Animal</a>
       <form action="/animals/delete/<%= animal.id %>" method="POST">
-        <input type="hidden" name="_csrf_token" value="<%= locals._csrf_token %>">
+        <%- include('../_layouts/partials/_csrf.ejs') %>
         <button type="submit" class="btn btn-danger">Delete Animal</button>
       </form>
       <a href="/animals" class="btn btn-danger">Back</a>

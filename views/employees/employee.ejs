@@ -40,9 +40,11 @@
 
   <div class="form-group mb-2">
     <div class="d-flex align-items-center" style="gap: 1rem">
-      <a href="/employees/edit/<%= employee.id %>" class="btn btn-primary">Edit Employee</a>
+      <a href="/employees/edit/<%= employee.id %>" class="btn btn-primary"
+        >Edit Employee</a
+      >
       <form action="/employees/delete/<%= employee.id %>" method="POST">
-        <input type="hidden" name="_csrf_token" value="<%= locals._csrf_token %>">
+        <%- include(locals._csrf_field) %>
         <button type="submit" class="btn btn-danger">Delete Employee</button>
       </form>
       <a href="/employees" class="btn btn-danger">Back</a>

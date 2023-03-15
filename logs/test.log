@@ -41244,3 +41244,42 @@ comment is not defined
 [INFO] [15/03/2023, 23:06:42]: Started GET "/comments/new" at 15/03/2023, 23:06:42
 [QUERY] [15/03/2023, 23:06:42]: SELECT * FROM blogs ORDER BY updated_at desc;
 [INFO] [15/03/2023, 23:06:42]: Success 200 OK in 12.98 ms
+[INFO] [15/03/2023, 23:07:34]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:07:34]: Server started on port 3000
+[INFO] [15/03/2023, 23:07:34]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:08:06]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:08:06]: Server started on port 3000
+[INFO] [15/03/2023, 23:08:06]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:08:09]: Started GET "/comments/new" at 15/03/2023, 23:08:09
+[QUERY] [15/03/2023, 23:08:09]: SELECT * FROM blogs ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:08:09]: Success 200 OK in 25.02 ms
+[INFO] [15/03/2023, 23:08:18]: Started POST "/comments/new" at 15/03/2023, 23:08:18
+[QUERY] [15/03/2023, 23:08:18]: INSERT INTO comments (blog_id, body, created_at, updated_at) VALUES ($blog_id, $body, DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [15/03/2023, 23:08:18]: Redirected 302 Found in 9.05 ms
+[INFO] [15/03/2023, 23:08:18]: Started GET "/comments/" at 15/03/2023, 23:08:18
+[QUERY] [15/03/2023, 23:08:18]: SELECT * FROM comments ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:08:18]: Success 200 OK in 5.56 ms
+[INFO] [15/03/2023, 23:08:22]: Started GET "/blogs/" at 15/03/2023, 23:08:22
+[INFO] [15/03/2023, 23:08:22]: Redirected 302 Found in 10.32 ms
+[INFO] [15/03/2023, 23:08:22]: Started GET "/users/login?referer=%2Fblogs%2F" at 15/03/2023, 23:08:22
+[INFO] [15/03/2023, 23:08:22]: Redirected 304 Not Modified in 7.14 ms
+[INFO] [15/03/2023, 23:08:23]: Started POST "/users/login?referer=/blogs/" at 15/03/2023, 23:08:23
+[QUERY] [15/03/2023, 23:08:23]: SELECT * FROM users WHERE email=$email ORDER BY id DESC;
+[QUERY] [15/03/2023, 23:08:23]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token,  updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [15/03/2023, 23:08:23]: Redirected 302 Found in 88.68 ms
+[INFO] [15/03/2023, 23:08:23]: Started GET "/blogs/" at 15/03/2023, 23:08:23
+[QUERY] [15/03/2023, 23:08:23]: SELECT * FROM users WHERE id=$id ORDER BY id DESC;
+[QUERY] [15/03/2023, 23:08:23]: SELECT * FROM blogs ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:08:23]: Success 200 OK in 5.19 ms
+[INFO] [15/03/2023, 23:08:28]: Started GET "/blogs/3" at 15/03/2023, 23:08:28
+[QUERY] [15/03/2023, 23:08:28]: SELECT * FROM users WHERE id=$id ORDER BY id DESC;
+[QUERY] [15/03/2023, 23:08:28]: SELECT * FROM blogs WHERE id=$id ORDER BY id DESC;
+[QUERY] [15/03/2023, 23:08:28]: SELECT * FROM comments WHERE blog_id=$blog_id ORDER BY id DESC;
+[INFO] [15/03/2023, 23:08:28]: Success 200 OK in 23.77 ms
+[INFO] [15/03/2023, 23:08:35]: Started GET "/" at 15/03/2023, 23:08:35
+[INFO] [15/03/2023, 23:08:35]: Success 200 OK in 11.43 ms
+[INFO] [15/03/2023, 23:08:36]: Started GET "/about" at 15/03/2023, 23:08:36
+[INFO] [15/03/2023, 23:08:36]: Redirected 304 Not Modified in 9.85 ms
+[INFO] [15/03/2023, 23:08:36]: Started GET "/animals/" at 15/03/2023, 23:08:36
+[QUERY] [15/03/2023, 23:08:36]: SELECT * FROM animals ORDER BY updated_at desc;
+[INFO] [15/03/2023, 23:08:36]: Success 200 OK in 13.18 ms

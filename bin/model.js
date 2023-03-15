@@ -61,7 +61,10 @@ class Model {
    * @returns List of rows
    */
   static async all() {
-    const query = Query.SELECT({ table: this.__tablename__ });
+    const query = Query.SELECT({
+      table: this.__tablename__,
+      order: { column: "updated_at", type: "desc" },
+    });
     return await this.dbQuery(query);
   }
 

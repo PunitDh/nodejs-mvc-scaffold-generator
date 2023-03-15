@@ -1,1 +1,1 @@
-SELECT {{#columns}}{{.}}{{#unless @last}}, {{/unless}}{{/columns}}{{^columns}}*{{/columns}} FROM {{table}}{{#where}} WHERE {{.}}=${{.}}{{#unless @last}}AND {{/unless}}{{/where}}{{#limit}} LIMIT {{.}}{{/limit}};
+SELECT {{#columns}}{{.}}{{#unless @last}}, {{/unless}}{{/columns}}{{^columns}}*{{/columns}} FROM {{table}}{{#where}} WHERE {{.}}=${{.}}{{#unless @last}}AND {{/unless}}{{/where}}{{#limit}} LIMIT {{.}}{{/limit}}{{#order}} ORDER BY {{column}} {{type}}{{/order}}{{^order}} ORDER BY id DESC{{/order}};

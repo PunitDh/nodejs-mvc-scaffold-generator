@@ -16,6 +16,7 @@
     </label>
   </div>
   <div class="form-group mb-2">
+    <%- include(locals._csrf_field) %>
     <button type="submit" class="btn btn-primary"><%= page %> Comment</button>
     <a href="/comments" class="btn btn-danger">Back</a>
   </div>

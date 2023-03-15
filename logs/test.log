@@ -26367,3 +26367,61 @@ COMMIT;
 [INFO] [15/03/2023, 4:45:25 pm]: Completed 404 Not Found in 1.77 ms
 [INFO] [15/03/2023, 4:45:25 pm]: Started GET "/assets/css/bootstrap.min.css.map" at Wed Mar 15 2023
 [INFO] [15/03/2023, 4:45:25 pm]: Completed 404 Not Found in 1.86 ms
+[INFO] [15/03/2023, 4:46:26 pm]: Started GET "/api/search?q=test" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:46:26 pm]: SELECT * FROM companies WHERE name LIKE '%test%' OR address LIKE '%test%' OR number_of_employees LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:26 pm]: SELECT * FROM employees WHERE first_name LIKE '%test%' OR last_name LIKE '%test%' OR title LIKE '%test%' OR salary LIKE '%test%' OR sick_leave_hours LIKE '%test%' OR annual_leave_hours LIKE '%test%' OR employer_id LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:26 pm]: SELECT * FROM users WHERE first_name LIKE '%test%' OR last_name LIKE '%test%' OR email LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:26 pm]: SELECT * FROM comments WHERE blog_id LIKE '%test%' OR body LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:26 pm]: SELECT * FROM blogs WHERE title LIKE '%test%' OR body LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:26 pm]: SELECT * FROM animals WHERE name LIKE '%test%' OR color LIKE '%test%' ORDER BY updated_at DESC;
+[INFO] [15/03/2023, 4:46:26 pm]: Completed 304 Not Modified in 6.59 ms
+[INFO] [15/03/2023, 4:46:27 pm]: Started GET "/api/search?q=t" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:46:27 pm]: SELECT * FROM companies WHERE name LIKE '%t%' OR address LIKE '%t%' OR number_of_employees LIKE '%t%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:27 pm]: SELECT * FROM employees WHERE first_name LIKE '%t%' OR last_name LIKE '%t%' OR title LIKE '%t%' OR salary LIKE '%t%' OR sick_leave_hours LIKE '%t%' OR annual_leave_hours LIKE '%t%' OR employer_id LIKE '%t%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:27 pm]: SELECT * FROM users WHERE first_name LIKE '%t%' OR last_name LIKE '%t%' OR email LIKE '%t%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:27 pm]: SELECT * FROM comments WHERE blog_id LIKE '%t%' OR body LIKE '%t%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:27 pm]: SELECT * FROM blogs WHERE title LIKE '%t%' OR body LIKE '%t%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:27 pm]: SELECT * FROM animals WHERE name LIKE '%t%' OR color LIKE '%t%' ORDER BY updated_at DESC;
+[INFO] [15/03/2023, 4:46:27 pm]: Completed 304 Not Modified in 3.11 ms
+[INFO] [15/03/2023, 4:46:29 pm]: Started GET "/animals/1?referer=%2Fsearch%3Fq%3Dt" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:46:29 pm]: SELECT * FROM animals WHERE id=$id;
+[INFO] [15/03/2023, 4:46:29 pm]: Completed 200 OK in 5.45 ms
+[INFO] [15/03/2023, 4:46:36 pm]: Started GET "/search?q=test" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:46:36 pm]: SELECT * FROM companies WHERE name LIKE '%test%' OR address LIKE '%test%' OR number_of_employees LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:36 pm]: SELECT * FROM employees WHERE first_name LIKE '%test%' OR last_name LIKE '%test%' OR title LIKE '%test%' OR salary LIKE '%test%' OR sick_leave_hours LIKE '%test%' OR annual_leave_hours LIKE '%test%' OR employer_id LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:36 pm]: SELECT * FROM users WHERE first_name LIKE '%test%' OR last_name LIKE '%test%' OR email LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:36 pm]: SELECT * FROM comments WHERE blog_id LIKE '%test%' OR body LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:36 pm]: SELECT * FROM blogs WHERE title LIKE '%test%' OR body LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:36 pm]: SELECT * FROM animals WHERE name LIKE '%test%' OR color LIKE '%test%' ORDER BY updated_at DESC;
+[INFO] [15/03/2023, 4:46:36 pm]: Completed 200 OK in 6.89 ms
+[INFO] [15/03/2023, 4:46:54 pm]: Started POST "/users/logout" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:46:54 pm]: Completed 200 OK in 17.5 ms
+[INFO] [15/03/2023, 4:46:56 pm]: Started POST "/users/login?referer=http://localhost:3000/search?q=test" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:46:56 pm]: SELECT * FROM users WHERE email=$email;
+[QUERY] [15/03/2023, 4:46:56 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token,  updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [15/03/2023, 4:46:56 pm]: Completed 302 Found in 81.34 ms
+[INFO] [15/03/2023, 4:46:56 pm]: Started GET "/search?q=test" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:46:56 pm]: SELECT * FROM companies WHERE name LIKE '%test%' OR address LIKE '%test%' OR number_of_employees LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:56 pm]: SELECT * FROM employees WHERE first_name LIKE '%test%' OR last_name LIKE '%test%' OR title LIKE '%test%' OR salary LIKE '%test%' OR sick_leave_hours LIKE '%test%' OR annual_leave_hours LIKE '%test%' OR employer_id LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:56 pm]: SELECT * FROM users WHERE first_name LIKE '%test%' OR last_name LIKE '%test%' OR email LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:56 pm]: SELECT * FROM comments WHERE blog_id LIKE '%test%' OR body LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:56 pm]: SELECT * FROM blogs WHERE title LIKE '%test%' OR body LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:46:56 pm]: SELECT * FROM animals WHERE name LIKE '%test%' OR color LIKE '%test%' ORDER BY updated_at DESC;
+[INFO] [15/03/2023, 4:46:56 pm]: Completed 200 OK in 4.96 ms
+[INFO] [15/03/2023, 4:47:01 pm]: Started POST "/users/logout" at Wed Mar 15 2023
+[INFO] [15/03/2023, 4:47:01 pm]: Completed 200 OK in 17.38 ms
+[INFO] [15/03/2023, 4:47:03 pm]: Started POST "/users/login?referer=http://localhost:3000/search?q=test" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:47:03 pm]: SELECT * FROM users WHERE email=$email;
+[QUERY] [15/03/2023, 4:47:04 pm]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token,  updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [15/03/2023, 4:47:04 pm]: Completed 302 Found in 84.34 ms
+[INFO] [15/03/2023, 4:47:04 pm]: Started GET "/search?q=test" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:47:04 pm]: SELECT * FROM companies WHERE name LIKE '%test%' OR address LIKE '%test%' OR number_of_employees LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:47:04 pm]: SELECT * FROM employees WHERE first_name LIKE '%test%' OR last_name LIKE '%test%' OR title LIKE '%test%' OR salary LIKE '%test%' OR sick_leave_hours LIKE '%test%' OR annual_leave_hours LIKE '%test%' OR employer_id LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:47:04 pm]: SELECT * FROM users WHERE first_name LIKE '%test%' OR last_name LIKE '%test%' OR email LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:47:04 pm]: SELECT * FROM comments WHERE blog_id LIKE '%test%' OR body LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:47:04 pm]: SELECT * FROM blogs WHERE title LIKE '%test%' OR body LIKE '%test%' ORDER BY updated_at DESC;
+[QUERY] [15/03/2023, 4:47:04 pm]: SELECT * FROM animals WHERE name LIKE '%test%' OR color LIKE '%test%' ORDER BY updated_at DESC;
+[INFO] [15/03/2023, 4:47:04 pm]: Completed 200 OK in 5.39 ms
+[INFO] [15/03/2023, 4:47:11 pm]: Started GET "/companies/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 4:47:11 pm]: SELECT * FROM companies;
+[INFO] [15/03/2023, 4:47:11 pm]: Completed 200 OK in 3.54 ms

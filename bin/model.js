@@ -227,7 +227,6 @@ class Model {
 
     const query = this.id ? updateQuery : insertQuery;
     const values = [...columns.map((column) => this[column]), this.id];
-    console.log(values);
     return await this.constructor.dbQuery(query.build(), values, true);
   }
 

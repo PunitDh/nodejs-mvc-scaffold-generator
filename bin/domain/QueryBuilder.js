@@ -123,17 +123,6 @@ class SQLQueryBuilder {
       .join(", ");
     const orderClause = orderBy ? ` ORDER BY ${orderBy}` : " ORDER BY id ASC";
 
-    console.log({
-      action: this.action,
-      whereClause,
-      returningClause,
-      columns,
-      setClause,
-      limitClause,
-      values,
-      orderClause,
-    });
-
     switch (this.action) {
       case QueryAction.SELECT:
         return `${this.action} ${columns} FROM ${this.table}${whereClause}${limitClause}${orderClause};\n`;

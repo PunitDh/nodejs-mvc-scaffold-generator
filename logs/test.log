@@ -41619,3 +41619,1226 @@ comment is not defined
 [INFO] [15/03/2023, 23:48:47]: Successfully connected to database: 'database.db'
 [INFO] [15/03/2023, 23:48:47]: Server started on port 3000
 [INFO] [15/03/2023, 23:48:47]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:49:14]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:49:14]: Server started on port 3000
+[INFO] [15/03/2023, 23:49:14]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:50:28]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:50:28]: Server started on port 3000
+[INFO] [15/03/2023, 23:50:28]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:50:40]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:50:40]: Server started on port 3000
+[INFO] [15/03/2023, 23:50:40]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:50:52]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:50:52]: Server started on port 3000
+[INFO] [15/03/2023, 23:50:52]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:51:34]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:51:34]: Server started on port 3000
+[INFO] [15/03/2023, 23:51:34]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:52:37]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:52:37]: Server started on port 3000
+[INFO] [15/03/2023, 23:52:37]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:54:50]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:54:50]: Server started on port 3000
+[INFO] [15/03/2023, 23:54:50]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:55:01]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:55:01]: Server started on port 3000
+[INFO] [15/03/2023, 23:55:01]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:03:15]: Started GET "/search?q=rab" at 16/03/2023, 00:03:15
+[QUERY] [16/03/2023, 00:03:15]: SELECT * FROM companies WHERE name LIKE '%rab%' OR address LIKE '%rab%' OR number_of_employees LIKE '%rab%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:15]: SELECT * FROM employees WHERE first_name LIKE '%rab%' OR last_name LIKE '%rab%' OR title LIKE '%rab%' OR salary LIKE '%rab%' OR sick_leave_hours LIKE '%rab%' OR annual_leave_hours LIKE '%rab%' OR employer_id LIKE '%rab%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:15]: SELECT * FROM users WHERE first_name LIKE '%rab%' OR last_name LIKE '%rab%' OR email LIKE '%rab%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:15]: SELECT * FROM comments WHERE blog_id LIKE '%rab%' OR body LIKE '%rab%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:15]: SELECT * FROM blogs WHERE title LIKE '%rab%' OR body LIKE '%rab%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:15]: SELECT * FROM animals WHERE name LIKE '%rab%' OR color LIKE '%rab%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:15]: Success 200 OK in 23.67 ms
+[INFO] [16/03/2023, 00:03:18]: Started GET "/api/search?q=rab" at 16/03/2023, 00:03:18
+[QUERY] [16/03/2023, 00:03:18]: SELECT * FROM companies WHERE name LIKE '%rab%' OR address LIKE '%rab%' OR number_of_employees LIKE '%rab%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:18]: SELECT * FROM employees WHERE first_name LIKE '%rab%' OR last_name LIKE '%rab%' OR title LIKE '%rab%' OR salary LIKE '%rab%' OR sick_leave_hours LIKE '%rab%' OR annual_leave_hours LIKE '%rab%' OR employer_id LIKE '%rab%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:18]: SELECT * FROM users WHERE first_name LIKE '%rab%' OR last_name LIKE '%rab%' OR email LIKE '%rab%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:18]: SELECT * FROM comments WHERE blog_id LIKE '%rab%' OR body LIKE '%rab%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:18]: SELECT * FROM blogs WHERE title LIKE '%rab%' OR body LIKE '%rab%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:18]: SELECT * FROM animals WHERE name LIKE '%rab%' OR color LIKE '%rab%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:18]: Success 200 OK in 22.91 ms
+[INFO] [16/03/2023, 00:03:19]: Started GET "/api/search?q=h" at 16/03/2023, 00:03:19
+[QUERY] [16/03/2023, 00:03:19]: SELECT * FROM companies WHERE name LIKE '%h%' OR address LIKE '%h%' OR number_of_employees LIKE '%h%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:19]: SELECT * FROM employees WHERE first_name LIKE '%h%' OR last_name LIKE '%h%' OR title LIKE '%h%' OR salary LIKE '%h%' OR sick_leave_hours LIKE '%h%' OR annual_leave_hours LIKE '%h%' OR employer_id LIKE '%h%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:19]: SELECT * FROM users WHERE first_name LIKE '%h%' OR last_name LIKE '%h%' OR email LIKE '%h%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:19]: SELECT * FROM comments WHERE blog_id LIKE '%h%' OR body LIKE '%h%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:19]: SELECT * FROM blogs WHERE title LIKE '%h%' OR body LIKE '%h%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:19]: SELECT * FROM animals WHERE name LIKE '%h%' OR color LIKE '%h%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:19]: Success 200 OK in 3.87 ms
+[INFO] [16/03/2023, 00:03:19]: Started GET "/api/search?q=ho" at 16/03/2023, 00:03:19
+[QUERY] [16/03/2023, 00:03:19]: SELECT * FROM companies WHERE name LIKE '%ho%' OR address LIKE '%ho%' OR number_of_employees LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:19]: SELECT * FROM employees WHERE first_name LIKE '%ho%' OR last_name LIKE '%ho%' OR title LIKE '%ho%' OR salary LIKE '%ho%' OR sick_leave_hours LIKE '%ho%' OR annual_leave_hours LIKE '%ho%' OR employer_id LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:19]: SELECT * FROM users WHERE first_name LIKE '%ho%' OR last_name LIKE '%ho%' OR email LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:19]: SELECT * FROM comments WHERE blog_id LIKE '%ho%' OR body LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:19]: SELECT * FROM blogs WHERE title LIKE '%ho%' OR body LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:19]: SELECT * FROM animals WHERE name LIKE '%ho%' OR color LIKE '%ho%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:19]: Success 200 OK in 4.46 ms
+[INFO] [16/03/2023, 00:03:22]: Started GET "/companies/27?referer=%2Fsearch%3Fq%3Dho" at 16/03/2023, 00:03:22
+[QUERY] [16/03/2023, 00:03:22]: SELECT * FROM companies WHERE id=$id ORDER BY id ASC;
+
+[INFO] [16/03/2023, 00:03:22]: Success 200 OK in 16.07 ms
+[INFO] [16/03/2023, 00:03:24]: Started GET "/search?q=ho" at 16/03/2023, 00:03:24
+[QUERY] [16/03/2023, 00:03:24]: SELECT * FROM companies WHERE name LIKE '%ho%' OR address LIKE '%ho%' OR number_of_employees LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:24]: SELECT * FROM employees WHERE first_name LIKE '%ho%' OR last_name LIKE '%ho%' OR title LIKE '%ho%' OR salary LIKE '%ho%' OR sick_leave_hours LIKE '%ho%' OR annual_leave_hours LIKE '%ho%' OR employer_id LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:24]: SELECT * FROM users WHERE first_name LIKE '%ho%' OR last_name LIKE '%ho%' OR email LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:24]: SELECT * FROM comments WHERE blog_id LIKE '%ho%' OR body LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:24]: SELECT * FROM blogs WHERE title LIKE '%ho%' OR body LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:24]: SELECT * FROM animals WHERE name LIKE '%ho%' OR color LIKE '%ho%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:24]: Success 200 OK in 26.23 ms
+[INFO] [16/03/2023, 00:03:25]: Started GET "/api/search?q=ho" at 16/03/2023, 00:03:25
+[QUERY] [16/03/2023, 00:03:25]: SELECT * FROM companies WHERE name LIKE '%ho%' OR address LIKE '%ho%' OR number_of_employees LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:25]: SELECT * FROM employees WHERE first_name LIKE '%ho%' OR last_name LIKE '%ho%' OR title LIKE '%ho%' OR salary LIKE '%ho%' OR sick_leave_hours LIKE '%ho%' OR annual_leave_hours LIKE '%ho%' OR employer_id LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:25]: SELECT * FROM users WHERE first_name LIKE '%ho%' OR last_name LIKE '%ho%' OR email LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:25]: SELECT * FROM comments WHERE blog_id LIKE '%ho%' OR body LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:25]: SELECT * FROM blogs WHERE title LIKE '%ho%' OR body LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:25]: SELECT * FROM animals WHERE name LIKE '%ho%' OR color LIKE '%ho%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:25]: Redirected 304 Not Modified in 6.06 ms
+[INFO] [16/03/2023, 00:03:25]: Started GET "/search?q=ho" at 16/03/2023, 00:03:25
+[QUERY] [16/03/2023, 00:03:25]: SELECT * FROM companies WHERE name LIKE '%ho%' OR address LIKE '%ho%' OR number_of_employees LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:25]: SELECT * FROM employees WHERE first_name LIKE '%ho%' OR last_name LIKE '%ho%' OR title LIKE '%ho%' OR salary LIKE '%ho%' OR sick_leave_hours LIKE '%ho%' OR annual_leave_hours LIKE '%ho%' OR employer_id LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:25]: SELECT * FROM users WHERE first_name LIKE '%ho%' OR last_name LIKE '%ho%' OR email LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:25]: SELECT * FROM comments WHERE blog_id LIKE '%ho%' OR body LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:25]: SELECT * FROM blogs WHERE title LIKE '%ho%' OR body LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:25]: SELECT * FROM animals WHERE name LIKE '%ho%' OR color LIKE '%ho%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:25]: Success 200 OK in 5.85 ms
+[INFO] [16/03/2023, 00:03:31]: Started GET "/api/search?q=ho" at 16/03/2023, 00:03:31
+[QUERY] [16/03/2023, 00:03:31]: SELECT * FROM companies WHERE name LIKE '%ho%' OR address LIKE '%ho%' OR number_of_employees LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:31]: SELECT * FROM employees WHERE first_name LIKE '%ho%' OR last_name LIKE '%ho%' OR title LIKE '%ho%' OR salary LIKE '%ho%' OR sick_leave_hours LIKE '%ho%' OR annual_leave_hours LIKE '%ho%' OR employer_id LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:31]: SELECT * FROM users WHERE first_name LIKE '%ho%' OR last_name LIKE '%ho%' OR email LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:31]: SELECT * FROM comments WHERE blog_id LIKE '%ho%' OR body LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:31]: SELECT * FROM blogs WHERE title LIKE '%ho%' OR body LIKE '%ho%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:31]: SELECT * FROM animals WHERE name LIKE '%ho%' OR color LIKE '%ho%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:31]: Redirected 304 Not Modified in 25.36 ms
+[INFO] [16/03/2023, 00:03:32]: Started GET "/api/search?q=" at 16/03/2023, 00:03:32
+[QUERY] [16/03/2023, 00:03:32]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:32]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:32]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:32]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:32]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:32]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:32]: Success 200 OK in 17.08 ms
+[INFO] [16/03/2023, 00:03:33]: Started GET "/search?q=" at 16/03/2023, 00:03:33
+[QUERY] [16/03/2023, 00:03:33]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:33]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:33]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:33]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:33]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:33]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:33]: Success 200 OK in 26.7 ms
+[INFO] [16/03/2023, 00:03:39]: Started GET "/api/search?q=" at 16/03/2023, 00:03:39
+[QUERY] [16/03/2023, 00:03:39]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:39]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:39]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:39]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:39]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:39]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:39]: Redirected 304 Not Modified in 25.26 ms
+[INFO] [16/03/2023, 00:03:40]: Started GET "/api/search?q=l" at 16/03/2023, 00:03:40
+[QUERY] [16/03/2023, 00:03:40]: SELECT * FROM companies WHERE name LIKE '%l%' OR address LIKE '%l%' OR number_of_employees LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:40]: SELECT * FROM employees WHERE first_name LIKE '%l%' OR last_name LIKE '%l%' OR title LIKE '%l%' OR salary LIKE '%l%' OR sick_leave_hours LIKE '%l%' OR annual_leave_hours LIKE '%l%' OR employer_id LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:40]: SELECT * FROM users WHERE first_name LIKE '%l%' OR last_name LIKE '%l%' OR email LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:40]: SELECT * FROM comments WHERE blog_id LIKE '%l%' OR body LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:40]: SELECT * FROM blogs WHERE title LIKE '%l%' OR body LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:40]: SELECT * FROM animals WHERE name LIKE '%l%' OR color LIKE '%l%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:40]: Success 200 OK in 19.26 ms
+[INFO] [16/03/2023, 00:03:40]: Started GET "/search?q=l" at 16/03/2023, 00:03:40
+[QUERY] [16/03/2023, 00:03:40]: SELECT * FROM companies WHERE name LIKE '%l%' OR address LIKE '%l%' OR number_of_employees LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:40]: SELECT * FROM employees WHERE first_name LIKE '%l%' OR last_name LIKE '%l%' OR title LIKE '%l%' OR salary LIKE '%l%' OR sick_leave_hours LIKE '%l%' OR annual_leave_hours LIKE '%l%' OR employer_id LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:40]: SELECT * FROM users WHERE first_name LIKE '%l%' OR last_name LIKE '%l%' OR email LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:40]: SELECT * FROM comments WHERE blog_id LIKE '%l%' OR body LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:40]: SELECT * FROM blogs WHERE title LIKE '%l%' OR body LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:40]: SELECT * FROM animals WHERE name LIKE '%l%' OR color LIKE '%l%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:40]: Success 200 OK in 10.19 ms
+[INFO] [16/03/2023, 00:03:41]: Started GET "/api/search?q=l" at 16/03/2023, 00:03:41
+[QUERY] [16/03/2023, 00:03:41]: SELECT * FROM companies WHERE name LIKE '%l%' OR address LIKE '%l%' OR number_of_employees LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:41]: SELECT * FROM employees WHERE first_name LIKE '%l%' OR last_name LIKE '%l%' OR title LIKE '%l%' OR salary LIKE '%l%' OR sick_leave_hours LIKE '%l%' OR annual_leave_hours LIKE '%l%' OR employer_id LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:41]: SELECT * FROM users WHERE first_name LIKE '%l%' OR last_name LIKE '%l%' OR email LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:41]: SELECT * FROM comments WHERE blog_id LIKE '%l%' OR body LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:41]: SELECT * FROM blogs WHERE title LIKE '%l%' OR body LIKE '%l%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:41]: SELECT * FROM animals WHERE name LIKE '%l%' OR color LIKE '%l%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:41]: Redirected 304 Not Modified in 5.17 ms
+[INFO] [16/03/2023, 00:03:42]: Started GET "/api/search?q=" at 16/03/2023, 00:03:42
+[QUERY] [16/03/2023, 00:03:42]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:42]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:42]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:42]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:42]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:42]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:42]: Redirected 304 Not Modified in 5.29 ms
+[INFO] [16/03/2023, 00:03:42]: Started GET "/search?q=" at 16/03/2023, 00:03:42
+[QUERY] [16/03/2023, 00:03:42]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:42]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:42]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:42]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:42]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:03:42]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:03:42]: Redirected 304 Not Modified in 13.3 ms
+[INFO] [16/03/2023, 00:04:26]: Started GET "/api/search?q=" at 16/03/2023, 00:04:26
+[QUERY] [16/03/2023, 00:04:26]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:26]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:26]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:26]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:26]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:26]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:04:26]: Redirected 304 Not Modified in 17.81 ms
+[INFO] [16/03/2023, 00:04:26]: Started GET "/search?q=" at 16/03/2023, 00:04:26
+[QUERY] [16/03/2023, 00:04:26]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:26]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:26]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:26]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:26]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:26]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:04:26]: Success 200 OK in 34.2 ms
+[INFO] [16/03/2023, 00:04:48]: Started GET "/api/search?q=" at 16/03/2023, 00:04:48
+[QUERY] [16/03/2023, 00:04:48]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:48]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:48]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:48]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:48]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:48]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:04:48]: Redirected 304 Not Modified in 28.13 ms
+[INFO] [16/03/2023, 00:04:54]: Started GET "/api/search?q=" at 16/03/2023, 00:04:54
+[QUERY] [16/03/2023, 00:04:54]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:54]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:54]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:54]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:54]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:04:54]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:04:54]: Redirected 304 Not Modified in 24.47 ms
+[INFO] [16/03/2023, 00:06:45]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:06:46]: Server started on port 3000
+[INFO] [16/03/2023, 00:06:46]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:07:02]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:07:02]: Server started on port 3000
+[INFO] [16/03/2023, 00:07:02]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:07:03]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:07:03]: Server started on port 3000
+[INFO] [16/03/2023, 00:07:03]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:07:28]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:07:28]: Server started on port 3000
+[INFO] [16/03/2023, 00:07:28]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:07:30]: Started GET "/api/search?q=" at 16/03/2023, 00:07:30
+[QUERY] [16/03/2023, 00:07:30]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:30]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:30]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:30]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:30]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:30]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:07:30]: Redirected 304 Not Modified in 14.7 ms
+[INFO] [16/03/2023, 00:07:30]: Started GET "/search?q=" at 16/03/2023, 00:07:30
+[QUERY] [16/03/2023, 00:07:30]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:30]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:30]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:30]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:30]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:30]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:07:30]: Success 200 OK in 34.62 ms
+[INFO] [16/03/2023, 00:07:31]: Started GET "/api/search?q=" at 16/03/2023, 00:07:31
+[QUERY] [16/03/2023, 00:07:31]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:31]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:31]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:31]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:31]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:31]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:07:31]: Redirected 304 Not Modified in 25.58 ms
+[INFO] [16/03/2023, 00:07:34]: Started GET "/api/search?q=" at 16/03/2023, 00:07:34
+[QUERY] [16/03/2023, 00:07:34]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:34]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:34]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:34]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:34]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:34]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:07:34]: Redirected 304 Not Modified in 7.28 ms
+[INFO] [16/03/2023, 00:07:40]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:07:40]: Server started on port 3000
+[INFO] [16/03/2023, 00:07:40]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:07:41]: Started GET "/api/search?q=" at 16/03/2023, 00:07:41
+[QUERY] [16/03/2023, 00:07:41]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:41]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:41]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:41]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:41]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:41]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:07:41]: Success 200 OK in 11.05 ms
+[INFO] [16/03/2023, 00:07:44]: Started GET "/api/search?q=" at 16/03/2023, 00:07:44
+[QUERY] [16/03/2023, 00:07:44]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:44]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:44]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:44]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:44]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:44]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:07:44]: Redirected 304 Not Modified in 9.84 ms
+[INFO] [16/03/2023, 00:07:45]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:07:46]: Server started on port 3000
+[INFO] [16/03/2023, 00:07:46]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:07:46]: Started GET "/api/search?q=" at 16/03/2023, 00:07:46
+[QUERY] [16/03/2023, 00:07:46]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:46]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:46]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:46]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:46]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:07:46]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:07:46]: Success 200 OK in 10.28 ms
+[INFO] [16/03/2023, 00:08:05]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 16/03/2023, 00:08:05
+[INFO] [16/03/2023, 00:08:05]: Client Error 404 Not Found in 20.14 ms
+[INFO] [16/03/2023, 00:08:05]: Started GET "/assets/css/bootstrap.min.css.map" at 16/03/2023, 00:08:05
+[INFO] [16/03/2023, 00:08:05]: Client Error 404 Not Found in 3.05 ms
+[INFO] [16/03/2023, 00:08:17]: Started GET "/api/search?q=" at 16/03/2023, 00:08:17
+[QUERY] [16/03/2023, 00:08:17]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:17]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:17]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:17]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:17]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:17]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:08:17]: Redirected 304 Not Modified in 26.34 ms
+[INFO] [16/03/2023, 00:08:34]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:08:34]: Server started on port 3000
+[INFO] [16/03/2023, 00:08:34]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:08:38]: Started GET "/search?q=" at 16/03/2023, 00:08:38
+[QUERY] [16/03/2023, 00:08:38]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:38]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:38]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:38]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:38]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:38]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:08:38]: Success 200 OK in 31.21 ms
+[INFO] [16/03/2023, 00:08:39]: Started GET "/api/search?q=" at 16/03/2023, 00:08:39
+[QUERY] [16/03/2023, 00:08:39]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:39]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:39]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:39]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:39]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:39]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:08:39]: Success 200 OK in 22.8 ms
+[INFO] [16/03/2023, 00:08:41]: Started GET "/api/search?q=" at 16/03/2023, 00:08:41
+[QUERY] [16/03/2023, 00:08:41]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:41]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:41]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:41]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:41]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:08:41]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:08:41]: Redirected 304 Not Modified in 8.96 ms
+[INFO] [16/03/2023, 00:09:34]: Started GET "/api/search?q=" at 16/03/2023, 00:09:34
+[QUERY] [16/03/2023, 00:09:34]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:09:34]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:09:34]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:09:34]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:09:34]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:09:34]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:09:34]: Redirected 304 Not Modified in 10.11 ms
+[INFO] [16/03/2023, 00:10:59]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:10:59]: Server started on port 3000
+[INFO] [16/03/2023, 00:10:59]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:11:32]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:11:32]: Server started on port 3000
+[INFO] [16/03/2023, 00:11:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:12:04]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:12:04]: Server started on port 3000
+[INFO] [16/03/2023, 00:12:04]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:12:08]: Started GET "/api/search?q=" at 16/03/2023, 00:12:08
+[QUERY] [16/03/2023, 00:12:08]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:08]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:08]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:08]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:08]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:08]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:08]: Redirected 304 Not Modified in 17.22 ms
+[INFO] [16/03/2023, 00:12:10]: Started GET "/api/search?q=" at 16/03/2023, 00:12:10
+[QUERY] [16/03/2023, 00:12:10]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:10]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:10]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:10]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:10]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:10]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:10]: Redirected 304 Not Modified in 21.77 ms
+[INFO] [16/03/2023, 00:12:11]: Started GET "/api/search?q=" at 16/03/2023, 00:12:11
+[QUERY] [16/03/2023, 00:12:11]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:11]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:11]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:11]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:11]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:11]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:11]: Redirected 304 Not Modified in 7.91 ms
+[INFO] [16/03/2023, 00:12:38]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:12:38]: Server started on port 3000
+[INFO] [16/03/2023, 00:12:38]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:12:39]: Started GET "/api/search?q=" at 16/03/2023, 00:12:39
+[QUERY] [16/03/2023, 00:12:39]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:39]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:39]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:39]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:39]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:39]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:39]: Redirected 304 Not Modified in 11.98 ms
+[INFO] [16/03/2023, 00:12:40]: Started GET "/search?q=" at 16/03/2023, 00:12:40
+[QUERY] [16/03/2023, 00:12:40]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:40]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:40]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:40]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:40]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:40]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:40]: Success 200 OK in 39.97 ms
+[INFO] [16/03/2023, 00:12:40]: Started GET "/api/search?q=" at 16/03/2023, 00:12:40
+[QUERY] [16/03/2023, 00:12:40]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:40]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:40]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:40]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:40]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:40]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:40]: Redirected 304 Not Modified in 22.85 ms
+[INFO] [16/03/2023, 00:12:41]: Started GET "/api/search?q=d" at 16/03/2023, 00:12:41
+[QUERY] [16/03/2023, 00:12:41]: SELECT * FROM companies WHERE name LIKE '%d%' OR address LIKE '%d%' OR number_of_employees LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:41]: SELECT * FROM employees WHERE first_name LIKE '%d%' OR last_name LIKE '%d%' OR title LIKE '%d%' OR salary LIKE '%d%' OR sick_leave_hours LIKE '%d%' OR annual_leave_hours LIKE '%d%' OR employer_id LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:41]: SELECT * FROM users WHERE first_name LIKE '%d%' OR last_name LIKE '%d%' OR email LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:41]: SELECT * FROM comments WHERE blog_id LIKE '%d%' OR body LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:41]: SELECT * FROM blogs WHERE title LIKE '%d%' OR body LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:41]: SELECT * FROM animals WHERE name LIKE '%d%' OR color LIKE '%d%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:41]: Success 200 OK in 21.34 ms
+[INFO] [16/03/2023, 00:12:42]: Started GET "/api/search?q=ds" at 16/03/2023, 00:12:42
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM companies WHERE name LIKE '%ds%' OR address LIKE '%ds%' OR number_of_employees LIKE '%ds%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM employees WHERE first_name LIKE '%ds%' OR last_name LIKE '%ds%' OR title LIKE '%ds%' OR salary LIKE '%ds%' OR sick_leave_hours LIKE '%ds%' OR annual_leave_hours LIKE '%ds%' OR employer_id LIKE '%ds%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM users WHERE first_name LIKE '%ds%' OR last_name LIKE '%ds%' OR email LIKE '%ds%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM comments WHERE blog_id LIKE '%ds%' OR body LIKE '%ds%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM blogs WHERE title LIKE '%ds%' OR body LIKE '%ds%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM animals WHERE name LIKE '%ds%' OR color LIKE '%ds%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:42]: Success 200 OK in 17.32 ms
+[INFO] [16/03/2023, 00:12:42]: Started GET "/api/search?q=d" at 16/03/2023, 00:12:42
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM companies WHERE name LIKE '%d%' OR address LIKE '%d%' OR number_of_employees LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM employees WHERE first_name LIKE '%d%' OR last_name LIKE '%d%' OR title LIKE '%d%' OR salary LIKE '%d%' OR sick_leave_hours LIKE '%d%' OR annual_leave_hours LIKE '%d%' OR employer_id LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM users WHERE first_name LIKE '%d%' OR last_name LIKE '%d%' OR email LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM comments WHERE blog_id LIKE '%d%' OR body LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM blogs WHERE title LIKE '%d%' OR body LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM animals WHERE name LIKE '%d%' OR color LIKE '%d%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:42]: Redirected 304 Not Modified in 34.84 ms
+[INFO] [16/03/2023, 00:12:42]: Started GET "/api/search?q=" at 16/03/2023, 00:12:42
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:42]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:42]: Redirected 304 Not Modified in 20.44 ms
+[INFO] [16/03/2023, 00:12:43]: Started GET "/api/search?q=" at 16/03/2023, 00:12:43
+[QUERY] [16/03/2023, 00:12:43]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:43]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:43]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:43]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:43]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:43]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:43]: Redirected 304 Not Modified in 8.05 ms
+[INFO] [16/03/2023, 00:12:43]: Started GET "/api/search?q=" at 16/03/2023, 00:12:43
+[QUERY] [16/03/2023, 00:12:43]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:43]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:43]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:43]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:43]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:43]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:43]: Redirected 304 Not Modified in 7.31 ms
+[INFO] [16/03/2023, 00:12:44]: Started GET "/api/search?q=" at 16/03/2023, 00:12:44
+[QUERY] [16/03/2023, 00:12:44]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:44]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:44]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:44]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:44]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:12:44]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:12:44]: Redirected 304 Not Modified in 8.39 ms
+[INFO] [16/03/2023, 00:14:13]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:14:13]: Server started on port 3000
+[INFO] [16/03/2023, 00:14:13]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:14:13]: Started GET "/api/search?q=" at 16/03/2023, 00:14:13
+[QUERY] [16/03/2023, 00:14:13]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:13]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:13]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:13]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:13]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:13]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:14:13]: Redirected 304 Not Modified in 27.34 ms
+[INFO] [16/03/2023, 00:14:14]: Started GET "/search?q=" at 16/03/2023, 00:14:14
+[QUERY] [16/03/2023, 00:14:14]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:14]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:14]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:14]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:14]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:14]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:14:14]: Success 200 OK in 20.1 ms
+[INFO] [16/03/2023, 00:14:17]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 16/03/2023, 00:14:17
+[INFO] [16/03/2023, 00:14:17]: Client Error 404 Not Found in 12.14 ms
+[INFO] [16/03/2023, 00:14:18]: Started GET "/assets/css/bootstrap.min.css.map" at 16/03/2023, 00:14:18
+[INFO] [16/03/2023, 00:14:18]: Client Error 404 Not Found in 33.28 ms
+[INFO] [16/03/2023, 00:14:19]: Started GET "/api/search?q=" at 16/03/2023, 00:14:19
+[QUERY] [16/03/2023, 00:14:19]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:19]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:19]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:19]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:19]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:19]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:14:19]: Redirected 304 Not Modified in 22.2 ms
+[INFO] [16/03/2023, 00:14:20]: Started GET "/api/search?q=f" at 16/03/2023, 00:14:20
+[QUERY] [16/03/2023, 00:14:20]: SELECT * FROM companies WHERE name LIKE '%f%' OR address LIKE '%f%' OR number_of_employees LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:20]: SELECT * FROM employees WHERE first_name LIKE '%f%' OR last_name LIKE '%f%' OR title LIKE '%f%' OR salary LIKE '%f%' OR sick_leave_hours LIKE '%f%' OR annual_leave_hours LIKE '%f%' OR employer_id LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:20]: SELECT * FROM users WHERE first_name LIKE '%f%' OR last_name LIKE '%f%' OR email LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:20]: SELECT * FROM comments WHERE blog_id LIKE '%f%' OR body LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:20]: SELECT * FROM blogs WHERE title LIKE '%f%' OR body LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:20]: SELECT * FROM animals WHERE name LIKE '%f%' OR color LIKE '%f%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:14:20]: Success 200 OK in 16.32 ms
+[INFO] [16/03/2023, 00:14:28]: Started GET "/api/search?q=f" at 16/03/2023, 00:14:28
+[QUERY] [16/03/2023, 00:14:28]: SELECT * FROM companies WHERE name LIKE '%f%' OR address LIKE '%f%' OR number_of_employees LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:28]: SELECT * FROM employees WHERE first_name LIKE '%f%' OR last_name LIKE '%f%' OR title LIKE '%f%' OR salary LIKE '%f%' OR sick_leave_hours LIKE '%f%' OR annual_leave_hours LIKE '%f%' OR employer_id LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:28]: SELECT * FROM users WHERE first_name LIKE '%f%' OR last_name LIKE '%f%' OR email LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:28]: SELECT * FROM comments WHERE blog_id LIKE '%f%' OR body LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:28]: SELECT * FROM blogs WHERE title LIKE '%f%' OR body LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:28]: SELECT * FROM animals WHERE name LIKE '%f%' OR color LIKE '%f%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:14:28]: Redirected 304 Not Modified in 14.34 ms
+[INFO] [16/03/2023, 00:14:29]: Started GET "/api/search?q=f" at 16/03/2023, 00:14:29
+[QUERY] [16/03/2023, 00:14:29]: SELECT * FROM companies WHERE name LIKE '%f%' OR address LIKE '%f%' OR number_of_employees LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:29]: SELECT * FROM employees WHERE first_name LIKE '%f%' OR last_name LIKE '%f%' OR title LIKE '%f%' OR salary LIKE '%f%' OR sick_leave_hours LIKE '%f%' OR annual_leave_hours LIKE '%f%' OR employer_id LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:29]: SELECT * FROM users WHERE first_name LIKE '%f%' OR last_name LIKE '%f%' OR email LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:29]: SELECT * FROM comments WHERE blog_id LIKE '%f%' OR body LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:29]: SELECT * FROM blogs WHERE title LIKE '%f%' OR body LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:29]: SELECT * FROM animals WHERE name LIKE '%f%' OR color LIKE '%f%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:14:29]: Redirected 304 Not Modified in 7.51 ms
+[INFO] [16/03/2023, 00:14:51]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:14:51]: Server started on port 3000
+[INFO] [16/03/2023, 00:14:51]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:14:53]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:14:53]: Server started on port 3000
+[INFO] [16/03/2023, 00:14:53]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:14:56]: Started GET "/api/search?q=f" at 16/03/2023, 00:14:56
+[QUERY] [16/03/2023, 00:14:56]: SELECT * FROM companies WHERE name LIKE '%f%' OR address LIKE '%f%' OR number_of_employees LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:56]: SELECT * FROM employees WHERE first_name LIKE '%f%' OR last_name LIKE '%f%' OR title LIKE '%f%' OR salary LIKE '%f%' OR sick_leave_hours LIKE '%f%' OR annual_leave_hours LIKE '%f%' OR employer_id LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:56]: SELECT * FROM users WHERE first_name LIKE '%f%' OR last_name LIKE '%f%' OR email LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:56]: SELECT * FROM comments WHERE blog_id LIKE '%f%' OR body LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:56]: SELECT * FROM blogs WHERE title LIKE '%f%' OR body LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:56]: SELECT * FROM animals WHERE name LIKE '%f%' OR color LIKE '%f%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:14:56]: Redirected 304 Not Modified in 12.13 ms
+[INFO] [16/03/2023, 00:14:57]: Started GET "/search?q=" at 16/03/2023, 00:14:57
+[QUERY] [16/03/2023, 00:14:57]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:57]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:57]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:57]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:57]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:57]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:14:57]: Success 200 OK in 35.26 ms
+[INFO] [16/03/2023, 00:14:58]: Started GET "/api/search?q=" at 16/03/2023, 00:14:58
+[QUERY] [16/03/2023, 00:14:58]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:58]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:58]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:58]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:58]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:58]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:14:58]: Redirected 304 Not Modified in 21.73 ms
+[INFO] [16/03/2023, 00:14:58]: Started GET "/api/search?q=d" at 16/03/2023, 00:14:58
+[QUERY] [16/03/2023, 00:14:58]: SELECT * FROM companies WHERE name LIKE '%d%' OR address LIKE '%d%' OR number_of_employees LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:58]: SELECT * FROM employees WHERE first_name LIKE '%d%' OR last_name LIKE '%d%' OR title LIKE '%d%' OR salary LIKE '%d%' OR sick_leave_hours LIKE '%d%' OR annual_leave_hours LIKE '%d%' OR employer_id LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:58]: SELECT * FROM users WHERE first_name LIKE '%d%' OR last_name LIKE '%d%' OR email LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:58]: SELECT * FROM comments WHERE blog_id LIKE '%d%' OR body LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:58]: SELECT * FROM blogs WHERE title LIKE '%d%' OR body LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:14:58]: SELECT * FROM animals WHERE name LIKE '%d%' OR color LIKE '%d%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:14:58]: Redirected 304 Not Modified in 20.84 ms
+[INFO] [16/03/2023, 00:15:01]: Started GET "/api/search?q=d" at 16/03/2023, 00:15:01
+[QUERY] [16/03/2023, 00:15:01]: SELECT * FROM companies WHERE name LIKE '%d%' OR address LIKE '%d%' OR number_of_employees LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:01]: SELECT * FROM employees WHERE first_name LIKE '%d%' OR last_name LIKE '%d%' OR title LIKE '%d%' OR salary LIKE '%d%' OR sick_leave_hours LIKE '%d%' OR annual_leave_hours LIKE '%d%' OR employer_id LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:01]: SELECT * FROM users WHERE first_name LIKE '%d%' OR last_name LIKE '%d%' OR email LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:01]: SELECT * FROM comments WHERE blog_id LIKE '%d%' OR body LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:01]: SELECT * FROM blogs WHERE title LIKE '%d%' OR body LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:01]: SELECT * FROM animals WHERE name LIKE '%d%' OR color LIKE '%d%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:01]: Redirected 304 Not Modified in 8.29 ms
+[INFO] [16/03/2023, 00:15:17]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:15:17]: Server started on port 3000
+[INFO] [16/03/2023, 00:15:17]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:15:18]: Started GET "/api/search?q=d" at 16/03/2023, 00:15:18
+[QUERY] [16/03/2023, 00:15:18]: SELECT * FROM companies WHERE name LIKE '%d%' OR address LIKE '%d%' OR number_of_employees LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:18]: SELECT * FROM employees WHERE first_name LIKE '%d%' OR last_name LIKE '%d%' OR title LIKE '%d%' OR salary LIKE '%d%' OR sick_leave_hours LIKE '%d%' OR annual_leave_hours LIKE '%d%' OR employer_id LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:18]: SELECT * FROM users WHERE first_name LIKE '%d%' OR last_name LIKE '%d%' OR email LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:18]: SELECT * FROM comments WHERE blog_id LIKE '%d%' OR body LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:18]: SELECT * FROM blogs WHERE title LIKE '%d%' OR body LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:18]: SELECT * FROM animals WHERE name LIKE '%d%' OR color LIKE '%d%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:18]: Redirected 304 Not Modified in 10.66 ms
+[INFO] [16/03/2023, 00:15:19]: Started GET "/api/search?q=d" at 16/03/2023, 00:15:19
+[INFO] [16/03/2023, 00:15:19]: Started GET "/search?q=" at 16/03/2023, 00:15:19
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM companies WHERE name LIKE '%d%' OR address LIKE '%d%' OR number_of_employees LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM employees WHERE first_name LIKE '%d%' OR last_name LIKE '%d%' OR title LIKE '%d%' OR salary LIKE '%d%' OR sick_leave_hours LIKE '%d%' OR annual_leave_hours LIKE '%d%' OR employer_id LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM users WHERE first_name LIKE '%d%' OR last_name LIKE '%d%' OR email LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM comments WHERE blog_id LIKE '%d%' OR body LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM blogs WHERE title LIKE '%d%' OR body LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM animals WHERE name LIKE '%d%' OR color LIKE '%d%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:19]: Redirected 304 Not Modified in 10.83 ms
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:19]: Success 200 OK in 22.99 ms
+[INFO] [16/03/2023, 00:15:19]: Started GET "/api/search?q=" at 16/03/2023, 00:15:19
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:19]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:19]: Redirected 304 Not Modified in 20.82 ms
+[INFO] [16/03/2023, 00:15:23]: Started GET "/api/search?q=" at 16/03/2023, 00:15:23
+[QUERY] [16/03/2023, 00:15:23]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:23]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:23]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:23]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:23]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:23]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:23]: Redirected 304 Not Modified in 8.86 ms
+[INFO] [16/03/2023, 00:15:27]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:15:27]: Server started on port 3000
+[INFO] [16/03/2023, 00:15:27]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:15:28]: Started GET "/api/search?q=" at 16/03/2023, 00:15:28
+[QUERY] [16/03/2023, 00:15:28]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:28]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:28]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:28]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:28]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:28]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:28]: Redirected 304 Not Modified in 12.56 ms
+[INFO] [16/03/2023, 00:15:29]: Started GET "/api/search?q=" at 16/03/2023, 00:15:29
+[INFO] [16/03/2023, 00:15:29]: Started GET "/search?q=" at 16/03/2023, 00:15:29
+[QUERY] [16/03/2023, 00:15:29]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:29]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:29]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:29]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:29]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:29]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:29]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:29]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:29]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:29]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:29]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:29]: Redirected 304 Not Modified in 36.18 ms
+[QUERY] [16/03/2023, 00:15:29]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:29]: Success 200 OK in 47.57 ms
+[INFO] [16/03/2023, 00:15:30]: Started GET "/api/search?q=" at 16/03/2023, 00:15:30
+[QUERY] [16/03/2023, 00:15:30]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:30]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:30]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:30]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:30]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:30]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:30]: Redirected 304 Not Modified in 22.33 ms
+[INFO] [16/03/2023, 00:15:32]: Started GET "/api/search?q=" at 16/03/2023, 00:15:32
+[QUERY] [16/03/2023, 00:15:32]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:32]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:32]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:32]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:32]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:32]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:32]: Redirected 304 Not Modified in 10.18 ms
+[INFO] [16/03/2023, 00:15:39]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:15:39]: Server started on port 3000
+[INFO] [16/03/2023, 00:15:39]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:15:39]: Started GET "/api/search?q=" at 16/03/2023, 00:15:39
+[QUERY] [16/03/2023, 00:15:39]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:39]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:39]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:39]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:39]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:39]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:39]: Redirected 304 Not Modified in 11.68 ms
+[INFO] [16/03/2023, 00:15:40]: Started GET "/api/search?q=" at 16/03/2023, 00:15:40
+[INFO] [16/03/2023, 00:15:40]: Started GET "/search?q=" at 16/03/2023, 00:15:40
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:40]: Redirected 304 Not Modified in 9.79 ms
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:40]: Success 200 OK in 22.25 ms
+[INFO] [16/03/2023, 00:15:40]: Started GET "/api/search?q=" at 16/03/2023, 00:15:40
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:40]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:40]: Redirected 304 Not Modified in 16.76 ms
+[INFO] [16/03/2023, 00:15:42]: Started GET "/api/search?q=" at 16/03/2023, 00:15:42
+[QUERY] [16/03/2023, 00:15:42]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:42]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:42]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:42]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:42]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:42]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:42]: Redirected 304 Not Modified in 7.94 ms
+[INFO] [16/03/2023, 00:15:44]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:15:44]: Server started on port 3000
+[INFO] [16/03/2023, 00:15:44]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:15:44]: Started GET "/api/search?q=" at 16/03/2023, 00:15:44
+[QUERY] [16/03/2023, 00:15:44]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:44]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:44]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:44]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:44]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:44]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:44]: Redirected 304 Not Modified in 12.01 ms
+[INFO] [16/03/2023, 00:15:45]: Started GET "/api/search?q=" at 16/03/2023, 00:15:45
+[INFO] [16/03/2023, 00:15:45]: Started GET "/search?q=" at 16/03/2023, 00:15:45
+[QUERY] [16/03/2023, 00:15:45]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:45]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:45]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:45]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:45]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:45]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:45]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:45]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:45]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:45]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:45]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:45]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:45]: Redirected 304 Not Modified in 8.69 ms
+[INFO] [16/03/2023, 00:15:45]: Success 200 OK in 17.03 ms
+[INFO] [16/03/2023, 00:15:46]: Started GET "/api/search?q=" at 16/03/2023, 00:15:46
+[QUERY] [16/03/2023, 00:15:46]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:46]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:46]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:46]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:46]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:46]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:46]: Redirected 304 Not Modified in 25.6 ms
+[INFO] [16/03/2023, 00:15:53]: Started GET "/api/search?q=b" at 16/03/2023, 00:15:53
+[QUERY] [16/03/2023, 00:15:53]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:53]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:53]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:53]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:53]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:53]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:53]: Success 200 OK in 4.46 ms
+[INFO] [16/03/2023, 00:15:54]: Started GET "/api/search?q=bl" at 16/03/2023, 00:15:54
+[QUERY] [16/03/2023, 00:15:54]: SELECT * FROM companies WHERE name LIKE '%bl%' OR address LIKE '%bl%' OR number_of_employees LIKE '%bl%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:54]: SELECT * FROM employees WHERE first_name LIKE '%bl%' OR last_name LIKE '%bl%' OR title LIKE '%bl%' OR salary LIKE '%bl%' OR sick_leave_hours LIKE '%bl%' OR annual_leave_hours LIKE '%bl%' OR employer_id LIKE '%bl%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:54]: SELECT * FROM users WHERE first_name LIKE '%bl%' OR last_name LIKE '%bl%' OR email LIKE '%bl%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:54]: SELECT * FROM comments WHERE blog_id LIKE '%bl%' OR body LIKE '%bl%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:54]: SELECT * FROM blogs WHERE title LIKE '%bl%' OR body LIKE '%bl%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:15:54]: SELECT * FROM animals WHERE name LIKE '%bl%' OR color LIKE '%bl%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:15:54]: Success 200 OK in 20.87 ms
+[INFO] [16/03/2023, 00:16:07]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:16:07]: Server started on port 3000
+[INFO] [16/03/2023, 00:16:07]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:16:09]: Started GET "/search?q=" at 16/03/2023, 00:16:09
+[QUERY] [16/03/2023, 00:16:09]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:09]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:09]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:09]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:09]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:09]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:16:09]: Success 200 OK in 23.15 ms
+[INFO] [16/03/2023, 00:16:10]: Started GET "/api/search?q=" at 16/03/2023, 00:16:10
+[QUERY] [16/03/2023, 00:16:10]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:10]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:10]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:10]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:10]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:10]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:16:10]: Redirected 304 Not Modified in 32.4 ms
+[INFO] [16/03/2023, 00:16:12]: Started GET "/api/search?q=" at 16/03/2023, 00:16:12
+[QUERY] [16/03/2023, 00:16:12]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:12]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:12]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:12]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:12]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:12]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:16:12]: Redirected 304 Not Modified in 8.74 ms
+[INFO] [16/03/2023, 00:16:16]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:16:16]: Server started on port 3000
+[INFO] [16/03/2023, 00:16:16]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:16:17]: Started GET "/api/search?q=" at 16/03/2023, 00:16:17
+[QUERY] [16/03/2023, 00:16:17]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:17]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:17]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:17]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:17]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:17]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:16:17]: Redirected 304 Not Modified in 11.9 ms
+[INFO] [16/03/2023, 00:16:18]: Started GET "/search?q=" at 16/03/2023, 00:16:18
+[QUERY] [16/03/2023, 00:16:18]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:18]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:18]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:18]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:18]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:18]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:16:18]: Success 200 OK in 37.3 ms
+[INFO] [16/03/2023, 00:16:18]: Started GET "/api/search?q=" at 16/03/2023, 00:16:18
+[QUERY] [16/03/2023, 00:16:18]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:18]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:18]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:18]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:18]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:18]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:16:18]: Redirected 304 Not Modified in 20.14 ms
+[INFO] [16/03/2023, 00:16:20]: Started GET "/api/search?q=" at 16/03/2023, 00:16:20
+[QUERY] [16/03/2023, 00:16:20]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:20]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:20]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:20]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:20]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:20]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:16:20]: Redirected 304 Not Modified in 7.59 ms
+[INFO] [16/03/2023, 00:16:20]: Started GET "/api/search?q=" at 16/03/2023, 00:16:20
+[QUERY] [16/03/2023, 00:16:20]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:20]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:20]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:20]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:20]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:16:20]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:16:20]: Redirected 304 Not Modified in 6.29 ms
+[INFO] [16/03/2023, 00:17:32]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:17:32]: Server started on port 3000
+[INFO] [16/03/2023, 00:17:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:17:35]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:17:35]: Server started on port 3000
+[INFO] [16/03/2023, 00:17:35]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:17:38]: Started GET "/api/search?q=" at 16/03/2023, 00:17:38
+[QUERY] [16/03/2023, 00:17:38]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:38]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:38]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:38]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:38]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:38]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:17:38]: Redirected 304 Not Modified in 23.11 ms
+[INFO] [16/03/2023, 00:17:40]: Started GET "/search?q=" at 16/03/2023, 00:17:40
+[QUERY] [16/03/2023, 00:17:40]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:40]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:40]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:40]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:40]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:40]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:17:40]: Success 200 OK in 34.83 ms
+[INFO] [16/03/2023, 00:17:41]: Started GET "/api/search?q=" at 16/03/2023, 00:17:41
+[QUERY] [16/03/2023, 00:17:41]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:41]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:41]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:41]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:41]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:41]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:17:41]: Redirected 304 Not Modified in 20.17 ms
+[INFO] [16/03/2023, 00:17:42]: Started GET "/api/search?q=" at 16/03/2023, 00:17:42
+[QUERY] [16/03/2023, 00:17:42]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:42]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:42]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:42]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:42]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:17:42]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:17:42]: Redirected 304 Not Modified in 6.35 ms
+[INFO] [16/03/2023, 00:17:59]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:17:59]: Server started on port 3000
+[INFO] [16/03/2023, 00:17:59]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:18:00]: Started GET "/api/search?q=" at 16/03/2023, 00:18:00
+[QUERY] [16/03/2023, 00:18:00]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:00]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:00]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:00]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:00]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:00]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:00]: Redirected 304 Not Modified in 12.72 ms
+[INFO] [16/03/2023, 00:18:01]: Started GET "/search?q=" at 16/03/2023, 00:18:01
+[QUERY] [16/03/2023, 00:18:01]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:01]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:01]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:01]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:01]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:01]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:01]: Success 200 OK in 33.59 ms
+[INFO] [16/03/2023, 00:18:02]: Started GET "/api/search?q=" at 16/03/2023, 00:18:02
+[QUERY] [16/03/2023, 00:18:02]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:02]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:02]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:02]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:02]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:02]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:02]: Redirected 304 Not Modified in 24.04 ms
+[INFO] [16/03/2023, 00:18:05]: Started GET "/api/search?q=" at 16/03/2023, 00:18:05
+[QUERY] [16/03/2023, 00:18:05]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:05]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:05]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:05]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:05]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:05]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:05]: Redirected 304 Not Modified in 8.67 ms
+[INFO] [16/03/2023, 00:18:15]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:18:15]: Server started on port 3000
+[INFO] [16/03/2023, 00:18:15]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:18:15]: Started GET "/api/search?q=" at 16/03/2023, 00:18:15
+[QUERY] [16/03/2023, 00:18:15]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:15]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:15]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:15]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:15]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:15]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:15]: Redirected 304 Not Modified in 11.5 ms
+[INFO] [16/03/2023, 00:18:16]: Started GET "/search?q=" at 16/03/2023, 00:18:16
+[INFO] [16/03/2023, 00:18:16]: Started GET "/api/search?q=" at 16/03/2023, 00:18:16
+[QUERY] [16/03/2023, 00:18:16]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:16]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:16]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:16]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:16]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:16]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:16]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:16]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:16]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:16]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:16]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:16]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:16]: Success 200 OK in 25.04 ms
+[INFO] [16/03/2023, 00:18:16]: Redirected 304 Not Modified in 24.77 ms
+[INFO] [16/03/2023, 00:18:17]: Started GET "/api/search?q=" at 16/03/2023, 00:18:17
+[QUERY] [16/03/2023, 00:18:17]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:17]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:17]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:17]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:17]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:17]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:17]: Redirected 304 Not Modified in 19.65 ms
+[INFO] [16/03/2023, 00:18:25]: Started GET "/api/search?q=" at 16/03/2023, 00:18:25
+[QUERY] [16/03/2023, 00:18:25]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:25]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:25]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:25]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:25]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:25]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:25]: Redirected 304 Not Modified in 21.54 ms
+[INFO] [16/03/2023, 00:18:29]: Started GET "/api/search?q=" at 16/03/2023, 00:18:29
+[QUERY] [16/03/2023, 00:18:29]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:29]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:29]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:29]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:29]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:29]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:29]: Redirected 304 Not Modified in 24.18 ms
+[INFO] [16/03/2023, 00:18:30]: Started GET "/api/search?q=" at 16/03/2023, 00:18:30
+[QUERY] [16/03/2023, 00:18:30]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:30]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:30]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:30]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:30]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:30]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:30]: Redirected 304 Not Modified in 25.71 ms
+[INFO] [16/03/2023, 00:18:31]: Started GET "/api/search?q=" at 16/03/2023, 00:18:31
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:31]: Redirected 304 Not Modified in 30.5 ms
+[INFO] [16/03/2023, 00:18:31]: Started GET "/api/search?q=" at 16/03/2023, 00:18:31
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:31]: Redirected 304 Not Modified in 21.21 ms
+[INFO] [16/03/2023, 00:18:31]: Started GET "/api/search?q=" at 16/03/2023, 00:18:31
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:31]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:31]: Redirected 304 Not Modified in 26.86 ms
+[INFO] [16/03/2023, 00:18:33]: Started GET "/api/search?q=" at 16/03/2023, 00:18:33
+[QUERY] [16/03/2023, 00:18:33]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:33]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:33]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:33]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:33]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:33]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:33]: Redirected 304 Not Modified in 11.61 ms
+[INFO] [16/03/2023, 00:18:33]: Started GET "/api/search?q=" at 16/03/2023, 00:18:33
+[QUERY] [16/03/2023, 00:18:33]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:33]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:33]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:33]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:33]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:33]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:33]: Redirected 304 Not Modified in 6.95 ms
+[INFO] [16/03/2023, 00:18:35]: Started GET "/search?q=" at 16/03/2023, 00:18:35
+[QUERY] [16/03/2023, 00:18:35]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:35]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:35]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:35]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:35]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:35]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:36]: Success 200 OK in 28.49 ms
+[INFO] [16/03/2023, 00:18:36]: Started GET "/api/search?q=" at 16/03/2023, 00:18:36
+[QUERY] [16/03/2023, 00:18:36]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:36]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:36]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:36]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:36]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:36]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:36]: Redirected 304 Not Modified in 5.88 ms
+[INFO] [16/03/2023, 00:18:37]: Started GET "/api/search?q=f" at 16/03/2023, 00:18:37
+[QUERY] [16/03/2023, 00:18:37]: SELECT * FROM companies WHERE name LIKE '%f%' OR address LIKE '%f%' OR number_of_employees LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:37]: SELECT * FROM employees WHERE first_name LIKE '%f%' OR last_name LIKE '%f%' OR title LIKE '%f%' OR salary LIKE '%f%' OR sick_leave_hours LIKE '%f%' OR annual_leave_hours LIKE '%f%' OR employer_id LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:37]: SELECT * FROM users WHERE first_name LIKE '%f%' OR last_name LIKE '%f%' OR email LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:37]: SELECT * FROM comments WHERE blog_id LIKE '%f%' OR body LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:37]: SELECT * FROM blogs WHERE title LIKE '%f%' OR body LIKE '%f%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:37]: SELECT * FROM animals WHERE name LIKE '%f%' OR color LIKE '%f%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:37]: Redirected 304 Not Modified in 18.5 ms
+[INFO] [16/03/2023, 00:18:41]: Started GET "/api/search?q=" at 16/03/2023, 00:18:41
+[QUERY] [16/03/2023, 00:18:41]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:41]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:41]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:41]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:41]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:41]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:41]: Redirected 304 Not Modified in 5.59 ms
+[INFO] [16/03/2023, 00:18:42]: Started GET "/api/search?q=b" at 16/03/2023, 00:18:42
+[QUERY] [16/03/2023, 00:18:42]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:42]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:42]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:42]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:42]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:42]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:42]: Redirected 304 Not Modified in 24.96 ms
+[INFO] [16/03/2023, 00:18:44]: Started GET "/search?q=b" at 16/03/2023, 00:18:44
+[QUERY] [16/03/2023, 00:18:44]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:44]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:44]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:44]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:44]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:18:44]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:18:44]: Success 200 OK in 24.73 ms
+[INFO] [16/03/2023, 00:19:34]: Started GET "/search?q=b" at 16/03/2023, 00:19:34
+[QUERY] [16/03/2023, 00:19:34]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:19:34]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:19:34]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:19:34]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:19:34]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:19:34]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:19:34]: Success 200 OK in 28.7 ms
+[INFO] [16/03/2023, 00:19:36]: Started GET "/search?q=b" at 16/03/2023, 00:19:36
+[QUERY] [16/03/2023, 00:19:36]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:19:36]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:19:36]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:19:36]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:19:36]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:19:36]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:19:36]: Success 200 OK in 26.15 ms
+[INFO] [16/03/2023, 00:20:23]: Started GET "/search?q=b" at 16/03/2023, 00:20:23
+[QUERY] [16/03/2023, 00:20:23]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:20:23]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:20:23]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:20:23]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:20:23]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:20:23]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:20:23]: Success 200 OK in 26.86 ms
+[INFO] [16/03/2023, 00:20:31]: Started GET "/search?q=b" at 16/03/2023, 00:20:31
+[QUERY] [16/03/2023, 00:20:31]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:20:31]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:20:31]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:20:31]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:20:31]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:20:31]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:20:31]: Success 200 OK in 8.72 ms
+[INFO] [16/03/2023, 00:21:03]: Started GET "/search?q=b" at 16/03/2023, 00:21:03
+[QUERY] [16/03/2023, 00:21:03]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:03]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:03]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:03]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:03]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:03]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:21:03]: Success 200 OK in 31.36 ms
+[INFO] [16/03/2023, 00:21:10]: Started GET "/search?q=b" at 16/03/2023, 00:21:10
+[QUERY] [16/03/2023, 00:21:10]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:10]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:10]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:10]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:10]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:10]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:21:10]: Success 200 OK in 22.82 ms
+[INFO] [16/03/2023, 00:21:22]: Started GET "/search?q=b" at 16/03/2023, 00:21:22
+[QUERY] [16/03/2023, 00:21:22]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:22]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:22]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:22]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:22]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:22]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:21:22]: Success 200 OK in 26.32 ms
+[INFO] [16/03/2023, 00:21:43]: Started GET "/search?q=b" at 16/03/2023, 00:21:43
+[QUERY] [16/03/2023, 00:21:43]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:43]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:43]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:43]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:43]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:21:43]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:21:43]: Success 200 OK in 12.1 ms
+[INFO] [16/03/2023, 00:22:09]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 16/03/2023, 00:22:09
+[INFO] [16/03/2023, 00:22:09]: Client Error 404 Not Found in 9.1 ms
+[INFO] [16/03/2023, 00:22:09]: Started GET "/assets/css/bootstrap.min.css.map" at 16/03/2023, 00:22:09
+[INFO] [16/03/2023, 00:22:09]: Client Error 404 Not Found in 4.16 ms
+[INFO] [16/03/2023, 00:22:30]: Started GET "/search?q=b" at 16/03/2023, 00:22:30
+[QUERY] [16/03/2023, 00:22:30]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:22:30]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:22:30]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:22:30]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:22:30]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:22:30]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:22:30]: Success 200 OK in 29.05 ms
+[INFO] [16/03/2023, 00:22:30]: Started GET "/assets/css/bootstrap.min.css.map" at 16/03/2023, 00:22:30
+[INFO] [16/03/2023, 00:22:30]: Client Error 404 Not Found in 6.21 ms
+[INFO] [16/03/2023, 00:22:30]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 16/03/2023, 00:22:30
+[INFO] [16/03/2023, 00:22:30]: Client Error 404 Not Found in 4.64 ms
+[INFO] [16/03/2023, 00:22:39]: Started GET "/search?q=b" at 16/03/2023, 00:22:39
+[QUERY] [16/03/2023, 00:22:39]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:22:39]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:22:39]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:22:39]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:22:39]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:22:39]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:22:39]: Success 200 OK in 12.08 ms
+[INFO] [16/03/2023, 00:22:43]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 16/03/2023, 00:22:43
+[INFO] [16/03/2023, 00:22:43]: Client Error 404 Not Found in 10.64 ms
+[INFO] [16/03/2023, 00:22:43]: Started GET "/assets/css/bootstrap.min.css.map" at 16/03/2023, 00:22:43
+[INFO] [16/03/2023, 00:22:43]: Client Error 404 Not Found in 5.18 ms
+[INFO] [16/03/2023, 00:23:06]: Started GET "/search?q=b" at 16/03/2023, 00:23:06
+[QUERY] [16/03/2023, 00:23:06]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:23:06]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:23:06]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:23:06]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:23:06]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:23:06]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:23:06]: Success 200 OK in 27.02 ms
+[INFO] [16/03/2023, 00:24:23]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:24:23]: Server started on port 3000
+[INFO] [16/03/2023, 00:24:23]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:24:27]: Started GET "/search?q=b" at 16/03/2023, 00:24:27
+[QUERY] [16/03/2023, 00:24:27]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:24:27]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:24:27]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:24:27]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:24:27]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:24:27]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:24:27]: Success 200 OK in 28.35 ms
+[INFO] [16/03/2023, 00:26:44]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:26:44]: Server started on port 3000
+[INFO] [16/03/2023, 00:26:44]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:26:46]: Started GET "/search?q=b" at 16/03/2023, 00:26:46
+[QUERY] [16/03/2023, 00:26:46]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:26:46]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:26:46]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:26:46]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:26:46]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:26:46]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:26:46]: Success 200 OK in 25.65 ms
+[INFO] [16/03/2023, 00:27:51]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:27:51]: Server started on port 3000
+[INFO] [16/03/2023, 00:27:51]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:29:15]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:29:15]: Server started on port 3000
+[INFO] [16/03/2023, 00:29:15]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:29:17]: Started GET "/api/search?q=b" at 16/03/2023, 00:29:17
+[QUERY] [16/03/2023, 00:29:17]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:17]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:17]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:17]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:17]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:17]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:29:17]: Success 200 OK in 11.62 ms
+[INFO] [16/03/2023, 00:29:18]: Started GET "/api/search?q=b" at 16/03/2023, 00:29:18
+[QUERY] [16/03/2023, 00:29:18]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:18]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:18]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:18]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:18]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:18]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:29:18]: Redirected 304 Not Modified in 5.59 ms
+[INFO] [16/03/2023, 00:29:24]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:29:24]: Server started on port 3000
+[INFO] [16/03/2023, 00:29:24]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:29:24]: Started GET "/api/search?q=b" at 16/03/2023, 00:29:24
+[QUERY] [16/03/2023, 00:29:24]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:24]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:24]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:24]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:24]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:24]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:29:24]: Success 200 OK in 11.36 ms
+[INFO] [16/03/2023, 00:29:25]: Started GET "/api/search?q=b" at 16/03/2023, 00:29:25
+[QUERY] [16/03/2023, 00:29:25]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:25]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:25]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:25]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:25]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:25]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:29:25]: Redirected 304 Not Modified in 7.74 ms
+[INFO] [16/03/2023, 00:29:27]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:29:27]: Server started on port 3000
+[INFO] [16/03/2023, 00:29:27]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:29:27]: Started GET "/api/search?q=b" at 16/03/2023, 00:29:27
+[QUERY] [16/03/2023, 00:29:27]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:27]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:27]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:27]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:27]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:27]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:29:27]: Success 200 OK in 10.32 ms
+[INFO] [16/03/2023, 00:29:29]: Started GET "/api/search?q=b" at 16/03/2023, 00:29:29
+[QUERY] [16/03/2023, 00:29:29]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:29]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:29]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:29]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:29]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:29:29]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:29:29]: Redirected 304 Not Modified in 8.7 ms
+[INFO] [16/03/2023, 00:30:28]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:30:28]: Server started on port 3000
+[INFO] [16/03/2023, 00:30:28]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:30:55]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:30:55]: Server started on port 3000
+[INFO] [16/03/2023, 00:30:55]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:31:01]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:31:01]: Server started on port 3000
+[INFO] [16/03/2023, 00:31:01]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:31:16]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:31:16]: Server started on port 3000
+[INFO] [16/03/2023, 00:31:16]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:32:15]: Started GET "/api/search?q=b" at 16/03/2023, 00:32:15
+[QUERY] [16/03/2023, 00:32:15]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:32:30]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:32:30]: Server started on port 3000
+[INFO] [16/03/2023, 00:32:30]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:32:33]: Started GET "/search?q=b" at 16/03/2023, 00:32:33
+[QUERY] [16/03/2023, 00:32:33]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:33]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:33]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:33]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:33]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:33]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:32:33]: Success 200 OK in 26.84 ms
+[INFO] [16/03/2023, 00:32:35]: Started GET "/api/search?q=b" at 16/03/2023, 00:32:35
+[QUERY] [16/03/2023, 00:32:35]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:35]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:35]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:35]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:35]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:35]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:32:35]: Redirected 304 Not Modified in 27.52 ms
+[INFO] [16/03/2023, 00:32:37]: Started GET "/users/7?referer=%2Fsearch%3Fq%3Db" at 16/03/2023, 00:32:37
+[QUERY] [16/03/2023, 00:32:37]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[INFO] [16/03/2023, 00:32:37]: Success 200 OK in 25.43 ms
+[INFO] [16/03/2023, 00:32:38]: Started GET "/search?q=b" at 16/03/2023, 00:32:38
+[QUERY] [16/03/2023, 00:32:38]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:38]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:38]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:38]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:38]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:32:38]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:32:38]: Success 200 OK in 8.73 ms

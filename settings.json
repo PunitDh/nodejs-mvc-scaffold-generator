@@ -34,6 +34,10 @@
       "singular": {},
       "navLinks": {
         "overwrite": true
+      },
+      "search": {
+        "maxStringLength": 50,
+        "searchSuggestionLimit": 10
       }
     }
   }

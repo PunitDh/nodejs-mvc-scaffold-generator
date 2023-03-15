@@ -6,18 +6,26 @@ import DB from "../db.js";
 import SQLiteTable from "./SQLiteTable.js";
 import "../utils/js_utils.js";
 import LOGGER from "../logger.js";
+import SETTINGS from "../utils/settings.js";
 
 class SearchResult {
   constructor(searchTerm, table, data) {
     this.table = table;
     this.priority = 0;
     const result = {};
+    const { maxStringLength } = SETTINGS.views.pages.search;
     Object.entries(data.exclude(...SearchResultExcludedColumns)).map(
       ([key, value]) => {
         const regex = new RegExp(`(${searchTerm})`, "gi");
         this.priority += (value?.toString().match(regex) || []).length;
+        let sanitizedValue;
+        if (value?.toString().length > maxStringLength) {
+          sanitizedValue = value?.toString().slice(0, maxStringLength) + "...";
+        } else {
+          sanitizedValue = value?.toString();
+        }
         result[key] =
-          value?.toString().replace(regex, "<span class='mark'>$1</span>") ||
+          sanitizedValue?.replace(regex, "<span class='mark'>$1</span>") ||
           value;
       }
     );
@@ -55,7 +63,7 @@ class SearchResult {
    * @param {string} searchTerm
    * @returns List of SearchResult
    */
-  static async search(searchTerm) {
+  static async search(searchTerm, limit) {
     const tables = await this.__tables__;
     const sanitizedSearchTerm = searchTerm?.replaceAll("'", "''");
     const results = await tables.mapAsync(async (table) => {
@@ -74,7 +82,10 @@ class SearchResult {
         });
       });
     });
-    return results.flat().sort((a, b) => b.priority - a.priority);
+    return results
+      .flat()
+      .sort((a, b) => b.priority - a.priority)
+      .slice(0, limit);
   }
 }
 

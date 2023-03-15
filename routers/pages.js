@@ -1,5 +1,6 @@
 import { Router } from "express";
 import SearchResult from "../bin/domain/SearchResult.js";
+import SETTINGS from "../bin/utils/settings.js";
 
 const pages = Router();
 
@@ -26,7 +27,11 @@ pages.get("/search", async (req, res) => {
 });
 
 pages.get("/api/search", async (req, res) => {
-  const results = await SearchResult.search(req.query.q);
+  const { searchSuggestionLimit } = SETTINGS.views.pages.search;
+  const results = await SearchResult.search(
+    req.query.q,
+    searchSuggestionLimit || 10
+  );
   return res.status(200).send(results);
 });
 

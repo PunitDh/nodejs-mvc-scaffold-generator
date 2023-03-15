@@ -62,10 +62,23 @@ async function fetchSearchSuggestions(searchTerm) {
 }
 
 function createListElement(content) {
-  const listElement = document.createElement("a");
-  listElement.classList.add("list-group-item");
+  const aElement = document.createElement("a");
+  aElement.classList.add("list-group-item");
+  aElement.classList.add("d-flex");
+  aElement.classList.add("justify-content-between");
+  aElement.classList.add("align-items-center");
   const url = new URL(content.link, window.location.origin);
-  listElement.href = url.toString();
-  listElement.innerHTML = content.title;
-  return listElement;
+  aElement.href = url.toString();
+  // aElement.innerHTML = content.title;
+
+  const titleElement = document.createElement("span");
+  titleElement.innerHTML = content.title;
+  aElement.appendChild(titleElement);
+
+  const priorityElement = document.createElement("span");
+  priorityElement.style.color = "gray";
+  priorityElement.style.fontSize = "0.5rem";
+  priorityElement.textContent = `Priority: ${content.priority}`;
+  aElement.appendChild(priorityElement);
+  return aElement;
 }

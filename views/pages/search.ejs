@@ -12,7 +12,10 @@
           class="form-group d-flex"
           style="gap: 0.2rem"
         >
-          <div class="d-flex flex-column w-100 position-relative" id="search-group">
+          <div
+            class="d-flex flex-column w-100 position-relative"
+            id="search-group"
+          >
             <input
               type="search"
               id="search-bar"
@@ -21,8 +24,10 @@
               value="<%= locals.query %>"
               autocomplete="off"
             />
-            <ul class="list-group position-absolute w-100 top-100 d-none" id="search-suggestions-list">
-            </ul>
+            <ul
+              class="list-group position-absolute w-100 top-100 d-none"
+              id="search-suggestions-list"
+            ></ul>
           </div>
           <div class="input-group-append">
             <button type="submit" class="btn btn-outline-success">
@@ -30,14 +35,14 @@
             </button>
           </div>
         </form>
-        <% if (locals.query) { %>
         <div class="mt-4 text-center">
+          <% if (locals.query) { %>
           <h4>Search Results For "<%= locals.query %>"</h4>
+          <% } %>
           <div class="search-result-time">
             <%= locals.results?.length %> results (<%= locals.time %> s)
           </div>
         </div>
-        <% } %>
       </div>
     </div>
   </div>

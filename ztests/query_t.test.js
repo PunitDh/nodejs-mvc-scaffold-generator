@@ -69,7 +69,11 @@ class SQLQueryBuilder {
   }
 
   set() {
-    this.columns = [...arguments];
+    if (typeof arguments[0] === "object" && arguments[0] instanceof Array) {
+      this.columns = [...arguments[0]];
+    } else {
+      this.columns = [...arguments];
+    }
     return this;
   }
 
@@ -82,7 +86,11 @@ class SQLQueryBuilder {
   }
 
   values() {
-    this.vals = [...arguments];
+    if (typeof arguments[0] === "object" && arguments[0] instanceof Array) {
+      this.columns = [...arguments[0]];
+    } else {
+      this.columns = [...arguments];
+    }
     return this;
   }
 
@@ -108,23 +116,21 @@ class SQLQueryBuilder {
       ? ` RETURNING ${this.returningValue.join(", ")}`
       : "";
     const columns = this.columns?.join(", ");
-    const valueMap = this.vals?.map((val) => `'${val}'`);
+    const values = this.columns?.map((col) => `$${col}`).join(", ");
     const setClause =
-      valueMap &&
+      values &&
       ` SET ${this.columns?.map((col) => `${col}=$${col}`).join(", ")}`;
     const limitClause = this.lim ? ` LIMIT ${this.lim}` : "";
     const orderBy = this.order?.columns
       .map((column, i) => `${column} ${this.order.type[i]}`)
       .join(", ");
-    const orderClause = orderBy ? ` ORDER BY ${orderBy}` : "";
-    const values = valueMap?.join(", ");
+    const orderClause = orderBy ? ` ORDER BY ${orderBy}` : " ORDER BY id ASC";
 
     console.log({
       action: this.action,
       whereClause,
       returningClause,
       columns,
-      valueMap,
       setClause,
       limitClause,
       values,
@@ -135,7 +141,7 @@ class SQLQueryBuilder {
       case QueryAction.SELECT:
         return `${this.action} ${columns} FROM ${this.table}${whereClause}${limitClause}${orderClause};\n`;
       case QueryAction.INSERT:
-        return `${this.action} ${this.table} (${columns}) VALUES (${values});\n`;
+        return `${this.action} ${this.table} (${columns}) VALUES (${values})${returningClause};\n`;
       case QueryAction.UPDATE:
         return `${this.action} ${this.table}${setClause}${whereClause}${returningClause};\n`;
       case QueryAction.DELETE:

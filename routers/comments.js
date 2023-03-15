@@ -11,17 +11,17 @@ comments.get("/", async (req, res, next) => {
     const comments = await Comment.all();
     return res.render("comments/index", { comments });
   } catch (e) {
-    next(e)
+    next(e);
   }
 });
 
 comments.get("/new", async (req, res, next) => {
   try {
-    const blogs = await Blog.all();
     const comment = new Comment();
+    const blogs = await Blog.all();
     return res.render("comments/new", { comment, blogs });
   } catch (e) {
-    next(e)
+    next(e);
   }
 });
 
@@ -31,7 +31,7 @@ comments.get("/edit/:id", async (req, res, next) => {
     const blogs = await Blog.all();
     return res.render("comments/edit", { comment, blogs });
   } catch (e) {
-    next(e)
+    next(e);
   }
 });
 
@@ -41,7 +41,7 @@ comments.post("/edit/:id", async (req, res, next) => {
     req.flash("success", "Comment has been updated");
     return res.redirect(`/comments`);
   } catch (e) {
-    next(e)
+    next(e);
   }
 });
 
@@ -51,7 +51,7 @@ comments.post("/delete/:id", async (req, res, next) => {
     req.flash("success", "Comment has been deleted");
     return res.redirect("/comments");
   } catch (e) {
-    next(e)
+    next(e);
   }
 });
 
@@ -60,7 +60,7 @@ comments.get("/:id", async (req, res, next) => {
     const comment = await Comment.find(req.params.id);
     return res.render("comments/comment", { comment });
   } catch (e) {
-    next(e)
+    next(e);
   }
 });
 
@@ -70,7 +70,7 @@ comments.post("/new", async (req, res, next) => {
     req.flash("success", "Comment has been added");
     return res.redirect(`/comments`);
   } catch (e) {
-    next(e)
+    next(e);
   }
 });
 

@@ -154,7 +154,7 @@ export const PATHS = {
   deleteSqlTemplate: "delete.sql.template",
 };
 
-export const ReadOnlyColumns = ["id", "created_at", "updated_at"];
+export const ReadOnlyColumns = ["id", "created_at", "updated_at", "_csrf_token"];
 
 export const SearchExcludedColumns = [
   "id",

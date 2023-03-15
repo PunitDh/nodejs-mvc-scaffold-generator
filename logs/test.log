@@ -41283,3 +41283,339 @@ comment is not defined
 [INFO] [15/03/2023, 23:08:36]: Started GET "/animals/" at 15/03/2023, 23:08:36
 [QUERY] [15/03/2023, 23:08:36]: SELECT * FROM animals ORDER BY updated_at desc;
 [INFO] [15/03/2023, 23:08:36]: Success 200 OK in 13.18 ms
+[INFO] [15/03/2023, 23:11:59]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:11:59]: Server started on port 3000
+[INFO] [15/03/2023, 23:11:59]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:12:05]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:12:05]: Server started on port 3000
+[INFO] [15/03/2023, 23:12:05]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:19:58]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:19:58]: Server started on port 3000
+[INFO] [15/03/2023, 23:19:58]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:20:01]: Started GET "/animals/" at 15/03/2023, 23:20:01
+[QUERY] [15/03/2023, 23:20:01]: SELECT * FROM animals;
+
+[INFO] [15/03/2023, 23:20:01]: Success 200 OK in 15.4 ms
+[INFO] [15/03/2023, 23:20:03]: Started GET "/animals/" at 15/03/2023, 23:20:03
+[QUERY] [15/03/2023, 23:20:03]: SELECT * FROM animals;
+
+[INFO] [15/03/2023, 23:20:03]: Success 200 OK in 18.68 ms
+[INFO] [15/03/2023, 23:20:43]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:20:43]: Server started on port 3000
+[INFO] [15/03/2023, 23:20:43]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:20:46]: Started GET "/animals/" at 15/03/2023, 23:20:46
+[QUERY] [15/03/2023, 23:20:46]: SELECT * FROM animals ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:20:46]: Success 200 OK in 24.07 ms
+[INFO] [15/03/2023, 23:20:47]: Started GET "/animals/" at 15/03/2023, 23:20:47
+[QUERY] [15/03/2023, 23:20:47]: SELECT * FROM animals ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:20:47]: Success 200 OK in 17.29 ms
+[INFO] [15/03/2023, 23:20:55]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:20:55]: Server started on port 3000
+[INFO] [15/03/2023, 23:20:55]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:20:56]: Started GET "/animals/" at 15/03/2023, 23:20:56
+[QUERY] [15/03/2023, 23:20:56]: SELECT * FROM animals ORDER BY id DESC;
+
+[INFO] [15/03/2023, 23:20:56]: Success 200 OK in 31.52 ms
+[INFO] [15/03/2023, 23:21:01]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:21:01]: Server started on port 3000
+[INFO] [15/03/2023, 23:21:01]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:21:27]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:21:27]: Server started on port 3000
+[INFO] [15/03/2023, 23:21:27]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:22:39]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:22:39]: Server started on port 3000
+[INFO] [15/03/2023, 23:22:39]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:22:41]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:22:41]: Server started on port 3000
+[INFO] [15/03/2023, 23:22:41]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:23:22]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:23:22]: Server started on port 3000
+[INFO] [15/03/2023, 23:23:22]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:23:25]: Started GET "/animals/" at 15/03/2023, 23:23:25
+[QUERY] [15/03/2023, 23:23:25]: SELECT * FROM animals ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:23:25]: Success 200 OK in 22.6 ms
+[INFO] [15/03/2023, 23:23:26]: Started GET "/blogs/" at 15/03/2023, 23:23:26
+[QUERY] [15/03/2023, 23:23:26]: SELECT * FROM users WHERE id=$id ORDER BY id DESC;
+[QUERY] [15/03/2023, 23:23:26]: SELECT * FROM blogs ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:23:26]: Success 200 OK in 29.99 ms
+[INFO] [15/03/2023, 23:23:28]: Started GET "/blogs/1" at 15/03/2023, 23:23:28
+[QUERY] [15/03/2023, 23:23:28]: SELECT * FROM users WHERE id=$id ORDER BY id DESC;
+[QUERY] [15/03/2023, 23:23:28]: SELECT * FROM blogs WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:23:28]: SELECT * FROM comments WHERE blog_id=$blog_id ORDER BY id DESC;
+[INFO] [15/03/2023, 23:23:28]: Success 200 OK in 23.35 ms
+[INFO] [15/03/2023, 23:23:29]: Started GET "/blogs/" at 15/03/2023, 23:23:29
+[QUERY] [15/03/2023, 23:23:29]: SELECT * FROM users WHERE id=$id ORDER BY id DESC;
+[QUERY] [15/03/2023, 23:23:29]: SELECT * FROM blogs ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:23:29]: Success 200 OK in 23.26 ms
+[INFO] [15/03/2023, 23:25:34]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:25:34]: Server started on port 3000
+[INFO] [15/03/2023, 23:25:34]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:25:36]: Started GET "/comments/" at 15/03/2023, 23:25:36
+[QUERY] [15/03/2023, 23:25:36]: SELECT * FROM comments ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:25:36]: Success 200 OK in 20.23 ms
+[INFO] [15/03/2023, 23:25:38]: Started GET "/comments/new" at 15/03/2023, 23:25:38
+[QUERY] [15/03/2023, 23:25:38]: SELECT * FROM blogs ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:25:38]: Success 200 OK in 21.37 ms
+[INFO] [15/03/2023, 23:25:41]: Started POST "/comments/new" at 15/03/2023, 23:25:41
+[QUERY] [15/03/2023, 23:25:41]: INSERT INTO comments (blog_id,body) VALUES ($blog_id,body);
+
+[ERROR] [15/03/2023, 23:25:41]: Error: SQLITE_ERROR: no such column: body
+[ERROR] [15/03/2023, 23:25:41]: 400 Error: SQLITE_ERROR: no such column: body
+--> in Database#all('INSERT INTO comments (blog_id,body) VALUES ($blog_id,body);\n', [ '1', 'sdf' ], [Function (anonymous)])
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/model.js:239:10
+    at new Promise (<anonymous>)
+    at Comment.dbQuery (file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/model.js:237:12)
+    at Comment.create (file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/model.js:153:23)
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/routers/comments.js:69:19
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+[INFO] [15/03/2023, 23:25:41]: Redirected 302 Found in 3.54 ms
+[INFO] [15/03/2023, 23:29:09]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:29:09]: Server started on port 3000
+[INFO] [15/03/2023, 23:29:09]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:29:12]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:29:12]: Server started on port 3000
+[INFO] [15/03/2023, 23:29:12]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:29:15]: Started POST "/comments/new" at 15/03/2023, 23:29:15
+[INFO] [15/03/2023, 23:29:15]: Redirected 302 Found in 5.91 ms
+[INFO] [15/03/2023, 23:29:15]: Started GET "/comments/new" at 15/03/2023, 23:29:15
+[QUERY] [15/03/2023, 23:29:15]: SELECT * FROM blogs ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:29:15]: Success 200 OK in 7.69 ms
+[INFO] [15/03/2023, 23:29:20]: Started POST "/comments/new" at 15/03/2023, 23:29:20
+[QUERY] [15/03/2023, 23:29:20]: INSERT INTO comments (blog_id, body) VALUES ($blog_id, $body);
+
+[INFO] [15/03/2023, 23:29:20]: Redirected 302 Found in 11 ms
+[INFO] [15/03/2023, 23:29:20]: Started GET "/comments/" at 15/03/2023, 23:29:20
+[QUERY] [15/03/2023, 23:29:20]: SELECT * FROM comments ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:29:20]: Success 200 OK in 5.57 ms
+[INFO] [15/03/2023, 23:32:00]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:32:00]: Server started on port 3000
+[INFO] [15/03/2023, 23:32:00]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:32:04]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:32:04]: Server started on port 3000
+[INFO] [15/03/2023, 23:32:04]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:32:08]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:32:08]: Server started on port 3000
+[INFO] [15/03/2023, 23:32:08]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:32:41]: Started GET "/comments/edit/1" at 15/03/2023, 23:32:41
+[QUERY] [15/03/2023, 23:32:41]: SELECT * FROM comments WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:32:41]: SELECT * FROM blogs ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:32:41]: Success 200 OK in 19.97 ms
+[INFO] [15/03/2023, 23:32:42]: Started POST "/comments/edit/1" at 15/03/2023, 23:32:42
+[QUERY] [15/03/2023, 23:32:42]: UPDATE comments SET blog_id=$blog_id, body=$body WHERE id=$id;
+
+[INFO] [15/03/2023, 23:32:42]: Redirected 302 Found in 3.38 ms
+[INFO] [15/03/2023, 23:32:42]: Started GET "/comments/" at 15/03/2023, 23:32:42
+[QUERY] [15/03/2023, 23:32:42]: SELECT * FROM comments ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:32:42]: Success 200 OK in 4.76 ms
+[INFO] [15/03/2023, 23:34:41]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:34:41]: Server started on port 3000
+[INFO] [15/03/2023, 23:34:41]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:34:44]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:34:44]: Server started on port 3000
+[INFO] [15/03/2023, 23:34:44]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:35:27]: Started GET "/blogs/" at 15/03/2023, 23:35:27
+[INFO] [15/03/2023, 23:35:27]: Redirected 302 Found in 9.21 ms
+[INFO] [15/03/2023, 23:35:27]: Started GET "/users/login?referer=%2Fblogs%2F" at 15/03/2023, 23:35:27
+[INFO] [15/03/2023, 23:35:27]: Redirected 304 Not Modified in 4.86 ms
+[INFO] [15/03/2023, 23:35:28]: Started POST "/users/login?referer=/blogs/" at 15/03/2023, 23:35:28
+[INFO] [15/03/2023, 23:35:28]: Client Error 400 Bad Request in 1.19 ms
+[INFO] [15/03/2023, 23:35:36]: Started GET "/users/login?referer=/blogs/" at 15/03/2023, 23:35:36
+[INFO] [15/03/2023, 23:35:36]: Success 200 OK in 11.71 ms
+[INFO] [15/03/2023, 23:35:38]: Started POST "/users/login?referer=/blogs/" at 15/03/2023, 23:35:38
+[INFO] [15/03/2023, 23:35:38]: Client Error 400 Bad Request in 3.49 ms
+[INFO] [15/03/2023, 23:37:05]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:37:05]: Server started on port 3000
+[INFO] [15/03/2023, 23:37:05]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:37:10]: Started GET "/users/login?referer=/blogs/" at 15/03/2023, 23:37:10
+[INFO] [15/03/2023, 23:37:10]: Redirected 304 Not Modified in 11.48 ms
+[INFO] [15/03/2023, 23:37:11]: Started POST "/users/login?referer=/blogs/" at 15/03/2023, 23:37:11
+[QUERY] [15/03/2023, 23:37:11]: SELECT * FROM users WHERE email=$email ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:37:11]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token,  updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [15/03/2023, 23:37:11]: Redirected 302 Found in 71.15 ms
+[INFO] [15/03/2023, 23:37:11]: Started GET "/blogs/" at 15/03/2023, 23:37:11
+[QUERY] [15/03/2023, 23:37:11]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:37:11]: SELECT * FROM blogs ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:37:11]: Success 200 OK in 5.07 ms
+[INFO] [15/03/2023, 23:37:15]: Started GET "/blogs/1" at 15/03/2023, 23:37:15
+[QUERY] [15/03/2023, 23:37:15]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:37:15]: SELECT * FROM blogs WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:37:15]: SELECT * FROM comments WHERE blog_id=$blog_id ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:37:15]: Success 200 OK in 27.17 ms
+[INFO] [15/03/2023, 23:37:17]: Started GET "/blogs/" at 15/03/2023, 23:37:17
+[QUERY] [15/03/2023, 23:37:17]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:37:17]: SELECT * FROM blogs ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:37:17]: Success 200 OK in 15.62 ms
+[INFO] [15/03/2023, 23:37:19]: Started GET "/blogs/47" at 15/03/2023, 23:37:19
+[QUERY] [15/03/2023, 23:37:19]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:37:19]: SELECT * FROM blogs WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:37:19]: SELECT * FROM comments WHERE blog_id=$blog_id ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:37:19]: Success 200 OK in 20.6 ms
+[INFO] [15/03/2023, 23:37:20]: Started GET "/blogs/" at 15/03/2023, 23:37:20
+[QUERY] [15/03/2023, 23:37:20]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:37:20]: SELECT * FROM blogs ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:37:20]: Success 200 OK in 6.47 ms
+[INFO] [15/03/2023, 23:37:58]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:37:58]: Server started on port 3000
+[INFO] [15/03/2023, 23:37:58]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:38:01]: Started GET "/blogs/" at 15/03/2023, 23:38:01
+[QUERY] [15/03/2023, 23:38:01]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:38:01]: SELECT * FROM blogs ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:38:01]: Success 200 OK in 26.69 ms
+[INFO] [15/03/2023, 23:38:02]: Started GET "/comments/" at 15/03/2023, 23:38:02
+[QUERY] [15/03/2023, 23:38:03]: SELECT * FROM comments ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:38:03]: Success 200 OK in 22.33 ms
+[INFO] [15/03/2023, 23:38:07]: Started POST "/comments/delete/137" at 15/03/2023, 23:38:07
+[QUERY] [15/03/2023, 23:38:07]: DELETE FROM comments WHERE id=$id;
+
+[INFO] [15/03/2023, 23:38:07]: Redirected 302 Found in 6.04 ms
+[INFO] [15/03/2023, 23:38:07]: Started GET "/comments/" at 15/03/2023, 23:38:07
+[QUERY] [15/03/2023, 23:38:07]: SELECT * FROM comments ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:38:07]: Success 200 OK in 5.08 ms
+[INFO] [15/03/2023, 23:40:37]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:40:37]: Server started on port 3000
+[INFO] [15/03/2023, 23:40:37]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:40:40]: Started POST "/users/logout" at 15/03/2023, 23:40:40
+[INFO] [15/03/2023, 23:40:40]: Redirected 302 Found in 7.61 ms
+[INFO] [15/03/2023, 23:40:40]: Started GET "/users/login" at 15/03/2023, 23:40:40
+[INFO] [15/03/2023, 23:40:40]: Success 200 OK in 6.63 ms
+[INFO] [15/03/2023, 23:40:41]: Started POST "/users/login" at 15/03/2023, 23:40:41
+[QUERY] [15/03/2023, 23:40:41]: SELECT * FROM users WHERE email=$email ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:40:41]: UPDATE undefined SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token;
+
+[ERROR] [15/03/2023, 23:40:41]: Error: SQLITE_ERROR: no such table: undefined
+[INFO] [15/03/2023, 23:40:41]: Client Error 400 Bad Request in 78.81 ms
+[INFO] [15/03/2023, 23:40:58]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:40:58]: Server started on port 3000
+[INFO] [15/03/2023, 23:40:58]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:41:02]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:41:02]: Server started on port 3000
+[INFO] [15/03/2023, 23:41:02]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:41:05]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:41:05]: Server started on port 3000
+[INFO] [15/03/2023, 23:41:05]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:41:11]: Started GET "/users/login" at 15/03/2023, 23:41:11
+[INFO] [15/03/2023, 23:41:11]: Success 200 OK in 17.22 ms
+[INFO] [15/03/2023, 23:41:12]: Started POST "/users/login" at 15/03/2023, 23:41:12
+[QUERY] [15/03/2023, 23:41:12]: SELECT * FROM users WHERE email=$email ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:41:12]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, _csrf_token=$_csrf_token;
+
+[ERROR] [15/03/2023, 23:41:12]: Error: SQLITE_RANGE: column index out of range
+[INFO] [15/03/2023, 23:41:12]: Client Error 400 Bad Request in 81.32 ms
+[INFO] [15/03/2023, 23:41:37]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:41:37]: Server started on port 3000
+[INFO] [15/03/2023, 23:41:37]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:41:47]: Started GET "/users/login" at 15/03/2023, 23:41:47
+[INFO] [15/03/2023, 23:41:47]: Redirected 304 Not Modified in 16.25 ms
+[INFO] [15/03/2023, 23:41:48]: Started POST "/users/login" at 15/03/2023, 23:41:48
+[QUERY] [15/03/2023, 23:41:48]: SELECT * FROM users WHERE email=$email ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:41:48]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password;
+
+[ERROR] [15/03/2023, 23:41:48]: Error: SQLITE_RANGE: column index out of range
+[INFO] [15/03/2023, 23:41:48]: Client Error 400 Bad Request in 80.03 ms
+[INFO] [15/03/2023, 23:42:25]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:42:25]: Server started on port 3000
+[INFO] [15/03/2023, 23:42:25]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:42:28]: Started GET "/users/login" at 15/03/2023, 23:42:28
+[INFO] [15/03/2023, 23:42:28]: Redirected 304 Not Modified in 16.39 ms
+[INFO] [15/03/2023, 23:42:29]: Started POST "/users/login" at 15/03/2023, 23:42:29
+[QUERY] [15/03/2023, 23:42:29]: SELECT * FROM users WHERE email=$email ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:42:29]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password;
+
+[ERROR] [15/03/2023, 23:42:29]: Error: SQLITE_RANGE: column index out of range
+[INFO] [15/03/2023, 23:42:29]: Client Error 400 Bad Request in 71.76 ms
+[INFO] [15/03/2023, 23:43:19]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:43:19]: Server started on port 3000
+[INFO] [15/03/2023, 23:43:19]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:43:38]: Started GET "/users/login" at 15/03/2023, 23:43:38
+[INFO] [15/03/2023, 23:43:38]: Redirected 304 Not Modified in 15.9 ms
+[INFO] [15/03/2023, 23:43:39]: Started POST "/users/login" at 15/03/2023, 23:43:39
+[QUERY] [15/03/2023, 23:43:39]: SELECT * FROM users WHERE email=$email ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:43:39]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password WHERE id=$id;
+
+[INFO] [15/03/2023, 23:43:39]: Redirected 302 Found in 82.42 ms
+[INFO] [15/03/2023, 23:43:39]: Started GET "/users/" at 15/03/2023, 23:43:39
+[QUERY] [15/03/2023, 23:43:39]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:43:39]: SELECT * FROM users ORDER BY id ASC;
+
+[INFO] [15/03/2023, 23:43:39]: Success 200 OK in 5.2 ms
+[INFO] [15/03/2023, 23:43:44]: Started POST "/users/logout" at 15/03/2023, 23:43:44
+[INFO] [15/03/2023, 23:43:44]: Redirected 302 Found in 7.45 ms
+[INFO] [15/03/2023, 23:43:44]: Started GET "/users/login" at 15/03/2023, 23:43:44
+[INFO] [15/03/2023, 23:43:44]: Success 200 OK in 13.65 ms
+[INFO] [15/03/2023, 23:44:44]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:44:44]: Server started on port 3000
+[INFO] [15/03/2023, 23:44:44]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:46:09]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:46:09]: Server started on port 3000
+[INFO] [15/03/2023, 23:46:09]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:46:56]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:46:56]: Server started on port 3000
+[INFO] [15/03/2023, 23:46:56]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:47:19]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:47:19]: Server started on port 3000
+[INFO] [15/03/2023, 23:47:19]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:48:29]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:48:29]: Server started on port 3000
+[INFO] [15/03/2023, 23:48:29]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 23:48:31]: Started GET "/blogs/" at 15/03/2023, 23:48:31
+[INFO] [15/03/2023, 23:48:31]: Redirected 302 Found in 11.01 ms
+[INFO] [15/03/2023, 23:48:31]: Started GET "/users/login?referer=%2Fblogs%2F" at 15/03/2023, 23:48:31
+[INFO] [15/03/2023, 23:48:31]: Redirected 304 Not Modified in 6.29 ms
+[INFO] [15/03/2023, 23:48:32]: Started POST "/users/login?referer=/blogs/" at 15/03/2023, 23:48:32
+[QUERY] [15/03/2023, 23:48:32]: SELECT * FROM users WHERE email=$email ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:48:32]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password WHERE id=$id RETURNING *;
+
+[INFO] [15/03/2023, 23:48:32]: Redirected 302 Found in 84.32 ms
+[INFO] [15/03/2023, 23:48:32]: Started GET "/blogs/" at 15/03/2023, 23:48:32
+[QUERY] [15/03/2023, 23:48:32]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [15/03/2023, 23:48:32]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [15/03/2023, 23:48:32]: Success 200 OK in 6.34 ms
+[INFO] [15/03/2023, 23:48:38]: Started GET "/animals/" at 15/03/2023, 23:48:38
+[QUERY] [15/03/2023, 23:48:38]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [15/03/2023, 23:48:38]: Success 200 OK in 20.8 ms
+[INFO] [15/03/2023, 23:48:47]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 23:48:47]: Server started on port 3000
+[INFO] [15/03/2023, 23:48:47]: Foreign keys have been turned ON 

@@ -127,9 +127,9 @@ class SQLQueryBuilder {
       case QueryAction.SELECT:
         return `${this.action} ${columns} FROM ${this.table}${whereClause}${limitClause}${orderClause};\n`;
       case QueryAction.INSERT:
-        return `${this.action} ${this.table} (${columns}) VALUES (${values})${returningClause};\n`;
+        return `${this.action} ${this.table} (${columns}, created_at, updated_at) VALUES (${values}, DATETIME('now'), DATETIME('now'))${returningClause};\n`;
       case QueryAction.UPDATE:
-        return `${this.action} ${this.table}${setClause}${whereClause}${returningClause};\n`;
+        return `${this.action} ${this.table}${setClause}, updated_at=DATETIME('now') ${whereClause}${returningClause};\n`;
       case QueryAction.DELETE:
         return `${this.action} ${this.table}${whereClause}${returningClause};\n`;
       default:

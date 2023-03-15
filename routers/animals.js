@@ -65,7 +65,7 @@ animals.get("/:id", async (req, res) => {
   }
 });
 
-animals.post("/", async (req, res) => {
+animals.post("/new", async (req, res) => {
   try {
     const animal = new Animal(req.body);
     await animal.save();

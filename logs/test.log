@@ -42842,3 +42842,1533 @@ comment is not defined
 [QUERY] [16/03/2023, 00:32:38]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
 [QUERY] [16/03/2023, 00:32:38]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
 [INFO] [16/03/2023, 00:32:38]: Success 200 OK in 8.73 ms
+[INFO] [16/03/2023, 00:33:05]: Started GET "/search?q=b" at 16/03/2023, 00:33:05
+[QUERY] [16/03/2023, 00:33:05]: SELECT * FROM companies WHERE name LIKE '%b%' OR address LIKE '%b%' OR number_of_employees LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:05]: SELECT * FROM employees WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR title LIKE '%b%' OR salary LIKE '%b%' OR sick_leave_hours LIKE '%b%' OR annual_leave_hours LIKE '%b%' OR employer_id LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:05]: SELECT * FROM users WHERE first_name LIKE '%b%' OR last_name LIKE '%b%' OR email LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:05]: SELECT * FROM comments WHERE blog_id LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:05]: SELECT * FROM blogs WHERE title LIKE '%b%' OR body LIKE '%b%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:05]: SELECT * FROM animals WHERE name LIKE '%b%' OR color LIKE '%b%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:05]: Success 200 OK in 29.45 ms
+[INFO] [16/03/2023, 00:33:07]: Started GET "/search?q=" at 16/03/2023, 00:33:07
+[QUERY] [16/03/2023, 00:33:07]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:07]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:07]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:07]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:07]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:07]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:07]: Success 200 OK in 34.79 ms
+[INFO] [16/03/2023, 00:33:10]: Started GET "/api/search?q=" at 16/03/2023, 00:33:10
+[QUERY] [16/03/2023, 00:33:10]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:10]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:10]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:10]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:10]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:10]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:10]: Success 200 OK in 20.47 ms
+[INFO] [16/03/2023, 00:33:20]: Started GET "/api/search?q=" at 16/03/2023, 00:33:20
+[QUERY] [16/03/2023, 00:33:20]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:20]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:20]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:20]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:20]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:20]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:20]: Redirected 304 Not Modified in 22.85 ms
+[INFO] [16/03/2023, 00:33:22]: Started GET "/api/search?q=g" at 16/03/2023, 00:33:22
+[QUERY] [16/03/2023, 00:33:22]: SELECT * FROM companies WHERE name LIKE '%g%' OR address LIKE '%g%' OR number_of_employees LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:22]: SELECT * FROM employees WHERE first_name LIKE '%g%' OR last_name LIKE '%g%' OR title LIKE '%g%' OR salary LIKE '%g%' OR sick_leave_hours LIKE '%g%' OR annual_leave_hours LIKE '%g%' OR employer_id LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:22]: SELECT * FROM users WHERE first_name LIKE '%g%' OR last_name LIKE '%g%' OR email LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:22]: SELECT * FROM comments WHERE blog_id LIKE '%g%' OR body LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:22]: SELECT * FROM blogs WHERE title LIKE '%g%' OR body LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:22]: SELECT * FROM animals WHERE name LIKE '%g%' OR color LIKE '%g%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:22]: Success 200 OK in 20.63 ms
+[INFO] [16/03/2023, 00:33:22]: Started GET "/api/search?q=gu" at 16/03/2023, 00:33:22
+[QUERY] [16/03/2023, 00:33:23]: SELECT * FROM companies WHERE name LIKE '%gu%' OR address LIKE '%gu%' OR number_of_employees LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:23]: SELECT * FROM employees WHERE first_name LIKE '%gu%' OR last_name LIKE '%gu%' OR title LIKE '%gu%' OR salary LIKE '%gu%' OR sick_leave_hours LIKE '%gu%' OR annual_leave_hours LIKE '%gu%' OR employer_id LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:23]: SELECT * FROM users WHERE first_name LIKE '%gu%' OR last_name LIKE '%gu%' OR email LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:23]: SELECT * FROM comments WHERE blog_id LIKE '%gu%' OR body LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:23]: SELECT * FROM blogs WHERE title LIKE '%gu%' OR body LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:23]: SELECT * FROM animals WHERE name LIKE '%gu%' OR color LIKE '%gu%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:23]: Success 200 OK in 30.33 ms
+[INFO] [16/03/2023, 00:33:23]: Started GET "/search?q=gu" at 16/03/2023, 00:33:23
+[QUERY] [16/03/2023, 00:33:23]: SELECT * FROM companies WHERE name LIKE '%gu%' OR address LIKE '%gu%' OR number_of_employees LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:23]: SELECT * FROM employees WHERE first_name LIKE '%gu%' OR last_name LIKE '%gu%' OR title LIKE '%gu%' OR salary LIKE '%gu%' OR sick_leave_hours LIKE '%gu%' OR annual_leave_hours LIKE '%gu%' OR employer_id LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:23]: SELECT * FROM users WHERE first_name LIKE '%gu%' OR last_name LIKE '%gu%' OR email LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:23]: SELECT * FROM comments WHERE blog_id LIKE '%gu%' OR body LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:23]: SELECT * FROM blogs WHERE title LIKE '%gu%' OR body LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:23]: SELECT * FROM animals WHERE name LIKE '%gu%' OR color LIKE '%gu%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:23]: Success 200 OK in 20.56 ms
+[INFO] [16/03/2023, 00:33:24]: Started GET "/api/search?q=gu" at 16/03/2023, 00:33:24
+[QUERY] [16/03/2023, 00:33:24]: SELECT * FROM companies WHERE name LIKE '%gu%' OR address LIKE '%gu%' OR number_of_employees LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:24]: SELECT * FROM employees WHERE first_name LIKE '%gu%' OR last_name LIKE '%gu%' OR title LIKE '%gu%' OR salary LIKE '%gu%' OR sick_leave_hours LIKE '%gu%' OR annual_leave_hours LIKE '%gu%' OR employer_id LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:24]: SELECT * FROM users WHERE first_name LIKE '%gu%' OR last_name LIKE '%gu%' OR email LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:24]: SELECT * FROM comments WHERE blog_id LIKE '%gu%' OR body LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:24]: SELECT * FROM blogs WHERE title LIKE '%gu%' OR body LIKE '%gu%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:24]: SELECT * FROM animals WHERE name LIKE '%gu%' OR color LIKE '%gu%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:24]: Redirected 304 Not Modified in 24.97 ms
+[INFO] [16/03/2023, 00:33:24]: Started GET "/api/search?q=g" at 16/03/2023, 00:33:24
+[QUERY] [16/03/2023, 00:33:24]: SELECT * FROM companies WHERE name LIKE '%g%' OR address LIKE '%g%' OR number_of_employees LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:24]: SELECT * FROM employees WHERE first_name LIKE '%g%' OR last_name LIKE '%g%' OR title LIKE '%g%' OR salary LIKE '%g%' OR sick_leave_hours LIKE '%g%' OR annual_leave_hours LIKE '%g%' OR employer_id LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:24]: SELECT * FROM users WHERE first_name LIKE '%g%' OR last_name LIKE '%g%' OR email LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:24]: SELECT * FROM comments WHERE blog_id LIKE '%g%' OR body LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:24]: SELECT * FROM blogs WHERE title LIKE '%g%' OR body LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:24]: SELECT * FROM animals WHERE name LIKE '%g%' OR color LIKE '%g%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:25]: Redirected 304 Not Modified in 21.34 ms
+[INFO] [16/03/2023, 00:33:25]: Started GET "/api/search?q=go" at 16/03/2023, 00:33:25
+[QUERY] [16/03/2023, 00:33:25]: SELECT * FROM companies WHERE name LIKE '%go%' OR address LIKE '%go%' OR number_of_employees LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:25]: SELECT * FROM employees WHERE first_name LIKE '%go%' OR last_name LIKE '%go%' OR title LIKE '%go%' OR salary LIKE '%go%' OR sick_leave_hours LIKE '%go%' OR annual_leave_hours LIKE '%go%' OR employer_id LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:25]: SELECT * FROM users WHERE first_name LIKE '%go%' OR last_name LIKE '%go%' OR email LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:25]: SELECT * FROM comments WHERE blog_id LIKE '%go%' OR body LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:25]: SELECT * FROM blogs WHERE title LIKE '%go%' OR body LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:25]: SELECT * FROM animals WHERE name LIKE '%go%' OR color LIKE '%go%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:25]: Success 200 OK in 21.82 ms
+[INFO] [16/03/2023, 00:33:25]: Started GET "/search?q=go" at 16/03/2023, 00:33:25
+[QUERY] [16/03/2023, 00:33:25]: SELECT * FROM companies WHERE name LIKE '%go%' OR address LIKE '%go%' OR number_of_employees LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:25]: SELECT * FROM employees WHERE first_name LIKE '%go%' OR last_name LIKE '%go%' OR title LIKE '%go%' OR salary LIKE '%go%' OR sick_leave_hours LIKE '%go%' OR annual_leave_hours LIKE '%go%' OR employer_id LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:25]: SELECT * FROM users WHERE first_name LIKE '%go%' OR last_name LIKE '%go%' OR email LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:25]: SELECT * FROM comments WHERE blog_id LIKE '%go%' OR body LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:25]: SELECT * FROM blogs WHERE title LIKE '%go%' OR body LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:25]: SELECT * FROM animals WHERE name LIKE '%go%' OR color LIKE '%go%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:25]: Success 200 OK in 6.48 ms
+[INFO] [16/03/2023, 00:33:26]: Started GET "/api/search?q=go" at 16/03/2023, 00:33:26
+[QUERY] [16/03/2023, 00:33:27]: SELECT * FROM companies WHERE name LIKE '%go%' OR address LIKE '%go%' OR number_of_employees LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:27]: SELECT * FROM employees WHERE first_name LIKE '%go%' OR last_name LIKE '%go%' OR title LIKE '%go%' OR salary LIKE '%go%' OR sick_leave_hours LIKE '%go%' OR annual_leave_hours LIKE '%go%' OR employer_id LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:27]: SELECT * FROM users WHERE first_name LIKE '%go%' OR last_name LIKE '%go%' OR email LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:27]: SELECT * FROM comments WHERE blog_id LIKE '%go%' OR body LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:27]: SELECT * FROM blogs WHERE title LIKE '%go%' OR body LIKE '%go%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:27]: SELECT * FROM animals WHERE name LIKE '%go%' OR color LIKE '%go%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:27]: Redirected 304 Not Modified in 16.12 ms
+[INFO] [16/03/2023, 00:33:27]: Started GET "/api/search?q=g" at 16/03/2023, 00:33:27
+[QUERY] [16/03/2023, 00:33:27]: SELECT * FROM companies WHERE name LIKE '%g%' OR address LIKE '%g%' OR number_of_employees LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:27]: SELECT * FROM employees WHERE first_name LIKE '%g%' OR last_name LIKE '%g%' OR title LIKE '%g%' OR salary LIKE '%g%' OR sick_leave_hours LIKE '%g%' OR annual_leave_hours LIKE '%g%' OR employer_id LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:27]: SELECT * FROM users WHERE first_name LIKE '%g%' OR last_name LIKE '%g%' OR email LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:27]: SELECT * FROM comments WHERE blog_id LIKE '%g%' OR body LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:27]: SELECT * FROM blogs WHERE title LIKE '%g%' OR body LIKE '%g%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:27]: SELECT * FROM animals WHERE name LIKE '%g%' OR color LIKE '%g%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:27]: Redirected 304 Not Modified in 25.57 ms
+[INFO] [16/03/2023, 00:33:30]: Started GET "/api/search?q=" at 16/03/2023, 00:33:30
+[QUERY] [16/03/2023, 00:33:30]: SELECT * FROM companies WHERE name LIKE '%%' OR address LIKE '%%' OR number_of_employees LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:30]: SELECT * FROM employees WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR title LIKE '%%' OR salary LIKE '%%' OR sick_leave_hours LIKE '%%' OR annual_leave_hours LIKE '%%' OR employer_id LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:30]: SELECT * FROM users WHERE first_name LIKE '%%' OR last_name LIKE '%%' OR email LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:30]: SELECT * FROM comments WHERE blog_id LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:30]: SELECT * FROM blogs WHERE title LIKE '%%' OR body LIKE '%%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:30]: SELECT * FROM animals WHERE name LIKE '%%' OR color LIKE '%%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:30]: Redirected 304 Not Modified in 18.51 ms
+[INFO] [16/03/2023, 00:33:32]: Started GET "/api/search?q=x" at 16/03/2023, 00:33:32
+[QUERY] [16/03/2023, 00:33:32]: SELECT * FROM companies WHERE name LIKE '%x%' OR address LIKE '%x%' OR number_of_employees LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:32]: SELECT * FROM employees WHERE first_name LIKE '%x%' OR last_name LIKE '%x%' OR title LIKE '%x%' OR salary LIKE '%x%' OR sick_leave_hours LIKE '%x%' OR annual_leave_hours LIKE '%x%' OR employer_id LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:32]: SELECT * FROM users WHERE first_name LIKE '%x%' OR last_name LIKE '%x%' OR email LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:32]: SELECT * FROM comments WHERE blog_id LIKE '%x%' OR body LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:32]: SELECT * FROM blogs WHERE title LIKE '%x%' OR body LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:32]: SELECT * FROM animals WHERE name LIKE '%x%' OR color LIKE '%x%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:32]: Success 200 OK in 20.06 ms
+[INFO] [16/03/2023, 00:33:32]: Started GET "/search?q=x" at 16/03/2023, 00:33:32
+[QUERY] [16/03/2023, 00:33:32]: SELECT * FROM companies WHERE name LIKE '%x%' OR address LIKE '%x%' OR number_of_employees LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:32]: SELECT * FROM employees WHERE first_name LIKE '%x%' OR last_name LIKE '%x%' OR title LIKE '%x%' OR salary LIKE '%x%' OR sick_leave_hours LIKE '%x%' OR annual_leave_hours LIKE '%x%' OR employer_id LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:32]: SELECT * FROM users WHERE first_name LIKE '%x%' OR last_name LIKE '%x%' OR email LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:32]: SELECT * FROM comments WHERE blog_id LIKE '%x%' OR body LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:32]: SELECT * FROM blogs WHERE title LIKE '%x%' OR body LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:33:32]: SELECT * FROM animals WHERE name LIKE '%x%' OR color LIKE '%x%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:33:32]: Success 200 OK in 23.33 ms
+[INFO] [16/03/2023, 00:33:36]: Started GET "/blogs/49?referer=%2Fsearch%3Fq%3Dx" at 16/03/2023, 00:33:36
+[QUERY] [16/03/2023, 00:33:36]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:33:36]: SELECT * FROM blogs WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:33:36]: SELECT * FROM comments WHERE blog_id=$blog_id ORDER BY id ASC;
+
+[INFO] [16/03/2023, 00:33:36]: Success 200 OK in 30.41 ms
+[INFO] [16/03/2023, 00:34:09]: Started GET "/search?q=x" at 16/03/2023, 00:34:09
+[QUERY] [16/03/2023, 00:34:09]: SELECT * FROM companies WHERE name LIKE '%x%' OR address LIKE '%x%' OR number_of_employees LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:09]: SELECT * FROM employees WHERE first_name LIKE '%x%' OR last_name LIKE '%x%' OR title LIKE '%x%' OR salary LIKE '%x%' OR sick_leave_hours LIKE '%x%' OR annual_leave_hours LIKE '%x%' OR employer_id LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:09]: SELECT * FROM users WHERE first_name LIKE '%x%' OR last_name LIKE '%x%' OR email LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:10]: SELECT * FROM comments WHERE blog_id LIKE '%x%' OR body LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:10]: SELECT * FROM blogs WHERE title LIKE '%x%' OR body LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:10]: SELECT * FROM animals WHERE name LIKE '%x%' OR color LIKE '%x%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:34:10]: Success 200 OK in 24.46 ms
+[INFO] [16/03/2023, 00:34:13]: Started GET "/comments/139?referer=%2Fsearch%3Fq%3Dx" at 16/03/2023, 00:34:13
+[QUERY] [16/03/2023, 00:34:13]: SELECT * FROM comments WHERE id=$id ORDER BY id ASC;
+
+[INFO] [16/03/2023, 00:34:13]: Success 200 OK in 11.44 ms
+[INFO] [16/03/2023, 00:34:14]: Started GET "/search?q=x" at 16/03/2023, 00:34:14
+[QUERY] [16/03/2023, 00:34:15]: SELECT * FROM companies WHERE name LIKE '%x%' OR address LIKE '%x%' OR number_of_employees LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:15]: SELECT * FROM employees WHERE first_name LIKE '%x%' OR last_name LIKE '%x%' OR title LIKE '%x%' OR salary LIKE '%x%' OR sick_leave_hours LIKE '%x%' OR annual_leave_hours LIKE '%x%' OR employer_id LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:15]: SELECT * FROM users WHERE first_name LIKE '%x%' OR last_name LIKE '%x%' OR email LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:15]: SELECT * FROM comments WHERE blog_id LIKE '%x%' OR body LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:15]: SELECT * FROM blogs WHERE title LIKE '%x%' OR body LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:15]: SELECT * FROM animals WHERE name LIKE '%x%' OR color LIKE '%x%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:34:15]: Success 200 OK in 23.11 ms
+[INFO] [16/03/2023, 00:34:19]: Started GET "/api/search?q=x" at 16/03/2023, 00:34:19
+[QUERY] [16/03/2023, 00:34:19]: SELECT * FROM companies WHERE name LIKE '%x%' OR address LIKE '%x%' OR number_of_employees LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:19]: SELECT * FROM employees WHERE first_name LIKE '%x%' OR last_name LIKE '%x%' OR title LIKE '%x%' OR salary LIKE '%x%' OR sick_leave_hours LIKE '%x%' OR annual_leave_hours LIKE '%x%' OR employer_id LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:19]: SELECT * FROM users WHERE first_name LIKE '%x%' OR last_name LIKE '%x%' OR email LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:19]: SELECT * FROM comments WHERE blog_id LIKE '%x%' OR body LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:19]: SELECT * FROM blogs WHERE title LIKE '%x%' OR body LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:19]: SELECT * FROM animals WHERE name LIKE '%x%' OR color LIKE '%x%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:34:19]: Redirected 304 Not Modified in 26.58 ms
+[INFO] [16/03/2023, 00:34:21]: Started GET "/blogs/48?referer=%2Fsearch%3Fq%3Dx" at 16/03/2023, 00:34:21
+[QUERY] [16/03/2023, 00:34:21]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:34:21]: SELECT * FROM blogs WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:34:21]: SELECT * FROM comments WHERE blog_id=$blog_id ORDER BY id ASC;
+
+[INFO] [16/03/2023, 00:34:21]: Success 200 OK in 33.91 ms
+[INFO] [16/03/2023, 00:34:23]: Started GET "/search?q=x" at 16/03/2023, 00:34:23
+[QUERY] [16/03/2023, 00:34:23]: SELECT * FROM companies WHERE name LIKE '%x%' OR address LIKE '%x%' OR number_of_employees LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:23]: SELECT * FROM employees WHERE first_name LIKE '%x%' OR last_name LIKE '%x%' OR title LIKE '%x%' OR salary LIKE '%x%' OR sick_leave_hours LIKE '%x%' OR annual_leave_hours LIKE '%x%' OR employer_id LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:23]: SELECT * FROM users WHERE first_name LIKE '%x%' OR last_name LIKE '%x%' OR email LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:23]: SELECT * FROM comments WHERE blog_id LIKE '%x%' OR body LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:23]: SELECT * FROM blogs WHERE title LIKE '%x%' OR body LIKE '%x%' ORDER BY updated_at DESC;
+[QUERY] [16/03/2023, 00:34:23]: SELECT * FROM animals WHERE name LIKE '%x%' OR color LIKE '%x%' ORDER BY updated_at DESC;
+[INFO] [16/03/2023, 00:34:23]: Success 200 OK in 25.87 ms
+[INFO] [16/03/2023, 00:34:25]: Started POST "/users/logout" at 16/03/2023, 00:34:25
+[INFO] [16/03/2023, 00:34:25]: Redirected 302 Found in 3.24 ms
+[INFO] [16/03/2023, 00:34:25]: Started GET "/users/login" at 16/03/2023, 00:34:25
+[INFO] [16/03/2023, 00:34:25]: Redirected 304 Not Modified in 3.43 ms
+[INFO] [16/03/2023, 00:34:26]: Started POST "/users/login" at 16/03/2023, 00:34:26
+[QUERY] [16/03/2023, 00:34:26]: SELECT * FROM users WHERE email=$email ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:34:26]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:34:26]: Redirected 302 Found in 71.3 ms
+[INFO] [16/03/2023, 00:34:26]: Started GET "/users/" at 16/03/2023, 00:34:26
+[QUERY] [16/03/2023, 00:34:26]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:34:26]: SELECT * FROM users ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:34:26]: Success 200 OK in 3.68 ms
+[INFO] [16/03/2023, 00:38:40]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:38:40]: Server started on port 3000
+[INFO] [16/03/2023, 00:38:40]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:39:08]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:39:08]: Server started on port 3000
+[INFO] [16/03/2023, 00:39:08]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:39:11]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:39:11]: Server started on port 3000
+[INFO] [16/03/2023, 00:39:11]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:41:12]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:41:12]: Server started on port 3000
+[INFO] [16/03/2023, 00:41:12]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:41:16]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:41:16]: Server started on port 3000
+[INFO] [16/03/2023, 00:41:16]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:41:22]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 00:41:22]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:22]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:22]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:41:23]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO comments (blog_id, body) VALUES ($blog_id, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO companies (name, address, number_of_employees) VALUES ($name, $address, $number_of_employees) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO comments (blog_id, body) VALUES ($blog_id, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO companies (name, address, number_of_employees) VALUES ($name, $address, $number_of_employees) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO comments (blog_id, body) VALUES ($blog_id, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO companies (name, address, number_of_employees) VALUES ($name, $address, $number_of_employees) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO comments (blog_id, body) VALUES ($blog_id, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO companies (name, address, number_of_employees) VALUES ($name, $address, $number_of_employees) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO comments (blog_id, body) VALUES ($blog_id, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO companies (name, address, number_of_employees) VALUES ($name, $address, $number_of_employees) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO comments (blog_id, body) VALUES ($blog_id, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO companies (name, address, number_of_employees) VALUES ($name, $address, $number_of_employees) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO comments (blog_id, body) VALUES ($blog_id, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO companies (name, address, number_of_employees) VALUES ($name, $address, $number_of_employees) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO comments (blog_id, body) VALUES ($blog_id, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:41:23]: INSERT INTO comments (blog_id, body) VALUES ($blog_id, $body) RETURNING *;
+
+[INFO] [16/03/2023, 00:41:27]: Started GET "/about" at 16/03/2023, 00:41:27
+[INFO] [16/03/2023, 00:41:27]: Redirected 304 Not Modified in 17.78 ms
+[INFO] [16/03/2023, 00:41:28]: Started GET "/animals/" at 16/03/2023, 00:41:28
+[QUERY] [16/03/2023, 00:41:28]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:41:28]: Success 200 OK in 19.52 ms
+[INFO] [16/03/2023, 00:42:45]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:42:45]: Server started on port 3000
+[INFO] [16/03/2023, 00:42:45]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:42:51]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 00:42:51]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:14]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:43:14]: Server started on port 3000
+[INFO] [16/03/2023, 00:43:14]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:43:27]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:43:27]: Server started on port 3000
+[INFO] [16/03/2023, 00:43:27]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:43:32]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:33]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO comments (blog_id, body) VALUES ($blog_id, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO companies (name, address, number_of_employees) VALUES ($name, $address, $number_of_employees) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[QUERY] [16/03/2023, 00:43:33]: INSERT INTO blogs (title, body) VALUES ($title, $body) RETURNING *;
+
+[INFO] [16/03/2023, 00:43:36]: Started GET "/animals/" at 16/03/2023, 00:43:36
+[QUERY] [16/03/2023, 00:43:36]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:36]: Success 200 OK in 22.9 ms
+[INFO] [16/03/2023, 00:43:41]: Started POST "/animals/delete/65" at 16/03/2023, 00:43:41
+[QUERY] [16/03/2023, 00:43:41]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:43:41]: Redirected 302 Found in 4.75 ms
+[INFO] [16/03/2023, 00:43:41]: Started GET "/animals/" at 16/03/2023, 00:43:41
+[QUERY] [16/03/2023, 00:43:41]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:41]: Success 200 OK in 10.26 ms
+[INFO] [16/03/2023, 00:43:43]: Started POST "/animals/delete/66" at 16/03/2023, 00:43:43
+[QUERY] [16/03/2023, 00:43:43]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:43:43]: Redirected 302 Found in 8.4 ms
+[INFO] [16/03/2023, 00:43:43]: Started GET "/animals/" at 16/03/2023, 00:43:43
+[QUERY] [16/03/2023, 00:43:43]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:43]: Success 200 OK in 5.75 ms
+[INFO] [16/03/2023, 00:43:44]: Started POST "/animals/delete/67" at 16/03/2023, 00:43:44
+[QUERY] [16/03/2023, 00:43:44]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:43:44]: Redirected 302 Found in 12.42 ms
+[INFO] [16/03/2023, 00:43:44]: Started GET "/animals/" at 16/03/2023, 00:43:44
+[QUERY] [16/03/2023, 00:43:44]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:44]: Success 200 OK in 10.22 ms
+[INFO] [16/03/2023, 00:43:45]: Started POST "/animals/delete/68" at 16/03/2023, 00:43:45
+[QUERY] [16/03/2023, 00:43:45]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:43:45]: Redirected 302 Found in 9.36 ms
+[INFO] [16/03/2023, 00:43:45]: Started GET "/animals/" at 16/03/2023, 00:43:45
+[QUERY] [16/03/2023, 00:43:45]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:45]: Success 200 OK in 12.15 ms
+[INFO] [16/03/2023, 00:43:45]: Started POST "/animals/delete/69" at 16/03/2023, 00:43:45
+[QUERY] [16/03/2023, 00:43:45]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:43:45]: Redirected 302 Found in 12.83 ms
+[INFO] [16/03/2023, 00:43:45]: Started GET "/animals/" at 16/03/2023, 00:43:45
+[QUERY] [16/03/2023, 00:43:45]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:45]: Success 200 OK in 9.79 ms
+[INFO] [16/03/2023, 00:43:49]: Started POST "/animals/delete/9" at 16/03/2023, 00:43:49
+[QUERY] [16/03/2023, 00:43:49]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:43:49]: Redirected 302 Found in 8.27 ms
+[INFO] [16/03/2023, 00:43:49]: Started GET "/animals/" at 16/03/2023, 00:43:49
+[QUERY] [16/03/2023, 00:43:49]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:49]: Success 200 OK in 17.61 ms
+[INFO] [16/03/2023, 00:43:49]: Started POST "/animals/delete/4" at 16/03/2023, 00:43:49
+[QUERY] [16/03/2023, 00:43:49]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:43:49]: Redirected 302 Found in 11.2 ms
+[INFO] [16/03/2023, 00:43:50]: Started GET "/animals/" at 16/03/2023, 00:43:50
+[QUERY] [16/03/2023, 00:43:50]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:50]: Success 200 OK in 7.2 ms
+[INFO] [16/03/2023, 00:43:50]: Started POST "/animals/delete/1" at 16/03/2023, 00:43:50
+[QUERY] [16/03/2023, 00:43:50]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:43:50]: Redirected 302 Found in 9.59 ms
+[INFO] [16/03/2023, 00:43:50]: Started GET "/animals/" at 16/03/2023, 00:43:50
+[QUERY] [16/03/2023, 00:43:50]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:50]: Success 200 OK in 7.27 ms
+[INFO] [16/03/2023, 00:43:54]: Started GET "/blogs/" at 16/03/2023, 00:43:54
+[QUERY] [16/03/2023, 00:43:54]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:43:54]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:54]: Success 200 OK in 25.45 ms
+[INFO] [16/03/2023, 00:43:56]: Started POST "/blogs/delete/47" at 16/03/2023, 00:43:56
+[QUERY] [16/03/2023, 00:43:56]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:43:56]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:43:56]: Redirected 302 Found in 17.07 ms
+[INFO] [16/03/2023, 00:43:56]: Started GET "/blogs/" at 16/03/2023, 00:43:56
+[QUERY] [16/03/2023, 00:43:56]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:43:56]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:56]: Success 200 OK in 13.57 ms
+[INFO] [16/03/2023, 00:43:59]: Started POST "/blogs/delete/48" at 16/03/2023, 00:43:59
+[QUERY] [16/03/2023, 00:43:59]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:43:59]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:43:59]: Redirected 302 Found in 18.32 ms
+[INFO] [16/03/2023, 00:43:59]: Started GET "/blogs/" at 16/03/2023, 00:43:59
+[QUERY] [16/03/2023, 00:43:59]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:43:59]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:43:59]: Success 200 OK in 4.72 ms
+[INFO] [16/03/2023, 00:44:00]: Started POST "/blogs/delete/49" at 16/03/2023, 00:44:00
+[QUERY] [16/03/2023, 00:44:00]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:44:00]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:00]: Redirected 302 Found in 11.76 ms
+[INFO] [16/03/2023, 00:44:00]: Started GET "/blogs/" at 16/03/2023, 00:44:00
+[QUERY] [16/03/2023, 00:44:00]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:44:00]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:00]: Success 200 OK in 13.14 ms
+[INFO] [16/03/2023, 00:44:01]: Started GET "/comments/" at 16/03/2023, 00:44:01
+[QUERY] [16/03/2023, 00:44:01]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:01]: Success 200 OK in 14.1 ms
+[INFO] [16/03/2023, 00:44:04]: Started POST "/comments/delete/134" at 16/03/2023, 00:44:04
+[QUERY] [16/03/2023, 00:44:04]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:04]: Redirected 302 Found in 11.87 ms
+[INFO] [16/03/2023, 00:44:04]: Started GET "/comments/" at 16/03/2023, 00:44:04
+[QUERY] [16/03/2023, 00:44:04]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:04]: Success 200 OK in 4.95 ms
+[INFO] [16/03/2023, 00:44:05]: Started POST "/comments/delete/135" at 16/03/2023, 00:44:05
+[QUERY] [16/03/2023, 00:44:05]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:05]: Redirected 302 Found in 6.31 ms
+[INFO] [16/03/2023, 00:44:05]: Started GET "/comments/" at 16/03/2023, 00:44:05
+[QUERY] [16/03/2023, 00:44:05]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:05]: Success 200 OK in 8.35 ms
+[INFO] [16/03/2023, 00:44:06]: Started POST "/comments/delete/136" at 16/03/2023, 00:44:06
+[QUERY] [16/03/2023, 00:44:06]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:06]: Redirected 302 Found in 6.3 ms
+[INFO] [16/03/2023, 00:44:06]: Started GET "/comments/" at 16/03/2023, 00:44:06
+[QUERY] [16/03/2023, 00:44:06]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:06]: Success 200 OK in 13.99 ms
+[INFO] [16/03/2023, 00:44:07]: Started POST "/comments/delete/138" at 16/03/2023, 00:44:07
+[QUERY] [16/03/2023, 00:44:07]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:07]: Redirected 302 Found in 9.88 ms
+[INFO] [16/03/2023, 00:44:07]: Started GET "/comments/" at 16/03/2023, 00:44:07
+[QUERY] [16/03/2023, 00:44:07]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:07]: Success 200 OK in 14.96 ms
+[INFO] [16/03/2023, 00:44:08]: Started POST "/comments/delete/139" at 16/03/2023, 00:44:08
+[QUERY] [16/03/2023, 00:44:08]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:08]: Redirected 302 Found in 5.79 ms
+[INFO] [16/03/2023, 00:44:08]: Started GET "/comments/" at 16/03/2023, 00:44:08
+[QUERY] [16/03/2023, 00:44:08]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:08]: Success 200 OK in 9.75 ms
+[INFO] [16/03/2023, 00:44:09]: Started POST "/comments/delete/142" at 16/03/2023, 00:44:09
+[QUERY] [16/03/2023, 00:44:09]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:09]: Redirected 302 Found in 4.41 ms
+[INFO] [16/03/2023, 00:44:09]: Started GET "/comments/" at 16/03/2023, 00:44:09
+[QUERY] [16/03/2023, 00:44:09]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:09]: Success 200 OK in 17.1 ms
+[INFO] [16/03/2023, 00:44:10]: Started POST "/comments/delete/143" at 16/03/2023, 00:44:10
+[QUERY] [16/03/2023, 00:44:10]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:10]: Redirected 302 Found in 11.07 ms
+[INFO] [16/03/2023, 00:44:10]: Started GET "/comments/" at 16/03/2023, 00:44:10
+[QUERY] [16/03/2023, 00:44:10]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:10]: Success 200 OK in 10.87 ms
+[INFO] [16/03/2023, 00:44:11]: Started POST "/comments/delete/144" at 16/03/2023, 00:44:11
+[QUERY] [16/03/2023, 00:44:11]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:11]: Redirected 302 Found in 6 ms
+[INFO] [16/03/2023, 00:44:11]: Started GET "/comments/" at 16/03/2023, 00:44:11
+[QUERY] [16/03/2023, 00:44:11]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:11]: Success 200 OK in 13.64 ms
+[INFO] [16/03/2023, 00:44:11]: Started POST "/comments/delete/145" at 16/03/2023, 00:44:11
+[QUERY] [16/03/2023, 00:44:11]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:11]: Redirected 302 Found in 11.07 ms
+[INFO] [16/03/2023, 00:44:11]: Started GET "/comments/" at 16/03/2023, 00:44:11
+[QUERY] [16/03/2023, 00:44:11]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:11]: Success 200 OK in 9.82 ms
+[INFO] [16/03/2023, 00:44:12]: Started POST "/comments/delete/146" at 16/03/2023, 00:44:12
+[QUERY] [16/03/2023, 00:44:12]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:12]: Redirected 302 Found in 4.94 ms
+[INFO] [16/03/2023, 00:44:12]: Started GET "/comments/" at 16/03/2023, 00:44:12
+[QUERY] [16/03/2023, 00:44:12]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:12]: Success 200 OK in 14.61 ms
+[INFO] [16/03/2023, 00:44:12]: Started POST "/comments/delete/147" at 16/03/2023, 00:44:12
+[QUERY] [16/03/2023, 00:44:12]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:12]: Redirected 302 Found in 8.22 ms
+[INFO] [16/03/2023, 00:44:12]: Started GET "/comments/" at 16/03/2023, 00:44:12
+[QUERY] [16/03/2023, 00:44:12]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:12]: Success 200 OK in 20.22 ms
+[INFO] [16/03/2023, 00:44:13]: Started POST "/comments/delete/148" at 16/03/2023, 00:44:13
+[QUERY] [16/03/2023, 00:44:13]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:13]: Redirected 302 Found in 9.98 ms
+[INFO] [16/03/2023, 00:44:13]: Started GET "/comments/" at 16/03/2023, 00:44:13
+[QUERY] [16/03/2023, 00:44:13]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:13]: Success 200 OK in 3.4 ms
+[INFO] [16/03/2023, 00:44:14]: Started POST "/comments/delete/149" at 16/03/2023, 00:44:14
+[QUERY] [16/03/2023, 00:44:14]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:14]: Redirected 302 Found in 6.29 ms
+[INFO] [16/03/2023, 00:44:14]: Started GET "/comments/" at 16/03/2023, 00:44:14
+[QUERY] [16/03/2023, 00:44:14]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:14]: Success 200 OK in 2.56 ms
+[INFO] [16/03/2023, 00:44:14]: Started POST "/comments/delete/150" at 16/03/2023, 00:44:14
+[QUERY] [16/03/2023, 00:44:14]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:14]: Redirected 302 Found in 10.29 ms
+[INFO] [16/03/2023, 00:44:14]: Started GET "/comments/" at 16/03/2023, 00:44:14
+[QUERY] [16/03/2023, 00:44:14]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:14]: Success 200 OK in 7.11 ms
+[INFO] [16/03/2023, 00:44:26]: Started GET "/companies/" at 16/03/2023, 00:44:26
+[QUERY] [16/03/2023, 00:44:26]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:26]: Success 200 OK in 18.63 ms
+[INFO] [16/03/2023, 00:44:27]: Started GET "/comments/" at 16/03/2023, 00:44:27
+[QUERY] [16/03/2023, 00:44:27]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:27]: Success 200 OK in 3.09 ms
+[INFO] [16/03/2023, 00:44:29]: Started POST "/comments/delete/151" at 16/03/2023, 00:44:29
+[QUERY] [16/03/2023, 00:44:29]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:29]: Redirected 302 Found in 1.94 ms
+[INFO] [16/03/2023, 00:44:29]: Started GET "/comments/" at 16/03/2023, 00:44:29
+[QUERY] [16/03/2023, 00:44:29]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:29]: Success 200 OK in 1.88 ms
+[INFO] [16/03/2023, 00:44:30]: Started GET "/companies/" at 16/03/2023, 00:44:30
+[QUERY] [16/03/2023, 00:44:30]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:30]: Redirected 304 Not Modified in 10.15 ms
+[INFO] [16/03/2023, 00:44:34]: Started POST "/companies/delete/22" at 16/03/2023, 00:44:34
+[QUERY] [16/03/2023, 00:44:34]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:34]: Redirected 302 Found in 16.19 ms
+[INFO] [16/03/2023, 00:44:34]: Started GET "/companies/" at 16/03/2023, 00:44:34
+[QUERY] [16/03/2023, 00:44:34]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:34]: Success 200 OK in 9.57 ms
+[INFO] [16/03/2023, 00:44:35]: Started POST "/companies/delete/23" at 16/03/2023, 00:44:35
+[QUERY] [16/03/2023, 00:44:35]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:35]: Redirected 302 Found in 7.79 ms
+[INFO] [16/03/2023, 00:44:35]: Started GET "/companies/" at 16/03/2023, 00:44:35
+[QUERY] [16/03/2023, 00:44:35]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:35]: Success 200 OK in 9.55 ms
+[INFO] [16/03/2023, 00:44:36]: Started POST "/companies/delete/24" at 16/03/2023, 00:44:36
+[QUERY] [16/03/2023, 00:44:36]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:36]: Redirected 302 Found in 5.81 ms
+[INFO] [16/03/2023, 00:44:36]: Started GET "/companies/" at 16/03/2023, 00:44:36
+[QUERY] [16/03/2023, 00:44:36]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:36]: Success 200 OK in 8.48 ms
+[INFO] [16/03/2023, 00:44:36]: Started POST "/companies/delete/25" at 16/03/2023, 00:44:36
+[QUERY] [16/03/2023, 00:44:36]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:36]: Redirected 302 Found in 6.04 ms
+[INFO] [16/03/2023, 00:44:36]: Started GET "/companies/" at 16/03/2023, 00:44:36
+[QUERY] [16/03/2023, 00:44:36]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:36]: Success 200 OK in 10.3 ms
+[INFO] [16/03/2023, 00:44:37]: Started POST "/companies/delete/26" at 16/03/2023, 00:44:37
+[QUERY] [16/03/2023, 00:44:37]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:37]: Redirected 302 Found in 8 ms
+[INFO] [16/03/2023, 00:44:37]: Started GET "/companies/" at 16/03/2023, 00:44:37
+[QUERY] [16/03/2023, 00:44:37]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:37]: Success 200 OK in 9.97 ms
+[INFO] [16/03/2023, 00:44:37]: Started POST "/companies/delete/27" at 16/03/2023, 00:44:37
+[QUERY] [16/03/2023, 00:44:37]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:37]: Redirected 302 Found in 7.33 ms
+[INFO] [16/03/2023, 00:44:37]: Started GET "/companies/" at 16/03/2023, 00:44:37
+[QUERY] [16/03/2023, 00:44:37]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:37]: Success 200 OK in 14.13 ms
+[INFO] [16/03/2023, 00:44:37]: Started POST "/companies/delete/28" at 16/03/2023, 00:44:37
+[QUERY] [16/03/2023, 00:44:37]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:37]: Redirected 302 Found in 6.65 ms
+[INFO] [16/03/2023, 00:44:37]: Started GET "/companies/" at 16/03/2023, 00:44:37
+[QUERY] [16/03/2023, 00:44:37]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:37]: Success 200 OK in 14.51 ms
+[INFO] [16/03/2023, 00:44:37]: Started POST "/companies/delete/1" at 16/03/2023, 00:44:37
+[QUERY] [16/03/2023, 00:44:37]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:37]: Redirected 302 Found in 10.22 ms
+[INFO] [16/03/2023, 00:44:37]: Started GET "/companies/" at 16/03/2023, 00:44:37
+[QUERY] [16/03/2023, 00:44:37]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:37]: Success 200 OK in 8.12 ms
+[INFO] [16/03/2023, 00:44:38]: Started POST "/companies/delete/29" at 16/03/2023, 00:44:38
+[QUERY] [16/03/2023, 00:44:38]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:38]: Redirected 302 Found in 11.32 ms
+[INFO] [16/03/2023, 00:44:38]: Started GET "/companies/" at 16/03/2023, 00:44:38
+[QUERY] [16/03/2023, 00:44:38]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:38]: Success 200 OK in 5.98 ms
+[INFO] [16/03/2023, 00:44:38]: Started POST "/companies/delete/30" at 16/03/2023, 00:44:38
+[QUERY] [16/03/2023, 00:44:38]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:38]: Redirected 302 Found in 6.02 ms
+[INFO] [16/03/2023, 00:44:38]: Started GET "/companies/" at 16/03/2023, 00:44:38
+[QUERY] [16/03/2023, 00:44:38]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:38]: Success 200 OK in 17.19 ms
+[INFO] [16/03/2023, 00:44:40]: Started POST "/companies/delete/31" at 16/03/2023, 00:44:40
+[QUERY] [16/03/2023, 00:44:40]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:40]: Redirected 302 Found in 10.21 ms
+[INFO] [16/03/2023, 00:44:40]: Started GET "/companies/" at 16/03/2023, 00:44:40
+[QUERY] [16/03/2023, 00:44:40]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:40]: Success 200 OK in 4.74 ms
+[INFO] [16/03/2023, 00:44:41]: Started POST "/companies/delete/32" at 16/03/2023, 00:44:41
+[QUERY] [16/03/2023, 00:44:41]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:41]: Redirected 302 Found in 10.15 ms
+[INFO] [16/03/2023, 00:44:41]: Started GET "/companies/" at 16/03/2023, 00:44:41
+[QUERY] [16/03/2023, 00:44:41]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:41]: Success 200 OK in 9.36 ms
+[INFO] [16/03/2023, 00:44:41]: Started POST "/companies/delete/33" at 16/03/2023, 00:44:41
+[QUERY] [16/03/2023, 00:44:41]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:41]: Redirected 302 Found in 2.11 ms
+[INFO] [16/03/2023, 00:44:41]: Started GET "/companies/" at 16/03/2023, 00:44:41
+[QUERY] [16/03/2023, 00:44:41]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:41]: Success 200 OK in 2.12 ms
+[INFO] [16/03/2023, 00:44:41]: Started POST "/companies/delete/34" at 16/03/2023, 00:44:41
+[QUERY] [16/03/2023, 00:44:41]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:41]: Redirected 302 Found in 9.34 ms
+[INFO] [16/03/2023, 00:44:41]: Started GET "/companies/" at 16/03/2023, 00:44:41
+[QUERY] [16/03/2023, 00:44:41]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:41]: Success 200 OK in 13.68 ms
+[INFO] [16/03/2023, 00:44:42]: Started POST "/companies/delete/35" at 16/03/2023, 00:44:42
+[QUERY] [16/03/2023, 00:44:42]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:44:42]: Redirected 302 Found in 2.22 ms
+[INFO] [16/03/2023, 00:44:42]: Started GET "/companies/" at 16/03/2023, 00:44:42
+[QUERY] [16/03/2023, 00:44:42]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:42]: Success 200 OK in 2.69 ms
+[INFO] [16/03/2023, 00:44:43]: Started GET "/employees/" at 16/03/2023, 00:44:43
+[QUERY] [16/03/2023, 00:44:43]: SELECT * FROM employees ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:43]: Success 200 OK in 17.21 ms
+[INFO] [16/03/2023, 00:44:45]: Started GET "/users/" at 16/03/2023, 00:44:45
+[QUERY] [16/03/2023, 00:44:45]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 00:44:45]: SELECT * FROM users ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:44:45]: Success 200 OK in 16.07 ms
+[INFO] [16/03/2023, 00:45:33]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:45:33]: Server started on port 3000
+[INFO] [16/03/2023, 00:45:33]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:45:36]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:45:36]: Server started on port 3000
+[INFO] [16/03/2023, 00:45:36]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:46:06]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:46:06]: Server started on port 3000
+[INFO] [16/03/2023, 00:46:06]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:46:09]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 00:46:09]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[INFO] [16/03/2023, 00:46:09]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 00:46:09]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:46:09]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:46:09]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[INFO] [16/03/2023, 00:46:12]: Started GET "/animals/" at 16/03/2023, 00:46:12
+[QUERY] [16/03/2023, 00:46:12]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:12]: Success 200 OK in 17.14 ms
+[INFO] [16/03/2023, 00:46:30]: Started POST "/animals/delete/61" at 16/03/2023, 00:46:30
+[QUERY] [16/03/2023, 00:46:30]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:30]: Redirected 302 Found in 5.81 ms
+[INFO] [16/03/2023, 00:46:30]: Started GET "/animals/" at 16/03/2023, 00:46:30
+[QUERY] [16/03/2023, 00:46:30]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:30]: Success 200 OK in 19.25 ms
+[INFO] [16/03/2023, 00:46:31]: Started POST "/animals/delete/62" at 16/03/2023, 00:46:31
+[QUERY] [16/03/2023, 00:46:31]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:31]: Redirected 302 Found in 10.6 ms
+[INFO] [16/03/2023, 00:46:31]: Started GET "/animals/" at 16/03/2023, 00:46:31
+[QUERY] [16/03/2023, 00:46:31]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:31]: Success 200 OK in 12.06 ms
+[INFO] [16/03/2023, 00:46:31]: Started POST "/animals/delete/63" at 16/03/2023, 00:46:31
+[QUERY] [16/03/2023, 00:46:31]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:31]: Redirected 302 Found in 9.65 ms
+[INFO] [16/03/2023, 00:46:31]: Started GET "/animals/" at 16/03/2023, 00:46:31
+[QUERY] [16/03/2023, 00:46:31]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:31]: Success 200 OK in 3.32 ms
+[INFO] [16/03/2023, 00:46:31]: Started POST "/animals/delete/64" at 16/03/2023, 00:46:31
+[QUERY] [16/03/2023, 00:46:31]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:31]: Redirected 302 Found in 10.71 ms
+[INFO] [16/03/2023, 00:46:31]: Started GET "/animals/" at 16/03/2023, 00:46:31
+[QUERY] [16/03/2023, 00:46:31]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:31]: Success 200 OK in 8.59 ms
+[INFO] [16/03/2023, 00:46:31]: Started POST "/animals/delete/33" at 16/03/2023, 00:46:31
+[QUERY] [16/03/2023, 00:46:31]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:31]: Redirected 302 Found in 9.68 ms
+[INFO] [16/03/2023, 00:46:32]: Started GET "/animals/" at 16/03/2023, 00:46:32
+[QUERY] [16/03/2023, 00:46:32]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:32]: Success 200 OK in 3.48 ms
+[INFO] [16/03/2023, 00:46:32]: Started POST "/animals/delete/11" at 16/03/2023, 00:46:32
+[QUERY] [16/03/2023, 00:46:32]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:32]: Redirected 302 Found in 10.43 ms
+[INFO] [16/03/2023, 00:46:32]: Started GET "/animals/" at 16/03/2023, 00:46:32
+[QUERY] [16/03/2023, 00:46:32]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:32]: Success 200 OK in 2.41 ms
+[INFO] [16/03/2023, 00:46:32]: Started POST "/animals/delete/10" at 16/03/2023, 00:46:32
+[QUERY] [16/03/2023, 00:46:32]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:32]: Redirected 302 Found in 13.76 ms
+[INFO] [16/03/2023, 00:46:32]: Started GET "/animals/" at 16/03/2023, 00:46:32
+[QUERY] [16/03/2023, 00:46:32]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:32]: Success 200 OK in 10.11 ms
+[INFO] [16/03/2023, 00:46:32]: Started POST "/animals/delete/70" at 16/03/2023, 00:46:32
+[QUERY] [16/03/2023, 00:46:32]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:32]: Redirected 302 Found in 7.77 ms
+[INFO] [16/03/2023, 00:46:32]: Started GET "/animals/" at 16/03/2023, 00:46:32
+[QUERY] [16/03/2023, 00:46:32]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:32]: Success 200 OK in 19.89 ms
+[INFO] [16/03/2023, 00:46:33]: Started POST "/animals/delete/71" at 16/03/2023, 00:46:33
+[QUERY] [16/03/2023, 00:46:33]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:33]: Redirected 302 Found in 11.35 ms
+[INFO] [16/03/2023, 00:46:33]: Started GET "/animals/" at 16/03/2023, 00:46:33
+[QUERY] [16/03/2023, 00:46:33]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:33]: Success 200 OK in 3.14 ms
+[INFO] [16/03/2023, 00:46:33]: Started POST "/animals/delete/72" at 16/03/2023, 00:46:33
+[QUERY] [16/03/2023, 00:46:33]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:33]: Redirected 302 Found in 11.04 ms
+[INFO] [16/03/2023, 00:46:33]: Started GET "/animals/" at 16/03/2023, 00:46:33
+[QUERY] [16/03/2023, 00:46:33]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:33]: Success 200 OK in 2.97 ms
+[INFO] [16/03/2023, 00:46:34]: Started POST "/animals/delete/73" at 16/03/2023, 00:46:34
+[QUERY] [16/03/2023, 00:46:34]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:34]: Redirected 302 Found in 5.28 ms
+[INFO] [16/03/2023, 00:46:34]: Started GET "/animals/" at 16/03/2023, 00:46:34
+[QUERY] [16/03/2023, 00:46:34]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:34]: Success 200 OK in 12.34 ms
+[INFO] [16/03/2023, 00:46:34]: Started POST "/animals/delete/74" at 16/03/2023, 00:46:34
+[QUERY] [16/03/2023, 00:46:34]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:34]: Redirected 302 Found in 5.82 ms
+[INFO] [16/03/2023, 00:46:34]: Started GET "/animals/" at 16/03/2023, 00:46:34
+[QUERY] [16/03/2023, 00:46:34]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:34]: Success 200 OK in 14.03 ms
+[INFO] [16/03/2023, 00:46:34]: Started POST "/animals/delete/75" at 16/03/2023, 00:46:34
+[QUERY] [16/03/2023, 00:46:34]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:34]: Redirected 302 Found in 8.78 ms
+[INFO] [16/03/2023, 00:46:34]: Started GET "/animals/" at 16/03/2023, 00:46:34
+[QUERY] [16/03/2023, 00:46:34]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:34]: Success 200 OK in 13.36 ms
+[INFO] [16/03/2023, 00:46:35]: Started POST "/animals/delete/76" at 16/03/2023, 00:46:35
+[QUERY] [16/03/2023, 00:46:35]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:35]: Redirected 302 Found in 19.25 ms
+[INFO] [16/03/2023, 00:46:35]: Started GET "/animals/" at 16/03/2023, 00:46:35
+[QUERY] [16/03/2023, 00:46:35]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:35]: Success 200 OK in 2.17 ms
+[INFO] [16/03/2023, 00:46:35]: Started POST "/animals/delete/77" at 16/03/2023, 00:46:35
+[QUERY] [16/03/2023, 00:46:35]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:35]: Redirected 302 Found in 12.03 ms
+[INFO] [16/03/2023, 00:46:35]: Started GET "/animals/" at 16/03/2023, 00:46:35
+[QUERY] [16/03/2023, 00:46:35]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:35]: Success 200 OK in 14.68 ms
+[INFO] [16/03/2023, 00:46:36]: Started POST "/animals/delete/78" at 16/03/2023, 00:46:36
+[QUERY] [16/03/2023, 00:46:36]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:36]: Redirected 302 Found in 2.25 ms
+[INFO] [16/03/2023, 00:46:36]: Started GET "/animals/" at 16/03/2023, 00:46:36
+[QUERY] [16/03/2023, 00:46:36]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:36]: Success 200 OK in 2.38 ms
+[INFO] [16/03/2023, 00:46:40]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 00:46:40]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[INFO] [16/03/2023, 00:46:40]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 00:46:40]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:46:40]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:46:40]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 00:46:40]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[INFO] [16/03/2023, 00:46:46]: Started GET "/animals/" at 16/03/2023, 00:46:46
+[QUERY] [16/03/2023, 00:46:46]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:46]: Success 200 OK in 18.18 ms
+[INFO] [16/03/2023, 00:46:51]: Started POST "/animals/delete/79" at 16/03/2023, 00:46:51
+[QUERY] [16/03/2023, 00:46:51]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:51]: Redirected 302 Found in 8.37 ms
+[INFO] [16/03/2023, 00:46:51]: Started GET "/animals/" at 16/03/2023, 00:46:51
+[QUERY] [16/03/2023, 00:46:51]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:51]: Success 200 OK in 3.37 ms
+[INFO] [16/03/2023, 00:46:53]: Started POST "/animals/delete/80" at 16/03/2023, 00:46:53
+[QUERY] [16/03/2023, 00:46:53]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:53]: Redirected 302 Found in 11.39 ms
+[INFO] [16/03/2023, 00:46:53]: Started GET "/animals/" at 16/03/2023, 00:46:53
+[QUERY] [16/03/2023, 00:46:53]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:53]: Success 200 OK in 8.78 ms
+[INFO] [16/03/2023, 00:46:53]: Started POST "/animals/delete/81" at 16/03/2023, 00:46:53
+[QUERY] [16/03/2023, 00:46:53]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:53]: Redirected 302 Found in 10.72 ms
+[INFO] [16/03/2023, 00:46:53]: Started GET "/animals/" at 16/03/2023, 00:46:53
+[QUERY] [16/03/2023, 00:46:53]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:53]: Success 200 OK in 12.51 ms
+[INFO] [16/03/2023, 00:46:53]: Started POST "/animals/delete/82" at 16/03/2023, 00:46:53
+[QUERY] [16/03/2023, 00:46:53]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:53]: Redirected 302 Found in 9.49 ms
+[INFO] [16/03/2023, 00:46:54]: Started GET "/animals/" at 16/03/2023, 00:46:54
+[QUERY] [16/03/2023, 00:46:54]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:54]: Success 200 OK in 2.16 ms
+[INFO] [16/03/2023, 00:46:54]: Started POST "/animals/delete/83" at 16/03/2023, 00:46:54
+[QUERY] [16/03/2023, 00:46:54]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 00:46:54]: Redirected 302 Found in 8.82 ms
+[INFO] [16/03/2023, 00:46:54]: Started GET "/animals/" at 16/03/2023, 00:46:54
+[QUERY] [16/03/2023, 00:46:54]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 00:46:54]: Success 200 OK in 18.03 ms
+[INFO] [16/03/2023, 00:47:03]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:47:03]: Server started on port 3000
+[INFO] [16/03/2023, 00:47:03]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:50:42]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:50:42]: Server started on port 3000
+[INFO] [16/03/2023, 00:50:42]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:55:01]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:55:01]: Server started on port 3000
+[INFO] [16/03/2023, 00:55:01]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:55:18]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:55:18]: Server started on port 3000
+[INFO] [16/03/2023, 00:55:18]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:55:22]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:55:22]: Server started on port 3000
+[INFO] [16/03/2023, 00:55:22]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:56:55]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:56:55]: Server started on port 3000
+[INFO] [16/03/2023, 00:56:55]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:58:20]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:58:20]: Server started on port 3000
+[INFO] [16/03/2023, 00:58:20]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:58:24]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:58:24]: Server started on port 3000
+[INFO] [16/03/2023, 00:58:24]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:58:29]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:58:29]: Server started on port 3000
+[INFO] [16/03/2023, 00:58:29]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:59:18]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:59:18]: Server started on port 3000
+[INFO] [16/03/2023, 00:59:18]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 00:59:34]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 00:59:34]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:00:10]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:00:10]: Server started on port 3000
+[INFO] [16/03/2023, 01:00:10]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:00:19]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:00:19]: Server started on port 3000
+[INFO] [16/03/2023, 01:00:19]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:00:22]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:00:22]: Server started on port 3000
+[INFO] [16/03/2023, 01:00:22]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:00:50]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:00:50]: Server started on port 3000
+[INFO] [16/03/2023, 01:00:50]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:00:56]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:00:56]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:02:02]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:02:02]: Server started on port 3000
+[INFO] [16/03/2023, 01:02:02]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:02:30]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:02:30]: Server started on port 3000
+[INFO] [16/03/2023, 01:02:30]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:02:31]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:02:31]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:02:34]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:02:34]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:02:37]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:02:37]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:02:39]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:02:39]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:03:30]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:03:30]: Server started on port 3000
+[INFO] [16/03/2023, 01:03:30]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:03:33]: Started GET "/animals/" at 16/03/2023, 01:03:33
+[QUERY] [16/03/2023, 01:03:33]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:03:33]: Success 200 OK in 15.38 ms
+[INFO] [16/03/2023, 01:03:36]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 01:03:36]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[INFO] [16/03/2023, 01:03:36]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 01:03:36]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 01:03:36]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 01:03:36]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 01:03:36]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[QUERY] [16/03/2023, 01:03:36]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[INFO] [16/03/2023, 01:03:38]: Started GET "/animals/" at 16/03/2023, 01:03:38
+[QUERY] [16/03/2023, 01:03:38]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:03:38]: Success 200 OK in 20.54 ms
+[INFO] [16/03/2023, 01:04:26]: Started GET "/animals/" at 16/03/2023, 01:04:26
+[QUERY] [16/03/2023, 01:04:26]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:04:26]: Success 200 OK in 10.6 ms
+[INFO] [16/03/2023, 01:04:26]: Started GET "/animals/" at 16/03/2023, 01:04:26
+[QUERY] [16/03/2023, 01:04:26]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:04:26]: Success 200 OK in 10.23 ms
+[INFO] [16/03/2023, 01:04:29]: Started GET "/animals/edit/84" at 16/03/2023, 01:04:29
+[QUERY] [16/03/2023, 01:04:29]: SELECT * FROM animals WHERE id=$id ORDER BY id ASC;
+
+[INFO] [16/03/2023, 01:04:29]: Success 200 OK in 17.76 ms
+[INFO] [16/03/2023, 01:04:31]: Started POST "/animals/edit/84" at 16/03/2023, 01:04:31
+[QUERY] [16/03/2023, 01:04:31]: UPDATE animals SET name=$name, color=$color WHERE id=$id;
+
+[INFO] [16/03/2023, 01:04:31]: Redirected 302 Found in 3.74 ms
+[INFO] [16/03/2023, 01:04:31]: Started GET "/animals/" at 16/03/2023, 01:04:31
+[QUERY] [16/03/2023, 01:04:31]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:04:31]: Success 200 OK in 2.99 ms
+[INFO] [16/03/2023, 01:05:00]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:05:00]: Server started on port 3000
+[INFO] [16/03/2023, 01:05:00]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:05:21]: Started GET "/animals/new" at 16/03/2023, 01:05:21
+[INFO] [16/03/2023, 01:05:21]: Success 200 OK in 16.9 ms
+[INFO] [16/03/2023, 01:05:24]: Started POST "/animals/new" at 16/03/2023, 01:05:24
+[INFO] [16/03/2023, 01:05:24]: Client Error 404 Not Found in 2.61 ms
+[INFO] [16/03/2023, 01:05:39]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:05:39]: Server started on port 3000
+[INFO] [16/03/2023, 01:05:39]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:05:41]: Started GET "/animals/new" at 16/03/2023, 01:05:41
+[INFO] [16/03/2023, 01:05:41]: Success 200 OK in 14.29 ms
+[INFO] [16/03/2023, 01:05:43]: Started POST "/animals/new" at 16/03/2023, 01:05:43
+[QUERY] [16/03/2023, 01:05:43]: INSERT INTO animals (name, color) VALUES ($name, $color) RETURNING *;
+
+[INFO] [16/03/2023, 01:05:43]: Redirected 302 Found in 7.21 ms
+[INFO] [16/03/2023, 01:05:43]: Started GET "/animals/" at 16/03/2023, 01:05:43
+[QUERY] [16/03/2023, 01:05:43]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:05:43]: Success 200 OK in 6.36 ms
+[INFO] [16/03/2023, 01:07:28]: Started GET "/blogs/" at 16/03/2023, 01:07:28
+[QUERY] [16/03/2023, 01:07:28]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:28]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:28]: Success 200 OK in 16.62 ms
+[INFO] [16/03/2023, 01:07:33]: Started POST "/blogs/delete/50" at 16/03/2023, 01:07:33
+[QUERY] [16/03/2023, 01:07:33]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:33]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:33]: Redirected 302 Found in 16.55 ms
+[INFO] [16/03/2023, 01:07:33]: Started GET "/blogs/" at 16/03/2023, 01:07:33
+[QUERY] [16/03/2023, 01:07:33]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:33]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:33]: Success 200 OK in 7.19 ms
+[INFO] [16/03/2023, 01:07:34]: Started POST "/blogs/delete/51" at 16/03/2023, 01:07:34
+[QUERY] [16/03/2023, 01:07:34]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:34]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:34]: Redirected 302 Found in 18.53 ms
+[INFO] [16/03/2023, 01:07:34]: Started GET "/blogs/" at 16/03/2023, 01:07:34
+[QUERY] [16/03/2023, 01:07:34]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:34]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:34]: Success 200 OK in 3.78 ms
+[INFO] [16/03/2023, 01:07:35]: Started POST "/blogs/delete/52" at 16/03/2023, 01:07:35
+[QUERY] [16/03/2023, 01:07:35]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:35]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:35]: Redirected 302 Found in 14.81 ms
+[INFO] [16/03/2023, 01:07:35]: Started GET "/blogs/" at 16/03/2023, 01:07:35
+[QUERY] [16/03/2023, 01:07:35]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:35]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:35]: Success 200 OK in 5.62 ms
+[INFO] [16/03/2023, 01:07:36]: Started POST "/blogs/delete/53" at 16/03/2023, 01:07:36
+[QUERY] [16/03/2023, 01:07:36]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:36]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:36]: Redirected 302 Found in 24.9 ms
+[INFO] [16/03/2023, 01:07:36]: Started GET "/blogs/" at 16/03/2023, 01:07:36
+[QUERY] [16/03/2023, 01:07:36]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:36]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:36]: Success 200 OK in 8.45 ms
+[INFO] [16/03/2023, 01:07:36]: Started POST "/blogs/delete/54" at 16/03/2023, 01:07:36
+[QUERY] [16/03/2023, 01:07:36]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:36]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:36]: Redirected 302 Found in 21.06 ms
+[INFO] [16/03/2023, 01:07:36]: Started GET "/blogs/" at 16/03/2023, 01:07:36
+[QUERY] [16/03/2023, 01:07:36]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:36]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:36]: Success 200 OK in 4.81 ms
+[INFO] [16/03/2023, 01:07:37]: Started POST "/blogs/delete/55" at 16/03/2023, 01:07:37
+[QUERY] [16/03/2023, 01:07:37]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:37]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:37]: Redirected 302 Found in 12.62 ms
+[INFO] [16/03/2023, 01:07:37]: Started GET "/blogs/" at 16/03/2023, 01:07:37
+[QUERY] [16/03/2023, 01:07:37]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:37]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:37]: Success 200 OK in 13.47 ms
+[INFO] [16/03/2023, 01:07:37]: Started POST "/blogs/delete/56" at 16/03/2023, 01:07:37
+[QUERY] [16/03/2023, 01:07:37]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:37]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:37]: Redirected 302 Found in 22.84 ms
+[INFO] [16/03/2023, 01:07:37]: Started GET "/blogs/" at 16/03/2023, 01:07:37
+[QUERY] [16/03/2023, 01:07:37]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:37]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:37]: Success 200 OK in 4.96 ms
+[INFO] [16/03/2023, 01:07:38]: Started POST "/blogs/delete/57" at 16/03/2023, 01:07:38
+[QUERY] [16/03/2023, 01:07:38]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:38]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:38]: Redirected 302 Found in 17.65 ms
+[INFO] [16/03/2023, 01:07:38]: Started GET "/blogs/" at 16/03/2023, 01:07:38
+[QUERY] [16/03/2023, 01:07:38]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:38]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:38]: Success 200 OK in 6.51 ms
+[INFO] [16/03/2023, 01:07:39]: Started POST "/blogs/delete/58" at 16/03/2023, 01:07:39
+[QUERY] [16/03/2023, 01:07:39]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:39]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:39]: Redirected 302 Found in 14.8 ms
+[INFO] [16/03/2023, 01:07:39]: Started GET "/blogs/" at 16/03/2023, 01:07:39
+[QUERY] [16/03/2023, 01:07:39]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:39]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:39]: Success 200 OK in 3.44 ms
+[INFO] [16/03/2023, 01:07:39]: Started POST "/blogs/delete/59" at 16/03/2023, 01:07:39
+[QUERY] [16/03/2023, 01:07:39]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:39]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:39]: Redirected 302 Found in 25.92 ms
+[INFO] [16/03/2023, 01:07:39]: Started GET "/blogs/" at 16/03/2023, 01:07:39
+[QUERY] [16/03/2023, 01:07:39]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:39]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:39]: Success 200 OK in 4.13 ms
+[INFO] [16/03/2023, 01:07:40]: Started POST "/blogs/delete/60" at 16/03/2023, 01:07:40
+[QUERY] [16/03/2023, 01:07:40]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:40]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:40]: Redirected 302 Found in 12.7 ms
+[INFO] [16/03/2023, 01:07:40]: Started GET "/blogs/" at 16/03/2023, 01:07:40
+[QUERY] [16/03/2023, 01:07:40]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:40]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:40]: Success 200 OK in 3.4 ms
+[INFO] [16/03/2023, 01:07:40]: Started POST "/blogs/delete/61" at 16/03/2023, 01:07:40
+[QUERY] [16/03/2023, 01:07:40]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:40]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:40]: Redirected 302 Found in 14.36 ms
+[INFO] [16/03/2023, 01:07:40]: Started GET "/blogs/" at 16/03/2023, 01:07:40
+[QUERY] [16/03/2023, 01:07:40]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:40]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:40]: Success 200 OK in 3.4 ms
+[INFO] [16/03/2023, 01:07:41]: Started POST "/blogs/delete/62" at 16/03/2023, 01:07:41
+[QUERY] [16/03/2023, 01:07:41]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:41]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:41]: Redirected 302 Found in 12.56 ms
+[INFO] [16/03/2023, 01:07:41]: Started GET "/blogs/" at 16/03/2023, 01:07:41
+[QUERY] [16/03/2023, 01:07:41]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:41]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:41]: Success 200 OK in 3.64 ms
+[INFO] [16/03/2023, 01:07:43]: Started GET "/comments/" at 16/03/2023, 01:07:43
+[QUERY] [16/03/2023, 01:07:43]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:43]: Success 200 OK in 10.24 ms
+[INFO] [16/03/2023, 01:07:46]: Started POST "/comments/delete/141" at 16/03/2023, 01:07:46
+[QUERY] [16/03/2023, 01:07:46]: DELETE FROM comments WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:46]: Redirected 302 Found in 11.91 ms
+[INFO] [16/03/2023, 01:07:46]: Started GET "/comments/" at 16/03/2023, 01:07:46
+[QUERY] [16/03/2023, 01:07:46]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:46]: Success 200 OK in 3.37 ms
+[INFO] [16/03/2023, 01:07:48]: Started GET "/companies/" at 16/03/2023, 01:07:48
+[QUERY] [16/03/2023, 01:07:48]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:48]: Success 200 OK in 11.2 ms
+[INFO] [16/03/2023, 01:07:50]: Started POST "/companies/delete/36" at 16/03/2023, 01:07:50
+[QUERY] [16/03/2023, 01:07:50]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:07:50]: Redirected 302 Found in 18.27 ms
+[INFO] [16/03/2023, 01:07:50]: Started GET "/companies/" at 16/03/2023, 01:07:50
+[QUERY] [16/03/2023, 01:07:50]: SELECT * FROM companies ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:50]: Success 200 OK in 2.37 ms
+[INFO] [16/03/2023, 01:07:51]: Started GET "/employees/" at 16/03/2023, 01:07:51
+[QUERY] [16/03/2023, 01:07:52]: SELECT * FROM employees ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:52]: Success 200 OK in 22.25 ms
+[INFO] [16/03/2023, 01:07:55]: Started GET "/blogs/" at 16/03/2023, 01:07:55
+[QUERY] [16/03/2023, 01:07:55]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:07:55]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:07:55]: Success 200 OK in 19.11 ms
+[INFO] [16/03/2023, 01:10:05]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:10:05]: Server started on port 3000
+[INFO] [16/03/2023, 01:10:05]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:10:40]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:10:40]: Server started on port 3000
+[INFO] [16/03/2023, 01:10:40]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:10:54]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 01:10:54]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[INFO] [16/03/2023, 01:10:54]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 01:10:54]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[QUERY] [16/03/2023, 01:10:54]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[QUERY] [16/03/2023, 01:10:54]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[INFO] [16/03/2023, 01:11:02]: Started GET "/animals/" at 16/03/2023, 01:11:02
+[QUERY] [16/03/2023, 01:11:02]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:11:02]: Success 200 OK in 19.03 ms
+[INFO] [16/03/2023, 01:11:08]: Started POST "/animals/delete/84" at 16/03/2023, 01:11:08
+[QUERY] [16/03/2023, 01:11:08]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:11:08]: Redirected 302 Found in 4.97 ms
+[INFO] [16/03/2023, 01:11:08]: Started GET "/animals/" at 16/03/2023, 01:11:08
+[QUERY] [16/03/2023, 01:11:08]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:11:08]: Success 200 OK in 5.07 ms
+[INFO] [16/03/2023, 01:11:10]: Started POST "/animals/delete/85" at 16/03/2023, 01:11:10
+[QUERY] [16/03/2023, 01:11:10]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:11:10]: Redirected 302 Found in 11.33 ms
+[INFO] [16/03/2023, 01:11:10]: Started GET "/animals/" at 16/03/2023, 01:11:10
+[QUERY] [16/03/2023, 01:11:10]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:11:10]: Success 200 OK in 6.13 ms
+[INFO] [16/03/2023, 01:11:10]: Started POST "/animals/delete/86" at 16/03/2023, 01:11:10
+[QUERY] [16/03/2023, 01:11:10]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:11:10]: Redirected 302 Found in 9.01 ms
+[INFO] [16/03/2023, 01:11:10]: Started GET "/animals/" at 16/03/2023, 01:11:10
+[QUERY] [16/03/2023, 01:11:10]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:11:10]: Success 200 OK in 14.92 ms
+[INFO] [16/03/2023, 01:11:12]: Started POST "/animals/delete/87" at 16/03/2023, 01:11:12
+[QUERY] [16/03/2023, 01:11:12]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:11:12]: Redirected 302 Found in 6.69 ms
+[INFO] [16/03/2023, 01:11:12]: Started GET "/animals/" at 16/03/2023, 01:11:12
+[QUERY] [16/03/2023, 01:11:12]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:11:12]: Success 200 OK in 10.58 ms
+[INFO] [16/03/2023, 01:11:12]: Started POST "/animals/delete/88" at 16/03/2023, 01:11:12
+[QUERY] [16/03/2023, 01:11:12]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:11:12]: Redirected 302 Found in 9.15 ms
+[INFO] [16/03/2023, 01:11:12]: Started GET "/animals/" at 16/03/2023, 01:11:12
+[QUERY] [16/03/2023, 01:11:12]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:11:12]: Success 200 OK in 9.48 ms
+[INFO] [16/03/2023, 01:11:12]: Started POST "/animals/delete/89" at 16/03/2023, 01:11:12
+[QUERY] [16/03/2023, 01:11:12]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:11:12]: Redirected 302 Found in 9.59 ms
+[INFO] [16/03/2023, 01:11:12]: Started GET "/animals/" at 16/03/2023, 01:11:12
+[QUERY] [16/03/2023, 01:11:12]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:11:12]: Success 200 OK in 6.25 ms
+[INFO] [16/03/2023, 01:11:13]: Started POST "/animals/delete/90" at 16/03/2023, 01:11:13
+[QUERY] [16/03/2023, 01:11:13]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:11:13]: Redirected 302 Found in 9.25 ms
+[INFO] [16/03/2023, 01:11:13]: Started GET "/animals/" at 16/03/2023, 01:11:13
+[QUERY] [16/03/2023, 01:11:13]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:11:13]: Success 200 OK in 17.33 ms
+[INFO] [16/03/2023, 01:11:13]: Started POST "/animals/delete/91" at 16/03/2023, 01:11:13
+[QUERY] [16/03/2023, 01:11:13]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:11:13]: Redirected 302 Found in 9.62 ms
+[INFO] [16/03/2023, 01:11:13]: Started GET "/animals/" at 16/03/2023, 01:11:13
+[QUERY] [16/03/2023, 01:11:13]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:11:13]: Success 200 OK in 13.28 ms
+[INFO] [16/03/2023, 01:11:14]: Started POST "/animals/delete/92" at 16/03/2023, 01:11:14
+[QUERY] [16/03/2023, 01:11:14]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:11:14]: Redirected 302 Found in 8.84 ms
+[INFO] [16/03/2023, 01:11:14]: Started GET "/animals/" at 16/03/2023, 01:11:14
+[QUERY] [16/03/2023, 01:11:14]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:11:14]: Success 200 OK in 9.63 ms
+[INFO] [16/03/2023, 01:11:17]: Started GET "/animals/edit/93" at 16/03/2023, 01:11:17
+[QUERY] [16/03/2023, 01:11:17]: SELECT * FROM animals WHERE id=$id ORDER BY id ASC;
+
+[INFO] [16/03/2023, 01:11:17]: Success 200 OK in 13.5 ms
+[INFO] [16/03/2023, 01:11:18]: Started POST "/animals/edit/93" at 16/03/2023, 01:11:18
+[QUERY] [16/03/2023, 01:11:18]: UPDATE animals SET name=$name, color=$color, updated_at=DATETIME('now')  WHERE id=$id;
+
+[INFO] [16/03/2023, 01:11:18]: Redirected 302 Found in 3.3 ms
+[INFO] [16/03/2023, 01:11:18]: Started GET "/animals/" at 16/03/2023, 01:11:18
+[QUERY] [16/03/2023, 01:11:18]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:11:18]: Success 200 OK in 3.92 ms
+[INFO] [16/03/2023, 01:11:31]: Started GET "/animals/edit/93" at 16/03/2023, 01:11:31
+[QUERY] [16/03/2023, 01:11:31]: SELECT * FROM animals WHERE id=$id ORDER BY id ASC;
+
+[INFO] [16/03/2023, 01:11:31]: Success 200 OK in 10.11 ms
+[INFO] [16/03/2023, 01:11:32]: Started POST "/animals/edit/93" at 16/03/2023, 01:11:32
+[QUERY] [16/03/2023, 01:11:32]: UPDATE animals SET name=$name, color=$color, updated_at=DATETIME('now')  WHERE id=$id;
+
+[INFO] [16/03/2023, 01:11:32]: Redirected 302 Found in 3.89 ms
+[INFO] [16/03/2023, 01:11:32]: Started GET "/animals/" at 16/03/2023, 01:11:32
+[QUERY] [16/03/2023, 01:11:32]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:11:32]: Success 200 OK in 7.57 ms
+[INFO] [16/03/2023, 01:13:56]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:13:56]: Server started on port 3000
+[INFO] [16/03/2023, 01:13:56]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:14:17]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:14:17]: Server started on port 3000
+[INFO] [16/03/2023, 01:14:17]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:14:42]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:14:42]: Server started on port 3000
+[INFO] [16/03/2023, 01:14:42]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:14:52]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 01:14:52]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[QUERY] [16/03/2023, 01:14:52]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[INFO] [16/03/2023, 01:14:52]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 01:14:52]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[QUERY] [16/03/2023, 01:14:52]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[QUERY] [16/03/2023, 01:14:52]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[QUERY] [16/03/2023, 01:14:52]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[QUERY] [16/03/2023, 01:14:52]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[QUERY] [16/03/2023, 01:14:52]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[INFO] [16/03/2023, 01:14:54]: Started GET "/animals/" at 16/03/2023, 01:14:54
+[QUERY] [16/03/2023, 01:14:54]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:14:54]: Success 200 OK in 22.18 ms
+[INFO] [16/03/2023, 01:14:59]: Started POST "/animals/delete/97" at 16/03/2023, 01:14:59
+[QUERY] [16/03/2023, 01:14:59]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:14:59]: Redirected 302 Found in 5.71 ms
+[INFO] [16/03/2023, 01:14:59]: Started GET "/animals/" at 16/03/2023, 01:14:59
+[QUERY] [16/03/2023, 01:14:59]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:14:59]: Success 200 OK in 4.61 ms
+[INFO] [16/03/2023, 01:15:00]: Started POST "/animals/delete/98" at 16/03/2023, 01:15:00
+[QUERY] [16/03/2023, 01:15:00]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:15:00]: Redirected 302 Found in 7.46 ms
+[INFO] [16/03/2023, 01:15:00]: Started GET "/animals/" at 16/03/2023, 01:15:00
+[QUERY] [16/03/2023, 01:15:00]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:15:00]: Success 200 OK in 3.58 ms
+[INFO] [16/03/2023, 01:15:00]: Started POST "/animals/delete/99" at 16/03/2023, 01:15:00
+[QUERY] [16/03/2023, 01:15:00]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:15:00]: Redirected 302 Found in 7.99 ms
+[INFO] [16/03/2023, 01:15:00]: Started GET "/animals/" at 16/03/2023, 01:15:00
+[QUERY] [16/03/2023, 01:15:00]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:15:00]: Success 200 OK in 13.81 ms
+[INFO] [16/03/2023, 01:15:01]: Started POST "/animals/delete/100" at 16/03/2023, 01:15:01
+[QUERY] [16/03/2023, 01:15:01]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:15:01]: Redirected 302 Found in 9.48 ms
+[INFO] [16/03/2023, 01:15:01]: Started GET "/animals/" at 16/03/2023, 01:15:01
+[QUERY] [16/03/2023, 01:15:01]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:15:01]: Success 200 OK in 11.7 ms
+[INFO] [16/03/2023, 01:15:01]: Started POST "/animals/delete/101" at 16/03/2023, 01:15:01
+[QUERY] [16/03/2023, 01:15:01]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:15:01]: Redirected 302 Found in 12.62 ms
+[INFO] [16/03/2023, 01:15:01]: Started GET "/animals/" at 16/03/2023, 01:15:01
+[QUERY] [16/03/2023, 01:15:01]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:15:01]: Success 200 OK in 19.89 ms
+[INFO] [16/03/2023, 01:15:01]: Started POST "/animals/delete/102" at 16/03/2023, 01:15:01
+[QUERY] [16/03/2023, 01:15:01]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:15:01]: Redirected 302 Found in 12.77 ms
+[INFO] [16/03/2023, 01:15:01]: Started GET "/animals/" at 16/03/2023, 01:15:01
+[QUERY] [16/03/2023, 01:15:01]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:15:01]: Success 200 OK in 11.11 ms
+[INFO] [16/03/2023, 01:15:02]: Started POST "/animals/delete/103" at 16/03/2023, 01:15:02
+[QUERY] [16/03/2023, 01:15:02]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:15:02]: Redirected 302 Found in 7.37 ms
+[INFO] [16/03/2023, 01:15:02]: Started GET "/animals/" at 16/03/2023, 01:15:02
+[QUERY] [16/03/2023, 01:15:02]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:15:02]: Success 200 OK in 14.21 ms
+[INFO] [16/03/2023, 01:15:02]: Started POST "/animals/delete/104" at 16/03/2023, 01:15:02
+[QUERY] [16/03/2023, 01:15:02]: DELETE FROM animals WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:15:02]: Redirected 302 Found in 9.74 ms
+[INFO] [16/03/2023, 01:15:02]: Started GET "/animals/" at 16/03/2023, 01:15:02
+[QUERY] [16/03/2023, 01:15:02]: SELECT * FROM animals ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:15:02]: Success 200 OK in 9.45 ms
+[INFO] [16/03/2023, 01:16:48]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:16:48]: Server started on port 3000
+[INFO] [16/03/2023, 01:16:48]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:17:30]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:17:30]: Server started on port 3000
+[INFO] [16/03/2023, 01:17:30]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:18:17]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:18:17]: Server started on port 3000
+[INFO] [16/03/2023, 01:18:17]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:18:48]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:18:48]: Server started on port 3000
+[INFO] [16/03/2023, 01:18:48]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:19:15]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:19:15]: Server started on port 3000
+[INFO] [16/03/2023, 01:19:15]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:20:42]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:20:42]: Server started on port 3000
+[INFO] [16/03/2023, 01:20:42]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:21:51]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:21:51]: Server started on port 3000
+[INFO] [16/03/2023, 01:21:51]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:22:05]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:22:05]: Server started on port 3000
+[INFO] [16/03/2023, 01:22:05]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:22:16]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:22:16]: Server started on port 3000
+[INFO] [16/03/2023, 01:22:16]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:24:00]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:24:00]: Server started on port 3000
+[INFO] [16/03/2023, 01:24:00]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:24:02]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 01:24:02]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:24:02]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:25:02]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:25:02]: Server started on port 3000
+[INFO] [16/03/2023, 01:25:02]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:25:05]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:25:05]: Server started on port 3000
+[INFO] [16/03/2023, 01:25:05]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:25:18]: Started GET "/blogs/" at 16/03/2023, 01:25:18
+[QUERY] [16/03/2023, 01:25:18]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:25:18]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:25:18]: Success 200 OK in 17.93 ms
+[INFO] [16/03/2023, 01:25:20]: Started POST "/blogs/delete/5" at 16/03/2023, 01:25:20
+[QUERY] [16/03/2023, 01:25:20]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:25:20]: DELETE FROM blogs WHERE id=$id RETURNING *;
+
+[INFO] [16/03/2023, 01:25:20]: Redirected 302 Found in 5.33 ms
+[INFO] [16/03/2023, 01:25:20]: Started GET "/blogs/" at 16/03/2023, 01:25:20
+[QUERY] [16/03/2023, 01:25:20]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:25:20]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:25:20]: Success 200 OK in 5.38 ms
+[INFO] [16/03/2023, 01:25:23]: Started GET "/comments/" at 16/03/2023, 01:25:23
+[QUERY] [16/03/2023, 01:25:23]: SELECT * FROM comments ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:25:23]: Success 200 OK in 12.05 ms
+[INFO] [16/03/2023, 01:25:24]: Started GET "/blogs/" at 16/03/2023, 01:25:24
+[QUERY] [16/03/2023, 01:25:24]: SELECT * FROM users WHERE id=$id ORDER BY id ASC;
+
+[QUERY] [16/03/2023, 01:25:24]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:25:25]: Success 200 OK in 17.67 ms
+[INFO] [16/03/2023, 01:25:29]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 01:25:29]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:25:29]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:26:10]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:26:10]: Server started on port 3000
+[INFO] [16/03/2023, 01:26:10]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:26:16]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:26:16]: Server started on port 3000
+[INFO] [16/03/2023, 01:26:16]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:26:20]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 01:26:20]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:26:20]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:28:18]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:28:18]: Server started on port 3000
+[INFO] [16/03/2023, 01:28:18]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:28:21]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 01:28:21]: Server started on port 3000
+[INFO] [16/03/2023, 01:28:21]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 01:28:25]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 01:28:25]: SELECT * FROM blogs ORDER BY updated_at DESC;
+
+[INFO] [16/03/2023, 01:28:25]: Foreign keys have been turned ON 

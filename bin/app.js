@@ -12,6 +12,7 @@ import session from "express-session";
 import appUtils from "./middleware/appUtils.js";
 import routeLogger from "./middleware/logger.js";
 import { PATHS } from "./constants.js";
+import errorHandler from "./middleware/errorHandler.js";
 
 // Load config
 config();
@@ -39,6 +40,8 @@ app.use(flash());
 app.use(routeLogger());
 app.use(appUtils());
 app.use("/", appRouter);
+
+app.use(errorHandler);
 
 app.get("*", function (req, res) {
   res.status(404).render("pages/404");

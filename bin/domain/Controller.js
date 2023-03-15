@@ -10,90 +10,90 @@ export default class Controller {
   }
 
   index() {
-    return async (req, res) => {
+    return async (req, res, next) => {
       try {
         const result = await this.Model.all();
         return res.render(`${this.router}/index`, { [this.router]: result });
       } catch (e) {
-        req.flash(Flash.ERROR, e.message);
+        next(e)
       }
     };
   }
 
   show() {
-    return async (req, res) => {
+    return async (req, res, next) => {
       try {
         const result = await this.Model.find(req.params.id);
         return res.render(`${this.router}/${this.model}`, {
           [this.model]: result,
         });
       } catch (e) {
-        req.flash(Flash.ERROR, e.message);
+        next(e)
       }
     };
   }
 
   newPage() {
-    return async (req, res) => {
+    return async (req, res, next) => {
       try {
         const result = new this.Model();
         return res.render(`${this.router}/new`, { [this.model]: result });
       } catch (e) {
-        req.flash(Flash.ERROR, e.message);
-        return res.redirect(`/${this.router}`);
+        next(e)
       }
     };
   }
 
   edit() {
-    return async (req, res) => {
+    return async (req, res, next) => {
       try {
         const result = await this.Model.find(req.params.id);
         return res.render(`${this.router}/edit`, {
           [this.model]: result,
         });
       } catch (e) {
-        req.flash(Flash.ERROR, e.message);
-        return res.redirect(`/${this.router}/edit/${req.params.id}`);
+        next(e)
+
       }
     };
   }
 
   create() {
-    return async (req, res) => {
+    return async (req, res, next) => {
       try {
         await this.Model.create(req.body);
         req.flash(Flash.SUCCESS, `${this.Model.name} has been created`);
         return res.redirect(`/${this.router}`);
       } catch (e) {
-        req.flash(Flash.ERROR, e.message);
-        return res.redirect(`/${this.router}/new`);
+        next(e)
+
       }
     };
   }
 
   update() {
-    return async (req, res) => {
+    return async (req, res, next) => {
       try {
         const result = new this.Model({ id: req.params.id, ...req.body });
         await result.save();
         req.flash(Flash.SUCCESS, `${this.Model.name} has been updated`);
         return res.redirect(`/${this.router}`);
       } catch (e) {
-        req.flash(Flash.ERROR, e.message);
-        return res.redirect(`/${this.router}/edit/${req.params.id}`);
+        next(e)
+
       }
     };
   }
 
   destroy() {
-    return async (req, res) => {
+    return async (req, res, next) => {
       try {
         await this.Model.delete(req.params.id);
         req.flash(Flash.SUCCESS, `${this.Model.name} has been deleted`);
         return res.redirect(`/${this.router}`);
       } catch (e) {
-        req.flash(Flash.ERROR, e.message);
+        next(e)
+
       }
     };
   }

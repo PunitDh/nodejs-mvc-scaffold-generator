@@ -20481,3 +20481,118 @@ COMMIT;
 [INFO] [15/03/2023, 12:41:03 pm]: Started GET "/employees/" at 15/03/2023, 12:41:03 pm
 [QUERY] [15/03/2023, 12:41:03 pm]: SELECT * FROM employees;
 [INFO] [15/03/2023, 12:41:03 pm]: Completed 200  in 1 ms
+[INFO] [15/03/2023, 12:41:42 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:41:42 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:41:42 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:43:23 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:43:23 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:43:23 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:43:25 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:43:25 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:43:25 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:44:18 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:44:18 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:44:18 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:44:34 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:44:34 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:44:34 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:45:15 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:45:15 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:45:15 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:45:16 pm]: Started GET "/employees/" at 15/03/2023, 12:45:16 pm
+[QUERY] [15/03/2023, 12:45:16 pm]: SELECT * FROM employees;
+[INFO] [15/03/2023, 12:45:16 pm]: Completed 200  in 14 ms
+[INFO] [15/03/2023, 12:45:28 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:45:28 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:45:28 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:45:28 pm]: Started GET "/employees/" at 15/03/2023, 12:45:28 pm
+[QUERY] [15/03/2023, 12:45:28 pm]: SELECT * FROM employees;
+[INFO] [15/03/2023, 12:45:28 pm]: Completed 200  in 9 ms
+[INFO] [15/03/2023, 12:46:25 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:46:25 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:46:25 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:46:27 pm]: Started GET "/employees/" at 15/03/2023, 12:46:27 pm
+[QUERY] [15/03/2023, 12:46:27 pm]: SELECT * FROM employees;
+[INFO] [15/03/2023, 12:46:27 pm]: Completed 200  in 13 ms
+[ERROR] [15/03/2023, 12:46:27 pm]: 400 Error: Test
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/domain/Controller.js:16:15
+[INFO] [15/03/2023, 12:46:27 pm]: Started GET "/employees/undefined" at 15/03/2023, 12:46:27 pm
+[QUERY] [15/03/2023, 12:46:27 pm]: SELECT * FROM employees WHERE id=$id;
+[INFO] [15/03/2023, 12:46:27 pm]: Completed 200  in 3 ms
+[INFO] [15/03/2023, 12:46:31 pm]: Started GET "/employees/" at 15/03/2023, 12:46:31 pm
+[QUERY] [15/03/2023, 12:46:31 pm]: SELECT * FROM employees;
+[INFO] [15/03/2023, 12:46:31 pm]: Completed 200  in 5 ms
+[ERROR] [15/03/2023, 12:46:31 pm]: 400 Error: Test
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/domain/Controller.js:16:15
+[INFO] [15/03/2023, 12:46:31 pm]: Started GET "/employees/undefined" at 15/03/2023, 12:46:31 pm
+[QUERY] [15/03/2023, 12:46:31 pm]: SELECT * FROM employees WHERE id=$id;
+[INFO] [15/03/2023, 12:46:31 pm]: Completed 200  in 2 ms
+[INFO] [15/03/2023, 12:46:32 pm]: Started GET "/employees/" at 15/03/2023, 12:46:32 pm
+[QUERY] [15/03/2023, 12:46:32 pm]: SELECT * FROM employees;
+[INFO] [15/03/2023, 12:46:32 pm]: Completed 200  in 2 ms
+[ERROR] [15/03/2023, 12:46:32 pm]: 400 Error: Test
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/domain/Controller.js:16:15
+[INFO] [15/03/2023, 12:46:32 pm]: Started GET "/employees/undefined" at 15/03/2023, 12:46:32 pm
+[QUERY] [15/03/2023, 12:46:32 pm]: SELECT * FROM employees WHERE id=$id;
+[INFO] [15/03/2023, 12:46:32 pm]: Completed 200  in 1 ms
+[INFO] [15/03/2023, 12:46:32 pm]: Started GET "/employees/" at 15/03/2023, 12:46:32 pm
+[QUERY] [15/03/2023, 12:46:32 pm]: SELECT * FROM employees;
+[INFO] [15/03/2023, 12:46:32 pm]: Completed 200  in 1 ms
+[ERROR] [15/03/2023, 12:46:32 pm]: 400 Error: Test
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/domain/Controller.js:16:15
+[INFO] [15/03/2023, 12:46:32 pm]: Started GET "/employees/undefined" at 15/03/2023, 12:46:32 pm
+[QUERY] [15/03/2023, 12:46:32 pm]: SELECT * FROM employees WHERE id=$id;
+[INFO] [15/03/2023, 12:46:32 pm]: Completed 200  in 1 ms
+[INFO] [15/03/2023, 12:46:35 pm]: Started GET "/employees/" at 15/03/2023, 12:46:35 pm
+[QUERY] [15/03/2023, 12:46:35 pm]: SELECT * FROM employees;
+[INFO] [15/03/2023, 12:46:35 pm]: Completed 200  in 2 ms
+[ERROR] [15/03/2023, 12:46:35 pm]: 400 Error: Test
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/domain/Controller.js:16:15
+[INFO] [15/03/2023, 12:46:35 pm]: Started GET "/employees/undefined" at 15/03/2023, 12:46:35 pm
+[QUERY] [15/03/2023, 12:46:35 pm]: SELECT * FROM employees WHERE id=$id;
+[INFO] [15/03/2023, 12:46:35 pm]: Completed 200  in 2 ms
+[INFO] [15/03/2023, 12:46:54 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:46:54 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:46:54 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:46:56 pm]: Started GET "/employees/undefined" at 15/03/2023, 12:46:56 pm
+[QUERY] [15/03/2023, 12:46:56 pm]: SELECT * FROM employees WHERE id=$id;
+[INFO] [15/03/2023, 12:46:56 pm]: Completed 200  in 13 ms
+[INFO] [15/03/2023, 12:46:57 pm]: Started GET "/employees/" at 15/03/2023, 12:46:57 pm
+[QUERY] [15/03/2023, 12:46:57 pm]: SELECT * FROM employees;
+[INFO] [15/03/2023, 12:46:57 pm]: Completed 200  in 7 ms
+[INFO] [15/03/2023, 12:47:40 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:47:40 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:47:40 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:49:16 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:49:16 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:49:16 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:49:19 pm]: Started GET "/employees/" at 15/03/2023, 12:49:19 pm
+[QUERY] [15/03/2023, 12:49:19 pm]: SELECT * FROM employees;
+[INFO] [15/03/2023, 12:49:19 pm]: Completed 200 OK in 29 ms
+[INFO] [15/03/2023, 12:49:22 pm]: Started GET "/employees/1" at 15/03/2023, 12:49:22 pm
+[QUERY] [15/03/2023, 12:49:22 pm]: SELECT * FROM employees WHERE id=$id;
+[INFO] [15/03/2023, 12:49:22 pm]: Completed 200 OK in 8 ms
+[INFO] [15/03/2023, 12:49:25 pm]: Started GET "/employees/" at 15/03/2023, 12:49:25 pm
+[QUERY] [15/03/2023, 12:49:25 pm]: SELECT * FROM employees;
+[INFO] [15/03/2023, 12:49:25 pm]: Completed 200 OK in 19 ms
+[INFO] [15/03/2023, 12:49:26 pm]: Started GET "/employees/edit/1" at 15/03/2023, 12:49:26 pm
+[QUERY] [15/03/2023, 12:49:26 pm]: SELECT * FROM employees WHERE id=$id;
+[INFO] [15/03/2023, 12:49:26 pm]: Completed 200 OK in 4 ms
+[INFO] [15/03/2023, 12:49:29 pm]: Started POST "/employees/edit/1" at 15/03/2023, 12:49:29 pm
+[QUERY] [15/03/2023, 12:49:29 pm]: UPDATE employees SET first_name=$first_name, last_name=$last_name, title=$title, salary=$salary, sick_leave_hours=$sick_leave_hours, annual_leave_hours=$annual_leave_hours,  updated_at=DATETIME('now') WHERE id=$id RETURNING *;
+[INFO] [15/03/2023, 12:49:29 pm]: Completed 302 Found in 7 ms
+[INFO] [15/03/2023, 12:49:29 pm]: Started GET "/employees/" at 15/03/2023, 12:49:29 pm
+[QUERY] [15/03/2023, 12:49:29 pm]: SELECT * FROM employees;
+[INFO] [15/03/2023, 12:49:29 pm]: Completed 200 OK in 3 ms
+[INFO] [15/03/2023, 12:49:40 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:49:40 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:49:40 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:50:16 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:50:16 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:50:16 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:50:56 pm]: Successfully connected to database: 'database.db'
+[INFO] [15/03/2023, 12:50:56 pm]: Server started on port 3000
+[INFO] [15/03/2023, 12:50:56 pm]: Foreign keys have been turned ON 
+[INFO] [15/03/2023, 12:50:58 pm]: Started GET "/employees/" at Wed Mar 15 2023
+[QUERY] [15/03/2023, 12:50:58 pm]: SELECT * FROM employees;
+[INFO] [15/03/2023, 12:50:58 pm]: Completed 200 OK in 38.61 ms

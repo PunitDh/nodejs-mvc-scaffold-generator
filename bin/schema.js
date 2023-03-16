@@ -1,6 +1,7 @@
 import DB from "./db.js";
 import LOGGER from "./logger.js";
 import { getSchema, saveSchema } from "./utils/schema_utils.js";
+import settings from "./utils/settings.js";
 
 (() => {
   LOGGER.info("Updating schema");
@@ -11,6 +12,7 @@ import { getSchema, saveSchema } from "./utils/schema_utils.js";
     schema.routers = tables
       .map((r) => r.name)
       .filter((r) => !r.includes("sqlite_"))
+      .filter((r) => !r.includes(settings.database.migrations.table))
       .sort();
 
     schemaTables.forEach((schemaTable) => {

@@ -43,11 +43,6 @@ const modelTemplate = path.join(
   PATHS.models,
   PATHS.modelJsTemplate
 );
-const migrationTemplate = path.join(
-  templatePath,
-  PATHS.db,
-  PATHS.migrationJsTemplate
-);
 
 if (!fs.existsSync(folderName)) {
   fs.mkdirSync(folderName);

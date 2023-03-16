@@ -1,7 +1,7 @@
 import path from "path";
 import { PATHS } from "../bin/constants.js";
 import fs from "fs";
-import _Migration from "../bin/domain/MigrationInfo.js";
+import _Migration from "./domain/Migration.js";
 import { readFileSync } from "../bin/utils/file_utils.js";
 import "../bin/utils/js_utils.js";
 import LOGGER from "../bin/logger.js";

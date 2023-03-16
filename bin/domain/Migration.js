@@ -1,6 +1,5 @@
 import Model from "../model.js";
-import settings from "../utils/settings.js";
-import { QueryBuilder } from "./QueryBuilder.js";
+import { QueryBuilder } from "../builders/QueryBuilder.js";
 
 class _Migration extends Model {
   constructor({ version, filename, query, created_at }) {

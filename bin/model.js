@@ -5,7 +5,7 @@ import { ReadOnlyColumns, SearchExcludedColumns } from "./constants.js";
 import SQLiteTable from "./domain/SQLiteTable.js";
 import { getTableNameFromModel, sanitizeObject } from "./utils/model_utils.js";
 import "./utils/js_utils.js";
-import { QueryBuilder } from "./domain/QueryBuilder.js";
+import { QueryBuilder } from "./builders/QueryBuilder.js";
 
 /**
  * @description Base model class

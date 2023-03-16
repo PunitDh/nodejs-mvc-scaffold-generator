@@ -42,23 +42,6 @@ class SearchResult {
   }
 
   /**
-   * @description Get all tables currently in the database
-   * @returns A list of SQLiteTable
-   */
-  static get __tables__() {
-    return new Promise((resolve, reject) => {
-      DB.all(`PRAGMA table_list`, function (err, tables) {
-        if (err) return reject(err);
-        return resolve(
-          tables
-            .filter((r) => !r.name.includes("sqlite_"))
-            .map((r) => new SQLiteTable(r))
-        );
-      });
-    });
-  }
-
-  /**
    * @description Searches through all the tables in the database for a specified search term.
    * Also sorts it by "priority", i.e. how often the search term appears in a given record
    * @param {String} searchTerm - The search term to search for
@@ -66,7 +49,7 @@ class SearchResult {
    * @returns List of SearchResult
    */
   static async search(searchTerm, limit) {
-    const tables = await this.__tables__;
+    const tables = await SQLiteTable.getAllTables();
     const sanitizedSearchTerm = searchTerm?.replaceAll("'", "''");
     const results = await tables.mapAsync(async (table) => {
       const searchQuery = (await table.columns)

@@ -1,5 +1,10 @@
-import { SQLColumnContraints, SQLColumnTypes } from "./constants.js";
+import {
+  SQLColumnConstraints,
+  SQLColumnTypes,
+  SQLForeignKeyActions,
+} from "./constants.js";
 import LOGGER from "./logger.js";
+import "./utils/js_utils.js";
 
 class ApplicationError extends Error {
   constructor() {
@@ -68,7 +73,17 @@ export class InvalidColumnConstraintError extends ApplicationError {
     super(...arguments);
     LOGGER.error(
       "Available constraint types are:",
-      Object.keys(SQLColumnContraints).join(", ")
+      Object.values(SQLColumnConstraints).distinct().join(", ")
+    );
+  }
+}
+
+export class InvalidForeignKeyActionError extends ApplicationError {
+  constructor() {
+    super(...arguments);
+    LOGGER.error(
+      "Available foreign key actions are:",
+      Object.values(SQLForeignKeyActions).distinct().join(", ")
     );
   }
 }

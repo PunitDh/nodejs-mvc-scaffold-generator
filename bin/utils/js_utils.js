@@ -25,13 +25,14 @@ Array.prototype.last = function () {
 /**
  * Performs an async await operation on an array and returns the resultant array.
  * Note: The result must be awaited, i.e. The 'await' keyword must be used before it
- * @param {Function} callback 
+ * @param {Function} callback
+ * @param {Integer} index
  * @returns A list of promises
  */
 Array.prototype.mapAsync = async function (callback) {
   let result = [];
-  for (const it of this) {
-    const promise = await callback(it);
+  for (let it = 0; it < this.length; it++) {
+    const promise = await callback(this[it], it);
     result.push(promise);
   }
   return result;
@@ -39,11 +40,11 @@ Array.prototype.mapAsync = async function (callback) {
 
 /**
  * Performs an async await operation on an array
- * @param {Function} callback 
+ * @param {Function} callback
  */
 Array.prototype.forEachAsync = async function (callback) {
-  for (const it of this) {
-    await callback(it);
+  for (let it = 0; it < this.length; it++) {
+    await callback(this[it], it);
   }
 };
 
@@ -65,6 +66,14 @@ Object.prototype.exclude = function () {
 Array.prototype.exclude = function () {
   const exclusions = [...arguments];
   return this.filter((item) => !exclusions.includes(item));
+};
+
+/**
+ * Returns the distinct elements in an array
+ * @returns The array with duplicated elements omitted
+ */
+Array.prototype.distinct = function () {
+  return Array.from(new Set(this));
 };
 
 /**

@@ -1,6 +1,6 @@
 import {
   HTMLInputTypes,
-  SQLColumnContraints,
+  SQLColumnConstraints,
   SQLColumnTypes,
 } from "../constants.js";
 import {
@@ -48,12 +48,12 @@ class ColumnsInfo {
 
   generateConstraintsForMigration(constraints) {
     return constraints.map((constraint) => {
-      if (!constraint.toUpperCase() in SQLColumnContraints) {
+      if (!constraint.toUpperCase() in SQLColumnConstraints) {
         throw new InvalidColumnConstraintError(
           `Invalid column constraint provided for column: '${constraint}'`
         );
       }
-      return SQLColumnContraints[constraint.toUpperCase()];
+      return SQLColumnConstraints[constraint.toUpperCase()];
     });
   }
 }

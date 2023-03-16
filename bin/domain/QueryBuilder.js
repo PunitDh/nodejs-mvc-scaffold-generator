@@ -13,6 +13,7 @@ export function QueryBuilder() {
 
 class SQLQueryBuilder {
   constructor() {
+    this.timestamps = true;
     return this;
   }
 
@@ -28,6 +29,10 @@ class SQLQueryBuilder {
 
   insertInto(table) {
     return this.insert().into(table);
+  }
+
+  withNoTimeStamps() {
+    this.timestamps = false;
   }
 
   insert() {
@@ -121,13 +126,19 @@ class SQLQueryBuilder {
     const orderBy = this.order?.columns
       .map((column, i) => `${column} ${this.order.type[i]}`)
       .join(", ");
-    const orderClause = orderBy ? ` ORDER BY ${orderBy}` : " ORDER BY id ASC";
+    const orderClause = orderBy ? ` ORDER BY ${orderBy}` : "";
+    const timestamps = this.timestamps
+      ? {
+          columns: ", created_at, updated_at",
+          values: ", DATETIME('now'), DATETIME('now')",
+        }
+      : { columns: "", values: "" };
 
     switch (this.action) {
       case QueryAction.SELECT:
         return `${this.action} ${columns} FROM ${this.table}${whereClause}${limitClause}${orderClause};\n`;
       case QueryAction.INSERT:
-        return `${this.action} ${this.table} (${columns}, created_at, updated_at) VALUES (${values}, DATETIME('now'), DATETIME('now'))${returningClause};\n`;
+        return `${this.action} ${this.table} (${columns}${timestamps.columns}) VALUES (${values}${timestamps.values})${returningClause};\n`;
       case QueryAction.UPDATE:
         return `${this.action} ${this.table}${setClause}, updated_at=DATETIME('now') ${whereClause}${returningClause};\n`;
       case QueryAction.DELETE:

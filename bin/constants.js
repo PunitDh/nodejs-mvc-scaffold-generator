@@ -64,7 +64,7 @@ export const TERMINAL_COLORS = {
   BgGray: "\x1b[100m",
 };
 
-export const SQLColumnContraints = {
+export const SQLColumnConstraints = {
   PRIMARY_KEY: "PRIMARY KEY",
   AUTO_INCREMENT: "AUTOINCREMENT",
   NOT_NULL: "NOT NULL",
@@ -73,6 +73,23 @@ export const SQLColumnContraints = {
   AUTOINCREMENT: "AUTOINCREMENT",
   PRIMARYKEY: "PRIMARY KEY",
   NOTNULL: "NOT NULL",
+  "PRIMARY KEY": "PRIMARY KEY",
+  "AUTO INCREMENT": "AUTOINCREMENT",
+  "NOT NULL": "NOT NULL",
+};
+
+export const SQLForeignKeyActions = {
+  "NO ACTION": "NO ACTION",
+  CASCADE: "CASCADE",
+  "SET NULL": "SET NULL",
+  "SET DEFAULT": "SET DEFAULT",
+  RESTRICT: "RESTRICT",
+  NOACTION: "NO ACTION",
+  NO_ACTION: "NO ACTION",
+  SETNULL: "SET NULL",
+  SET_NULL: "SET NULL",
+  SETDEFAULT: "SET DEFAULT",
+  SET_DEFAULT: "SET DEFAULT",
 };
 
 export const HTMLInputTypes = {
@@ -144,6 +161,7 @@ export const PATHS = {
   models: "models",
   modelJsTemplate: "model.js.template",
   db: "db",
+  migrations: "migrations",
   instance: "instance",
   migrationJsTemplate: "_migration.js.template",
   logs: "logs",
@@ -154,7 +172,12 @@ export const PATHS = {
   deleteSqlTemplate: "delete.sql.template",
 };
 
-export const ReadOnlyColumns = ["id", "created_at", "updated_at", "_csrf_token"];
+export const ReadOnlyColumns = [
+  "id",
+  "created_at",
+  "updated_at",
+  "_csrf_token",
+];
 
 export const SearchExcludedColumns = [
   "id",
@@ -172,7 +195,6 @@ export const MigrationActions = {
   CREATE: "CREATE",
   ALTER: "ALTER",
   DROP: "DROP",
-  UPDATE: "UPDATE",
   subAction: {
     ADD: "ADD",
     DROP: "DROP",

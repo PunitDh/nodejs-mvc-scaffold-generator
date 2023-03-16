@@ -5,7 +5,7 @@
 
 import path from "path";
 import "../utils/js_utils.js";
-import { SQLColumnTypes, SQLColumnContraints, PATHS } from "../constants.js";
+import { SQLColumnTypes, SQLColumnConstraints, PATHS } from "../constants.js";
 import {
   GeneratorError,
   InvalidColumnConstraintError,
@@ -115,14 +115,14 @@ function generateColumns(attributesObj) {
   }
 
   function generateConstraints(constraints) {
-    const allConstraints = Object.keys(SQLColumnContraints);
+    const allConstraints = Object.keys(SQLColumnConstraints);
     return constraints.map((constraint) => {
       if (!allConstraints.includes(constraint.toUpperCase())) {
         throw new InvalidColumnConstraintError(
           `Invalid column constraint provided for column: '${constraint}'`
         );
       }
-      return SQLColumnContraints[constraint.toUpperCase()];
+      return SQLColumnConstraints[constraint.toUpperCase()];
     });
   }
 }

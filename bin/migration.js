@@ -1,6 +1,6 @@
 import DB from "./db.js";
 import LOGGER from "./logger.js";
-import { SQLColumnTypes, SQLColumnContraints } from "./constants.js";
+import { SQLColumnTypes, SQLColumnConstraints } from "./constants.js";
 import {
   InvalidColumnConstraintError,
   InvalidDataTypeError,
@@ -171,9 +171,10 @@ export class Column {
 }
 
 export class Constraint {
-  constructor(type) {
-    if (SQLColumnContraints[type]) {
-      this.type = SQLColumnContraints[type];
+  constructor(type, value) {
+    if (SQLColumnConstraints[type]) {
+      this.type = SQLColumnConstraints[type];
+      this.value = value;
     } else {
       throw new InvalidColumnConstraintError(
         `Invalid column constraint provided for column: '${type}'`

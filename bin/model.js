@@ -12,9 +12,9 @@ import { QueryBuilder } from "./domain/QueryBuilder.js";
  */
 class Model {
   constructor(data) {
-    this.id = data.id;
-    this.created_at = data.created_at;
-    this.updated_at = data.updated_at;
+    this.id = data?.id;
+    this.created_at = data?.created_at;
+    this.updated_at = data?.updated_at;
   }
 
   /**
@@ -61,7 +61,6 @@ class Model {
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
-      .orderBy({ updated_at: "DESC" })
       .build();
     return await this.dbQuery(query);
   }

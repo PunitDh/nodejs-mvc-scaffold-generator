@@ -19,12 +19,12 @@
           <td><%= it.{{name}} %></td>
             {{/date}}
           {{/indexColumns}}
-          <td><a href="/{{router}}/<%= it.id %>" class="btn btn-primary" title="Show">Show</a></td>
-          <td><a href="/{{router}}/edit/<%= it.id %>" class="btn btn-success" title="Edit">Edit</a></td>
+          <td><a href="/{{router}}/<%= it.id %>" class="btn btn-primary">Show</a></td>
+          <td><a href="/{{router}}/edit/<%= it.id %>" class="btn btn-success">Edit</a></td>
           <td>
             <form action="/{{router}}/delete/<%= it.id %>" method="POST">
-              <%- include('../_layouts/_csrf_field.ejs') %>
-              <button type="submit" class="btn btn-danger" title="Delete">
+              <%- include(locals.LayoutPages._csrf) %>
+              <button type="submit" class="btn btn-danger">
                 Delete
               </button>
             </form>
@@ -35,4 +35,4 @@
     </table>
     <a href="/{{router}}/new" class="btn btn-primary">New {{Model}}</a>
   </div>
-  <%- include('../_layouts/_tail.ejs') %>
+  <%- include(locals.LayoutPages._tail) %>

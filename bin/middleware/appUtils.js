@@ -2,6 +2,8 @@ import SETTINGS from "../utils/settings.js";
 import "../utils/js_utils.js";
 import pluralize from "pluralize";
 import JWT from "jsonwebtoken";
+import { LayoutPages } from "../constants.js";
+import { randomChoice, randomInteger } from "../utils/num_utils.js";
 
 export default function () {
   return function (req, res, next) {
@@ -34,6 +36,10 @@ export default function () {
     res.locals.pluralize = (text) => pluralize.plural(text);
     res.locals.__host__ = `${req.protocol}://${req.headers.host}`;
     res.locals.stringify = JSON.stringify;
+    res.locals.LayoutPages = LayoutPages;
+    res.locals.referer = req.query.referer;
+    res.locals.randomInteger = randomInteger;
+    res.locals.randomChoice = randomChoice;
     next();
   };
 }

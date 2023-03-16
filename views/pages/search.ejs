@@ -12,14 +12,23 @@
           class="form-group d-flex"
           style="gap: 0.2rem"
         >
-          <input
-            type="search"
-            id="search"
-            name="q"
-            class="form-control"
-            value="<%= locals.query %>"
-            autocomplete="off"
-          />
+          <div
+            class="d-flex flex-column w-100 position-relative"
+            id="search-group"
+          >
+            <input
+              type="search"
+              id="search-bar"
+              name="q"
+              class="form-control h-100"
+              value="<%= locals.query %>"
+              autocomplete="off"
+            />
+            <ul
+              class="list-group position-absolute w-100 top-100 d-none"
+              id="search-suggestions-list"
+            ></ul>
+          </div>
           <div class="input-group-append">
             <button type="submit" class="btn btn-outline-success">
               <i class="fa fa-search mr-1"></i> Search
@@ -38,5 +47,6 @@
     </div>
   </div>
   <% if (locals.results) { %> <% for (result of locals.results) { %> <%-
-  include('../_layouts/_searchresult.ejs', { result }) %> <% } %> <% } %>
+  include('../_layouts/partials/_searchresult.ejs', { result }) %> <% } %> <% }
+  %>
 </div>

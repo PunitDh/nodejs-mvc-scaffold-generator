@@ -3,4 +3,4 @@
     <h1>Create {{Model}}</h1>
     <%- include ('./_form.ejs', { {{model}} }) %>
   </div>
-<%- include('../_layouts/_tail.ejs') %>
+  <%- include(locals.LayoutPages._tail) %>

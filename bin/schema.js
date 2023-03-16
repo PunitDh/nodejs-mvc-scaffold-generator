@@ -1,34 +1,33 @@
 import DB from "./db.js";
 import LOGGER from "./logger.js";
 import { getSchema, saveSchema } from "./utils/schema_utils.js";
+import settings from "./utils/settings.js";
 
-(async () => {
-  let schema = getSchema();
+(() => {
+  LOGGER.info("Updating schema");
+  const schema = getSchema();
   const schemaTables = Object.keys(schema.tables);
 
-  const tables = await DB.all(`PRAGMA table_list`);
-  const routerNames = tables
-    .map((r) => r.name)
-    .filter((r) => !r.includes("sqlite_"));
+  DB.all(`PRAGMA table_list`, function (_, tables) {
+    schema.routers = tables
+      .map((r) => r.name)
+      .filter((r) => !r.includes("sqlite_"))
+      .filter((r) => !r.includes(settings.database.migrations.table))
+      .sort();
 
-  const updatedTables = await Promise.all(
-    routerNames.map(async (table) => {
+    schemaTables.forEach((schemaTable) => {
+      if (!schema.routers.includes(schemaTable)) {
+        delete schema.tables[schemaTable];
+      }
+    });
+    saveSchema(schema);
+
+    schema.routers.forEach((table) => {
       LOGGER.info(`Updating schema for '${table}'`);
-      const rows = await DB.all(`PRAGMA table_info('${table}')`);
-      return [table, rows];
-    })
-  );
-
-  const updatedSchema = {
-    routers: routerNames,
-    tables: Object.fromEntries(updatedTables),
-  };
-
-  schemaTables.forEach((schemaTable) => {
-    if (!routerNames.includes(schemaTable)) {
-      delete updatedSchema.tables[schemaTable];
-    }
+      DB.all(`PRAGMA table_info('${table}')`, function (_, rows) {
+        schema.tables[table] = rows;
+        saveSchema(schema);
+      });
+    });
   });
-
-  saveSchema(updatedSchema);
 })();

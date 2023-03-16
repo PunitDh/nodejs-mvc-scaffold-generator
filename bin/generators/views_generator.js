@@ -14,24 +14,27 @@ import { ViewColumn } from "./types.js";
 import SQLiteColumn from "../domain/SQLiteColumn.js";
 import { getSchema } from "../utils/schema_utils.js";
 import pluralize from "pluralize";
+import { PATHS } from "../constants.js";
 
 const argvs = process.argv.slice(2);
 const model = argvs.first();
 const singular = model.toLowerCase();
 const router = pluralize.plural(singular);
-const viewsDirectory = path.join(".", SETTINGS.views.location, router);
+const viewsDirectory = path.join(PATHS.root, SETTINGS.views.location, router);
 if (!fs.existsSync(viewsDirectory)) {
   fs.mkdirSync(viewsDirectory);
 }
-const templateDirectory = path.join(".", "bin", "templates", "views");
-const templates = [
-  "_form.ejs.template",
-  "_head.ejs.template",
-  "new.ejs.template",
-  "edit.ejs.template",
-  "index.ejs.template",
-  "{{singular}}.ejs.template",
-];
+const templateDirectory = path.join(
+  PATHS.root,
+  PATHS.bin,
+  PATHS.templates,
+  PATHS.views
+);
+const templates = fs
+  .readdirSync(templateDirectory, { withFileTypes: true })
+  .filter((file) => file.isFile())
+  .map((file) => file.name);
+
 const files = templates.map((template) => {
   const filename = Handlebars.compile(
     template.split(".").slice(0, 2).join(".")
@@ -45,26 +48,24 @@ const files = templates.map((template) => {
 if (SETTINGS.views.pages.navLinks.overwrite) {
   const { routers } = getSchema();
 
-  const navLinks = routers
-    .sort()
-    .map((router) => ({
-      router,
-      heading: router.capitalize(),
-    }))
-
-    console.log({navLinks})
+  const navLinks = routers.map((router) => ({
+    router,
+    heading: router.capitalize(),
+  }));
 
   const navLinksContents = Handlebars.compileFile(
     templateDirectory,
-    "_layouts",
-    "_navLinks.ejs.template"
+    PATHS._layouts,
+    PATHS.partials,
+    PATHS._navLinksEjsTemplate
   )({ navLinks });
 
   const navLinksFile = path.join(
-    ".",
+    PATHS.root,
     SETTINGS.views.location,
-    "_layouts",
-    "_navLinks.ejs"
+    PATHS._layouts,
+    PATHS.partials,
+    PATHS._navLinksEjs
   );
 
   fs.writeFileSync(navLinksFile, navLinksContents);
@@ -85,7 +86,9 @@ const templateProps = {
   ),
 };
 
-if (!fs.existsSync(path.join(".", SETTINGS.models.location, `${model}.js`))) {
+if (
+  !fs.existsSync(path.join(PATHS.root, SETTINGS.models.location, `${model}.js`))
+) {
   throw new UnknownModelError(`Unknown model: '${model}'`);
 }
 

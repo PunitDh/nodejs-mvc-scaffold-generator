@@ -6,18 +6,26 @@ import DB from "../db.js";
 import SQLiteTable from "./SQLiteTable.js";
 import "../utils/js_utils.js";
 import LOGGER from "../logger.js";
+import SETTINGS from "../utils/settings.js";
 
 class SearchResult {
   constructor(searchTerm, table, data) {
     this.table = table;
     this.priority = 0;
     const result = {};
+    const { maxStringLength } = SETTINGS.views.pages.search;
     Object.entries(data.exclude(...SearchResultExcludedColumns)).map(
       ([key, value]) => {
         const regex = new RegExp(`(${searchTerm})`, "gi");
         this.priority += (value?.toString().match(regex) || []).length;
+        let sanitizedValue;
+        if (value?.toString().length > maxStringLength) {
+          sanitizedValue = value?.toString().slice(0, maxStringLength) + "...";
+        } else {
+          sanitizedValue = value?.toString();
+        }
         result[key] =
-          value?.toString().replace(regex, "<span class='mark'>$1</span>") ||
+          sanitizedValue?.replace(regex, "<span class='mark'>$1</span>") ||
           value;
       }
     );
@@ -27,34 +35,21 @@ class SearchResult {
       "created_at",
       "updated_at"
     );
-    this.title = data[resultColumns.first()];
-    this.link = `${table}/${data.id}`;
+    this.title = `${this.table.capitalize()} - ${data[resultColumns.first()]}`;
+    const urlSearchParam = new URLSearchParams();
+    urlSearchParam.append("referer", `/search?q=${searchTerm}`);
+    this.link = `${table}/${data.id}?${urlSearchParam.toString()}`;
   }
 
   /**
-   * @description Get all tables currently in the database
-   * @returns A list of SQLiteTable
-   */
-  static get __tables__() {
-    return new Promise((resolve, reject) => {
-      DB.all(`PRAGMA table_list`, function (err, tables) {
-        if (err) return reject(err);
-        return resolve(
-          tables
-            .filter((r) => !r.name.includes("sqlite_"))
-            .map((r) => new SQLiteTable(r))
-        );
-      });
-    });
-  }
-
-  /**
-   * @description Searches through all the tables in the database for a specified search term
-   * @param {string} searchTerm 
+   * @description Searches through all the tables in the database for a specified search term.
+   * Also sorts it by "priority", i.e. how often the search term appears in a given record
+   * @param {String} searchTerm - The search term to search for
+   * @param {Integer} limit - A limit for the number of records returned
    * @returns List of SearchResult
    */
-  static async search(searchTerm) {
-    const tables = await this.__tables__;
+  static async search(searchTerm, limit) {
+    const tables = await SQLiteTable.getAllTables();
     const sanitizedSearchTerm = searchTerm?.replaceAll("'", "''");
     const results = await tables.mapAsync(async (table) => {
       const searchQuery = (await table.columns)
@@ -72,7 +67,10 @@ class SearchResult {
         });
       });
     });
-    return results.flat().sort((a, b) => b.priority - a.priority);
+    return results
+      .flat()
+      .sort((a, b) => b.priority - a.priority)
+      .slice(0, limit);
   }
 }
 

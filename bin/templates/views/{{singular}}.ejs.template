@@ -19,13 +19,13 @@
 
   <div class="form-group mb-2">
     <div class="d-flex align-items-center" style="gap: 1rem">
-      <a href="/{{router}}/edit/<%= {{model}}.id %>" class="btn btn-primary" title="Edit {{Model}}">Edit {{Model}}</a>
+      <a href="/{{router}}/edit/<%= {{model}}.id %>" class="btn btn-primary">Edit {{Model}}</a>
       <form action="/{{router}}/delete/<%= {{model}}.id %>" method="POST">
-        <%- include('../_layouts/_csrf_field.ejs') %>
-        <button type="submit" class="btn btn-danger" title="Delete {{Model}}">Delete {{Model}}</button>
+        <%- include(locals.LayoutPages._csrf) %>
+        <button type="submit" class="btn btn-danger">Delete {{Model}}</button>
       </form>
-      <a href="/{{router}}" class="btn btn-danger">Back</a>
+      <a href="<%= locals.referer || "/{{router}}" %>" class="btn btn-danger">Back</a>
     </div>
   </div>
 </div>
-<%- include('../_layouts/_tail.ejs') %>
+<%- include(locals.LayoutPages._tail) %>

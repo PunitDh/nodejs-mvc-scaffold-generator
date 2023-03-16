@@ -1,9 +1,10 @@
 import { join } from "path";
 import SETTINGS from "./settings.js";
 import { readFileSync, writeFileSync } from "fs";
+import { PATHS } from "../constants.js";
 
 export const schemaFile = join(
-  ".",
+  PATHS.root,
   SETTINGS.database.schema.location,
   SETTINGS.database.schema.filename
 );

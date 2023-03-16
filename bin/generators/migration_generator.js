@@ -1,130 +1,52 @@
 // """
-// npm run migration:generate animals drop     # To drop the table
-// npm run migration:generate animals drop     # To drop the table
+// Generate a migration (Alter tabler animal, drop column legs and add column eyes number unique not null)
+// -----------------------------------------------------------------
+// npm run migration:generate Animal drop:legs add:eyes:number:unique:notnull
+//
+//
+// Generate a migration ()
+// ---------------------------------------
+// npm run migration:generate Animal droptable
+//
+//
 // """
 
-import path from "path";
 import "../utils/js_utils.js";
 import {
-  SQLColumnTypes,
-  SQLColumnContraints,
-} from "../constants.js";
-import {
-  GeneratorError,
-  InvalidColumnConstraintError,
-  InvalidDataTypeError,
-} from "../errors.js";
-import LOGGER from "../logger.js";
-import SETTINGS from "../utils/settings.js";
-import Handlebars from "handlebars";
-import pluralize from "pluralize";
+  Column,
+  ForeignKey,
+  MigrationBuilder,
+} from "../builders/MigrationBuilder.js";
+import { getTableNameFromModel } from "../utils/model_utils.js";
+import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 
-const argvs = process.argv.slice(2);
-const [table, action, ...args] = argvs;
-const attributesObj = {};
-const folderName = path.join(".", SETTINGS.models.location);
-const file = path.join(folderName, `${table}.js`);
-const modelTemplate = path.join(
-  ".",
-  "bin",
-  "templates",
-  "models",
-  "model.js.template"
-);
-const migrationTemplate = path.join(
-  ".",
-  "bin",
-  "templates",
-  "db",
-  "_migration.js.template"
-);
+const [model, ...args] = process.argv.slice(2);
+const cols = args.map((arg) => arg.split(":"));
+const actions = cols.map((col) => {
+  const [subAction, columnName, type, ...constraints] = col;
+  const ref = type?.toUpperCase() === "REFERENCES";
+  const foreignKey = ref && new ForeignKey(columnName);
+  const column = !ref && new Column(columnName, type, ...constraints);
 
-if (!fs.existsSync(folderName)) {
-  fs.mkdirSync(folderName);
-}
-
-if (fs.existsSync(file)) {
-  throw new GeneratorError(`Model '${table}' already exists in '${file}'`);
-}
-
-if (!table || args.length === 0) {
-  throw new GeneratorError(`Illegal model name and/or attribute names`);
-}
-
-try {
-  args.forEach((arg) => {
-    const [attributeName, dataType, ...constraints] = arg.trim().split(":");
-    if (!(dataType.trim().toUpperCase() in SQLColumnTypes)) {
-      throw new InvalidDataTypeError(
-        `Unknown data type provided for column '${attributeName}': '${dataType}'`
-      );
-    }
-    attributesObj[attributeName.trim()] = {
-      type: SQLColumnTypes[dataType.trim().toUpperCase()],
-      constraints,
-    };
-  });
-
-  const attributes = Object.keys(attributesObj);
-
-  // Write model file
-  fs.writeFileSync(
-    file,
-    Handlebars.compile(fs.readFileSync(modelTemplate, "utf-8"))({
-      model: table,
-      attributes,
-    })
-  );
-
-  // Add migration
-  const migrationInfo = {
-    tableName: pluralize.plural(table.toLowerCase()),
-    columns: generateColumns(attributesObj),
+  return {
+    subAction,
+    column,
+    foreignKey,
   };
+});
 
-  const migration = Handlebars.compile(readFileSync(migrationTemplate))(
-    migrationInfo
-  );
+const migrations = actions.map((action) =>
+  new MigrationBuilder()
+    .alterTable(model)
+    .withSubAction(action.subAction)
+    .withColumn(action.column)
+    .withForeignKey(action.foreignKey)
+    .buildQuery()
+);
 
-  fs.appendFileSync(
-    path.join(
-      ".",
-      SETTINGS.database.migrations.location,
-      SETTINGS.database.migrations.filename
-    ),
-    migration
-  );
-} catch (e) {
-  LOGGER.error(`Unable to be generate model '${table}'`, e);
-}
-
-function generateColumns(attributesObj) {
-  return Object.entries(attributesObj).map(([name, data]) => {
-    return {
-      name,
-      type: generateColumnType(name, data.type),
-      constraints: generateConstraints(data.constraints),
-    };
-  });
-
-  function generateColumnType(name, type) {
-    if (!(type.trim().toUpperCase() in SQLColumnTypes)) {
-      throw new InvalidDataTypeError(
-        `Unknown data type provided for column '${name}': '${type}'`
-      );
-    }
-    return type.capitalize();
-  }
-
-  function generateConstraints(constraints) {
-    const allConstraints = Object.keys(SQLColumnContraints);
-    return constraints.map((constraint) => {
-      if (!allConstraints.includes(constraint.toUpperCase())) {
-        throw new InvalidColumnConstraintError(
-          `Invalid column constraint provided for column: '${constraint}'`
-        );
-      }
-      return SQLColumnContraints[constraint.toUpperCase()];
-    });
-  }
-}
+migrations.map((migration, i) => {
+  const action = actions[i].subAction;
+  const table = getTableNameFromModel(model);
+  const column = actions[i].column.name || actions[i].foreignKey.thisColumn;
+  generateSQLMigrationFile(action, table, column, migration);
+});

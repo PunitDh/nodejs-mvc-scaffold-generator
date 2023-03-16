@@ -11,6 +11,7 @@ import flash from "connect-flash";
 import session from "express-session";
 import appUtils from "./middleware/appUtils.js";
 import routeLogger from "./middleware/logger.js";
+import { PATHS } from "./constants.js";
 import errorHandler from "./middleware/errorHandler.js";
 
 // Load config
@@ -22,7 +23,7 @@ app.set("view engine", "html");
 app.set("view engine", "ejs");
 
 // Package Middleware
-app.use(express.static(path.join(".", SETTINGS.views.location)));
+app.use(express.static(path.join(PATHS.root, SETTINGS.views.location)));
 app.use(json());
 app.use(express.urlencoded());
 app.use(cookieParser());
@@ -36,14 +37,15 @@ app.use(
 app.use(flash());
 
 // Custom Middleware
-app.use(appUtils());
 app.use(routeLogger());
-
-// Main Router
+app.use(appUtils());
 app.use("/", appRouter);
 
-// Error handler middleware
-app.use(errorHandler());
+app.use(errorHandler);
+
+app.get("*", function (req, res) {
+  res.status(404).render("pages/404");
+});
 
 // Start server
 app.listen(SETTINGS.port, () =>

@@ -1,5 +1,6 @@
 import { Router } from "express";
 import SearchResult from "../bin/domain/SearchResult.js";
+import SETTINGS from "../bin/utils/settings.js";
 
 const pages = Router();
 
@@ -14,7 +15,7 @@ pages.get("/about", (_, res) => {
 pages.get("/search", async (req, res) => {
   const startTime = process.hrtime();
   const results = await SearchResult.search(req.query.q);
-  res.render("pages/search", {
+  return res.render("pages/search", {
     results,
     query: req.query.q,
     time: (() => {
@@ -23,6 +24,15 @@ pages.get("/search", async (req, res) => {
       return Math.round(milliseconds * 100) / 100000;
     })(),
   });
+});
+
+pages.get("/api/search", async (req, res) => {
+  const { searchSuggestionLimit } = SETTINGS.views.pages.search;
+  const results = await SearchResult.search(
+    req.query.q,
+    searchSuggestionLimit || 10
+  );
+  return res.status(200).send(results);
 });
 
 export default pages;

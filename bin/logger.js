@@ -1,6 +1,6 @@
 import { appendFileSync } from "fs";
 import { join } from "path";
-import { TERMINAL_COLORS } from "./constants.js";
+import { PATHS, TERMINAL_COLORS } from "./constants.js";
 import "./utils/js_utils.js"
 
 function logMessage() {
@@ -10,7 +10,7 @@ function logMessage() {
   )}`;
   console.log(`${color}%s\x1b[0m`, message);
   appendFileSync(
-    join(".", "logs", `${process.env.npm_package_name}.log`),
+    join(PATHS.root, PATHS.logs, `${process.env.npm_package_name}.log`),
     `${message}\n`
   );
 }

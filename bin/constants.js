@@ -64,7 +64,7 @@ export const TERMINAL_COLORS = {
   BgGray: "\x1b[100m",
 };
 
-export const SQLColumnContraints = {
+export const SQLColumnConstraints = {
   PRIMARY_KEY: "PRIMARY KEY",
   AUTO_INCREMENT: "AUTOINCREMENT",
   NOT_NULL: "NOT NULL",
@@ -73,6 +73,23 @@ export const SQLColumnContraints = {
   AUTOINCREMENT: "AUTOINCREMENT",
   PRIMARYKEY: "PRIMARY KEY",
   NOTNULL: "NOT NULL",
+  "PRIMARY KEY": "PRIMARY KEY",
+  "AUTO INCREMENT": "AUTOINCREMENT",
+  "NOT NULL": "NOT NULL",
+};
+
+export const SQLForeignKeyActions = {
+  "NO ACTION": "NO ACTION",
+  CASCADE: "CASCADE",
+  "SET NULL": "SET NULL",
+  "SET DEFAULT": "SET DEFAULT",
+  RESTRICT: "RESTRICT",
+  NOACTION: "NO ACTION",
+  NO_ACTION: "NO ACTION",
+  SETNULL: "SET NULL",
+  SET_NULL: "SET NULL",
+  SETDEFAULT: "SET DEFAULT",
+  SET_DEFAULT: "SET DEFAULT",
 };
 
 export const HTMLInputTypes = {
@@ -127,15 +144,40 @@ export const ColumnFormat = {
   EMAIL: "email",
 };
 
-export const HttpMethods = {
-  GET: "GET",
-  POST: "POST",
-  PUT: "PUT",
-  PATCH: "PATCH",
-  DELETE: "DELETE"
-}
+export const PATHS = {
+  root: ".",
+  bin: "bin",
+  templates: "templates",
+  views: "views",
+  routers: "routers",
+  _layouts: "_layouts",
+  partials: "partials",
+  _navLinksEjsTemplate: "_navLinks.ejs.template",
+  _navLinksEjs: "_navLinks.ejs",
+  apiJsTemplate: "api.js.template",
+  viewsJsTemplate: "views.js.template",
+  indexFileJsTemplate: "_indexFile.js.template",
+  indexJs: "index.js",
+  models: "models",
+  modelJsTemplate: "model.js.template",
+  db: "db",
+  migrations: "migrations",
+  instance: "instance",
+  migrationJsTemplate: "_migration.js.template",
+  logs: "logs",
+  queries: "queries",
+  selectSqlTemplate: "select.sql.template",
+  insertSqlTemplate: "insert.sql.template",
+  updateSqlTemplate: "update.sql.template",
+  deleteSqlTemplate: "delete.sql.template",
+};
 
-export const ReadOnlyColumns = ["id", "created_at", "updated_at"];
+export const ReadOnlyColumns = [
+  "id",
+  "created_at",
+  "updated_at",
+  "_csrf_token",
+];
 
 export const SearchExcludedColumns = [
   "id",
@@ -153,7 +195,6 @@ export const MigrationActions = {
   CREATE: "CREATE",
   ALTER: "ALTER",
   DROP: "DROP",
-  UPDATE: "UPDATE",
   subAction: {
     ADD: "ADD",
     DROP: "DROP",
@@ -162,5 +203,16 @@ export const MigrationActions = {
 
 export const Flash = {
   SUCCESS: "success",
-  ERROR: "error"
-}
+  ERROR: "error",
+};
+
+export const MediaType = {
+  APPLICATION_JSON: "application/json",
+};
+
+export const LayoutPages = {
+  _csrf: "../_layouts/partials/_csrf.ejs",
+  _head: "../_layouts/_head.ejs",
+  _tail: "../_layouts/_tail.ejs",
+  _mid: "../_layouts/_mid.ejs",
+};

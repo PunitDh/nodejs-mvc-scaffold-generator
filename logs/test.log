@@ -1,155 +1,40 @@
-[INFO] [15/03/2023, 10:00:14 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:00:14 am]: Server started on port 3000
-[INFO] [15/03/2023, 10:00:14 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:22:05 am]: Started GET "/search?q=l" at 15/03/2023, 10:22:05 am
-[INFO] [15/03/2023, 10:22:05 am]: Completed 200 OK in 12.05 ms
-[INFO] [15/03/2023, 10:22:05 am]: Started GET "/assets/css/bootstrap.min.css" at 15/03/2023, 10:22:05 am
-[INFO] [15/03/2023, 10:22:05 am]: Started GET "/assets/css/application.css" at 15/03/2023, 10:22:05 am
-[INFO] [15/03/2023, 10:22:05 am]: Started GET "/assets/js/bootstrap.bundle.min.js" at 15/03/2023, 10:22:05 am
-[INFO] [15/03/2023, 10:22:05 am]: Completed 404 Not Found in 3.86 ms
-[INFO] [15/03/2023, 10:22:05 am]: Completed 404 Not Found in 3.4 ms
-[INFO] [15/03/2023, 10:22:05 am]: Completed 404 Not Found in 3.14 ms
-[INFO] [15/03/2023, 10:22:05 am]: Started GET "/assets/js/bootstrap.bundle.min.js" at 15/03/2023, 10:22:05 am
-[INFO] [15/03/2023, 10:22:05 am]: Completed 404 Not Found in 1.06 ms
-[INFO] [15/03/2023, 10:22:05 am]: Started GET "/assets/images/favicon.png" at 15/03/2023, 10:22:05 am
-[INFO] [15/03/2023, 10:22:05 am]: Completed 404 Not Found in 1.92 ms
-[INFO] [15/03/2023, 10:22:08 am]: Started GET "/search?q=l" at 15/03/2023, 10:22:08 am
-[INFO] [15/03/2023, 10:22:08 am]: Completed 200 OK in 10.61 ms
-[INFO] [15/03/2023, 10:22:08 am]: Started GET "/assets/css/bootstrap.min.css" at 15/03/2023, 10:22:08 am
-[INFO] [15/03/2023, 10:22:08 am]: Started GET "/assets/css/application.css" at 15/03/2023, 10:22:08 am
-[INFO] [15/03/2023, 10:22:08 am]: Started GET "/assets/js/bootstrap.bundle.min.js" at 15/03/2023, 10:22:08 am
-[INFO] [15/03/2023, 10:22:08 am]: Completed 404 Not Found in 6.11 ms
-[INFO] [15/03/2023, 10:22:08 am]: Completed 404 Not Found in 5.21 ms
-[INFO] [15/03/2023, 10:22:08 am]: Completed 404 Not Found in 3.6 ms
-[INFO] [15/03/2023, 10:22:08 am]: Started GET "/assets/images/favicon.png" at 15/03/2023, 10:22:08 am
-[INFO] [15/03/2023, 10:22:08 am]: Completed 404 Not Found in 1.69 ms
-[INFO] [15/03/2023, 10:22:08 am]: Started GET "/assets/js/bootstrap.bundle.min.js" at 15/03/2023, 10:22:08 am
-[INFO] [15/03/2023, 10:22:08 am]: Completed 404 Not Found in 1.22 ms
-[INFO] [15/03/2023, 10:22:08 am]: Started GET "/assets/images/favicon.ico" at 15/03/2023, 10:22:08 am
-[INFO] [15/03/2023, 10:22:08 am]: Completed 404 Not Found in 5.39 ms
-[INFO] [15/03/2023, 10:22:09 am]: Started GET "/" at 15/03/2023, 10:22:09 am
-[INFO] [15/03/2023, 10:22:09 am]: Completed 200 OK in 5.92 ms
-[INFO] [15/03/2023, 10:22:09 am]: Started GET "/assets/css/bootstrap.min.css" at 15/03/2023, 10:22:09 am
-[INFO] [15/03/2023, 10:22:09 am]: Started GET "/assets/css/application.css" at 15/03/2023, 10:22:09 am
-[INFO] [15/03/2023, 10:22:09 am]: Started GET "/assets/js/bootstrap.bundle.min.js" at 15/03/2023, 10:22:09 am
-[INFO] [15/03/2023, 10:22:09 am]: Completed 404 Not Found in 7.37 ms
-[INFO] [15/03/2023, 10:22:09 am]: Completed 404 Not Found in 8.42 ms
-[INFO] [15/03/2023, 10:22:09 am]: Completed 404 Not Found in 5.51 ms
-[INFO] [15/03/2023, 10:22:09 am]: Started GET "/assets/images/favicon.png" at 15/03/2023, 10:22:09 am
-[INFO] [15/03/2023, 10:22:09 am]: Completed 404 Not Found in 1.45 ms
-[INFO] [15/03/2023, 10:22:09 am]: Started GET "/assets/js/bootstrap.bundle.min.js" at 15/03/2023, 10:22:09 am
-[INFO] [15/03/2023, 10:22:09 am]: Completed 404 Not Found in 5.6 ms
-[INFO] [15/03/2023, 10:22:14 am]: Started GET "/" at 15/03/2023, 10:22:14 am
-[INFO] [15/03/2023, 10:22:14 am]: Completed 304 Not Modified in 4.5 ms
-[INFO] [15/03/2023, 10:22:14 am]: Started GET "/assets/css/bootstrap.min.css" at 15/03/2023, 10:22:14 am
-[INFO] [15/03/2023, 10:22:14 am]: Started GET "/assets/css/application.css" at 15/03/2023, 10:22:14 am
-[INFO] [15/03/2023, 10:22:14 am]: Completed 404 Not Found in 6.88 ms
-[INFO] [15/03/2023, 10:22:14 am]: Completed 404 Not Found in 6.56 ms
-[INFO] [15/03/2023, 10:22:14 am]: Started GET "/assets/js/bootstrap.bundle.min.js" at 15/03/2023, 10:22:14 am
-[INFO] [15/03/2023, 10:22:14 am]: Completed 404 Not Found in 1.58 ms
-[INFO] [15/03/2023, 10:22:14 am]: Started GET "/assets/images/favicon.png" at 15/03/2023, 10:22:14 am
-[INFO] [15/03/2023, 10:22:14 am]: Started GET "/assets/js/bootstrap.bundle.min.js" at 15/03/2023, 10:22:14 am
-[INFO] [15/03/2023, 10:22:14 am]: Completed 404 Not Found in 1.54 ms
-[INFO] [15/03/2023, 10:22:14 am]: Completed 404 Not Found in 1.2 ms
-[INFO] [15/03/2023, 10:24:38 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:24:38 am]: Server started on port 3000
-[INFO] [15/03/2023, 10:24:38 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:24:46 am]: Started GET "/" at 15/03/2023, 10:24:46 am
-[INFO] [15/03/2023, 10:24:46 am]: Completed 304 Not Modified in 10.51 ms
-[INFO] [15/03/2023, 10:24:55 am]: Started GET "/about" at 15/03/2023, 10:24:55 am
-[INFO] [15/03/2023, 10:24:55 am]: Completed 200 OK in 16.82 ms
-[INFO] [15/03/2023, 10:24:55 am]: Started GET "/companies/" at 15/03/2023, 10:24:55 am
-[INFO] [15/03/2023, 10:24:55 am]: Completed 404 Not Found in 22.56 ms
-[INFO] [15/03/2023, 10:25:13 am]: Started GET "/companies/" at 15/03/2023, 10:25:13 am
-[INFO] [15/03/2023, 10:25:13 am]: Completed 404 Not Found in 3.73 ms
-[INFO] [15/03/2023, 10:26:17 am]: Started GET "/" at 15/03/2023, 10:26:17 am
-[INFO] [15/03/2023, 10:26:17 am]: Completed 200 OK in 15.64 ms
-[INFO] [15/03/2023, 10:26:18 am]: Started GET "/about" at 15/03/2023, 10:26:18 am
-[INFO] [15/03/2023, 10:26:18 am]: Completed 200 OK in 2.55 ms
-[INFO] [15/03/2023, 10:26:19 am]: Started GET "/" at 15/03/2023, 10:26:19 am
-[INFO] [15/03/2023, 10:26:19 am]: Completed 304 Not Modified in 6.06 ms
-[INFO] [15/03/2023, 10:26:20 am]: Started GET "/about" at 15/03/2023, 10:26:20 am
-[INFO] [15/03/2023, 10:26:20 am]: Completed 304 Not Modified in 4.47 ms
-[INFO] [15/03/2023, 10:26:22 am]: Started GET "/search?q=test" at 15/03/2023, 10:26:22 am
-[INFO] [15/03/2023, 10:26:22 am]: Completed 200 OK in 9.59 ms
-[INFO] [15/03/2023, 10:26:25 am]: Started GET "/search?q=test" at 15/03/2023, 10:26:25 am
-[INFO] [15/03/2023, 10:26:25 am]: Completed 200 OK in 6.3 ms
-[INFO] [15/03/2023, 10:26:26 am]: Started GET "/search?q=test" at 15/03/2023, 10:26:26 am
-[INFO] [15/03/2023, 10:26:26 am]: Completed 200 OK in 3.96 ms
-[INFO] [15/03/2023, 10:26:27 am]: Started GET "/search?q=test" at 15/03/2023, 10:26:27 am
-[INFO] [15/03/2023, 10:26:27 am]: Completed 200 OK in 8.39 ms
-[INFO] [15/03/2023, 10:28:30 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:28:30 am]: Server started on port 3000
-[INFO] [15/03/2023, 10:28:30 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:32:57 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:32:57 am]: Server started on port 3000
-[INFO] [15/03/2023, 10:32:57 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:33:19 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:33:19 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:33:19 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:33:19 am]: Server started on port 3000
-[INFO] [15/03/2023, 10:33:19 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:33:43 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:33:43 am]: Server started on port 3000
-[INFO] [15/03/2023, 10:33:43 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:33:53 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:33:53 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:34:06 am]: Started GET "/search?q=test" at 15/03/2023, 10:34:06 am
-[INFO] [15/03/2023, 10:34:06 am]: Completed 200 OK in 9.43 ms
-[INFO] [15/03/2023, 10:34:08 am]: Started GET "/search?q=test" at 15/03/2023, 10:34:08 am
-[INFO] [15/03/2023, 10:34:08 am]: Completed 200 OK in 2.75 ms
-[INFO] [15/03/2023, 10:36:03 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:36:03 am]: Server started on port 3000
-[INFO] [15/03/2023, 10:36:03 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:36:53 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:36:53 am]: Server started on port 3000
-[INFO] [15/03/2023, 10:36:53 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:37:10 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:37:10 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:37:24 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:37:24 am]: Server started on port 3000
-[INFO] [15/03/2023, 10:37:24 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:37:50 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:37:50 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:38:02 am]: Started GET "/search?q=test" at 15/03/2023, 10:38:02 am
-[INFO] [15/03/2023, 10:38:02 am]: Completed 200 OK in 11.29 ms
-[INFO] [15/03/2023, 10:38:03 am]: Started GET "/animals/" at 15/03/2023, 10:38:03 am
-[QUERY] [15/03/2023, 10:38:03 am]: SELECT * FROM animals;
-[ERROR] [15/03/2023, 10:38:03 am]: Error: SQLITE_ERROR: no such table: animals
-[ERROR] [15/03/2023, 10:38:03 am]: Error: SQLITE_ERROR: no such table: animals
-[INFO] [15/03/2023, 10:38:03 am]: Completed 302 Found in 25.82 ms
-[INFO] [15/03/2023, 10:38:03 am]: Started GET "/search?q=test" at 15/03/2023, 10:38:03 am
-[INFO] [15/03/2023, 10:38:03 am]: Completed 200 OK in 2.1 ms
-[INFO] [15/03/2023, 10:38:10 am]: Successfully connected to database: 'database.db'
-[QUERY] [15/03/2023, 10:38:10 am]: CREATE TABLE IF NOT EXISTS animals (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT , color TEXT , created_at NUMERIC, updated_at NUMERIC)
-[INFO] [15/03/2023, 10:38:10 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:38:10 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:38:21 am]: Started GET "/search?q=test" at 15/03/2023, 10:38:21 am
-[QUERY] [15/03/2023, 10:38:21 am]: SELECT * FROM animals WHERE name LIKE '%test%' OR color LIKE '%test%' ORDER BY updated_at DESC;
-[INFO] [15/03/2023, 10:38:21 am]: Completed 200 OK in 14.49 ms
-[INFO] [15/03/2023, 10:38:22 am]: Started GET "/animals/" at 15/03/2023, 10:38:22 am
-[QUERY] [15/03/2023, 10:38:22 am]: SELECT * FROM animals;
-[INFO] [15/03/2023, 10:38:22 am]: Completed 200 OK in 12.95 ms
-[INFO] [15/03/2023, 10:38:24 am]: Started GET "/animals/new" at 15/03/2023, 10:38:24 am
-[INFO] [15/03/2023, 10:38:24 am]: Completed 200 OK in 13.12 ms
-[INFO] [15/03/2023, 10:38:25 am]: Started GET "/animals/" at 15/03/2023, 10:38:25 am
-[QUERY] [15/03/2023, 10:38:25 am]: SELECT * FROM animals;
-[INFO] [15/03/2023, 10:38:25 am]: Completed 304 Not Modified in 6.95 ms
-[INFO] [15/03/2023, 10:39:28 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:39:28 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:39:40 am]: Started GET "/animals/" at 15/03/2023, 10:39:40 am
-[QUERY] [15/03/2023, 10:39:40 am]: SELECT * FROM animals;
-[INFO] [15/03/2023, 10:39:40 am]: Completed 200 OK in 9.23 ms
-[INFO] [15/03/2023, 10:39:42 am]: Started GET "/animals/new" at 15/03/2023, 10:39:42 am
-[INFO] [15/03/2023, 10:39:42 am]: Completed 200 OK in 9.18 ms
-[INFO] [15/03/2023, 10:39:45 am]: Started POST "/animals/new" at 15/03/2023, 10:39:45 am
-[QUERY] [15/03/2023, 10:39:45 am]: INSERT INTO animals (name, color, created_at, updated_at) VALUES ($name, $color, DATETIME('now'), DATETIME('now')) RETURNING *;
-[INFO] [15/03/2023, 10:39:45 am]: Completed 302 Found in 6.39 ms
-[INFO] [15/03/2023, 10:39:45 am]: Started GET "/animals/" at 15/03/2023, 10:39:45 am
-[QUERY] [15/03/2023, 10:39:45 am]: SELECT * FROM animals;
-[INFO] [15/03/2023, 10:39:45 am]: Completed 200 OK in 3.65 ms
-[INFO] [15/03/2023, 10:43:39 am]: Successfully connected to database: 'database.db'
-[INFO] [15/03/2023, 10:43:39 am]: Server started on port 3000
-[INFO] [15/03/2023, 10:43:39 am]: Foreign keys have been turned ON 
-[INFO] [15/03/2023, 10:43:41 am]: Started GET "/" at 15/03/2023, 10:43:41 am
-[INFO] [15/03/2023, 10:43:41 am]: Completed 200 OK in 16 ms
+[INFO] [16/03/2023, 17:52:41]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 17:52:41]: Server started on port 3000
+[INFO] [16/03/2023, 17:52:41]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 17:52:41]: Connected to migration versioning table
+[INFO] [16/03/2023, 17:52:49]: Started GET "/" at 16/03/2023, 17:52:49
+[INFO] [16/03/2023, 17:52:49]: Success 200 OK in 13.63 ms
+[INFO] [16/03/2023, 17:52:50]: Started GET "/about" at 16/03/2023, 17:52:50
+[INFO] [16/03/2023, 17:52:50]: Success 200 OK in 3.39 ms
+[INFO] [16/03/2023, 17:53:04]: Started GET "/about" at 16/03/2023, 17:53:04
+[INFO] [16/03/2023, 17:53:04]: Success 200 OK in 13.03 ms
+[INFO] [16/03/2023, 17:53:05]: Started GET "/about" at 16/03/2023, 17:53:05
+[INFO] [16/03/2023, 17:53:05]: Redirected 304 Not Modified in 2.74 ms
+[INFO] [16/03/2023, 17:53:06]: Started GET "/" at 16/03/2023, 17:53:06
+[INFO] [16/03/2023, 17:53:06]: Success 200 OK in 5.27 ms
+[INFO] [16/03/2023, 17:53:06]: Started GET "/about" at 16/03/2023, 17:53:06
+[INFO] [16/03/2023, 17:53:06]: Redirected 304 Not Modified in 7.92 ms
+[INFO] [16/03/2023, 17:53:10]: Started GET "/search?q=test" at 16/03/2023, 17:53:10
+[INFO] [16/03/2023, 17:53:10]: Success 200 OK in 10.91 ms
+[INFO] [16/03/2023, 17:53:11]: Started GET "/api/search?q=test" at 16/03/2023, 17:53:11
+[INFO] [16/03/2023, 17:53:11]: Success 200 OK in 5.37 ms
+[INFO] [16/03/2023, 17:53:12]: Started GET "/api/search?q=test" at 16/03/2023, 17:53:12
+[INFO] [16/03/2023, 17:53:12]: Redirected 304 Not Modified in 1.75 ms
+[INFO] [16/03/2023, 17:53:14]: Started GET "/api/search?q=test" at 16/03/2023, 17:53:14
+[INFO] [16/03/2023, 17:53:14]: Redirected 304 Not Modified in 1.24 ms
+[INFO] [16/03/2023, 17:53:18]: Started GET "/api/search?q=t" at 16/03/2023, 17:53:18
+[INFO] [16/03/2023, 17:53:18]: Success 200 OK in 6.1 ms
+[INFO] [16/03/2023, 17:53:18]: Started GET "/api/search?q=te" at 16/03/2023, 17:53:18
+[INFO] [16/03/2023, 17:53:18]: Success 200 OK in 5.05 ms
+[INFO] [16/03/2023, 17:53:18]: Started GET "/api/search?q=test" at 16/03/2023, 17:53:18
+[INFO] [16/03/2023, 17:53:18]: Redirected 304 Not Modified in 10.48 ms
+[INFO] [16/03/2023, 17:53:18]: Started GET "/api/search?q=test" at 16/03/2023, 17:53:18
+[INFO] [16/03/2023, 17:53:18]: Redirected 304 Not Modified in 1.9 ms
+[INFO] [16/03/2023, 17:53:18]: Started GET "/search?q=test" at 16/03/2023, 17:53:18
+[INFO] [16/03/2023, 17:53:18]: Success 200 OK in 3.1 ms
+[INFO] [16/03/2023, 17:53:20]: Started GET "/" at 16/03/2023, 17:53:20
+[INFO] [16/03/2023, 17:53:20]: Redirected 304 Not Modified in 7.66 ms
+[INFO] [16/03/2023, 17:53:21]: Started GET "/about" at 16/03/2023, 17:53:21
+[INFO] [16/03/2023, 17:53:21]: Redirected 304 Not Modified in 4.29 ms
+[INFO] [16/03/2023, 17:53:22]: Started GET "/" at 16/03/2023, 17:53:22
+[INFO] [16/03/2023, 17:53:22]: Redirected 304 Not Modified in 3.78 ms

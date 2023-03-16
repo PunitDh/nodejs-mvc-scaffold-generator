@@ -1,3 +1,3 @@
 export function getNewDate() {
-  return parseInt(new Date().getTime())
+  return parseInt(new Date().getTime());
 }

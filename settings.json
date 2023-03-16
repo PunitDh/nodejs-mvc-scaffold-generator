@@ -10,7 +10,8 @@
     },
     "migrations": {
       "location": "db",
-      "filename": "migrations.js"
+      "filename": "migrations.js",
+      "table": "_migrations"
     }
   },
   "routers": {
@@ -34,6 +35,10 @@
       "singular": {},
       "navLinks": {
         "overwrite": true
+      },
+      "search": {
+        "maxStringLength": 50,
+        "searchSuggestionLimit": 10
       }
     }
   }

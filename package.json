@@ -5,14 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "setup": "chmod u+x ./bin/setup.sh && ./bin/setup.sh",
+    "setup": "chmod u+x ./bin/generators/setup.sh && ./bin/generators/setup.sh",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "db:migrate": "chmod u+x ./bin/db_migrate.sh && ./bin/db_migrate.sh",
+    "db:migrate": "chmod u+x ./bin/generators/db_migrate.sh && ./bin/generators/db_migrate.sh",
+    "db:seed": "chmod u+x ./bin/generators/db_seed.sh && ./bin/generators/db_seed.sh",
     "model:generate": "node ./bin/generators/model_generator.js",
     "router:generate": "node ./bin/generators/router_generator.js",
     "views:generate": "node ./bin/generators/views_generator.js",
-    "migration:generate": "",
+    "migration:generate": "node ./bin/generators/migration_generator.js",
     "scaffold:generate": "chmod u+x ./bin/generators/scaffold_generate.sh && ./bin/generators/scaffold_generate.sh",
     "auth:generate": "node ./bin/auth_generator.js",
     "test": "node test.js"
@@ -36,6 +37,8 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "lorem-ipsum": "^2.0.8",
     "nodemon": "^2.0.20"
   }
 }

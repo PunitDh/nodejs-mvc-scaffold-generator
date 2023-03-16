@@ -15,6 +15,7 @@ import SQLiteColumn from "../domain/SQLiteColumn.js";
 import { getSchema } from "../utils/schema_utils.js";
 import pluralize from "pluralize";
 import { PATHS } from "../constants.js";
+import { writeFileSync } from "../utils/file_utils.js";
 
 const argvs = process.argv.slice(2);
 const model = argvs.first();
@@ -68,7 +69,7 @@ if (SETTINGS.views.pages.navLinks.overwrite) {
     PATHS._navLinksEjs
   );
 
-  fs.writeFileSync(navLinksFile, navLinksContents);
+  writeFileSync(navLinksFile, navLinksContents);
 }
 
 const templateProps = {
@@ -95,7 +96,7 @@ if (
 try {
   files.forEach((file) => {
     const page = path.parse(file.location).name.toString().capitalize();
-    fs.writeFileSync(
+    writeFileSync(
       file.location,
       Handlebars.compileFile(file.template)({
         ...templateProps,

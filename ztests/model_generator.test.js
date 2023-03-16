@@ -22,17 +22,18 @@ import {
   ForeignKey,
   MigrationBuilder,
 } from "../bin/builders/MigrationBuilder.js";
+import "../bin/utils/js_utils.js";
 
 let command =
   "npm run model:generate Employee first_name:string last_name:string description:text email:email:unique password:password salary:number start_date:date Employer:references User:references";
 
 const [model, ...args] = command.split(" ").slice(3); //process.argv.slice(2);
 const cols = args.map((arg) => arg.split(":"));
-const refs = cols.filter(
-  ([_, constraint]) => constraint.toUpperCase() === "REFERENCES"
+const refs = cols.filter(([_, constraint]) =>
+  constraint.equalsIgnoreCase("REFERENCES")
 );
-const nonRefs = cols.filter(
-  ([_, constraint]) => constraint.toUpperCase() !== "REFERENCES"
+const nonRefs = cols.filter(([_, constraint]) =>
+  constraint.equalsIgnoreCase("REFERENCES")
 );
 const columns = nonRefs.map(
   ([name, type, ...constraints]) => new Column(name, type, ...constraints)

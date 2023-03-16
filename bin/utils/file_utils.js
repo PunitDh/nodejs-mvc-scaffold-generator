@@ -1,14 +1,25 @@
 import path from "path";
 import fs from "fs";
+import LOGGER from "../logger.js";
 
 export function readFileSync() {
   const file = path.join(...arguments);
-  return fs.readFileSync(file, "utf-8");
+  try {
+    return fs.readFileSync(file, "utf-8");
+  } catch (e) {
+    return LOGGER.error(`Failed to read contents of file: '${file}'`, e.stack);
+  }
 }
 
 export function writeFileSync() {
   const args = [...arguments];
   const file = path.join(...args.slice(0, args.length - 1));
   const contents = args[args.length - 1];
-  return fs.writeFileSync(file, contents);
+  try {
+    const writtenFile = fs.writeFileSync(file, contents);
+    LOGGER.success(`Successfully created: ${file}`);
+    return writtenFile;
+  } catch (e) {
+    return LOGGER.error(`Failed to write to '${file}'`, e.stack);
+  }
 }

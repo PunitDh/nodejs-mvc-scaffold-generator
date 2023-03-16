@@ -64,6 +64,12 @@ class SQLQueryBuilder {
     return this;
   }
 
+  in() {
+    this.whereIn = true;
+    this.where = [...arguments];
+    return this;
+  }
+
   deleteFrom(table) {
     return this.delete().from(table);
   }
@@ -112,6 +118,7 @@ class SQLQueryBuilder {
     const whereClause = this.where?.length
       ? ` WHERE ${this.where.map((col) => `${col}=$${col}`).join(" AND ")}`
       : "";
+    const whereInClause = (this.where?.length && this.whereIn) ? ` WHERE ${this.where.map((col) => `${col} IN $${col}`).join(" AND ")}`: "";
     const returningClause = this.returningValue
       ? ` RETURNING ${this.returningValue.join(", ")}`
       : "";
@@ -185,6 +192,14 @@ const test = new SQLQueryBuilder()
   .update("animals")
   .set("id")
   .where("id")
+  .build();
+
+const values = [65, 23, 56, 67, 54, 27];
+const inQuery = new SQLQueryBuilder()
+  .select("*")
+  .from("animals")
+  .where("id")
+  .in(values)
   .build();
 
 console.log(select, insert, update, del, test);

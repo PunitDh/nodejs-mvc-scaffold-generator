@@ -22,6 +22,9 @@ const LOGGER = {
   warn: function () {
     logMessage("warn", TERMINAL_COLORS.FgYellow, ...arguments);
   },
+  success: function () {
+    logMessage("success", TERMINAL_COLORS.FgGreen, ...arguments);
+  },
   error: function () {
     logMessage("error", TERMINAL_COLORS.FgRed, ...arguments);
   },

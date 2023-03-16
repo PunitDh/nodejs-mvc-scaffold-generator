@@ -9,20 +9,20 @@ export default function routeLogger() {
       const [seconds, nanoseconds] = process.hrtime(startTime);
       const milliseconds = seconds * 1000 + nanoseconds / 1000000;
       const diffTime = Math.round(milliseconds * 100) / 100;
-      let status;
-      if (res.statusCode >= 500) {
-        status = "Server Error";
-      } else if (res.statusCode >= 400) {
-        status = "Client Error";
-      } else if (res.statusCode >= 300) {
-        status = "Redirected";
-      } else if (res.statusCode >= 200) {
-        status = "Success";
-      } else {
-        status = "Information";
-      }
+      // let status;
+      // if (res.statusCode >= 500) {
+      //   status = "Server Error";
+      // } else if (res.statusCode >= 400) {
+      //   status = "Client Error";
+      // } else if (res.statusCode >= 300) {
+      //   status = "Redirected";
+      // } else if (res.statusCode >= 200) {
+      //   status = "Success";
+      // } else {
+      //   status = "Information";
+      // }
       LOGGER.info(
-        status,
+        "Completed",
         res.statusCode,
         res.statusMessage,
         "in",

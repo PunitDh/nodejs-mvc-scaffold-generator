@@ -107,6 +107,14 @@
         "notnull": 0,
         "dflt_value": null,
         "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "image",
+        "type": "BLOB",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
       }
     ],
     "blogs": [
@@ -324,49 +332,15 @@
         "dflt_value": null,
         "pk": 0
       }
-    ],
-    "_migrations": [
-      {
-        "cid": 0,
-        "name": "version",
-        "type": "INTEGER",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 1
-      },
-      {
-        "cid": 1,
-        "name": "filename",
-        "type": "TEXT",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 0
-      },
-      {
-        "cid": 2,
-        "name": "query",
-        "type": "TEXT",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 0
-      },
-      {
-        "cid": 3,
-        "name": "created_at",
-        "type": "NUMERIC",
-        "notnull": 0,
-        "dflt_value": "DATETIME('now')",
-        "pk": 0
-      }
     ]
   },
   "routers": [
-    "_migrations",
     "animals",
     "blogs",
     "comments",
     "companies",
     "employees",
-    "users"
+    "users",
+    "tests"
   ]
 }

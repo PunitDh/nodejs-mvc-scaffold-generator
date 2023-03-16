@@ -210,6 +210,14 @@ export const MediaType = {
   APPLICATION_JSON: "application/json",
 };
 
+export const HttpMethods = {
+  GET: "GET",
+  POST: "POST",
+  PUT: "PUT",
+  PATCH: "PATCH",
+  DELETE: "DELETE",
+};
+
 export const LayoutPages = {
   _csrf: "../_layouts/partials/_csrf.ejs",
   _head: "../_layouts/_head.ejs",

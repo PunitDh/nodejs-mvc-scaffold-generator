@@ -2,6 +2,8 @@ import { Router } from "express";
 import Animal from "../models/Animal.js";
 import { Flash } from "../bin/constants.js";
 import csrf from "../bin/middleware/csrf.js";
+import upload from "../bin/middleware/upload.js";
+import fs from "fs";
 const animals = Router();
 
 animals.use(csrf());
@@ -9,6 +11,7 @@ animals.use(csrf());
 animals.get("/", async (req, res) => {
   try {
     const animals = await Animal.all();
+    console.log(res.render.toString())
     return res.render("animals/index", { animals });
   } catch (e) {}
 });
@@ -35,9 +38,14 @@ animals.get("/edit/:id", async (req, res) => {
   }
 });
 
-animals.post("/edit/:id", async (req, res) => {
+animals.post("/edit/:id", upload.single("image"), async (req, res) => {
   try {
-    await Animal.update(req.params.id, req.body);
+    const animal = new Animal({ ...req.body, id: req.params.id });
+    const image = req.file;
+    const buffer = fs.readFileSync(image.path);
+    const blob = Buffer.from(buffer, "binary");
+    animal.image = blob;
+    await animal.save();
     req.flash(Flash.SUCCESS, "Animal has been updated");
     return res.redirect(`/animals`);
   } catch (e) {
@@ -59,15 +67,20 @@ animals.post("/delete/:id", async (req, res) => {
 animals.get("/:id", async (req, res) => {
   try {
     const animal = await Animal.find(req.params.id);
+    console.log(animal);
     return res.render("animals/animal", { animal });
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
   }
 });
 
-animals.post("/new", async (req, res) => {
+animals.post("/new", upload.single("image"), async (req, res) => {
   try {
     const animal = new Animal(req.body);
+    const image = req.file;
+    const buffer = fs.readFileSync(image.path);
+    const blob = Buffer.from(buffer, "binary");
+    animal.image = blob;
     await animal.save();
     req.flash(Flash.SUCCESS, "Animal has been added");
     return res.redirect(`/animals`);

@@ -118,9 +118,8 @@ class Model {
     const columnNames = (await this.__columns__)
       .filter((column) => !SearchExcludedColumns.includes(column.name))
       .map((column) => `${column.name} LIKE '%${sanitizedSearchTerm}%'`);
-    const query = `SELECT * FROM ${this.__tablename__} WHERE ${columnNames.join(
-      " OR "
-    )};`;
+    const whereClause = columnNames.join(" OR ");
+    const query = `SELECT * FROM ${this.__tablename__} WHERE ${whereClause};`;
     return await this.dbQuery(query);
   }
 
@@ -251,7 +250,6 @@ class Model {
     const _Model = this.prototype.constructor;
     return new Promise(function (resolve, reject) {
       LOGGER.query(query);
-      LOGGER.query(values);
       DB.all(query, values, function (err, rows) {
         if (err) {
           LOGGER.error(err);

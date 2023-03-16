@@ -2,14 +2,14 @@
    npm run router:generate Animal
 */
 
-import { writeFileSync, appendFileSync, existsSync, mkdirSync } from "fs";
+import { appendFileSync, existsSync, mkdirSync } from "fs";
 import path from "path";
 import { GeneratorError, UnknownModelError } from "../errors.js";
 import SETTINGS from "../utils/settings.js";
 import Handlebars from "../utils/handlebars.js";
 import "../utils/js_utils.js";
 import LOGGER from "../logger.js";
-import { readFileSync } from "../utils/file_utils.js";
+import { readFileSync, writeFileSync } from "../utils/file_utils.js";
 import { getSchema, saveSchema } from "../utils/schema_utils.js";
 import pluralize from "pluralize";
 import { PATHS } from "../constants.js";
@@ -41,7 +41,9 @@ if (existsSync(routerFile))
     `Router for model '${model}' already exists in '${routerFile}'`
   );
 
-if (!existsSync(path.join(PATHS.root, SETTINGS.models.location, `${model}.js`))) {
+if (
+  !existsSync(path.join(PATHS.root, SETTINGS.models.location, `${model}.js`))
+) {
   throw new UnknownModelError(`Unknown model: '${model}'`);
 }
 

@@ -5,6 +5,7 @@ class Animal extends Model {
     super(data);
     this.name = data.name;
     this.color = data.color;
+    this.image = data.image;
   }
 }
 

@@ -13,6 +13,8 @@ import appUtils from "./middleware/appUtils.js";
 import routeLogger from "./middleware/logger.js";
 import { PATHS } from "./constants.js";
 import errorHandler from "./middleware/errorHandler.js";
+import multer from "multer";
+import upload from "./middleware/upload.js";
 
 // Load config
 config();
@@ -21,6 +23,8 @@ config();
 app.engine("html", ejs.renderFile);
 app.set("view engine", "html");
 app.set("view engine", "ejs");
+
+// File storage
 
 // Package Middleware
 app.use(express.static(path.join(PATHS.root, SETTINGS.views.location)));

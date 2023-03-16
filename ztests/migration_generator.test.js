@@ -28,7 +28,7 @@ const [model, ...args] = command.split(" ").slice(3); //process.argv.slice(2);
 const cols = args.map((arg) => arg.split(":"));
 const actions = cols.map((col) => {
   const [subAction, columnName, type, ...constraints] = col;
-  const ref = type?.toUpperCase() === "REFERENCES";
+  const ref = type?.equalsIgnoreCase("REFERENCES");
   const foreignKey = ref && new ForeignKey(columnName);
   const column = !ref && new Column(columnName, type, ...constraints);
 

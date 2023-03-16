@@ -19,7 +19,7 @@
 import fs from "fs";
 import path from "path";
 import "../utils/js_utils.js";
-import { PATHS, SQLColumnTypes } from "../constants.js";
+import { MigrationActions, PATHS, SQLColumnTypes } from "../constants.js";
 import { GeneratorError } from "../errors.js";
 import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
@@ -27,6 +27,12 @@ import Handlebars from "../utils/handlebars.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
 import { MigrationInfo, ModelInfo } from "./types.js";
 import SQLiteTable from "../domain/SQLiteTable.js";
+import {
+  Column,
+  ForeignKey,
+  MigrationBuilder,
+} from "../builders/MigrationBuilder.js";
+import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 const argvs = process.argv.slice(2);
 const [model, ...args] = argvs;
 const folderName = path.join(PATHS.root, SETTINGS.models.location);
@@ -67,18 +73,30 @@ try {
   );
 
   // Add migration
-  const migration = Handlebars.compileFile(migrationTemplate)(
-    new MigrationInfo(model, columnsInfo)
+  const cols = args.map((arg) => arg.split(":"));
+  const refs = cols.filter(
+    ([_, constraint]) => constraint.toUpperCase() === "REFERENCES"
+  );
+  const nonRefs = cols.filter(
+    ([_, constraint]) => constraint.toUpperCase() !== "REFERENCES"
+  );
+  const columns = nonRefs.map(
+    ([name, type, ...constraints]) => new Column(name, type, ...constraints)
+  );
+  const foreignKeys = refs.map(
+    ([referenceTable]) => new ForeignKey(referenceTable)
   );
 
-  fs.appendFileSync(
-    path.join(
-      PATHS.root,
-      SETTINGS.database.migrations.location,
-      SETTINGS.database.migrations.filename
-    ),
-    migration
-  );
+  const createdMigration = new MigrationBuilder()
+    .createTable(model)
+    .withColumns(...columns)
+    .withForeignKeys(...foreignKeys)
+    .buildQuery();
+
+  const action = MigrationActions.CREATE.toLowerCase();
+  const table = "table";
+  const tableName = getTableNameFromModel(model);
+  generateSQLMigrationFile(action, table, tableName, createdMigration);
 } catch (e) {
   LOGGER.error(`Unable to be generate model '${model}'`, e);
 }

@@ -45687,3 +45687,99 @@ comment is not defined
 [INFO] [16/03/2023, 15:32:18]: Server started on port 3000
 [INFO] [16/03/2023, 15:32:18]: Connected to migration versioning table
 [INFO] [16/03/2023, 15:32:18]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:35:02]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:35:02]: Server started on port 3000
+[INFO] [16/03/2023, 15:35:02]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:35:02]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:35:06]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:35:06]: Server started on port 3000
+[INFO] [16/03/2023, 15:35:06]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:35:06]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:37:43]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:37:43]: Server started on port 3000
+[INFO] [16/03/2023, 15:37:43]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:37:43]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:42:04]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:42:04]: Server started on port 3000
+[INFO] [16/03/2023, 15:42:04]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:42:04]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:42:11]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:42:11]: Server started on port 3000
+[INFO] [16/03/2023, 15:42:11]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:42:11]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:42:16]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:42:16]: Server started on port 3000
+[INFO] [16/03/2023, 15:42:16]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:42:16]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:42:27]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:42:27]: Server started on port 3000
+[INFO] [16/03/2023, 15:42:27]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:42:27]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:42:38]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:42:38]: Server started on port 3000
+[INFO] [16/03/2023, 15:42:38]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:42:38]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:42:49]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:42:49]: Server started on port 3000
+[INFO] [16/03/2023, 15:42:49]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:42:49]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:43:00]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:43:00]: Server started on port 3000
+[INFO] [16/03/2023, 15:43:00]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:43:00]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:43:08]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:43:08]: Server started on port 3000
+[INFO] [16/03/2023, 15:43:08]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:43:08]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:43:27]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:43:27]: Server started on port 3000
+[INFO] [16/03/2023, 15:43:27]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:43:27]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:43:30]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:43:30]: Server started on port 3000
+[INFO] [16/03/2023, 15:43:30]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:43:30]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:43:49]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:43:49]: Server started on port 3000
+[INFO] [16/03/2023, 15:43:49]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:43:49]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:43:58]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:43:58]: Server started on port 3000
+[INFO] [16/03/2023, 15:43:58]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:43:58]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:44:02]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:44:02]: Server started on port 3000
+[INFO] [16/03/2023, 15:44:02]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:44:02]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:48:04]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:48:04]: Server started on port 3000
+[INFO] [16/03/2023, 15:48:04]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:48:04]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:51:01]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:51:01]: Server started on port 3000
+[INFO] [16/03/2023, 15:51:01]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:51:01]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:53:02]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:53:02]: Server started on port 3000
+[INFO] [16/03/2023, 15:53:02]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:53:02]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:54:42]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:54:42]: Server started on port 3000
+[INFO] [16/03/2023, 15:54:42]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:54:42]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:55:06]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:55:06]: Server started on port 3000
+[INFO] [16/03/2023, 15:55:06]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:55:06]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:55:47]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:55:47]: Server started on port 3000
+[INFO] [16/03/2023, 15:55:47]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:55:47]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:57:08]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:57:08]: Server started on port 3000
+[INFO] [16/03/2023, 15:57:08]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:57:08]: Connected to migration versioning table
+[INFO] [16/03/2023, 15:59:13]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 15:59:13]: Server started on port 3000
+[INFO] [16/03/2023, 15:59:13]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 15:59:13]: Connected to migration versioning table

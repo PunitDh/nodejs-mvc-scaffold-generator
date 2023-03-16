@@ -35,12 +35,8 @@ const addedMigrations = await Promise.all(
 );
 
 addedMigrations.forEach(({ version, query }) => {
-  LOGGER.info(
-    "========================================================================="
-  );
+  LOGGER.info("=".repeat(75));
   LOGGER.info(`New Migration created with version number: ${version}`);
   LOGGER.info(`Query: ${query}`);
-  LOGGER.info(
-    "========================================================================="
-  );
+  LOGGER.info("=".repeat(75));
 });

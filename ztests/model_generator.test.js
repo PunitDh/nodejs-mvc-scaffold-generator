@@ -20,8 +20,8 @@ import { SQLColumnConstraints } from "../bin/constants.js";
 import {
   Column,
   ForeignKey,
-  Migration,
-} from "../bin/domain/MigrationBuilder.js";
+  MigrationBuilder,
+} from "../bin/builders/MigrationBuilder.js";
 
 let command =
   "npm run model:generate Employee first_name:string last_name:string description:text email:email:unique password:password salary:number start_date:date Employer:references User:references";
@@ -41,7 +41,7 @@ const foreignKeys = refs.map(
   ([referenceTable]) => new ForeignKey(referenceTable)
 );
 
-const createdMigration = new Migration()
+const createdMigration = new MigrationBuilder()
   .createTable(model)
   .withColumns(...columns)
   .withForeignKeys(...foreignKeys)
@@ -107,7 +107,7 @@ const createdMigration = new Migration()
 //   ],
 // };
 
-const createTableMigration = new Migration()
+const createTableMigration = new MigrationBuilder()
   .createTable("Employee")
   .withColumns(
     new Column("firstname", "string", SQLColumnConstraints.NOT_NULL),
@@ -127,13 +127,13 @@ const createTableMigration = new Migration()
   )
   .buildQuery();
 
-const addColumn = new Migration()
+const addColumn = new MigrationBuilder()
   .alterTable("Employee")
   .addColumn(new Column("service_years", "integer", "NOT NULL"))
   .addColumn(new Column("Employer", "references", "NOT NULL"))
   .buildQuery();
 
-const dropColumn = new Migration()
+const dropColumn = new MigrationBuilder()
   .alterTable("Employee")
   .dropColumn("service_years")
   .buildQuery();

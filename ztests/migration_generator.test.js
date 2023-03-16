@@ -15,8 +15,8 @@ import { PATHS } from "../bin/constants.js";
 import {
   Column,
   ForeignKey,
-  Migration,
-} from "../bin/domain/MigrationBuilder.js";
+  MigrationBuilder,
+} from "../bin/builders/MigrationBuilder.js";
 import { writeFileSync } from "../bin/utils/file_utils.js";
 import "../bin/utils/js_utils.js";
 import { uuid } from "../bin/utils/uuid.js";
@@ -40,7 +40,7 @@ const actions = cols.map((col) => {
 });
 
 const migrations = actions.map((action) =>
-  new Migration()
+  new MigrationBuilder()
     .alterTable(model)
     .withSubAction(action.subAction)
     .withColumn(action.column)

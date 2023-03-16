@@ -45783,3 +45783,1271 @@ comment is not defined
 [INFO] [16/03/2023, 15:59:13]: Server started on port 3000
 [INFO] [16/03/2023, 15:59:13]: Foreign keys have been turned ON 
 [INFO] [16/03/2023, 15:59:13]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:05:00]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:05:00]: Server started on port 3000
+[INFO] [16/03/2023, 16:05:00]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:05:00]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:07:36]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:07:36]: Server started on port 3000
+[INFO] [16/03/2023, 16:07:36]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:07:36]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:07:51]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:07:51]: Server started on port 3000
+[INFO] [16/03/2023, 16:07:51]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:07:51]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:07:55]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:07:55]: Server started on port 3000
+[INFO] [16/03/2023, 16:07:55]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:07:55]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:08:22]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:08:22]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:08:22]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:08:22]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:08:23]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:08:23]: Updating schema
+[INFO] [16/03/2023, 16:08:23]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:08:23]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:08:23]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:08:23]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:08:23]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:08:23]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:08:23]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:08:23]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:08:23]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:08:23]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:08:23]: Server started on port 3000
+[INFO] [16/03/2023, 16:08:23]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:08:23]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:12:09]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:12:09]: Server started on port 3000
+[INFO] [16/03/2023, 16:12:09]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:12:09]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:12:47]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:12:47]: Server started on port 3000
+[INFO] [16/03/2023, 16:12:47]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:12:47]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:13:32]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:13:32]: Server started on port 3000
+[INFO] [16/03/2023, 16:13:32]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:13:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:13:43]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:13:43]: Server started on port 3000
+[INFO] [16/03/2023, 16:13:43]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:13:43]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:14:13]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:14:13]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:14:13]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:14:13]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:14:13]: INSERT INTO _migrations (filename, query, created_at) VALUES ($filename, $query, DATETIME('now')) RETURNING *;
+[INFO] [16/03/2023, 16:14:13]: ===========================================================================
+[INFO] [16/03/2023, 16:14:13]: New Migration created with version number: 21
+[INFO] [16/03/2023, 16:14:13]: Query: ALTER TABLE animals ADD COLUMN legs NUMERIC;
+
+[INFO] [16/03/2023, 16:14:13]: ===========================================================================
+[INFO] [16/03/2023, 16:14:13]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:14:13]: Updating schema
+[INFO] [16/03/2023, 16:14:13]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:14:13]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:14:13]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:14:13]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:14:13]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:14:13]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:14:13]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:14:13]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:14:13]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:14:13]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:14:13]: Server started on port 3000
+[INFO] [16/03/2023, 16:14:13]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:14:13]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:15:01]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:15:01]: Server started on port 3000
+[INFO] [16/03/2023, 16:15:01]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:15:01]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:15:26]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:15:26]: Server started on port 3000
+[INFO] [16/03/2023, 16:15:26]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:15:26]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:16:09]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:16:09]: Server started on port 3000
+[INFO] [16/03/2023, 16:16:09]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:16:09]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:17:00]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:17:00]: Server started on port 3000
+[INFO] [16/03/2023, 16:17:00]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:17:00]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:17:06]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:17:06]: Server started on port 3000
+[INFO] [16/03/2023, 16:17:06]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:17:06]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:17:15]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:17:15]: Server started on port 3000
+[INFO] [16/03/2023, 16:17:15]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:17:15]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:17:18]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:17:18]: Server started on port 3000
+[INFO] [16/03/2023, 16:17:18]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:17:18]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:18:08]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:18:08]: Server started on port 3000
+[INFO] [16/03/2023, 16:18:08]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:18:08]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:20:11]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:20:11]: Server started on port 3000
+[INFO] [16/03/2023, 16:20:11]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:20:11]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:21:22]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:21:22]: Server started on port 3000
+[INFO] [16/03/2023, 16:21:22]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:21:22]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:21:32]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:21:32]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:21:32]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:21:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:21:32]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:21:32]: Updating schema
+[INFO] [16/03/2023, 16:21:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:21:32]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:21:32]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:21:32]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:21:32]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:21:32]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:21:32]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:21:32]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:21:32]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:21:32]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:21:32]: Server started on port 3000
+[INFO] [16/03/2023, 16:21:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:21:32]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:21:56]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:21:56]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:21:56]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:21:56]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:21:56]: [object Object]
+[INFO] [16/03/2023, 16:21:56]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:21:56]: Updating schema
+[INFO] [16/03/2023, 16:21:56]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:21:56]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:21:56]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:21:56]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:21:56]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:21:56]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:21:56]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:21:56]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:21:56]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:21:56]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:21:56]: Server started on port 3000
+[INFO] [16/03/2023, 16:21:56]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:21:56]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:22:20]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:22:20]: Server started on port 3000
+[INFO] [16/03/2023, 16:22:20]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:22:20]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:22:23]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:22:23]: Server started on port 3000
+[INFO] [16/03/2023, 16:22:23]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:22:23]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:22:25]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:22:25]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:22:25]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:22:25]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 16:22:25]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:22:25]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:22:25]: Updating schema
+[INFO] [16/03/2023, 16:22:25]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:22:25]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:22:25]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:22:25]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:22:25]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:22:25]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:22:25]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:22:25]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:22:25]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:22:25]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:22:26]: Server started on port 3000
+[INFO] [16/03/2023, 16:22:26]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:22:26]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:22:42]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:22:42]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:22:42]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:22:42]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:22:42]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:22:42]: Updating schema
+[INFO] [16/03/2023, 16:22:42]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:22:42]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:22:42]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:22:42]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:22:42]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:22:42]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:22:42]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:22:42]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:22:42]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:22:42]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:22:42]: Server started on port 3000
+[INFO] [16/03/2023, 16:22:42]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:22:42]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:23:15]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:23:15]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:23:15]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:23:15]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 16:23:15]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:23:15]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:23:15]: Updating schema
+[INFO] [16/03/2023, 16:23:15]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:23:15]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:23:15]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:23:15]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:23:15]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:23:15]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:23:15]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:23:15]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:23:15]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:23:16]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:23:16]: Server started on port 3000
+[INFO] [16/03/2023, 16:23:16]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:23:16]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:24:08]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:24:08]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:24:08]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:24:08]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:24:08]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:24:08]: ===========================================================================
+[INFO] [16/03/2023, 16:24:08]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:24:08]: Query: undefined
+[INFO] [16/03/2023, 16:24:08]: ===========================================================================
+[INFO] [16/03/2023, 16:24:08]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:24:08]: Updating schema
+[INFO] [16/03/2023, 16:24:08]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:24:08]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:24:08]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:24:08]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:24:08]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:24:08]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:24:08]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:24:08]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:24:08]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:24:08]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:24:08]: Server started on port 3000
+[INFO] [16/03/2023, 16:24:08]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:24:08]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:25:41]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:25:41]: Server started on port 3000
+[INFO] [16/03/2023, 16:25:41]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:25:41]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:25:52]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:25:52]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:25:52]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:25:52]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 16:25:52]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:25:52]: ===========================================================================
+[INFO] [16/03/2023, 16:25:52]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:25:52]: Query: undefined
+[INFO] [16/03/2023, 16:25:52]: ===========================================================================
+[INFO] [16/03/2023, 16:25:52]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:25:52]: Updating schema
+[INFO] [16/03/2023, 16:25:52]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:25:52]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:25:52]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:25:52]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:25:52]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:25:52]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:25:52]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:25:52]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:25:52]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:25:52]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:25:52]: Server started on port 3000
+[INFO] [16/03/2023, 16:25:52]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:25:52]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:26:14]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:26:14]: Server started on port 3000
+[INFO] [16/03/2023, 16:26:14]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:26:14]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:26:18]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:26:18]: Server started on port 3000
+[INFO] [16/03/2023, 16:26:18]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:26:18]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:26:28]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:26:28]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:26:28]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:26:28]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:26:28]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:26:28]: ===========================================================================
+[INFO] [16/03/2023, 16:26:28]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:26:28]: Query: undefined
+[INFO] [16/03/2023, 16:26:28]: ===========================================================================
+[INFO] [16/03/2023, 16:26:28]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:26:28]: Updating schema
+[INFO] [16/03/2023, 16:26:28]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:26:28]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:26:28]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:26:28]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:26:28]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:26:28]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:26:28]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:26:28]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:26:28]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:26:28]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:26:28]: Server started on port 3000
+[INFO] [16/03/2023, 16:26:28]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:26:28]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:27:43]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:27:43]: Server started on port 3000
+[INFO] [16/03/2023, 16:27:43]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:27:43]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:27:55]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:27:55]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:27:55]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:27:55]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:27:55]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:27:55]: ===========================================================================
+[INFO] [16/03/2023, 16:27:55]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:27:55]: Query: undefined
+[INFO] [16/03/2023, 16:27:55]: ===========================================================================
+[INFO] [16/03/2023, 16:27:55]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:27:55]: Updating schema
+[INFO] [16/03/2023, 16:27:55]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:27:55]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:27:55]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:27:55]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:27:55]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:27:55]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:27:55]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:27:55]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:27:55]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:27:56]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:27:56]: Server started on port 3000
+[INFO] [16/03/2023, 16:27:56]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:27:56]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:28:37]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:28:37]: Server started on port 3000
+[INFO] [16/03/2023, 16:28:37]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:28:37]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:29:28]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:29:28]: Server started on port 3000
+[INFO] [16/03/2023, 16:29:28]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:29:28]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:29:35]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:29:35]: Server started on port 3000
+[INFO] [16/03/2023, 16:29:35]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:29:35]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:29:39]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:29:39]: Server started on port 3000
+[INFO] [16/03/2023, 16:29:39]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:29:39]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:29:46]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:29:46]: Server started on port 3000
+[INFO] [16/03/2023, 16:29:46]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:29:46]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:30:08]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:30:08]: Server started on port 3000
+[INFO] [16/03/2023, 16:30:08]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:30:08]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:30:40]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:30:40]: Server started on port 3000
+[INFO] [16/03/2023, 16:30:40]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:30:40]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:30:55]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:30:55]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:30:55]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:30:55]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:30:55]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:30:55]: Updating schema
+[INFO] [16/03/2023, 16:30:55]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:30:55]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:30:55]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:30:55]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:30:55]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:30:55]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:30:55]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:30:55]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:30:55]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:30:56]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:30:56]: Server started on port 3000
+[INFO] [16/03/2023, 16:30:56]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:30:56]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:31:25]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:31:25]: Server started on port 3000
+[INFO] [16/03/2023, 16:31:25]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:31:25]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:31:33]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:31:33]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:31:33]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:31:33]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:31:33]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:31:33]: ===========================================================================
+[INFO] [16/03/2023, 16:31:33]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:31:33]: Query: undefined
+[INFO] [16/03/2023, 16:31:33]: ===========================================================================
+[INFO] [16/03/2023, 16:31:33]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:31:33]: Updating schema
+[INFO] [16/03/2023, 16:31:33]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:31:33]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:31:33]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:31:33]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:31:33]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:31:33]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:31:33]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:31:33]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:31:33]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:31:33]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:31:33]: Server started on port 3000
+[INFO] [16/03/2023, 16:31:33]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:31:33]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:32:29]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:32:29]: Server started on port 3000
+[INFO] [16/03/2023, 16:32:29]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:32:29]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:32:34]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:32:34]: Server started on port 3000
+[INFO] [16/03/2023, 16:32:34]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:32:34]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:32:37]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:32:37]: Server started on port 3000
+[INFO] [16/03/2023, 16:32:37]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:32:37]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:32:46]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:32:46]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:32:46]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:32:46]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:32:46]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:32:46]: ===========================================================================
+[INFO] [16/03/2023, 16:32:46]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:32:46]: Query: undefined
+[INFO] [16/03/2023, 16:32:46]: ===========================================================================
+[INFO] [16/03/2023, 16:32:46]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:32:46]: Updating schema
+[INFO] [16/03/2023, 16:32:46]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:32:46]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:32:46]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:32:46]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:32:46]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:32:46]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:32:46]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:32:46]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:32:46]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:32:46]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:32:46]: Server started on port 3000
+[INFO] [16/03/2023, 16:32:46]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:32:46]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:33:06]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:33:06]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:33:06]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:33:06]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:33:06]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:33:06]: ===========================================================================
+[INFO] [16/03/2023, 16:33:06]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:33:06]: Query: undefined
+[INFO] [16/03/2023, 16:33:06]: ===========================================================================
+[INFO] [16/03/2023, 16:33:06]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:33:06]: Updating schema
+[INFO] [16/03/2023, 16:33:06]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:33:06]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:33:06]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:33:06]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:33:06]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:33:06]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:33:06]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:33:06]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:33:06]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:33:06]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:33:06]: Server started on port 3000
+[INFO] [16/03/2023, 16:33:06]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:33:06]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:33:35]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:33:35]: Server started on port 3000
+[INFO] [16/03/2023, 16:33:35]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:33:35]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:33:51]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:33:51]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:33:51]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:33:51]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:33:51]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:33:51]: Updating schema
+[INFO] [16/03/2023, 16:33:51]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:33:51]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:33:51]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:33:51]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:33:51]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:33:51]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:33:51]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:33:51]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:33:51]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:33:51]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:33:51]: Server started on port 3000
+[INFO] [16/03/2023, 16:33:51]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:33:51]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:34:08]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:34:08]: Server started on port 3000
+[INFO] [16/03/2023, 16:34:08]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:34:08]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:34:10]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:34:10]: Server started on port 3000
+[INFO] [16/03/2023, 16:34:10]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:34:10]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:34:14]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:34:14]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:34:14]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:34:14]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:34:14]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:34:14]: ===========================================================================
+[INFO] [16/03/2023, 16:34:14]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:34:14]: Query: undefined
+[INFO] [16/03/2023, 16:34:14]: ===========================================================================
+[INFO] [16/03/2023, 16:34:14]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:34:14]: Updating schema
+[INFO] [16/03/2023, 16:34:14]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:34:14]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:34:14]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:34:14]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:34:14]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:34:14]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:34:14]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:34:14]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:34:14]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:34:14]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:34:15]: Server started on port 3000
+[INFO] [16/03/2023, 16:34:15]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:34:15]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:34:35]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:34:35]: Server started on port 3000
+[INFO] [16/03/2023, 16:34:35]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:34:35]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:34:43]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:34:43]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:34:43]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:34:43]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:34:43]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:34:43]: ===========================================================================
+[INFO] [16/03/2023, 16:34:43]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:34:43]: Query: undefined
+[INFO] [16/03/2023, 16:34:43]: ===========================================================================
+[INFO] [16/03/2023, 16:34:43]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:34:43]: Updating schema
+[INFO] [16/03/2023, 16:34:43]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:34:43]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:34:43]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:34:43]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:34:43]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:34:43]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:34:43]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:34:43]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:34:43]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:34:44]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:34:44]: Server started on port 3000
+[INFO] [16/03/2023, 16:34:44]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:34:44]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:35:16]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:35:16]: Server started on port 3000
+[INFO] [16/03/2023, 16:35:16]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:35:16]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:36:13]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:36:13]: Server started on port 3000
+[INFO] [16/03/2023, 16:36:13]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:36:13]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:36:19]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:36:20]: Server started on port 3000
+[INFO] [16/03/2023, 16:36:20]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:36:20]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:36:23]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:36:23]: Server started on port 3000
+[INFO] [16/03/2023, 16:36:23]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:36:23]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:36:28]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:36:28]: Updating schema
+[INFO] [16/03/2023, 16:36:28]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:36:28]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:36:28]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:36:28]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:36:28]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:36:28]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:36:28]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:36:28]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:36:28]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:36:29]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:36:29]: Server started on port 3000
+[INFO] [16/03/2023, 16:36:29]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:36:29]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:38:06]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:38:06]: Server started on port 3000
+[INFO] [16/03/2023, 16:38:06]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:38:06]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:38:16]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:38:16]: Server started on port 3000
+[INFO] [16/03/2023, 16:38:16]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:38:16]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:38:19]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:38:19]: Server started on port 3000
+[INFO] [16/03/2023, 16:38:19]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:38:19]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:38:31]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:38:31]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:38:31]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:38:31]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:38:31]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:38:31]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:38:31]: Updating schema
+[INFO] [16/03/2023, 16:38:31]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:38:31]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:38:31]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:38:31]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:38:31]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:38:31]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:38:31]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:38:31]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:38:31]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:38:31]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:38:31]: Server started on port 3000
+[INFO] [16/03/2023, 16:38:31]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:38:31]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:38:49]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:38:49]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:38:49]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:38:49]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:38:49]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:38:49]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:38:49]: Updating schema
+[INFO] [16/03/2023, 16:38:49]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:38:49]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:38:49]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:38:49]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:38:49]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:38:49]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:38:49]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:38:49]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:38:49]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:38:49]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:38:49]: Server started on port 3000
+[INFO] [16/03/2023, 16:38:49]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:38:49]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:38:59]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:38:59]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:38:59]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:38:59]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 16:38:59]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:38:59]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:38:59]: Updating schema
+[INFO] [16/03/2023, 16:38:59]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:38:59]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:38:59]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:38:59]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:38:59]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:38:59]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:38:59]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:38:59]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:38:59]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:39:00]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:39:00]: Server started on port 3000
+[INFO] [16/03/2023, 16:39:00]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:39:00]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:39:12]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:39:12]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:39:12]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:39:12]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 16:39:12]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:39:12]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:39:12]: Updating schema
+[INFO] [16/03/2023, 16:39:12]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:39:12]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:39:12]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:39:12]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:39:12]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:39:12]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:39:12]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:39:12]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:39:12]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:39:12]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:39:13]: Server started on port 3000
+[INFO] [16/03/2023, 16:39:13]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:39:13]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:39:31]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:39:32]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:39:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:39:32]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:39:32]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:39:32]: =========================================================================
+[INFO] [16/03/2023, 16:39:32]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:39:32]: Query: undefined
+[INFO] [16/03/2023, 16:39:32]: =========================================================================
+[INFO] [16/03/2023, 16:39:32]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:39:32]: Updating schema
+[INFO] [16/03/2023, 16:39:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:39:32]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:39:32]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:39:32]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:39:32]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:39:32]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:39:32]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:39:32]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:39:32]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:39:32]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:39:32]: Server started on port 3000
+[INFO] [16/03/2023, 16:39:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:39:32]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:39:45]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:39:45]: Server started on port 3000
+[INFO] [16/03/2023, 16:39:45]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:39:45]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:39:50]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:39:50]: Server started on port 3000
+[INFO] [16/03/2023, 16:39:50]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:39:50]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:41:42]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:41:42]: Server started on port 3000
+[INFO] [16/03/2023, 16:41:42]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:41:42]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:41:51]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:41:51]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:41:51]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:41:51]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:41:51]: ===========================================================================
+[INFO] [16/03/2023, 16:41:51]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:41:51]: Query: undefined
+[INFO] [16/03/2023, 16:41:51]: ===========================================================================
+[QUERY] [16/03/2023, 16:41:51]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:41:51]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:41:51]: Updating schema
+[INFO] [16/03/2023, 16:41:51]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:41:51]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:41:51]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:41:51]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:41:51]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:41:51]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:41:51]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:41:51]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:41:51]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:41:52]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:41:52]: Server started on port 3000
+[INFO] [16/03/2023, 16:41:52]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:41:52]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:42:36]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:42:36]: Server started on port 3000
+[INFO] [16/03/2023, 16:42:36]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:42:36]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:43:52]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:43:52]: Server started on port 3000
+[INFO] [16/03/2023, 16:43:52]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:43:52]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:44:07]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:44:07]: Server started on port 3000
+[INFO] [16/03/2023, 16:44:07]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:44:07]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:45:59]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:45:59]: Server started on port 3000
+[INFO] [16/03/2023, 16:45:59]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:45:59]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:46:25]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:46:25]: Server started on port 3000
+[INFO] [16/03/2023, 16:46:25]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:46:25]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:46:27]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:46:27]: Server started on port 3000
+[INFO] [16/03/2023, 16:46:27]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:46:27]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:46:37]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:46:37]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:46:37]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:46:37]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 16:46:37]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[QUERY] [16/03/2023, 16:46:37]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[QUERY] [16/03/2023, 16:46:37]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:46:37]: ===========================================================================
+[INFO] [16/03/2023, 16:46:37]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:46:37]: Query: undefined
+[INFO] [16/03/2023, 16:46:37]: ===========================================================================
+[INFO] [16/03/2023, 16:46:37]: ===========================================================================
+[INFO] [16/03/2023, 16:46:37]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:46:37]: Query: undefined
+[INFO] [16/03/2023, 16:46:37]: ===========================================================================
+[INFO] [16/03/2023, 16:46:37]: ===========================================================================
+[INFO] [16/03/2023, 16:46:37]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:46:37]: Query: undefined
+[INFO] [16/03/2023, 16:46:37]: ===========================================================================
+[INFO] [16/03/2023, 16:46:37]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:46:37]: Updating schema
+[INFO] [16/03/2023, 16:46:37]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:46:37]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:46:37]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:46:37]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:46:37]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:46:37]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:46:37]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:46:37]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:46:37]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:46:38]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:46:38]: Server started on port 3000
+[INFO] [16/03/2023, 16:46:38]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:46:38]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:47:14]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:47:14]: Server started on port 3000
+[INFO] [16/03/2023, 16:47:14]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:47:14]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:47:18]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:47:18]: Server started on port 3000
+[INFO] [16/03/2023, 16:47:18]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:47:18]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:47:39]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:47:39]: Server started on port 3000
+[INFO] [16/03/2023, 16:47:39]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:47:39]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:48:09]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:48:09]: Server started on port 3000
+[INFO] [16/03/2023, 16:48:09]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:48:09]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:48:15]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:48:15]: Server started on port 3000
+[INFO] [16/03/2023, 16:48:15]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:48:15]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:48:21]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:48:21]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:48:21]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:48:21]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:48:21]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:48:21]: ===========================================================================
+[INFO] [16/03/2023, 16:48:21]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:48:21]: Query: undefined
+[INFO] [16/03/2023, 16:48:21]: ===========================================================================
+[INFO] [16/03/2023, 16:48:21]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:48:21]: Updating schema
+[INFO] [16/03/2023, 16:48:21]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:48:21]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:48:21]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:48:21]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:48:21]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:48:21]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:48:21]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:48:21]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:48:21]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:48:22]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:48:22]: Server started on port 3000
+[INFO] [16/03/2023, 16:48:22]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:48:22]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:48:28]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:48:28]: Server started on port 3000
+[INFO] [16/03/2023, 16:48:28]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:48:28]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:48:32]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:48:32]: Server started on port 3000
+[INFO] [16/03/2023, 16:48:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:48:32]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:48:45]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:48:45]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:48:45]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:48:45]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:48:45]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:48:45]: ===========================================================================
+[INFO] [16/03/2023, 16:48:45]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:48:45]: Query: undefined
+[INFO] [16/03/2023, 16:48:45]: ===========================================================================
+[INFO] [16/03/2023, 16:48:46]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:48:46]: Updating schema
+[INFO] [16/03/2023, 16:48:46]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:48:46]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:48:46]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:48:46]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:48:46]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:48:46]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:48:46]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:48:46]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:48:46]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:48:46]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:48:46]: Server started on port 3000
+[INFO] [16/03/2023, 16:48:46]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:48:46]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:48:50]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:48:50]: Server started on port 3000
+[INFO] [16/03/2023, 16:48:50]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:48:50]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:49:06]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:49:06]: Server started on port 3000
+[INFO] [16/03/2023, 16:49:06]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:49:06]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:49:12]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:49:12]: Server started on port 3000
+[INFO] [16/03/2023, 16:49:12]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:49:12]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:49:20]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:49:20]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:49:20]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 16:49:20]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:49:20]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:49:20]: ===========================================================================
+[INFO] [16/03/2023, 16:49:20]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:49:20]: Query: undefined
+[INFO] [16/03/2023, 16:49:20]: ===========================================================================
+[INFO] [16/03/2023, 16:49:20]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:49:20]: Updating schema
+[INFO] [16/03/2023, 16:49:20]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:49:20]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:49:20]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:49:20]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:49:20]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:49:20]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:49:20]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:49:20]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:49:20]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:49:20]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:49:20]: Server started on port 3000
+[INFO] [16/03/2023, 16:49:20]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:49:20]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:49:30]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:49:30]: Server started on port 3000
+[INFO] [16/03/2023, 16:49:30]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:49:30]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:49:32]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:49:32]: Server started on port 3000
+[INFO] [16/03/2023, 16:49:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:49:32]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:49:49]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:49:49]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:49:49]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:49:49]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:49:49]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:49:49]: ===========================================================================
+[INFO] [16/03/2023, 16:49:49]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:49:49]: Query: undefined
+[INFO] [16/03/2023, 16:49:49]: ===========================================================================
+[INFO] [16/03/2023, 16:49:49]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:49:49]: Updating schema
+[INFO] [16/03/2023, 16:49:49]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:49:49]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:49:49]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:49:49]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:49:49]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:49:49]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:49:49]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:49:49]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:49:49]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:49:49]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:49:50]: Server started on port 3000
+[INFO] [16/03/2023, 16:49:50]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:49:50]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:49:59]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:49:59]: Server started on port 3000
+[INFO] [16/03/2023, 16:49:59]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:49:59]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:50:45]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:50:45]: Server started on port 3000
+[INFO] [16/03/2023, 16:50:45]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:50:45]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:50:52]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:50:52]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:50:52]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:50:52]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:50:52]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:50:52]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:50:52]: Updating schema
+[INFO] [16/03/2023, 16:50:52]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:50:52]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:50:52]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:50:52]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:50:52]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:50:52]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:50:52]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:50:52]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:50:52]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:50:52]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:50:53]: Server started on port 3000
+[INFO] [16/03/2023, 16:50:53]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:50:53]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:51:13]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:51:13]: Server started on port 3000
+[INFO] [16/03/2023, 16:51:13]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:51:13]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:51:19]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:51:19]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:51:19]: Foreign keys have been turned ON 
+[QUERY] [16/03/2023, 16:51:19]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:51:19]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:51:19]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:51:19]: ===========================================================================
+[INFO] [16/03/2023, 16:51:19]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:51:19]: Query: undefined
+[INFO] [16/03/2023, 16:51:19]: ===========================================================================
+[INFO] [16/03/2023, 16:51:19]: ===========================================================================
+[INFO] [16/03/2023, 16:51:19]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:51:19]: Query: undefined
+[INFO] [16/03/2023, 16:51:19]: ===========================================================================
+[INFO] [16/03/2023, 16:51:19]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:51:19]: Updating schema
+[INFO] [16/03/2023, 16:51:19]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:51:19]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:51:19]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:51:19]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:51:19]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:51:19]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:51:19]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:51:19]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:51:19]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:51:19]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:51:19]: Server started on port 3000
+[INFO] [16/03/2023, 16:51:19]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:51:19]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:52:07]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:52:07]: Server started on port 3000
+[INFO] [16/03/2023, 16:52:07]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:52:07]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:52:14]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:52:14]: Server started on port 3000
+[INFO] [16/03/2023, 16:52:14]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:52:14]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:52:19]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:52:19]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:52:19]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:52:19]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:52:19]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:52:19]: ===========================================================================
+[INFO] [16/03/2023, 16:52:19]: New Migration created with version number: undefined
+[INFO] [16/03/2023, 16:52:19]: Query: undefined
+[INFO] [16/03/2023, 16:52:19]: ===========================================================================
+[INFO] [16/03/2023, 16:52:20]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:52:20]: Updating schema
+[INFO] [16/03/2023, 16:52:20]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:52:20]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:52:20]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:52:20]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:52:20]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:52:20]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:52:20]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:52:20]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:52:20]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:52:20]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:52:20]: Server started on port 3000
+[INFO] [16/03/2023, 16:52:20]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:52:20]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:52:30]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:52:30]: Server started on port 3000
+[INFO] [16/03/2023, 16:52:30]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:52:30]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:52:35]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:52:35]: Server started on port 3000
+[INFO] [16/03/2023, 16:52:35]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:52:35]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:53:09]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:53:09]: Server started on port 3000
+[INFO] [16/03/2023, 16:53:09]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:53:09]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:53:37]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:53:37]: Server started on port 3000
+[INFO] [16/03/2023, 16:53:37]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:53:37]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:53:41]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:53:41]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:53:41]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:53:41]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:53:41]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:53:41]: Updating schema
+[INFO] [16/03/2023, 16:53:41]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:53:41]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:53:41]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:53:41]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:53:41]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:53:41]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:53:41]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:53:41]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:53:41]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:53:41]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:53:41]: Server started on port 3000
+[INFO] [16/03/2023, 16:53:41]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:53:41]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:54:18]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:54:18]: Server started on port 3000
+[INFO] [16/03/2023, 16:54:18]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:54:18]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:54:22]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:54:22]: Server started on port 3000
+[INFO] [16/03/2023, 16:54:22]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:54:22]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:54:31]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:54:31]: SELECT * FROM _migrations;
+
+[INFO] [16/03/2023, 16:54:31]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:54:31]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:54:31]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[INFO] [16/03/2023, 16:54:31]: ===========================================================================
+[INFO] [16/03/2023, 16:54:31]: New database migration created with version number: undefined
+[INFO] [16/03/2023, 16:54:31]: Query: undefined
+[INFO] [16/03/2023, 16:54:31]: ===========================================================================
+[INFO] [16/03/2023, 16:54:32]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:54:32]: Updating schema
+[INFO] [16/03/2023, 16:54:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:54:32]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:54:32]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:54:32]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:54:32]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:54:32]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:54:32]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:54:32]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:54:32]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:54:32]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:54:32]: Server started on port 3000
+[INFO] [16/03/2023, 16:54:32]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:54:32]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:55:08]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:55:08]: Server started on port 3000
+[INFO] [16/03/2023, 16:55:08]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:55:08]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:55:18]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:55:18]: SELECT * FROM _migrations;
+
+[QUERY] [16/03/2023, 16:55:18]: 
+[INFO] [16/03/2023, 16:55:18]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:55:18]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:55:18]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query);
+
+[QUERY] [16/03/2023, 16:55:18]: 2023-03-16_ea7d0f15_drop_animals_legs.sql,ALTER TABLE animals DROP COLUMN legs;
+
+[INFO] [16/03/2023, 16:55:18]: ===========================================================================
+[INFO] [16/03/2023, 16:55:18]: New database migration created with version number: undefined
+[INFO] [16/03/2023, 16:55:18]: Query: undefined
+[INFO] [16/03/2023, 16:55:18]: ===========================================================================
+[INFO] [16/03/2023, 16:55:18]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:55:18]: Updating schema
+[INFO] [16/03/2023, 16:55:18]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:55:18]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:55:18]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:55:18]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:55:18]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:55:18]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:55:18]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:55:18]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:55:18]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:55:18]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:55:18]: Server started on port 3000
+[INFO] [16/03/2023, 16:55:18]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:55:18]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:56:38]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:56:38]: Server started on port 3000
+[INFO] [16/03/2023, 16:56:38]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:56:38]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:56:50]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:56:50]: Server started on port 3000
+[INFO] [16/03/2023, 16:56:50]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:56:50]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:57:30]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:57:30]: SELECT * FROM _migrations;
+
+[QUERY] [16/03/2023, 16:57:30]: 
+[INFO] [16/03/2023, 16:57:30]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:57:30]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:57:30]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:57:30]: Updating schema
+[INFO] [16/03/2023, 16:57:30]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:57:30]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:57:30]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:57:30]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:57:30]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:57:30]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:57:30]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:57:30]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:57:30]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:57:30]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:57:30]: Server started on port 3000
+[INFO] [16/03/2023, 16:57:30]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:57:30]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:57:48]: Successfully connected to database: 'database.db'
+[QUERY] [16/03/2023, 16:57:48]: SELECT * FROM _migrations;
+
+[QUERY] [16/03/2023, 16:57:48]: 
+[INFO] [16/03/2023, 16:57:48]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:57:48]: Connected to migration versioning table
+[QUERY] [16/03/2023, 16:57:48]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query) RETURNING *;
+
+[QUERY] [16/03/2023, 16:57:48]: 2023-03-16_5094fa25_drop_animals_legs.sql,ALTER TABLE animals DROP COLUMN legs;
+
+[INFO] [16/03/2023, 16:57:48]: ===========================================================================
+[INFO] [16/03/2023, 16:57:48]: New Migration created with version number: 45
+[INFO] [16/03/2023, 16:57:48]: Query: ALTER TABLE animals DROP COLUMN legs;
+
+[INFO] [16/03/2023, 16:57:48]: ===========================================================================
+[INFO] [16/03/2023, 16:57:48]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:57:49]: Updating schema
+[INFO] [16/03/2023, 16:57:49]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:57:49]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:57:49]: Updating schema for '_migrations'
+[INFO] [16/03/2023, 16:57:49]: Updating schema for 'animals'
+[INFO] [16/03/2023, 16:57:49]: Updating schema for 'blogs'
+[INFO] [16/03/2023, 16:57:49]: Updating schema for 'comments'
+[INFO] [16/03/2023, 16:57:49]: Updating schema for 'companies'
+[INFO] [16/03/2023, 16:57:49]: Updating schema for 'employees'
+[INFO] [16/03/2023, 16:57:49]: Updating schema for 'users'
+[INFO] [16/03/2023, 16:57:49]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:57:49]: Server started on port 3000
+[INFO] [16/03/2023, 16:57:49]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:57:49]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:58:41]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:58:41]: Server started on port 3000
+[INFO] [16/03/2023, 16:58:41]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:58:41]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:58:53]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:58:53]: Server started on port 3000
+[INFO] [16/03/2023, 16:58:53]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:58:53]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:58:56]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:58:56]: Server started on port 3000
+[INFO] [16/03/2023, 16:58:56]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:58:56]: Connected to migration versioning table
+[INFO] [16/03/2023, 16:59:04]: Successfully connected to database: 'database.db'
+[INFO] [16/03/2023, 16:59:04]: Server started on port 3000
+[INFO] [16/03/2023, 16:59:04]: Foreign keys have been turned ON 
+[INFO] [16/03/2023, 16:59:04]: Connected to migration versioning table

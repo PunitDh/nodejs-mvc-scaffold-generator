@@ -325,7 +325,7 @@
         "pk": 0
       }
     ],
-    "_migrations_": [
+    "_migrations": [
       {
         "cid": 0,
         "name": "version",
@@ -361,7 +361,7 @@
     ]
   },
   "routers": [
-    "_migrations_",
+    "_migrations",
     "animals",
     "blogs",
     "comments",

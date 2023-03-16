@@ -1,6 +1,5 @@
 import path from "path";
 import { PATHS } from "../bin/constants.js";
-// import { Migration, Migrations, Table, Column } from "../bin/migration.js";
 import fs from "fs";
 import _Migration from "../bin/domain/MigrationInfo.js";
 import { readFileSync } from "../bin/utils/file_utils.js";
@@ -27,7 +26,7 @@ const addedMigrations = await Promise.all(
     async ({ filename, query }) =>
       new Promise((resolve, reject) => {
         DB.all(query, [], (err, _) => {
-          if (err) reject(err);
+          if (err) return reject(err);
           return resolve(_Migration.add(filename, query));
         });
       })

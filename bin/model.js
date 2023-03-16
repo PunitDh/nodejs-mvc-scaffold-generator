@@ -58,10 +58,7 @@ class Model {
    * @returns List of rows
    */
   static async all() {
-    const query = QueryBuilder()
-      .select("*")
-      .from(this.__tablename__)
-      .build();
+    const query = QueryBuilder().select("*").from(this.__tablename__).build();
     return await this.dbQuery(query);
   }
 
@@ -254,6 +251,7 @@ class Model {
     const _Model = this.prototype.constructor;
     return new Promise(function (resolve, reject) {
       LOGGER.query(query);
+      LOGGER.query(values);
       DB.all(query, values, function (err, rows) {
         if (err) {
           LOGGER.error(err);

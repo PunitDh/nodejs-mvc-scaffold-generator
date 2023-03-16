@@ -33,6 +33,7 @@ class SQLQueryBuilder {
 
   withNoTimeStamps() {
     this.timestamps = false;
+    return this;
   }
 
   insert() {

@@ -1,5 +1,6 @@
-import { PATHS } from "../constants";
-import { uuid } from "../utils/uuid";
+import { PATHS } from "../constants.js";
+import { writeFileSync } from "../utils/file_utils.js";
+import { uuid } from "../utils/uuid.js";
 
 export function generateSQLMigrationFile(action, table, column, migration) {
   const [date] = new Date().toISOString().split("T");

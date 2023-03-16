@@ -1,5 +1,5 @@
-import DB from "../db.js";
 import Model from "../model.js";
+import settings from "../utils/settings.js";
 import { QueryBuilder } from "./QueryBuilder.js";
 
 class _Migration extends Model {
@@ -12,11 +12,13 @@ class _Migration extends Model {
   }
 
   static async add(filename, query) {
-    return await this.dbQuery(
-      "INSERT INTO _migrations (filename, query, created_at) VALUES ($filename, $query, DATETIME('now')) RETURNING *;",
-      [filename, query],
-      true
-    );
+    const sqlQuery = QueryBuilder()
+      .insertInto(this.__tablename__)
+      .withNoTimeStamps()
+      .values("filename", "query")
+      .returning("*")
+      .build();
+    return await this.dbQuery(sqlQuery, [filename, query], true);
   }
 }
 

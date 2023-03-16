@@ -13,7 +13,7 @@
     "model:generate": "node ./bin/generators/model_generator.js",
     "router:generate": "node ./bin/generators/router_generator.js",
     "views:generate": "node ./bin/generators/views_generator.js",
-    "migration:generate": "",
+    "migration:generate": "node ./bin/generators/migration_generator.js",
     "scaffold:generate": "chmod u+x ./bin/generators/scaffold_generate.sh && ./bin/generators/scaffold_generate.sh",
     "auth:generate": "node ./bin/auth_generator.js",
     "test": "node test.js"

@@ -25,7 +25,7 @@ import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
 import Handlebars from "../utils/handlebars.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
-import { MigrationInfo, ModelInfo } from "./types.js";
+import { ModelInfo } from "./types.js";
 import SQLiteTable from "../domain/SQLiteTable.js";
 import {
   Column,

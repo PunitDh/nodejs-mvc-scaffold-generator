@@ -12,14 +12,11 @@
 // """
 
 import "../utils/js_utils.js";
-import { PATHS } from "../constants.js";
-import { writeFileSync } from "../utils/file_utils.js";
 import {
   Column,
   ForeignKey,
   MigrationBuilder,
 } from "../builders/MigrationBuilder.js";
-import { uuid } from "../utils/uuid.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
 import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 

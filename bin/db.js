@@ -14,7 +14,7 @@ try {
     if (err) return LOGGER.error("Failed to set foreign key to ON");
     return LOGGER.info("Foreign keys have been turned ON", rows);
   });
-  const migrationTableQuery = `CREATE TABLE IF NOT EXISTS _migrations (
+  const migrationTableQuery = `CREATE TABLE IF NOT EXISTS ${settings.database.migrations.table} (
     version INTEGER PRIMARY KEY AUTOINCREMENT,
     filename TEXT,
     query TEXT,

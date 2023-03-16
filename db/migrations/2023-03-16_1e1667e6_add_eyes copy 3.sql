@@ -1,1 +1,0 @@
-ALTER TABLE animals DROP COLUMN eyes;

@@ -1,6 +1,5 @@
 import { Router } from "express";
 import Company from "../models/Company.js";
-import { Flash } from "../bin/constants.js";
 import Controller from "../bin/domain/Controller.js";
 const companies = Router();
 

@@ -1,0 +1,36 @@
+<%- include('./_head.ejs') %>
+<div class="container mt-4">
+  <h1>Theater</h1>
+  <table class="w-50 my-4">
+    <tbody>
+      <tr>
+        <td class="h6">Created At</td>
+        <td><%= formatDate(theater.created_at) %></td>
+      </tr>
+      <tr>
+        <td class="h6">Updated At</td>
+        <td><%= formatDate(theater.updated_at) %></td>
+      </tr>
+      <tr>
+        <td class="h6">Name</td>
+        <td><%= theater.name %></td>
+      </tr>
+      <tr>
+        <td class="h6">Location</td>
+        <td><%= theater.location %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="form-group mb-2">
+    <div class="d-flex align-items-center" style="gap: 1rem">
+      <a href="/theaters/edit/<%= theater.id %>" class="btn btn-primary">Edit Theater</a>
+      <form action="/theaters/delete/<%= theater.id %>" method="POST">
+        <%- include(locals.LayoutPages._csrf) %>
+        <button type="submit" class="btn btn-danger">Delete Theater</button>
+      </form>
+      <a href="<%= locals.referer || "/theaters" %>" class="btn btn-danger">Back</a>
+    </div>
+  </div>
+</div>
+<%- include(locals.LayoutPages._tail) %>

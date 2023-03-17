@@ -24,20 +24,7 @@ import { uuid } from "../bin/utils/uuid.js";
 let command =
   "npm run migration:generate Animal drop:legs add:eyes:number:unique:notnull add:Zoo:references";
 
-const [model, ...args] = command.split(" ").slice(3); //process.argv.slice(2);
-const cols = args.map((arg) => arg.split(":"));
-const actions = cols.map((col) => {
-  const [subAction, columnName, type, ...constraints] = col;
-  const ref = type?.equalsIgnoreCase("REFERENCES");
-  const foreignKey = ref && new ForeignKey(columnName);
-  const column = !ref && new Column(columnName, type, ...constraints);
 
-  return {
-    subAction,
-    column,
-    foreignKey,
-  };
-});
 
 const migrations = actions.map((action) =>
   new MigrationBuilder()

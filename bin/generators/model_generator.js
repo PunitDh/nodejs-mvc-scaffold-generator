@@ -34,102 +34,107 @@ import {
 } from "../builders/MigrationBuilder.js";
 import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 import { writeFileSync } from "../utils/file_utils.js";
-const argvs = process.argv.slice(2);
-const [model, ...args] = argvs;
-const folderName = path.join(PATHS.root, SETTINGS.models.location);
-const modelFilePath = path.join(folderName, `${model}.js`);
-const templatePath = path.join(PATHS.root, PATHS.bin, PATHS.templates);
-const modelTemplate = path.join(
-  templatePath,
-  PATHS.models,
-  PATHS.modelJsTemplate
-);
 
-if (!fs.existsSync(folderName)) {
-  fs.mkdirSync(folderName);
-}
+await generateModel();
 
-if (await modelExists(model)) {
-  throw new GeneratorError(
-    `Model '${model}' already exists in '${modelFilePath}'`
-  );
-}
-
-if (!model || args.length === 0) {
-  throw new GeneratorError(`Illegal model name and/or attribute names`);
-}
-
-try {
-  const columnsInfo = parseArguments(args);
-
-  // Write model file
-  writeFileSync(
-    modelFilePath,
-    Handlebars.compileFile(modelTemplate)(new ModelInfo(model, columnsInfo))
-  );
-
-  // Add migration
-  const cols = args.map((arg) => arg.split(":"));
-  const refs = cols.filter(([_, constraint]) =>
-    constraint.equalsIgnoreCase("REFERENCES")
-  );
-  const nonRefs = cols.filter(
-    ([_, constraint]) => !constraint.equalsIgnoreCase("REFERENCES")
-  );
-  const columns = nonRefs.map(
-    ([name, type, ...constraints]) => new Column(name, type, ...constraints)
-  );
-  const foreignKeys = refs.map(
-    ([referenceTable]) => new ForeignKey(referenceTable)
-  );
-
-  const createdMigration = new MigrationBuilder()
-    .createTable(model)
-    .withColumns(...columns)
-    .withForeignKeys(...foreignKeys)
-    .buildQuery();
-
-  const action = MigrationActions.CREATE.toLowerCase();
-  const table = "table";
-  const tableName = getTableNameFromModel(model);
-  generateSQLMigrationFile(action, table, tableName, createdMigration);
-} catch (e) {
-  LOGGER.error(`Unable to be generate model '${model}'`, e);
-}
-
-function parseArguments(args) {
-  const columnsInfo = {};
-  for (const arg of args) {
-    const [column, dataType, ...constraints] = arg.trim().split(":");
-    const dataTypeTrim = dataType.trim().toUpperCase();
-
-    // Check for references
-    if (dataTypeTrim === "REFERENCES") {
-      const columnName = column.trim().toLowerCase() + "_id";
-      columnsInfo[columnName] = {
-        type: "INTEGER",
-        constraints: [],
-        references: {
-          table: getTableNameFromModel(column),
-          column: "id",
-        },
-      };
-    } else {
-      const type = SQLColumnTypes[dataTypeTrim];
-      columnsInfo[column.trim()] = { type, constraints };
-    }
-  }
-
-  return columnsInfo;
-}
-
-async function modelExists(model) {
+export async function generateModel(command) {
+  const argvs = command?.split(" ").slice(3) || process.argv.slice(2);
+  const [model, ...args] = argvs;
+  const folderName = path.join(PATHS.root, SETTINGS.models.location);
   const modelFilePath = path.join(folderName, `${model}.js`);
-  if (fs.existsSync(modelFilePath)) {
-    return true;
+  const templatePath = path.join(PATHS.root, PATHS.bin, PATHS.templates);
+  const modelTemplate = path.join(
+    templatePath,
+    PATHS.models,
+    PATHS.modelJsTemplate
+  );
+
+  if (!fs.existsSync(folderName)) {
+    fs.mkdirSync(folderName);
   }
-  if (await SQLiteTable.exists(getTableNameFromModel(model))) {
-    return true;
+
+  if (await modelExists(model)) {
+    throw new GeneratorError(
+      `Model '${model}' already exists in '${modelFilePath}'`
+    );
   }
-  return false;
+
+  if (!model || args.length === 0) {
+    throw new GeneratorError(`Illegal model name and/or attribute names`);
+  }
+
+  try {
+    const columnsInfo = parseArguments(args);
+
+    // Write model file
+    writeFileSync(
+      modelFilePath,
+      Handlebars.compileFile(modelTemplate)(new ModelInfo(model, columnsInfo))
+    );
+
+    // Add migration
+    const cols = args.map((arg) => arg.split(":"));
+    const refs = cols.filter(([_, constraint]) =>
+      constraint.equalsIgnoreCase("REFERENCES")
+    );
+    const nonRefs = cols.filter(
+      ([_, constraint]) => !constraint.equalsIgnoreCase("REFERENCES")
+    );
+    const columns = nonRefs.map(
+      ([name, type, ...constraints]) => new Column(name, type, ...constraints)
+    );
+    const foreignKeys = refs.map(
+      ([referenceTable]) => new ForeignKey(referenceTable)
+    );
+
+    const createdMigration = new MigrationBuilder()
+      .createTable(model)
+      .withColumns(...columns)
+      .withForeignKeys(...foreignKeys)
+      .buildQuery();
+
+    const action = MigrationActions.CREATE.toLowerCase();
+    const table = "table";
+    const tableName = getTableNameFromModel(model);
+    generateSQLMigrationFile(action, "", table, tableName, createdMigration);
+  } catch (e) {
+    LOGGER.error(`Unable to be generate model '${model}'`, e);
+  }
+
+  function parseArguments(args) {
+    const columnsInfo = {};
+    for (const arg of args) {
+      const [column, dataType, ...constraints] = arg.trim().split(":");
+      const dataTypeTrim = dataType.trim().toUpperCase();
+
+      // Check for references
+      if (dataTypeTrim === "REFERENCES") {
+        const columnName = column.trim().toLowerCase() + "_id";
+        columnsInfo[columnName] = {
+          type: "INTEGER",
+          constraints: [],
+          references: {
+            table: getTableNameFromModel(column),
+            column: "id",
+          },
+        };
+      } else {
+        const type = SQLColumnTypes[dataTypeTrim];
+        columnsInfo[column.trim()] = { type, constraints };
+      }
+    }
+
+    return columnsInfo;
+  }
+
+  async function modelExists(model) {
+    const modelFilePath = path.join(folderName, `${model}.js`);
+    if (fs.existsSync(modelFilePath)) {
+      return true;
+    }
+    if (await SQLiteTable.exists(getTableNameFromModel(model))) {
+      return true;
+    }
+    return false;
+  }
 }

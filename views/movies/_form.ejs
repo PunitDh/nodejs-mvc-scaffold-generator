@@ -1,0 +1,31 @@
+<form method="POST">
+  <div class="form-group d-flex row mb-2">
+    <label for="name" class="form-label">
+      <div class="mb-2 fw-bold">Name</div>
+      <input type="TEXT" value="<%= movie.name %>" name="name"  class="form-control form-control" id="name" placeholder="Enter Name" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group d-flex row mb-2">
+    <label for="description" class="form-label">
+      <div class="mb-2 fw-bold">Description</div>
+      <input type="TEXT" value="<%= movie.description %>" name="description"  class="form-control form-control" id="description" placeholder="Enter Description" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group d-flex row mb-2">
+    <label for="year" class="form-label">
+      <div class="mb-2 fw-bold">Year</div>
+      <input type="NUMERIC" value="<%= movie.year %>" name="year"  class="form-control form-control" id="year" placeholder="Enter Year" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group d-flex row mb-2">
+    <label for="theater_id" class="form-label">
+      <div class="mb-2 fw-bold">Theater Id</div>
+      <input type="INTEGER" value="<%= movie.theater_id %>" name="theater_id"  class="form-control form-control" id="theater_id" placeholder="Enter Theater Id" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group mb-2">
+    <%- include(locals.LayoutPages._csrf) %>
+    <button type="submit" class="btn btn-primary">Submit Movie</button>
+    <a href="/movies" class="btn btn-danger">Back</a>
+  </div>
+</form>

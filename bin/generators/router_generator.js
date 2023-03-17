@@ -12,68 +12,66 @@ import LOGGER from "../logger.js";
 import { readFileSync, writeFileSync } from "../utils/file_utils.js";
 import { getSchema, saveSchema } from "../utils/schema_utils.js";
 import pluralize from "pluralize";
-import { PATHS } from "../constants.js";
+import { LOCATIONS, PATHS } from "../constants.js";
 
-const argvs = process.argv.slice(2);
-const model = argvs.first();
-const route = pluralize.plural(model.toLowerCase());
-const routerDirectory = path.join(PATHS.root, SETTINGS.routers.location);
-const templateDirectory = path.join(
-  PATHS.root,
-  PATHS.bin,
-  PATHS.templates,
-  PATHS.routers
-);
-const routerFile = path.join(routerDirectory, `${route}.js`);
-const schema = getSchema();
+generateRouter();
 
-if (!schema.routers) {
-  schema.routers = [];
-}
+function generateRouter(command) {
+  const argvs = command?.split(" ").slice(3) || process.argv.slice(2);
+  const model = argvs.first();
+  const route = pluralize.plural(model.toLowerCase());
+  const routerDirectory = path.join(PATHS.root, SETTINGS.routers.location);
+  const templates = path.join(LOCATIONS.templates, PATHS.routers);
+  const routerFile = path.join(routerDirectory, `${route}.js`);
+  const schema = getSchema();
 
-schema.routers = [...new Set([...schema.routers, route])];
-saveSchema(schema);
-
-if (!existsSync(routerDirectory)) mkdirSync(routerDirectory);
-
-if (existsSync(routerFile))
-  throw new GeneratorError(
-    `Router for model '${model}' already exists in '${routerFile}'`
-  );
-
-if (
-  !existsSync(path.join(PATHS.root, SETTINGS.models.location, `${model}.js`))
-) {
-  throw new UnknownModelError(`Unknown model: '${model}'`);
-}
-
-const template = SETTINGS.api ? PATHS.apiJsTemplate : PATHS.viewsJsTemplate;
-
-const templateProps = {
-  model: model.toLowerCase(),
-  Model: model.capitalize(),
-  route,
-  location: SETTINGS.models.location,
-};
-
-try {
-  writeFileSync(
-    routerFile,
-    Handlebars.compileFile(templateDirectory, template)(templateProps)
-  );
-
-  const indexFile = path.join(PATHS.root, PATHS.indexJs);
-  const indexFileData = readFileSync(indexFile);
-
-  if (!indexFileData.includes(`import ${route} from "./routers/${route}.js"`)) {
-    appendFileSync(
-      indexFile,
-      Handlebars.compileFile(
-        templateDirectory,
-        PATHS.indexFileJsTemplate
-      )({ route })
-    );
+  if (!schema.routers) {
+    schema.routers = [];
   }
-} catch (e) {
-  LOGGER.error(`Unable to be generate router for '${model}'`, e);
+
+  schema.routers = [...new Set([...schema.routers, route])];
+  saveSchema(schema);
+
+  if (!existsSync(routerDirectory)) mkdirSync(routerDirectory);
+
+  if (existsSync(routerFile))
+    throw new GeneratorError(
+      `Router for model '${model}' already exists in '${routerFile}'`
+    );
+
+  if (
+    !existsSync(path.join(PATHS.root, SETTINGS.models.location, `${model}.js`))
+  ) {
+    throw new UnknownModelError(`Unknown model: '${model}'`);
+  }
+
+  const template = SETTINGS.api ? PATHS.apiJsTemplate : PATHS.viewsJsTemplate;
+
+  const templateProps = {
+    model: model.toLowerCase(),
+    Model: model.capitalize(),
+    route,
+    location: SETTINGS.models.location,
+  };
+
+  try {
+    writeFileSync(
+      routerFile,
+      Handlebars.compileFile(templates, template)(templateProps)
+    );
+
+    const indexFile = path.join(PATHS.root, PATHS.indexJs);
+    const indexFileData = readFileSync(indexFile);
+
+    if (
+      !indexFileData.includes(`import ${route} from "./routers/${route}.js"`)
+    ) {
+      appendFileSync(
+        indexFile,
+        Handlebars.compileFile(templates, PATHS.indexFileJsTemplate)({ route })
+      );
+    }
+  } catch (e) {
+    LOGGER.error(`Unable to be generate router for '${model}'`, e);
+  }
 }

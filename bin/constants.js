@@ -1,3 +1,6 @@
+import path from "path";
+import SETTINGS from "./utils/settings.js";
+
 export const SQLColumnTypes = {
   INT: "INTEGER",
   INTEGER: "INTEGER",
@@ -170,6 +173,26 @@ export const PATHS = {
   insertSqlTemplate: "insert.sql.template",
   updateSqlTemplate: "update.sql.template",
   deleteSqlTemplate: "delete.sql.template",
+};
+
+export const LOCATIONS = {
+  _navLinksEjsTemplate: path.join(
+    PATHS.root,
+    PATHS.bin,
+    PATHS.templates,
+    PATHS.views,
+    PATHS._layouts,
+    PATHS.partials,
+    PATHS._navLinksEjsTemplate
+  ),
+  templates: path.join(PATHS.root, PATHS.bin, PATHS.templates),
+  _navLinksEjs: path.join(
+    PATHS.root,
+    SETTINGS.views.location,
+    PATHS._layouts,
+    PATHS.partials,
+    PATHS._navLinksEjs
+  ),
 };
 
 export const ReadOnlyColumns = [

@@ -1,0 +1,44 @@
+<%- include('./_head.ejs') %>
+<div class="container mt-4">
+  <h1>Movie</h1>
+  <table class="w-50 my-4">
+    <tbody>
+      <tr>
+        <td class="h6">Created At</td>
+        <td><%= formatDate(movie.created_at) %></td>
+      </tr>
+      <tr>
+        <td class="h6">Updated At</td>
+        <td><%= formatDate(movie.updated_at) %></td>
+      </tr>
+      <tr>
+        <td class="h6">Name</td>
+        <td><%= movie.name %></td>
+      </tr>
+      <tr>
+        <td class="h6">Description</td>
+        <td><%= movie.description %></td>
+      </tr>
+      <tr>
+        <td class="h6">Year</td>
+        <td><%= movie.year %></td>
+      </tr>
+      <tr>
+        <td class="h6">Theater Id</td>
+        <td><%= movie.theater_id %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="form-group mb-2">
+    <div class="d-flex align-items-center" style="gap: 1rem">
+      <a href="/movies/edit/<%= movie.id %>" class="btn btn-primary">Edit Movie</a>
+      <form action="/movies/delete/<%= movie.id %>" method="POST">
+        <%- include(locals.LayoutPages._csrf) %>
+        <button type="submit" class="btn btn-danger">Delete Movie</button>
+      </form>
+      <a href="<%= locals.referer || "/movies" %>" class="btn btn-danger">Back</a>
+    </div>
+  </div>
+</div>
+<%- include(locals.LayoutPages._tail) %>

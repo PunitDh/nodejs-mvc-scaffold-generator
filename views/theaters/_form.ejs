@@ -1,0 +1,19 @@
+<form method="POST">
+  <div class="form-group d-flex row mb-2">
+    <label for="name" class="form-label">
+      <div class="mb-2 fw-bold">Name</div>
+      <input type="TEXT" value="<%= theater.name %>" name="name"  class="form-control form-control" id="name" placeholder="Enter Name" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group d-flex row mb-2">
+    <label for="location" class="form-label">
+      <div class="mb-2 fw-bold">Location</div>
+      <input type="TEXT" value="<%= theater.location %>" name="location"  class="form-control form-control" id="location" placeholder="Enter Location" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group mb-2">
+    <%- include(locals.LayoutPages._csrf) %>
+    <button type="submit" class="btn btn-primary">Submit Theater</button>
+    <a href="/theaters" class="btn btn-danger">Back</a>
+  </div>
+</form>

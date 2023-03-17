@@ -4,6 +4,7 @@ import { compare, hashed } from "../bin/utils/bcrypt.js";
 import JWT from "jsonwebtoken";
 import authenticated from "../bin/middleware/authenticated.js";
 import { Flash } from "../bin/constants.js";
+import _Jwt from "../bin/domain/JWT.js";
 
 const users = Router();
 
@@ -106,6 +107,7 @@ users.get("/logout", async (req, res) => {
 
 users.post("/logout", async (req, res) => {
   try {
+    await _Jwt.add(req.cookies.app);
     res.clearCookie("app");
     req.flash(Flash.SUCCESS, "Logged out successfully");
     res.redirect("/users/login");
@@ -116,7 +118,7 @@ users.post("/logout", async (req, res) => {
 
 users.post("/delete/:id", async (req, res) => {
   try {
-    if (res.locals.currentUser !== req.params.id) {
+    if (res.locals.currentUser.id !== parseInt(req.params.id)) {
       req.flash(Flash.ERROR, "You are not authorized to perform this action");
       return res.status(403).redirect(req.headers.referer);
     }

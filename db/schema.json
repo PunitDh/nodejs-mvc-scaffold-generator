@@ -324,9 +324,36 @@
         "dflt_value": null,
         "pk": 0
       }
+    ],
+    "_jwt": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "jwt",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "last_used",
+        "type": "NUMERIC",
+        "notnull": 0,
+        "dflt_value": "DATETIME('now')",
+        "pk": 0
+      }
     ]
   },
   "routers": [
+    "_jwt",
     "animals",
     "blogs",
     "comments",

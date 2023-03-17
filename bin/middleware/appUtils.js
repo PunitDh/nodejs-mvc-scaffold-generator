@@ -44,10 +44,15 @@ export default function () {
     res.locals.referer = req.query.referer;
     res.locals.randomInteger = randomInteger;
     res.locals.randomChoice = randomChoice;
+    res.locals.shortened = (text, maxStringLength = 50) =>
+      text.length > maxStringLength
+        ? text.slice(0, maxStringLength) + "..."
+        : text;
     res.locals.marked = (object) =>
       markSearchTermInObjectValues(
         object,
-        getQueryFromURIComponent(res.locals.referer)
+        getQueryFromURIComponent(res.locals.referer),
+        false
       )?.result || object;
     next();
   };

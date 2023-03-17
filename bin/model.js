@@ -6,6 +6,7 @@ import SQLiteTable from "./domain/SQLiteTable.js";
 import { getTableNameFromModel, sanitizeObject } from "./utils/model_utils.js";
 import "./utils/js_utils.js";
 import { QueryBuilder } from "./builders/QueryBuilder.js";
+import { DatabaseError } from "./errors.js";
 
 /**
  * @description Base model class
@@ -250,10 +251,11 @@ class Model {
     const _Model = this.prototype.constructor;
     return new Promise(function (resolve, reject) {
       LOGGER.query(query);
+      LOGGER.query(values);
       DB.all(query, values, function (err, rows) {
         if (err) {
-          LOGGER.error(err);
-          return reject(err);
+          const error = new DatabaseError(err)
+          return reject(error);
         }
         const result = rows.map((row) => new _Model(row));
         return singular

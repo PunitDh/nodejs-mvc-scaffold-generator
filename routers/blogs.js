@@ -8,23 +8,24 @@ const blogs = Router();
 blogs.use(authenticated);
 blogs.use(csrf());
 
-blogs.get("/", async (req, res) => {
+blogs.get("/", async (req, res, next) => {
   try {
     const blogs = await Blog.all();
     return res.render("blogs/index", { blogs });
   } catch (e) {}
 });
 
-blogs.get("/new", async (req, res) => {
+blogs.get("/new", async (req, res, next) => {
   try {
-    return res.render("blogs/new");
+    const blog = new Blog();
+    return res.render("blogs/new", { blog });
   } catch (e) {
     req.flash("error", e.message);
     return res.redirect("/blogs");
   }
 });
 
-blogs.get("/edit/:id", async (req, res) => {
+blogs.get("/edit/:id", async (req, res, next) => {
   try {
     const blog = await Blog.find(req.params.id);
     return res.render("blogs/edit", { blog });
@@ -33,7 +34,7 @@ blogs.get("/edit/:id", async (req, res) => {
   }
 });
 
-blogs.post("/edit/:id", async (req, res) => {
+blogs.post("/edit/:id", async (req, res, next) => {
   try {
     await Blog.update(req.params.id, req.body);
     req.flash("success", "Blog has been updated");
@@ -44,17 +45,17 @@ blogs.post("/edit/:id", async (req, res) => {
   }
 });
 
-blogs.post("/delete/:id", async (req, res) => {
+blogs.post("/delete/:id", async (req, res, next) => {
   try {
     await Blog.delete(req.params.id);
     req.flash("success", "Blog has been deleted");
     return res.redirect("/blogs");
   } catch (e) {
-    req.flash("error", e.message);
+    next(e);
   }
 });
 
-blogs.get("/:id", async (req, res) => {
+blogs.get("/:id", async (req, res, next) => {
   try {
     const blog = await Blog.find(req.params.id);
     const comments = (await blog.comments).map((comment) =>
@@ -69,7 +70,7 @@ blogs.get("/:id", async (req, res) => {
   }
 });
 
-blogs.post("/new", async (req, res) => {
+blogs.post("/new", async (req, res, next) => {
   try {
     await Blog.create(req.body);
     req.flash("success", "Blog has been added");
@@ -80,7 +81,7 @@ blogs.post("/new", async (req, res) => {
   }
 });
 
-blogs.post("/comment", async (req, res) => {
+blogs.post("/comment", async (req, res, next) => {
   try {
     await Comment.create(req.body);
     req.flash("success", "Comment has been added");

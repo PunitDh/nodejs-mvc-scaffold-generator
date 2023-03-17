@@ -4,10 +4,6 @@ import { Flash } from "../bin/constants.js";
 import csrf from "../bin/middleware/csrf.js";
 import upload from "../bin/middleware/upload.js";
 import fs from "fs";
-import {
-  getQueryFromURIComponent,
-  markSearchTermInObjectValues,
-} from "../bin/utils/text_utils.js";
 const animals = Router();
 
 animals.use(csrf());

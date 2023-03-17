@@ -8,6 +8,9 @@
       "location": "db",
       "filename": "schema.json"
     },
+    "jwt": {
+      "table": "_jwts"
+    },
     "migrations": {
       "location": "db",
       "filename": "migrations.js",

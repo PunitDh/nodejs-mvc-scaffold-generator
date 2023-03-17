@@ -1,108 +1,115 @@
 // """
-// npm run auth:generate User
+// Generate a model
+// -----------------------------------------------------------------
+// npm run auth:generate User email password
+//
+//
 // """
 
-import { writeFileSync, appendFileSync, existsSync } from "fs";
-import { join } from "path";
+
+/**
+ * WIP
+ */
+
+
+import fs from "fs";
+import path from "path";
 import "../utils/js_utils.js";
-import { SQLColumnTypes, SQLColumnConstraints } from "../constants.js";
-import {
-  GeneratorError,
-  InvalidColumnConstraintError,
-  InvalidDataTypeError,
-} from "../errors.js";
+import { MigrationActions, PATHS, SQLColumnTypes } from "../constants.js";
+import { GeneratorError } from "../errors.js";
 import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
-import settings from "../utils/settings.js";
+import Handlebars from "../utils/handlebars.js";
+import { getTableNameFromModel } from "../utils/model_utils.js";
+import { AuthInfo } from "./types.js";
+import SQLiteTable from "../domain/SQLiteTable.js";
+import {
+  Column,
+  ForeignKey,
+  MigrationBuilder,
+} from "../builders/MigrationBuilder.js";
+import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
+import { writeFileSync } from "../utils/file_utils.js";
 
-const argvs = process.argv.slice(2);
-const [modelName, ...args] = argvs;
-const attributesObj = {};
-const file = join(".", settings.models.location, `${modelName}.js`);
+await generateAuth();
 
-if (!existsSync(file) /*|| args.length === 0*/) {
-  throw new GeneratorError(`Illegal model name and/or attribute names`);
+export async function generateAuth(command) {
+  const argvs = command?.split(" ").slice(3) || process.argv.slice(2);
+  const [model, identifier, authenticator] = argvs;
+  const folderName = path.join(PATHS.root, SETTINGS.models.location);
+  const modelFilePath = path.join(folderName, `${model}.js`);
+  const templatePath = path.join(PATHS.root, PATHS.bin, PATHS.templates);
+  const router = getTableNameFromModel(model);
+  const modelTemplate = path.join(
+    templatePath,
+    PATHS.routers,
+    PATHS.authRouterJsTemplate
+  );
+
+  if (!fs.existsSync(folderName)) {
+    fs.mkdirSync(folderName);
+  }
+
+  if (await modelExists(model)) {
+    throw new GeneratorError(
+      `Model '${model}' already exists in '${modelFilePath}'`
+    );
+  }
+
+  if (!model || !identifier.length || !authenticator.length) {
+    throw new GeneratorError(`Illegal model name and/or attribute names`);
+  }
+
+  const filename = Handlebars.compile(PATHS.authRouterJsTemplate)({
+    authRouter: router,
+  });
+
+  try {
+    const authInfo = new AuthInfo(model, identifier, authenticator);
+
+    // Write model file
+    writeFileSync(
+      modelFilePath,
+      Handlebars.compileFile(modelTemplate)(authInfo)
+    );
+
+    // Add migration
+    const cols = args.map((arg) => arg.split(":"));
+    const refs = cols.filter(([_, constraint]) =>
+      constraint.equalsIgnoreCase("REFERENCES")
+    );
+    const nonRefs = cols.filter(
+      ([_, constraint]) => !constraint.equalsIgnoreCase("REFERENCES")
+    );
+    const columns = nonRefs.map(
+      ([name, type, ...constraints]) => new Column(name, type, ...constraints)
+    );
+    const foreignKeys = refs.map(
+      ([referenceTable]) => new ForeignKey(referenceTable)
+    );
+
+    const createdMigration = new MigrationBuilder()
+      .createTable(model)
+      .withColumns(...columns)
+      .withForeignKeys(...foreignKeys)
+      .buildQuery();
+
+    const action = MigrationActions.CREATE.toLowerCase();
+    const table = "table";
+    const tableName = getTableNameFromModel(model);
+    generateSQLMigrationFile(action, "", table, tableName, createdMigration);
+  } catch (e) {
+    LOGGER.error(`Unable to be generate model '${model}'`, e);
+  }
+
+  async function modelExists(model) {
+    const modelFilePath = path.join(folderName, `${model}.js`);
+    if (fs.existsSync(modelFilePath)) {
+      return true;
+    }
+    if (await SQLiteTable.exists(getTableNameFromModel(model))) {
+      return true;
+    }
+    return false;
+  }
 }
-
-if (existsSync(file)) {
-  const data = require(file)
-  console.log(data)
-}
-
-// try {
-//   args.forEach((arg) => {
-//     const [attributeName, dataType, ...constraints] = arg.trim().split(":");
-//     if (!(dataType.trim().toUpperCase() in COLUMN_TYPES)) {
-//       throw new InvalidDataTypeError(
-//         `Unknown data type provided for column '${attributeName}': '${dataType}'`
-//       );
-//     }
-//     attributesObj[attributeName.trim()] = {
-//       type: COLUMN_TYPES[dataType.trim().toUpperCase()],
-//       constraints,
-//     };
-//   });
-
-//   const attributes = Object.keys(attributesObj);
-//   const constructorArgs = attributes.join(", ");
-//   const constructorFn = attributes
-//     .map((attribute) => `    this.${attribute} = ${attribute};`)
-//     .join("\n");
-
-//   // Write model file
-//   writeFileSync(
-//     file,
-//     `import Model from '../bin/model.js'
-
-// class ${modelName} extends Model {
-//   constructor(${constructorArgs}) {
-// ${constructorFn}
-//   }
-// }
-
-// export default ${modelName}
-// `
-//   );
-
-//   // Add migration
-//   const allConstraints = Object.keys(CONSTRAINTS);
-//   const dbColumns = Object.entries(attributesObj)
-//     .map(([columnName, columnData]) => {
-//       const dbColumnConstraints = columnData.constraints
-//         ?.map((constraint) => {
-//           if (!allConstraints.includes(constraint.toUpperCase())) {
-//             throw new InvalidColumnConstraintError(
-//               `Invalid column constraint provided for column: '${constraint}'`
-//             );
-//           }
-//           return `.withConstraint("${CONSTRAINTS[constraint.toUpperCase()]}")`;
-//         })
-//         .join(" ");
-//       return `new Column("${columnName}", "${columnData.type.capitalize()}")${
-//         columnData.constraints && dbColumnConstraints
-//       }`;
-//     })
-//     .join(",\n        ");
-
-//   appendFileSync(
-//     join(
-//       ".",
-//       SETTINGS.database.migrations.location,
-//       SETTINGS.database.migrations.filename
-//     ),
-//     `
-
-// await Migrations(
-//   new Migration(
-//     new Table("${modelName}")
-//       .withColumns(
-//         ${dbColumns}
-//       )
-//       .create()
-//   )
-// ).run();
-// `
-//   );
-// } catch (e) {
-//   LOGGER.error(`Unable to be generate model '${modelName}'`, e);
-// }

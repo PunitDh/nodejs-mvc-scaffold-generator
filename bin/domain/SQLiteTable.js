@@ -27,7 +27,8 @@ class SQLiteTable {
             .filter(
               (r) =>
                 !r.name.includes("sqlite_") &&
-                !r.name.includes(SETTINGS.database.migrations.table)
+                !r.name.includes(SETTINGS.database.migrations.table) &&
+                !r.name.includes(SETTINGS.database.jwt.table)
             )
             .map((r) => new SQLiteTable(r))
         );

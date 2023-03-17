@@ -1,5 +1,4 @@
 import JWT from "jsonwebtoken";
-import User from "../../models/User.js";
 
 async function authenticated(req, res, next) {
   const token = req.cookies.app;
@@ -13,10 +12,10 @@ async function authenticated(req, res, next) {
 
   try {
     const decoded = JWT.verify(token, process.env.JWT_SECRET);
-    const userExists = await User.exists({ id: decoded.id });
-    if (!userExists) {
-      return res.status(401).redirect(redirectUrl);
-    }
+    // const userExists = await User.exists({ id: decoded.id });
+    // if (!userExists) {
+    //   return res.status(401).redirect(redirectUrl);
+    // }
 
     res.locals.currentUser = decoded;
     next();

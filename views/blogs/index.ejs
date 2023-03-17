@@ -13,7 +13,7 @@
       <% for (const it of blogs) { %>
       <tr>
         <td><%= it.title %></td>
-        <td><%= it.body %></td>
+        <td><%= shortened(it.body) %></td>
         <td><%= formatDate(it.created_at) %></td>
         <td><%= formatDate(it.updated_at) %></td>
         <td><a href="/blogs/<%= it.id %>" class="btn btn-primary">Show</a></td>

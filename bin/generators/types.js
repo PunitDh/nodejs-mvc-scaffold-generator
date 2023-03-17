@@ -75,4 +75,14 @@ class ModelInfo {
   }
 }
 
-export { ViewColumn, MigrationInfo, ModelInfo };
+class AuthInfo {
+  constructor(model, identifier, authenticator) {
+    this.model = model;
+    this.Model = model.toUpperCase();
+    this.router = getTableNameFromModel(model);
+    this.identifier = identifier;
+    this.authenticator = authenticator;
+  }
+}
+
+export { ViewColumn, MigrationInfo, ModelInfo, AuthInfo };

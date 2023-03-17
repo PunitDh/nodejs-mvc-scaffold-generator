@@ -163,6 +163,7 @@ export const PATHS = {
   indexJs: "index.js",
   models: "models",
   modelJsTemplate: "model.js.template",
+  authRouterJsTemplate: "{{authRouter}}.js.template",
   db: "db",
   migrations: "migrations",
   instance: "instance",

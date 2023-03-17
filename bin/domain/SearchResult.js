@@ -8,7 +8,11 @@ import { markSearchTermInObjectValues } from "../utils/text_utils.js";
 class SearchResult {
   constructor(searchTerm, table, data) {
     this.table = table;
-    const { priority, result } = markSearchTermInObjectValues(data, searchTerm);
+    const { priority, result } = markSearchTermInObjectValues(
+      data,
+      searchTerm,
+      true
+    );
     this.priority = priority;
     this.data = result;
     const resultColumns = Object.keys(data).exclude(

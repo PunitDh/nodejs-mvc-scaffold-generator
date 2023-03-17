@@ -13,6 +13,7 @@ import settings from "./utils/settings.js";
       .map((r) => r.name)
       .filter((r) => !r.includes("sqlite_"))
       .filter((r) => !r.includes(settings.database.migrations.table))
+      .filter((r) => !r.includes(settings.database.jwt.table))
       .sort();
 
     schemaTables.forEach((schemaTable) => {

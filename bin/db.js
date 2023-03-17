@@ -25,6 +25,18 @@ try {
       return LOGGER.error("Failed to connect to migration versioning table");
     return LOGGER.info("Connected to migration versioning table");
   });
+
+  const jwtTableQuery = `CREATE TABLE IF NOT EXISTS ${settings.database.jwt.table} (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );`;
+  DB.run(jwtTableQuery, function (err) {
+    if (err)
+      return LOGGER.error("Failed to connect to JWT table");
+    return LOGGER.info("Connected to JWT table");
+  });
+
   LOGGER.info(
     "Successfully connected to database:",
     `'${settings.database.name}'`

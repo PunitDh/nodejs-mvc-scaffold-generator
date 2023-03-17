@@ -30,17 +30,21 @@ export function markHTML(text, term, maxStringLength) {
  * exclude SearchResultExcludedColumns from the search.
  * It also calculates a priority for each match based on the count of marked terms in the value.
  * @param {*} object The object whose properties will be searched for the given term.
- * @param {*} term The search term that will be marked in the values of the object's properties.
+ * @param {*} searchTerm The search term that will be marked in the values of the object's properties.
  * @returns An object with the priority of the search term in the values and the marked search term in the result object.
  */
-export function markSearchTermInObjectValues(object, term) {
-  if (!term) return object;
+export function markSearchTermInObjectValues(object, searchTerm, shortened = false) {
+  if (!searchTerm) return object;
   const result = {};
   let priority = 0;
   const { maxStringLength } = SETTINGS.views.pages.search;
   Object.entries(object.exclude(...SearchResultExcludedColumns)).forEach(
     ([key, value]) => {
-      const { text, count } = markHTML(value, term, maxStringLength);
+      const { text, count } = markHTML(
+        value,
+        searchTerm,
+        shortened ? maxStringLength : undefined
+      );
       priority += count;
       result[key] = text;
     }

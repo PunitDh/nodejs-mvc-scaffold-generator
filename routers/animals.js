@@ -4,6 +4,10 @@ import { Flash } from "../bin/constants.js";
 import csrf from "../bin/middleware/csrf.js";
 import upload from "../bin/middleware/upload.js";
 import fs from "fs";
+import {
+  getQueryFromURIComponent,
+  markSearchTermInObjectValues,
+} from "../bin/utils/text_utils.js";
 const animals = Router();
 
 animals.use(csrf());
@@ -18,7 +22,7 @@ animals.get("/", async (req, res) => {
 animals.get("/new", async (req, res) => {
   try {
     const animal = new Animal();
-    return res.render("animals/new", { animal, action: "/" });
+    return res.render("animals/new", { animal });
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
     return res.redirect("/animals");
@@ -66,8 +70,7 @@ animals.post("/delete/:id", async (req, res) => {
 animals.get("/:id", async (req, res) => {
   try {
     const animal = await Animal.find(req.params.id);
-    console.log(animal);
-    return res.render("animals/animal", { animal });
+    return res.render("animals/animal", { animal: res.locals.marked(animal) });
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
   }
@@ -76,10 +79,10 @@ animals.get("/:id", async (req, res) => {
 animals.post("/new", upload.single("image"), async (req, res) => {
   try {
     const animal = new Animal(req.body);
-    const image = req.file;
-    const buffer = fs.readFileSync(image.path);
-    const blob = Buffer.from(buffer, "binary");
-    animal.image = blob;
+    // const image = req.file;
+    // const buffer = fs.readFileSync(image?.path);
+    // const blob = Buffer.from(buffer, "binary");
+    // animal.image = blob;
     await animal.save();
     req.flash(Flash.SUCCESS, "Animal has been added");
     return res.redirect(`/animals`);

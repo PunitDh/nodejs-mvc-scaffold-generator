@@ -7,7 +7,6 @@ class User extends Model {
     this.last_name = data.last_name;
     this.email = data.email;
     this.password = data.password;
-    this._csrf_token = data._csrf_token;
   }
 }
 

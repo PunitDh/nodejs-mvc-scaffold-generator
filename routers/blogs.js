@@ -60,7 +60,10 @@ blogs.get("/:id", async (req, res) => {
     const comments = (await blog.comments).map((comment) =>
       comment.exclude("id", "blog_id", "updated_at")
     );
-    return res.render("blogs/blog", { blog, comments });
+    return res.render("blogs/blog", {
+      blog: res.locals.marked(blog),
+      comments: comments.map((comment) => res.locals.marked(comment)),
+    });
   } catch (e) {
     req.flash("error", e.message);
   }

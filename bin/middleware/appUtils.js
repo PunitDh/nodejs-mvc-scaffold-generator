@@ -4,6 +4,10 @@ import pluralize from "pluralize";
 import JWT from "jsonwebtoken";
 import { LayoutPages } from "../constants.js";
 import { randomChoice, randomInteger } from "../utils/num_utils.js";
+import {
+  getQueryFromURIComponent,
+  markSearchTermInObjectValues,
+} from "../utils/text_utils.js";
 
 export default function () {
   return function (req, res, next) {
@@ -40,6 +44,11 @@ export default function () {
     res.locals.referer = req.query.referer;
     res.locals.randomInteger = randomInteger;
     res.locals.randomChoice = randomChoice;
+    res.locals.marked = (object) =>
+      markSearchTermInObjectValues(
+        object,
+        getQueryFromURIComponent(res.locals.referer)
+      )?.result || object;
     next();
   };
 }

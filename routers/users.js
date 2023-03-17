@@ -134,7 +134,9 @@ users.get("/:id", async (req, res, next) => {
       "password",
       "_csrf_token"
     );
-    return res.status(200).render("users/user", { user });
+    return res
+      .status(200)
+      .render("users/user", { user: res.locals.marked(user) });
   } catch (e) {
     next(e);
   }

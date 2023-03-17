@@ -58,7 +58,9 @@ comments.post("/delete/:id", async (req, res, next) => {
 comments.get("/:id", async (req, res, next) => {
   try {
     const comment = await Comment.find(req.params.id);
-    return res.render("comments/comment", { comment });
+    return res.render("comments/comment", {
+      comment: res.locals.marked(comment),
+    });
   } catch (e) {
     next(e);
   }

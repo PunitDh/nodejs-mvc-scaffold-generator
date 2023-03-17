@@ -4,7 +4,9 @@ import { uuid } from "../utils/uuid.js";
 
 export function generateSQLMigrationFile(action, table, column, migration) {
   const [date] = new Date().toISOString().split("T");
-  const uuId = uuid().slice(0, 8);
-  const filename = `${date}_${uuId}_${action}_${table}_${column}.sql`;
-  writeFileSync(PATHS.root, PATHS.db, PATHS.migrations, filename, migration);
+  const uuId = uuid();
+  const sUUID = uuId.slice(0, 8);
+  const filename = `${date}_${sUUID}_${action}_${table}_${column}.sql`;
+  const contents = [`--${uuId}`, migration].join("\n");
+  writeFileSync(PATHS.root, PATHS.db, PATHS.migrations, filename, contents);
 }

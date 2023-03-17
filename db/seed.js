@@ -40,8 +40,7 @@ const companies = RandomCollectionOf(maxCount, Company).withProps({
     `${faker.address.streetAddress()}, ${faker.address.city()}, ${faker.address.state()}, ${faker.address.zipCode()}`,
   number_of_employees: () => randomInteger(5, 150),
 });
-
-// .saveAll();
+//.saveAll();
 
 const users = RandomCollectionOf(maxCount, User).withProps(() => {
   const first_name = () => faker.name.firstName();

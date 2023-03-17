@@ -1,0 +1,1 @@
+ALTER TABLE _migrations ADD COLUMN sha TEXT;

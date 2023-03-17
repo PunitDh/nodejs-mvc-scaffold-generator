@@ -44,14 +44,6 @@
       },
       {
         "cid": 5,
-        "name": "_csrf_token",
-        "type": "TEXT",
-        "notnull": 0,
-        "dflt_value": null,
-        "pk": 0
-      },
-      {
-        "cid": 6,
         "name": "created_at",
         "type": "NUMERIC",
         "notnull": 0,
@@ -59,7 +51,7 @@
         "pk": 0
       },
       {
-        "cid": 7,
+        "cid": 6,
         "name": "updated_at",
         "type": "NUMERIC",
         "notnull": 0,
@@ -276,7 +268,7 @@
       },
       {
         "cid": 9,
-        "name": "employer_id",
+        "name": "company_id",
         "type": "INTEGER",
         "notnull": 0,
         "dflt_value": null,
@@ -340,7 +332,6 @@
     "comments",
     "companies",
     "employees",
-    "users",
-    "tests"
+    "users"
   ]
 }

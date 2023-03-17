@@ -34,6 +34,7 @@ export function markHTML(text, term, maxStringLength) {
  * @returns An object with the priority of the search term in the values and the marked search term in the result object.
  */
 export function markSearchTermInObjectValues(object, term) {
+  if (!term) return object;
   const result = {};
   let priority = 0;
   const { maxStringLength } = SETTINGS.views.pages.search;
@@ -45,4 +46,10 @@ export function markSearchTermInObjectValues(object, term) {
     }
   );
   return { priority, result };
+}
+
+export function getQueryFromURIComponent(uriComponent) {
+  if (!uriComponent) return null;
+  const match = uriComponent.match(/q=([^&]*)/);
+  return match && decodeURIComponent(match[1].replace(/\+/g, " "));
 }

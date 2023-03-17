@@ -5,23 +5,23 @@
     <tbody>
       <tr>
         <td class="h6">Name</td>
-        <td><%= animal.name %></td>
+        <td><%- animal.name %></td>
       </tr>
       <tr>
         <td class="h6">Created At</td>
-        <td><%= formatDate(animal.created_at) %></td>
+        <td><%- formatDate(animal.created_at) %></td>
       </tr>
       <tr>
         <td class="h6">Updated At</td>
-        <td><%= formatDate(animal.updated_at) %></td>
+        <td><%- formatDate(animal.updated_at) %></td>
       </tr>
       <tr>
         <td class="h6">Color</td>
-        <td><%= animal.color %></td>
+        <td><%- animal.color %></td>
       </tr>
       <tr>
         <td class="h6">Image</td>
-        <td><img src="<%= animal.image %>" alt="<%= animal.name %>" /></td>
+        <td><img src="<%= animal.image %>" alt="<%- animal.id %>" /></td>
       </tr>
     </tbody>
   </table>

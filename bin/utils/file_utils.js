@@ -17,7 +17,7 @@ export function writeFileSync() {
   const contents = args[args.length - 1];
   try {
     const writtenFile = fs.writeFileSync(file, contents);
-    LOGGER.success(`Successfully created: ${file}`);
+    LOGGER.success(`Successfully written to: ${file}`);
     return writtenFile;
   } catch (e) {
     return LOGGER.error(`Failed to write to '${file}'`, e.stack);

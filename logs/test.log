@@ -1,0 +1,4 @@
+[INFO] [17/03/2023, 10:03:37 pm]: Successfully connected to database: 'database.db'
+[INFO] [17/03/2023, 10:03:37 pm]: Server started on port 3000
+[INFO] [17/03/2023, 10:03:37 pm]: Foreign keys have been turned ON 
+[INFO] [17/03/2023, 10:03:37 pm]: Connected to migration versioning table

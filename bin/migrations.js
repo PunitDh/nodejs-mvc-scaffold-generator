@@ -20,7 +20,6 @@ const newMigrations = migrationFiles
   .map((filename) => ({
     filename,
     query: readFileSync(path.join(migrationPath, filename)),
-    sha: filename.split("_").second() || uuid().slice(0, 8),
   }));
 
 const addedMigrations = await Promise.all(
@@ -29,7 +28,7 @@ const addedMigrations = await Promise.all(
       new Promise((resolve, reject) => {
         DB.all(query, [], (err, _) => {
           if (err) return reject(err);
-          return resolve(_Migration.add(filename, query, sha));
+          return resolve(_Migration.add(filename, query));
         });
       })
   )

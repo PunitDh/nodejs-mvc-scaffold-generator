@@ -10,14 +10,14 @@ class _Migration extends Model {
     this.filename = filename;
   }
 
-  static async add(filename, query, sha) {
+  static async add(filename, query) {
     const sqlQuery = QueryBuilder()
       .insertInto(this.__tablename__)
       .withNoTimeStamps()
-      .values("filename", "query", "sha")
+      .values("filename", "query")
       .returning("*")
       .build();
-    return await this.dbQuery(sqlQuery, [filename, query, sha], true);
+    return await this.dbQuery(sqlQuery, [filename, query], true);
   }
 }
 

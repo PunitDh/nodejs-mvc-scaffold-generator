@@ -155,7 +155,7 @@ export class MigrationBuilder {
       case MigrationActions.DROP:
       case "DELETE":
       case "DESTROY":
-        query = "DROP {{table}}";
+        query = "DROP TABLE {{table}};";
         break;
       case MigrationActions.ALTER:
         {

@@ -1,34 +1,15 @@
-import {
-  SearchExcludedColumns,
-  SearchResultExcludedColumns,
-} from "../constants.js";
+import { SearchExcludedColumns } from "../constants.js";
 import DB from "../db.js";
 import SQLiteTable from "./SQLiteTable.js";
 import "../utils/js_utils.js";
 import LOGGER from "../logger.js";
-import SETTINGS from "../utils/settings.js";
+import { markSearchTermInObjectValues } from "../utils/text_utils.js";
 
 class SearchResult {
   constructor(searchTerm, table, data) {
     this.table = table;
-    this.priority = 0;
-    const result = {};
-    const { maxStringLength } = SETTINGS.views.pages.search;
-    Object.entries(data.exclude(...SearchResultExcludedColumns)).map(
-      ([key, value]) => {
-        const regex = new RegExp(`(${searchTerm})`, "gi");
-        this.priority += (value?.toString().match(regex) || []).length;
-        let sanitizedValue;
-        if (value?.toString().length > maxStringLength) {
-          sanitizedValue = value?.toString().slice(0, maxStringLength) + "...";
-        } else {
-          sanitizedValue = value?.toString();
-        }
-        result[key] =
-          sanitizedValue?.replace(regex, "<span class='mark'>$1</span>") ||
-          value;
-      }
-    );
+    const { priority, result } = markSearchTermInObjectValues(data, searchTerm);
+    this.priority = priority;
     this.data = result;
     const resultColumns = Object.keys(data).exclude(
       "id",
@@ -42,11 +23,10 @@ class SearchResult {
   }
 
   /**
-   * @description Searches through all the tables in the database for a specified search term.
-   * Also sorts it by "priority", i.e. how often the search term appears in a given record
-   * @param {String} searchTerm - The search term to search for
-   * @param {Integer} limit - A limit for the number of records returned
-   * @returns List of SearchResult
+   * @description Searches for the given `searchTerm` in all SQLite tables, returning a sorted list of up to `limit` results.
+   * @param {string} searchTerm - The term to search for.
+   * @param {number} limit - The maximum number of results to return.
+   * @returns {Promise<Array<SearchResult>>} - A promise that resolves to an array of SearchResult objects.
    */
   static async search(searchTerm, limit) {
     const tables = await SQLiteTable.getAllTables();

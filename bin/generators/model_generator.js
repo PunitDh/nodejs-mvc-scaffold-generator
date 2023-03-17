@@ -33,6 +33,7 @@ import {
   MigrationBuilder,
 } from "../builders/MigrationBuilder.js";
 import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
+import { writeFileSync } from "../utils/file_utils.js";
 const argvs = process.argv.slice(2);
 const [model, ...args] = argvs;
 const folderName = path.join(PATHS.root, SETTINGS.models.location);
@@ -62,18 +63,18 @@ try {
   const columnsInfo = parseArguments(args);
 
   // Write model file
-  fs.writeFileSync(
+  writeFileSync(
     modelFilePath,
     Handlebars.compileFile(modelTemplate)(new ModelInfo(model, columnsInfo))
   );
 
   // Add migration
   const cols = args.map((arg) => arg.split(":"));
-  const refs = cols.filter(
-    ([_, constraint]) => constraint.toUpperCase() === "REFERENCES"
+  const refs = cols.filter(([_, constraint]) =>
+    constraint.equalsIgnoreCase("REFERENCES")
   );
   const nonRefs = cols.filter(
-    ([_, constraint]) => constraint.toUpperCase() !== "REFERENCES"
+    ([_, constraint]) => !constraint.equalsIgnoreCase("REFERENCES")
   );
   const columns = nonRefs.map(
     ([name, type, ...constraints]) => new Column(name, type, ...constraints)

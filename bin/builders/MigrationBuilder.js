@@ -7,6 +7,7 @@ import {
   SQLForeignKeyActions,
 } from "../constants.js";
 import Handlebars from "../utils/handlebars.js";
+import "../utils/js_utils.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
 import { InvalidForeignKeyActionError } from "../errors.js";
 
@@ -182,7 +183,7 @@ export class Column {
   constructor(name, type, ...constraints) {
     this.name = name;
     this.isForeignKey = false;
-    if (type?.toUpperCase() === "REFERENCES") {
+    if (type?.equalsIgnoreCase("REFERENCES")) {
       this.isForeignKey = true;
       this.name = `${pluralize.singular(name.toLowerCase())}_id`;
       this.type = "INTEGER";

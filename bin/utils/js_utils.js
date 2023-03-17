@@ -87,6 +87,19 @@ String.prototype.capitalize = function () {
     .join(" ");
 };
 
+/**
+ * Checks if two string are equal, ignoring case
+ * @returns Boolean
+ */
 String.prototype.equalsIgnoreCase = function (str) {
-  return this.toLowerCase() === str.toLowerCase();
+  return str.toLowerCase() === this.toLowerCase();
+};
+
+/**
+ * Checks if two string are equal, with option to
+ * specify whether or not to ignore case
+ * @returns Boolean
+ */
+String.prototype.equals = function (str, ignoreCase = false) {
+  return ignoreCase ? str.toLowerCase() === this.toLowerCase() : str === this;
 };

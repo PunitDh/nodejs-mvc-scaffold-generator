@@ -6,6 +6,7 @@ import { readFileSync } from "../bin/utils/file_utils.js";
 import "../bin/utils/js_utils.js";
 import LOGGER from "../bin/logger.js";
 import DB from "../bin/db.js";
+import { uuid } from "./utils/uuid.js";
 
 const currentMigrations = await _Migration.all();
 const migrationPath = path.join(PATHS.root, PATHS.db, PATHS.migrations);
@@ -19,6 +20,7 @@ const newMigrations = migrationFiles
   .map((filename) => ({
     filename,
     query: readFileSync(path.join(migrationPath, filename)),
+    sha: filename.split("_").second() || uuid().slice(0, 8),
   }));
 
 const addedMigrations = await Promise.all(
@@ -27,7 +29,7 @@ const addedMigrations = await Promise.all(
       new Promise((resolve, reject) => {
         DB.all(query, [], (err, _) => {
           if (err) return reject(err);
-          return resolve(_Migration.add(filename, query));
+          return resolve(_Migration.add(filename, query, sha));
         });
       })
   )

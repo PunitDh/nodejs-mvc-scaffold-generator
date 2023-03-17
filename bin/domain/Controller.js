@@ -24,7 +24,7 @@ export default class Controller {
       try {
         const result = await this.Model.find(req.params.id);
         return res.render(`${this.router}/${this.model}`, {
-          [this.model]: result,
+          [this.model]: res.locals.marked(result),
         });
       } catch (e) {
         next(e);
@@ -33,10 +33,12 @@ export default class Controller {
   }
 
   newPage() {
+    const args = [...arguments];
     return async (req, res, next) => {
       try {
         const result = new this.Model();
-        return res.render(`${this.router}/new`, { [this.model]: result });
+        const props = { [this.model]: result, ...args[0] };
+        return res.render(`${this.router}/new`, props);
       } catch (e) {
         next(e);
       }
@@ -44,12 +46,12 @@ export default class Controller {
   }
 
   edit() {
+    const args = [...arguments];
     return async (req, res, next) => {
       try {
         const result = await this.Model.find(req.params.id);
-        return res.render(`${this.router}/edit`, {
-          [this.model]: result,
-        });
+        const props = { [this.model]: result, ...args[0] };
+        return res.render(`${this.router}/edit`, props);
       } catch (e) {
         next(e);
       }

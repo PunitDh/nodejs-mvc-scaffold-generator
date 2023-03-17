@@ -11,7 +11,6 @@ animals.use(csrf());
 animals.get("/", async (req, res) => {
   try {
     const animals = await Animal.all();
-    console.log(res.render.toString())
     return res.render("animals/index", { animals });
   } catch (e) {}
 });

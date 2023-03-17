@@ -251,7 +251,6 @@ class Model {
     const _Model = this.prototype.constructor;
     return new Promise(function (resolve, reject) {
       LOGGER.query(query);
-      LOGGER.query(values);
       DB.all(query, values, function (err, rows) {
         if (err) {
           const error = new DatabaseError(err)

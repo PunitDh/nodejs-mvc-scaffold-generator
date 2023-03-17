@@ -1,1 +1,0 @@
-ALTER TABLE animals ADD COLUMN image BLOB;

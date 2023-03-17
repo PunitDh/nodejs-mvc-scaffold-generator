@@ -21,40 +21,44 @@ import { getTableNameFromModel } from "../utils/model_utils.js";
 import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 import { GeneratorError } from "../errors.js";
 
-const subActions = {
-  drop: "drop",
-  add: "add",
-};
-const [model, ...args] = process.argv.slice(2);
-const cols = args.map((arg) => arg.split(":"));
-const actions = cols.map((col) => {
-  const [subAction, columnName, type, ...constraints] = col;
-  if (!subAction.toLowerCase() in subActions) {
-    throw new GeneratorError(`Unknown action: ${subAction}`);
-  }
-  const ref = type?.equalsIgnoreCase("REFERENCES");
-  const foreignKey = ref && new ForeignKey(columnName);
-  const column = !ref && new Column(columnName, type, ...constraints);
+generateMigration();
 
-  return {
-    subAction,
-    column,
-    foreignKey,
+function generateMigration() {
+  const subActions = {
+    drop: "drop",
+    add: "add",
   };
-});
+  const [model, ...args] = process.argv.slice(2);
+  const cols = args.map((arg) => arg.split(":"));
+  const actions = cols.map((col) => {
+    const [subAction, columnName, type, ...constraints] = col;
+    if (!subAction.toLowerCase() in subActions) {
+      throw new GeneratorError(`Unknown action: ${subAction}`);
+    }
+    const ref = type?.equalsIgnoreCase("REFERENCES");
+    const foreignKey = ref && new ForeignKey(columnName);
+    const column = !ref && new Column(columnName, type, ...constraints);
 
-const migrations = actions.map((action) =>
-  new MigrationBuilder()
-    .alterTable(model)
-    .withSubAction(action.subAction)
-    .withColumn(action.column)
-    .withForeignKey(action.foreignKey)
-    .buildQuery()
-);
+    return {
+      subAction,
+      column,
+      foreignKey,
+    };
+  });
 
-migrations.map((migration, i) => {
-  const action = actions[i].subAction;
-  const table = getTableNameFromModel(model);
-  const column = actions[i].column.name || actions[i].foreignKey.thisColumn;
-  generateSQLMigrationFile(action, table, column, migration);
-});
+  const migrations = actions.map((action) =>
+    new MigrationBuilder()
+      .alterTable(model)
+      .withSubAction(action.subAction)
+      .withColumn(action.column)
+      .withForeignKey(action.foreignKey)
+      .buildQuery()
+  );
+
+  migrations.map((migration, i) => {
+    const action = actions[i].subAction;
+    const table = getTableNameFromModel(model);
+    const column = actions[i].column.name || actions[i].foreignKey.thisColumn;
+    generateSQLMigrationFile(action, table, column, migration);
+  });
+}

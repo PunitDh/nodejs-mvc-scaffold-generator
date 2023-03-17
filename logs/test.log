@@ -2286,3 +2286,101 @@ In conclusion, mindfulness meditation is a simple yet powerful practice that can
 [INFO] [18/03/2023, 12:45:09 am]: Completed 404 Not Found in 2.28 ms
 [INFO] [18/03/2023, 12:45:09 am]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 18/03/2023, 12:45:09 am
 [INFO] [18/03/2023, 12:45:09 am]: Completed 404 Not Found in 1.91 ms
+[INFO] [18/03/2023, 12:47:48 am]: Successfully connected to database: 'database.db'
+[QUERY] [18/03/2023, 12:47:48 am]: SELECT * FROM companies;
+
+[INFO] [18/03/2023, 12:47:48 am]: Server started on port 3000
+[INFO] [18/03/2023, 12:47:48 am]: Connected to migration versioning table
+[INFO] [18/03/2023, 12:47:48 am]: Foreign keys have been turned ON 
+[INFO] [18/03/2023, 12:47:48 am]: Connected to JWT table
+[INFO] [18/03/2023, 12:51:44 am]: Successfully connected to database: 'database.db'
+[QUERY] [18/03/2023, 12:51:44 am]: SELECT * FROM companies;
+
+[INFO] [18/03/2023, 12:51:44 am]: Server started on port 3000
+[INFO] [18/03/2023, 12:51:44 am]: Foreign keys have been turned ON 
+[INFO] [18/03/2023, 12:51:44 am]: Connected to JWT table
+[INFO] [18/03/2023, 12:51:44 am]: Connected to migration versioning table
+[INFO] [18/03/2023, 12:52:12 am]: Successfully connected to database: 'database.db'
+[QUERY] [18/03/2023, 12:52:12 am]: SELECT * FROM companies;
+
+[INFO] [18/03/2023, 12:52:12 am]: Server started on port 3000
+[INFO] [18/03/2023, 12:52:12 am]: Connected to migration versioning table
+[INFO] [18/03/2023, 12:52:12 am]: Foreign keys have been turned ON 
+[INFO] [18/03/2023, 12:52:12 am]: Connected to JWT table
+[INFO] [18/03/2023, 12:52:13 am]: Successfully connected to database: 'database.db'
+[QUERY] [18/03/2023, 12:52:13 am]: SELECT * FROM companies;
+
+[INFO] [18/03/2023, 12:52:13 am]: Server started on port 3000
+[INFO] [18/03/2023, 12:52:13 am]: Foreign keys have been turned ON 
+[INFO] [18/03/2023, 12:52:13 am]: Connected to JWT table
+[INFO] [18/03/2023, 12:52:13 am]: Connected to migration versioning table
+[INFO] [18/03/2023, 12:52:23 am]: Started GET "/companies/" at 18/03/2023, 12:52:23 am
+[QUERY] [18/03/2023, 12:52:23 am]: SELECT * FROM companies;
+
+[INFO] [18/03/2023, 12:52:23 am]: Completed 200 OK in 23.1 ms
+[INFO] [18/03/2023, 12:52:23 am]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 18/03/2023, 12:52:23 am
+[INFO] [18/03/2023, 12:52:23 am]: Completed 404 Not Found in 15.82 ms
+[INFO] [18/03/2023, 12:52:23 am]: Started GET "/assets/css/bootstrap.min.css.map" at 18/03/2023, 12:52:23 am
+[INFO] [18/03/2023, 12:52:23 am]: Completed 404 Not Found in 4.77 ms
+[INFO] [18/03/2023, 12:52:26 am]: Started GET "/companies/40" at 18/03/2023, 12:52:26 am
+[QUERY] [18/03/2023, 12:52:26 am]: SELECT * FROM companies WHERE id=$id;
+
+[INFO] [18/03/2023, 12:52:26 am]: Completed 200 OK in 13.5 ms
+[INFO] [18/03/2023, 12:52:27 am]: Started GET "/companies/edit/40" at 18/03/2023, 12:52:27 am
+[QUERY] [18/03/2023, 12:52:27 am]: SELECT * FROM companies WHERE id=$id;
+
+[INFO] [18/03/2023, 12:52:27 am]: Completed 200 OK in 12.75 ms
+[INFO] [18/03/2023, 12:52:28 am]: Started POST "/companies/edit/40" at 18/03/2023, 12:52:28 am
+[QUERY] [18/03/2023, 12:52:28 am]: UPDATE companies SET name=$name, address=$address, number_of_employees=$number_of_employees, updated_at=DATETIME('now')  WHERE id=$id RETURNING *;
+
+[INFO] [18/03/2023, 12:52:28 am]: Completed 302 Found in 3.58 ms
+[INFO] [18/03/2023, 12:52:28 am]: Started GET "/companies/" at 18/03/2023, 12:52:28 am
+[QUERY] [18/03/2023, 12:52:28 am]: SELECT * FROM companies;
+
+[INFO] [18/03/2023, 12:52:28 am]: Completed 200 OK in 2.88 ms
+[INFO] [18/03/2023, 12:52:29 am]: Started GET "/companies/new" at 18/03/2023, 12:52:29 am
+[INFO] [18/03/2023, 12:52:29 am]: Completed 200 OK in 10.01 ms
+[INFO] [18/03/2023, 12:52:33 am]: Started POST "/companies/new" at 18/03/2023, 12:52:33 am
+[QUERY] [18/03/2023, 12:52:33 am]: INSERT INTO companies (name, address, number_of_employees, created_at, updated_at) VALUES ($name, $address, $number_of_employees, DATETIME('now'), DATETIME('now'));
+
+[INFO] [18/03/2023, 12:52:33 am]: Completed 302 Found in 7.74 ms
+[INFO] [18/03/2023, 12:52:33 am]: Started GET "/companies/" at 18/03/2023, 12:52:33 am
+[QUERY] [18/03/2023, 12:52:33 am]: SELECT * FROM companies;
+
+[INFO] [18/03/2023, 12:52:33 am]: Completed 200 OK in 8.44 ms
+[INFO] [18/03/2023, 12:52:35 am]: Started POST "/companies/delete/48" at 18/03/2023, 12:52:35 am
+[INFO] [18/03/2023, 12:52:35 am]: Completed 404 Not Found in 5.21 ms
+[INFO] [18/03/2023, 12:53:19 am]: Started GET "/companies/" at 18/03/2023, 12:53:19 am
+[QUERY] [18/03/2023, 12:53:19 am]: SELECT * FROM companies;
+
+[INFO] [18/03/2023, 12:53:19 am]: Completed 200 OK in 14.62 ms
+[INFO] [18/03/2023, 12:53:20 am]: Started GET "/companies/" at 18/03/2023, 12:53:20 am
+[QUERY] [18/03/2023, 12:53:20 am]: SELECT * FROM companies;
+
+[INFO] [18/03/2023, 12:53:20 am]: Completed 304 Not Modified in 11.21 ms
+[INFO] [18/03/2023, 12:53:22 am]: Started POST "/companies/delete/48" at 18/03/2023, 12:53:22 am
+[INFO] [18/03/2023, 12:53:22 am]: Completed 404 Not Found in 4.91 ms
+[INFO] [18/03/2023, 12:53:51 am]: Successfully connected to database: 'database.db'
+[QUERY] [18/03/2023, 12:53:51 am]: SELECT * FROM companies;
+
+[INFO] [18/03/2023, 12:53:51 am]: Server started on port 3000
+[INFO] [18/03/2023, 12:53:51 am]: Foreign keys have been turned ON 
+[INFO] [18/03/2023, 12:53:51 am]: Connected to JWT table
+[INFO] [18/03/2023, 12:53:51 am]: Connected to migration versioning table
+[INFO] [18/03/2023, 12:53:52 am]: Started GET "/companies/delete/48" at 18/03/2023, 12:53:52 am
+[INFO] [18/03/2023, 12:53:52 am]: Completed 404 Not Found in 22.9 ms
+[INFO] [18/03/2023, 12:53:55 am]: Started POST "/companies/delete/48" at 18/03/2023, 12:53:55 am
+[QUERY] [18/03/2023, 12:53:55 am]: DELETE FROM companies WHERE id=$id RETURNING *;
+
+[INFO] [18/03/2023, 12:53:55 am]: Completed 302 Found in 5.12 ms
+[INFO] [18/03/2023, 12:53:55 am]: Started GET "/companies/" at 18/03/2023, 12:53:55 am
+[QUERY] [18/03/2023, 12:53:55 am]: SELECT * FROM companies;
+
+[INFO] [18/03/2023, 12:53:55 am]: Completed 200 OK in 4.42 ms
+[INFO] [18/03/2023, 12:53:58 am]: Successfully connected to database: 'database.db'
+[QUERY] [18/03/2023, 12:53:58 am]: SELECT * FROM companies;
+
+[INFO] [18/03/2023, 12:53:58 am]: Server started on port 3000
+[INFO] [18/03/2023, 12:53:58 am]: Connected to JWT table
+[INFO] [18/03/2023, 12:53:58 am]: Foreign keys have been turned ON 
+[INFO] [18/03/2023, 12:53:58 am]: Connected to migration versioning table

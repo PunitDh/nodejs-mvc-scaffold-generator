@@ -6,21 +6,29 @@ const companies = Router();
 
 const companiesController = new Controller(Company);
 
-companies.route("/").get(companiesController.index());
+// companies.route("/").get(companiesController.index());
 
-companies
-  .route("/new")
-  .get(companiesController.newPage())
-  .post(companiesController.create());
+companies.get("/", companiesController.index());
+companies.get("/new", companiesController.newPage());
+companies.post("/new", companiesController.create());
+companies.get("/edit/:id", companiesController.edit());
+companies.post("/edit/:id", companiesController.update());
+companies.get("/:id", companiesController.show());
+companies.post("/delete/:id", companiesController.destroy());
 
-companies
-  .route("/edit/:id")
-  .get(companiesController.edit())
-  .post(companiesController.update());
+// companies
+//   .route("/new")
+//   .get(companiesController.newPage())
+//   .post(companiesController.create());
 
-companies.route("/:id").get(companiesController.show());
+// companies
+//   .route("/edit/:id")
+//   .get(companiesController.edit())
+//   .post(companiesController.update());
 
-companies.route("/delete/:id").post(companiesController.destroy());
+// companies.route("/:id").get(companiesController.show());
+
+// companies.route("/delete/:id").post(companiesController.destroy());
 
 // companies.get("/", async (req, res) => {
 //   try {

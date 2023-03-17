@@ -15,12 +15,12 @@ employees.route("/").get(employeesController.index());
 
 employees
   .route("/new")
-  .get(employeesController.newPage({companies}))
+  .get(employeesController.newPage({ companies }))
   .post(employeesController.create());
 
 employees
   .route("/edit/:id")
-  .get(employeesController.edit({companies}))
+  .get(employeesController.edit({ companies }))
   .post(employeesController.update());
 
 employees.route("/:id").get(employeesController.show());

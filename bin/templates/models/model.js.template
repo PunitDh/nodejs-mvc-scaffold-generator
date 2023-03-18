@@ -1,4 +1,6 @@
 import Model from '../bin/model.js'
+{{#references}}import {{referenceModel}} from "./{{referenceModel}}.js";
+{{/references}}
 
 class {{model}} extends Model {
   constructor(data = {}) {

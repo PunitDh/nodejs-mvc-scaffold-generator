@@ -14,9 +14,7 @@ import { getSchema, saveSchema } from "../utils/schema_utils.js";
 import pluralize from "pluralize";
 import { LOCATIONS, PATHS } from "../constants.js";
 
-generateRouter();
-
-function generateRouter(command) {
+export function generateRouter(command) {
   const argvs = command?.split(" ").slice(3) || process.argv.slice(2);
   const model = argvs.first();
   const route = pluralize.plural(model.toLowerCase());

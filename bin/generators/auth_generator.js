@@ -15,7 +15,7 @@
 import fs from "fs";
 import path from "path";
 import "../utils/js_utils.js";
-import { MigrationActions, PATHS, SQLColumnTypes } from "../constants.js";
+import { MigrationActions, PATHS, SQLColumnTypes, SQLForeignKeyReferences } from "../constants.js";
 import { GeneratorError } from "../errors.js";
 import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
@@ -76,10 +76,10 @@ export async function generateAuth(command) {
     // Add migration
     const cols = args.map((arg) => arg.split(":"));
     const refs = cols.filter(([_, constraint]) =>
-      constraint.equalsIgnoreCase("REFERENCES")
+      constraint.equalsIgnoreCase(SQLForeignKeyReferences)
     );
     const nonRefs = cols.filter(
-      ([_, constraint]) => !constraint.equalsIgnoreCase("REFERENCES")
+      ([_, constraint]) => !constraint.equalsIgnoreCase(SQLForeignKeyReferences)
     );
     const columns = nonRefs.map(
       ([name, type, ...constraints]) => new Column(name, type, ...constraints)

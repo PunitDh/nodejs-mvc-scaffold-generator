@@ -15,6 +15,38 @@ Array.prototype.second = function () {
 };
 
 /**
+ * Returns the second element in the array
+ * @returns The second element in the array
+ */
+ Array.prototype.third = function () {
+  return this[2];
+};
+
+/**
+ * Returns the second element in the array
+ * @returns The second element in the array
+ */
+ Array.prototype.fourth = function () {
+  return this[3];
+};
+
+/**
+ * Returns the second element in the array
+ * @returns The second element in the array
+ */
+ Array.prototype.fifth = function () {
+  return this[4];
+};
+
+/**
+ * Returns the second element in the array
+ * @returns The second element in the array
+ */
+ Array.prototype.sixth = function () {
+  return this[5];
+};
+
+/**
  * Returns the last element in the array
  * @returns the last element in the array
  */

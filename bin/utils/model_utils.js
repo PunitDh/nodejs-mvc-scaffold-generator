@@ -10,29 +10,6 @@ export const getTableNameFromModel = (model) =>
 export const getModelNameFromTable = (table) =>
   pluralize.singular(table).capitalize();
 
-const queryTemplatePath = path.join(
-  PATHS.root,
-  PATHS.bin,
-  PATHS.templates,
-  PATHS.db,
-  PATHS.queries
-);
-
-export const Query = {
-  SELECT: Handlebars.compileFile(
-    path.join(queryTemplatePath, PATHS.selectSqlTemplate)
-  ),
-  INSERT: Handlebars.compileFile(
-    path.join(queryTemplatePath, PATHS.insertSqlTemplate)
-  ),
-  UPDATE: Handlebars.compileFile(
-    path.join(queryTemplatePath, PATHS.updateSqlTemplate)
-  ),
-  DELETE: Handlebars.compileFile(
-    path.join(queryTemplatePath, PATHS.deleteSqlTemplate)
-  ),
-};
-
 export const sanitizeObject = (obj) => {
   const sanitized = {};
   Object.entries(obj).forEach(([key, value]) => {

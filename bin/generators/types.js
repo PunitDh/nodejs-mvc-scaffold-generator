@@ -7,8 +7,12 @@ import {
   InvalidColumnConstraintError,
   InvalidDataTypeError,
 } from "../errors.js";
-import { getTableNameFromModel } from "../utils/model_utils.js";
+import {
+  getModelNameFromTable,
+  getTableNameFromModel,
+} from "../utils/model_utils.js";
 import "../utils/js_utils.js";
+import pluralize from "pluralize";
 
 class ViewColumnInput {
   constructor(type) {
@@ -72,6 +76,18 @@ class ModelInfo {
     this.model = model;
     this.columns = Object.keys(columnsInfo);
     this.args = this.columns.join(", ");
+    this.references = this.columns
+      .map((column) => {
+        const references = columnsInfo[column].references;
+        if (references) {
+          return {
+            fnName: pluralize.singular(references.table),
+            referenceModel: getModelNameFromTable(references.table),
+            thisColumn: references.column,
+          };
+        }
+      })
+      .filter(Boolean);
   }
 }
 

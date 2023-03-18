@@ -17,8 +17,6 @@ import { LOCATIONS, PATHS } from "../constants.js";
 import { writeFileSync } from "../utils/file_utils.js";
 import SQLiteColumn from "../domain/SQLiteColumn.js";
 
-generateViews();
-
 export async function generateViews(command) {
   const argvs = command?.split(" ").slice(3) || process.argv.slice(2);
   const model = argvs.first();

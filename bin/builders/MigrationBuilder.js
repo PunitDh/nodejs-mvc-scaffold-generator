@@ -1,10 +1,13 @@
 import pluralize from "pluralize";
 import {
   ColumnFormat,
+  IdColumn,
   MigrationActions,
   SQLColumnConstraints,
   SQLColumnTypes,
   SQLForeignKeyActions,
+  SQLForeignKeyReferences,
+  TimeStampColumns,
 } from "../constants.js";
 import Handlebars from "../utils/handlebars.js";
 import "../utils/js_utils.js";
@@ -21,27 +24,34 @@ export class MigrationBuilder {
     this.table = "";
     this.columns = [];
     this.foreignKeys = [];
+    this.timeStamps = true;
+    this.idColumn = true;
     return this;
   }
-
-  
 
   createTable(table) {
     this.action = MigrationActions.CREATE;
     this.table = getTableNameFromModel(table);
-    this.columns = [
-      new Column("id", "INTEGER").withConstraints(
-        "PRIMARY KEY",
-        "AUTOINCREMENT"
-      ),
-      new Column("created_at", "DATE").withConstraint(
-        "DEFAULT (DATETIME('now'))"
-      ),
-      new Column("updated_at", "DATE").withConstraint(
-        "DEFAULT (DATETIME('now'))"
-      ),
-    ];
     return this;
+  }
+
+  withAction(action) {
+    this.action = MigrationActions[action.toUpperCase()];
+    return this;
+  }
+
+  withNoTimeStamps() {
+    this.timeStamps = false;
+    return this;
+  }
+
+  withNoIdColumn() {
+    this.idColumn = false;
+    return this;
+  }
+
+  withTable(table) {
+    return this.withTableName(table);
   }
 
   alterTable(table) {
@@ -61,11 +71,6 @@ export class MigrationBuilder {
     return this;
   }
 
-  withSubAction(subAction) {
-    this.subAction = MigrationActions.subAction[subAction.toUpperCase()];
-    return this;
-  }
-
   withColumn(column) {
     return this.withColumns(column);
   }
@@ -78,7 +83,9 @@ export class MigrationBuilder {
         if (typeof column === "object" && column instanceof Column) {
           this.columns.push(column);
         } else if (typeof column === "string" || column instanceof String) {
-          this.columns.push(new Column(column));
+          this.columns.push(
+            new Column(MigrationActions.subActions.ADD, column)
+          );
         }
       }
     });
@@ -95,7 +102,6 @@ export class MigrationBuilder {
         "the addColumn() function can only be used with the 'alter' action."
       );
     }
-    this.subAction = MigrationActions.subAction.ADD;
     return this.withColumns(...arguments);
   }
 
@@ -109,7 +115,6 @@ export class MigrationBuilder {
         "the addColumn() function can only be used with the 'alter' action."
       );
     }
-    this.subAction = MigrationActions.subAction.DROP;
     return this.withColumn(...arguments);
   }
 
@@ -140,7 +145,13 @@ export class MigrationBuilder {
 
   addForeignKeyColumns() {
     [...arguments].forEach((foreignKey) => {
-      this.columns.push(new Column(foreignKey.thisColumn, "INTEGER"));
+      this.columns.push(
+        new Column(
+          MigrationActions.subActions.ADD,
+          foreignKey.thisColumn,
+          "INTEGER"
+        )
+      );
     });
     return this;
   }
@@ -148,29 +159,18 @@ export class MigrationBuilder {
   buildQuery() {
     let query;
     switch (this.action) {
-      case MigrationActions.CREATE:
+      case MigrationActions.CREATE: {
+        this.timeStamps && this.columns.unshift(...TimeStampColumns);
+        this.idColumn && this.columns.unshift(...IdColumn);
         query =
-          "CREATE TABLE IF NOT EXISTS {{table}} ({{#columns}}{{name}} {{type}}{{#constraints}} {{{.}}}{{/constraints}}{{#unless @last}}, {{/unless}}{{/columns}}{{#foreignKeys}}{{#if @first}}, {{/if}}FOREIGN KEY({{thisColumn}}) REFERENCES {{otherTable}}({{otherColumn}}){{#onDelete}} ON DELETE {{.}}{{/onDelete}}{{#onUpdate}} ON UPDATE {{.}}{{/onUpdate}}{{#unless @last}},{{/unless}}{{/foreignKeys}});\n";
+          "CREATE TABLE IF NOT EXISTS {{table}} (\n{{#columns}} {{name}} {{type}}{{#constraints}} {{{.}}}{{/constraints}}{{#unless @last}},\n{{/unless}}{{/columns}}{{#foreignKeys}}{{#if @first}},\n{{/if}} FOREIGN KEY({{thisColumn}}) REFERENCES {{otherTable}}({{otherColumn}}){{#onDelete}} ON DELETE {{.}}{{/onDelete}}{{#onUpdate}} ON UPDATE {{.}}{{/onUpdate}}{{#unless @last}},\n{{/unless}}{{/foreignKeys}}\n);\n";
         break;
+      }
       case MigrationActions.DROP:
-      case "DELETE":
-      case "DESTROY":
         query = "DROP TABLE {{table}};";
         break;
       case MigrationActions.ALTER:
-        {
-          switch (this.subAction) {
-            case MigrationActions.subAction.ADD:
-              query = `{{#columns}}ALTER TABLE {{../table}} ADD COLUMN {{name}} {{type}}{{#constraints}} {{{.}}}{{/constraints}}{{#@root.foreignKeys}}{{#if @first}}{{#ifEquals thisColumn ../name}} REFERENCES {{otherTable}}({{otherColumn}}){{#onDelete}} ON DELETE {{.}}{{/onDelete}}{{#onUpdate}} ON UPDATE {{.}}{{/onUpdate}}{{/ifEquals}}{{/if}}{{/@root.foreignKeys}};\n{{/columns}}`;
-              break;
-            case MigrationActions.subAction.DROP:
-              query =
-                "{{#columns}}ALTER TABLE {{../table}} DROP COLUMN {{name}}{{/columns}};\n";
-              break;
-            default:
-              return null;
-          }
-        }
+        query = `{{#columns}}ALTER TABLE {{../table}} {{subAction}} COLUMN {{name}}{{#ifEquals subAction "ADD"}} {{type}}{{#constraints}} {{{.}}}{{/constraints}}{{#@root.foreignKeys}}{{#if @first}}{{#ifEquals thisColumn ../name}} REFERENCES {{otherTable}}({{otherColumn}}){{#onDelete}} ON DELETE {{.}}{{/onDelete}}{{#onUpdate}} ON UPDATE {{.}}{{/onUpdate}}{{/ifEquals}}{{/if}}{{/@root.foreignKeys}}{{/ifEquals}};\n{{/columns}}`;
         break;
       default:
         return null;
@@ -180,10 +180,11 @@ export class MigrationBuilder {
 }
 
 export class Column {
-  constructor(name, type, ...constraints) {
+  constructor(subAction, name, type, ...constraints) {
+    this.subAction = MigrationActions.subActions[subAction.toUpperCase()];
     this.name = name;
     this.isForeignKey = false;
-    if (type?.equalsIgnoreCase("REFERENCES")) {
+    if (type?.equalsIgnoreCase(SQLForeignKeyReferences)) {
       this.isForeignKey = true;
       this.name = `${pluralize.singular(name.toLowerCase())}_id`;
       this.type = "INTEGER";
@@ -208,26 +209,26 @@ export class Column {
 }
 
 export class ForeignKey {
-  constructor(
-    otherModel,
-    otherColumn = "id",
-    onDelete = "CASCADE",
-    onUpdate = "CASCADE"
-  ) {
+  constructor(otherModel, otherColumn, onDelete, onUpdate) {
+    console.log({ onDelete, onUpdate });
     this.thisColumn = `${pluralize.singular(otherModel.toLowerCase())}_id`;
     this.otherTable = getTableNameFromModel(otherModel);
-    this.otherColumn = otherColumn;
-    if (!onDelete in SQLForeignKeyActions) {
+    this.otherColumn = otherColumn || "id";
+    if (onDelete && !onDelete in SQLForeignKeyActions) {
       throw new InvalidForeignKeyActionError(
         `Unknown foreign key action: ${onDelete}`
       );
     }
-    if (!onUpdate in SQLForeignKeyActions) {
+    if (onUpdate && !onUpdate in SQLForeignKeyActions) {
       throw new InvalidForeignKeyActionError(
         `Unknown foreign key action: ${onUpdate}`
       );
     }
-    this.onDelete = onDelete;
-    this.onUpdate = onUpdate;
+    this.onDelete =
+      (onDelete && SQLForeignKeyActions[onDelete.toUpperCase()]) ||
+      SQLForeignKeyActions.CASCADE;
+    this.onUpdate =
+      (onUpdate && SQLForeignKeyActions[onUpdate.toUpperCase()]) ||
+      SQLForeignKeyActions.CASCADE;
   }
 }

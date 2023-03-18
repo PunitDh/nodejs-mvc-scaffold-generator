@@ -19,7 +19,13 @@
 import fs from "fs";
 import path from "path";
 import "../utils/js_utils.js";
-import { MigrationActions, PATHS, SQLColumnTypes } from "../constants.js";
+import {
+  ForeignKeyOptions,
+  MigrationActions,
+  PATHS,
+  SQLColumnTypes,
+  SQLForeignKeyReferences,
+} from "../constants.js";
 import { GeneratorError } from "../errors.js";
 import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
@@ -35,8 +41,6 @@ import {
 import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 import { writeFileSync } from "../utils/file_utils.js";
 
-await generateModel();
-
 export async function generateModel(command) {
   const argvs = command?.split(" ").slice(3) || process.argv.slice(2);
   const [model, ...args] = argvs;
@@ -49,11 +53,11 @@ export async function generateModel(command) {
     PATHS.modelJsTemplate
   );
 
-  if (!fs.existsSync(folderName)) {
+  if (!command && !fs.existsSync(folderName)) {
     fs.mkdirSync(folderName);
   }
 
-  if (await modelExists(model)) {
+  if (!command && (await modelExists(model))) {
     throw new GeneratorError(
       `Model '${model}' already exists in '${modelFilePath}'`
     );
@@ -67,25 +71,43 @@ export async function generateModel(command) {
     const columnsInfo = parseArguments(args);
 
     // Write model file
-    writeFileSync(
-      modelFilePath,
-      Handlebars.compileFile(modelTemplate)(new ModelInfo(model, columnsInfo))
+    const compiledModelFile = Handlebars.compileFile(modelTemplate)(
+      new ModelInfo(model, columnsInfo)
     );
+    if (command) {
+      LOGGER.test(compiledModelFile);
+    } else {
+      writeFileSync(modelFilePath, compiledModelFile);
+    }
 
     // Add migration
     const cols = args.map((arg) => arg.split(":"));
-    const refs = cols.filter(([_, constraint]) =>
-      constraint.equalsIgnoreCase("REFERENCES")
-    );
+    const refs = cols.filter(([_, constraint]) => {
+      return constraint.equalsIgnoreCase(SQLForeignKeyReferences);
+    });
     const nonRefs = cols.filter(
-      ([_, constraint]) => !constraint.equalsIgnoreCase("REFERENCES")
+      ([_, constraint]) => !constraint.equalsIgnoreCase(SQLForeignKeyReferences)
     );
     const columns = nonRefs.map(
-      ([name, type, ...constraints]) => new Column(name, type, ...constraints)
+      ([name, type, ...constraints]) =>
+        new Column(MigrationActions.subActions.ADD, name, type, ...constraints)
     );
-    const foreignKeys = refs.map(
-      ([referenceTable]) => new ForeignKey(referenceTable)
-    );
+    const foreignKeys = refs.map(([referenceTable, _, ...options]) => {
+      const upperCaseOptions = options?.map((option) => option.toUpperCase());
+      const onDeleteIndex = upperCaseOptions.indexOf(
+        ForeignKeyOptions.ONDELETE
+      );
+      const onUpdateIndex = upperCaseOptions.indexOf(
+        ForeignKeyOptions.ONUPDATE
+      );
+
+      return new ForeignKey(
+        referenceTable,
+        null,
+        onDeleteIndex > -1 && options[onDeleteIndex + 1],
+        onUpdateIndex > -1 && options[onUpdateIndex + 1]
+      );
+    });
 
     const createdMigration = new MigrationBuilder()
       .createTable(model)
@@ -96,7 +118,11 @@ export async function generateModel(command) {
     const action = MigrationActions.CREATE.toLowerCase();
     const table = "table";
     const tableName = getTableNameFromModel(model);
-    generateSQLMigrationFile(action, "", table, tableName, createdMigration);
+    if (command) {
+      LOGGER.test(createdMigration);
+    } else {
+      generateSQLMigrationFile(action, "", table, tableName, createdMigration);
+    }
   } catch (e) {
     LOGGER.error(`Unable to be generate model '${model}'`, e);
   }
@@ -108,7 +134,7 @@ export async function generateModel(command) {
       const dataTypeTrim = dataType.trim().toUpperCase();
 
       // Check for references
-      if (dataTypeTrim === "REFERENCES") {
+      if (dataTypeTrim.equalsIgnoreCase(SQLForeignKeyReferences)) {
         const columnName = column.trim().toLowerCase() + "_id";
         columnsInfo[columnName] = {
           type: "INTEGER",

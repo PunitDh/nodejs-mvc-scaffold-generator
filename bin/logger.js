@@ -10,6 +10,7 @@ const LogType = {
   error: "error",
   query: "query",
   info: "info",
+  test: "test",
 };
 
 function logMessage() {
@@ -29,11 +30,13 @@ function logMessage() {
       console.log(`${color}%s\x1b[0m`, message);
       break;
   }
-  
-  appendFileSync(
-    join(PATHS.root, PATHS.logs, `${process.env.npm_package_name}.log`),
-    `${message}\n`
-  );
+
+  if (!type.equalsIgnoreCase(LogType.test)) {
+    appendFileSync(
+      join(PATHS.root, PATHS.logs, `${process.env.npm_package_name}.log`),
+      `${message}\n`
+    );
+  }
 }
 
 const LOGGER = {
@@ -51,6 +54,9 @@ const LOGGER = {
   },
   query: function () {
     logMessage(LogType.query, TERMINAL_COLORS.FgCyan, ...arguments);
+  },
+  test: function () {
+    logMessage(LogType.test, TERMINAL_COLORS.Bright, TERMINAL_COLORS.FgGreen, ...arguments);
   },
   custom: function () {
     logMessage(

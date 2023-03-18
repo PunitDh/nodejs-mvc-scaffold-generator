@@ -34,16 +34,15 @@ class SearchResult {
    */
   static async search(searchTerm, limit) {
     const tables = await SQLiteTable.getAllTables();
-    const sanitizedSearchTerm = searchTerm?.replaceAll("'", "''");
     const results = await tables.mapAsync(async (table) => {
       const searchQuery = (await table.columns)
         .filter((column) => !SearchExcludedColumns.includes(column.name))
-        .map((column) => `${column.name} LIKE '%${sanitizedSearchTerm}%'`)
+        .map((column) => `${column.name} LIKE '%' || $searchTerm || '%' `)
         .join(" OR ");
       const query = `SELECT * FROM ${table.name} WHERE ${searchQuery} ORDER BY updated_at DESC;`;
       LOGGER.query(query);
       return new Promise((resolve, reject) => {
-        DB.all(query, [], (err, rows) => {
+        DB.all(query, [searchTerm], (err, rows) => {
           if (err) return reject(err);
           return resolve(
             rows.map((row) => new SearchResult(searchTerm, table.name, row))

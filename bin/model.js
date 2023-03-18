@@ -115,13 +115,12 @@ class Model {
    * @returns A list of rows
    */
   static async search(searchTerm) {
-    const sanitizedSearchTerm = searchTerm.replace("'", "''");
     const columnNames = (await this.__columns__)
       .filter((column) => !SearchExcludedColumns.includes(column.name))
-      .map((column) => `${column.name} LIKE '%${sanitizedSearchTerm}%'`);
+      .map((column) => `${column.name} LIKE '%' || $searchTerm || '%' `);
     const whereClause = columnNames.join(" OR ");
     const query = `SELECT * FROM ${this.__tablename__} WHERE ${whereClause};`;
-    return await this.dbQuery(query);
+    return await this.dbQuery(query, [searchTerm]);
   }
 
   /**
@@ -253,7 +252,7 @@ class Model {
       LOGGER.query(query);
       DB.all(query, values, function (err, rows) {
         if (err) {
-          const error = new DatabaseError(err)
+          const error = new DatabaseError(err);
           return reject(error);
         }
         const result = rows.map((row) => new _Model(row));

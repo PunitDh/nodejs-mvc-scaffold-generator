@@ -1,0 +1,39 @@
+<% if (locals.maxResults) { %>
+<nav aria-label="pagination" class="my-3">
+  <ul class="pagination justify-content-center">
+    <% if (parseInt(page) === 1) { %>
+    <li class="page-item disabled">
+      <span class="page-link">Previous</span>
+    </li>
+    <% } else { %>
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="/search?q=<%= query %>&maxResults=<%= maxResults %>&page=<%= page-1%>"
+        >Previous</a
+      >
+    </li>
+    <% } %> <% for (let page = 0; page < totalPages; page++ ) { %>
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="/search?q=<%= query %>&maxResults=<%= maxResults %>&page=<%= page+1%>"
+        ><%= page+1 %></a
+      >
+    </li>
+    <% } %> <% if (parseInt(page) === totalPages) { %>
+    <li class="page-item disabled">
+      <span class="page-link">Next</span>
+    </li>
+    <% } else { %>
+    <li class="page-item">
+      <a
+        class="page-link"
+        href="/search?q=<%= query %>&maxResults=<%= maxResults %>&page=<%= parseInt(page)+1%>"
+        >Next</a
+      >
+    </li>
+    <% } %>
+  </ul>
+</nav>
+<% } %>

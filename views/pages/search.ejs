@@ -30,9 +30,7 @@
             ></ul>
           </div>
           <div class="input-group-append">
-            <button type="submit" class="btn btn-outline-success">
-              <i class="fa fa-search mr-1"></i> Search
-            </button>
+            <%- include('../_layouts/partials/_searchButton.ejs') %>
           </div>
         </form>
         <div class="mt-4 text-center">
@@ -40,8 +38,9 @@
           <h4>Search Results For "<%= locals.query %>"</h4>
           <% } %>
           <div class="search-result-time">
-            <%= locals.results?.length %> results (<%= locals.time %> s)
+            <%= locals.totalResults %> results (<%= locals.time %> s)
           </div>
+          <%- include('../_layouts/partials/_pagination.ejs') %>
         </div>
       </div>
     </div>

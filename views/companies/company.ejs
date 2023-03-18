@@ -5,23 +5,23 @@
     <tbody>
       <tr>
         <td class="h6">Name</td>
-        <td><%= company.name %></td>
+        <td><%- company.name %></td>
       </tr>
       <tr>
         <td class="h6">Address</td>
-        <td><%= company.address %></td>
+        <td><%- company.address %></td>
       </tr>
       <tr>
         <td class="h6">Number Of Employees</td>
-        <td><%= company.number_of_employees %></td>
+        <td><%- company.number_of_employees %></td>
       </tr>
       <tr>
         <td class="h6">Created At</td>
-        <td><%= formatDate(company.created_at) %></td>
+        <td><%- formatDate(company.created_at) %></td>
       </tr>
       <tr>
         <td class="h6">Updated At</td>
-        <td><%= formatDate(company.updated_at) %></td>
+        <td><%- formatDate(company.updated_at) %></td>
       </tr>
     </tbody>
   </table>

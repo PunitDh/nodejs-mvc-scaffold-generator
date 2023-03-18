@@ -210,7 +210,6 @@ export class Column {
 
 export class ForeignKey {
   constructor(otherModel, otherColumn, onDelete, onUpdate) {
-    console.log({ onDelete, onUpdate });
     this.thisColumn = `${pluralize.singular(otherModel.toLowerCase())}_id`;
     this.otherTable = getTableNameFromModel(otherModel);
     this.otherColumn = otherColumn || "id";

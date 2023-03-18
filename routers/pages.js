@@ -14,10 +14,21 @@ pages.get("/about", (_, res) => {
 
 pages.get("/search", async (req, res) => {
   const startTime = process.hrtime();
-  const results = await SearchResult.search(req.query.q);
+  const { maxResults, page, q: query } = req.query;
+  const results = await SearchResult.search(query);
+
   return res.render("pages/search", {
-    results,
+    results: maxResults
+      ? results.slice(
+          (page - 1) * maxResults,
+          (page - 1) * maxResults + maxResults
+        )
+      : results,
+    totalResults: results.length,
+    totalPages: Math.ceil(results.length / maxResults),
     query: req.query.q,
+    maxResults,
+    page,
     time: (() => {
       const [seconds, nanoseconds] = process.hrtime(startTime);
       const milliseconds = seconds * 1000 + nanoseconds / 1000000;

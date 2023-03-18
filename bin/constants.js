@@ -1,6 +1,5 @@
 import path from "path";
 import SETTINGS from "./utils/settings.js";
-import { Column } from "./builders/MigrationBuilder.js";
 
 export const SQLColumnTypes = {
   INT: "INTEGER",
@@ -257,23 +256,3 @@ export const LayoutPages = {
   _tail: "../_layouts/_tail.ejs",
   _mid: "../_layouts/_mid.ejs",
 };
-
-export const IdColumn = [
-  new Column(MigrationActions.subActions.ADD, "id", "INTEGER").withConstraints(
-    "PRIMARY KEY",
-    "AUTOINCREMENT"
-  ),
-];
-
-export const TimeStampColumns = [
-  new Column(
-    MigrationActions.subActions.ADD,
-    "created_at",
-    "DATE"
-  ).withConstraint("DEFAULT (DATETIME('now'))"),
-  new Column(
-    MigrationActions.subActions.ADD,
-    "updated_at",
-    "DATE"
-  ).withConstraint("DEFAULT (DATETIME('now'))"),
-];

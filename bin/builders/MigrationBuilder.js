@@ -1,13 +1,11 @@
 import pluralize from "pluralize";
 import {
   ColumnFormat,
-  IdColumn,
   MigrationActions,
   SQLColumnConstraints,
   SQLColumnTypes,
   SQLForeignKeyActions,
   SQLForeignKeyReferences,
-  TimeStampColumns,
 } from "../constants.js";
 import Handlebars from "../utils/handlebars.js";
 import "../utils/js_utils.js";
@@ -160,8 +158,28 @@ export class MigrationBuilder {
     let query;
     switch (this.action) {
       case MigrationActions.CREATE: {
-        this.timeStamps && this.columns.unshift(...TimeStampColumns);
-        this.idColumn && this.columns.unshift(...IdColumn);
+        const idColumn = [
+          new Column(
+            MigrationActions.subActions.ADD,
+            "id",
+            "INTEGER"
+          ).withConstraints("PRIMARY KEY", "AUTOINCREMENT"),
+        ];
+
+        const timeStampColumns = [
+          new Column(
+            MigrationActions.subActions.ADD,
+            "created_at",
+            "DATE"
+          ).withConstraint("DEFAULT (DATETIME('now'))"),
+          new Column(
+            MigrationActions.subActions.ADD,
+            "updated_at",
+            "DATE"
+          ).withConstraint("DEFAULT (DATETIME('now'))"),
+        ];
+        this.timeStamps && this.columns.unshift(...timeStampColumns);
+        this.idColumn && this.columns.unshift(...idColumn);
         query =
           "CREATE TABLE IF NOT EXISTS {{table}} (\n{{#columns}} {{name}} {{type}}{{#constraints}} {{{.}}}{{/constraints}}{{#unless @last}},\n{{/unless}}{{/columns}}{{#foreignKeys}}{{#if @first}},\n{{/if}} FOREIGN KEY({{thisColumn}}) REFERENCES {{otherTable}}({{otherColumn}}){{#onDelete}} ON DELETE {{.}}{{/onDelete}}{{#onUpdate}} ON UPDATE {{.}}{{/onUpdate}}{{#unless @last}},\n{{/unless}}{{/foreignKeys}}\n);\n";
         break;

@@ -14,7 +14,7 @@
       >
     </li>
     <% } %> <% for (let page = 0; page < totalPages; page++ ) { %>
-    <li class="page-item">
+    <li class="page-item <%= locals.page-1 === page ? 'active' : '' %>">
       <a
         class="page-link"
         href="/search?q=<%= query %>&maxResults=<%= maxResults %>&page=<%= page+1%>"

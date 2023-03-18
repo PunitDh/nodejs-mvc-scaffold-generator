@@ -19,13 +19,10 @@ pages.get("/search", async (req, res) => {
 
   return res.render("pages/search", {
     results: maxResults
-      ? results.slice(
-          (page - 1) * maxResults,
-          (page - 1) * maxResults + maxResults
-        )
+      ? results.slice((page - 1) * maxResults, page * maxResults)
       : results,
     totalResults: results.length,
-    totalPages: Math.ceil(results.length / maxResults),
+    totalPages: maxResults ? Math.ceil(results.length / maxResults) : 1,
     query: req.query.q,
     maxResults,
     page,

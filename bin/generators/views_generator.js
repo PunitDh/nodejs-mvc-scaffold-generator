@@ -16,6 +16,7 @@ import pluralize from "pluralize";
 import { LOCATIONS, PATHS } from "../constants.js";
 import { writeFileSync } from "../utils/file_utils.js";
 import SQLiteColumn from "../domain/SQLiteColumn.js";
+import SQLiteTable from "../domain/SQLiteTable.js";
 
 export async function generateViews(command) {
   const argvs = command?.split(" ").slice(3) || process.argv.slice(2);
@@ -64,7 +65,6 @@ export async function generateViews(command) {
   if (!modelExists) {
     throw new UnknownModelError(`Unknown model: '${model}'`);
   } else {
-
   }
 
   // Generate views
@@ -95,11 +95,12 @@ export async function generateViews(command) {
   }
 
   async function getColumnsFromSchema(model, excludedColumns) {
-
     const table = getTableNameFromModel(model);
     const tableColumns = await SQLiteColumn.getColumns(table);
     return tableColumns
       .filter((column) => !excludedColumns.includes(column.name.toLowerCase()))
-      .map((column) => new ViewColumn(column.name, column.type));
+      .map(
+        (column) => new ViewColumn(column.name, column.type, column.foreignKey)
+      );
   }
 }

@@ -6,3 +6,4 @@ instance/*.db
 .tmp
 .idea
 *.csv
+.vscode

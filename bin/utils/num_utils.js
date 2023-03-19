@@ -21,3 +21,8 @@ export function randomChoice(choices) {
   const index = Math.floor(Math.random() * choices.length);
   return choices[index];
 }
+
+export function convertToMilliseconds(seconds, nanoseconds) {
+  const milliseconds = seconds * 1000 + nanoseconds / 1000000;
+  return Math.round(milliseconds * 100) / 100;
+}

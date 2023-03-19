@@ -1,4 +1,6 @@
 import DB from "./db.js";
+import SQLiteColumn from "./domain/SQLiteColumn.js";
+import SQLiteTable from "./domain/SQLiteTable.js";
 import LOGGER from "./logger.js";
 import { getSchema, saveSchema } from "./utils/schema_utils.js";
 import settings from "./utils/settings.js";
@@ -23,12 +25,11 @@ import settings from "./utils/settings.js";
     });
     saveSchema(schema);
 
-    schema.routers.forEach((table) => {
+    schema.routers.forEach(async (table) => {
       LOGGER.info(`Updating schema for '${table}'`);
-      DB.all(`PRAGMA table_info('${table}')`, function (_, rows) {
-        schema.tables[table] = rows;
-        saveSchema(schema);
-      });
+      const columns = await SQLiteColumn.getColumns(table);
+      schema.tables[table] = columns;
+      saveSchema(schema);
     });
   });
 })();

@@ -118,6 +118,9 @@ export async function generateModel(command) {
     const action = MigrationActions.CREATE.toLowerCase();
     const table = "table";
     const tableName = getTableNameFromModel(model);
+
+    const tempSchema = writeFileSync(PATHS.root, PATHS.tmp, "_schema.tmp.json");
+
     if (command) {
       LOGGER.test(createdMigration);
     } else {

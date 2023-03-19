@@ -1,5 +1,6 @@
 import DB from "../db.js";
 import LOGGER from "../logger.js";
+import SQLiteTable from "./SQLiteTable.js";
 
 class SQLiteColumn {
   constructor({ cid, name, type, notnull, dflt_value, pk }) {
@@ -9,6 +10,7 @@ class SQLiteColumn {
     this.notNull = Boolean(notnull);
     this.defaultValue = dflt_value;
     this.primaryKey = Boolean(pk);
+    this.foreignKey = null;
   }
 
   /**
@@ -18,15 +20,27 @@ class SQLiteColumn {
    */
   static async getColumns(table) {
     return new Promise((resolve, reject) => {
-      DB.all(`PRAGMA table_info('${table}')`, function (err, rows) {
+      DB.all(`PRAGMA table_info('${table}')`, async function (err, rows) {
         if (err) {
           LOGGER.error(err);
           return reject(err);
         }
+        const foreignKeys = await SQLiteTable.getForeignKeys(table);
         const columns = rows.map((row) => new SQLiteColumn(row));
+        columns.forEach((column) => {
+          column.foreignKey = foreignKeys.find(
+            (foreignKey) => foreignKey.from === column.name
+          );
+        });
         resolve(columns);
       });
     });
+  }
+
+  withForeignKey(foreignKey) {
+    console.log(foreignKey, this.name);
+    this.foreignKey = foreignKey;
+    return this;
   }
 
   /**
@@ -41,8 +55,8 @@ class SQLiteColumn {
 
   /**
    * Returns the column data type for the specified column in the table
-   * @param {string} table 
-   * @param {string} column 
+   * @param {string} table
+   * @param {string} column
    * @returns The data type of the column, e.g. string
    */
   static async getColumnType(table, column) {

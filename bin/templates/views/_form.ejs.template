@@ -3,7 +3,16 @@
   <div class="form-group d-flex row mb-2">
     <label for="{{name}}" class="form-label">
       <div class="mb-2 fw-bold">{{Name}}</div>
+      {{#foreignKey}}
+      <select name="{{../name}}" class="form-select">
+        <% {{table}}.forEach({{model}} => { %>
+          <option value="<%= {{model}}.id %>"><%= {{model}}.id %></option>
+        <% }) %>
+      </select>
+      {{/foreignKey}}
+      {{^foreignKey}}
       <input type="{{input.type}}" value="<%= {{../model}}.{{name}} %>" name="{{name}}" {{checked}} class="{{input.class}} form-control" id="{{name}}" placeholder="Enter {{Name}}" autocomplete="off">
+      {{/foreignKey}}
     </label>
   </div>
   {{/formColumns}}

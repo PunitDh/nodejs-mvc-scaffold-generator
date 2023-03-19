@@ -1,3 +1,3 @@
-import { generateViews } from "./views_generator";
+import { generateViews } from "./views_generator.js";
 
 generateViews();

@@ -152,6 +152,7 @@ export const ColumnFormat = {
 
 export const PATHS = {
   root: ".",
+  tmp: ".tmp",
   bin: "bin",
   templates: "templates",
   views: "views",

@@ -1,0 +1,1614 @@
+[INFO] [19/03/2023, 1:42:34 am]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 19/03/2023, 1:42:34 am
+[INFO] [19/03/2023, 1:42:34 am]: Completed 404 Not Found in 4.89 ms
+[INFO] [19/03/2023, 1:42:34 am]: Started GET "/assets/css/bootstrap.min.css.map" at 19/03/2023, 1:42:34 am
+[INFO] [19/03/2023, 1:42:34 am]: Completed 404 Not Found in 7.92 ms
+[INFO] [19/03/2023, 1:42:43 am]: Started GET "/blogs/" at 19/03/2023, 1:42:43 am
+[INFO] [19/03/2023, 1:42:43 am]: Completed 302 Found in 5.56 ms
+[INFO] [19/03/2023, 1:42:43 am]: Started GET "/users/login?referer=%2Fblogs%2F" at 19/03/2023, 1:42:43 am
+[INFO] [19/03/2023, 1:42:43 am]: Completed 304 Not Modified in 5.33 ms
+[INFO] [19/03/2023, 1:42:43 am]: Started GET "/assets/css/bootstrap.min.css.map" at 19/03/2023, 1:42:43 am
+[INFO] [19/03/2023, 1:42:43 am]: Completed 404 Not Found in 5.67 ms
+[INFO] [19/03/2023, 1:42:43 am]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 19/03/2023, 1:42:43 am
+[INFO] [19/03/2023, 1:42:43 am]: Completed 404 Not Found in 3.94 ms
+[INFO] [19/03/2023, 1:42:44 am]: Started POST "/users/login?referer=/blogs/" at 19/03/2023, 1:42:44 am
+[QUERY] [19/03/2023, 1:42:44 am]: SELECT * FROM users WHERE email=$email;
+
+[QUERY] [19/03/2023, 1:42:44 am]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, updated_at=DATETIME('now')  WHERE id=$id RETURNING *;
+
+[INFO] [19/03/2023, 1:42:44 am]: Completed 302 Found in 80.24 ms
+[INFO] [19/03/2023, 1:42:44 am]: Started GET "/blogs/" at 19/03/2023, 1:42:44 am
+[QUERY] [19/03/2023, 1:42:44 am]: SELECT * FROM _jwts WHERE jwt=$jwt;
+
+[QUERY] [19/03/2023, 1:42:44 am]: SELECT * FROM blogs;
+
+[INFO] [19/03/2023, 1:42:44 am]: Completed 200 OK in 4.12 ms
+[INFO] [19/03/2023, 1:42:45 am]: Started GET "/assets/css/bootstrap.min.css.map" at 19/03/2023, 1:42:45 am
+[INFO] [19/03/2023, 1:42:45 am]: Completed 404 Not Found in 1.88 ms
+[INFO] [19/03/2023, 1:42:45 am]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 19/03/2023, 1:42:45 am
+[INFO] [19/03/2023, 1:42:45 am]: Completed 404 Not Found in 2.02 ms
+[INFO] [19/03/2023, 1:42:57 am]: Started GET "/search?q=ben&maxResults=10&page=1" at 19/03/2023, 1:42:57 am
+[QUERY] [19/03/2023, 1:42:57 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:42:57 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:42:57 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:42:57 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:42:57 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:42:57 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:42:57 am]: Completed 200 OK in 19.46 ms
+[INFO] [19/03/2023, 1:42:57 am]: Started GET "/assets/css/bootstrap.min.css.map" at 19/03/2023, 1:42:57 am
+[INFO] [19/03/2023, 1:42:57 am]: Completed 404 Not Found in 3.94 ms
+[INFO] [19/03/2023, 1:42:57 am]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 19/03/2023, 1:42:57 am
+[INFO] [19/03/2023, 1:42:57 am]: Completed 404 Not Found in 6.35 ms
+[INFO] [19/03/2023, 1:43:03 am]: Started GET "/search?q=ben&maxResults=10&page=1" at 19/03/2023, 1:43:03 am
+[QUERY] [19/03/2023, 1:43:03 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:03 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:03 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:03 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:03 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:03 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:43:03 am]: Completed 200 OK in 19.32 ms
+[INFO] [19/03/2023, 1:43:08 am]: Started GET "/search?q=ben&maxResults=10&page=1" at 19/03/2023, 1:43:08 am
+[QUERY] [19/03/2023, 1:43:08 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:08 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:08 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:08 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:08 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:08 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:43:08 am]: Completed 200 OK in 15.07 ms
+[INFO] [19/03/2023, 1:43:09 am]: Started GET "/search?q=ben&maxResults=10&page=1" at 19/03/2023, 1:43:09 am
+[QUERY] [19/03/2023, 1:43:09 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:09 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:09 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:09 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:09 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:09 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:43:09 am]: Completed 200 OK in 13.44 ms
+[INFO] [19/03/2023, 1:43:19 am]: Started GET "/search?q=ben&maxResults=1&page=1" at 19/03/2023, 1:43:19 am
+[QUERY] [19/03/2023, 1:43:19 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:19 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:19 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:19 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:19 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:19 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:43:19 am]: Completed 200 OK in 11.37 ms
+[INFO] [19/03/2023, 1:43:20 am]: Started GET "/search?q=ben&maxResults=1&page=2" at 19/03/2023, 1:43:20 am
+[QUERY] [19/03/2023, 1:43:20 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:20 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:20 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:20 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:20 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:20 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:43:20 am]: Completed 200 OK in 13.53 ms
+[INFO] [19/03/2023, 1:43:21 am]: Started GET "/search?q=ben&maxResults=1&page=1" at 19/03/2023, 1:43:21 am
+[QUERY] [19/03/2023, 1:43:21 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:21 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:21 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:21 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:21 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:21 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:43:21 am]: Completed 200 OK in 13.71 ms
+[INFO] [19/03/2023, 1:43:22 am]: Started GET "/search?q=ben&maxResults=1&page=2" at 19/03/2023, 1:43:22 am
+[QUERY] [19/03/2023, 1:43:22 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:22 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:22 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:22 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:22 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:22 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:43:22 am]: Completed 200 OK in 15.37 ms
+[INFO] [19/03/2023, 1:43:27 am]: Started GET "/search?q=ben&maxResults=-1&page=2" at 19/03/2023, 1:43:27 am
+[QUERY] [19/03/2023, 1:43:27 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:27 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:27 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:27 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:27 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:27 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:43:27 am]: Completed 200 OK in 13.12 ms
+[INFO] [19/03/2023, 1:43:32 am]: Started GET "/search?q=ben&maxResults=0&page=2" at 19/03/2023, 1:43:32 am
+[QUERY] [19/03/2023, 1:43:32 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:32 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:32 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:32 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:32 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:32 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[ERROR] [19/03/2023, 1:43:39 am]: 400 RangeError: /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/pages/search.ejs:43
+    41|             <%= locals.totalResults %> results (<%= locals.time %> s)
+    42|           </div>
+ >> 43|           <%- include('../_layouts/partials/_pagination.ejs') %>
+    44|         </div>
+    45|       </div>
+    46|     </div>
+
+/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/_layouts/partials/_pagination.ejs:20
+    18|       <a
+    19|         class="page-link"
+ >> 20|         href="/search?q=<%= query %>&maxResults=<%= maxResults %>&page=<%= page+1%>"
+    21|         ><%= page+1 %></a
+    22|       >
+    23|     </li>
+
+Invalid string length
+    at __append ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/_layouts/partials/_pagination.ejs":8:73)
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/_layouts/partials/_pagination.ejs":38:7)
+    at _pagination (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at include (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:701:39)
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/pages/search.ejs":38:17)
+    at search (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:274:36)
+    at exports.renderFile [as engine] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/view.js:135:8)
+    at tryRender (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/application.js:657:10)
+[INFO] [19/03/2023, 1:43:39 am]: Completed 302 Found in 7514.27 ms
+[INFO] [19/03/2023, 1:43:39 am]: Started GET "/search?q=ben&maxResults=0&page=2" at 19/03/2023, 1:43:39 am
+[QUERY] [19/03/2023, 1:43:39 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:39 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:39 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:39 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:39 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:43:39 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[ERROR] [19/03/2023, 1:43:46 am]: 400 RangeError: /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/pages/search.ejs:43
+    41|             <%= locals.totalResults %> results (<%= locals.time %> s)
+    42|           </div>
+ >> 43|           <%- include('../_layouts/partials/_pagination.ejs') %>
+    44|         </div>
+    45|       </div>
+    46|     </div>
+
+/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/_layouts/partials/_pagination.ejs:20
+    18|       <a
+    19|         class="page-link"
+ >> 20|         href="/search?q=<%= query %>&maxResults=<%= maxResults %>&page=<%= page+1%>"
+    21|         ><%= page+1 %></a
+    22|       >
+    23|     </li>
+
+Invalid string length
+    at __append ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/_layouts/partials/_pagination.ejs":8:73)
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/_layouts/partials/_pagination.ejs":38:7)
+    at _pagination (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at include (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:701:39)
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/pages/search.ejs":38:17)
+    at search (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:274:36)
+    at exports.renderFile [as engine] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/view.js:135:8)
+    at tryRender (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/application.js:657:10)
+[INFO] [19/03/2023, 1:43:46 am]: Completed 302 Found in 7169.91 ms
+[INFO] [19/03/2023, 1:43:46 am]: Started GET "/undefined" at 19/03/2023, 1:43:46 am
+[INFO] [19/03/2023, 1:43:46 am]: Completed 404 Not Found in 1.79 ms
+[INFO] [19/03/2023, 1:46:19 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 1:46:19 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 1:46:19 am]: Server started on port 3000
+[INFO] [19/03/2023, 1:46:19 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 1:46:19 am]: Connected to JWT table
+[INFO] [19/03/2023, 1:46:19 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 1:46:22 am]: Started GET "/search?q=ben&maxResults=-1&page=2" at 19/03/2023, 1:46:22 am
+[QUERY] [19/03/2023, 1:46:22 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:22 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:22 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:22 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:22 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:22 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:46:22 am]: Completed 200 OK in 23.41 ms
+[INFO] [19/03/2023, 1:46:24 am]: Started GET "/search?q=ben&maxResults=-1&page=1" at 19/03/2023, 1:46:24 am
+[QUERY] [19/03/2023, 1:46:24 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:24 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:24 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:24 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:24 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:24 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:46:24 am]: Completed 200 OK in 18.06 ms
+[INFO] [19/03/2023, 1:46:26 am]: Started GET "/search?q=ben&maxResults=-1&page=2" at 19/03/2023, 1:46:26 am
+[QUERY] [19/03/2023, 1:46:26 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:26 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:26 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:26 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:26 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:26 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:46:26 am]: Completed 200 OK in 14.14 ms
+[INFO] [19/03/2023, 1:46:27 am]: Started GET "/search?q=ben&maxResults=-1&page=1" at 19/03/2023, 1:46:27 am
+[QUERY] [19/03/2023, 1:46:27 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:27 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:27 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:27 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:27 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:27 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:46:27 am]: Completed 200 OK in 14.06 ms
+[INFO] [19/03/2023, 1:46:32 am]: Started GET "/search?q=ben&maxResults=-1&page=0" at 19/03/2023, 1:46:32 am
+[QUERY] [19/03/2023, 1:46:32 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:32 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:32 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:32 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:32 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:32 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:46:32 am]: Completed 200 OK in 16.35 ms
+[INFO] [19/03/2023, 1:46:34 am]: Started GET "/search?q=ben&maxResults=-1&page=-1" at 19/03/2023, 1:46:34 am
+[QUERY] [19/03/2023, 1:46:34 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:34 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:34 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:34 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:34 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:34 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:46:34 am]: Completed 200 OK in 11.24 ms
+[INFO] [19/03/2023, 1:46:38 am]: Started GET "/search?q=ben&maxResults=-1&page=2" at 19/03/2023, 1:46:38 am
+[QUERY] [19/03/2023, 1:46:38 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:38 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:38 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:38 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:38 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:38 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:46:38 am]: Completed 200 OK in 10.42 ms
+[INFO] [19/03/2023, 1:46:40 am]: Started GET "/search?q=ben&maxResults=-1&page" at 19/03/2023, 1:46:40 am
+[QUERY] [19/03/2023, 1:46:40 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:40 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:40 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:40 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:40 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:40 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:46:40 am]: Completed 200 OK in 11.14 ms
+[INFO] [19/03/2023, 1:46:44 am]: Started GET "/search?q=ben&maxResults&page" at 19/03/2023, 1:46:44 am
+[QUERY] [19/03/2023, 1:46:44 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:44 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:44 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:44 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:44 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:44 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:46:44 am]: Completed 200 OK in 17.3 ms
+[INFO] [19/03/2023, 1:46:49 am]: Started GET "/search?q=ben&maxResults=0&page" at 19/03/2023, 1:46:49 am
+[QUERY] [19/03/2023, 1:46:49 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:49 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:49 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:49 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:49 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:46:49 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[ERROR] [19/03/2023, 1:46:56 am]: 400 RangeError: /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/pages/search.ejs:43
+    41|             <%= locals.totalResults %> results (<%= locals.time %> s)
+    42|           </div>
+ >> 43|           <%- include('../_layouts/partials/_pagination.ejs') %>
+    44|         </div>
+    45|       </div>
+    46|     </div>
+
+/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/_layouts/partials/_pagination.ejs:20
+    18|       <a
+    19|         class="page-link"
+ >> 20|         href="/search?q=<%= query %>&maxResults=<%= maxResults %>&page=<%= page+1%>"
+    21|         ><%= page+1 %></a
+    22|       >
+    23|     </li>
+
+Invalid string length
+    at __append ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/_layouts/partials/_pagination.ejs":8:73)
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/_layouts/partials/_pagination.ejs":39:7)
+    at _pagination (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at include (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:701:39)
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/pages/search.ejs":38:17)
+    at search (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:274:36)
+    at exports.renderFile [as engine] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/view.js:135:8)
+    at tryRender (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/application.js:657:10)
+[INFO] [19/03/2023, 1:46:56 am]: Completed 302 Found in 6893.64 ms
+[INFO] [19/03/2023, 1:46:56 am]: Started GET "/undefined" at 19/03/2023, 1:46:56 am
+[INFO] [19/03/2023, 1:46:56 am]: Completed 404 Not Found in 2.41 ms
+[INFO] [19/03/2023, 1:49:11 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 1:49:11 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 1:49:11 am]: Server started on port 3000
+[INFO] [19/03/2023, 1:49:11 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 1:49:11 am]: Connected to JWT table
+[INFO] [19/03/2023, 1:49:11 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 1:49:14 am]: Started GET "/api/search?q=ben" at 19/03/2023, 1:49:14 am
+[QUERY] [19/03/2023, 1:49:14 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:14 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:14 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:14 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:14 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:14 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:49:14 am]: Completed 200 OK in 23.18 ms
+[INFO] [19/03/2023, 1:49:15 am]: Started GET "/search?q=ben&maxResults=10&page=1" at 19/03/2023, 1:49:15 am
+[QUERY] [19/03/2023, 1:49:15 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:15 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:15 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:15 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:15 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:15 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:49:15 am]: Completed 200 OK in 19.34 ms
+[INFO] [19/03/2023, 1:49:19 am]: Started GET "/search?q=ben&maxResults=0&page=1" at 19/03/2023, 1:49:19 am
+[QUERY] [19/03/2023, 1:49:19 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:19 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:19 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:19 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:19 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:19 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:49:19 am]: Completed 200 OK in 17.49 ms
+[INFO] [19/03/2023, 1:49:29 am]: Started GET "/search?q=ben&maxResults=0&page=1" at 19/03/2023, 1:49:29 am
+[QUERY] [19/03/2023, 1:49:29 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:29 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:29 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:29 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:29 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:29 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:49:29 am]: Completed 200 OK in 12.73 ms
+[INFO] [19/03/2023, 1:49:31 am]: Started GET "/search?q=ben&maxResults=0&page=1" at 19/03/2023, 1:49:31 am
+[QUERY] [19/03/2023, 1:49:31 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:31 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:31 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:31 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:31 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:31 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:49:31 am]: Completed 200 OK in 12.83 ms
+[INFO] [19/03/2023, 1:49:33 am]: Started GET "/search?q=ben&maxResults=10&page=1" at 19/03/2023, 1:49:33 am
+[QUERY] [19/03/2023, 1:49:33 am]: SELECT * FROM animals WHERE name LIKE '%' || $searchTerm || '%'  OR color LIKE '%' || $searchTerm || '%'  OR image LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:33 am]: SELECT * FROM comments WHERE blog_id LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:33 am]: SELECT * FROM users WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR email LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:33 am]: SELECT * FROM employees WHERE first_name LIKE '%' || $searchTerm || '%'  OR last_name LIKE '%' || $searchTerm || '%'  OR title LIKE '%' || $searchTerm || '%'  OR salary LIKE '%' || $searchTerm || '%'  OR sick_leave_hours LIKE '%' || $searchTerm || '%'  OR annual_leave_hours LIKE '%' || $searchTerm || '%'  OR company_id LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:33 am]: SELECT * FROM blogs WHERE title LIKE '%' || $searchTerm || '%'  OR body LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[QUERY] [19/03/2023, 1:49:33 am]: SELECT * FROM companies WHERE name LIKE '%' || $searchTerm || '%'  OR address LIKE '%' || $searchTerm || '%'  OR number_of_employees LIKE '%' || $searchTerm || '%'  ORDER BY updated_at DESC;
+[INFO] [19/03/2023, 1:49:33 am]: Completed 200 OK in 12.74 ms
+[INFO] [19/03/2023, 1:49:43 am]: Started POST "/users/logout" at 19/03/2023, 1:49:43 am
+[QUERY] [19/03/2023, 1:49:43 am]: INSERT INTO _jwts (jwt) VALUES ($jwt) RETURNING *;
+
+[INFO] [19/03/2023, 1:49:43 am]: Completed 302 Found in 6.63 ms
+[INFO] [19/03/2023, 1:49:43 am]: Started GET "/users/login" at 19/03/2023, 1:49:43 am
+[INFO] [19/03/2023, 1:49:43 am]: Completed 304 Not Modified in 2.08 ms
+[INFO] [19/03/2023, 1:51:25 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 1:51:25 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 1:51:25 am]: Server started on port 3000
+[INFO] [19/03/2023, 1:51:25 am]: Connected to JWT table
+[INFO] [19/03/2023, 1:51:25 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 1:51:25 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 1:53:09 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 1:53:09 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 1:53:09 am]: Server started on port 3000
+[INFO] [19/03/2023, 1:53:09 am]: Connected to JWT table
+[INFO] [19/03/2023, 1:53:09 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 1:53:09 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 1:53:38 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 1:53:38 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 1:53:38 am]: Server started on port 3000
+[INFO] [19/03/2023, 1:53:38 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 1:53:38 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 1:53:38 am]: Connected to JWT table
+[INFO] [19/03/2023, 1:54:06 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 1:54:06 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 1:54:06 am]: Server started on port 3000
+[INFO] [19/03/2023, 1:54:06 am]: Connected to JWT table
+[INFO] [19/03/2023, 1:54:06 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 1:54:06 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 1:54:11 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 1:54:12 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 1:54:12 am]: Server started on port 3000
+[INFO] [19/03/2023, 1:54:12 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 1:54:12 am]: Connected to JWT table
+[INFO] [19/03/2023, 1:54:12 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 1:56:34 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 1:56:34 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 1:56:34 am]: Server started on port 3000
+[INFO] [19/03/2023, 1:56:34 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 1:56:34 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 1:56:34 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:21:17 am]: Started POST "/users/login" at 19/03/2023, 10:21:17 am
+[QUERY] [19/03/2023, 10:21:17 am]: SELECT * FROM users WHERE email=$email;
+
+[QUERY] [19/03/2023, 10:21:17 am]: UPDATE users SET first_name=$first_name, last_name=$last_name, email=$email, password=$password, updated_at=DATETIME('now')  WHERE id=$id RETURNING *;
+
+[INFO] [19/03/2023, 10:21:17 am]: Completed 302 Found in 64.3 ms
+[INFO] [19/03/2023, 10:21:17 am]: Started GET "/users/" at 19/03/2023, 10:21:17 am
+[QUERY] [19/03/2023, 10:21:17 am]: SELECT * FROM _jwts WHERE jwt=$jwt;
+
+[QUERY] [19/03/2023, 10:21:17 am]: SELECT * FROM users;
+
+[INFO] [19/03/2023, 10:21:17 am]: Completed 304 Not Modified in 7.93 ms
+[INFO] [19/03/2023, 10:21:21 am]: Started GET "/employees/" at 19/03/2023, 10:21:21 am
+[QUERY] [19/03/2023, 10:21:21 am]: SELECT * FROM employees;
+
+[INFO] [19/03/2023, 10:21:21 am]: Completed 200 OK in 17.2 ms
+[INFO] [19/03/2023, 10:21:22 am]: Started GET "/companies/" at 19/03/2023, 10:21:22 am
+[QUERY] [19/03/2023, 10:21:22 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:21:22 am]: Completed 200 OK in 10.59 ms
+[INFO] [19/03/2023, 10:22:06 am]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 10:22:06 am]: Successfully written to: models/Theater.js
+[SUCCESS] [19/03/2023, 10:22:06 am]: Successfully written to: db/migrations/2023-03-18_f913bffb_create_table__theaters.sql
+[INFO] [19/03/2023, 10:22:06 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:22:06 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:22:06 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:22:06 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:22:06 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:22:06 am]: Server started on port 3000
+[INFO] [19/03/2023, 10:22:06 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:22:06 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:22:06 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:22:28 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:22:28 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:22:28 am]: Server started on port 3000
+[INFO] [19/03/2023, 10:22:28 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:22:28 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:22:28 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:22:30 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:22:30 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:22:30 am]: Server started on port 3000
+[INFO] [19/03/2023, 10:22:30 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:22:30 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:22:30 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:22:32 am]: Successfully connected to database: 'database.db'
+[ERROR] [19/03/2023, 10:22:32 am]: Model 'Theater' already exists in 'models/Theater.js'
+[SUCCESS] [19/03/2023, 10:22:32 am]: Successfully written to: routers/theaters.js
+[INFO] [19/03/2023, 10:22:32 am]: Successfully connected to database: 'database.db'
+[INFO] [19/03/2023, 10:22:32 am]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 10:22:32 am]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [19/03/2023, 10:22:32 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:22:32 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:22:32 am]: Connected to JWT table
+[SUCCESS] [19/03/2023, 10:22:32 am]: Successfully written to: views/theaters/_form.ejs
+[SUCCESS] [19/03/2023, 10:22:32 am]: Successfully written to: views/theaters/_head.ejs
+[SUCCESS] [19/03/2023, 10:22:32 am]: Successfully written to: views/theaters/edit.ejs
+[QUERY] [19/03/2023, 10:22:32 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:22:32 am]: Server started on port 3000
+[SUCCESS] [19/03/2023, 10:22:32 am]: Successfully written to: views/theaters/index.ejs
+[INFO] [19/03/2023, 10:22:32 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:22:32 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:22:32 am]: Foreign keys have been turned ON 
+[SUCCESS] [19/03/2023, 10:22:32 am]: Successfully written to: views/theaters/new.ejs
+[SUCCESS] [19/03/2023, 10:22:32 am]: Successfully written to: views/theaters/theater.ejs
+[INFO] [19/03/2023, 10:25:03 am]: Successfully connected to database: 'database.db'
+[INFO] [19/03/2023, 10:25:03 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:25:03 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:25:03 am]: Connected to JWT table
+[SUCCESS] [19/03/2023, 10:25:03 am]: Successfully written to: models/Theater.js
+[SUCCESS] [19/03/2023, 10:25:03 am]: Successfully written to: db/migrations/2023-03-18_8a20fdf3_create_table__theaters.sql
+[SUCCESS] [19/03/2023, 10:28:45 am]: Successfully written to: routers/theaters.js
+[INFO] [19/03/2023, 10:28:46 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:28:46 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:28:46 am]: Server started on port 3000
+[INFO] [19/03/2023, 10:28:46 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:28:46 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:28:46 am]: Connected to migration versioning table
+[SUCCESS] [19/03/2023, 10:30:41 am]: Successfully written to: routers/theaters.js
+[INFO] [19/03/2023, 10:30:42 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:30:42 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:30:42 am]: Server started on port 3000
+[INFO] [19/03/2023, 10:30:42 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:30:42 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:30:42 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:31:36 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:31:36 am]: SELECT * FROM _migrations;
+
+[INFO] [19/03/2023, 10:31:36 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:31:36 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:31:36 am]: Foreign keys have been turned ON 
+[QUERY] [19/03/2023, 10:31:36 am]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query) RETURNING *;
+
+[INFO] [19/03/2023, 10:31:36 am]: ===========================================================================
+[INFO] [19/03/2023, 10:31:36 am]: New Migration created with version number: 63
+[INFO] [19/03/2023, 10:31:36 am]: Query: CREATE TABLE IF NOT EXISTS theaters (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  created_at NUMERIC DEFAULT (DATETIME('NOW')),
+  updated_at NUMERIC DEFAULT (DATETIME('NOW')),
+  name TEXT,
+  location TEXT
+);
+[INFO] [19/03/2023, 10:31:36 am]: ===========================================================================
+[INFO] [19/03/2023, 10:31:37 am]: Successfully connected to database: 'database.db'
+[INFO] [19/03/2023, 10:31:37 am]: Updating schema
+[INFO] [19/03/2023, 10:31:37 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:31:37 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:31:37 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:31:37 am]: Updating schema for 'animals'
+[INFO] [19/03/2023, 10:31:37 am]: Updating schema for 'blogs'
+[INFO] [19/03/2023, 10:31:37 am]: Updating schema for 'comments'
+[INFO] [19/03/2023, 10:31:37 am]: Updating schema for 'companies'
+[INFO] [19/03/2023, 10:31:37 am]: Updating schema for 'employees'
+[INFO] [19/03/2023, 10:31:37 am]: Updating schema for 'theaters'
+[INFO] [19/03/2023, 10:31:37 am]: Updating schema for 'users'
+[INFO] [19/03/2023, 10:31:37 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:31:37 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:31:37 am]: Server started on port 3000
+[INFO] [19/03/2023, 10:31:37 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:31:37 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:31:37 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:32:05 am]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 10:32:05 am]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [19/03/2023, 10:32:05 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:32:05 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:32:05 am]: Connected to JWT table
+[SUCCESS] [19/03/2023, 10:32:05 am]: Successfully written to: views/theaters/_form.ejs
+[SUCCESS] [19/03/2023, 10:32:05 am]: Successfully written to: views/theaters/_head.ejs
+[SUCCESS] [19/03/2023, 10:32:05 am]: Successfully written to: views/theaters/edit.ejs
+[SUCCESS] [19/03/2023, 10:32:05 am]: Successfully written to: views/theaters/index.ejs
+[SUCCESS] [19/03/2023, 10:32:05 am]: Successfully written to: views/theaters/new.ejs
+[SUCCESS] [19/03/2023, 10:32:05 am]: Successfully written to: views/theaters/theater.ejs
+[INFO] [19/03/2023, 10:32:39 am]: Successfully connected to database: 'database.db'
+[INFO] [19/03/2023, 10:32:39 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:32:39 am]: Connected to migration versioning table
+[SUCCESS] [19/03/2023, 10:32:39 am]: Successfully written to: models/Movie.js
+[SUCCESS] [19/03/2023, 10:32:39 am]: Successfully written to: db/migrations/2023-03-18_618d8ff0_create_table__movies.sql
+[INFO] [19/03/2023, 10:32:39 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:32:39 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:32:39 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:32:39 am]: Server started on port 3000
+[INFO] [19/03/2023, 10:32:39 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:32:39 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:32:39 am]: Connected to migration versioning table
+[SUCCESS] [19/03/2023, 10:33:49 am]: Successfully written to: routers/movies.js
+[INFO] [19/03/2023, 10:33:49 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:33:49 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:33:49 am]: Server started on port 3000
+[INFO] [19/03/2023, 10:33:49 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:33:49 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:33:49 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:34:15 am]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 10:34:15 am]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [19/03/2023, 10:34:15 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:34:15 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:34:15 am]: Connected to JWT table
+[SUCCESS] [19/03/2023, 10:34:15 am]: Successfully written to: views/movies/_form.ejs
+[SUCCESS] [19/03/2023, 10:34:15 am]: Successfully written to: views/movies/_head.ejs
+[SUCCESS] [19/03/2023, 10:34:15 am]: Successfully written to: views/movies/edit.ejs
+[SUCCESS] [19/03/2023, 10:34:15 am]: Successfully written to: views/movies/index.ejs
+[SUCCESS] [19/03/2023, 10:34:15 am]: Successfully written to: views/movies/new.ejs
+[SUCCESS] [19/03/2023, 10:34:15 am]: Successfully written to: views/movies/movie.ejs
+[INFO] [19/03/2023, 10:34:41 am]: Started GET "/companies/" at 19/03/2023, 10:34:41 am
+[QUERY] [19/03/2023, 10:34:41 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:34:41 am]: Completed 200 OK in 21.23 ms
+[INFO] [19/03/2023, 10:34:46 am]: Started GET "/companies/" at 19/03/2023, 10:34:46 am
+[QUERY] [19/03/2023, 10:34:46 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:34:46 am]: Completed 304 Not Modified in 11.79 ms
+[INFO] [19/03/2023, 10:34:47 am]: Started GET "/theaters/" at 19/03/2023, 10:34:47 am
+[QUERY] [19/03/2023, 10:34:47 am]: SELECT * FROM theaters;
+
+[INFO] [19/03/2023, 10:34:47 am]: Completed 200 OK in 8.68 ms
+[INFO] [19/03/2023, 10:34:48 am]: Started GET "/movies/" at 19/03/2023, 10:34:48 am
+[QUERY] [19/03/2023, 10:34:48 am]: SELECT * FROM movies;
+
+[ERROR] [19/03/2023, 10:34:48 am]: Error: SQLITE_ERROR: no such table: movies
+[ERROR] [19/03/2023, 10:34:48 am]: 400 Error: Error: SQLITE_ERROR: no such table: movies
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/model.js:255:25
+    at replacement (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/sqlite3/lib/trace.js:25:27)
+    at Statement.errBack (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/sqlite3/lib/sqlite3.js:15:21)
+[INFO] [19/03/2023, 10:34:48 am]: Completed 302 Found in 7.29 ms
+[INFO] [19/03/2023, 10:34:48 am]: Started GET "/theaters/" at 19/03/2023, 10:34:48 am
+[QUERY] [19/03/2023, 10:34:48 am]: SELECT * FROM theaters;
+
+[INFO] [19/03/2023, 10:34:48 am]: Completed 200 OK in 8.99 ms
+[INFO] [19/03/2023, 10:34:56 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:34:56 am]: SELECT * FROM _migrations;
+
+[INFO] [19/03/2023, 10:34:56 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:34:56 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:34:56 am]: Foreign keys have been turned ON 
+[QUERY] [19/03/2023, 10:34:56 am]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query) RETURNING *;
+
+[INFO] [19/03/2023, 10:34:56 am]: ===========================================================================
+[INFO] [19/03/2023, 10:34:56 am]: New Migration created with version number: 64
+[INFO] [19/03/2023, 10:34:56 am]: Query: CREATE TABLE IF NOT EXISTS movies (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  created_at NUMERIC DEFAULT (DATETIME('NOW')),
+  updated_at NUMERIC DEFAULT (DATETIME('NOW')),
+  name TEXT,
+  year NUMERIC,
+  theater_id INTEGER,
+ FOREIGN KEY(theater_id) REFERENCES theaters(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+[INFO] [19/03/2023, 10:34:56 am]: ===========================================================================
+[INFO] [19/03/2023, 10:34:56 am]: Successfully connected to database: 'database.db'
+[INFO] [19/03/2023, 10:34:56 am]: Updating schema
+[INFO] [19/03/2023, 10:34:56 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:34:56 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:34:56 am]: Updating schema for 'animals'
+[INFO] [19/03/2023, 10:34:56 am]: Updating schema for 'blogs'
+[INFO] [19/03/2023, 10:34:56 am]: Updating schema for 'comments'
+[INFO] [19/03/2023, 10:34:56 am]: Updating schema for 'companies'
+[INFO] [19/03/2023, 10:34:56 am]: Updating schema for 'employees'
+[INFO] [19/03/2023, 10:34:56 am]: Updating schema for 'movies'
+[INFO] [19/03/2023, 10:34:56 am]: Updating schema for 'theaters'
+[INFO] [19/03/2023, 10:34:56 am]: Updating schema for 'users'
+[INFO] [19/03/2023, 10:34:56 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:34:56 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:34:56 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:34:56 am]: Server started on port 3000
+[INFO] [19/03/2023, 10:34:56 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:34:56 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:34:56 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:35:00 am]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 10:35:00 am]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [19/03/2023, 10:35:00 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:35:00 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:35:00 am]: Connected to JWT table
+[SUCCESS] [19/03/2023, 10:35:00 am]: Successfully written to: views/movies/_form.ejs
+[SUCCESS] [19/03/2023, 10:35:00 am]: Successfully written to: views/movies/_head.ejs
+[SUCCESS] [19/03/2023, 10:35:00 am]: Successfully written to: views/movies/edit.ejs
+[SUCCESS] [19/03/2023, 10:35:00 am]: Successfully written to: views/movies/index.ejs
+[SUCCESS] [19/03/2023, 10:35:00 am]: Successfully written to: views/movies/new.ejs
+[SUCCESS] [19/03/2023, 10:35:00 am]: Successfully written to: views/movies/movie.ejs
+[INFO] [19/03/2023, 10:35:04 am]: Started GET "/movies/" at 19/03/2023, 10:35:04 am
+[QUERY] [19/03/2023, 10:35:04 am]: SELECT * FROM movies;
+
+[INFO] [19/03/2023, 10:35:04 am]: Completed 200 OK in 18.04 ms
+[INFO] [19/03/2023, 10:35:07 am]: Started GET "/movies/" at 19/03/2023, 10:35:07 am
+[QUERY] [19/03/2023, 10:35:07 am]: SELECT * FROM movies;
+
+[INFO] [19/03/2023, 10:35:07 am]: Completed 304 Not Modified in 11.45 ms
+[INFO] [19/03/2023, 10:35:08 am]: Started GET "/theaters/" at 19/03/2023, 10:35:08 am
+[QUERY] [19/03/2023, 10:35:08 am]: SELECT * FROM theaters;
+
+[INFO] [19/03/2023, 10:35:08 am]: Completed 200 OK in 10.87 ms
+[INFO] [19/03/2023, 10:35:10 am]: Started GET "/theaters/new" at 19/03/2023, 10:35:10 am
+[INFO] [19/03/2023, 10:35:10 am]: Completed 200 OK in 11.35 ms
+[INFO] [19/03/2023, 10:35:11 am]: Started GET "/theaters/" at 19/03/2023, 10:35:11 am
+[QUERY] [19/03/2023, 10:35:11 am]: SELECT * FROM theaters;
+
+[INFO] [19/03/2023, 10:35:11 am]: Completed 304 Not Modified in 8.23 ms
+[INFO] [19/03/2023, 10:35:21 am]: Started GET "/employees/" at 19/03/2023, 10:35:21 am
+[QUERY] [19/03/2023, 10:35:21 am]: SELECT * FROM employees;
+
+[INFO] [19/03/2023, 10:35:21 am]: Completed 200 OK in 15.86 ms
+[INFO] [19/03/2023, 10:35:22 am]: Started GET "/movies/" at 19/03/2023, 10:35:22 am
+[QUERY] [19/03/2023, 10:35:22 am]: SELECT * FROM movies;
+
+[INFO] [19/03/2023, 10:35:22 am]: Completed 304 Not Modified in 5.75 ms
+[INFO] [19/03/2023, 10:35:58 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:35:58 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:35:58 am]: Server started on port 3000
+[INFO] [19/03/2023, 10:35:58 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:35:58 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:35:58 am]: Connected to JWT table
+[SUCCESS] [19/03/2023, 10:36:10 am]: Successfully written to: db/migrations/2023-03-18_d78bf67c_drop_movies__.sql
+[SUCCESS] [19/03/2023, 10:36:15 am]: Successfully written to: db/migrations/2023-03-18_832ba242_drop_theaters__.sql
+[INFO] [19/03/2023, 10:36:25 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:36:25 am]: SELECT * FROM _migrations;
+
+[INFO] [19/03/2023, 10:36:25 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:36:25 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:36:25 am]: Foreign keys have been turned ON 
+[QUERY] [19/03/2023, 10:36:25 am]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query) RETURNING *;
+
+[QUERY] [19/03/2023, 10:36:25 am]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query) RETURNING *;
+
+[INFO] [19/03/2023, 10:36:25 am]: ===========================================================================
+[INFO] [19/03/2023, 10:36:25 am]: New Migration created with version number: 65
+[INFO] [19/03/2023, 10:36:25 am]: Query: DROP TABLE theaters;
+[INFO] [19/03/2023, 10:36:25 am]: ===========================================================================
+[INFO] [19/03/2023, 10:36:25 am]: ===========================================================================
+[INFO] [19/03/2023, 10:36:25 am]: New Migration created with version number: 66
+[INFO] [19/03/2023, 10:36:25 am]: Query: DROP TABLE movies;
+[INFO] [19/03/2023, 10:36:25 am]: ===========================================================================
+[INFO] [19/03/2023, 10:36:25 am]: Successfully connected to database: 'database.db'
+[INFO] [19/03/2023, 10:36:25 am]: Updating schema
+[INFO] [19/03/2023, 10:36:25 am]: Updating schema for 'animals'
+[INFO] [19/03/2023, 10:36:25 am]: Updating schema for 'blogs'
+[INFO] [19/03/2023, 10:36:25 am]: Updating schema for 'comments'
+[INFO] [19/03/2023, 10:36:25 am]: Updating schema for 'companies'
+[INFO] [19/03/2023, 10:36:25 am]: Updating schema for 'employees'
+[INFO] [19/03/2023, 10:36:25 am]: Updating schema for 'users'
+[INFO] [19/03/2023, 10:36:25 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:36:25 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:36:25 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:36:25 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:36:25 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:36:25 am]: Server started on port 3000
+[INFO] [19/03/2023, 10:36:25 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:36:25 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:36:25 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:37:44 am]: Successfully connected to database: 'database.db'
+[INFO] [19/03/2023, 10:37:44 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:37:44 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:37:44 am]: Connected to JWT table
+[SUCCESS] [19/03/2023, 10:37:44 am]: Successfully written to: models/Theater.js
+[SUCCESS] [19/03/2023, 10:37:44 am]: Successfully written to: db/migrations/2023-03-18_adc75876_create_table__theaters.sql
+[INFO] [19/03/2023, 10:37:52 am]: Successfully connected to database: 'database.db'
+[INFO] [19/03/2023, 10:37:52 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:37:52 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:37:52 am]: Connected to JWT table
+[SUCCESS] [19/03/2023, 10:37:52 am]: Successfully written to: models/Movie.js
+[SUCCESS] [19/03/2023, 10:37:52 am]: Successfully written to: db/migrations/2023-03-18_683c5519_create_table__movies.sql
+[INFO] [19/03/2023, 10:38:08 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:38:08 am]: SELECT * FROM _migrations;
+
+[INFO] [19/03/2023, 10:38:08 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:38:08 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:38:08 am]: Connected to JWT table
+[QUERY] [19/03/2023, 10:38:08 am]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query) RETURNING *;
+
+[QUERY] [19/03/2023, 10:38:08 am]: INSERT INTO _migrations (filename, query) VALUES ($filename, $query) RETURNING *;
+
+[INFO] [19/03/2023, 10:38:08 am]: ===========================================================================
+[INFO] [19/03/2023, 10:38:08 am]: New Migration created with version number: 67
+[INFO] [19/03/2023, 10:38:08 am]: Query: CREATE TABLE IF NOT EXISTS movies (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT,
+  year NUMERIC,
+  theater_id INTEGER,
+  created_at NUMERIC DEFAULT (DATETIME('NOW')),
+  updated_at NUMERIC DEFAULT (DATETIME('NOW')),
+ FOREIGN KEY(theater_id) REFERENCES theaters(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+[INFO] [19/03/2023, 10:38:08 am]: ===========================================================================
+[INFO] [19/03/2023, 10:38:08 am]: ===========================================================================
+[INFO] [19/03/2023, 10:38:08 am]: New Migration created with version number: 68
+[INFO] [19/03/2023, 10:38:08 am]: Query: CREATE TABLE IF NOT EXISTS theaters (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT,
+  location TEXT,
+  created_at NUMERIC DEFAULT (DATETIME('NOW')),
+  updated_at NUMERIC DEFAULT (DATETIME('NOW'))
+);
+
+[INFO] [19/03/2023, 10:38:08 am]: ===========================================================================
+[INFO] [19/03/2023, 10:38:08 am]: Successfully connected to database: 'database.db'
+[INFO] [19/03/2023, 10:38:08 am]: Updating schema
+[INFO] [19/03/2023, 10:38:08 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:38:08 am]: Updating schema for 'animals'
+[INFO] [19/03/2023, 10:38:08 am]: Updating schema for 'blogs'
+[INFO] [19/03/2023, 10:38:08 am]: Updating schema for 'comments'
+[INFO] [19/03/2023, 10:38:08 am]: Updating schema for 'companies'
+[INFO] [19/03/2023, 10:38:08 am]: Updating schema for 'employees'
+[INFO] [19/03/2023, 10:38:08 am]: Updating schema for 'movies'
+[INFO] [19/03/2023, 10:38:08 am]: Updating schema for 'theaters'
+[INFO] [19/03/2023, 10:38:08 am]: Updating schema for 'users'
+[INFO] [19/03/2023, 10:38:08 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:38:08 am]: Foreign keys have been turned ON 
+[SUCCESS] [19/03/2023, 10:38:27 am]: Successfully written to: routers/movies.js
+[SUCCESS] [19/03/2023, 10:38:32 am]: Successfully written to: routers/theaters.js
+[INFO] [19/03/2023, 10:38:32 am]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 10:38:32 am]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 10:38:32 am]: Server started on port 3000
+[INFO] [19/03/2023, 10:38:32 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:38:32 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:38:32 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:38:40 am]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 10:38:40 am]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [19/03/2023, 10:38:40 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:38:40 am]: Connected to migration versioning table
+[INFO] [19/03/2023, 10:38:40 am]: Connected to JWT table
+[SUCCESS] [19/03/2023, 10:38:40 am]: Successfully written to: views/theaters/_form.ejs
+[SUCCESS] [19/03/2023, 10:38:40 am]: Successfully written to: views/theaters/_head.ejs
+[SUCCESS] [19/03/2023, 10:38:40 am]: Successfully written to: views/theaters/edit.ejs
+[SUCCESS] [19/03/2023, 10:38:40 am]: Successfully written to: views/theaters/index.ejs
+[SUCCESS] [19/03/2023, 10:38:40 am]: Successfully written to: views/theaters/new.ejs
+[SUCCESS] [19/03/2023, 10:38:40 am]: Successfully written to: views/theaters/theater.ejs
+[INFO] [19/03/2023, 10:38:46 am]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 10:38:46 am]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [19/03/2023, 10:38:46 am]: Connected to JWT table
+[INFO] [19/03/2023, 10:38:46 am]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 10:38:46 am]: Connected to migration versioning table
+[SUCCESS] [19/03/2023, 10:38:46 am]: Successfully written to: views/movies/_form.ejs
+[SUCCESS] [19/03/2023, 10:38:46 am]: Successfully written to: views/movies/_head.ejs
+[SUCCESS] [19/03/2023, 10:38:46 am]: Successfully written to: views/movies/edit.ejs
+[SUCCESS] [19/03/2023, 10:38:46 am]: Successfully written to: views/movies/index.ejs
+[SUCCESS] [19/03/2023, 10:38:46 am]: Successfully written to: views/movies/new.ejs
+[SUCCESS] [19/03/2023, 10:38:46 am]: Successfully written to: views/movies/movie.ejs
+[INFO] [19/03/2023, 10:38:50 am]: Started GET "/movies/" at 19/03/2023, 10:38:50 am
+[QUERY] [19/03/2023, 10:38:50 am]: SELECT * FROM movies;
+
+[INFO] [19/03/2023, 10:38:50 am]: Completed 200 OK in 23.46 ms
+[INFO] [19/03/2023, 10:38:54 am]: Started GET "/movies/new" at 19/03/2023, 10:38:54 am
+[INFO] [19/03/2023, 10:38:54 am]: Completed 200 OK in 13.2 ms
+[INFO] [19/03/2023, 10:38:56 am]: Started GET "/movies/" at 19/03/2023, 10:38:56 am
+[QUERY] [19/03/2023, 10:38:56 am]: SELECT * FROM movies;
+
+[INFO] [19/03/2023, 10:38:56 am]: Completed 304 Not Modified in 7.5 ms
+[INFO] [19/03/2023, 10:38:58 am]: Started GET "/movies/new" at 19/03/2023, 10:38:58 am
+[INFO] [19/03/2023, 10:38:58 am]: Completed 304 Not Modified in 9.14 ms
+[INFO] [19/03/2023, 10:39:01 am]: Started POST "/movies/new" at 19/03/2023, 10:39:01 am
+[QUERY] [19/03/2023, 10:39:01 am]: INSERT INTO movies (name, year, theater_id, created_at, updated_at) VALUES ($name, $year, $theater_id, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[ERROR] [19/03/2023, 10:39:01 am]: Error: SQLITE_CONSTRAINT: FOREIGN KEY constraint failed
+[ERROR] [19/03/2023, 10:39:01 am]: 400 Error: Error: SQLITE_CONSTRAINT: FOREIGN KEY constraint failed
+    at Statement.<anonymous> (file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/model.js:255:25)
+    at Statement.replacement (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/sqlite3/lib/trace.js:25:27)
+    at Statement.replacement (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/sqlite3/lib/trace.js:25:27)
+[INFO] [19/03/2023, 10:39:01 am]: Completed 302 Found in 10.46 ms
+[INFO] [19/03/2023, 10:39:01 am]: Started GET "/movies/new" at 19/03/2023, 10:39:01 am
+[INFO] [19/03/2023, 10:39:01 am]: Completed 200 OK in 3.37 ms
+[INFO] [19/03/2023, 10:39:04 am]: Started GET "/movies/" at 19/03/2023, 10:39:04 am
+[QUERY] [19/03/2023, 10:39:04 am]: SELECT * FROM movies;
+
+[INFO] [19/03/2023, 10:39:04 am]: Completed 304 Not Modified in 6.92 ms
+[INFO] [19/03/2023, 5:43:12 pm]: Started GET "/movies/new" at 19/03/2023, 5:43:12 pm
+[INFO] [19/03/2023, 5:43:12 pm]: Completed 200 OK in 10.12 ms
+[INFO] [19/03/2023, 5:43:13 pm]: Started GET "/movies/" at 19/03/2023, 5:43:13 pm
+[QUERY] [19/03/2023, 5:43:13 pm]: SELECT * FROM movies;
+
+[INFO] [19/03/2023, 5:43:13 pm]: Completed 200 OK in 5.25 ms
+[INFO] [19/03/2023, 5:48:30 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 5:48:31 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 5:48:31 pm]: Server started on port 3000
+[INFO] [19/03/2023, 5:48:31 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 5:48:31 pm]: Connected to JWT table
+[INFO] [19/03/2023, 5:48:31 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 5:49:55 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 5:49:55 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 5:49:55 pm]: Server started on port 3000
+[INFO] [19/03/2023, 5:49:55 pm]: Connected to JWT table
+[INFO] [19/03/2023, 5:49:55 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 5:49:55 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 5:50:05 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 5:50:05 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 5:50:05 pm]: Server started on port 3000
+[INFO] [19/03/2023, 5:50:05 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 5:50:05 pm]: Connected to JWT table
+[INFO] [19/03/2023, 5:50:05 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 5:50:47 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 5:50:47 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 5:50:47 pm]: Server started on port 3000
+[INFO] [19/03/2023, 5:50:47 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 5:50:47 pm]: Connected to JWT table
+[INFO] [19/03/2023, 5:50:47 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 5:50:51 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 5:50:51 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 5:50:51 pm]: Server started on port 3000
+[INFO] [19/03/2023, 5:50:51 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 5:50:51 pm]: Connected to JWT table
+[INFO] [19/03/2023, 5:50:51 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 5:51:30 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 5:51:30 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 5:51:30 pm]: Server started on port 3000
+[INFO] [19/03/2023, 5:51:30 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 5:51:30 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 5:51:30 pm]: Connected to JWT table
+[INFO] [19/03/2023, 5:51:42 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 5:51:42 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 5:51:42 pm]: Server started on port 3000
+[INFO] [19/03/2023, 5:51:42 pm]: Connected to JWT table
+[INFO] [19/03/2023, 5:51:42 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 5:51:42 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 5:52:08 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 5:52:08 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 5:52:08 pm]: Server started on port 3000
+[INFO] [19/03/2023, 5:52:08 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 5:52:08 pm]: Connected to JWT table
+[INFO] [19/03/2023, 5:52:08 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 5:52:13 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 5:52:14 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 5:52:14 pm]: Server started on port 3000
+[INFO] [19/03/2023, 5:52:14 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 5:52:14 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 5:52:14 pm]: Connected to JWT table
+[INFO] [19/03/2023, 5:52:53 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 5:52:53 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 5:52:53 pm]: Server started on port 3000
+[INFO] [19/03/2023, 5:52:53 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 5:52:53 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 5:52:53 pm]: Connected to JWT table
+[INFO] [19/03/2023, 5:55:37 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 5:55:37 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 5:55:37 pm]: Server started on port 3000
+[INFO] [19/03/2023, 5:55:37 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 5:55:37 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 5:55:37 pm]: Connected to JWT table
+[INFO] [19/03/2023, 5:55:39 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 5:55:39 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 5:55:39 pm]: Server started on port 3000
+[INFO] [19/03/2023, 5:55:39 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 5:55:39 pm]: Connected to JWT table
+[INFO] [19/03/2023, 5:55:39 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:01:20 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 6:01:20 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 6:01:20 pm]: Server started on port 3000
+[INFO] [19/03/2023, 6:01:20 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:01:20 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:01:20 pm]: Connected to JWT table
+[INFO] [19/03/2023, 6:04:12 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 6:04:12 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 6:04:12 pm]: Server started on port 3000
+[INFO] [19/03/2023, 6:04:12 pm]: Connected to JWT table
+[INFO] [19/03/2023, 6:04:12 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:04:12 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:04:18 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 6:04:18 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 6:04:18 pm]: Server started on port 3000
+[INFO] [19/03/2023, 6:04:18 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:04:18 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:04:18 pm]: Connected to JWT table
+[INFO] [19/03/2023, 6:04:58 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 6:04:58 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 6:04:58 pm]: Server started on port 3000
+[INFO] [19/03/2023, 6:04:58 pm]: Connected to JWT table
+[INFO] [19/03/2023, 6:04:58 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:04:58 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:05:01 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 6:05:01 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 6:05:01 pm]: Server started on port 3000
+[INFO] [19/03/2023, 6:05:01 pm]: Connected to JWT table
+[INFO] [19/03/2023, 6:05:01 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:05:01 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:05:43 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 6:05:43 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 6:05:43 pm]: Server started on port 3000
+[INFO] [19/03/2023, 6:05:43 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:05:43 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:05:43 pm]: Connected to JWT table
+[INFO] [19/03/2023, 6:05:48 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 6:05:48 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 6:05:48 pm]: Server started on port 3000
+[INFO] [19/03/2023, 6:05:48 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:05:48 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:05:48 pm]: Connected to JWT table
+[INFO] [19/03/2023, 6:05:55 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 6:05:55 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 6:05:55 pm]: Server started on port 3000
+[INFO] [19/03/2023, 6:05:55 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:05:55 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:05:55 pm]: Connected to JWT table
+[INFO] [19/03/2023, 6:12:32 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 6:12:32 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 6:12:32 pm]: Server started on port 3000
+[INFO] [19/03/2023, 6:12:32 pm]: Connected to JWT table
+[INFO] [19/03/2023, 6:12:32 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:12:32 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:12:35 pm]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 6:12:35 pm]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [19/03/2023, 6:12:35 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:12:35 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:12:35 pm]: Connected to JWT table
+[INFO] [19/03/2023, 6:12:49 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 6:12:49 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 6:12:49 pm]: Server started on port 3000
+[INFO] [19/03/2023, 6:12:49 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:12:49 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:12:49 pm]: Connected to JWT table
+[INFO] [19/03/2023, 6:12:51 pm]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 6:12:51 pm]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [19/03/2023, 6:12:51 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:12:51 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:12:51 pm]: Connected to JWT table
+[SUCCESS] [19/03/2023, 6:12:51 pm]: Successfully written to: views/movies/_form.ejs
+[SUCCESS] [19/03/2023, 6:12:51 pm]: Successfully written to: views/movies/_head.ejs
+[SUCCESS] [19/03/2023, 6:12:51 pm]: Successfully written to: views/movies/edit.ejs
+[SUCCESS] [19/03/2023, 6:12:51 pm]: Successfully written to: views/movies/index.ejs
+[SUCCESS] [19/03/2023, 6:12:51 pm]: Successfully written to: views/movies/new.ejs
+[SUCCESS] [19/03/2023, 6:12:51 pm]: Successfully written to: views/movies/movie.ejs
+[INFO] [19/03/2023, 6:13:50 pm]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 6:13:50 pm]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [19/03/2023, 6:13:50 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:13:50 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:13:50 pm]: Connected to JWT table
+[SUCCESS] [19/03/2023, 6:13:50 pm]: Successfully written to: views/movies/_form.ejs
+[SUCCESS] [19/03/2023, 6:13:50 pm]: Successfully written to: views/movies/_head.ejs
+[SUCCESS] [19/03/2023, 6:13:50 pm]: Successfully written to: views/movies/edit.ejs
+[SUCCESS] [19/03/2023, 6:13:50 pm]: Successfully written to: views/movies/index.ejs
+[SUCCESS] [19/03/2023, 6:13:50 pm]: Successfully written to: views/movies/new.ejs
+[SUCCESS] [19/03/2023, 6:13:50 pm]: Successfully written to: views/movies/movie.ejs
+[INFO] [19/03/2023, 6:14:20 pm]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 6:14:20 pm]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [19/03/2023, 6:14:20 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:14:20 pm]: Connected to JWT table
+[INFO] [19/03/2023, 6:14:20 pm]: Foreign keys have been turned ON 
+[SUCCESS] [19/03/2023, 6:14:20 pm]: Successfully written to: views/movies/_form.ejs
+[SUCCESS] [19/03/2023, 6:14:20 pm]: Successfully written to: views/movies/_head.ejs
+[SUCCESS] [19/03/2023, 6:14:20 pm]: Successfully written to: views/movies/edit.ejs
+[SUCCESS] [19/03/2023, 6:14:20 pm]: Successfully written to: views/movies/index.ejs
+[SUCCESS] [19/03/2023, 6:14:20 pm]: Successfully written to: views/movies/new.ejs
+[SUCCESS] [19/03/2023, 6:14:20 pm]: Successfully written to: views/movies/movie.ejs
+[INFO] [19/03/2023, 6:15:09 pm]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 6:15:09 pm]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [19/03/2023, 6:15:09 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:15:09 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:15:09 pm]: Connected to JWT table
+[SUCCESS] [19/03/2023, 6:15:09 pm]: Successfully written to: views/movies/_form.ejs
+[SUCCESS] [19/03/2023, 6:15:09 pm]: Successfully written to: views/movies/_head.ejs
+[SUCCESS] [19/03/2023, 6:15:09 pm]: Successfully written to: views/movies/edit.ejs
+[SUCCESS] [19/03/2023, 6:15:09 pm]: Successfully written to: views/movies/index.ejs
+[SUCCESS] [19/03/2023, 6:15:09 pm]: Successfully written to: views/movies/new.ejs
+[SUCCESS] [19/03/2023, 6:15:09 pm]: Successfully written to: views/movies/movie.ejs
+[INFO] [19/03/2023, 6:15:38 pm]: Successfully connected to database: 'database.db'
+[SUCCESS] [19/03/2023, 6:15:38 pm]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [19/03/2023, 6:15:38 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 6:15:38 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 6:15:38 pm]: Connected to JWT table
+[SUCCESS] [19/03/2023, 6:15:38 pm]: Successfully written to: views/movies/_form.ejs
+[SUCCESS] [19/03/2023, 6:15:38 pm]: Successfully written to: views/movies/_head.ejs
+[SUCCESS] [19/03/2023, 6:15:38 pm]: Successfully written to: views/movies/edit.ejs
+[SUCCESS] [19/03/2023, 6:15:38 pm]: Successfully written to: views/movies/index.ejs
+[SUCCESS] [19/03/2023, 6:15:38 pm]: Successfully written to: views/movies/new.ejs
+[SUCCESS] [19/03/2023, 6:15:38 pm]: Successfully written to: views/movies/movie.ejs
+[INFO] [19/03/2023, 11:50:03 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 11:50:03 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 11:50:03 pm]: Server started on port 3000
+[INFO] [19/03/2023, 11:50:03 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 11:50:03 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 11:50:03 pm]: Connected to JWT table
+[INFO] [19/03/2023, 11:50:05 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 11:50:05 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 11:50:05 pm]: Server started on port 3000
+[INFO] [19/03/2023, 11:50:05 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 11:50:05 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 11:50:05 pm]: Connected to JWT table
+[INFO] [19/03/2023, 11:50:42 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 11:50:42 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 11:50:42 pm]: Server started on port 3000
+[INFO] [19/03/2023, 11:50:42 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 11:50:42 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 11:50:42 pm]: Connected to JWT table
+[INFO] [19/03/2023, 11:53:04 pm]: Successfully connected to database: 'database.db'
+[QUERY] [19/03/2023, 11:53:04 pm]: SELECT * FROM companies;
+
+[INFO] [19/03/2023, 11:53:04 pm]: Server started on port 3000
+[INFO] [19/03/2023, 11:53:04 pm]: Connected to migration versioning table
+[INFO] [19/03/2023, 11:53:04 pm]: Foreign keys have been turned ON 
+[INFO] [19/03/2023, 11:53:04 pm]: Connected to JWT table
+[INFO] [20/03/2023, 12:00:36 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:00:36 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:00:36 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:00:36 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:00:36 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:00:36 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:01:42 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:01:42 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:01:42 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:01:42 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:01:42 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:01:42 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:03:27 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:03:27 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:03:27 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:03:27 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:03:27 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:03:27 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:08:23 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:08:23 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:08:23 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:08:23 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:08:23 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:08:23 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:08:58 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:08:58 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:08:58 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:08:58 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:08:58 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:08:58 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:13:26 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:13:26 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:13:26 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:13:26 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:13:26 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:13:26 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:13:34 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:13:34 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:13:34 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:13:34 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:13:34 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:13:34 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:14:41 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:14:41 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:14:41 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:14:41 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:14:41 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:14:41 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:14:43 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:14:43 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:14:43 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:14:43 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:14:43 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:14:43 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:18:32 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:18:32 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:18:32 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:18:32 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:18:32 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:18:32 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:18:34 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:18:34 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:18:34 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:18:34 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:18:34 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:18:34 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:18:36 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:18:36 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:18:36 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:18:36 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:18:36 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:18:36 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:19:34 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:19:34 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:19:34 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:19:34 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:19:34 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:19:34 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:19:35 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:19:35 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:19:35 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:19:35 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:19:35 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:19:35 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:20:23 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:20:23 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:20:23 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:20:23 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:20:23 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:20:23 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:20:24 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:20:24 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:20:24 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:20:24 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:20:24 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:20:24 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:20:47 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:20:47 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:20:47 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:20:47 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:20:47 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:20:47 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:20:49 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:20:49 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:20:49 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:20:49 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:20:49 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:20:49 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:21:38 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:21:38 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:21:38 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:21:38 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:21:38 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:21:38 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:21:41 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:21:41 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:21:41 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:21:41 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:21:41 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:21:41 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:21:48 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:21:48 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:21:48 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:21:48 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:21:48 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:21:48 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:21:50 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:21:50 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:21:50 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:21:50 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:21:50 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:21:50 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:22:23 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:22:23 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:22:23 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:22:23 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:22:23 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:22:23 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:22:25 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:22:25 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:22:25 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:22:25 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:22:25 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:22:25 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:22:31 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:22:31 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:22:31 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:22:31 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:22:31 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:22:31 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:22:33 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:22:33 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:22:33 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:22:33 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:22:33 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:22:33 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:22:53 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:22:53 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:22:53 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:22:53 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:22:53 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:22:53 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:22:55 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:22:55 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:22:55 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:22:55 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:22:55 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:22:55 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:23:38 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:23:38 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:23:38 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:23:38 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:23:38 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:23:38 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:23:40 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:23:40 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:23:40 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:23:40 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:23:40 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:23:40 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:24:22 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:24:22 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:24:22 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:24:22 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:24:22 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:24:22 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:24:25 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:24:25 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:24:25 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:24:25 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:24:25 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:24:25 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:24:31 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:24:31 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:24:31 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:24:31 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:24:31 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:24:31 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:26:16 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:26:16 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:26:16 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:26:16 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:26:16 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:26:16 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:26:20 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:26:20 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:26:20 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:26:20 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:26:20 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:26:20 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:28:35 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:28:35 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:28:35 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:28:35 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:28:35 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:28:35 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:28:37 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:28:37 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:28:37 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:28:37 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:28:37 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:28:37 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:28:47 am]: Successfully connected to database: 'database.db'
+[SUCCESS] [20/03/2023, 12:28:47 am]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [20/03/2023, 12:28:47 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:28:47 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:28:47 am]: Connected to migration versioning table
+[SUCCESS] [20/03/2023, 12:28:47 am]: Successfully written to: views/movies/_form.ejs
+[SUCCESS] [20/03/2023, 12:28:47 am]: Successfully written to: views/movies/_head.ejs
+[SUCCESS] [20/03/2023, 12:28:47 am]: Successfully written to: views/movies/edit.ejs
+[SUCCESS] [20/03/2023, 12:28:47 am]: Successfully written to: views/movies/index.ejs
+[SUCCESS] [20/03/2023, 12:28:47 am]: Successfully written to: views/movies/new.ejs
+[SUCCESS] [20/03/2023, 12:28:47 am]: Successfully written to: views/movies/movie.ejs
+[INFO] [20/03/2023, 12:29:41 am]: Started GET "/movies/" at 20/03/2023, 12:29:41 am
+[QUERY] [20/03/2023, 12:29:41 am]: SELECT * FROM movies;
+
+[INFO] [20/03/2023, 12:29:41 am]: Completed 304 Not Modified in 17.14 ms
+[INFO] [20/03/2023, 12:29:42 am]: Started GET "/movies/new" at 20/03/2023, 12:29:42 am
+[ERROR] [20/03/2023, 12:29:42 am]: 400 ReferenceError: /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/movies/new.ejs:4
+    2|   <div class="container mt-4">
+    3|     <h1>Create Movie</h1>
+ >> 4|     <%- include ('./_form.ejs', { movie }) %>
+    5|   </div>
+    6|   <%- include(locals.LayoutPages._tail) %>
+    7| 
+
+/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/movies/_form.ejs:17
+    15|     <label for="theater_id" class="form-label">
+    16|       <select name="theater_id" class="form-select">
+ >> 17|         <% theaters.forEach(theater => { %>
+    18|           <option value="<%= theater_id.id %>"><%= theater.id %></option>
+    19|         <% }) %>
+    20|       </select>
+
+theaters is not defined
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/movies/_form.ejs":18:8)
+    at _form (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at include (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:701:39)
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/movies/new.ejs":13:17)
+    at new (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:274:36)
+    at exports.renderFile [as engine] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/view.js:135:8)
+    at tryRender (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/application.js:657:10)
+    at Function.render (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/application.js:609:3)
+[INFO] [20/03/2023, 12:29:42 am]: Completed 302 Found in 13.27 ms
+[INFO] [20/03/2023, 12:29:42 am]: Started GET "/movies/" at 20/03/2023, 12:29:42 am
+[QUERY] [20/03/2023, 12:29:42 am]: SELECT * FROM movies;
+
+[INFO] [20/03/2023, 12:29:42 am]: Completed 200 OK in 6.19 ms
+[INFO] [20/03/2023, 12:33:38 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:33:38 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:33:38 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:33:38 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:33:38 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:33:38 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:33:58 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:33:58 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:33:58 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:33:58 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:33:58 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:33:58 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:35:12 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:35:12 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:35:12 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:35:12 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:35:12 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:35:12 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:35:16 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:35:16 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:35:16 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:35:16 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:35:16 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:35:16 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:35:23 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:35:23 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:35:23 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:35:23 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:35:23 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:35:23 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:35:30 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:35:30 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:35:30 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:35:30 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:35:30 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:35:30 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:36:20 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:36:20 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:36:20 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:36:20 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:36:20 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:36:20 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:36:21 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:36:21 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:36:21 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:36:21 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:36:21 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:36:21 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:36:29 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:36:29 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:36:29 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:36:29 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:36:29 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:36:29 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:37:29 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:37:29 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:37:29 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:37:29 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:37:29 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:37:29 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:37:30 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:37:30 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:37:30 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:37:30 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:37:30 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:37:30 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:38:07 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:38:07 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:38:07 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:38:07 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:38:07 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:38:07 am]: Foreign keys have been turned ON 
+[SUCCESS] [20/03/2023, 12:40:59 am]: Successfully written to: routers/movies.js
+[INFO] [20/03/2023, 12:41:00 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:41:00 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:41:00 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:41:00 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:41:00 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:41:00 am]: Connected to migration versioning table
+[SUCCESS] [20/03/2023, 12:43:55 am]: Successfully written to: routers/movies.js
+[SUCCESS] [20/03/2023, 12:45:13 am]: Successfully written to: routers/movies.js
+[SUCCESS] [20/03/2023, 12:46:11 am]: Successfully written to: routers/movies.js
+[INFO] [20/03/2023, 12:46:11 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:46:11 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:46:11 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:46:11 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:46:11 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:46:11 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:46:16 am]: Started GET "/movies/new" at 20/03/2023, 12:46:16 am
+[QUERY] [20/03/2023, 12:46:16 am]: SELECT * FROM theaters;
+
+[INFO] [20/03/2023, 12:46:16 am]: Completed 200 OK in 14.7 ms
+[INFO] [20/03/2023, 12:46:23 am]: Started GET "/movies/" at 20/03/2023, 12:46:23 am
+[QUERY] [20/03/2023, 12:46:23 am]: SELECT * FROM movies;
+
+[INFO] [20/03/2023, 12:46:23 am]: Completed 200 OK in 9.19 ms
+[INFO] [20/03/2023, 12:46:24 am]: Started GET "/theaters/" at 20/03/2023, 12:46:24 am
+[QUERY] [20/03/2023, 12:46:24 am]: SELECT * FROM theaters;
+
+[INFO] [20/03/2023, 12:46:24 am]: Completed 200 OK in 5.37 ms
+[INFO] [20/03/2023, 12:46:25 am]: Started GET "/theaters/new" at 20/03/2023, 12:46:25 am
+[INFO] [20/03/2023, 12:46:25 am]: Completed 200 OK in 5.55 ms
+[INFO] [20/03/2023, 12:46:31 am]: Started POST "/theaters/new" at 20/03/2023, 12:46:31 am
+[QUERY] [20/03/2023, 12:46:31 am]: INSERT INTO theaters (name, location, created_at, updated_at) VALUES ($name, $location, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[INFO] [20/03/2023, 12:46:31 am]: Completed 302 Found in 4.45 ms
+[INFO] [20/03/2023, 12:46:31 am]: Started GET "/theaters/" at 20/03/2023, 12:46:31 am
+[QUERY] [20/03/2023, 12:46:31 am]: SELECT * FROM theaters;
+
+[INFO] [20/03/2023, 12:46:31 am]: Completed 200 OK in 2.62 ms
+[INFO] [20/03/2023, 12:46:33 am]: Started GET "/theaters/new" at 20/03/2023, 12:46:33 am
+[INFO] [20/03/2023, 12:46:33 am]: Completed 200 OK in 4.12 ms
+[INFO] [20/03/2023, 12:46:39 am]: Started POST "/theaters/new" at 20/03/2023, 12:46:39 am
+[QUERY] [20/03/2023, 12:46:39 am]: INSERT INTO theaters (name, location, created_at, updated_at) VALUES ($name, $location, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[INFO] [20/03/2023, 12:46:39 am]: Completed 302 Found in 5.77 ms
+[INFO] [20/03/2023, 12:46:39 am]: Started GET "/theaters/" at 20/03/2023, 12:46:39 am
+[QUERY] [20/03/2023, 12:46:39 am]: SELECT * FROM theaters;
+
+[INFO] [20/03/2023, 12:46:39 am]: Completed 200 OK in 7.02 ms
+[INFO] [20/03/2023, 12:46:41 am]: Started GET "/movies/" at 20/03/2023, 12:46:41 am
+[QUERY] [20/03/2023, 12:46:41 am]: SELECT * FROM movies;
+
+[INFO] [20/03/2023, 12:46:41 am]: Completed 304 Not Modified in 9.02 ms
+[INFO] [20/03/2023, 12:46:42 am]: Started GET "/movies/new" at 20/03/2023, 12:46:42 am
+[QUERY] [20/03/2023, 12:46:42 am]: SELECT * FROM theaters;
+
+[ERROR] [20/03/2023, 12:46:42 am]: 400 ReferenceError: /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/movies/new.ejs:4
+    2|   <div class="container mt-4">
+    3|     <h1>Create Movie</h1>
+ >> 4|     <%- include ('./_form.ejs', { movie }) %>
+    5|   </div>
+    6|   <%- include(locals.LayoutPages._tail) %>
+    7| 
+
+/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/movies/_form.ejs:18
+    16|       <select name="theater_id" class="form-select">
+    17|         <% theaters.forEach(theater => { %>
+ >> 18|           <option value="<%= theater_id.id %>"><%= theater.id %></option>
+    19|         <% }) %>
+    20|       </select>
+    21|     </label>
+
+theater_id is not defined
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/movies/_form.ejs":21:26)
+    at Array.forEach (<anonymous>)
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/movies/_form.ejs":18:17)
+    at _form (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at include (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:701:39)
+    at eval ("/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/views/movies/new.ejs":13:17)
+    at new (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:703:17)
+    at tryHandleCache (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:274:36)
+    at exports.renderFile [as engine] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/ejs/lib/ejs.js:491:10)
+    at View.render (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/view.js:135:8)
+[INFO] [20/03/2023, 12:46:42 am]: Completed 302 Found in 10.89 ms
+[INFO] [20/03/2023, 12:46:42 am]: Started GET "/movies/" at 20/03/2023, 12:46:42 am
+[QUERY] [20/03/2023, 12:46:42 am]: SELECT * FROM movies;
+
+[INFO] [20/03/2023, 12:46:42 am]: Completed 200 OK in 5.79 ms
+[INFO] [20/03/2023, 12:47:22 am]: Successfully connected to database: 'database.db'
+[SUCCESS] [20/03/2023, 12:47:22 am]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [20/03/2023, 12:47:22 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:47:22 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:47:22 am]: Connected to JWT table
+[SUCCESS] [20/03/2023, 12:47:22 am]: Successfully written to: views/movies/_form.ejs
+[SUCCESS] [20/03/2023, 12:47:22 am]: Successfully written to: views/movies/_head.ejs
+[SUCCESS] [20/03/2023, 12:47:22 am]: Successfully written to: views/movies/edit.ejs
+[SUCCESS] [20/03/2023, 12:47:22 am]: Successfully written to: views/movies/index.ejs
+[SUCCESS] [20/03/2023, 12:47:22 am]: Successfully written to: views/movies/new.ejs
+[SUCCESS] [20/03/2023, 12:47:22 am]: Successfully written to: views/movies/movie.ejs
+[INFO] [20/03/2023, 12:47:26 am]: Started GET "/movies/" at 20/03/2023, 12:47:26 am
+[QUERY] [20/03/2023, 12:47:26 am]: SELECT * FROM movies;
+
+[INFO] [20/03/2023, 12:47:26 am]: Completed 200 OK in 4.6 ms
+[INFO] [20/03/2023, 12:47:27 am]: Started GET "/movies/new" at 20/03/2023, 12:47:27 am
+[QUERY] [20/03/2023, 12:47:27 am]: SELECT * FROM theaters;
+
+[INFO] [20/03/2023, 12:47:27 am]: Completed 200 OK in 6.51 ms
+[INFO] [20/03/2023, 12:48:13 am]: Successfully connected to database: 'database.db'
+[SUCCESS] [20/03/2023, 12:48:13 am]: Successfully written to: views/_layouts/partials/_navLinks.ejs
+[INFO] [20/03/2023, 12:48:13 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:48:13 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:48:13 am]: Connected to JWT table
+[SUCCESS] [20/03/2023, 12:48:13 am]: Successfully written to: views/movies/_form.ejs
+[SUCCESS] [20/03/2023, 12:48:13 am]: Successfully written to: views/movies/_head.ejs
+[SUCCESS] [20/03/2023, 12:48:13 am]: Successfully written to: views/movies/edit.ejs
+[SUCCESS] [20/03/2023, 12:48:13 am]: Successfully written to: views/movies/index.ejs
+[SUCCESS] [20/03/2023, 12:48:13 am]: Successfully written to: views/movies/new.ejs
+[SUCCESS] [20/03/2023, 12:48:13 am]: Successfully written to: views/movies/movie.ejs
+[INFO] [20/03/2023, 12:48:17 am]: Started GET "/movies/new" at 20/03/2023, 12:48:17 am
+[QUERY] [20/03/2023, 12:48:17 am]: SELECT * FROM theaters;
+
+[INFO] [20/03/2023, 12:48:17 am]: Completed 200 OK in 6.44 ms
+[INFO] [20/03/2023, 12:48:22 am]: Started POST "/movies/new" at 20/03/2023, 12:48:22 am
+[QUERY] [20/03/2023, 12:48:22 am]: INSERT INTO movies (name, year, theater_id, created_at, updated_at) VALUES ($name, $year, $theater_id, DATETIME('now'), DATETIME('now')) RETURNING *;
+
+[INFO] [20/03/2023, 12:48:22 am]: Completed 302 Found in 4.72 ms
+[INFO] [20/03/2023, 12:48:22 am]: Started GET "/movies/" at 20/03/2023, 12:48:22 am
+[QUERY] [20/03/2023, 12:48:22 am]: SELECT * FROM movies;
+
+[INFO] [20/03/2023, 12:48:22 am]: Completed 200 OK in 6.82 ms
+[INFO] [20/03/2023, 12:48:27 am]: Started GET "/movies/edit/1" at 20/03/2023, 12:48:27 am
+[QUERY] [20/03/2023, 12:48:27 am]: SELECT * FROM movies WHERE id=$id;
+
+[QUERY] [20/03/2023, 12:48:27 am]: SELECT * FROM theaters;
+
+[INFO] [20/03/2023, 12:48:27 am]: Completed 200 OK in 7.38 ms
+[INFO] [20/03/2023, 12:48:31 am]: Started POST "/movies/edit/1" at 20/03/2023, 12:48:31 am
+[QUERY] [20/03/2023, 12:48:31 am]: UPDATE movies SET name=$name, year=$year, theater_id=$theater_id, updated_at=DATETIME('now')  WHERE id=$id RETURNING *;
+
+[INFO] [20/03/2023, 12:48:31 am]: Completed 302 Found in 4.14 ms
+[INFO] [20/03/2023, 12:48:31 am]: Started GET "/movies/" at 20/03/2023, 12:48:31 am
+[QUERY] [20/03/2023, 12:48:31 am]: SELECT * FROM movies;
+
+[INFO] [20/03/2023, 12:48:31 am]: Completed 200 OK in 5.08 ms

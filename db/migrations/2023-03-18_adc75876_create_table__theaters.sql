@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS theaters (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT,
+  location TEXT,
+  created_at NUMERIC DEFAULT (DATETIME('NOW')),
+  updated_at NUMERIC DEFAULT (DATETIME('NOW'))
+);

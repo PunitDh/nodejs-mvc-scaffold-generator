@@ -3,8 +3,7 @@ CREATE TABLE IF NOT EXISTS movies (
   created_at NUMERIC DEFAULT (DATETIME('NOW')),
   updated_at NUMERIC DEFAULT (DATETIME('NOW')),
   name TEXT,
-  description TEXT,
   year NUMERIC,
   theater_id INTEGER,
-  FOREIGN KEY(theater_id) REFERENCES theaters(id) ON DELETE CASCADE ON UPDATE CASCADE
+ FOREIGN KEY(theater_id) REFERENCES theaters(id) ON DELETE CASCADE ON UPDATE CASCADE
 );

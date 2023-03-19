@@ -178,10 +178,10 @@ export class MigrationBuilder {
             "DATE"
           ).withConstraint("DEFAULT (DATETIME('now'))"),
         ];
-        this.timeStamps && this.columns.unshift(...timeStampColumns);
         this.idColumn && this.columns.unshift(...idColumn);
+        this.timeStamps && this.columns.push(...timeStampColumns);
         query =
-          "CREATE TABLE IF NOT EXISTS {{table}} (\n{{#columns}} {{name}} {{type}}{{#constraints}} {{{.}}}{{/constraints}}{{#unless @last}},\n{{/unless}}{{/columns}}{{#foreignKeys}}{{#if @first}},\n{{/if}} FOREIGN KEY({{thisColumn}}) REFERENCES {{otherTable}}({{otherColumn}}){{#onDelete}} ON DELETE {{.}}{{/onDelete}}{{#onUpdate}} ON UPDATE {{.}}{{/onUpdate}}{{#unless @last}},\n{{/unless}}{{/foreignKeys}}\n);\n";
+          "CREATE TABLE IF NOT EXISTS {{table}} (\n{{#columns}}  {{name}} {{type}}{{#constraints}} {{{.}}}{{/constraints}}{{#unless @last}},\n{{/unless}}{{/columns}}{{#foreignKeys}}{{#if @first}},\n{{/if}} FOREIGN KEY({{thisColumn}}) REFERENCES {{otherTable}}({{otherColumn}}){{#onDelete}} ON DELETE {{.}}{{/onDelete}}{{#onUpdate}} ON UPDATE {{.}}{{/onUpdate}}{{#unless @last}},\n{{/unless}}{{/foreignKeys}}\n);\n";
         break;
       }
       case MigrationActions.DROP:

@@ -2,7 +2,7 @@ import SQLiteColumn from "../bin/domain/SQLiteColumn.js";
 import SQLiteTable from "../bin/domain/SQLiteTable.js";
 import { getTableNameFromModel } from "../bin/utils/model_utils.js";
 import "../bin/utils/js_utils.js";
-import { ViewColumn } from "../bin/generators/types.js";
+import { ViewColumn } from "../bin/domain/ViewColumn.js";
 
 async function getColumnsFromSchema() {
   const table = getTableNameFromModel(process.argv.third());

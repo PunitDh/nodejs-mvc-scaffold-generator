@@ -6,30 +6,28 @@
 //
 // """
 
-
 /**
  * WIP
  */
 
-
 import fs from "fs";
 import path from "path";
 import "../utils/js_utils.js";
-import { MigrationActions, PATHS, SQLColumnTypes, SQLForeignKeyReferences } from "../constants.js";
+import { MigrationActions, PATHS, SQLReferences } from "../constants.js";
 import { GeneratorError } from "../errors.js";
 import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
 import Handlebars from "../utils/handlebars.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
-import { AuthInfo } from "./types.js";
 import SQLiteTable from "../domain/SQLiteTable.js";
 import {
-  Column,
-  ForeignKey,
+  MigrationColumn,
   MigrationBuilder,
+  MigrationForeignKey,
 } from "../builders/MigrationBuilder.js";
 import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 import { writeFileSync } from "../utils/file_utils.js";
+import AuthInfo from "../domain/AuthInfo.js";
 
 await generateAuth();
 
@@ -76,23 +74,24 @@ export async function generateAuth(command) {
     // Add migration
     const cols = args.map((arg) => arg.split(":"));
     const refs = cols.filter(([_, constraint]) =>
-      constraint.equalsIgnoreCase(SQLForeignKeyReferences)
+      constraint.equalsIgnoreCase(SQLReferences)
     );
     const nonRefs = cols.filter(
-      ([_, constraint]) => !constraint.equalsIgnoreCase(SQLForeignKeyReferences)
+      ([_, constraint]) => !constraint.equalsIgnoreCase(SQLReferences)
     );
     const columns = nonRefs.map(
-      ([name, type, ...constraints]) => new Column(name, type, ...constraints)
+      ([name, type, ...constraints]) =>
+        new MigrationColumn(name, type, ...constraints)
     );
     const foreignKeys = refs.map(
-      ([referenceTable]) => new ForeignKey(referenceTable)
+      ([referenceTable]) => new MigrationForeignKey(referenceTable)
     );
 
     const createdMigration = new MigrationBuilder()
       .createTable(model)
       .withColumns(...columns)
       .withForeignKeys(...foreignKeys)
-      .buildQuery();
+      .generateQuery();
 
     const action = MigrationActions.CREATE.toLowerCase();
     const table = "table";

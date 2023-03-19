@@ -10,13 +10,11 @@ import "../utils/js_utils.js";
 import LOGGER from "../logger.js";
 import Handlebars from "../utils/handlebars.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
-import { ViewColumn } from "./types.js";
 import { getSchema } from "../utils/schema_utils.js";
 import pluralize from "pluralize";
 import { LOCATIONS, PATHS } from "../constants.js";
 import { writeFileSync } from "../utils/file_utils.js";
 import SQLiteColumn from "../domain/SQLiteColumn.js";
-import SQLiteTable from "../domain/SQLiteTable.js";
 
 export async function generateViews(command) {
   const argvs = command?.split(" ").slice(3) || process.argv.slice(2);

@@ -96,7 +96,7 @@ export const SQLForeignKeyActions = {
   SET_DEFAULT: "SET DEFAULT",
 };
 
-export const SQLForeignKeyReferences = "REFERENCES";
+export const SQLReferences = "REFERENCES";
 
 export const HTMLInputTypes = {
   NUMERIC: "number",

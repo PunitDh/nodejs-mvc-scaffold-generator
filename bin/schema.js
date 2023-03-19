@@ -1,6 +1,5 @@
 import DB from "./db.js";
 import SQLiteColumn from "./domain/SQLiteColumn.js";
-import SQLiteTable from "./domain/SQLiteTable.js";
 import LOGGER from "./logger.js";
 import { getSchema, saveSchema } from "./utils/schema_utils.js";
 import settings from "./utils/settings.js";

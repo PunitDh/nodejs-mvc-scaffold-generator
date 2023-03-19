@@ -1,3 +1,5 @@
+import DB from "../db.js";
+import LOGGER from "../logger.js";
 import "../utils/js_utils.js";
 
 const QueryAction = {
@@ -109,6 +111,20 @@ class SQLQueryBuilder {
   limit(lim) {
     this.lim = lim;
     return this;
+  }
+
+  execute() {
+    return new Promise((resolve, reject) => {
+      const query = this.build();
+      DB.all(query, [...arguments], function (err, rows) {
+        LOGGER.query(query);
+        if (err) {
+          LOGGER.error(err);
+          return reject(err);
+        }
+        return resolve(rows);
+      });
+    });
   }
 
   build() {

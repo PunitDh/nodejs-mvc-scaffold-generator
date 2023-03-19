@@ -1612,3 +1612,1095 @@ theater_id is not defined
 [QUERY] [20/03/2023, 12:48:31 am]: SELECT * FROM movies;
 
 [INFO] [20/03/2023, 12:48:31 am]: Completed 200 OK in 5.08 ms
+[INFO] [20/03/2023, 12:51:33 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:51:33 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:51:33 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:51:33 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:51:33 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:51:33 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:52:36 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:52:36 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:52:36 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:52:36 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:52:36 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:52:36 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:52:50 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:52:50 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:52:50 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:52:50 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:52:50 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:52:50 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:52:55 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:52:55 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:52:55 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:52:55 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:52:55 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:52:55 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:53:35 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:53:35 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:53:35 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:53:35 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:53:35 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:53:35 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:53:38 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:53:38 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:53:38 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:53:38 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:53:38 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:53:38 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:53:51 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:53:51 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:53:51 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:53:51 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:53:51 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:53:51 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:56:44 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:56:44 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:56:44 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:56:44 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:56:44 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:56:44 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:57:13 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:57:13 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:57:13 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:57:13 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:57:13 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:57:13 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:57:40 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:57:40 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:57:40 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:57:40 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:57:40 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:57:40 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:58:53 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:58:53 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:58:53 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:58:53 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 12:58:53 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:58:53 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:59:18 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 12:59:18 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 12:59:18 am]: Server started on port 3000
+[INFO] [20/03/2023, 12:59:18 am]: Connected to JWT table
+[INFO] [20/03/2023, 12:59:18 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 12:59:18 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:00:47 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:00:47 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:00:47 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:00:47 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:00:47 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:00:47 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:01:10 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:01:10 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:01:10 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:01:10 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:01:10 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:01:10 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:01:13 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:01:13 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:01:13 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:01:13 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:01:13 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:01:13 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:01:14 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:01:14 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:01:14 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:01:14 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:01:14 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:01:14 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:03:05 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:03:05 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:03:05 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:03:05 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:03:05 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:03:05 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:10:04 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:10:04 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:10:04 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:10:04 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:10:04 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:10:04 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:10:05 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:10:05 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:10:05 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:10:05 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:10:05 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:10:05 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:10:07 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:10:07 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:10:07 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:10:07 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:10:07 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:10:07 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:19:05 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:19:05 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:19:05 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:19:05 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:19:05 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:19:05 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:19:08 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:19:08 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:19:08 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:19:08 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:19:08 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:19:08 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:23:22 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:23:22 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:23:22 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:23:22 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:23:22 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:23:22 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:25:32 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:25:32 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:25:32 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:25:32 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:25:32 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:25:32 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:27:16 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:27:16 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:27:16 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:27:16 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:27:16 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:27:16 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:28:01 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:28:01 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:28:01 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:28:01 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:28:01 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:28:01 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:30:29 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:30:29 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:30:29 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:30:29 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:30:29 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:30:29 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:30:49 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:30:49 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:30:49 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:30:49 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:30:49 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:30:49 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:32:20 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:32:20 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:32:20 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:32:20 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:32:20 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:32:20 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:32:36 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:32:36 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:32:36 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:32:36 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:32:36 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:32:36 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:35:10 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:35:10 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:35:10 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:35:10 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:35:10 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:35:10 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:35:35 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:35:35 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:35:35 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:35:35 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:35:35 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:35:35 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:36:00 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:36:00 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:36:00 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:36:00 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:36:00 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:36:00 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:36:57 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:36:57 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:36:57 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:36:57 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:36:57 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:36:57 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:39:10 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:39:10 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:39:10 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:39:10 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:39:10 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:39:10 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:40:27 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:40:27 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:40:27 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:40:27 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:40:27 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:40:27 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:41:16 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:41:16 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:41:16 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:41:16 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:41:16 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:41:16 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:41:26 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:41:26 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:41:26 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:41:26 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:41:26 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:41:26 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:43:42 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:43:42 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:43:42 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:43:42 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:43:42 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:43:42 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:44:06 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:44:06 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:44:06 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:44:06 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:44:06 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:44:06 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:45:13 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:45:13 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:45:13 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:45:13 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:45:13 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:45:13 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:46:41 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:46:41 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:46:41 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:46:41 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:46:41 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:46:41 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:47:44 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:47:44 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:47:44 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:47:44 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:47:44 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:47:44 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:53:24 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:53:24 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:53:24 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:53:24 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:53:24 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:53:24 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:55:20 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:55:20 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:55:20 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:55:20 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:55:20 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:55:20 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:56:31 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:56:31 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:56:31 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:56:31 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:56:31 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:56:31 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:58:38 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:58:38 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:58:38 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:58:38 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:58:38 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:58:38 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:59:10 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:59:10 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:59:10 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:59:10 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:59:10 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:59:10 am]: Connected to JWT table
+[INFO] [20/03/2023, 1:59:54 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 1:59:54 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 1:59:54 am]: Server started on port 3000
+[INFO] [20/03/2023, 1:59:54 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 1:59:54 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 1:59:54 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:01:22 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:01:22 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:01:22 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:01:22 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:01:22 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:01:22 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:02:11 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:02:11 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:02:11 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:02:11 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:02:11 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:02:11 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:02:50 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:02:50 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:02:50 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:02:50 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:02:50 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:02:50 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:03:40 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:03:40 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:03:40 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:03:40 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:03:40 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:03:40 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:04:02 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:04:02 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:04:02 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:04:02 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:04:02 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:04:02 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:04:37 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:04:37 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:04:37 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:04:37 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:04:37 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:04:37 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:05:04 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:05:04 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:05:04 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:05:04 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:05:04 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:05:04 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:05:40 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:05:40 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:05:40 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:05:40 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:05:40 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:05:40 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:05:43 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:05:43 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:05:43 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:05:43 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:05:43 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:05:43 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:06:09 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:06:09 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:06:09 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:06:09 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:06:09 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:06:09 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:06:14 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:06:14 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:06:14 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:06:14 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:06:14 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:06:14 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:09:15 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:09:15 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:09:15 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:09:15 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:09:15 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:09:15 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:09:37 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:09:37 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:09:37 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:09:37 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:09:37 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:09:37 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:09:41 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:09:41 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:09:41 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:09:41 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:09:41 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:09:41 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:10:38 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:10:38 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:10:38 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:10:38 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:10:38 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:10:38 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:11:26 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:11:26 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:11:26 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:11:26 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:11:26 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:11:26 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:12:13 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:12:13 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:12:13 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:12:13 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:12:13 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:12:13 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:12:48 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:12:48 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:12:48 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:12:48 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:12:48 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:12:48 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:15:12 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:15:12 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:15:12 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:15:12 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:15:12 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:15:12 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:15:30 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:15:30 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:15:30 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:15:30 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:15:30 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:15:30 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:15:50 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:15:50 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:15:50 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:15:50 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:15:50 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:15:50 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:31:35 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:31:35 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:31:35 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:31:35 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:31:35 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:31:35 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:32:24 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:32:24 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:32:24 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:32:24 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:32:24 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:32:24 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:41:02 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:41:02 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:41:02 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:41:02 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:41:02 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:41:02 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:41:23 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:41:23 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:41:23 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:41:23 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:41:23 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:41:23 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:42:00 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:42:00 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:42:00 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:42:00 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:42:00 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:42:00 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:44:30 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:44:30 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:44:30 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:44:30 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:44:30 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:44:30 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:44:57 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:44:57 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:44:57 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:44:57 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:44:57 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:44:57 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:45:00 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:45:00 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:45:00 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:45:00 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:45:00 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:45:00 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:45:21 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:45:21 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:45:21 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:45:21 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:45:21 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:45:21 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:46:41 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:46:41 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:46:41 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:46:41 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:46:41 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:46:41 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:47:34 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:47:34 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:47:34 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:47:34 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:47:34 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:47:34 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:47:51 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:47:51 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:47:51 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:47:51 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:47:51 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:47:51 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:48:07 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:48:07 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:48:07 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:48:07 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:48:07 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:48:07 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:49:55 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:49:55 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:49:55 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:49:55 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:49:55 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:49:55 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:51:07 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:51:07 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:51:07 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:51:07 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:51:07 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:51:07 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:51:09 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:51:09 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:51:09 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:51:09 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:51:09 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:51:09 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:51:46 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:51:46 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:51:46 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:51:46 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:51:46 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:51:46 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:53:17 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:53:17 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:53:17 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:53:17 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:53:17 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:53:17 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:53:20 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:53:20 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:53:20 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:53:20 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:53:20 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:53:20 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:53:33 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:53:33 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:53:33 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:53:33 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:53:33 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:53:33 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:53:36 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:53:36 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:53:36 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:53:36 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:53:36 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:53:36 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:53:59 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:53:59 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:53:59 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:53:59 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:53:59 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:53:59 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:54:05 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:54:05 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:54:05 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:54:05 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:54:05 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:54:05 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:54:30 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:54:30 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:54:30 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:54:30 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:54:30 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:54:30 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:55:26 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:55:26 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:55:26 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:55:26 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:55:26 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:55:26 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:57:54 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:57:54 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:57:54 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:57:54 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:57:54 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:57:54 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:57:56 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:57:56 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:57:56 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:57:56 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:57:56 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:57:56 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:58:40 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:58:40 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:58:40 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:58:40 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:58:40 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:58:40 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:58:51 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:58:51 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:58:51 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:58:51 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:58:51 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:58:51 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:59:01 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:59:01 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:59:01 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:59:01 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:59:01 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:59:01 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:59:09 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:59:09 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:59:09 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:59:09 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:59:09 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:59:09 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:59:11 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:59:11 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:59:11 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:59:11 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:59:11 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:59:11 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:59:38 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:59:38 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:59:38 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:59:38 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:59:38 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:59:38 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:59:48 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:59:48 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:59:48 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:59:48 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:59:48 am]: Connected to JWT table
+[INFO] [20/03/2023, 2:59:48 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:59:50 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 2:59:50 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 2:59:50 am]: Server started on port 3000
+[INFO] [20/03/2023, 2:59:50 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 2:59:50 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 2:59:50 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:00:24 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:00:24 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:00:24 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:00:24 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:00:24 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:00:24 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:00:42 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:00:42 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:00:42 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:00:42 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:00:42 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:00:42 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:00:51 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:00:52 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:00:52 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:00:52 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:00:52 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:00:52 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:01:47 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:01:47 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:01:47 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:01:47 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:01:47 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:01:47 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:01:49 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:01:49 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:01:49 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:01:49 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:01:49 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:01:49 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:02:03 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:02:03 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:02:03 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:02:03 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:02:03 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:02:03 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:02:45 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:02:45 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:02:45 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:02:45 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:02:45 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:02:45 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:02:54 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:02:54 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:02:54 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:02:54 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:02:54 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:02:54 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:03:31 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:03:31 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:03:31 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:03:31 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:03:31 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:03:31 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:03:42 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:03:42 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:03:42 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:03:42 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:03:42 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:03:42 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:03:50 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:03:50 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:03:50 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:03:50 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:03:50 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:03:50 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:03:53 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:03:53 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:03:53 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:03:53 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:03:53 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:03:53 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:04:22 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:04:22 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:04:22 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:04:22 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:04:22 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:04:22 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:04:45 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:04:45 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:04:45 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:04:45 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:04:45 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:04:45 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:05:09 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:05:09 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:05:09 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:05:09 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:05:09 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:05:09 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:05:30 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:05:30 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:05:30 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:05:30 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:05:30 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:05:30 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:05:34 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:05:34 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:05:34 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:05:34 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:05:34 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:05:34 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:05:42 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:05:42 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:05:42 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:05:42 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:05:42 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:05:42 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:06:22 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:06:22 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:06:22 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:06:22 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:06:22 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:06:22 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:06:59 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:06:59 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:06:59 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:06:59 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:06:59 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:06:59 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:07:03 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:07:03 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:07:03 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:07:03 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:07:03 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:07:03 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:07:19 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:07:19 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:07:19 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:07:19 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:07:19 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:07:19 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:07:24 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:07:24 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:07:24 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:07:24 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:07:24 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:07:24 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:07:25 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:07:25 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:07:25 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:07:25 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:07:25 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:07:25 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:07:49 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:07:49 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:07:49 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:07:49 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:07:49 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:07:49 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:08:23 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:08:23 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:08:23 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:08:23 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:08:23 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:08:23 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:08:36 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:08:36 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:08:36 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:08:36 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:08:36 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:08:36 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:08:39 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:08:39 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:08:39 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:08:39 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:08:39 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:08:39 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:08:40 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:08:40 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:08:40 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:08:40 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:08:40 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:08:40 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:09:07 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:09:07 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:09:07 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:09:07 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:09:07 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:09:07 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:09:18 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:09:18 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:09:18 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:09:18 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:09:18 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:09:18 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:09:24 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:09:24 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:09:24 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:09:24 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:09:24 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:09:24 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:10:09 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:10:09 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:10:09 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:10:09 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:10:09 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:10:09 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:10:30 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:10:30 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:10:30 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:10:30 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:10:30 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:10:30 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:10:54 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:10:54 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:10:54 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:10:54 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:10:54 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:10:54 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:11:00 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:11:00 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:11:00 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:11:00 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:11:00 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:11:00 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:11:04 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:11:04 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:11:04 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:11:04 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:11:04 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:11:04 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:11:29 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:11:29 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:11:29 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:11:29 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:11:29 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:11:29 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:12:36 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:12:36 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:12:36 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:12:36 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:12:36 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:12:36 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:12:55 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:12:55 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:12:55 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:12:55 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:12:55 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:12:55 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:13:24 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:13:24 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:13:24 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:13:24 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:13:24 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:13:24 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:13:26 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:13:26 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:13:26 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:13:26 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:13:26 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:13:26 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:14:25 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:14:25 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:14:25 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:14:25 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:14:25 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:14:25 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:14:37 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:14:37 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:14:37 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:14:37 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:14:37 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:14:37 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:14:43 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:14:43 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:14:43 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:14:43 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:14:43 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:14:43 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:14:52 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:14:52 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:14:52 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:14:52 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:14:52 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:14:52 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:19:25 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:19:25 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:19:25 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:19:25 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:19:25 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:19:25 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:20:16 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:20:16 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:20:16 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:20:16 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:20:16 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:20:16 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:21:56 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:21:56 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:21:56 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:21:56 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:21:56 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:21:56 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:23:26 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:23:26 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:23:26 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:23:26 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:23:26 am]: Connected to JWT table
+[INFO] [20/03/2023, 3:23:26 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:25:26 am]: Successfully connected to database: 'database.db'
+[QUERY] [20/03/2023, 3:25:26 am]: SELECT * FROM companies;
+
+[INFO] [20/03/2023, 3:25:26 am]: Server started on port 3000
+[INFO] [20/03/2023, 3:25:26 am]: Foreign keys have been turned ON 
+[INFO] [20/03/2023, 3:25:26 am]: Connected to migration versioning table
+[INFO] [20/03/2023, 3:25:26 am]: Connected to JWT table

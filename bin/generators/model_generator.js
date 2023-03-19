@@ -23,28 +23,28 @@ import {
   ForeignKeyOptions,
   MigrationActions,
   PATHS,
-  SQLColumnTypes,
-  SQLForeignKeyReferences,
+  SQLReferences,
 } from "../constants.js";
 import { GeneratorError } from "../errors.js";
 import LOGGER from "../logger.js";
 import SETTINGS from "../utils/settings.js";
 import Handlebars from "../utils/handlebars.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
-import { ModelInfo } from "./types.js";
 import SQLiteTable from "../domain/SQLiteTable.js";
 import {
-  Column,
-  ForeignKey,
+  MigrationColumn,
+  MigrationForeignKey,
   MigrationBuilder,
 } from "../builders/MigrationBuilder.js";
 import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 import { writeFileSync } from "../utils/file_utils.js";
+import { getSchema, saveSchema } from "../utils/schema_utils.js";
 
 export async function generateModel(command) {
   const argvs = command?.split(" ").slice(3) || process.argv.slice(2);
   const [model, ...args] = argvs;
   const folderName = path.join(PATHS.root, SETTINGS.models.location);
+  const tableName = getTableNameFromModel(model);
   const modelFilePath = path.join(folderName, `${model}.js`);
   const templatePath = path.join(PATHS.root, PATHS.bin, PATHS.templates);
   const modelTemplate = path.join(
@@ -52,6 +52,7 @@ export async function generateModel(command) {
     PATHS.models,
     PATHS.modelJsTemplate
   );
+  const schema = getSchema();
 
   if (!command && !fs.existsSync(folderName)) {
     fs.mkdirSync(folderName);
@@ -68,29 +69,17 @@ export async function generateModel(command) {
   }
 
   try {
-    const columnsInfo = parseArguments(args);
-
-    // Write model file
-    const compiledModelFile = Handlebars.compileFile(modelTemplate)(
-      new ModelInfo(model, columnsInfo)
-    );
-    if (command) {
-      LOGGER.test(compiledModelFile);
-    } else {
-      writeFileSync(modelFilePath, compiledModelFile);
-    }
-
-    // Add migration
+    // Parse arguments
     const cols = args.map((arg) => arg.split(":"));
     const refs = cols.filter(([_, constraint]) => {
-      return constraint.equalsIgnoreCase(SQLForeignKeyReferences);
+      return constraint.equalsIgnoreCase(SQLReferences);
     });
     const nonRefs = cols.filter(
-      ([_, constraint]) => !constraint.equalsIgnoreCase(SQLForeignKeyReferences)
+      ([_, constraint]) => !constraint.equalsIgnoreCase(SQLReferences)
     );
     const columns = nonRefs.map(
       ([name, type, ...constraints]) =>
-        new Column(MigrationActions.subActions.ADD, name, type, ...constraints)
+        new MigrationColumn(MigrationActions.subActions.ADD, name, type, ...constraints)
     );
     const foreignKeys = refs.map(([referenceTable, _, ...options]) => {
       const upperCaseOptions = options?.map((option) => option.toUpperCase());
@@ -101,59 +90,48 @@ export async function generateModel(command) {
         ForeignKeyOptions.ONUPDATE
       );
 
-      return new ForeignKey(
+      return new MigrationForeignKey(
         referenceTable,
-        null,
+        "id",
         onDeleteIndex > -1 && options[onDeleteIndex + 1],
         onUpdateIndex > -1 && options[onUpdateIndex + 1]
       );
     });
 
+    // Add migration
     const createdMigration = new MigrationBuilder()
       .createTable(model)
       .withColumns(...columns)
       .withForeignKeys(...foreignKeys)
-      .buildQuery();
+      .build();
 
+    // Update schema file
+    schema.tables[tableName] = createdMigration.toSchemaFormat();
+    saveSchema(schema);
+
+    // Write model file
+    const compiledModelFile =
+      Handlebars.compileFile(modelTemplate)(createdMigration);
+    if (command) {
+      LOGGER.test(compiledModelFile);
+    } else {
+      writeFileSync(modelFilePath, compiledModelFile);
+    }
     const action = MigrationActions.CREATE.toLowerCase();
-    const table = "table";
-    const tableName = getTableNameFromModel(model);
-
-    const tempSchema = writeFileSync(PATHS.root, PATHS.tmp, "_schema.tmp.json");
 
     if (command) {
-      LOGGER.test(createdMigration);
+      LOGGER.test(createdMigration.generateQuery());
     } else {
-      generateSQLMigrationFile(action, "", table, tableName, createdMigration);
+      generateSQLMigrationFile(
+        action,
+        null,
+        "table",
+        tableName,
+        createdMigration.generateQuery()
+      );
     }
   } catch (e) {
-    LOGGER.error(`Unable to be generate model '${model}'`, e);
-  }
-
-  function parseArguments(args) {
-    const columnsInfo = {};
-    for (const arg of args) {
-      const [column, dataType, ...constraints] = arg.trim().split(":");
-      const dataTypeTrim = dataType.trim().toUpperCase();
-
-      // Check for references
-      if (dataTypeTrim.equalsIgnoreCase(SQLForeignKeyReferences)) {
-        const columnName = column.trim().toLowerCase() + "_id";
-        columnsInfo[columnName] = {
-          type: "INTEGER",
-          constraints: [],
-          references: {
-            table: getTableNameFromModel(column),
-            column: "id",
-          },
-        };
-      } else {
-        const type = SQLColumnTypes[dataTypeTrim];
-        columnsInfo[column.trim()] = { type, constraints };
-      }
-    }
-
-    return columnsInfo;
+    LOGGER.error(`Unable to be generate model '${model}'`, e.stack);
   }
 
   async function modelExists(model) {

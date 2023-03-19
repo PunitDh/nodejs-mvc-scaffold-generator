@@ -4,7 +4,7 @@ import SQLiteColumn from "./SQLiteColumn.js";
 import SQLiteForeignKey from "./SQLiteForeignKey.js";
 
 class SQLiteTable {
-  constructor({ schema, name, type, ncol, wr, strict }) {
+  constructor({ schema, name, type, ncol, wr, strict } = {}) {
     this.schema = schema;
     this.name = name;
     this.type = type;

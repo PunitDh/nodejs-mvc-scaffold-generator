@@ -3,7 +3,7 @@ import LOGGER from "./logger.js";
 import SQLiteColumn from "./domain/SQLiteColumn.js";
 import { ReadOnlyColumns, SearchExcludedColumns } from "./constants.js";
 import SQLiteTable from "./domain/SQLiteTable.js";
-import { getTableNameFromModel, sanitizeObject } from "./utils/model_utils.js";
+import { getTableNameFromModel, removeNullValues } from "./utils/model_utils.js";
 import "./utils/js_utils.js";
 import { QueryBuilder } from "./builders/QueryBuilder.js";
 import { DatabaseError } from "./errors.js";
@@ -139,7 +139,7 @@ class Model {
    * @returns the inserted row
    */
   static async create(object) {
-    const sanitizedObject = sanitizeObject(
+    const sanitizedObject = removeNullValues(
       new this.prototype.constructor(object)
     );
     const query = QueryBuilder()
@@ -157,7 +157,7 @@ class Model {
    * @returns
    */
   static async update(id, object) {
-    const sanitizedObject = sanitizeObject(
+    const sanitizedObject = removeNullValues(
       new this.prototype.constructor(object)
     );
     const values = [...Object.values(sanitizedObject), id];
@@ -175,7 +175,7 @@ class Model {
    * @returns A list of rows that matches the conditions { id: 1, name: 'Tim' }
    */
   static async where(obj) {
-    const sanitizedObject = sanitizeObject(new this.prototype.constructor(obj));
+    const sanitizedObject = removeNullValues(new this.prototype.constructor(obj));
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)

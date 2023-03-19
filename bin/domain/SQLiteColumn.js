@@ -3,7 +3,7 @@ import LOGGER from "../logger.js";
 import SQLiteTable from "./SQLiteTable.js";
 
 class SQLiteColumn {
-  constructor({ cid, name, type, notnull, dflt_value, pk }) {
+  constructor({ cid, name, type, notnull, dflt_value, pk } = {}) {
     this.id = cid;
     this.name = name;
     this.type = type;
@@ -37,8 +37,12 @@ class SQLiteColumn {
     });
   }
 
+  /**
+   * Adds a foreign key constraint to the column
+   * @param {SQLiteForeignKey} foreignKey
+   * @returns SQLiteColumn
+   */
   withForeignKey(foreignKey) {
-    console.log(foreignKey, this.name);
     this.foreignKey = foreignKey;
     return this;
   }

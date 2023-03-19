@@ -10,9 +10,10 @@ export function generateSQLMigrationFile(
   migration
 ) {
   const [date] = new Date().toISOString().split("T");
-  const sUUID = uuid().slice(0, 8);
-  const filename = `${[date, sUUID, action, table, subAction, column].join(
-    "_"
-  )}.sql`;
+  const fileId = uuid().slice(0, 8);
+  const fileNameParts = [date, fileId, action, table, subAction, column].filter(
+    Boolean
+  );
+  const filename = `${fileNameParts.join("_")}.sql`;
   writeFileSync(PATHS.root, PATHS.db, PATHS.migrations, filename, migration);
 }

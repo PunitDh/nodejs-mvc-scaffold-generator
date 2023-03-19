@@ -15,14 +15,15 @@
 
 import "../utils/js_utils.js";
 import {
-  Column,
-  ForeignKey,
+  MigrationColumn,
   MigrationBuilder,
+  MigrationForeignKey,
 } from "../builders/MigrationBuilder.js";
 import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 import { GeneratorError } from "../errors.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
 import LOGGER from "../logger.js";
+import { SQLReferences } from "../constants.js";
 
 export function generateMigration(command) {
   const actions = {
@@ -55,10 +56,10 @@ export function generateMigration(command) {
     if (!subActions[subAction.toLowerCase()]) {
       throw new GeneratorError(`Unknown action: ${subAction}`);
     }
-    const ref = type?.equalsIgnoreCase(SQLForeignKeyReferences);
-    const foreignKey = ref && new ForeignKey(columnName);
+    const ref = type?.equalsIgnoreCase(SQLReferences);
+    const foreignKey = ref && new MigrationForeignKey(columnName);
     const column =
-      !ref && new Column(subAction, columnName, type, ...constraints);
+      !ref && new MigrationColumn(subAction, columnName, type, ...constraints);
     if (column) {
       columns.push(column);
     }
@@ -84,14 +85,14 @@ export function generateMigration(command) {
   const columnName = columns.map((col) => col.name).join("_") || "";
 
   if (command) {
-    LOGGER.test(migrationBuilder.buildQuery());
+    LOGGER.test(migrationBuilder.generateQuery());
   } else {
     generateSQLMigrationFile(
       actionName,
       subActionName,
       tableName,
       columnName,
-      migrationBuilder.buildQuery()
+      migrationBuilder.generateQuery()
     );
   }
 }

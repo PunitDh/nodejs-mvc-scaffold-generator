@@ -15,6 +15,7 @@ import pluralize from "pluralize";
 import { LOCATIONS, PATHS } from "../constants.js";
 import { writeFileSync } from "../utils/file_utils.js";
 import SQLiteColumn from "../domain/SQLiteColumn.js";
+import ViewColumn from "../domain/ViewColumn.js";
 
 export async function generateViews(command) {
   const argvs = command?.split(" ").slice(3) || process.argv.slice(2);

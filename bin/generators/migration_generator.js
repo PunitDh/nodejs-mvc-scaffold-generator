@@ -25,7 +25,7 @@ import { getTableNameFromModel } from "../utils/model_utils.js";
 import LOGGER from "../logger.js";
 import { SQLReferences } from "../constants.js";
 
-export function generateMigration(command) {
+export function generateMigration(testCommand) {
   const actions = {
     alter: "alter",
     create: "create",
@@ -36,7 +36,7 @@ export function generateMigration(command) {
     add: "add",
   };
   const [model, ...args] =
-    command?.split(" ").slice(3) || process.argv.slice(2);
+    testCommand?.split(" ").slice(3) || process.argv.slice(2);
   if (!model) {
     throw new GeneratorError(`No model name and/or arguments specified`);
   }
@@ -84,7 +84,7 @@ export function generateMigration(command) {
     ]?.toLowerCase() || "";
   const columnName = columns.map((col) => col.name).join("_") || "";
 
-  if (command) {
+  if (testCommand) {
     LOGGER.test(migrationBuilder.generateQuery());
   } else {
     generateSQLMigrationFile(

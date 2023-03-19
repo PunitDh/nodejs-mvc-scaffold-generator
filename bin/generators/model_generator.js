@@ -40,8 +40,8 @@ import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 import { writeFileSync } from "../utils/file_utils.js";
 import { getSchema, saveSchema } from "../utils/schema_utils.js";
 
-export async function generateModel(command) {
-  const argvs = command?.split(" ").slice(3) || process.argv.slice(2);
+export async function generateModel(testCommand) {
+  const argvs = testCommand?.split(" ").slice(3) || process.argv.slice(2);
   const [model, ...args] = argvs;
   const folderName = path.join(PATHS.root, SETTINGS.models.location);
   const tableName = getTableNameFromModel(model);
@@ -54,11 +54,11 @@ export async function generateModel(command) {
   );
   const schema = getSchema();
 
-  if (!command && !fs.existsSync(folderName)) {
+  if (!testCommand && !fs.existsSync(folderName)) {
     fs.mkdirSync(folderName);
   }
 
-  if (!command && (await modelExists(model))) {
+  if (!testCommand && (await modelExists(model))) {
     throw new GeneratorError(
       `Model '${model}' already exists in '${modelFilePath}'`
     );
@@ -112,14 +112,14 @@ export async function generateModel(command) {
     // Write model file
     const compiledModelFile =
       Handlebars.compileFile(modelTemplate)(createdMigration);
-    if (command) {
+    if (testCommand) {
       LOGGER.test(compiledModelFile);
     } else {
       writeFileSync(modelFilePath, compiledModelFile);
     }
     const action = MigrationActions.CREATE.toLowerCase();
 
-    if (command) {
+    if (testCommand) {
       LOGGER.test(createdMigration.generateQuery());
     } else {
       generateSQLMigrationFile(

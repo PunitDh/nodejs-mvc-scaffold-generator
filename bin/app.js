@@ -20,9 +20,22 @@ import upload from "./middleware/upload.js";
 config();
 
 // Set view engine
-app.engine("html", ejs.renderFile);
+// app.engine("html", ejs.renderFile);
 app.set("view engine", "html");
 app.set("view engine", "ejs");
+let ejsOptions = {
+  async: true,
+};
+
+// The engine is using a callback method for async rendering
+app.engine("html", async (path, data, cb) => {
+  try {
+    let html = await ejs.renderFile(path, data, ejsOptions);
+    cb(null, html);
+  } catch (e) {
+    cb(e, "");
+  }
+});
 
 // File storage
 

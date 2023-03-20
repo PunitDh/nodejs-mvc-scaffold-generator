@@ -58,7 +58,7 @@ blogs.post("/delete/:id", (req, res, next) => {
 blogs.get("/:id", (req, res, next) => {
   try {
     const blog = Blog.find(req.params.id);
-    const comments = blog.comments.map((comment) =>
+    const comments = blog?.comments.map((comment) =>
       comment.exclude("id", "blog_id", "updated_at")
     );
     return res.render("blogs/blog", {

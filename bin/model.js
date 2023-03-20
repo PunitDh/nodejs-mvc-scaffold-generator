@@ -9,6 +9,7 @@ import {
 } from "./utils/model_utils.js";
 import "./utils/js_utils.js";
 import { QueryBuilder } from "./builders/QueryBuilder.js";
+import { NotFoundError } from "./errors.js";
 
 /**
  * @description Base model class
@@ -93,7 +94,10 @@ class Model {
       .select("*")
       .from(this.__tablename__)
       .where("id");
-    return this.dbQuery(query, { id }, true);
+    const result = this.dbQuery(query, { id }, true);
+    if (result.isEmpty())
+      throw new NotFoundError(`Cannot find ${this.name} with id: '${id}'`);
+    return result;
   }
 
   /**
@@ -244,14 +248,11 @@ class Model {
    */
   static dbQuery(query, values = {}, singular = false) {
     const _Model = this.prototype.constructor;
-    const prepared = DB.prepare(query.build());
+    const results = DB.prepare(query.build()).all({ ...values });
     if (singular) {
-      return prepared
-        .all({ ...values })
-        .map((value) => new _Model(value))
-        .first();
+      return new _Model(results.first());
     }
-    return prepared.all({ ...values }).map((value) => new _Model(value));
+    return results.map((value) => new _Model(value));
   }
 }
 

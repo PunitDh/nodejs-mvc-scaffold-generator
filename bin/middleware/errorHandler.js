@@ -1,6 +1,7 @@
 import { Flash } from "../constants.js";
 import { DatabaseError } from "../errors.js";
 import LOGGER from "../logger.js";
+import "../utils/js_utils.js";
 
 export default function (err, req, res, next) {
   switch (err.constructor) {
@@ -10,5 +11,5 @@ export default function (err, req, res, next) {
   }
   LOGGER.error(err.status || 400, err.stack);
   req.flash(Flash.ERROR, err.message);
-  res.redirect(req.headers.referer);
+  return res.redirect(req.headers.referer || "/404");
 }

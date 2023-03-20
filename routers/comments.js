@@ -62,6 +62,7 @@ comments.get("/:id", (req, res, next) => {
       comment: res.locals.marked(comment),
     });
   } catch (e) {
+    e.redirect = "/comments";
     next(e);
   }
 });

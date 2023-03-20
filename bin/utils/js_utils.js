@@ -18,7 +18,7 @@ Array.prototype.second = function () {
  * Returns the second element in the array
  * @returns The second element in the array
  */
- Array.prototype.third = function () {
+Array.prototype.third = function () {
   return this[2];
 };
 
@@ -26,7 +26,7 @@ Array.prototype.second = function () {
  * Returns the second element in the array
  * @returns The second element in the array
  */
- Array.prototype.fourth = function () {
+Array.prototype.fourth = function () {
   return this[3];
 };
 
@@ -34,7 +34,7 @@ Array.prototype.second = function () {
  * Returns the second element in the array
  * @returns The second element in the array
  */
- Array.prototype.fifth = function () {
+Array.prototype.fifth = function () {
   return this[4];
 };
 
@@ -42,7 +42,7 @@ Array.prototype.second = function () {
  * Returns the second element in the array
  * @returns The second element in the array
  */
- Array.prototype.sixth = function () {
+Array.prototype.sixth = function () {
   return this[5];
 };
 
@@ -89,6 +89,17 @@ Object.prototype.exclude = function () {
     delete this[argument];
   });
   return this;
+};
+
+/**
+ * Returns whether the object is empty, i.e. only contains undefined or null values
+ * @returns Boolean
+ */
+Object.prototype.isEmpty = function () {
+  return (
+    Object.keys(this).filter(Boolean).length === 0 ||
+    Object.values(this).filter(Boolean).length === 0
+  );
 };
 
 /**

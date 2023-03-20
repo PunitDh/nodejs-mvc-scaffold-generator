@@ -8,14 +8,16 @@ const animals = Router();
 
 animals.use(csrf());
 
-animals.get("/", (req, res) => {
+animals.get("/", (req, res, next) => {
   try {
     const animals = Animal.all();
     return res.render("animals/index", { animals });
-  } catch (e) {}
+  } catch (e) {
+    next(e);
+  }
 });
 
-animals.get("/new", (req, res) => {
+animals.get("/new", (req, res, next) => {
   try {
     const animal = new Animal();
     return res.render("animals/new", { animal });
@@ -25,7 +27,7 @@ animals.get("/new", (req, res) => {
   }
 });
 
-animals.get("/edit/:id", (req, res) => {
+animals.get("/edit/:id", (req, res, next) => {
   try {
     const animal = Animal.find(req.params.id);
     return res.render("animals/edit", {
@@ -37,7 +39,7 @@ animals.get("/edit/:id", (req, res) => {
   }
 });
 
-animals.post("/edit/:id", upload.single("image"), (req, res) => {
+animals.post("/edit/:id", upload.single("image"), (req, res, next) => {
   try {
     const animal = new Animal({ ...req.body, id: req.params.id });
     const image = req.file;
@@ -53,7 +55,7 @@ animals.post("/edit/:id", upload.single("image"), (req, res) => {
   }
 });
 
-animals.post("/delete/:id", (req, res) => {
+animals.post("/delete/:id", (req, res, next) => {
   try {
     Animal.delete(req.params.id);
     req.flash(Flash.SUCCESS, "Animal has been deleted");
@@ -63,22 +65,18 @@ animals.post("/delete/:id", (req, res) => {
   }
 });
 
-animals.get("/:id", (req, res) => {
+animals.get("/:id", (req, res, next) => {
   try {
     const animal = Animal.find(req.params.id);
     return res.render("animals/animal", { animal: res.locals.marked(animal) });
   } catch (e) {
-    req.flash(Flash.ERROR, e.message);
+    next(e)
   }
 });
 
-animals.post("/new", upload.single("image"), (req, res) => {
+animals.post("/new", upload.single("image"), (req, res, next) => {
   try {
     const animal = new Animal(req.body);
-    // const image = req.file;
-    // const buffer = fs.readFileSync(image?.path);
-    // const blob = Buffer.from(buffer, "binary");
-    // animal.image = blob;
     animal.save();
     req.flash(Flash.SUCCESS, "Animal has been added");
     return res.redirect(`/animals`);

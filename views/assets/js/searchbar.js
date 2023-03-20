@@ -17,7 +17,7 @@ async function handleSearchSuggestions(searchSuggestionsList, searchBar) {
   const results = await fetchSearchSuggestions(searchBar.value);
   searchSuggestionsList.clear();
   results.forEach((result) =>
-    searchSuggestionsList.add(createListElement(result, searchBar.value))
+    searchSuggestionsList.add(createSearchElement(result, searchBar.value))
   );
   searchSuggestionsList.show();
 }
@@ -61,24 +61,24 @@ async function fetchSearchSuggestions(searchTerm) {
   }
 }
 
-function createListElement(content) {
-  const aElement = document.createElement("a");
-  aElement.classList.add("list-group-item");
-  aElement.classList.add("d-flex");
-  aElement.classList.add("justify-content-between");
-  aElement.classList.add("align-items-center");
+function createSearchElement(content) {
+  const linkElement = document.createElement("a");
+  linkElement.classList.add("list-group-item");
+  linkElement.classList.add("d-flex");
+  linkElement.classList.add("justify-content-between");
+  linkElement.classList.add("align-items-center");
+
   const url = new URL(content.link, window.location.origin);
-  aElement.href = url.toString();
-  // aElement.innerHTML = content.title;
+  linkElement.href = url.toString();
 
   const titleElement = document.createElement("span");
   titleElement.innerHTML = content.title;
-  aElement.appendChild(titleElement);
+  linkElement.appendChild(titleElement);
 
   const priorityElement = document.createElement("span");
   priorityElement.style.color = "gray";
   priorityElement.style.fontSize = "0.5rem";
   priorityElement.textContent = `Priority: ${content.priority}`;
-  aElement.appendChild(priorityElement);
-  return aElement;
+  linkElement.appendChild(priorityElement);
+  return linkElement;
 }

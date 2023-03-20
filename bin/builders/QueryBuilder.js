@@ -150,6 +150,7 @@ class SQLQueryBuilder {
           values: ", DATETIME('now'), DATETIME('now')",
         }
       : { columns: "", values: "" };
+    const updatedAt = this.timestamps ? ", updated_at=DATETIME('now')" : "";
 
     switch (this.action) {
       case QueryAction.SELECT:
@@ -157,7 +158,7 @@ class SQLQueryBuilder {
       case QueryAction.INSERT:
         return `${this.action} ${this.table} (${columns}${timestamps.columns}) VALUES (${values}${timestamps.values})${returningClause};\n`;
       case QueryAction.UPDATE:
-        return `${this.action} ${this.table}${setClause}, updated_at=DATETIME('now') ${whereClause}${returningClause};\n`;
+        return `${this.action} ${this.table}${setClause}${updatedAt} ${whereClause}${returningClause};\n`;
       case QueryAction.DELETE:
         return `${this.action} ${this.table}${whereClause}${returningClause};\n`;
       default:

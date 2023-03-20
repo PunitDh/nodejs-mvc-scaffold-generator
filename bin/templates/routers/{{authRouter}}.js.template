@@ -8,16 +8,16 @@ import _Jwt from "../bin/domain/JWT.js";
 
 const {{router}} = Router();
 
-{{router}}.get("/", authenticated, async (req, res, next) => {
+{{router}}.get("/", authenticated, (req, res, next) => {
   try {
-    const {{router}} = (await {{Model}}.all()).map(({{model}}) => {{model}}?.exclude("{{authenticator}}"));
+    const {{router}} = ({{Model}}.all()).map(({{model}}) => {{model}}?.exclude("{{authenticator}}"));
     return res.render("{{router}}/index", { {{router}} });
   } catch (e) {
     next(e);
   }
 });
 
-{{router}}.get("/register", async (_, res, next) => {
+{{router}}.get("/register", (_, res, next) => {
   try {
     res.render("{{router}}/register");
   } catch (e) {
@@ -25,10 +25,10 @@ const {{router}} = Router();
   }
 });
 
-{{router}}.get("/edit/:id", async (req, res, next) => {
+{{router}}.get("/edit/:id", (req, res, next) => {
   try {
     const { id } = req.params;
-    const { {{authenticator}}, ...{{model}} } = (await {{Model}}.find(id))?.exclude("{{authenticator}}");
+    const { {{authenticator}}, ...{{model}} } = ({{Model}}.find(id))?.exclude("{{authenticator}}");
     return res.render("{{router}}/edit", { {{model}} });
   } catch (e) {
     e.status = 404;
@@ -36,9 +36,9 @@ const {{router}} = Router();
   }
 });
 
-{{router}}.post("/edit/:id", async (req, res, next) => {
+{{router}}.post("/edit/:id", (req, res, next) => {
   const { id } = req.params;
-  const {{model}} = await {{Model}}.find(id);
+  const {{model}} = {{Model}}.find(id);
   try {
     const { oldPassword, passwordConfirmation, ...body } = req.body;
     if (!compare(oldPassword, {{model}}.{{authenticator}})) {
@@ -50,14 +50,14 @@ const {{router}} = Router();
       return res.redirect("/{{router}}/edit", { {{model}} });
     }
     const updated = { ...body, {{authenticator}}: hashed(body.{{authenticator}}) };
-    await {{Model}}.update(id, updated);
+    {{Model}}.update(id, updated);
     return res.redirect("/{{router}}");
   } catch (e) {
     next(e);
   }
 });
 
-{{router}}.get("/login", async (req, res, next) => {
+{{router}}.get("/login", (req, res, next) => {
   try {
     const { referer } = req.query;
     return res.render("{{router}}/login", { referer });
@@ -66,10 +66,10 @@ const {{router}} = Router();
   }
 });
 
-{{router}}.post("/login", async (req, res, next) => {
+{{router}}.post("/login", (req, res, next) => {
   try {
     const { {{identifier}}, {{authenticator}} } = req.body;
-    const db{{Model}} = await {{Model}}.findBy({ {{identifier}} });
+    const db{{Model}} = {{Model}}.findBy({ {{identifier}} });
     if (!db{{Model}}) {
       req.flash(Flash.ERROR, "{{Model}} not found");
       return res.redirect("/{{router}}/login");
@@ -80,7 +80,7 @@ const {{router}} = Router();
       req.flash(Flash.ERROR, "Wrong {{authenticator}}");
       return res.redirect("/{{router}}/login");
     }
-    await db{{Model}}.save();
+    db{{Model}}.save();
     res.cookie(
       "app",
       JWT.sign({{model}}, process.env.JWT_SECRET, {
@@ -95,7 +95,7 @@ const {{router}} = Router();
   }
 });
 
-{{router}}.get("/logout", async (req, res, next) => {
+{{router}}.get("/logout", (req, res, next) => {
   try {
     res.redirect("/{{router}}/login");
   } catch (e) {
@@ -103,9 +103,9 @@ const {{router}} = Router();
   }
 });
 
-{{router}}.post("/logout", async (req, res, next) => {
+{{router}}.post("/logout", (req, res, next) => {
   try {
-    await _Jwt.add(req.cookies.app);
+    _Jwt.add(req.cookies.app);
     res.clearCookie("app");
     req.flash(Flash.SUCCESS, "Logged out successfully");
     res.redirect("/{{router}}/login");
@@ -114,13 +114,13 @@ const {{router}} = Router();
   }
 });
 
-{{router}}.post("/delete/:id", async (req, res, next) => {
+{{router}}.post("/delete/:id", (req, res, next) => {
   try {
     if (res.locals.currentUser !== req.params.id) {
       req.flash(Flash.ERROR, "You are not authorized to perform this action");
       return res.status(403).redirect(req.headers.referer);
     }
-    await {{Model}}.delete(req.params.id);
+    {{Model}}.delete(req.params.id);
     req.flash(Flash.SUCCESS, "{{Model}} has been deleted");
     return res.redirect("/{{router}}");
   } catch (e) {
@@ -128,9 +128,9 @@ const {{router}} = Router();
   }
 });
 
-{{router}}.get("/:id", async (req, res, next) => {
+{{router}}.get("/:id", (req, res, next) => {
   try {
-    const {{model}} = (await {{Model}}.find(req.params.id)).exclude(
+    const {{model}} = ({{Model}}.find(req.params.id)).exclude(
       "{{authenticator}}",
       "_csrf_token"
     );
@@ -142,7 +142,7 @@ const {{router}} = Router();
   }
 });
 
-{{router}}.post("/", async (req, res, next) => {
+{{router}}.post("/", (req, res, next) => {
   try {
     const { passwordConfirmation, ...body } = req.body;
     if (passwordConfirmation !== body.{{authenticator}}) {
@@ -150,7 +150,7 @@ const {{router}} = Router();
       return res.redirect("/{{router}}/register");
     }
     const {{model}} = { ...body, {{authenticator}}: hashed(body.{{authenticator}}) };
-    await {{Model}}.create({{model}});
+    {{Model}}.create({{model}});
     return res.redirect("/{{router}}");
   } catch (e) {
     next(e);

@@ -17,7 +17,7 @@ import { writeFileSync } from "../utils/file_utils.js";
 import SQLiteColumn from "../domain/SQLiteColumn.js";
 import ViewColumn from "../domain/ViewColumn.js";
 
-export async function generateViews(command) {
+export function generateViews(command) {
   const argvs = command?.split(" ").slice(3) || process.argv.slice(2);
   const model = argvs.first();
   const singular = model.toLowerCase();
@@ -73,8 +73,8 @@ export async function generateViews(command) {
     model: singular,
     router,
     heading: router.capitalize(),
-    indexColumns: await getColumnsFromSchema(model, index.excludedFields),
-    formColumns: await getColumnsFromSchema(model, form.excludedFields),
+    indexColumns: getColumnsFromSchema(model, index.excludedFields),
+    formColumns: getColumnsFromSchema(model, form.excludedFields),
   };
 
   try {
@@ -93,9 +93,9 @@ export async function generateViews(command) {
     throw e;
   }
 
-  async function getColumnsFromSchema(model, excludedColumns) {
+  function getColumnsFromSchema(model, excludedColumns) {
     const table = getTableNameFromModel(model);
-    const tableColumns = await SQLiteColumn.getColumns(table);
+    const tableColumns = SQLiteColumn.getColumns(table);
     return tableColumns
       .filter((column) => !excludedColumns.includes(column.name.toLowerCase()))
       .map(

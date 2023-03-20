@@ -8,9 +8,9 @@ import _Jwt from "../bin/domain/JWT.js";
 
 const users = Router();
 
-users.get("/", authenticated, async (req, res) => {
+users.get("/", authenticated, (req, res) => {
   try {
-    const users = (await User.all()).map((user) => user?.exclude("password"));
+    const users = User.all()?.map((user) => user?.exclude("password"));
     return res.render("users/index", { users });
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
@@ -18,7 +18,7 @@ users.get("/", authenticated, async (req, res) => {
   }
 });
 
-users.get("/register", async (_, res) => {
+users.get("/register", (_, res) => {
   try {
     res.render("users/register");
   } catch (e) {
@@ -26,10 +26,10 @@ users.get("/register", async (_, res) => {
   }
 });
 
-users.get("/edit/:id", async (req, res, next) => {
+users.get("/edit/:id", (req, res, next) => {
   try {
     const { id } = req.params;
-    const { password, ...user } = (await User.find(id))?.exclude("password");
+    const { password, ...user } = User.find(id)?.exclude("password");
     return res.render("users/edit", { user });
   } catch (e) {
     e.status = 404;
@@ -37,9 +37,9 @@ users.get("/edit/:id", async (req, res, next) => {
   }
 });
 
-users.post("/edit/:id", async (req, res) => {
+users.post("/edit/:id", (req, res) => {
   const { id } = req.params;
-  const user = await User.find(id);
+  const user = User.find(id);
   try {
     const { oldPassword, passwordConfirmation, ...body } = req.body;
     if (!compare(oldPassword, user.password)) {
@@ -51,7 +51,7 @@ users.post("/edit/:id", async (req, res) => {
       return res.redirect("/users/edit", { user });
     }
     const updated = { ...body, password: hashed(body.password) };
-    await User.update(id, updated);
+    User.update(id, updated);
     return res.redirect("/users");
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
@@ -59,7 +59,7 @@ users.post("/edit/:id", async (req, res) => {
   }
 });
 
-users.get("/login", async (req, res) => {
+users.get("/login", (req, res) => {
   try {
     const { referer } = req.query;
     return res.render("users/login", { referer });
@@ -68,10 +68,10 @@ users.get("/login", async (req, res) => {
   }
 });
 
-users.post("/login", async (req, res) => {
+users.post("/login", (req, res) => {
   try {
     const { email, password } = req.body;
-    const dbUser = await User.findBy({ email });
+    const dbUser = User.findBy({ email });
     if (!dbUser) {
       req.flash(Flash.ERROR, "User not found");
       return res.redirect("/users/login");
@@ -82,7 +82,7 @@ users.post("/login", async (req, res) => {
       req.flash(Flash.ERROR, "Wrong password");
       return res.redirect("/users/login");
     }
-    await dbUser.save();
+    dbUser.save();
     res.cookie(
       "app",
       JWT.sign(user, process.env.JWT_SECRET, {
@@ -97,7 +97,7 @@ users.post("/login", async (req, res) => {
   }
 });
 
-users.get("/logout", async (req, res) => {
+users.get("/logout", (req, res) => {
   try {
     res.redirect("/users/login");
   } catch (e) {
@@ -105,9 +105,9 @@ users.get("/logout", async (req, res) => {
   }
 });
 
-users.post("/logout", async (req, res) => {
+users.post("/logout", (req, res) => {
   try {
-    await _Jwt.add(req.cookies.app);
+    _Jwt.add(req.cookies.app);
     res.clearCookie("app");
     req.flash(Flash.SUCCESS, "Logged out successfully");
     res.redirect("/users/login");
@@ -116,13 +116,13 @@ users.post("/logout", async (req, res) => {
   }
 });
 
-users.post("/delete/:id", async (req, res) => {
+users.post("/delete/:id", (req, res) => {
   try {
     if (res.locals.currentUser.id !== parseInt(req.params.id)) {
       req.flash(Flash.ERROR, "You are not authorized to perform this action");
       return res.status(403).redirect(req.headers.referer);
     }
-    await User.delete(req.params.id);
+    User.delete(req.params.id);
     req.flash(Flash.SUCCESS, "User has been deleted");
     return res.redirect("/users");
   } catch (e) {
@@ -130,12 +130,9 @@ users.post("/delete/:id", async (req, res) => {
   }
 });
 
-users.get("/:id", async (req, res, next) => {
+users.get("/:id", (req, res, next) => {
   try {
-    const user = (await User.find(req.params.id)).exclude(
-      "password",
-      "_csrf_token"
-    );
+    const user = User.find(req.params.id).exclude("password", "_csrf_token");
     return res
       .status(200)
       .render("users/user", { user: res.locals.marked(user) });
@@ -144,7 +141,7 @@ users.get("/:id", async (req, res, next) => {
   }
 });
 
-users.post("/", async (req, res) => {
+users.post("/", (req, res) => {
   try {
     const { passwordConfirmation, ...body } = req.body;
     if (passwordConfirmation !== body.password) {
@@ -152,7 +149,7 @@ users.post("/", async (req, res) => {
       return res.redirect("/users/register");
     }
     const user = { ...body, password: hashed(body.password) };
-    await User.create(user);
+    User.create(user);
     return res.redirect("/users");
   } catch (e) {
     req.flash(Flash.ERROR, e.message);

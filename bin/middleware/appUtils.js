@@ -11,7 +11,7 @@ import {
 import _Jwt from "../domain/JWT.js";
 
 export default function () {
-  return async function (req, res, next) {
+  return function (req, res, next) {
     res.locals.formatDate = (date) => new Date(date).toJSON() || date;
     res.locals.formatCurrency = (amount, decimals = 2, currency = "AUD") =>
       new Intl.NumberFormat("en-AU", {

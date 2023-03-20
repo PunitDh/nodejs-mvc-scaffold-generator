@@ -19,21 +19,14 @@ class SQLiteTable {
    * @returns A list of SQLiteTable
    */
   static getAllTables() {
-    return new Promise((resolve, reject) => {
-      DB.all(`PRAGMA table_list`, function (err, tables) {
-        if (err) return reject(err);
-        return resolve(
-          tables
-            .filter(
-              (r) =>
-                !r.name.includes("sqlite_") &&
-                !r.name.includes(SETTINGS.database.migrations.table) &&
-                !r.name.includes(SETTINGS.database.jwt.table)
-            )
-            .map((r) => new SQLiteTable(r))
-        );
-      });
-    });
+    return DB.pragma("table_list")
+      .filter(
+        (r) =>
+          !r.name.includes("sqlite_") &&
+          !r.name.includes(SETTINGS.database.migrations.table) &&
+          !r.name.includes(SETTINGS.database.jwt.table)
+      )
+      .map((r) => new SQLiteTable(r));
   }
 
   /**
@@ -42,12 +35,9 @@ class SQLiteTable {
    * @returns Boolean
    */
   static exists(tableName) {
-    return new Promise((resolve, reject) => {
-      DB.all(`PRAGMA table_list`, function (err, tables) {
-        if (err) return reject(err);
-        return resolve(tables.map((table) => table.name).includes(tableName));
-      });
-    });
+    return DB.pragma("table_list")
+      .map((table) => table.name)
+      .includes(tableName);
   }
 
   /**
@@ -56,17 +46,9 @@ class SQLiteTable {
    * @returns A list of SQLiteForeignKey
    */
   static getForeignKeys(tableName) {
-    return new Promise((resolve, reject) => {
-      DB.all(
-        `PRAGMA foreign_key_list('${tableName}')`,
-        function (err, foreignKeys) {
-          if (err) return reject(err);
-          return resolve(
-            foreignKeys.map((foreignKey) => new SQLiteForeignKey(foreignKey))
-          );
-        }
-      );
-    });
+    return DB.pragma(`foreign_key_list('${tableName}')`).map(
+      (foreignKey) => new SQLiteForeignKey(foreignKey)
+    );
   }
 }
 

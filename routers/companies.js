@@ -29,16 +29,16 @@ companies.post("/delete/:id", companiesController.destroy());
 
 // companies.route("/delete/:id").post(companiesController.destroy());
 
-// companies.get("/", async (req, res) => {
+// companies.get("/", (req, res) => {
 //   try {
-//     const companies = await Company.all();
+//     const companies = Company.all();
 //     return res.render("companies/index", { companies });
 //   } catch (e) {
 //     req.flash(Flash.ERROR, e.message);
 //   }
 // });
 
-// companies.get("/new", async (req, res) => {
+// companies.get("/new", (req, res) => {
 //   try {
 //     const company = new Company();
 //     return res.render("companies/new", { company });
@@ -48,18 +48,18 @@ companies.post("/delete/:id", companiesController.destroy());
 //   }
 // });
 
-// companies.get("/edit/:id", async (req, res) => {
+// companies.get("/edit/:id", (req, res) => {
 //   try {
-//     const company = await Company.find(req.params.id);
+//     const company = Company.find(req.params.id);
 //     return res.render("companies/edit", { company });
 //   } catch (e) {
 //     req.flash(Flash.ERROR, e.message);
 //   }
 // });
 
-// companies.post("/edit/:id", async (req, res) => {
+// companies.post("/edit/:id", (req, res) => {
 //   try {
-//     await Company.update(req.params.id, req.body);
+//     Company.update(req.params.id, req.body);
 //     req.flash(Flash.SUCCESS, "Company has been updated");
 //     return res.redirect(`/companies`);
 //   } catch (e) {
@@ -68,9 +68,9 @@ companies.post("/delete/:id", companiesController.destroy());
 //   }
 // });
 
-// companies.post("/delete/:id", async (req, res) => {
+// companies.post("/delete/:id", (req, res) => {
 //   try {
-//     await Company.delete(req.params.id);
+//     Company.delete(req.params.id);
 //     req.flash(Flash.SUCCESS, "Company has been deleted");
 //     return res.redirect("/companies");
 //   } catch (e) {
@@ -78,9 +78,9 @@ companies.post("/delete/:id", companiesController.destroy());
 //   }
 // });
 
-// companies.get("/:id", async (req, res) => {
+// companies.get("/:id", (req, res) => {
 //   try {
-//     const company = await Company.find(req.params.id);
+//     const company = Company.find(req.params.id);
 //     return res.render("companies/company", {
 //       company: res.locals.marked(company),
 //     });
@@ -89,9 +89,9 @@ companies.post("/delete/:id", companiesController.destroy());
 //   }
 // });
 
-// companies.post("/new", async (req, res) => {
+// companies.post("/new", (req, res) => {
 //   try {
-//     await Company.create(req.body);
+//     Company.create(req.body);
 //     req.flash(Flash.SUCCESS, "Company has been added");
 //     return res.redirect(`/companies`);
 //   } catch (e) {

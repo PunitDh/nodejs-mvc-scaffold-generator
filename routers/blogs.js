@@ -8,14 +8,14 @@ const blogs = Router();
 blogs.use(authenticated);
 blogs.use(csrf());
 
-blogs.get("/", async (req, res, next) => {
+blogs.get("/", (req, res, next) => {
   try {
-    const blogs = await Blog.all();
+    const blogs = Blog.all();
     return res.render("blogs/index", { blogs });
   } catch (e) {}
 });
 
-blogs.get("/new", async (req, res, next) => {
+blogs.get("/new", (req, res, next) => {
   try {
     const blog = new Blog();
     return res.render("blogs/new", { blog });
@@ -25,18 +25,18 @@ blogs.get("/new", async (req, res, next) => {
   }
 });
 
-blogs.get("/edit/:id", async (req, res, next) => {
+blogs.get("/edit/:id", (req, res, next) => {
   try {
-    const blog = await Blog.find(req.params.id);
+    const blog = Blog.find(req.params.id);
     return res.render("blogs/edit", { blog });
   } catch (e) {
     req.flash("error", e.message);
   }
 });
 
-blogs.post("/edit/:id", async (req, res, next) => {
+blogs.post("/edit/:id", (req, res, next) => {
   try {
-    await Blog.update(req.params.id, req.body);
+    Blog.update(req.params.id, req.body);
     req.flash("success", "Blog has been updated");
     return res.redirect(`/blogs`);
   } catch (e) {
@@ -45,9 +45,9 @@ blogs.post("/edit/:id", async (req, res, next) => {
   }
 });
 
-blogs.post("/delete/:id", async (req, res, next) => {
+blogs.post("/delete/:id", (req, res, next) => {
   try {
-    await Blog.delete(req.params.id);
+    Blog.delete(req.params.id);
     req.flash("success", "Blog has been deleted");
     return res.redirect("/blogs");
   } catch (e) {
@@ -55,10 +55,10 @@ blogs.post("/delete/:id", async (req, res, next) => {
   }
 });
 
-blogs.get("/:id", async (req, res, next) => {
+blogs.get("/:id", (req, res, next) => {
   try {
-    const blog = await Blog.find(req.params.id);
-    const comments = (await blog.comments).map((comment) =>
+    const blog = Blog.find(req.params.id);
+    const comments = (blog.comments).map((comment) =>
       comment.exclude("id", "blog_id", "updated_at")
     );
     return res.render("blogs/blog", {
@@ -70,9 +70,9 @@ blogs.get("/:id", async (req, res, next) => {
   }
 });
 
-blogs.post("/new", async (req, res, next) => {
+blogs.post("/new", (req, res, next) => {
   try {
-    await Blog.create(req.body);
+    Blog.create(req.body);
     req.flash("success", "Blog has been added");
     return res.redirect(`/blogs`);
   } catch (e) {
@@ -81,9 +81,9 @@ blogs.post("/new", async (req, res, next) => {
   }
 });
 
-blogs.post("/comment", async (req, res, next) => {
+blogs.post("/comment", (req, res, next) => {
   try {
-    await Comment.create(req.body);
+    Comment.create(req.body);
     req.flash("success", "Comment has been added");
     return res.redirect(`/blogs/${req.body.blog_id}`);
   } catch (e) {

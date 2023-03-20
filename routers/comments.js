@@ -6,38 +6,38 @@ const comments = Router();
 
 comments.use(csrf());
 
-comments.get("/", async (req, res, next) => {
+comments.get("/", (req, res, next) => {
   try {
-    const comments = await Comment.all();
+    const comments = Comment.all();
     return res.render("comments/index", { comments });
   } catch (e) {
     next(e);
   }
 });
 
-comments.get("/new", async (req, res, next) => {
+comments.get("/new", (req, res, next) => {
   try {
     const comment = new Comment();
-    const blogs = await Blog.all();
+    const blogs = Blog.all();
     return res.render("comments/new", { comment, blogs });
   } catch (e) {
     next(e);
   }
 });
 
-comments.get("/edit/:id", async (req, res, next) => {
+comments.get("/edit/:id", (req, res, next) => {
   try {
-    const comment = await Comment.find(req.params.id);
-    const blogs = await Blog.all();
+    const comment = Comment.find(req.params.id);
+    const blogs = Blog.all();
     return res.render("comments/edit", { comment, blogs });
   } catch (e) {
     next(e);
   }
 });
 
-comments.post("/edit/:id", async (req, res, next) => {
+comments.post("/edit/:id", (req, res, next) => {
   try {
-    await Comment.update(req.params.id, req.body);
+    Comment.update(req.params.id, req.body);
     req.flash("success", "Comment has been updated");
     return res.redirect(`/comments`);
   } catch (e) {
@@ -45,9 +45,9 @@ comments.post("/edit/:id", async (req, res, next) => {
   }
 });
 
-comments.post("/delete/:id", async (req, res, next) => {
+comments.post("/delete/:id", (req, res, next) => {
   try {
-    await Comment.delete(req.params.id);
+    Comment.delete(req.params.id);
     req.flash("success", "Comment has been deleted");
     return res.redirect("/comments");
   } catch (e) {
@@ -55,9 +55,9 @@ comments.post("/delete/:id", async (req, res, next) => {
   }
 });
 
-comments.get("/:id", async (req, res, next) => {
+comments.get("/:id", (req, res, next) => {
   try {
-    const comment = await Comment.find(req.params.id);
+    const comment = Comment.find(req.params.id);
     return res.render("comments/comment", {
       comment: res.locals.marked(comment),
     });
@@ -66,9 +66,9 @@ comments.get("/:id", async (req, res, next) => {
   }
 });
 
-comments.post("/new", async (req, res, next) => {
+comments.post("/new", (req, res, next) => {
   try {
-    await Comment.create(req.body);
+    Comment.create(req.body);
     req.flash("success", "Comment has been added");
     return res.redirect(`/comments`);
   } catch (e) {

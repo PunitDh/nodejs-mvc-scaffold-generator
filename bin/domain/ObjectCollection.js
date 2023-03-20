@@ -17,8 +17,8 @@ class ObjectCollection {
    * Saves all instances of the model to the database
    * @returns Saved instances as promises
    */
-  async saveAll() {
-    return this.instances.mapAsync((instance) => instance.save());
+  saveAll() {
+    return this.instances.map((instance) => instance.save());
   }
 
   /**

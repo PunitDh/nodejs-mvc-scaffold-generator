@@ -29,9 +29,9 @@ import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 import { writeFileSync } from "../utils/file_utils.js";
 import AuthInfo from "../domain/AuthInfo.js";
 
-await generateAuth();
+generateAuth();
 
-export async function generateAuth(command) {
+export function generateAuth(command) {
   const argvs = command?.split(" ").slice(3) || process.argv.slice(2);
   const [model, identifier, authenticator] = argvs;
   const folderName = path.join(PATHS.root, SETTINGS.models.location);
@@ -48,7 +48,7 @@ export async function generateAuth(command) {
     fs.mkdirSync(folderName);
   }
 
-  if (await modelExists(model)) {
+  if (modelExists(model)) {
     throw new GeneratorError(
       `Model '${model}' already exists in '${modelFilePath}'`
     );
@@ -101,12 +101,12 @@ export async function generateAuth(command) {
     LOGGER.error(`Unable to be generate model '${model}'`, e);
   }
 
-  async function modelExists(model) {
+  function modelExists(model) {
     const modelFilePath = path.join(folderName, `${model}.js`);
     if (fs.existsSync(modelFilePath)) {
       return true;
     }
-    if (await SQLiteTable.exists(getTableNameFromModel(model))) {
+    if (SQLiteTable.exists(getTableNameFromModel(model))) {
       return true;
     }
     return false;

@@ -13,10 +13,10 @@ pages.get("/about", (_, res) => {
   res.render("pages/about");
 });
 
-pages.get("/search", async (req, res) => {
+pages.get("/search", (req, res) => {
   const startTime = process.hrtime();
   const { maxResults, page, q: query } = req.query;
-  const results = await SearchResult.search(query);
+  const results = SearchResult.search(query);
   const resultsObj = {
     results:
       maxResults > 0
@@ -35,9 +35,9 @@ pages.get("/search", async (req, res) => {
   return res.render("pages/search", resultsObj);
 });
 
-pages.get("/api/search", async (req, res) => {
+pages.get("/api/search", (req, res) => {
   const { searchSuggestionLimit } = SETTINGS.views.pages.search;
-  const results = await SearchResult.search(
+  const results = SearchResult.search(
     req.query.q,
     searchSuggestionLimit || 10
   );

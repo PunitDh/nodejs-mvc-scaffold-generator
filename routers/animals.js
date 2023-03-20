@@ -8,14 +8,14 @@ const animals = Router();
 
 animals.use(csrf());
 
-animals.get("/", async (req, res) => {
+animals.get("/", (req, res) => {
   try {
-    const animals = await Animal.all();
+    const animals = Animal.all();
     return res.render("animals/index", { animals });
   } catch (e) {}
 });
 
-animals.get("/new", async (req, res) => {
+animals.get("/new", (req, res) => {
   try {
     const animal = new Animal();
     return res.render("animals/new", { animal });
@@ -25,9 +25,9 @@ animals.get("/new", async (req, res) => {
   }
 });
 
-animals.get("/edit/:id", async (req, res) => {
+animals.get("/edit/:id", (req, res) => {
   try {
-    const animal = await Animal.find(req.params.id);
+    const animal = Animal.find(req.params.id);
     return res.render("animals/edit", {
       animal,
       action: `/edit/${req.params.id}`,
@@ -37,14 +37,14 @@ animals.get("/edit/:id", async (req, res) => {
   }
 });
 
-animals.post("/edit/:id", upload.single("image"), async (req, res) => {
+animals.post("/edit/:id", upload.single("image"), (req, res) => {
   try {
     const animal = new Animal({ ...req.body, id: req.params.id });
     const image = req.file;
     const buffer = fs.readFileSync(image.path);
     const blob = Buffer.from(buffer, "binary");
     animal.image = blob;
-    await animal.save();
+    animal.save();
     req.flash(Flash.SUCCESS, "Animal has been updated");
     return res.redirect(`/animals`);
   } catch (e) {
@@ -53,9 +53,9 @@ animals.post("/edit/:id", upload.single("image"), async (req, res) => {
   }
 });
 
-animals.post("/delete/:id", async (req, res) => {
+animals.post("/delete/:id", (req, res) => {
   try {
-    await Animal.delete(req.params.id);
+    Animal.delete(req.params.id);
     req.flash(Flash.SUCCESS, "Animal has been deleted");
     return res.redirect("/animals");
   } catch (e) {
@@ -63,23 +63,23 @@ animals.post("/delete/:id", async (req, res) => {
   }
 });
 
-animals.get("/:id", async (req, res) => {
+animals.get("/:id", (req, res) => {
   try {
-    const animal = await Animal.find(req.params.id);
+    const animal = Animal.find(req.params.id);
     return res.render("animals/animal", { animal: res.locals.marked(animal) });
   } catch (e) {
     req.flash(Flash.ERROR, e.message);
   }
 });
 
-animals.post("/new", upload.single("image"), async (req, res) => {
+animals.post("/new", upload.single("image"), (req, res) => {
   try {
     const animal = new Animal(req.body);
     // const image = req.file;
     // const buffer = fs.readFileSync(image?.path);
     // const blob = Buffer.from(buffer, "binary");
     // animal.image = blob;
-    await animal.save();
+    animal.save();
     req.flash(Flash.SUCCESS, "Animal has been added");
     return res.redirect(`/animals`);
   } catch (e) {

@@ -13,9 +13,9 @@ class Employee extends Model {
     this.company_id = data.company_id;
   }
 
-  // get company() {
-  //   return Company.find(this.company_id);
-  // }
+  get company() {
+    return Company.find(this.company_id);
+  }
 }
 
 export default Employee;

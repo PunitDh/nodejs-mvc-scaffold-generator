@@ -3,7 +3,7 @@ import _Jwt from "../domain/JWT.js";
 import { UnauthorizedRequestError } from "../errors.js";
 import { Flash } from "../constants.js";
 
-async function authenticated(req, res, next) {
+function authenticated(req, res, next) {
   const token = req.cookies.app;
   const referer = new URLSearchParams();
   referer.append("referer", req.originalUrl);
@@ -14,7 +14,7 @@ async function authenticated(req, res, next) {
   }
 
   try {
-    if (await _Jwt.exists({ jwt: token })) {
+    if (_Jwt.exists({ jwt: token })) {
       req.flash(
         Flash.ERROR,
         "Invalid access token provided. Unauthorized access was blocked."

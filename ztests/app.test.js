@@ -18,11 +18,6 @@ const blog = await Blog.find(1);
 
 const comment = await Comment.find(1);
 
-// console.log(await blog.comments)
-
-// console.log(await blog.comments);
-
-// console.log(await comment.blog);
 
 const commentFKs = await Comment.__foreignKeys__;
 

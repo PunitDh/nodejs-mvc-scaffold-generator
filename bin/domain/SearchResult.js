@@ -2,7 +2,6 @@ import { SearchExcludedColumns } from "../constants.js";
 import DB from "../db.js";
 import SQLiteTable from "./SQLiteTable.js";
 import "../utils/js_utils.js";
-import LOGGER from "../logger.js";
 import { markSearchTermInObjectValues } from "../utils/text_utils.js";
 
 class SearchResult {
@@ -30,25 +29,19 @@ class SearchResult {
    * @description Searches for the given `searchTerm` in all SQLite tables, returning a sorted list of up to `limit` results.
    * @param {string} searchTerm - The term to search for.
    * @param {number} limit - The maximum number of results to return.
-   * @returns {Promise<Array<SearchResult>>} - A promise that resolves to an array of SearchResult objects.
+   * @returns {<Array<SearchResult>>} - A promise that resolves to an array of SearchResult objects.
    */
-  static async search(searchTerm, limit) {
-    const tables = await SQLiteTable.getAllTables();
-    const results = await tables.mapAsync(async (table) => {
-      const searchQuery = (await table.columns)
+  static search(searchTerm, limit) {
+    const tables = SQLiteTable.getAllTables();
+    const results = tables.map((table) => {
+      const searchQuery = table.columns
         .filter((column) => !SearchExcludedColumns.includes(column.name))
         .map((column) => `${column.name} LIKE '%' || $searchTerm || '%' `)
         .join(" OR ");
       const query = `SELECT * FROM ${table.name} WHERE ${searchQuery} ORDER BY updated_at DESC;`;
-      LOGGER.query(query);
-      return new Promise((resolve, reject) => {
-        DB.all(query, [searchTerm], (err, rows) => {
-          if (err) return reject(err);
-          return resolve(
-            rows.map((row) => new SearchResult(searchTerm, table.name, row))
-          );
-        });
-      });
+      return DB.prepare(query)
+        .all({ searchTerm })
+        .map((result) => new SearchResult(searchTerm, table.name, result));
     });
     return results
       .flat()

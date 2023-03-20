@@ -5,36 +5,29 @@ import { Flash } from "../bin/constants.js";
 import "../bin/utils/js_utils.js";
 const employees = Router();
 
-employees.get("/", async (req, res, next) => {
+employees.get("/", (req, res, next) => {
   try {
-    const employees = await Employee.all();
-    const companies = await Company.all();
-    employees.forEachAsync((employee) => {
-      employee.company = companies.find(
-        (company) => company.id === employee.company_id
-      );
-    });
-    console.log(employees);
+    const employees = Employee.all();
     return res.render("employees/index", { employees });
   } catch (e) {
     next(e);
   }
 });
 
-employees.get("/new", async (req, res, next) => {
+employees.get("/new", (req, res, next) => {
   try {
     const employee = new Employee();
-    const companies = await Company.all();
+    const companies = Company.all();
     return res.render("employees/new", { employee, companies });
   } catch (e) {
     next(e);
   }
 });
 
-employees.post("/new", async (req, res, next) => {
+employees.post("/new", (req, res, next) => {
   try {
     const employee = new Employee(req.body);
-    await employee.save();
+    employee.save();
     req.flash(Flash.SUCCESS, "Employee has been added");
     return res.redirect(`/employees`);
   } catch (e) {
@@ -42,20 +35,20 @@ employees.post("/new", async (req, res, next) => {
   }
 });
 
-employees.get("/edit/:id", async (req, res, next) => {
+employees.get("/edit/:id", (req, res, next) => {
   try {
-    const employee = await Employee.find(req.params.id);
-    const companies = await Company.all();
+    const employee = Employee.find(req.params.id);
+    const companies = Company.all();
     return res.render("employees/edit", { employee, companies });
   } catch (e) {
     next(e);
   }
 });
 
-employees.post("/edit/:id", async (req, res, next) => {
+employees.post("/edit/:id", (req, res, next) => {
   try {
     const employee = new Employee({ id: req.params.id, ...req.body });
-    await employee.save();
+    employee.save();
     req.flash(Flash.SUCCESS, "Employee has been updated");
     return res.redirect(`/employees`);
   } catch (e) {
@@ -63,9 +56,9 @@ employees.post("/edit/:id", async (req, res, next) => {
   }
 });
 
-employees.post("/delete/:id", async (req, res, next) => {
+employees.post("/delete/:id", (req, res, next) => {
   try {
-    await Employee.delete(req.params.id);
+    Employee.delete(req.params.id);
     req.flash(Flash.SUCCESS, "Employee has been deleted");
     return res.redirect("/employees");
   } catch (e) {
@@ -73,9 +66,9 @@ employees.post("/delete/:id", async (req, res, next) => {
   }
 });
 
-employees.get("/:id", async (req, res, next) => {
+employees.get("/:id", (req, res, next) => {
   try {
-    const employee = await Employee.find(req.params.id);
+    const employee = Employee.find(req.params.id);
     return res.render("employees/employee", { employee });
   } catch (e) {
     next(e);

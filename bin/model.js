@@ -3,7 +3,10 @@ import LOGGER from "./logger.js";
 import SQLiteColumn from "./domain/SQLiteColumn.js";
 import { ReadOnlyColumns, SearchExcludedColumns } from "./constants.js";
 import SQLiteTable from "./domain/SQLiteTable.js";
-import { getTableNameFromModel, removeNullValues } from "./utils/model_utils.js";
+import {
+  getTableNameFromModel,
+  removeNullValues,
+} from "./utils/model_utils.js";
 import "./utils/js_utils.js";
 import { QueryBuilder } from "./builders/QueryBuilder.js";
 import { DatabaseError } from "./errors.js";
@@ -43,7 +46,7 @@ class Model {
    * @returns List of SQLiteColumn
    */
   static get __columns__() {
-    return (async () => await SQLiteColumn.getColumns(this.__tablename__))();
+    return SQLiteColumn.getColumns(this.__tablename__);
   }
 
   /**
@@ -58,30 +61,30 @@ class Model {
    * @description Returning all items in the table
    * @returns List of rows
    */
-  static async all() {
+  static all() {
     const query = QueryBuilder().select("*").from(this.__tablename__).build();
-    return await this.dbQuery(query);
+    return this.dbQuery(query);
   }
 
   /**
    *
    * @returns The first item in the table
    */
-  static async first() {
+  static first() {
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
       .limit(1)
       .build();
-    return await this.dbQuery(query, [], true);
+    return this.dbQuery(query, {}, true);
   }
 
   /**
    *
    * @returns The last item in the table
    */
-  static async last() {
-    const result = await this.all();
+  static last() {
+    const result = this.all();
     return result[result.length - 1];
   }
 
@@ -90,13 +93,13 @@ class Model {
    * @param {integer} id
    * @returns A single item with the specified id
    */
-  static async find(id) {
+  static find(id) {
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
       .where("id")
       .build();
-    return await this.dbQuery(query, [id], true);
+    return this.dbQuery(query, { id }, true);
   }
 
   /**
@@ -104,8 +107,8 @@ class Model {
    * @param {Object} obj
    * @returns A single row or an empty object
    */
-  static async findBy(obj) {
-    const result = await this.where(obj);
+  static findBy(obj) {
+    const result = this.where(obj);
     return result.length > 0 ? result.first() : null;
   }
 
@@ -114,13 +117,13 @@ class Model {
    * @param {string} searchTerm
    * @returns A list of rows
    */
-  static async search(searchTerm) {
-    const columnNames = (await this.__columns__)
+  static search(searchTerm) {
+    const columnNames = this.__columns__
       .filter((column) => !SearchExcludedColumns.includes(column.name))
       .map((column) => `${column.name} LIKE '%' || $searchTerm || '%' `);
     const whereClause = columnNames.join(" OR ");
     const query = `SELECT * FROM ${this.__tablename__} WHERE ${whereClause};`;
-    return await this.dbQuery(query, [searchTerm]);
+    return this.dbQuery(query, { searchTerm });
   }
 
   /**
@@ -128,8 +131,8 @@ class Model {
    * @param {Object} obj
    * @returns Boolean
    */
-  static async exists(obj) {
-    const result = await this.where(obj);
+  static exists(obj) {
+    const result = this.where(obj);
     return result.length > 0;
   }
 
@@ -138,7 +141,7 @@ class Model {
    * @param {Object} object
    * @returns the inserted row
    */
-  static async create(object) {
+  static create(object) {
     const sanitizedObject = removeNullValues(
       new this.prototype.constructor(object)
     );
@@ -147,7 +150,7 @@ class Model {
       .into(this.__tablename__)
       .values(Object.keys(sanitizedObject))
       .build();
-    return await this.dbQuery(query, Object.values(sanitizedObject), true);
+    return this.dbQuery(query, sanitizedObject, true);
   }
 
   /**
@@ -156,17 +159,17 @@ class Model {
    * @param {Object} object
    * @returns
    */
-  static async update(id, object) {
+  static update(id, object) {
     const sanitizedObject = removeNullValues(
       new this.prototype.constructor(object)
     );
-    const values = [...Object.values(sanitizedObject), id];
+    const values = { id, ...sanitizedObject };
     const query = QueryBuilder()
       .update(this.__tablename__)
       .set(Object.keys(sanitizedObject))
       .where("id")
       .build();
-    return await this.dbQuery(query, values, true);
+    return this.dbQuery(query, values, true);
   }
 
   /**
@@ -174,14 +177,16 @@ class Model {
    * @param {Object} obj
    * @returns A list of rows that matches the conditions { id: 1, name: 'Tim' }
    */
-  static async where(obj) {
-    const sanitizedObject = removeNullValues(new this.prototype.constructor(obj));
+  static where(obj) {
+    const sanitizedObject = removeNullValues(
+      new this.prototype.constructor(obj)
+    );
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
       .where(Object.keys(sanitizedObject))
       .build();
-    return await this.dbQuery(query, Object.values(sanitizedObject));
+    return this.dbQuery(query, sanitizedObject);
   }
 
   /**
@@ -189,21 +194,21 @@ class Model {
    * @param {integer} id
    * @returns The deleted row
    */
-  static async delete(id) {
+  static delete(id) {
     const query = QueryBuilder()
       .delete()
       .from(this.__tablename__)
       .where("id")
       .returning("*")
       .build();
-    return await this.dbQuery(query, [id], true);
+    return this.dbQuery(query, { id }, true);
   }
 
   /**
    * @description Saves a row in the database
    * @returns The saved row
    */
-  async save() {
+   save() {
     const columns = Object.keys(this).filter(
       (column) => !ReadOnlyColumns.includes(column)
     );
@@ -221,46 +226,41 @@ class Model {
       .returning("*");
 
     const query = this.id ? updateQuery : insertQuery;
-    const values = [...columns.map((column) => this[column]), this.id];
-    return await this.constructor.dbQuery(query.build(), values, true);
+    // const values = [...columns.map((column) => this[column]), this.id];
+    return this.constructor.dbQuery(query.build(), this, true);
   }
 
   /**
    * @description Deletes a row in the database
    * @returns The deleted row
    */
-  async delete() {
+  delete() {
     const query = QueryBuilder()
       .delete()
       .from(this.constructor.__tablename__)
       .where("id")
       .returning("*")
       .build();
-    return await this.constructor.dbQuery(query, [this.id]);
+    return this.constructor.dbQuery(query, { id: this.id });
   }
 
   /**
    * @description Runs an SQL query on the model's table
    * @param {string} query
-   * @param {Array<string>} values
+   * @param {Array<any>} values
    * @param {Boolean} singular
    * @returns The result of the SQL query
    */
-  static dbQuery(query, values = [], singular = false) {
+  static dbQuery(query, values = {}, singular = false) {
     const _Model = this.prototype.constructor;
-    return new Promise(function (resolve, reject) {
-      LOGGER.query(query);
-      DB.all(query, values, function (err, rows) {
-        if (err) {
-          const error = new DatabaseError(err);
-          return reject(error);
-        }
-        const result = rows.map((row) => new _Model(row));
-        return singular
-          ? resolve(result.length ? result.first() : {})
-          : resolve(result);
-      });
-    });
+    const prepared = DB.prepare(query);
+    if (singular) {
+      return prepared
+        .all({ ...values })
+        .map((value) => new _Model(value))
+        .first();
+    }
+    return prepared.all({ ...values }).map((value) => new _Model(value));
   }
 }
 

@@ -6,20 +6,20 @@ import {{Model}} from "../{{../location}}/{{Model}}.js";
 import { Flash } from "../bin/constants.js";
 const {{route}} = Router();
 
-{{route}}.get("/", async (req, res, next) => {
+{{route}}.get("/", (req, res, next) => {
   try {
-    const {{route}} = await {{Model}}.all();
+    const {{route}} = {{Model}}.all();
     return res.render("{{route}}/index", { {{route}} });
   } catch (e) {
     next(e);
   }
 });
 
-{{route}}.get("/new", async (req, res, next) => {
+{{route}}.get("/new", (req, res, next) => {
   try {
     const {{model}} = new {{Model}}();
     {{#foreignKeys}}
-    const {{table}} = await {{Model}}.all();
+    const {{table}} = {{Model}}.all();
     {{/foreignKeys}}
     return res.render("{{route}}/new", { {{model}}{{#foreignKeys}}, {{table}}{{/foreignKeys}} });
   } catch (e) {
@@ -27,10 +27,10 @@ const {{route}} = Router();
   }
 });
 
-{{route}}.post("/new", async (req, res, next) => {
+{{route}}.post("/new", (req, res, next) => {
   try {
     const {{model}} = new {{Model}}(req.body);
-    await {{model}}.save();
+    {{model}}.save();
     req.flash(Flash.SUCCESS, "{{Model}} has been added");
     return res.redirect(`/{{route}}`);
   } catch (e) {
@@ -38,11 +38,11 @@ const {{route}} = Router();
   }
 });
 
-{{route}}.get("/edit/:id", async (req, res, next) => {
+{{route}}.get("/edit/:id", (req, res, next) => {
   try {
-    const {{model}} = await {{Model}}.find(req.params.id);
+    const {{model}} = {{Model}}.find(req.params.id);
     {{#foreignKeys}}
-    const {{table}} = await {{Model}}.all();
+    const {{table}} = {{Model}}.all();
     {{/foreignKeys}}
     return res.render("{{route}}/edit", { {{model}}{{#foreignKeys}}, {{table}}{{/foreignKeys}} });
   } catch (e) {
@@ -50,10 +50,10 @@ const {{route}} = Router();
   }
 });
 
-{{route}}.post("/edit/:id", async (req, res, next) => {
+{{route}}.post("/edit/:id", (req, res, next) => {
   try {
     const {{model}} = new {{Model}}({ id: req.params.id, ...req.body });
-    await {{model}}.save();
+    {{model}}.save();
     req.flash(Flash.SUCCESS, "{{Model}} has been updated");
     return res.redirect(`/{{route}}`);
   } catch (e) {
@@ -61,9 +61,9 @@ const {{route}} = Router();
   }
 });
 
-{{route}}.post("/delete/:id", async (req, res, next) => {
+{{route}}.post("/delete/:id", (req, res, next) => {
   try {
-    await {{Model}}.delete(req.params.id);
+    {{Model}}.delete(req.params.id);
     req.flash(Flash.SUCCESS, "{{Model}} has been deleted");
     return res.redirect("/{{route}}");
   } catch (e) {
@@ -71,9 +71,9 @@ const {{route}} = Router();
   }
 });
 
-{{route}}.get("/:id", async (req, res, next) => {
+{{route}}.get("/:id", (req, res, next) => {
   try {
-    const {{model}} = await {{Model}}.find(req.params.id);
+    const {{model}} = {{Model}}.find(req.params.id);
     return res.render("{{route}}/{{model}}", { {{model}} });
   } catch (e) {
     next(e);

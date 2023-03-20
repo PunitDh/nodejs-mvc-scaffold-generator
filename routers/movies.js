@@ -4,29 +4,29 @@ import Theater from "../models/Theater.js";
 import { Flash } from "../bin/constants.js";
 const movies = Router();
 
-movies.get("/", async (req, res, next) => {
+movies.get("/", (req, res, next) => {
   try {
-    const movies = await Movie.all();
+    const movies = Movie.all();
     return res.render("movies/index", { movies });
   } catch (e) {
     next(e);
   }
 });
 
-movies.get("/new", async (req, res, next) => {
+movies.get("/new", (req, res, next) => {
   try {
     const movie = new Movie();
-    const theaters = await Theater.all();
+    const theaters = Theater.all();
     return res.render("movies/new", { movie, theaters });
   } catch (e) {
     next(e);
   }
 });
 
-movies.post("/new", async (req, res, next) => {
+movies.post("/new", (req, res, next) => {
   try {
     const movie = new Movie(req.body);
-    await movie.save();
+    movie.save();
     req.flash(Flash.SUCCESS, "Movie has been added");
     return res.redirect(`/movies`);
   } catch (e) {
@@ -34,20 +34,20 @@ movies.post("/new", async (req, res, next) => {
   }
 });
 
-movies.get("/edit/:id", async (req, res, next) => {
+movies.get("/edit/:id", (req, res, next) => {
   try {
-    const movie = await Movie.find(req.params.id);
-    const theaters = await Theater.all();
+    const movie = Movie.find(req.params.id);
+    const theaters = Theater.all();
     return res.render("movies/edit", { movie, theaters });
   } catch (e) {
     next(e);
   }
 });
 
-movies.post("/edit/:id", async (req, res, next) => {
+movies.post("/edit/:id", (req, res, next) => {
   try {
     const movie = new Movie({ id: req.params.id, ...req.body });
-    await movie.save();
+    movie.save();
     req.flash(Flash.SUCCESS, "Movie has been updated");
     return res.redirect(`/movies`);
   } catch (e) {
@@ -55,9 +55,9 @@ movies.post("/edit/:id", async (req, res, next) => {
   }
 });
 
-movies.post("/delete/:id", async (req, res, next) => {
+movies.post("/delete/:id", (req, res, next) => {
   try {
-    await Movie.delete(req.params.id);
+    Movie.delete(req.params.id);
     req.flash(Flash.SUCCESS, "Movie has been deleted");
     return res.redirect("/movies");
   } catch (e) {
@@ -65,9 +65,9 @@ movies.post("/delete/:id", async (req, res, next) => {
   }
 });
 
-movies.get("/:id", async (req, res, next) => {
+movies.get("/:id", (req, res, next) => {
   try {
-    const movie = await Movie.find(req.params.id);
+    const movie = Movie.find(req.params.id);
     return res.render("movies/movie", { movie });
   } catch (e) {
     next(e);

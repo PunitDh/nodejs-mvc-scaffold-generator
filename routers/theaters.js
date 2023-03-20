@@ -3,16 +3,16 @@ import Theater from "../models/Theater.js";
 import { Flash } from "../bin/constants.js";
 const theaters = Router();
 
-theaters.get("/", async (req, res, next) => {
+theaters.get("/", (req, res, next) => {
   try {
-    const theaters = await Theater.all();
+    const theaters = Theater.all();
     return res.render("theaters/index", { theaters });
   } catch (e) {
     next(e);
   }
 });
 
-theaters.get("/new", async (req, res, next) => {
+theaters.get("/new", (req, res, next) => {
   try {
     const theater = new Theater();
     return res.render("theaters/new", { theater });
@@ -21,10 +21,10 @@ theaters.get("/new", async (req, res, next) => {
   }
 });
 
-theaters.post("/new", async (req, res, next) => {
+theaters.post("/new", (req, res, next) => {
   try {
     const theater = new Theater(req.body);
-    await theater.save();
+    theater.save();
     req.flash(Flash.SUCCESS, "Theater has been added");
     return res.redirect(`/theaters`);
   } catch (e) {
@@ -32,19 +32,19 @@ theaters.post("/new", async (req, res, next) => {
   }
 });
 
-theaters.get("/edit/:id", async (req, res, next) => {
+theaters.get("/edit/:id", (req, res, next) => {
   try {
-    const theater = await Theater.find(req.params.id);
+    const theater = Theater.find(req.params.id);
     return res.render("theaters/edit", { theater });
   } catch (e) {
     next(e);
   }
 });
 
-theaters.post("/edit/:id", async (req, res, next) => {
+theaters.post("/edit/:id", (req, res, next) => {
   try {
     const theater = new Theater({ id: req.params.id, ...req.body });
-    await theater.save();
+    theater.save();
     req.flash(Flash.SUCCESS, "Theater has been updated");
     return res.redirect(`/theaters`);
   } catch (e) {
@@ -52,9 +52,9 @@ theaters.post("/edit/:id", async (req, res, next) => {
   }
 });
 
-theaters.post("/delete/:id", async (req, res, next) => {
+theaters.post("/delete/:id", (req, res, next) => {
   try {
-    await Theater.delete(req.params.id);
+    Theater.delete(req.params.id);
     req.flash(Flash.SUCCESS, "Theater has been deleted");
     return res.redirect("/theaters");
   } catch (e) {
@@ -62,9 +62,9 @@ theaters.post("/delete/:id", async (req, res, next) => {
   }
 });
 
-theaters.get("/:id", async (req, res, next) => {
+theaters.get("/:id", (req, res, next) => {
   try {
-    const theater = await Theater.find(req.params.id);
+    const theater = Theater.find(req.params.id);
     return res.render("theaters/theater", { theater });
   } catch (e) {
     next(e);

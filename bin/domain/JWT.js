@@ -8,14 +8,14 @@ class _Jwt extends Model {
     this.last_used = data.last_used;
   }
 
-  static async add(jwt) {
+  static add(jwt) {
     const query = QueryBuilder()
       .insertInto(this.__tablename__)
       .withNoTimeStamps()
       .values("jwt")
       .returning("*")
       .build();
-    return await this.dbQuery(query, [jwt]);
+    return this.dbQuery(query, { jwt });
   }
 }
 

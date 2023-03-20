@@ -62,8 +62,6 @@ export function generateRouter(command) {
     location: SETTINGS.models.location,
   };
 
-  console.log(templateProps);
-
   try {
     writeFileSync(
       routerFile,

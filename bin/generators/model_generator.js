@@ -40,7 +40,7 @@ import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 import { writeFileSync } from "../utils/file_utils.js";
 import { getSchema, saveSchema } from "../utils/schema_utils.js";
 
-export async function generateModel(testCommand) {
+export function generateModel(testCommand) {
   const argvs = testCommand?.split(" ").slice(3) || process.argv.slice(2);
   const [model, ...args] = argvs;
   const folderName = path.join(PATHS.root, SETTINGS.models.location);
@@ -58,7 +58,7 @@ export async function generateModel(testCommand) {
     fs.mkdirSync(folderName);
   }
 
-  if (!testCommand && (await modelExists(model))) {
+  if (!testCommand && modelExists(model)) {
     throw new GeneratorError(
       `Model '${model}' already exists in '${modelFilePath}'`
     );
@@ -79,7 +79,12 @@ export async function generateModel(testCommand) {
     );
     const columns = nonRefs.map(
       ([name, type, ...constraints]) =>
-        new MigrationColumn(MigrationActions.subActions.ADD, name, type, ...constraints)
+        new MigrationColumn(
+          MigrationActions.subActions.ADD,
+          name,
+          type,
+          ...constraints
+        )
     );
     const foreignKeys = refs.map(([referenceTable, _, ...options]) => {
       const upperCaseOptions = options?.map((option) => option.toUpperCase());
@@ -134,12 +139,12 @@ export async function generateModel(testCommand) {
     LOGGER.error(`Unable to be generate model '${model}'`, e.stack);
   }
 
-  async function modelExists(model) {
+  function modelExists(model) {
     const modelFilePath = path.join(folderName, `${model}.js`);
     if (fs.existsSync(modelFilePath)) {
       return true;
     }
-    if (await SQLiteTable.exists(getTableNameFromModel(model))) {
+    if (SQLiteTable.exists(getTableNameFromModel(model))) {
       return true;
     }
     return false;

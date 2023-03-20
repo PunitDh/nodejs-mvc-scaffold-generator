@@ -21717,3 +21717,251 @@ employees is not iterable
     );
 [INFO] [20/03/2023, 9:48:15 pm]: Successfully connected to database: 'database.db'
 [INFO] [20/03/2023, 9:48:15 pm]: Server started on port 3000
+[INFO] [20/03/2023, 9:49:51 pm]: Started POST "/users/logout" at 20/03/2023, 9:49:51 pm
+[QUERY] [20/03/2023, 9:49:51 pm]: INSERT INTO _jwts (jwt) VALUES ('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/) RETURNING *;
+[INFO] [20/03/2023, 9:49:51 pm]: Completed 302 Found in 7.71 ms
+[INFO] [20/03/2023, 9:49:51 pm]: Started GET "/users/login" at 20/03/2023, 9:49:51 pm
+[INFO] [20/03/2023, 9:49:51 pm]: Completed 200 OK in 4.19 ms
+[INFO] [20/03/2023, 9:50:12 pm]: Started POST "/users/login" at 20/03/2023, 9:50:12 pm
+[QUERY] [20/03/2023, 9:50:12 pm]: SELECT * FROM users WHERE email='test@test.com';
+[QUERY] [20/03/2023, 9:50:12 pm]: UPDATE users SET first_name='Test', last_name='Test', email='test@test.com', password='$2b$10$dL7QbekK50b1xVXm5MfeVeE21'/*+28 bytes*/, updated_at=DATETIME('now')  WHERE id=11.0 RETURNING *;
+[INFO] [20/03/2023, 9:50:12 pm]: Completed 302 Found in 70.74 ms
+[INFO] [20/03/2023, 9:50:12 pm]: Started GET "/users/" at 20/03/2023, 9:50:12 pm
+[QUERY] [20/03/2023, 9:50:12 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:50:12 pm]: SELECT * FROM users;
+[INFO] [20/03/2023, 9:50:12 pm]: Completed 200 OK in 3.86 ms
+[INFO] [20/03/2023, 9:50:42 pm]: Started GET "/blogs/" at 20/03/2023, 9:50:42 pm
+[QUERY] [20/03/2023, 9:50:42 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:50:42 pm]: SELECT * FROM blogs;
+[INFO] [20/03/2023, 9:50:42 pm]: Completed 200 OK in 12.68 ms
+[INFO] [20/03/2023, 9:50:44 pm]: Started GET "/blogs/2" at 20/03/2023, 9:50:44 pm
+[QUERY] [20/03/2023, 9:50:44 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:50:44 pm]: SELECT * FROM blogs WHERE id='2';
+[QUERY] [20/03/2023, 9:50:44 pm]: SELECT * FROM comments WHERE blog_id=2.0;
+[INFO] [20/03/2023, 9:50:44 pm]: Completed 200 OK in 15.29 ms
+[INFO] [20/03/2023, 9:50:47 pm]: Started POST "/blogs/comment/" at 20/03/2023, 9:50:47 pm
+[QUERY] [20/03/2023, 9:50:47 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:52:15 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 9:52:15 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 9:52:15 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 9:52:15 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 9:52:15 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 9:52:16 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 9:52:23 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 9:52:23 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 9:52:23 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 9:52:23 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 9:52:23 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 9:52:23 pm]: Server started on port 3000
+[INFO] [20/03/2023, 9:52:28 pm]: Started GET "/blogs/" at 20/03/2023, 9:52:28 pm
+[QUERY] [20/03/2023, 9:52:28 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:52:28 pm]: SELECT * FROM blogs;
+[INFO] [20/03/2023, 9:52:28 pm]: Completed 200 OK in 16.54 ms
+[INFO] [20/03/2023, 9:52:30 pm]: Started GET "/blogs/3" at 20/03/2023, 9:52:30 pm
+[QUERY] [20/03/2023, 9:52:30 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:52:30 pm]: SELECT * FROM blogs WHERE id='3';
+[QUERY] [20/03/2023, 9:52:30 pm]: SELECT * FROM comments WHERE blog_id=3.0;
+[INFO] [20/03/2023, 9:52:30 pm]: Completed 200 OK in 16.33 ms
+[INFO] [20/03/2023, 9:52:33 pm]: Started POST "/blogs/comment/" at 20/03/2023, 9:52:33 pm
+[QUERY] [20/03/2023, 9:52:33 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[ERROR] [20/03/2023, 9:52:33 pm]: 400 TypeError: This statement does not return data. Use run() instead
+    at Comment.dbQuery (file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/model.js:259:10)
+    at Comment.create (file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/model.js:153:17)
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/routers/blogs.js:85:13
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:280:10)
+[INFO] [20/03/2023, 9:52:33 pm]: Completed 302 Found in 8.68 ms
+[INFO] [20/03/2023, 9:52:33 pm]: Started GET "/blogs/3" at 20/03/2023, 9:52:33 pm
+[QUERY] [20/03/2023, 9:52:33 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:52:33 pm]: SELECT * FROM blogs WHERE id='3';
+[QUERY] [20/03/2023, 9:52:33 pm]: SELECT * FROM comments WHERE blog_id=3.0;
+[INFO] [20/03/2023, 9:52:33 pm]: Completed 200 OK in 5.36 ms
+[INFO] [20/03/2023, 9:53:26 pm]: Started GET "/blogs/" at 20/03/2023, 9:53:26 pm
+[QUERY] [20/03/2023, 9:53:26 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:53:26 pm]: SELECT * FROM blogs;
+[INFO] [20/03/2023, 9:53:26 pm]: Completed 200 OK in 10.68 ms
+[INFO] [20/03/2023, 9:53:27 pm]: Started GET "/blogs/new" at 20/03/2023, 9:53:27 pm
+[QUERY] [20/03/2023, 9:53:27 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[INFO] [20/03/2023, 9:53:27 pm]: Completed 200 OK in 13.68 ms
+[INFO] [20/03/2023, 9:53:29 pm]: Started POST "/blogs/new" at 20/03/2023, 9:53:29 pm
+[QUERY] [20/03/2023, 9:53:29 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[ERROR] [20/03/2023, 9:53:29 pm]: 400 TypeError: This statement does not return data. Use run() instead
+    at Blog.dbQuery (file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/model.js:259:10)
+    at Blog.create (file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/bin/model.js:153:17)
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/routers/blogs.js:75:10
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:280:10)
+[INFO] [20/03/2023, 9:53:29 pm]: Completed 302 Found in 8.73 ms
+[INFO] [20/03/2023, 9:53:29 pm]: Started GET "/blogs/new" at 20/03/2023, 9:53:29 pm
+[QUERY] [20/03/2023, 9:53:29 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[INFO] [20/03/2023, 9:53:29 pm]: Completed 200 OK in 9.44 ms
+[QUERY] [20/03/2023, 9:53:55 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 9:53:55 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 9:53:55 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 9:53:55 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 9:53:55 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 9:53:55 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 9:55:09 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 9:55:09 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 9:55:09 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 9:55:09 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 9:55:09 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 9:55:09 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 9:55:54 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 9:55:54 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 9:55:54 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 9:55:54 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 9:55:54 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 9:55:54 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 9:55:57 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 9:55:57 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 9:55:57 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 9:55:57 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 9:55:57 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 9:55:57 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 9:56:12 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 9:56:12 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 9:56:12 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 9:56:12 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 9:56:12 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 9:56:12 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 9:56:16 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 9:56:16 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 9:56:16 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 9:56:16 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 9:56:16 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 9:56:16 pm]: Server started on port 3000
+[INFO] [20/03/2023, 9:56:19 pm]: Started POST "/blogs/new" at 20/03/2023, 9:56:19 pm
+[QUERY] [20/03/2023, 9:56:19 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[INFO] [20/03/2023, 9:56:19 pm]: Completed 302 Found in 10.08 ms
+[INFO] [20/03/2023, 9:56:19 pm]: Started GET "/blogs/new" at 20/03/2023, 9:56:19 pm
+[QUERY] [20/03/2023, 9:56:19 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[INFO] [20/03/2023, 9:56:19 pm]: Completed 200 OK in 8.64 ms
+[INFO] [20/03/2023, 9:56:21 pm]: Started GET "/blogs/new" at 20/03/2023, 9:56:21 pm
+[QUERY] [20/03/2023, 9:56:21 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[INFO] [20/03/2023, 9:56:21 pm]: Completed 200 OK in 12.04 ms
+[INFO] [20/03/2023, 9:56:23 pm]: Started POST "/blogs/new" at 20/03/2023, 9:56:23 pm
+[QUERY] [20/03/2023, 9:56:23 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:56:23 pm]: INSERT INTO blogs (title, body, created_at, updated_at) VALUES ('1', '1', DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [20/03/2023, 9:56:23 pm]: Completed 302 Found in 12.05 ms
+[INFO] [20/03/2023, 9:56:23 pm]: Started GET "/blogs/" at 20/03/2023, 9:56:23 pm
+[QUERY] [20/03/2023, 9:56:23 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:56:23 pm]: SELECT * FROM blogs;
+[INFO] [20/03/2023, 9:56:23 pm]: Completed 200 OK in 12.84 ms
+[INFO] [20/03/2023, 9:56:25 pm]: Started POST "/blogs/delete/64" at 20/03/2023, 9:56:25 pm
+[QUERY] [20/03/2023, 9:56:25 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:56:25 pm]: DELETE FROM blogs WHERE id='64' RETURNING *;
+[INFO] [20/03/2023, 9:56:25 pm]: Completed 302 Found in 9.33 ms
+[INFO] [20/03/2023, 9:56:25 pm]: Started GET "/blogs/" at 20/03/2023, 9:56:25 pm
+[QUERY] [20/03/2023, 9:56:25 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:56:25 pm]: SELECT * FROM blogs;
+[INFO] [20/03/2023, 9:56:26 pm]: Completed 200 OK in 10.77 ms
+[INFO] [20/03/2023, 9:56:27 pm]: Started GET "/blogs/3" at 20/03/2023, 9:56:27 pm
+[QUERY] [20/03/2023, 9:56:27 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:56:27 pm]: SELECT * FROM blogs WHERE id='3';
+[QUERY] [20/03/2023, 9:56:27 pm]: SELECT * FROM comments WHERE blog_id=3.0;
+[INFO] [20/03/2023, 9:56:27 pm]: Completed 200 OK in 12.04 ms
+[INFO] [20/03/2023, 9:56:29 pm]: Started POST "/blogs/comment/" at 20/03/2023, 9:56:29 pm
+[QUERY] [20/03/2023, 9:56:29 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:56:29 pm]: INSERT INTO comments (blog_id, body, created_at, updated_at) VALUES ('3', 'Test', DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [20/03/2023, 9:56:29 pm]: Completed 302 Found in 7.99 ms
+[INFO] [20/03/2023, 9:56:29 pm]: Started GET "/blogs/3" at 20/03/2023, 9:56:29 pm
+[QUERY] [20/03/2023, 9:56:29 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:56:29 pm]: SELECT * FROM blogs WHERE id='3';
+[QUERY] [20/03/2023, 9:56:29 pm]: SELECT * FROM comments WHERE blog_id=3.0;
+[INFO] [20/03/2023, 9:56:29 pm]: Completed 200 OK in 8.1 ms
+[INFO] [20/03/2023, 9:56:32 pm]: Started POST "/blogs/comment/" at 20/03/2023, 9:56:32 pm
+[QUERY] [20/03/2023, 9:56:32 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:56:32 pm]: INSERT INTO comments (blog_id, body, created_at, updated_at) VALUES ('3', 'Test1', DATETIME('now'), DATETIME('now')) RETURNING *;
+[INFO] [20/03/2023, 9:56:32 pm]: Completed 302 Found in 6.97 ms
+[INFO] [20/03/2023, 9:56:32 pm]: Started GET "/blogs/3" at 20/03/2023, 9:56:32 pm
+[QUERY] [20/03/2023, 9:56:32 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:56:32 pm]: SELECT * FROM blogs WHERE id='3';
+[QUERY] [20/03/2023, 9:56:32 pm]: SELECT * FROM comments WHERE blog_id=3.0;
+[INFO] [20/03/2023, 9:56:32 pm]: Completed 200 OK in 9.34 ms
+[INFO] [20/03/2023, 9:56:40 pm]: Started GET "/blogs/" at 20/03/2023, 9:56:40 pm
+[QUERY] [20/03/2023, 9:56:40 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:56:40 pm]: SELECT * FROM blogs;
+[INFO] [20/03/2023, 9:56:40 pm]: Completed 200 OK in 10.71 ms

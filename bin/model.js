@@ -1,5 +1,5 @@
 import DB from "./db.js";
-import LOGGER from "./logger.js";
+
 import SQLiteColumn from "./domain/SQLiteColumn.js";
 import { ReadOnlyColumns, SearchExcludedColumns } from "./constants.js";
 import SQLiteTable from "./domain/SQLiteTable.js";
@@ -9,7 +9,6 @@ import {
 } from "./utils/model_utils.js";
 import "./utils/js_utils.js";
 import { QueryBuilder } from "./builders/QueryBuilder.js";
-import { DatabaseError } from "./errors.js";
 
 /**
  * @description Base model class
@@ -62,7 +61,7 @@ class Model {
    * @returns List of rows
    */
   static all() {
-    const query = QueryBuilder().select("*").from(this.__tablename__).build();
+    const query = QueryBuilder().select("*").from(this.__tablename__);
     return this.dbQuery(query);
   }
 
@@ -71,11 +70,7 @@ class Model {
    * @returns The first item in the table
    */
   static first() {
-    const query = QueryBuilder()
-      .select("*")
-      .from(this.__tablename__)
-      .limit(1)
-      .build();
+    const query = QueryBuilder().select("*").from(this.__tablename__).limit(1);
     return this.dbQuery(query, {}, true);
   }
 
@@ -97,8 +92,7 @@ class Model {
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
-      .where("id")
-      .build();
+      .where("id");
     return this.dbQuery(query, { id }, true);
   }
 
@@ -149,7 +143,7 @@ class Model {
       .insert()
       .into(this.__tablename__)
       .values(Object.keys(sanitizedObject))
-      .build();
+      .returning("*");
     return this.dbQuery(query, sanitizedObject, true);
   }
 
@@ -168,7 +162,7 @@ class Model {
       .update(this.__tablename__)
       .set(Object.keys(sanitizedObject))
       .where("id")
-      .build();
+      .returning("*");
     return this.dbQuery(query, values, true);
   }
 
@@ -184,8 +178,7 @@ class Model {
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
-      .where(Object.keys(sanitizedObject))
-      .build();
+      .where(Object.keys(sanitizedObject));
     return this.dbQuery(query, sanitizedObject);
   }
 
@@ -199,8 +192,7 @@ class Model {
       .delete()
       .from(this.__tablename__)
       .where("id")
-      .returning("*")
-      .build();
+      .returning("*");
     return this.dbQuery(query, { id }, true);
   }
 
@@ -208,7 +200,7 @@ class Model {
    * @description Saves a row in the database
    * @returns The saved row
    */
-   save() {
+  save() {
     const columns = Object.keys(this).filter(
       (column) => !ReadOnlyColumns.includes(column)
     );
@@ -227,7 +219,7 @@ class Model {
 
     const query = this.id ? updateQuery : insertQuery;
     // const values = [...columns.map((column) => this[column]), this.id];
-    return this.constructor.dbQuery(query.build(), this, true);
+    return this.constructor.dbQuery(query, this, true);
   }
 
   /**
@@ -239,8 +231,7 @@ class Model {
       .delete()
       .from(this.constructor.__tablename__)
       .where("id")
-      .returning("*")
-      .build();
+      .returning("*");
     return this.constructor.dbQuery(query, { id: this.id });
   }
 
@@ -253,7 +244,7 @@ class Model {
    */
   static dbQuery(query, values = {}, singular = false) {
     const _Model = this.prototype.constructor;
-    const prepared = DB.prepare(query);
+    const prepared = DB.prepare(query.build());
     if (singular) {
       return prepared
         .all({ ...values })

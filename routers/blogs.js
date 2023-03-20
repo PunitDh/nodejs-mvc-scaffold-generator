@@ -12,7 +12,9 @@ blogs.get("/", (req, res, next) => {
   try {
     const blogs = Blog.all();
     return res.render("blogs/index", { blogs });
-  } catch (e) {}
+  } catch (e) {
+    next(e);
+  }
 });
 
 blogs.get("/new", (req, res, next) => {
@@ -20,8 +22,7 @@ blogs.get("/new", (req, res, next) => {
     const blog = new Blog();
     return res.render("blogs/new", { blog });
   } catch (e) {
-    req.flash("error", e.message);
-    return res.redirect("/blogs");
+    next(e);
   }
 });
 
@@ -30,7 +31,7 @@ blogs.get("/edit/:id", (req, res, next) => {
     const blog = Blog.find(req.params.id);
     return res.render("blogs/edit", { blog });
   } catch (e) {
-    req.flash("error", e.message);
+    next(e);
   }
 });
 
@@ -40,8 +41,7 @@ blogs.post("/edit/:id", (req, res, next) => {
     req.flash("success", "Blog has been updated");
     return res.redirect(`/blogs`);
   } catch (e) {
-    req.flash("error", e.message);
-    return res.redirect(`/blogs/edit/${req.params.id}`);
+    next(e);
   }
 });
 
@@ -58,7 +58,7 @@ blogs.post("/delete/:id", (req, res, next) => {
 blogs.get("/:id", (req, res, next) => {
   try {
     const blog = Blog.find(req.params.id);
-    const comments = (blog.comments).map((comment) =>
+    const comments = blog.comments.map((comment) =>
       comment.exclude("id", "blog_id", "updated_at")
     );
     return res.render("blogs/blog", {
@@ -66,7 +66,7 @@ blogs.get("/:id", (req, res, next) => {
       comments: comments.map((comment) => res.locals.marked(comment)),
     });
   } catch (e) {
-    req.flash("error", e.message);
+    next(e);
   }
 });
 
@@ -76,8 +76,7 @@ blogs.post("/new", (req, res, next) => {
     req.flash("success", "Blog has been added");
     return res.redirect(`/blogs`);
   } catch (e) {
-    req.flash("error", e.message);
-    return res.redirect("/blogs/new");
+    next(e);
   }
 });
 
@@ -87,7 +86,7 @@ blogs.post("/comment", (req, res, next) => {
     req.flash("success", "Comment has been added");
     return res.redirect(`/blogs/${req.body.blog_id}`);
   } catch (e) {
-    req.flash("error", e.message);
+    next(e);
   }
 });
 

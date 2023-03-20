@@ -21965,3 +21965,1765 @@ employees is not iterable
 [QUERY] [20/03/2023, 9:56:40 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
 [QUERY] [20/03/2023, 9:56:40 pm]: SELECT * FROM blogs;
 [INFO] [20/03/2023, 9:56:40 pm]: Completed 200 OK in 10.71 ms
+[INFO] [20/03/2023, 9:57:20 pm]: Started GET "/search?q=t&maxResults=10&page=1" at 20/03/2023, 9:57:20 pm
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 9:57:20 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 9:57:20 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:20 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:20 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:20 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:20 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:20 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:20 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:20 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 9:57:20 pm]: Completed 200 OK in 26.92 ms
+[INFO] [20/03/2023, 9:57:22 pm]: Started GET "/search?q=t&maxResults=10&page=2" at 20/03/2023, 9:57:22 pm
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 9:57:22 pm]: Completed 200 OK in 23.26 ms
+[INFO] [20/03/2023, 9:57:22 pm]: Started GET "/search?q=t&maxResults=10&page=3" at 20/03/2023, 9:57:22 pm
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 9:57:22 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:22 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 9:57:22 pm]: Completed 200 OK in 24.9 ms
+[INFO] [20/03/2023, 9:57:26 pm]: Started GET "/search?q=t&maxResults=10&page=2" at 20/03/2023, 9:57:26 pm
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 9:57:26 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 9:57:26 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:26 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:26 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:26 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:26 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:26 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:26 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:26 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 9:57:26 pm]: Completed 200 OK in 21.62 ms
+[INFO] [20/03/2023, 9:57:27 pm]: Started GET "/search?q=t&maxResults=10&page=1" at 20/03/2023, 9:57:27 pm
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 9:57:27 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 9:57:27 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:27 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:27 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:27 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:27 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:27 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:27 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:27 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 9:57:27 pm]: Completed 200 OK in 20.22 ms
+[INFO] [20/03/2023, 9:57:29 pm]: Started GET "/api/search?q=t" at 20/03/2023, 9:57:29 pm
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 9:57:29 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 9:57:29 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:29 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:29 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:29 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:29 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:29 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:29 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:29 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 9:57:29 pm]: Completed 200 OK in 21.54 ms
+[INFO] [20/03/2023, 9:57:31 pm]: Started GET "/blogs/63?referer=%2Fsearch%3Fq%3Dt" at 20/03/2023, 9:57:31 pm
+[QUERY] [20/03/2023, 9:57:31 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:57:31 pm]: SELECT * FROM blogs WHERE id='63';
+[QUERY] [20/03/2023, 9:57:31 pm]: SELECT * FROM comments WHERE blog_id=63.0;
+[INFO] [20/03/2023, 9:57:31 pm]: Completed 200 OK in 12.19 ms
+[INFO] [20/03/2023, 9:57:34 pm]: Started GET "/search?q=t" at 20/03/2023, 9:57:34 pm
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 9:57:34 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 9:57:34 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:34 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:34 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:34 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:34 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:34 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:34 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:34 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 9:57:34 pm]: Completed 200 OK in 28.49 ms
+[INFO] [20/03/2023, 9:57:41 pm]: Started GET "/search?q=t" at 20/03/2023, 9:57:41 pm
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 9:57:41 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 9:57:41 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:41 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:41 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:41 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:41 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:41 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:41 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:41 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 9:57:41 pm]: Completed 200 OK in 21.93 ms
+[INFO] [20/03/2023, 9:57:54 pm]: Started GET "/api/search?q=t" at 20/03/2023, 9:57:54 pm
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 9:57:54 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 9:57:54 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:54 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:54 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:54 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:54 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:54 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:54 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:54 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 9:57:54 pm]: Completed 304 Not Modified in 20.21 ms
+[INFO] [20/03/2023, 9:57:56 pm]: Started GET "/search?q=t&maxResults=10&page=1" at 20/03/2023, 9:57:56 pm
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 9:57:56 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 9:57:56 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:56 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:56 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:56 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:56 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:56 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:56 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:57:56 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 9:57:56 pm]: Completed 200 OK in 19.57 ms
+[QUERY] [20/03/2023, 9:58:48 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 9:58:48 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 9:58:48 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 9:58:48 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 9:58:48 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 9:58:48 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 9:58:58 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 9:58:58 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 9:58:58 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 9:58:58 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 9:58:58 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 9:58:58 pm]: Server started on port 3000
+[INFO] [20/03/2023, 9:59:02 pm]: Started GET "/search?q=t&maxResults=10&page=1" at 20/03/2023, 9:59:02 pm
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 9:59:02 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 9:59:02 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:02 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:02 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:02 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:02 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:02 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:02 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:02 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 9:59:02 pm]: Completed 200 OK in 33.34 ms
+[INFO] [20/03/2023, 9:59:04 pm]: Started GET "/blogs/63?referer=%2Fsearch%3Fq%3Dt%26maxSearchResults%3D10" at 20/03/2023, 9:59:04 pm
+[QUERY] [20/03/2023, 9:59:04 pm]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [20/03/2023, 9:59:04 pm]: SELECT * FROM blogs WHERE id='63';
+[QUERY] [20/03/2023, 9:59:04 pm]: SELECT * FROM comments WHERE blog_id=63.0;
+[INFO] [20/03/2023, 9:59:04 pm]: Completed 200 OK in 17.74 ms
+[INFO] [20/03/2023, 9:59:07 pm]: Started GET "/search?q=t&maxSearchResults=10" at 20/03/2023, 9:59:07 pm
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 9:59:07 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 9:59:07 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:07 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:07 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:07 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:07 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:07 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:07 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 9:59:07 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 9:59:07 pm]: Completed 200 OK in 26.15 ms
+[QUERY] [20/03/2023, 9:59:32 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 9:59:32 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 9:59:32 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 9:59:32 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 9:59:32 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 9:59:32 pm]: Server started on port 3000
+[INFO] [20/03/2023, 10:01:32 pm]: Started GET "/search?q=t&maxResults=10" at 20/03/2023, 10:01:32 pm
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:01:32 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:01:32 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:32 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:32 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:32 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:32 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:32 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:32 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:32 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:01:32 pm]: Completed 200 OK in 20.33 ms
+[INFO] [20/03/2023, 10:01:35 pm]: Started GET "/search?q=t&maxResults=10&page=2" at 20/03/2023, 10:01:35 pm
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:01:35 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:01:35 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:35 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:35 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:35 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:35 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:35 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:35 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:35 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:01:35 pm]: Completed 200 OK in 22.8 ms
+[INFO] [20/03/2023, 10:01:36 pm]: Started GET "/search?q=t&maxResults=10&page=1" at 20/03/2023, 10:01:36 pm
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:01:36 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:01:36 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:36 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:36 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:36 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:36 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:36 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:36 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:36 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:01:36 pm]: Completed 200 OK in 23.53 ms
+[QUERY] [20/03/2023, 10:01:51 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 10:01:51 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 10:01:51 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 10:01:51 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 10:01:51 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 10:01:51 pm]: Server started on port 3000
+[INFO] [20/03/2023, 10:01:55 pm]: Started GET "/search?q=t&maxResults=10" at 20/03/2023, 10:01:55 pm
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:01:55 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:01:55 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:55 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:55 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:55 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:55 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:55 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:55 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:01:55 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:01:55 pm]: Completed 200 OK in 27.18 ms
+[QUERY] [20/03/2023, 10:02:08 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 10:02:08 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 10:02:08 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 10:02:08 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 10:02:08 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 10:02:08 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 10:02:54 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 10:02:54 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 10:02:54 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 10:02:54 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 10:02:54 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 10:02:54 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 10:05:58 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 10:05:58 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 10:05:58 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 10:05:58 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 10:05:58 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 10:05:58 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 10:06:08 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 10:06:08 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 10:06:08 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 10:06:08 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 10:06:08 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 10:06:08 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 10:06:51 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 10:06:51 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 10:06:51 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 10:06:51 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 10:06:51 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 10:06:51 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 10:08:35 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 10:08:35 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 10:08:35 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 10:08:35 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 10:08:35 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 10:08:35 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 10:08:56 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 10:08:56 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 10:08:56 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 10:08:56 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 10:08:56 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 10:08:56 pm]: Server started on port 3000
+[QUERY] [20/03/2023, 10:09:00 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 10:09:00 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 10:09:00 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 10:09:00 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 10:09:00 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 10:09:00 pm]: Server started on port 3000
+[INFO] [20/03/2023, 10:09:06 pm]: Started GET "/search?q=t&maxResults=10" at 20/03/2023, 10:09:06 pm
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:09:06 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:09:06 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:06 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:06 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:06 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:06 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:06 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:06 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:06 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:09:06 pm]: Completed 200 OK in 20.65 ms
+[INFO] [20/03/2023, 10:09:07 pm]: Started GET "/api/search?q=t" at 20/03/2023, 10:09:07 pm
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:09:07 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:09:07 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:07 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:07 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:07 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:07 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:07 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:08 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:08 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:09:08 pm]: Completed 200 OK in 44.01 ms
+[INFO] [20/03/2023, 10:09:08 pm]: Started GET "/api/search?q=t1" at 20/03/2023, 10:09:08 pm
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:09:08 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:09:08 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't1' || '%'  OR location LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:08 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't1' || '%'  OR color LIKE '%' || 't1' || '%'  OR image LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:08 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't1' || '%'  OR body LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:08 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't1' || '%'  OR last_name LIKE '%' || 't1' || '%'  OR email LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:08 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't1' || '%'  OR year LIKE '%' || 't1' || '%'  OR theater_id LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:08 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't1' || '%'  OR last_name LIKE '%' || 't1' || '%'  OR title LIKE '%' || 't1' || '%'  OR salary LIKE '%' || 't1' || '%'  OR sick_leave_hours LIKE '%' || 't1' || '%'  OR annual_leave_hours LIKE '%' || 't1' || '%'  OR company_id LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:08 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't1' || '%'  OR body LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:08 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't1' || '%'  OR address LIKE '%' || 't1' || '%'  OR number_of_employees LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:09:08 pm]: Completed 200 OK in 9.59 ms
+[INFO] [20/03/2023, 10:09:10 pm]: Started GET "/comments/155?referer=%2Fsearch%3Fq%3Dt1%26maxResults%3D10%26page%3D1" at 20/03/2023, 10:09:10 pm
+[QUERY] [20/03/2023, 10:09:10 pm]: SELECT * FROM comments WHERE id='155';
+[INFO] [20/03/2023, 10:09:10 pm]: Completed 200 OK in 16.14 ms
+[INFO] [20/03/2023, 10:09:11 pm]: Started GET "/search?q=t1&maxResults=10&page=1" at 20/03/2023, 10:09:11 pm
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:09:11 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:09:11 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't1' || '%'  OR location LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:11 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't1' || '%'  OR color LIKE '%' || 't1' || '%'  OR image LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:11 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't1' || '%'  OR body LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:11 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't1' || '%'  OR last_name LIKE '%' || 't1' || '%'  OR email LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:11 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't1' || '%'  OR year LIKE '%' || 't1' || '%'  OR theater_id LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:11 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't1' || '%'  OR last_name LIKE '%' || 't1' || '%'  OR title LIKE '%' || 't1' || '%'  OR salary LIKE '%' || 't1' || '%'  OR sick_leave_hours LIKE '%' || 't1' || '%'  OR annual_leave_hours LIKE '%' || 't1' || '%'  OR company_id LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:11 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't1' || '%'  OR body LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:11 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't1' || '%'  OR address LIKE '%' || 't1' || '%'  OR number_of_employees LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:09:11 pm]: Completed 200 OK in 18.13 ms
+[INFO] [20/03/2023, 10:09:12 pm]: Started GET "/api/search?q=t1" at 20/03/2023, 10:09:12 pm
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't1' || '%'  OR location LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't1' || '%'  OR color LIKE '%' || 't1' || '%'  OR image LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't1' || '%'  OR body LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't1' || '%'  OR last_name LIKE '%' || 't1' || '%'  OR email LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't1' || '%'  OR year LIKE '%' || 't1' || '%'  OR theater_id LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't1' || '%'  OR last_name LIKE '%' || 't1' || '%'  OR title LIKE '%' || 't1' || '%'  OR salary LIKE '%' || 't1' || '%'  OR sick_leave_hours LIKE '%' || 't1' || '%'  OR annual_leave_hours LIKE '%' || 't1' || '%'  OR company_id LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't1' || '%'  OR body LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't1' || '%'  OR address LIKE '%' || 't1' || '%'  OR number_of_employees LIKE '%' || 't1' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:09:12 pm]: Completed 304 Not Modified in 9.47 ms
+[INFO] [20/03/2023, 10:09:12 pm]: Started GET "/api/search?q=t" at 20/03/2023, 10:09:12 pm
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:09:12 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:12 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:09:12 pm]: Completed 304 Not Modified in 20.09 ms
+[INFO] [20/03/2023, 10:09:18 pm]: Started GET "/api/search?q=t" at 20/03/2023, 10:09:18 pm
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:09:18 pm]: Completed 304 Not Modified in 19.12 ms
+[INFO] [20/03/2023, 10:09:18 pm]: Started GET "/search?q=t&maxResults=10&page=1" at 20/03/2023, 10:09:18 pm
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:09:18 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:18 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:09:18 pm]: Completed 200 OK in 20.82 ms
+[INFO] [20/03/2023, 10:09:22 pm]: Started GET "/search?q=t&maxResults=10&page=2" at 20/03/2023, 10:09:22 pm
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:09:22 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:09:22 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:22 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:22 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:22 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:22 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:22 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:22 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:22 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:09:22 pm]: Completed 200 OK in 24.74 ms
+[INFO] [20/03/2023, 10:09:24 pm]: Started GET "/comments/154?referer=%2Fsearch%3Fq%3Dt%26maxResults%3D10%26page%3D2" at 20/03/2023, 10:09:24 pm
+[QUERY] [20/03/2023, 10:09:24 pm]: SELECT * FROM comments WHERE id='154';
+[INFO] [20/03/2023, 10:09:24 pm]: Completed 200 OK in 8.24 ms
+[INFO] [20/03/2023, 10:09:25 pm]: Started GET "/search?q=t&maxResults=10&page=2" at 20/03/2023, 10:09:25 pm
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:09:25 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:09:25 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:25 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:25 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:25 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:25 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:25 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:25 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:25 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:09:25 pm]: Completed 200 OK in 21.27 ms
+[INFO] [20/03/2023, 10:09:28 pm]: Started GET "/comments/154?referer=%2Fsearch%3Fq%3Dt%26maxResults%3D10%26page%3D2" at 20/03/2023, 10:09:28 pm
+[QUERY] [20/03/2023, 10:09:28 pm]: SELECT * FROM comments WHERE id='154';
+[INFO] [20/03/2023, 10:09:28 pm]: Completed 304 Not Modified in 6.22 ms
+[INFO] [20/03/2023, 10:09:30 pm]: Started GET "/search?q=t&maxResults=10&page=2" at 20/03/2023, 10:09:30 pm
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:09:30 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:09:30 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:30 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:30 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:30 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:30 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:30 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:30 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:09:30 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:09:30 pm]: Completed 200 OK in 18.83 ms
+[QUERY] [20/03/2023, 10:10:42 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 10:10:42 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 10:10:42 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 10:10:42 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 10:10:42 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 10:10:42 pm]: Server started on port 3000
+[INFO] [20/03/2023, 10:10:44 pm]: Started GET "/search?q=t&maxResults=10&page=2" at 20/03/2023, 10:10:44 pm
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:10:44 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:10:44 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:44 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:44 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:44 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:44 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:44 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:44 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:44 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:10:44 pm]: Completed 200 OK in 27.69 ms
+[INFO] [20/03/2023, 10:10:45 pm]: Started GET "/api/search?q=t" at 20/03/2023, 10:10:45 pm
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:10:45 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:10:45 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:45 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:45 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:45 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:45 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:45 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:45 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:45 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:10:45 pm]: Completed 304 Not Modified in 34.86 ms
+[INFO] [20/03/2023, 10:10:47 pm]: Started GET "/api/search?q=t" at 20/03/2023, 10:10:47 pm
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:10:47 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:10:47 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:47 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:47 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:47 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:47 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:47 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:47 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:47 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:10:47 pm]: Completed 304 Not Modified in 12.21 ms
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA foreign_keys = ON
+[INFO] [20/03/2023, 10:10:59 pm]: Failed to set foreign key to ON
+[QUERY] [20/03/2023, 10:10:59 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('now'))
+    );
+[QUERY] [20/03/2023, 10:10:59 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('now'))
+    );
+[INFO] [20/03/2023, 10:10:59 pm]: Successfully connected to database: 'database.db'
+[INFO] [20/03/2023, 10:10:59 pm]: Server started on port 3000
+[INFO] [20/03/2023, 10:10:59 pm]: Started GET "/api/search?q=t" at 20/03/2023, 10:10:59 pm
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:10:59 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:10:59 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:59 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:59 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:59 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:59 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:59 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:59 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:10:59 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:10:59 pm]: Completed 200 OK in 25.35 ms
+[INFO] [20/03/2023, 10:11:00 pm]: Started GET "/api/search?q=t" at 20/03/2023, 10:11:00 pm
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:11:00 pm]: Completed 304 Not Modified in 13.51 ms
+[INFO] [20/03/2023, 10:11:00 pm]: Started GET "/search?q=t&maxResults=10&page=2" at 20/03/2023, 10:11:00 pm
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:11:00 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:00 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:11:00 pm]: Completed 200 OK in 10.64 ms
+[INFO] [20/03/2023, 10:11:01 pm]: Started GET "/api/search?q=t" at 20/03/2023, 10:11:01 pm
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:11:01 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:11:01 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:01 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:01 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:01 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:01 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:01 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:01 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:01 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:11:01 pm]: Completed 304 Not Modified in 11.68 ms
+[INFO] [20/03/2023, 10:11:04 pm]: Started GET "/comments/154?referer=%2Fsearch%3Fq%3Dt%26maxResults%3D10%26page%3D2" at 20/03/2023, 10:11:04 pm
+[QUERY] [20/03/2023, 10:11:05 pm]: SELECT * FROM comments WHERE id='154';
+[INFO] [20/03/2023, 10:11:05 pm]: Completed 304 Not Modified in 16.29 ms
+[INFO] [20/03/2023, 10:11:05 pm]: Started GET "/search?q=t&maxResults=10&page=2" at 20/03/2023, 10:11:05 pm
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:11:05 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:11:05 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:05 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:05 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:05 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:05 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:05 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:05 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:05 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:11:05 pm]: Completed 200 OK in 20.36 ms
+[INFO] [20/03/2023, 10:11:08 pm]: Started GET "/search?q=t&maxResults=10&page=3" at 20/03/2023, 10:11:08 pm
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:11:08 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:11:08 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:08 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:08 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:08 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:08 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:08 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:08 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:08 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:11:08 pm]: Completed 200 OK in 18.27 ms
+[INFO] [20/03/2023, 10:11:09 pm]: Started GET "/animals/96?referer=%2Fsearch%3Fq%3Dt%26maxResults%3D10%26page%3D3" at 20/03/2023, 10:11:09 pm
+[QUERY] [20/03/2023, 10:11:09 pm]: SELECT * FROM animals WHERE id='96';
+[INFO] [20/03/2023, 10:11:09 pm]: Completed 200 OK in 9.39 ms
+[INFO] [20/03/2023, 10:11:10 pm]: Started GET "/search?q=t&maxResults=10&page=3" at 20/03/2023, 10:11:10 pm
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:11:10 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:11:10 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:10 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:10 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:10 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:10 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:10 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:10 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:10 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:11:10 pm]: Completed 200 OK in 21.46 ms
+[INFO] [20/03/2023, 10:11:13 pm]: Started GET "/companies/45?referer=%2Fsearch%3Fq%3Dt%26maxResults%3D10%26page%3D3" at 20/03/2023, 10:11:13 pm
+[QUERY] [20/03/2023, 10:11:13 pm]: SELECT * FROM companies WHERE id='45';
+[INFO] [20/03/2023, 10:11:13 pm]: Completed 200 OK in 7.27 ms
+[INFO] [20/03/2023, 10:11:15 pm]: Started GET "/search?q=t&maxResults=10&page=3" at 20/03/2023, 10:11:15 pm
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:11:15 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:11:15 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:15 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:15 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:15 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:15 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:15 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:15 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:15 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:11:15 pm]: Completed 200 OK in 24.19 ms
+[INFO] [20/03/2023, 10:11:18 pm]: Started GET "/api/search?q=t" at 20/03/2023, 10:11:18 pm
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:11:18 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:11:18 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:18 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:18 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:18 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:18 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:18 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:18 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:11:18 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:11:18 pm]: Completed 304 Not Modified in 32.02 ms
+[INFO] [20/03/2023, 10:11:20 pm]: Started GET "/users/11?referer=%2Fsearch%3Fq%3Dt%26maxResults%3D10%26page%3D1" at 20/03/2023, 10:11:20 pm
+[QUERY] [20/03/2023, 10:11:20 pm]: SELECT * FROM users WHERE id='11';
+[INFO] [20/03/2023, 10:11:20 pm]: Completed 200 OK in 8.2 ms
+[INFO] [20/03/2023, 10:12:24 pm]: Started GET "/users/11?referer=%2Fsearch%3Fq%3Dt%26maxResults%3D10%26page%3D1" at 20/03/2023, 10:12:24 pm
+[QUERY] [20/03/2023, 10:12:24 pm]: SELECT * FROM users WHERE id='11';
+[INFO] [20/03/2023, 10:12:24 pm]: Completed 200 OK in 6.73 ms
+[INFO] [20/03/2023, 10:13:16 pm]: Started GET "/search?q=t&maxResults=10&page=1" at 20/03/2023, 10:13:16 pm
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:16 pm]: Completed 200 OK in 22.1 ms
+[INFO] [20/03/2023, 10:13:16 pm]: Started GET "/api/search?q=t" at 20/03/2023, 10:13:16 pm
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:16 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM theaters WHERE name LIKE '%' || 't' || '%'  OR location LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM animals WHERE name LIKE '%' || 't' || '%'  OR color LIKE '%' || 't' || '%'  OR image LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM users WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR email LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM movies WHERE name LIKE '%' || 't' || '%'  OR year LIKE '%' || 't' || '%'  OR theater_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || 't' || '%'  OR last_name LIKE '%' || 't' || '%'  OR title LIKE '%' || 't' || '%'  OR salary LIKE '%' || 't' || '%'  OR sick_leave_hours LIKE '%' || 't' || '%'  OR annual_leave_hours LIKE '%' || 't' || '%'  OR company_id LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM blogs WHERE title LIKE '%' || 't' || '%'  OR body LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:16 pm]: SELECT * FROM companies WHERE name LIKE '%' || 't' || '%'  OR address LIKE '%' || 't' || '%'  OR number_of_employees LIKE '%' || 't' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:16 pm]: Completed 304 Not Modified in 13.86 ms
+[INFO] [20/03/2023, 10:13:17 pm]: Started GET "/api/search?q=1" at 20/03/2023, 10:13:17 pm
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '1' || '%'  OR location LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM animals WHERE name LIKE '%' || '1' || '%'  OR color LIKE '%' || '1' || '%'  OR image LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '1' || '%'  OR body LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '1' || '%'  OR last_name LIKE '%' || '1' || '%'  OR email LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM movies WHERE name LIKE '%' || '1' || '%'  OR year LIKE '%' || '1' || '%'  OR theater_id LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '1' || '%'  OR last_name LIKE '%' || '1' || '%'  OR title LIKE '%' || '1' || '%'  OR salary LIKE '%' || '1' || '%'  OR sick_leave_hours LIKE '%' || '1' || '%'  OR annual_leave_hours LIKE '%' || '1' || '%'  OR company_id LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '1' || '%'  OR body LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM companies WHERE name LIKE '%' || '1' || '%'  OR address LIKE '%' || '1' || '%'  OR number_of_employees LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:17 pm]: Completed 200 OK in 12.76 ms
+[INFO] [20/03/2023, 10:13:17 pm]: Started GET "/api/search?q=10" at 20/03/2023, 10:13:17 pm
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '10' || '%'  OR location LIKE '%' || '10' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM animals WHERE name LIKE '%' || '10' || '%'  OR color LIKE '%' || '10' || '%'  OR image LIKE '%' || '10' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '10' || '%'  OR body LIKE '%' || '10' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '10' || '%'  OR last_name LIKE '%' || '10' || '%'  OR email LIKE '%' || '10' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM movies WHERE name LIKE '%' || '10' || '%'  OR year LIKE '%' || '10' || '%'  OR theater_id LIKE '%' || '10' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '10' || '%'  OR last_name LIKE '%' || '10' || '%'  OR title LIKE '%' || '10' || '%'  OR salary LIKE '%' || '10' || '%'  OR sick_leave_hours LIKE '%' || '10' || '%'  OR annual_leave_hours LIKE '%' || '10' || '%'  OR company_id LIKE '%' || '10' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '10' || '%'  OR body LIKE '%' || '10' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM companies WHERE name LIKE '%' || '10' || '%'  OR address LIKE '%' || '10' || '%'  OR number_of_employees LIKE '%' || '10' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:17 pm]: Completed 200 OK in 9.53 ms
+[INFO] [20/03/2023, 10:13:17 pm]: Started GET "/api/search?q=105" at 20/03/2023, 10:13:17 pm
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '105' || '%'  OR location LIKE '%' || '105' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM animals WHERE name LIKE '%' || '105' || '%'  OR color LIKE '%' || '105' || '%'  OR image LIKE '%' || '105' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '105' || '%'  OR body LIKE '%' || '105' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '105' || '%'  OR last_name LIKE '%' || '105' || '%'  OR email LIKE '%' || '105' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM movies WHERE name LIKE '%' || '105' || '%'  OR year LIKE '%' || '105' || '%'  OR theater_id LIKE '%' || '105' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '105' || '%'  OR last_name LIKE '%' || '105' || '%'  OR title LIKE '%' || '105' || '%'  OR salary LIKE '%' || '105' || '%'  OR sick_leave_hours LIKE '%' || '105' || '%'  OR annual_leave_hours LIKE '%' || '105' || '%'  OR company_id LIKE '%' || '105' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '105' || '%'  OR body LIKE '%' || '105' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM companies WHERE name LIKE '%' || '105' || '%'  OR address LIKE '%' || '105' || '%'  OR number_of_employees LIKE '%' || '105' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:17 pm]: Completed 200 OK in 15.68 ms
+[INFO] [20/03/2023, 10:13:17 pm]: Started GET "/api/search?q=1050" at 20/03/2023, 10:13:17 pm
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:17 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '1050' || '%'  OR location LIKE '%' || '1050' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM animals WHERE name LIKE '%' || '1050' || '%'  OR color LIKE '%' || '1050' || '%'  OR image LIKE '%' || '1050' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '1050' || '%'  OR body LIKE '%' || '1050' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '1050' || '%'  OR last_name LIKE '%' || '1050' || '%'  OR email LIKE '%' || '1050' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM movies WHERE name LIKE '%' || '1050' || '%'  OR year LIKE '%' || '1050' || '%'  OR theater_id LIKE '%' || '1050' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:17 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '1050' || '%'  OR last_name LIKE '%' || '1050' || '%'  OR title LIKE '%' || '1050' || '%'  OR salary LIKE '%' || '1050' || '%'  OR sick_leave_hours LIKE '%' || '1050' || '%'  OR annual_leave_hours LIKE '%' || '1050' || '%'  OR company_id LIKE '%' || '1050' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '1050' || '%'  OR body LIKE '%' || '1050' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM companies WHERE name LIKE '%' || '1050' || '%'  OR address LIKE '%' || '1050' || '%'  OR number_of_employees LIKE '%' || '1050' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:18 pm]: Completed 200 OK in 16.05 ms
+[INFO] [20/03/2023, 10:13:18 pm]: Started GET "/api/search?q=10500" at 20/03/2023, 10:13:18 pm
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '10500' || '%'  OR location LIKE '%' || '10500' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM animals WHERE name LIKE '%' || '10500' || '%'  OR color LIKE '%' || '10500' || '%'  OR image LIKE '%' || '10500' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '10500' || '%'  OR body LIKE '%' || '10500' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '10500' || '%'  OR last_name LIKE '%' || '10500' || '%'  OR email LIKE '%' || '10500' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM movies WHERE name LIKE '%' || '10500' || '%'  OR year LIKE '%' || '10500' || '%'  OR theater_id LIKE '%' || '10500' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '10500' || '%'  OR last_name LIKE '%' || '10500' || '%'  OR title LIKE '%' || '10500' || '%'  OR salary LIKE '%' || '10500' || '%'  OR sick_leave_hours LIKE '%' || '10500' || '%'  OR annual_leave_hours LIKE '%' || '10500' || '%'  OR company_id LIKE '%' || '10500' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '10500' || '%'  OR body LIKE '%' || '10500' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM companies WHERE name LIKE '%' || '10500' || '%'  OR address LIKE '%' || '10500' || '%'  OR number_of_employees LIKE '%' || '10500' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:18 pm]: Completed 200 OK in 14.6 ms
+[INFO] [20/03/2023, 10:13:18 pm]: Started GET "/api/search?q=105000" at 20/03/2023, 10:13:18 pm
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '105000' || '%'  OR location LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM animals WHERE name LIKE '%' || '105000' || '%'  OR color LIKE '%' || '105000' || '%'  OR image LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '105000' || '%'  OR body LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '105000' || '%'  OR last_name LIKE '%' || '105000' || '%'  OR email LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM movies WHERE name LIKE '%' || '105000' || '%'  OR year LIKE '%' || '105000' || '%'  OR theater_id LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '105000' || '%'  OR last_name LIKE '%' || '105000' || '%'  OR title LIKE '%' || '105000' || '%'  OR salary LIKE '%' || '105000' || '%'  OR sick_leave_hours LIKE '%' || '105000' || '%'  OR annual_leave_hours LIKE '%' || '105000' || '%'  OR company_id LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '105000' || '%'  OR body LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM companies WHERE name LIKE '%' || '105000' || '%'  OR address LIKE '%' || '105000' || '%'  OR number_of_employees LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:18 pm]: Completed 200 OK in 14.89 ms
+[INFO] [20/03/2023, 10:13:18 pm]: Started GET "/search?q=105000&maxResults=10&page=1" at 20/03/2023, 10:13:18 pm
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:18 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '105000' || '%'  OR location LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM animals WHERE name LIKE '%' || '105000' || '%'  OR color LIKE '%' || '105000' || '%'  OR image LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '105000' || '%'  OR body LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '105000' || '%'  OR last_name LIKE '%' || '105000' || '%'  OR email LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM movies WHERE name LIKE '%' || '105000' || '%'  OR year LIKE '%' || '105000' || '%'  OR theater_id LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '105000' || '%'  OR last_name LIKE '%' || '105000' || '%'  OR title LIKE '%' || '105000' || '%'  OR salary LIKE '%' || '105000' || '%'  OR sick_leave_hours LIKE '%' || '105000' || '%'  OR annual_leave_hours LIKE '%' || '105000' || '%'  OR company_id LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '105000' || '%'  OR body LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:18 pm]: SELECT * FROM companies WHERE name LIKE '%' || '105000' || '%'  OR address LIKE '%' || '105000' || '%'  OR number_of_employees LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:18 pm]: Completed 200 OK in 11.77 ms
+[INFO] [20/03/2023, 10:13:20 pm]: Started GET "/employees/1?referer=%2Fsearch%3Fq%3D105000%26maxResults%3D10%26page%3D1" at 20/03/2023, 10:13:20 pm
+[QUERY] [20/03/2023, 10:13:20 pm]: SELECT * FROM employees WHERE id='1';
+[INFO] [20/03/2023, 10:13:20 pm]: Completed 200 OK in 13.9 ms
+[INFO] [20/03/2023, 10:13:23 pm]: Started GET "/search?q=105000&maxResults=10&page=1" at 20/03/2023, 10:13:23 pm
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:23 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:23 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '105000' || '%'  OR location LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:23 pm]: SELECT * FROM animals WHERE name LIKE '%' || '105000' || '%'  OR color LIKE '%' || '105000' || '%'  OR image LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:23 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '105000' || '%'  OR body LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:23 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '105000' || '%'  OR last_name LIKE '%' || '105000' || '%'  OR email LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:23 pm]: SELECT * FROM movies WHERE name LIKE '%' || '105000' || '%'  OR year LIKE '%' || '105000' || '%'  OR theater_id LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:23 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '105000' || '%'  OR last_name LIKE '%' || '105000' || '%'  OR title LIKE '%' || '105000' || '%'  OR salary LIKE '%' || '105000' || '%'  OR sick_leave_hours LIKE '%' || '105000' || '%'  OR annual_leave_hours LIKE '%' || '105000' || '%'  OR company_id LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:23 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '105000' || '%'  OR body LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:23 pm]: SELECT * FROM companies WHERE name LIKE '%' || '105000' || '%'  OR address LIKE '%' || '105000' || '%'  OR number_of_employees LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:23 pm]: Completed 200 OK in 16.07 ms
+[INFO] [20/03/2023, 10:13:33 pm]: Started GET "/api/search?q=105000" at 20/03/2023, 10:13:33 pm
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:33 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:33 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '105000' || '%'  OR location LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:33 pm]: SELECT * FROM animals WHERE name LIKE '%' || '105000' || '%'  OR color LIKE '%' || '105000' || '%'  OR image LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:33 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '105000' || '%'  OR body LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:33 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '105000' || '%'  OR last_name LIKE '%' || '105000' || '%'  OR email LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:33 pm]: SELECT * FROM movies WHERE name LIKE '%' || '105000' || '%'  OR year LIKE '%' || '105000' || '%'  OR theater_id LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:33 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '105000' || '%'  OR last_name LIKE '%' || '105000' || '%'  OR title LIKE '%' || '105000' || '%'  OR salary LIKE '%' || '105000' || '%'  OR sick_leave_hours LIKE '%' || '105000' || '%'  OR annual_leave_hours LIKE '%' || '105000' || '%'  OR company_id LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:33 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '105000' || '%'  OR body LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:33 pm]: SELECT * FROM companies WHERE name LIKE '%' || '105000' || '%'  OR address LIKE '%' || '105000' || '%'  OR number_of_employees LIKE '%' || '105000' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:33 pm]: Completed 304 Not Modified in 13.09 ms
+[INFO] [20/03/2023, 10:13:34 pm]: Started GET "/api/search?q=1" at 20/03/2023, 10:13:34 pm
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:34 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:34 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '1' || '%'  OR location LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:34 pm]: SELECT * FROM animals WHERE name LIKE '%' || '1' || '%'  OR color LIKE '%' || '1' || '%'  OR image LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:34 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '1' || '%'  OR body LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:34 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '1' || '%'  OR last_name LIKE '%' || '1' || '%'  OR email LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:34 pm]: SELECT * FROM movies WHERE name LIKE '%' || '1' || '%'  OR year LIKE '%' || '1' || '%'  OR theater_id LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:34 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '1' || '%'  OR last_name LIKE '%' || '1' || '%'  OR title LIKE '%' || '1' || '%'  OR salary LIKE '%' || '1' || '%'  OR sick_leave_hours LIKE '%' || '1' || '%'  OR annual_leave_hours LIKE '%' || '1' || '%'  OR company_id LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:34 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '1' || '%'  OR body LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:34 pm]: SELECT * FROM companies WHERE name LIKE '%' || '1' || '%'  OR address LIKE '%' || '1' || '%'  OR number_of_employees LIKE '%' || '1' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:34 pm]: Completed 304 Not Modified in 23.79 ms
+[INFO] [20/03/2023, 10:13:35 pm]: Started GET "/api/search?q=13" at 20/03/2023, 10:13:35 pm
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '13' || '%'  OR location LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM animals WHERE name LIKE '%' || '13' || '%'  OR color LIKE '%' || '13' || '%'  OR image LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '13' || '%'  OR body LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '13' || '%'  OR last_name LIKE '%' || '13' || '%'  OR email LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM movies WHERE name LIKE '%' || '13' || '%'  OR year LIKE '%' || '13' || '%'  OR theater_id LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '13' || '%'  OR last_name LIKE '%' || '13' || '%'  OR title LIKE '%' || '13' || '%'  OR salary LIKE '%' || '13' || '%'  OR sick_leave_hours LIKE '%' || '13' || '%'  OR annual_leave_hours LIKE '%' || '13' || '%'  OR company_id LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '13' || '%'  OR body LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM companies WHERE name LIKE '%' || '13' || '%'  OR address LIKE '%' || '13' || '%'  OR number_of_employees LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:35 pm]: Completed 200 OK in 16.11 ms
+[INFO] [20/03/2023, 10:13:35 pm]: Started GET "/api/search?q=136" at 20/03/2023, 10:13:35 pm
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:35 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '136' || '%'  OR location LIKE '%' || '136' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM animals WHERE name LIKE '%' || '136' || '%'  OR color LIKE '%' || '136' || '%'  OR image LIKE '%' || '136' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '136' || '%'  OR body LIKE '%' || '136' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '136' || '%'  OR last_name LIKE '%' || '136' || '%'  OR email LIKE '%' || '136' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM movies WHERE name LIKE '%' || '136' || '%'  OR year LIKE '%' || '136' || '%'  OR theater_id LIKE '%' || '136' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '136' || '%'  OR last_name LIKE '%' || '136' || '%'  OR title LIKE '%' || '136' || '%'  OR salary LIKE '%' || '136' || '%'  OR sick_leave_hours LIKE '%' || '136' || '%'  OR annual_leave_hours LIKE '%' || '136' || '%'  OR company_id LIKE '%' || '136' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '136' || '%'  OR body LIKE '%' || '136' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:35 pm]: SELECT * FROM companies WHERE name LIKE '%' || '136' || '%'  OR address LIKE '%' || '136' || '%'  OR number_of_employees LIKE '%' || '136' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:35 pm]: Completed 200 OK in 21.44 ms
+[INFO] [20/03/2023, 10:13:37 pm]: Started GET "/api/search?q=13" at 20/03/2023, 10:13:37 pm
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '13' || '%'  OR location LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM animals WHERE name LIKE '%' || '13' || '%'  OR color LIKE '%' || '13' || '%'  OR image LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '13' || '%'  OR body LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '13' || '%'  OR last_name LIKE '%' || '13' || '%'  OR email LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM movies WHERE name LIKE '%' || '13' || '%'  OR year LIKE '%' || '13' || '%'  OR theater_id LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '13' || '%'  OR last_name LIKE '%' || '13' || '%'  OR title LIKE '%' || '13' || '%'  OR salary LIKE '%' || '13' || '%'  OR sick_leave_hours LIKE '%' || '13' || '%'  OR annual_leave_hours LIKE '%' || '13' || '%'  OR company_id LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '13' || '%'  OR body LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM companies WHERE name LIKE '%' || '13' || '%'  OR address LIKE '%' || '13' || '%'  OR number_of_employees LIKE '%' || '13' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:37 pm]: Completed 304 Not Modified in 23.13 ms
+[INFO] [20/03/2023, 10:13:37 pm]: Started GET "/api/search?q=131" at 20/03/2023, 10:13:37 pm
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:37 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '131' || '%'  OR location LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM animals WHERE name LIKE '%' || '131' || '%'  OR color LIKE '%' || '131' || '%'  OR image LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '131' || '%'  OR body LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '131' || '%'  OR last_name LIKE '%' || '131' || '%'  OR email LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM movies WHERE name LIKE '%' || '131' || '%'  OR year LIKE '%' || '131' || '%'  OR theater_id LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '131' || '%'  OR last_name LIKE '%' || '131' || '%'  OR title LIKE '%' || '131' || '%'  OR salary LIKE '%' || '131' || '%'  OR sick_leave_hours LIKE '%' || '131' || '%'  OR annual_leave_hours LIKE '%' || '131' || '%'  OR company_id LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '131' || '%'  OR body LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:37 pm]: SELECT * FROM companies WHERE name LIKE '%' || '131' || '%'  OR address LIKE '%' || '131' || '%'  OR number_of_employees LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:37 pm]: Completed 200 OK in 16.69 ms
+[INFO] [20/03/2023, 10:13:38 pm]: Started GET "/employees/4?referer=%2Fsearch%3Fq%3D131%26maxResults%3D10%26page%3D1" at 20/03/2023, 10:13:38 pm
+[QUERY] [20/03/2023, 10:13:38 pm]: SELECT * FROM employees WHERE id='4';
+[INFO] [20/03/2023, 10:13:38 pm]: Completed 200 OK in 6.16 ms
+[INFO] [20/03/2023, 10:13:41 pm]: Started GET "/search?q=131&maxResults=10&page=1" at 20/03/2023, 10:13:41 pm
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA table_list
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA foreign_key_list('theaters')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA table_info('theaters')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA foreign_key_list('animals')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA table_info('animals')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA foreign_key_list('comments')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA table_info('comments')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA foreign_key_list('users')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA table_info('users')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA foreign_key_list('movies')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA table_info('movies')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA foreign_key_list('employees')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA table_info('employees')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA foreign_key_list('blogs')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA table_info('blogs')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA foreign_key_list('companies')
+[QUERY] [20/03/2023, 10:13:41 pm]: PRAGMA table_info('companies')
+[QUERY] [20/03/2023, 10:13:41 pm]: SELECT * FROM theaters WHERE name LIKE '%' || '131' || '%'  OR location LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:41 pm]: SELECT * FROM animals WHERE name LIKE '%' || '131' || '%'  OR color LIKE '%' || '131' || '%'  OR image LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:41 pm]: SELECT * FROM comments WHERE blog_id LIKE '%' || '131' || '%'  OR body LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:41 pm]: SELECT * FROM users WHERE first_name LIKE '%' || '131' || '%'  OR last_name LIKE '%' || '131' || '%'  OR email LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:41 pm]: SELECT * FROM movies WHERE name LIKE '%' || '131' || '%'  OR year LIKE '%' || '131' || '%'  OR theater_id LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:41 pm]: SELECT * FROM employees WHERE first_name LIKE '%' || '131' || '%'  OR last_name LIKE '%' || '131' || '%'  OR title LIKE '%' || '131' || '%'  OR salary LIKE '%' || '131' || '%'  OR sick_leave_hours LIKE '%' || '131' || '%'  OR annual_leave_hours LIKE '%' || '131' || '%'  OR company_id LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:41 pm]: SELECT * FROM blogs WHERE title LIKE '%' || '131' || '%'  OR body LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[QUERY] [20/03/2023, 10:13:41 pm]: SELECT * FROM companies WHERE name LIKE '%' || '131' || '%'  OR address LIKE '%' || '131' || '%'  OR number_of_employees LIKE '%' || '131' || '%'  ORDER BY updated_at DESC;
+[INFO] [20/03/2023, 10:13:41 pm]: Completed 200 OK in 14.24 ms

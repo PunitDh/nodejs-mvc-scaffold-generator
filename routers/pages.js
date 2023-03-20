@@ -16,7 +16,7 @@ pages.get("/about", (_, res) => {
 pages.get("/search", (req, res) => {
   const startTime = process.hrtime();
   const { maxResults, page, q: query } = req.query;
-  const results = SearchResult.search(query);
+  const results = SearchResult.search(query, undefined, maxResults, page);
   const resultsObj = {
     results:
       maxResults > 0
@@ -37,10 +37,7 @@ pages.get("/search", (req, res) => {
 
 pages.get("/api/search", (req, res) => {
   const { searchSuggestionLimit } = SETTINGS.views.pages.search;
-  const results = SearchResult.search(
-    req.query.q,
-    searchSuggestionLimit || 10
-  );
+  const results = SearchResult.search(req.query.q, searchSuggestionLimit || 10);
   return res.status(200).send(results);
 });
 

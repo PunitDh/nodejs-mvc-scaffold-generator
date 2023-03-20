@@ -10,7 +10,7 @@
         <td><%= formatDate({{../model}}.{{name}}) %></td>
         {{/date}}
         {{^date}}
-        <td><%= {{../model}}.{{name}} %></td>
+        <td><%- {{../model}}.{{name}} %></td>
         {{/date}}
       </tr>
       {{/indexColumns}}

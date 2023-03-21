@@ -297,6 +297,16 @@ Array.prototype.mapNotNull = function (callback) {
   return results;
 };
 
+/**
+ * Adds the element to the array and returns the array
+ * @param {any} element
+ * @returns Array
+ */
+Array.prototype.add = function (element) {
+  this.push(element);
+  return this;
+};
+
 /* ************************************************************************** /
 / *************************************************************************** /
 / **************************** Object Extensions **************************** /
@@ -309,7 +319,7 @@ Array.prototype.mapNotNull = function (callback) {
  */
 Object.prototype.exclude = function () {
   [...arguments].forEach((argument) => {
-    delete this[argument];
+    if (this) delete this[argument];
   });
   return this;
 };
@@ -319,6 +329,7 @@ Object.prototype.exclude = function () {
  * @returns Boolean
  */
 Object.prototype.isEmpty = function () {
+  if (!this) return;
   return (
     Object.keys(this).filter(Boolean).length === 0 ||
     Object.values(this).filter((value) => ![undefined, null].includes(value))
@@ -378,7 +389,7 @@ Object.prototype.equals = function (other) {
  * @returns Array<Array<any>>
  */
 Object.prototype.entries = function () {
-  return Object.entries(this);
+  return this && Object.entries(this);
 };
 
 /**
@@ -386,7 +397,7 @@ Object.prototype.entries = function () {
  * @returns Array<String>
  */
 Object.prototype.keys = function () {
-  return Object.keys(this);
+  return this && Object.keys(this);
 };
 
 /**
@@ -394,7 +405,7 @@ Object.prototype.keys = function () {
  * @returns Array<String>
  */
 Object.prototype.values = function () {
-  return Object.values(this);
+  return this && Object.values(this);
 };
 
 /**
@@ -402,11 +413,33 @@ Object.prototype.values = function () {
  * @returns Object
  */
 Object.prototype.sanitize = function () {
-  return Object.fromEntries(
-    Object.entries(this).filter(
-      ([_, value]) => ![undefined, null].includes(value)
+  return (
+    this &&
+    Object.fromEntries(
+      Object.entries(this).filter(
+        ([_, value]) => ![undefined, null].includes(value)
+      )
     )
   );
+};
+
+/**
+ * Checks whether an object exists inside an array of objects (can perform both a deep comparison and a reference comparison)
+ * @param {Array<Object>} array - The array to check in
+ * @param {Boolean} deep - A boolean flag to determine whether to do a deep comparison or reference comparison (default is FALSE)
+ * @returns Boolean
+ */
+Object.prototype.in = function (array, deep = false) {
+  if (!this) return;
+  if (deep) {
+    for (const item of array) {
+      if (item.equals(this)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  return array.includes(this);
 };
 
 /* ************************************************************************** /
@@ -547,6 +580,15 @@ String.prototype.isNotEmpty = function () {
  */
 String.prototype.distinct = function () {
   return Array.from(new Set(this.split("")));
+};
+
+/**
+ * Checks whether a string exists in any one of the arguments
+ * @param {String} arguments
+ * @returns Boolean
+ */
+String.prototype.isOneOf = function () {
+  return [...arguments].includes(this);
 };
 
 /* ************************************************************************** /

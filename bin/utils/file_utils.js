@@ -11,6 +11,20 @@ export function readFileSync() {
   }
 }
 
+export function readdirSync() {
+  const dir = path.join(...arguments);
+  try {
+    return fs
+      .readdirSync(dir, { withFileTypes: true })
+      .filter((file) => file.isFile());
+  } catch (e) {
+    return LOGGER.error(
+      `Failed to read contents of directory: '${dir}'`,
+      e.stack
+    );
+  }
+}
+
 export function writeFileSync() {
   const args = [...arguments];
   const file = path.join(...args.slice(0, args.length - 1));

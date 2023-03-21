@@ -22,7 +22,6 @@ import {
 import { generateSQLMigrationFile } from "./migration_sql_file_generator.js";
 import { GeneratorError } from "../errors.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
-import LOGGER from "../logger.js";
 import { SQLReferences } from "../constants.js";
 
 export function generateMigration(testCommand) {
@@ -45,7 +44,7 @@ export function generateMigration(testCommand) {
   if (!actions[action.toLowerCase()]) {
     throw new GeneratorError(`Unknown action: ${action}`);
   }
-  if (actions[action.toLowerCase()] != actions.drop && args.length < 1) {
+  if (actions[action.toLowerCase()] != actions.drop && args.isEmpty()) {
     throw new GeneratorError(`No arguments specified for action: '${action}'`);
   }
   const cols = args.map((arg) => arg.split(":"));
@@ -78,14 +77,12 @@ export function generateMigration(testCommand) {
   const tableName = getTableNameFromModel(modelName);
   const subActionName =
     subActions[
-      Object.keys(subActions).find((key) =>
-        args.flat().includes(key.toLowerCase())
-      )
+      subActions.keys().find((key) => args.flat().includes(key.toLowerCase()))
     ]?.toLowerCase() || "";
   const columnName = columns.map((col) => col.name).join("_") || "";
 
   if (testCommand) {
-    LOGGER.test(migrationBuilder.generateQuery());
+    return migrationBuilder.generateQuery();
   } else {
     generateSQLMigrationFile(
       actionName,

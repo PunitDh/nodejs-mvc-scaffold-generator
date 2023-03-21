@@ -257,3 +257,73 @@ export const LayoutPages = {
   _tail: "../_layouts/_tail.ejs",
   _mid: "../_layouts/_mid.ejs",
 };
+
+export const DateFormats = {
+  DD_MM_YYYY: "%d/%m/%Y",
+  DD_MMM_YYYY: "%d %b %Y",
+  DD_MMMM_YY: "%d %B %y",
+  DD_MMMM_YYYY: "%d %B %Y",
+
+  MM_DD_YYYY: "%m/%d/%Y",
+  MMM_DD_YY: "%b %d, %y",
+  MMMM_DD_YY: "%B %d, %y",
+  MMMM_DD_YYYY: "%B %d, %Y",
+  MMM_DD_YYYY: "%b %d, %Y",
+
+  YYYY_DD_MMMM: "%Y, %d %B",
+  YYYY_MMMM_DD: "%Y %B, %d",
+
+  WWWW_MMMM_DD_YYYY: "%A, %B %d, %Y",
+  WWW_MMMM_DD_YYYY: "%a, %B %d, %Y",
+  WWW_MMM_DD_YYYY: "%a, %b %d, %Y",
+  WWW_MM_DD_YY: "%a, %m/%d/%Y",
+
+  DD_MMMM_YY_HH_MM_SS: "%d-%B-%y %H:%M:%S",
+  DD_MMMM_YY_H_MM_SS_AMPM: "%d-%B-%y %I:%M:%S %p",
+
+  MMMM_DD_YY_H_MM_SS_AMPM: "%B %d, %y %I:%M:%S %p",
+  MMM_DD_YY_H_MM_SS_AMPM: "%b %d, %y %I:%M:%S %p",
+  MM_DD_YY_H_MM_SS_AMPM: "%m %d, %y %I:%M:%S %p",
+  MMMM_DD_YY_HH_MM_SS: "%B %d, %y %H:%M:%S",
+
+  DD_MMMM_YYYY_HH_MM_SS: "%d-%B-%Y %H:%M:%S",
+  DD_MMMM_YYYY_H_MM_SS_AMPM: "%d-%B-%Y %I:%M:%S %p",
+
+  MMMM_DD_YYYY_H_MM_SS_AMPM: "%B %d, %Y %I:%M:%S %p",
+  MMM_DD_YYYY_H_MM_SS_AMPM: "%b %d, %Y %I:%M:%S %p",
+  MM_DD_YYYY_H_MM_SS_AMPM: "%m %d, %Y %I:%M:%S %p",
+  MMMM_DD_YYYY_HH_MM_SS: "%B %d, %Y %H:%M:%S",
+
+  DD_MMMM_YY_HH_MM: "%d-%B-%y %H:%M",
+  DD_MMMM_YY_H_MM_AMPM: "%d-%B-%y %I:%M %p",
+
+  MMMM_DD_YY_H_MM_AMPM: "%B %d, %y %I:%M %p",
+  MMM_DD_YY_H_MM_AMPM: "%b %d, %y %I:%M %p",
+  MMMM_DD_YY_HH_MM: "%B %d, %y %H:%M",
+
+  WWWW_DD_MMMM_YYYY_H_MM_SS_AMPM: "%A, %d %B %Y %I:%M:%S %p",
+  WWW_DD_MMMM_YYYY_H_MM_AMPM: "%a, %d %B %Y %I:%M %p",
+  WWW_DD_MMMM_YYYY_HH_MM: "%a, %d %B %Y %I:%M:%S %p",
+  WWW_DD_MMMM_YYYY_HH_MM_SS: "%a, %d %B %Y %H:%M:%S",
+
+  HH_MM_SS: "%H:%M:%S",
+  HH_MM: "%H:%M",
+  HH_MM_AMPM: "%I:%M %p",
+  HH_MM_SS_AMPM: "%I:%M:%S %p",
+  // WWW: "%A",
+  // WW: "%a",
+  // MM: "%m",
+  // MMM: "%b",
+  // MMMM: "%B",
+  // DD: "%d",
+  // YY: "%y",
+  // YYYY: "%Y",
+  // HH: "%H",
+  // h: "%I",
+  // mm: "%M",
+  // SS: "%S",
+  // s: "%S",
+  // AMPM: "%p",
+  TZ: "%Z",
+  tz: "%Zs",
+};

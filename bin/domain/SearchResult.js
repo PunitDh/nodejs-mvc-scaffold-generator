@@ -14,7 +14,7 @@ class SearchResult {
     );
     this.priority = priority;
     this.data = result;
-    const resultColumns = Object.keys(data).exclude(...SearchExcludedColumns);
+    const resultColumns = data.keys().exclude(...SearchExcludedColumns);
     this.title = `${this.table.capitalize()} - ${data[resultColumns.first()]}`;
     const urlSearchParam = new URLSearchParams();
     urlSearchParam.append(

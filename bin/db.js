@@ -15,14 +15,14 @@ try {
     version INTEGER PRIMARY KEY AUTOINCREMENT,
     filename TEXT,
     query TEXT,
-    created_at NUMERIC DEFAULT (DATETIME('now'))
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
     );`;
   DB.prepare(migrationTableQuery).run();
 
   const jwtTableQuery = `CREATE TABLE IF NOT EXISTS ${settings.database.jwt.table} (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     jwt TEXT,
-    last_used NUMERIC DEFAULT (DATETIME('now'))
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
     );`;
   DB.prepare(jwtTableQuery).run();
 

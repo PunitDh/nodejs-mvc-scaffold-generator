@@ -41,11 +41,11 @@ export class MigrationBuilder {
 
   /**
    * Sets the table name, model name and capitalized model name
-   * @param {string} table
+   * @param {string} model
    */
-  setTable(table) {
-    this.table = table;
-    this.Model = getModelNameFromTable(table);
+  setTable(model) {
+    this.table = getTableNameFromModel(model);
+    this.Model = getModelNameFromTable(this.table);
     this.model = this.Model.toLowerCase();
   }
 
@@ -69,14 +69,14 @@ export class MigrationBuilder {
           "created_at",
           "DATE"
         )
-          .withConstraint("DEFAULT (DATETIME('now'))")
+          .withConstraint("DEFAULT (DATETIME('NOW'))")
           .withOrder(9998),
         new MigrationColumn(
           MigrationActions.subActions.ADD,
           "updated_at",
           "DATE"
         )
-          .withConstraint("DEFAULT (DATETIME('now'))")
+          .withConstraint("DEFAULT (DATETIME('NOW'))")
           .withOrder(9999),
       ];
       this.idColumn && this.addColumns(...idColumn);

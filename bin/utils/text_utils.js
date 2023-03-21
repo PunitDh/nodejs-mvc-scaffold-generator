@@ -33,13 +33,19 @@ export function markHTML(text, term, maxStringLength) {
  * @param {*} searchTerm The search term that will be marked in the values of the object's properties.
  * @returns An object with the priority of the search term in the values and the marked search term in the result object.
  */
-export function markSearchTermInObjectValues(object, searchTerm, shortened = false) {
+export function markSearchTermInObjectValues(
+  object,
+  searchTerm,
+  shortened = false
+) {
   if (!searchTerm) return object;
   const result = {};
   let priority = 0;
   const { maxStringLength } = SETTINGS.views.pages.search;
-  Object.entries(object.exclude(...SearchResultExcludedColumns)).forEach(
-    ([key, value]) => {
+  object
+    .exclude(...SearchResultExcludedColumns)
+    .entries()
+    .forEach(([key, value]) => {
       const { text, count } = markHTML(
         value,
         searchTerm,
@@ -47,8 +53,7 @@ export function markSearchTermInObjectValues(object, searchTerm, shortened = fal
       );
       priority += count;
       result[key] = text;
-    }
-  );
+    });
   return { priority, result };
 }
 

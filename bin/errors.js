@@ -32,7 +32,7 @@ export class InvalidDataTypeError extends ApplicationError {
     super(...arguments);
     LOGGER.error(
       "Available column types are:",
-      Object.keys(SQLColumnTypes).join(", ")
+      SQLColumnTypes.values().distinct().join(", ")
     );
     this.status = 400;
   }
@@ -73,7 +73,7 @@ export class InvalidColumnConstraintError extends ApplicationError {
     super(...arguments);
     LOGGER.error(
       "Available constraint types are:",
-      Object.values(SQLColumnConstraints).distinct().join(", ")
+      SQLColumnConstraints.values().distinct().join(", ")
     );
   }
 }
@@ -83,7 +83,7 @@ export class InvalidForeignKeyActionError extends ApplicationError {
     super(...arguments);
     LOGGER.error(
       "Available foreign key actions are:",
-      Object.values(SQLForeignKeyActions).distinct().join(", ")
+      SQLForeignKeyActions.values().distinct().join(", ")
     );
   }
 }

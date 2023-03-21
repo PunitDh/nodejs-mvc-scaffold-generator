@@ -84,8 +84,8 @@ class SQLQueryBuilder {
 
   orderBy(obj) {
     this.order = {
-      columns: Object.keys(obj),
-      type: Object.values(obj),
+      columns: obj.keys(),
+      type: obj.values(),
     };
     return this;
   }
@@ -147,10 +147,10 @@ class SQLQueryBuilder {
     const timestamps = this.timestamps
       ? {
           columns: ", created_at, updated_at",
-          values: ", DATETIME('now'), DATETIME('now')",
+          values: ", DATETIME('NOW'), DATETIME('NOW')",
         }
       : { columns: "", values: "" };
-    const updatedAt = this.timestamps ? ", updated_at=DATETIME('now')" : "";
+    const updatedAt = this.timestamps ? ", updated_at=DATETIME('NOW')" : "";
 
     switch (this.action) {
       case QueryAction.SELECT:

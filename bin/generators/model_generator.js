@@ -64,7 +64,7 @@ export function generateModel(testCommand) {
     );
   }
 
-  if (!model || args.length === 0) {
+  if (!model || args.isEmpty()) {
     throw new GeneratorError(`Illegal model name and/or attribute names`);
   }
 
@@ -125,7 +125,7 @@ export function generateModel(testCommand) {
     const action = MigrationActions.CREATE.toLowerCase();
 
     if (testCommand) {
-      LOGGER.test(createdMigration.generateQuery());
+      return createdMigration.generateQuery();
     } else {
       generateSQLMigrationFile(
         action,

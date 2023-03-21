@@ -34,7 +34,7 @@ class ObjectCollection {
       .fill(null)
       .map(() => {
         const instance = new this.Model();
-        Object.entries(resultObj).forEach(([key, value]) => {
+        resultObj.entries().forEach(([key, value]) => {
           instance[key] = typeof value === "function" ? value() : value;
         });
         this.instances.push(instance);

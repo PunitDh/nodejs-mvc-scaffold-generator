@@ -11,9 +11,9 @@ export function generateSQLMigrationFile(
 ) {
   const [date] = new Date().toISOString().split("T");
   const fileId = uuid().slice(0, 8);
-  const fileNameParts = [date, fileId, action, table, subAction, column].filter(
-    Boolean
-  );
-  const filename = `${fileNameParts.join("_")}.sql`;
+  const fileNameParts = [date, fileId, action, table, subAction, column]
+    .filter(Boolean)
+    .join("_");
+  const filename = `${fileNameParts}.sql`;
   writeFileSync(PATHS.root, PATHS.db, PATHS.migrations, filename, migration);
 }

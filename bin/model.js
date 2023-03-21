@@ -107,7 +107,7 @@ class Model {
    */
   static findBy(obj) {
     const result = this.where(obj);
-    return result.length > 0 ? result.first() : null;
+    return result.isNotEmpty() ? result.first() : null;
   }
 
   /**
@@ -130,8 +130,8 @@ class Model {
    * @returns Boolean
    */
   static exists(obj) {
-    const result = this.where(obj);
-    return result.length > 0;
+    const results = this.where(obj);
+    return results.isNotEmpty();
   }
 
   /**
@@ -146,7 +146,7 @@ class Model {
     const query = QueryBuilder()
       .insert()
       .into(this.__tablename__)
-      .values(Object.keys(sanitizedObject))
+      .values(sanitizedObject.keys())
       .returning("*");
     return this.dbQuery(query, sanitizedObject, true);
   }
@@ -164,7 +164,7 @@ class Model {
     const values = { id, ...sanitizedObject };
     const query = QueryBuilder()
       .update(this.__tablename__)
-      .set(Object.keys(sanitizedObject))
+      .set(sanitizedObject.keys())
       .where("id")
       .returning("*");
     return this.dbQuery(query, values, true);
@@ -182,7 +182,7 @@ class Model {
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
-      .where(Object.keys(sanitizedObject));
+      .where(sanitizedObject.keys());
     return this.dbQuery(query, sanitizedObject);
   }
 
@@ -205,7 +205,7 @@ class Model {
    * @returns The saved row
    */
   save() {
-    const columns = Object.keys(this).filter(
+    const columns = this.keys().filter(
       (column) => !ReadOnlyColumns.includes(column)
     );
 

@@ -16,7 +16,6 @@ class _Migration extends Model {
       .withNoTimeStamps()
       .values("filename", "query")
       .returning("*")
-      .build();
     return this.dbQuery(sqlQuery, { filename, query }, true);
   }
 }

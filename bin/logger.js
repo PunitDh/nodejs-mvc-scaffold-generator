@@ -55,8 +55,14 @@ const LOGGER = {
   query: function () {
     logMessage(LogType.query, TERMINAL_COLORS.FgCyan, ...arguments);
   },
+  testInfo: function () {
+    logMessage(LogType.test, TERMINAL_COLORS.Bright, TERMINAL_COLORS.FgBlue, ...arguments);
+  },
   test: function () {
     logMessage(LogType.test, TERMINAL_COLORS.Bright, TERMINAL_COLORS.FgGreen, ...arguments);
+  },
+  testFailed: function () {
+    logMessage(LogType.test, TERMINAL_COLORS.Bright, TERMINAL_COLORS.FgRed, ...arguments);
   },
   custom: function () {
     logMessage(

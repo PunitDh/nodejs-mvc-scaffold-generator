@@ -1,14 +1,13 @@
 import path from "path";
-import { PATHS } from "../bin/constants.js";
+import { PATHS } from "./constants.js";
 import fs from "fs";
 import _Migration from "./domain/Migration.js";
-import { readFileSync } from "../bin/utils/file_utils.js";
+import { readFileSync } from "./utils/file_utils.js";
 import "../bin/utils/js_utils.js";
 import LOGGER from "../bin/logger.js";
 import DB from "../bin/db.js";
-import { uuid } from "./utils/uuid.js";
 
-const currentMigrations = await _Migration.all();
+const currentMigrations = _Migration.all();
 const migrationPath = path.join(PATHS.root, PATHS.db, PATHS.migrations);
 const migrationFiles = fs.readdirSync(migrationPath);
 
@@ -22,17 +21,10 @@ const newMigrations = migrationFiles
     query: readFileSync(path.join(migrationPath, filename)),
   }));
 
-const addedMigrations = await Promise.all(
-  newMigrations.map(
-    async ({ filename, query }) =>
-      new Promise((resolve, reject) => {
-        DB.all(query, [], (err, _) => {
-          if (err) return reject(err);
-          return resolve(_Migration.add(filename, query));
-        });
-      })
-  )
-);
+const addedMigrations = newMigrations.map(({ filename, query }) => {
+  DB.prepare(query).run();
+  _Migration.add(filename, query);
+});
 
 addedMigrations.forEach(({ version, query }) => {
   LOGGER.info("=".repeat(75));

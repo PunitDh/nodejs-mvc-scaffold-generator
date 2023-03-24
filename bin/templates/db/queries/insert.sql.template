@@ -1,1 +1,1 @@
-INSERT INTO {{table}} ({{#columns}}{{.}}, {{/columns}}created_at, updated_at) VALUES ({{#columns}}${{.}}, {{/columns}}DATETIME('now'), DATETIME('now')) RETURNING *;
+INSERT INTO {{table}} ({{#columns}}{{.}}, {{/columns}}created_at, updated_at) VALUES ({{#columns}}${{.}}, {{/columns}}DATETIME('NOW'), DATETIME('NOW')) RETURNING *;

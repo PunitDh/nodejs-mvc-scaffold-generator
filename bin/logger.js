@@ -1,41 +1,73 @@
 import { appendFileSync } from "fs";
 import { join } from "path";
 import { PATHS, TERMINAL_COLORS } from "./constants.js";
-import "./utils/js_utils.js"
+import "./utils/js_utils.js";
+
+const LogType = {
+  info: "info",
+  warn: "warn",
+  success: "success",
+  error: "error",
+  query: "query",
+  test: "test",
+};
 
 function logMessage() {
   const [type, color, ...messageFrags] = arguments;
   const message = `[${type.toUpperCase()}] [${new Date().toLocaleString()}]: ${messageFrags.join(
     " "
   )}`;
-  console.log(`${color}%s\x1b[0m`, message);
-  appendFileSync(
-    join(PATHS.root, PATHS.logs, `${process.env.npm_package_name}.log`),
-    `${message}\n`
-  );
+
+  switch (type) {
+    case LogType.error:
+      console.error(`${color}%s\x1b[0m`, message);
+      break;
+    case LogType.warn:
+      console.warn(`${color}%s\x1b[0m`, message);
+      break;
+    default:
+      console.log(`${color}%s\x1b[0m`, message);
+      break;
+  }
+
+  if (!type.equalsIgnoreCase(LogType.test)) {
+    appendFileSync(
+      join(PATHS.root, PATHS.logs, `${process.env.npm_package_name}.log`),
+      `${message}\n`
+    );
+  }
 }
 
 const LOGGER = {
   info: function () {
-    logMessage("info", TERMINAL_COLORS.FgBlue, ...arguments);
+    logMessage(LogType.info, TERMINAL_COLORS.FgBlue, ...arguments);
   },
   warn: function () {
-    logMessage("warn", TERMINAL_COLORS.FgYellow, ...arguments);
+    logMessage(LogType.warn, TERMINAL_COLORS.FgYellow, ...arguments);
   },
   success: function () {
-    logMessage("success", TERMINAL_COLORS.FgGreen, ...arguments);
+    logMessage(LogType.success, TERMINAL_COLORS.FgGreen, ...arguments);
   },
   error: function () {
-    logMessage("error", TERMINAL_COLORS.FgRed, ...arguments);
+    logMessage(LogType.error, TERMINAL_COLORS.FgRed, ...arguments);
   },
   query: function () {
-    logMessage("query", TERMINAL_COLORS.FgCyan, ...arguments);
+    logMessage(LogType.query, TERMINAL_COLORS.FgCyan, ...arguments);
+  },
+  testInfo: function () {
+    logMessage(LogType.test, TERMINAL_COLORS.Bright, TERMINAL_COLORS.FgBlue, ...arguments);
+  },
+  test: function () {
+    logMessage(LogType.test, TERMINAL_COLORS.Bright, TERMINAL_COLORS.FgGreen, ...arguments);
+  },
+  testFailed: function () {
+    logMessage(LogType.test, TERMINAL_COLORS.Bright, TERMINAL_COLORS.FgRed, ...arguments);
   },
   custom: function () {
     logMessage(
-      arguments[0] || "info",
+      arguments[0] || LogType.info,
       arguments[1] || TERMINAL_COLORS.FgWhite,
-      ...arguments.slice(2)
+      [...arguments].slice(2)
     );
   },
 };

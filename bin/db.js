@@ -1,36 +1,36 @@
-import sqlite3 from "sqlite3";
+import Database from "better-sqlite3";
 import { join } from "path";
 import LOGGER from "./logger.js";
 import settings from "./utils/settings.js";
 import { PATHS } from "./constants.js";
-sqlite3.verbose();
 
 let DB;
 try {
-  DB = new sqlite3.Database(
-    join(PATHS.root, PATHS.instance, settings.database.name)
-  );
-  DB.run("PRAGMA foreign_keys = ON", function (err, rows) {
-    if (err) return LOGGER.error("Failed to set foreign key to ON");
-    return LOGGER.info("Foreign keys have been turned ON", rows);
+  DB = new Database(join(PATHS.root, PATHS.instance, settings.database.name), {
+    verbose: LOGGER.query,
   });
+  DB.pragma("foreign_keys = ON");
   const migrationTableQuery = `CREATE TABLE IF NOT EXISTS ${settings.database.migrations.table} (
     version INTEGER PRIMARY KEY AUTOINCREMENT,
     filename TEXT,
     query TEXT,
-    created_at NUMERIC DEFAULT (DATETIME('now'))
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
     );`;
-  DB.run(migrationTableQuery, function (err) {
-    if (err)
-      return LOGGER.error("Failed to connect to migration versioning table");
-    return LOGGER.info("Connected to migration versioning table");
-  });
+  DB.prepare(migrationTableQuery).run();
+
+  const jwtTableQuery = `CREATE TABLE IF NOT EXISTS ${settings.database.jwt.table} (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );`;
+  DB.prepare(jwtTableQuery).run();
+
   LOGGER.info(
     "Successfully connected to database:",
     `'${settings.database.name}'`
   );
 } catch (e) {
-  LOGGER.error("Failed to connect to database:", e);
+  LOGGER.error("Failed to connect to database:", e.stack);
 }
 
 export default DB;

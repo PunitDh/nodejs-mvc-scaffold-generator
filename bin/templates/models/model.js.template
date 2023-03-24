@@ -1,24 +1,26 @@
-import Model from '../bin/domain/Model.js'
+import Model from "../bin/model.js";
+{{#foreignKeys}}import {{otherModel}} from "./{{otherModel}}.js";
+{{/foreignKeys}}
 
-class {{model}} extends Model {
+class {{Model}} extends Model {
   constructor(data = {}) {
     super(data);
     {{#columns}}
-    this.{{.}} = data.{{.}};
+    this.{{name}} = data.{{name}};
     {{/columns}}
   }
-  {{#references}}
+  {{#foreignKeys}}
 
-  get {{fnName}}() {
-    return {{referenceModel}}.find(this.{{thisColumn}});
+  get {{otherModelSingular}}() {
+    return {{otherModel}}.find(this.{{thisColumn}});
   }
-  {{/references}}
+  {{/foreignKeys}}
   {{#backref}}
 
   get {{fnName}}() {
-    return {{referenceModel}}.where({ {{otherColumn}}_id: this.id });
+    return {{otherModel}}.where({ {{otherColumn}}_id: this.id });
   }
   {{/backref}}
 }
 
-export default {{model}};
+export default {{Model}};

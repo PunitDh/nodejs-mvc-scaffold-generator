@@ -5,3 +5,6 @@ logs/*.log
 instance/*.db
 .tmp
 .idea
+*.csv
+.vscode
+out/

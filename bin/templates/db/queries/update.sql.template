@@ -1,1 +1,1 @@
-UPDATE {{table}} SET {{#columns}}{{.}}=${{.}}, {{/columns}} updated_at=DATETIME('now') WHERE id=$id RETURNING{{#returning}} {{.}}{{#unless @last}},{{/unless}}{{/returning}}{{^returning}} *{{/returning}};
+UPDATE {{table}} SET {{#columns}}{{.}}=${{.}}, {{/columns}} updated_at=DATETIME('NOW') WHERE id=$id RETURNING{{#returning}} {{.}}{{#unless @last}},{{/unless}}{{/returning}}{{^returning}} *{{/returning}};

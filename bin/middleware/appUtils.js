@@ -2,7 +2,7 @@ import SETTINGS from "../utils/settings.js";
 import "../utils/js_utils.js";
 import pluralize from "pluralize";
 import JWT from "jsonwebtoken";
-import { LayoutPages } from "../constants.js";
+import { DateFormats, LayoutPages } from "../constants.js";
 import { randomChoice, randomInteger } from "../utils/num_utils.js";
 import {
   getQueryFromURIComponent,
@@ -11,7 +11,10 @@ import {
 
 export default function () {
   return function (req, res, next) {
-    res.locals.formatDate = (date) => new Date(date).toJSON() || date;
+    res.locals.formatDate = (
+      date,
+      dateFormat = DateFormats.WWW_DD_MMMM_YYYY_HH_MM
+    ) => new Date(date).strfTime(dateFormat) || date;
     res.locals.formatCurrency = (amount, decimals = 2, currency = "AUD") =>
       new Intl.NumberFormat("en-AU", {
         style: "currency",
@@ -44,10 +47,15 @@ export default function () {
     res.locals.referer = req.query.referer;
     res.locals.randomInteger = randomInteger;
     res.locals.randomChoice = randomChoice;
+    res.locals.shortened = (text, maxStringLength = 50) =>
+      text.length > maxStringLength
+        ? text.slice(0, maxStringLength) + "..."
+        : text;
     res.locals.marked = (object) =>
       markSearchTermInObjectValues(
         object,
-        getQueryFromURIComponent(res.locals.referer)
+        getQueryFromURIComponent(res.locals.referer),
+        false
       )?.result || object;
     next();
   };

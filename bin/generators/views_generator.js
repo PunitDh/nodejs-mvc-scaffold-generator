@@ -10,16 +10,13 @@ import "../utils/js_utils.js";
 import LOGGER from "../logger.js";
 import Handlebars from "../utils/handlebars.js";
 import { getTableNameFromModel } from "../utils/model_utils.js";
-import { ViewColumn } from "./types.js";
 import { getSchema } from "../utils/schema_utils.js";
 import pluralize from "pluralize";
 import { LOCATIONS, PATHS } from "../constants.js";
 import { writeFileSync } from "../utils/file_utils.js";
-import SQLiteColumn from "../domain/SQLiteColumn.js";
+import ViewColumn from "../domain/ViewColumn.js";
 
-generateViews();
-
-export async function generateViews(command) {
+export function generateViews(command) {
   const argvs = command?.split(" ").slice(3) || process.argv.slice(2);
   const model = argvs.first();
   const singular = model.toLowerCase();
@@ -66,7 +63,6 @@ export async function generateViews(command) {
   if (!modelExists) {
     throw new UnknownModelError(`Unknown model: '${model}'`);
   } else {
-
   }
 
   // Generate views
@@ -76,8 +72,8 @@ export async function generateViews(command) {
     model: singular,
     router,
     heading: router.capitalize(),
-    indexColumns: await getColumnsFromSchema(model, index.excludedFields),
-    formColumns: await getColumnsFromSchema(model, form.excludedFields),
+    indexColumns: getColumnsFromSchema(model, index.excludedFields),
+    formColumns: getColumnsFromSchema(model, form.excludedFields),
   };
 
   try {
@@ -92,16 +88,17 @@ export async function generateViews(command) {
       );
     });
   } catch (e) {
-    LOGGER.error(`Unable to be generate router for '${model}'`, e);
+    LOGGER.error(`Unable to be generate router for '${model}'`, e.stack);
     throw e;
   }
 
-  async function getColumnsFromSchema(model, excludedColumns) {
-
+  function getColumnsFromSchema(model, excludedColumns) {
     const table = getTableNameFromModel(model);
-    const tableColumns = await SQLiteColumn.getColumns(table);
+    const tableColumns = getSchema().tables[table];
     return tableColumns
       .filter((column) => !excludedColumns.includes(column.name.toLowerCase()))
-      .map((column) => new ViewColumn(column.name, column.type));
+      .map(
+        (column) => new ViewColumn(column.name, column.type, column.foreignKey)
+      );
   }
 }

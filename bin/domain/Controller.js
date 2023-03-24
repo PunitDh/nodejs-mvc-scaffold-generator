@@ -9,9 +9,9 @@ export default class Controller {
   }
 
   index() {
-    return async (req, res, next) => {
+    return (req, res, next) => {
       try {
-        const result = await this.Model.all();
+        const result = this.Model.all();
         return res.render(`${this.router}/index`, { [this.router]: result });
       } catch (e) {
         next(e);
@@ -20,9 +20,9 @@ export default class Controller {
   }
 
   show() {
-    return async (req, res, next) => {
+    return (req, res, next) => {
       try {
-        const result = await this.Model.find(req.params.id);
+        const result = this.Model.find(req.params.id);
         return res.render(`${this.router}/${this.model}`, {
           [this.model]: res.locals.marked(result),
         });
@@ -34,7 +34,7 @@ export default class Controller {
 
   newPage() {
     const args = [...arguments];
-    return async (req, res, next) => {
+    return (req, res, next) => {
       try {
         const result = new this.Model();
         const props = { [this.model]: result, ...args[0] };
@@ -47,9 +47,9 @@ export default class Controller {
 
   edit() {
     const args = [...arguments];
-    return async (req, res, next) => {
+    return (req, res, next) => {
       try {
-        const result = await this.Model.find(req.params.id);
+        const result = this.Model.find(req.params.id);
         const props = { [this.model]: result, ...args[0] };
         return res.render(`${this.router}/edit`, props);
       } catch (e) {
@@ -59,9 +59,9 @@ export default class Controller {
   }
 
   create() {
-    return async (req, res, next) => {
+    return (req, res, next) => {
       try {
-        await this.Model.create(req.body);
+        this.Model.create(req.body);
         req.flash(Flash.SUCCESS, `${this.Model.name} has been created`);
         return res.redirect(`/${this.router}`);
       } catch (e) {
@@ -71,10 +71,10 @@ export default class Controller {
   }
 
   update() {
-    return async (req, res, next) => {
+    return (req, res, next) => {
       try {
         const result = new this.Model({ id: req.params.id, ...req.body });
-        await result.save();
+        result.save();
         req.flash(Flash.SUCCESS, `${this.Model.name} has been updated`);
         return res.redirect(`/${this.router}`);
       } catch (e) {
@@ -84,9 +84,9 @@ export default class Controller {
   }
 
   destroy() {
-    return async (req, res, next) => {
+    return (req, res, next) => {
       try {
-        await this.Model.delete(req.params.id);
+        this.Model.delete(req.params.id);
         req.flash(Flash.SUCCESS, `${this.Model.name} has been deleted`);
         return res.redirect(`/${this.router}`);
       } catch (e) {

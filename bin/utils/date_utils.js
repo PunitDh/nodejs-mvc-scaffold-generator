@@ -1,3 +1,7 @@
+/**
+ * Returns the epoch time of the current date
+ * @returns {number}
+ */
 export function getNewDate() {
-  return parseInt(new Date().getTime());
+  return new Date().getTime();
 }

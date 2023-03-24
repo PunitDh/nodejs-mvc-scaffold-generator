@@ -1,3 +1,5 @@
+import DB from "../db.js";
+import LOGGER from "../logger.js";
 import "../utils/js_utils.js";
 
 const QueryAction = {
@@ -7,6 +9,11 @@ const QueryAction = {
   DELETE: "DELETE FROM",
 };
 
+/**
+ * Returns a new SQLQueryBuilder object
+ * @returns {SQLQueryBuilder}
+ * @constructor
+ */
 export function QueryBuilder() {
   return new SQLQueryBuilder();
 }
@@ -82,8 +89,8 @@ class SQLQueryBuilder {
 
   orderBy(obj) {
     this.order = {
-      columns: Object.keys(obj),
-      type: Object.values(obj),
+      columns: obj.keys(),
+      type: obj.values(),
     };
     return this;
   }
@@ -111,6 +118,20 @@ class SQLQueryBuilder {
     return this;
   }
 
+  execute() {
+    return new Promise((resolve, reject) => {
+      const query = this.build();
+      DB.all(query, [...arguments], function (err, rows) {
+        LOGGER.query(query);
+        if (err) {
+          LOGGER.error(err.stack);
+          return reject(err);
+        }
+        return resolve(rows);
+      });
+    });
+  }
+
   build() {
     const whereClause = this.where?.length
       ? ` WHERE ${this.where.map((col) => `${col}=$${col}`).join(" AND ")}`
@@ -131,9 +152,10 @@ class SQLQueryBuilder {
     const timestamps = this.timestamps
       ? {
           columns: ", created_at, updated_at",
-          values: ", DATETIME('now'), DATETIME('now')",
+          values: ", DATETIME('NOW'), DATETIME('NOW')",
         }
       : { columns: "", values: "" };
+    const updatedAt = this.timestamps ? ", updated_at=DATETIME('NOW')" : "";
 
     switch (this.action) {
       case QueryAction.SELECT:
@@ -141,7 +163,7 @@ class SQLQueryBuilder {
       case QueryAction.INSERT:
         return `${this.action} ${this.table} (${columns}${timestamps.columns}) VALUES (${values}${timestamps.values})${returningClause};\n`;
       case QueryAction.UPDATE:
-        return `${this.action} ${this.table}${setClause}, updated_at=DATETIME('now') ${whereClause}${returningClause};\n`;
+        return `${this.action} ${this.table}${setClause}${updatedAt} ${whereClause}${returningClause};\n`;
       case QueryAction.DELETE:
         return `${this.action} ${this.table}${whereClause}${returningClause};\n`;
       default:

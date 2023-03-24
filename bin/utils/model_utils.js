@@ -1,44 +1,34 @@
-import Handlebars from "./handlebars.js";
 import "./js_utils.js";
 import pluralize from "pluralize";
-import path from "path";
-import { PATHS } from "../constants.js";
 
+/**
+ * Converts a model name to a table name
+ * @param {String} model
+ * @returns {String}
+ */
 export const getTableNameFromModel = (model) =>
   pluralize.plural(model.toLowerCase());
 
+/**
+ * Converts a table name to a model name
+ * @param {String} table
+ * @returns {String}
+ */
 export const getModelNameFromTable = (table) =>
   pluralize.singular(table).capitalize();
 
-const queryTemplatePath = path.join(
-  PATHS.root,
-  PATHS.bin,
-  PATHS.templates,
-  PATHS.db,
-  PATHS.queries
-);
+/**
+ * Converts a model name to a foreign key column name, e.g. Converts 'Blog' to 'blog_id'
+ * @param {String} model
+ * @returns {String}
+ */
+export const getForeignKeyColumnName = (model) => `${pluralize.singular(model.toLowerCase())}_id`
 
-export const Query = {
-  SELECT: Handlebars.compileFile(
-    path.join(queryTemplatePath, PATHS.selectSqlTemplate)
-  ),
-  INSERT: Handlebars.compileFile(
-    path.join(queryTemplatePath, PATHS.insertSqlTemplate)
-  ),
-  UPDATE: Handlebars.compileFile(
-    path.join(queryTemplatePath, PATHS.updateSqlTemplate)
-  ),
-  DELETE: Handlebars.compileFile(
-    path.join(queryTemplatePath, PATHS.deleteSqlTemplate)
-  ),
-};
-
-export const sanitizeObject = (obj) => {
-  const sanitized = {};
-  Object.entries(obj).forEach(([key, value]) => {
-    if (Boolean(value)) {
-      sanitized[key] = value;
-    }
-  });
-  return sanitized;
+/**
+ * Removes all key value pairs in an object that have null or undefined values
+ * @param {Object} obj
+ * @returns {Object}
+ */
+export const removeNullValues = (obj) => {
+  return obj.sanitize();
 };

@@ -2,6 +2,10 @@ import path from "path";
 import fs from "fs";
 import LOGGER from "../logger.js";
 
+/**
+ * Reads in a file using UTF-8 encoding
+ * @returns {string|void}
+ */
 export function readFileSync() {
   const file = path.join(...arguments);
   try {
@@ -11,6 +15,10 @@ export function readFileSync() {
   }
 }
 
+/**
+ * Reads in a list of files in a specified directory, ignoring sub-directories
+ * @returns {Dirent[]|void}
+ */
 export function readdirSync() {
   const dir = path.join(...arguments);
   try {
@@ -25,15 +33,23 @@ export function readdirSync() {
   }
 }
 
+/**
+ * Writes contents to a file
+ * @param {String} arguments The first arguments are file name paths
+ * @param {String} arguments The last argument is the file contents
+ */
 export function writeFileSync() {
   const args = [...arguments];
   const file = path.join(...args.slice(0, args.length - 1));
   const contents = args[args.length - 1];
   try {
-    const writtenFile = fs.writeFileSync(file, contents);
+    fs.writeFileSync(file, contents);
     LOGGER.success(`Successfully written to: ${file}`);
-    return writtenFile;
   } catch (e) {
     return LOGGER.error(`Failed to write to '${file}'`, e.stack);
   }
+}
+
+export function appendFileSync(path, data) {
+  return fs.appendFileSync(path, data, "utf8");
 }

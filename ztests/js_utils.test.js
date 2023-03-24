@@ -1,7 +1,5 @@
 import { DateFormats } from "../bin/constants.js";
-import { assertEquals } from "../bin/test/test_utils.js";
 import "../bin/utils/js_utils.js";
-import { randomInteger } from "../bin/utils/num_utils.js";
 
 const nums = [1, 2, 3, 4, 5, 6];
 const num2 = [4.5, 5.3, 6.1, 7.6, 8.4, 9.3];
@@ -75,11 +73,6 @@ const expected = {
   ],
 };
 
-const formats = DateFormats.keys();
-
-const formattedDates = formats.map((format) => ({
-  format,
-  date: new Date("2023-03-21").strfTime(DateFormats[format]),
-}));
-
-console.table(formattedDates);
+console.log(
+  [3,4,8,7,6].stdev()
+);

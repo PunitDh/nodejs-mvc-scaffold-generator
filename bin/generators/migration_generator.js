@@ -44,7 +44,7 @@ export function generateMigration(testCommand) {
   if (!actions[action.toLowerCase()]) {
     throw new GeneratorError(`Unknown action: ${action}`);
   }
-  if (actions[action.toLowerCase()] != actions.drop && args.isEmpty()) {
+  if (!actions[action.toLowerCase()].equals(actions.drop) && args.isEmpty()) {
     throw new GeneratorError(`No arguments specified for action: '${action}'`);
   }
   const cols = args.map((arg) => arg.split(":"));
@@ -58,7 +58,13 @@ export function generateMigration(testCommand) {
     const ref = type?.equalsIgnoreCase(SQLReferences);
     const foreignKey = ref && new MigrationForeignKey(columnName);
     const column =
-      !ref && new MigrationColumn(subAction, columnName, type, ...constraints);
+      !ref &&
+      new MigrationColumn(
+        subAction,
+        columnName,
+        type,
+        ...constraints.map((type) => new MigrationBuilder.Constraint(type))
+      );
     if (column) {
       columns.push(column);
     }

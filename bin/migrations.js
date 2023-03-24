@@ -1,8 +1,8 @@
 import path from "path";
-import { PATHS } from "../bin/constants.js";
+import { PATHS } from "./constants.js";
 import fs from "fs";
 import _Migration from "./domain/Migration.js";
-import { readFileSync } from "../bin/utils/file_utils.js";
+import { readFileSync } from "./utils/file_utils.js";
 import "../bin/utils/js_utils.js";
 import LOGGER from "../bin/logger.js";
 import DB from "../bin/db.js";

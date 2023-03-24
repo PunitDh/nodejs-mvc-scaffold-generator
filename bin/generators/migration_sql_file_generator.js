@@ -2,6 +2,14 @@ import { PATHS } from "../constants.js";
 import { writeFileSync } from "../utils/file_utils.js";
 import { uuid } from "../utils/uuid.js";
 
+/**
+ * Writes an SQL migration file
+ * @param {String} action
+ * @param {String} subAction
+ * @param {String} table
+ * @param {String} column
+ * @param {String} migration
+ */
 export function generateSQLMigrationFile(
   action,
   subAction,

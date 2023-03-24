@@ -21,7 +21,6 @@ app.use("/employees", employees);
 import companies from "./routers/companies.js";
 app.use("/companies", companies);
 
-
 import theaters from "./routers/theaters.js";
 app.use("/theaters", theaters);
 

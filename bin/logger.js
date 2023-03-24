@@ -9,7 +9,6 @@ const LogType = {
   success: "success",
   error: "error",
   query: "query",
-  info: "info",
   test: "test",
 };
 
@@ -68,7 +67,7 @@ const LOGGER = {
     logMessage(
       arguments[0] || LogType.info,
       arguments[1] || TERMINAL_COLORS.FgWhite,
-      ...arguments.slice(2)
+      [...arguments].slice(2)
     );
   },
 };

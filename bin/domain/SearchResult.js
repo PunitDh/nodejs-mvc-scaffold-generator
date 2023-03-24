@@ -26,9 +26,11 @@ class SearchResult {
 
   /**
    * @description Searches for the given `searchTerm` in all SQLite tables, returning a sorted list of up to `limit` results.
-   * @param {string} searchTerm - The term to search for.
-   * @param {number} limit - The maximum number of results to return.
-   * @returns {<Array<SearchResult>>} - A promise that resolves to an array of SearchResult objects.
+   * @param {String} searchTerm - The term to search for.
+   * @param {Number} limit - The maximum number of results to return.
+   * @param {Number} maxResults - The maximum number of results per page
+   * @param {Number} page - The current page number
+   * @returns {Array<SearchResult>} - An array of SearchResult objects.
    */
   static search(searchTerm, limit, maxResults = 10, page = 1) {
     const tables = SQLiteTable.getAllTables();

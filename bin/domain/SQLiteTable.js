@@ -16,7 +16,7 @@ class SQLiteTable {
 
   /**
    * @description Get all tables currently in the database
-   * @returns A list of SQLiteTable
+   * @returns {Array<SQLiteTable>}
    */
   static getAllTables() {
     return DB.pragma("table_list")
@@ -31,8 +31,8 @@ class SQLiteTable {
 
   /**
    * Checks if a table exists in the database
-   * @param {string} tableName - The table name to find
-   * @returns Boolean
+   * @param {String} tableName - The table name to find
+   * @returns {Boolean}
    */
   static exists(tableName) {
     return DB.pragma("table_list")
@@ -42,8 +42,8 @@ class SQLiteTable {
 
   /**
    * Gets the list of all foreign keys in the database
-   * @param {string} tableName
-   * @returns A list of SQLiteForeignKey
+   * @param {String} tableName
+   * @returns {Array<SQLiteForeignKey>}
    */
   static getForeignKeys(tableName) {
     return DB.pragma(`foreign_key_list('${tableName}')`).map(

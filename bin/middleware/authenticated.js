@@ -1,7 +1,7 @@
 import JWT from "jsonwebtoken";
 import _Jwt from "../domain/JWT.js";
-import { UnauthorizedRequestError } from "../errors.js";
-import { Flash } from "../constants.js";
+import {UnauthorizedRequestError} from "../errors.js";
+import {Flash} from "../constants.js";
 
 function authenticated(req, res, next) {
   const token = req.cookies.app;
@@ -23,8 +23,7 @@ function authenticated(req, res, next) {
         "Invalid access token provided. Unauthorized access was blocked."
       );
     }
-    const decoded = JWT.verify(token, process.env.JWT_SECRET);
-    res.locals.currentUser = decoded;
+    res.locals.currentUser = JWT.verify(token, process.env.JWT_SECRET);
     next();
   } catch (e) {
     res.locals.currentUser = null;

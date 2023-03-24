@@ -6,15 +6,13 @@ import {
   PATHS,
   SQLColumnConstraints,
   SQLColumnTypes,
+  SQLForeignKeyActions,
   SQLReferences,
 } from "../bin/constants.js";
 import { getSchema } from "../bin/utils/schema_utils.js";
-import { readdirSync } from "../bin/utils/file_utils.js";
 import { getTableNameFromModel } from "../bin/utils/model_utils.js";
-import {
-  MigrationBuilder,
-  MigrationColumn,
-} from "../bin/builders/MigrationBuilder.js";
+import { MigrationBuilder } from "../bin/builders/MigrationBuilder.js";
+import { readdirSync } from "../bin/utils/file_utils.js";
 
 const PromptGlobals = {
   RESTART: "APPLICATION_RESTART",
@@ -47,11 +45,12 @@ switch (generator) {
   case Generators.MODEL:
     {
       const model = await enterModelName();
-      const columns = addColumns();
-      const migration = new MigrationBuilder().withAction(
-        MigrationActions.CREATE
-      ).withColumns;
+      const columns = await addColumns();
+      const migration = new MigrationBuilder()
+        .withAction(MigrationActions.CREATE)
+        .withColumns(columns);
       console.log(`Selected generator: ${generator}, selected model: ${model}`);
+      console.log(columns);
       columns.forEach(
         ({
           name,
@@ -119,7 +118,7 @@ switch (generator) {
       if (migrationSubAction === MigrationActions.subActions.DROP) {
         migrationActionTableColumns = await selectColumns(migrationActionTable);
       } else if (migrationSubAction === MigrationActions.subActions.ADD) {
-        addedColumns = addColumns();
+        addedColumns = await addColumns();
       }
       console.log(`Selected action: ${migrationAction}`);
       migrationActionTable &&
@@ -254,10 +253,6 @@ async function enterColumnAction() {
       { title: "Add column", value: ColumnAction.ADD },
       { title: "Done", value: ColumnAction.DONE },
     ],
-    validate: (value) =>
-      pluralize.isPlural(value) || value.match(word)?.length > 0
-        ? `Invalid model name`
-        : true,
   });
   return columnAction;
 }
@@ -280,7 +275,7 @@ async function selectTable(action) {
   const { selectedTable } = await prompts({
     type: "select",
     name: "selectedTable",
-    message: `Enter table to ${action.toLowerCase()}`,
+    message: `Which table would you like to ${action.toLowerCase()}?`,
     choices: getSchema()
       .tables.keys()
       .map((value) => ({ title: value, value })),
@@ -294,10 +289,7 @@ async function addColumn() {
     type: "text",
     name: "name",
     message: "Enter column name",
-    validate: (value) =>
-      pluralize.isPlural(value) || value.match(word)?.length > 0
-        ? `Invalid model name`
-        : true,
+    validate: (value) => (value.length < 1 ? `Invalid column name` : true),
   });
 
   const { type } = await prompts({
@@ -328,8 +320,15 @@ async function addColumn() {
       type: "text",
       name: "defaultVal",
       message: "Enter default value",
+      validate: (value) => (value.length < 1 ? `Invalid default value` : true),
     });
-    return { name, type, constraint, defaultVal };
+
+    return new MigrationBuilder.Column(
+      MigrationActions.subActions.ADD,
+      name,
+      type,
+      new MigrationBuilder.Constraint(constraint, defaultVal)
+    ); // { name, type, constraint, defaultVal };
   } else if (constraint === SQLReferences) {
     const { referenceTable } = await prompts({
       type: "select",
@@ -350,13 +349,55 @@ async function addColumn() {
       })),
       initial: 0,
     });
-    return { name, type, constraint, referenceTable, referenceColumn };
+
+    const { onDelete } = await prompts({
+      type: "select",
+      name: "onDelete",
+      message: "Select ON DELETE action",
+      choices: SQLForeignKeyActions.values()
+        .distinct()
+        .map((value) => ({
+          title: value,
+          value,
+        })),
+      initial: 0,
+    });
+
+    const { onUpdate } = await prompts({
+      type: "select",
+      name: "onUpdate",
+      message: "Select ON UPDATE action",
+      choices: SQLForeignKeyActions.values()
+        .distinct()
+        .map((value) => ({
+          title: value,
+          value,
+        })),
+      initial: 0,
+    });
+
+    return new MigrationBuilder.ForeignKey(
+      referenceTable,
+      referenceColumn,
+      onDelete,
+      onUpdate
+    );
+
+    // return {
+    //   name,
+    //   type,
+    //   constraint,
+    //   referenceTable,
+    //   referenceColumn,
+    //   onDelete,
+    //   onUpdate,
+    // };
   }
-  return new MigrationColumn(
+  return new MigrationBuilder.Column(
     MigrationActions.subActions.ADD,
     name,
     type,
-    constraint
+    new MigrationBuilder.Constraint(constraint)
   );
   return { name, type, constraint };
 }

@@ -106,9 +106,6 @@ export function generateAuth(command) {
     if (fs.existsSync(modelFilePath)) {
       return true;
     }
-    if (SQLiteTable.exists(getTableNameFromModel(model))) {
-      return true;
-    }
-    return false;
+    return SQLiteTable.exists(getTableNameFromModel(model));
   }
 }

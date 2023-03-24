@@ -52,8 +52,7 @@ const {{route}} = Router();
 
 {{route}}.post("/edit/:id", (req, res, next) => {
   try {
-    const {{model}} = new {{Model}}({ id: req.params.id, ...req.body });
-    {{model}}.save();
+    {{Model}}.update(req.params.id, req.body);
     req.flash(Flash.SUCCESS, "{{Model}} has been updated");
     return res.redirect(`/{{route}}`);
   } catch (e) {

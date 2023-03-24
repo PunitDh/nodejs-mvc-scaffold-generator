@@ -3,9 +3,9 @@ import SETTINGS from "./settings.js";
 
 /**
  * @description Marks occurrences of a search term in HTML text by wrapping them in <span> tags with a "mark" class.
- * @param {string} text - The HTML text to search in.
- * @param {string} term - The search term to mark.
- * @param {number} maxStringLength - The maximum length of the resulting text, after which it will be shortened and appended with "...".
+ * @param {String} text - The HTML text to search in.
+ * @param {String} term - The search term to mark.
+ * @param {Number} maxStringLength - The maximum length of the resulting text, after which it will be shortened and appended with "...".
  * @returns {Object} An object containing the marked HTML text and the number of occurrences of the search term.
  */
 export function markHTML(text, term, maxStringLength) {
@@ -29,9 +29,10 @@ export function markHTML(text, term, maxStringLength) {
  * The function uses markHTML to mark the term in the object's values and
  * exclude SearchResultExcludedColumns from the search.
  * It also calculates a priority for each match based on the count of marked terms in the value.
- * @param {*} object The object whose properties will be searched for the given term.
- * @param {*} searchTerm The search term that will be marked in the values of the object's properties.
- * @returns An object with the priority of the search term in the values and the marked search term in the result object.
+ * @param {Object} object The object whose properties will be searched for the given term.
+ * @param {String} searchTerm The search term that will be marked in the values of the object's properties.
+ * @param {Boolean} shortened: Whether to shorten the result
+ * @returns {Object} An object with the priority of the search term in the values and the marked search term in the result object.
  */
 export function markSearchTermInObjectValues(
   object,

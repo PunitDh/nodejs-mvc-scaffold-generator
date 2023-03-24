@@ -1,6 +1,11 @@
 import JWT from "jsonwebtoken";
 import _Jwt from "../domain/JWT.js";
 
+/**
+ * Verifies a JWT by checking if it exists in the JWT table
+ * @param {String} jwt
+ * @returns {Boolean|*}
+ */
 export function verifyJWT(jwt) {
   if (!jwt) return false;
   const jwtExists = _Jwt.exists({ jwt });

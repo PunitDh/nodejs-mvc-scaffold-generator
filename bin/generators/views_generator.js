@@ -14,7 +14,6 @@ import { getSchema } from "../utils/schema_utils.js";
 import pluralize from "pluralize";
 import { LOCATIONS, PATHS } from "../constants.js";
 import { writeFileSync } from "../utils/file_utils.js";
-import SQLiteColumn from "../domain/SQLiteColumn.js";
 import ViewColumn from "../domain/ViewColumn.js";
 
 export function generateViews(command) {
@@ -95,7 +94,7 @@ export function generateViews(command) {
 
   function getColumnsFromSchema(model, excludedColumns) {
     const table = getTableNameFromModel(model);
-    const tableColumns = SQLiteColumn.getColumns(table);
+    const tableColumns = getSchema().tables[table];
     return tableColumns
       .filter((column) => !excludedColumns.includes(column.name.toLowerCase()))
       .map(

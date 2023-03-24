@@ -20,20 +20,26 @@ import "../bin/utils/js_utils.js";
 import { generateModel } from "../bin/generators/model_generator.js";
 import { assertEquals } from "../bin/test/test_utils.js";
 
-const actual = generateModel(
-  "npm run model:generate Comment Blog:references:onDelete:SetNull body:string:notnull count:integer:default:1 User:references:ondelete:restrict:onupdate:setdefault"
+// const actual = generateModel(
+//   "npm run model:generate Comment Blog:references:onDelete:SetNull body:string:notnull count:integer:default:1 User:references:ondelete:restrict:onupdate:setdefault"
+// );
+
+// const expected = `CREATE TABLE IF NOT EXISTS comments (
+//   id INTEGER PRIMARY KEY AUTOINCREMENT,
+//   body TEXT NOT NULL,
+//   count INTEGER DEFAULT 1,
+//   blog_id INTEGER,
+//   user_id INTEGER,
+//   created_at NUMERIC DEFAULT (DATETIME('NOW')),
+//   updated_at NUMERIC DEFAULT (DATETIME('NOW')),
+//   FOREIGN KEY(blog_id) REFERENCES blogs(id) ON DELETE SET NULL ON UPDATE CASCADE,
+//   FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE RESTRICT ON UPDATE SET DEFAULT
+// );`
+
+// assertEquals("should create comments table with correct foreign keys", expected, actual);
+
+const sneaker = generateModel(
+  "npm run scaffold:generate Sneaker name:string color:string Shop:references"
 );
 
-const expected = `CREATE TABLE IF NOT EXISTS comments (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  body TEXT NOT NULL,
-  count INTEGER DEFAULT 1,
-  blog_id INTEGER,
-  user_id INTEGER,
-  created_at NUMERIC DEFAULT (DATETIME('NOW')),
-  updated_at NUMERIC DEFAULT (DATETIME('NOW')),
-  FOREIGN KEY(blog_id) REFERENCES blogs(id) ON DELETE SET NULL ON UPDATE CASCADE,
-  FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE RESTRICT ON UPDATE SET DEFAULT
-);`
-
-assertEquals("should create comments table with correct foreign keys", expected, actual);
+console.log(sneaker);

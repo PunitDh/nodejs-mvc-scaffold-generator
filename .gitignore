@@ -7,3 +7,4 @@ instance/*.db
 .idea
 *.csv
 .vscode
+out/

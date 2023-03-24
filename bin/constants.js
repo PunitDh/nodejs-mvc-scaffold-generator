@@ -1,6 +1,10 @@
 import path from "path";
 import SETTINGS from "./utils/settings.js";
 
+/**
+ * A list of SQL Column types
+ * @type {{BLOB: string, FLOAT: string, DECIMAL: string, TEXT: string, EMAIL: string, INT: string, NCHAR: string, NVARCHAR: string, "DOUBLE PRECISION": string, "VARYING CHARACTER": string, TIMESTAMP: string, CHARACTER: string, DOUBLE: string, TINYINT: string, "NATIVE CHARACTER": string, INTEGER: string, "UNSIGNED BIG INT": string, INT2: string, NUMERIC: string, NUMBER: string, CLOB: string, NULL: string, BIGINT: string, MEDIUMINT: string, INT8: string, BOOLEAN: string, DATE: string, DATETIME: string, PASSWORD: string, SMALLINT: string, VARCHAR: string, REAL: string, STRING: string}}
+ */
 export const SQLColumnTypes = {
   INT: "INTEGER",
   INTEGER: "INTEGER",
@@ -30,13 +34,17 @@ export const SQLColumnTypes = {
   NUMBER: "NUMERIC",
   DECIMAL: "NUMERIC",
   BOOLEAN: "BOOLEAN",
-  DATE: "NUMERIC",
+  DATE: "DATE",
   TIMESTAMP: "NUMERIC",
   DATETIME: "NUMERIC",
   PASSWORD: "TEXT",
   EMAIL: "TEXT",
 };
 
+/**
+ * A list of terminal colours
+ * @type {{BgCyan: string, Reverse: string, BgGray: string, Bright: string, FgBlack: string, Hidden: string, FgCyan: string, BgMagenta: string, Reset: string, BgWhite: string, FgYellow: string, BgGreen: string, FgGray: string, FgBlue: string, Blink: string, Dim: string, BgBlack: string, BgYellow: string, BgBlue: string, FgGreen: string, FgMagenta: string, Underscore: string, FgRed: string, FgWhite: string, BgRed: string}}
+ */
 export const TERMINAL_COLORS = {
   Reset: "\x1b[0m",
   Bright: "\x1b[1m",
@@ -67,6 +75,10 @@ export const TERMINAL_COLORS = {
   BgGray: "\x1b[100m",
 };
 
+/**
+ * A list of SQL Column constraints
+ * @type {{AUTO_INCREMENT: string, PRIMARYKEY: string, "NOT NULL": string, PRIMARY_KEY: string, AUTOINCREMENT: string, NOTNULL: string, "PRIMARY KEY": string, "AUTO INCREMENT": string, UNIQUE: string, REQUIRED: string, NOT_NULL: string, DEFAULT: string}}
+ */
 export const SQLColumnConstraints = {
   PRIMARY_KEY: "PRIMARY KEY",
   AUTO_INCREMENT: "AUTOINCREMENT",
@@ -82,6 +94,10 @@ export const SQLColumnConstraints = {
   REQUIRED: "NOT NULL",
 };
 
+/**
+ * A list of foreign key actions
+ * @type {{SET_DEFAULT: string, SETNULL: string, SET_NULL: string, "NO ACTION": string, CASCADE: string, "SET DEFAULT": string, RESTRICT: string, "SET NULL": string, SETDEFAULT: string, NOACTION: string, NO_ACTION: string}}
+ */
 export const SQLForeignKeyActions = {
   "NO ACTION": "NO ACTION",
   CASCADE: "CASCADE",
@@ -215,11 +231,22 @@ export const SearchExcludedColumns = [
   "_csrf_token",
 ];
 
-export const SearchResultExcludedColumns = ["password", "_csrf_token"];
+/**
+ * The list of columns that are to be excluded from search results
+ * @type {string[]}
+ */
+export const SearchResultExcludedColumns = Object.freeze([
+  "password",
+  "_csrf_token",
+]);
 
 // export const SearchResultTitleColumns = ['name', 'title', 'first_name', 'firstname', 'last_name', 'lastname']
 
-export const MigrationActions = {
+/**
+ * Types of migration actions
+ * @type {Readonly<{ALTER: string, CREATE: string, subActions: {ADD: string, DROP: string}, DROP: string}>}
+ */
+export const MigrationActions = Object.freeze({
   CREATE: "CREATE",
   ALTER: "ALTER",
   DROP: "DROP",
@@ -227,29 +254,45 @@ export const MigrationActions = {
     ADD: "ADD",
     DROP: "DROP",
   },
-};
+});
 
-export const ForeignKeyOptions = {
+/**
+ * Foreign key options
+ * @type {Readonly<{ONDELETE: string, ONUPDATE: string}>}
+ */
+export const ForeignKeyOptions = Object.freeze({
   ONDELETE: "ONDELETE",
   ONUPDATE: "ONUPDATE",
-};
+});
 
-export const Flash = {
+/**
+ * Flash types
+ * @type {Readonly<{SUCCESS: string, ERROR: string}>}
+ */
+export const Flash = Object.freeze({
   SUCCESS: "success",
   ERROR: "error",
-};
+});
 
-export const MediaType = {
+/**
+ * Media types
+ * @type {Readonly<{APPLICATION_JSON: string}>}
+ */
+export const MediaType = Object.freeze({
   APPLICATION_JSON: "application/json",
-};
+});
 
-export const HttpMethods = {
+/**
+ * Http Method Types
+ * @type {{DELETE: string, POST: string, GET: string, PUT: string, PATCH: string}}
+ */
+export const HttpMethods = Object.freeze({
   GET: "GET",
   POST: "POST",
   PUT: "PUT",
   PATCH: "PATCH",
   DELETE: "DELETE",
-};
+});
 
 export const LayoutPages = {
   _csrf: "../_layouts/partials/_csrf.ejs",

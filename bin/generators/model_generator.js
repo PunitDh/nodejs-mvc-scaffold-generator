@@ -83,7 +83,7 @@ export function generateModel(testCommand) {
           MigrationActions.subActions.ADD,
           name,
           type,
-          ...constraints
+          ...constraints.map((type) => new MigrationBuilder.Constraint(type))
         )
     );
     const foreignKeys = refs.map(([referenceTable, _, ...options]) => {
@@ -115,8 +115,10 @@ export function generateModel(testCommand) {
     saveSchema(schema);
 
     // Write model file
-    const compiledModelFile =
-      Handlebars.compileFile(modelTemplate)(createdMigration);
+    const compiledModelFile = Handlebars.compileFile(modelTemplate)(
+      createdMigration.toTemplateFormat()
+    );
+
     if (testCommand) {
       LOGGER.test(compiledModelFile);
     } else {
@@ -144,9 +146,6 @@ export function generateModel(testCommand) {
     if (fs.existsSync(modelFilePath)) {
       return true;
     }
-    if (SQLiteTable.exists(getTableNameFromModel(model))) {
-      return true;
-    }
-    return false;
+    return SQLiteTable.exists(getTableNameFromModel(model));
   }
 }

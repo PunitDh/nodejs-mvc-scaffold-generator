@@ -24,7 +24,7 @@ class Model {
   /**
    * @description Excludes a specified column or columns from a row
    * @argument arguments
-   * @returns the model
+   * @returns {Model}
    */
   exclude() {
     [...arguments].forEach((column) => {
@@ -35,7 +35,7 @@ class Model {
 
   /**
    * @description Returns the table name for the model
-   * @returns string
+   * @returns {String}
    */
   static get __tablename__() {
     return getTableNameFromModel(this.name.toLowerCase());
@@ -43,7 +43,7 @@ class Model {
 
   /**
    * @description Returns the columns for the model
-   * @returns List of SQLiteColumn
+   * @returns {Array<SQLiteColumn>}
    */
   static get __columns__() {
     return SQLiteColumn.getColumns(this.__tablename__);
@@ -51,7 +51,7 @@ class Model {
 
   /**
    * @description Returns the foreign keys associated with the model
-   * @returns List of SQLiteForeignKey
+   * @returns {Array<SQLiteForeignKey>}
    */
   static get __foreignKeys__() {
     return SQLiteTable.getForeignKeys(this.__tablename__);
@@ -59,25 +59,25 @@ class Model {
 
   /**
    * @description Returning all items in the table
-   * @returns List of rows
+   * @returns {Array<Model>}
    */
   static all() {
     const query = QueryBuilder().select("*").from(this.__tablename__);
-    return this.dbQuery(query);
+    return this.runQuery(query);
   }
 
   /**
-   *
-   * @returns The first item in the table
+   * The first item in the table
+   * @returns {Model}
    */
   static first() {
     const query = QueryBuilder().select("*").from(this.__tablename__).limit(1);
-    return this.dbQuery(query, {}, true);
+    return this.runQuery(query, {}, true);
   }
 
   /**
-   *
-   * @returns The last item in the table
+   * Returns The last item in the table
+   * @returns {Model}
    */
   static last() {
     const result = this.all();
@@ -85,16 +85,16 @@ class Model {
   }
 
   /**
-   *
-   * @param {integer} id
-   * @returns A single item with the specified id
+   * Returns a single item with the specified id
+   * @param {Number} id
+   * @returns {Model}
    */
   static find(id) {
     const query = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
       .where("id");
-    const result = this.dbQuery(query, { id }, true);
+    const result = this.runQuery(query, { id }, true);
     if (result.isEmpty())
       throw new NotFoundError(`Cannot find ${this.name} with id: '${id}'`);
     return result;
@@ -103,31 +103,31 @@ class Model {
   /**
    * @description Query the model using an object, e.g. { id: 1, name: 'Tim' }
    * @param {Object} obj
-   * @returns A single row or an empty object
+   * @returns {Model}
    */
   static findBy(obj) {
     const result = this.where(obj);
     return result.isNotEmpty() ? result.first() : null;
   }
 
-  /**
-   * @description Searches the model's table for the specified searchTerm
-   * @param {string} searchTerm
-   * @returns A list of rows
-   */
-  static search(searchTerm) {
-    const columnNames = this.__columns__
-      .filter((column) => !SearchExcludedColumns.includes(column.name))
-      .map((column) => `${column.name} LIKE '%' || $searchTerm || '%' `);
-    const whereClause = columnNames.join(" OR ");
-    const query = `SELECT * FROM ${this.__tablename__} WHERE ${whereClause};`;
-    return this.dbQuery(query, { searchTerm });
-  }
+  // /**
+  //  * @description Searches the model's table for the specified searchTerm
+  //  * @param {String} searchTerm
+  //  * @returns A list of rows
+  //  */
+  // static search(searchTerm) {
+  //   const columnNames = this.__columns__
+  //     .filter((column) => !SearchExcludedColumns.includes(column.name))
+  //     .map((column) => `${column.name} LIKE '%' || $searchTerm || '%' `);
+  //   const whereClause = columnNames.join(" OR ");
+  //   const query = `SELECT * FROM ${this.__tablename__} WHERE ${whereClause};`;
+  //   return this.dbQuery(query, { searchTerm });
+  // }
 
   /**
    * @description Checks if a row exists given the specified conditions in the obj, e.g. { id: 1, name: 'Tim' }
    * @param {Object} obj
-   * @returns Boolean
+   * @returns {Boolean}
    */
   static exists(obj) {
     const results = this.where(obj);
@@ -137,118 +137,118 @@ class Model {
   /**
    * @description Creates a row in the model's database given its columns as object, e.g. { id: 1, name: 'Tim' }
    * @param {Object} object
-   * @returns the inserted row
+   * @returns {Model}
    */
   static create(object) {
     const sanitizedObject = removeNullValues(
       new this.prototype.constructor(object)
     );
-    const query = QueryBuilder()
+    const queryBuilder = QueryBuilder()
       .insert()
       .into(this.__tablename__)
       .values(sanitizedObject.keys())
       .returning("*");
-    return this.dbQuery(query, sanitizedObject, true);
+    return this.runQuery(queryBuilder, sanitizedObject, true);
   }
 
   /**
    * @description Updates a row in the model's database given and id and columns as object, e.g. { id: 1, name: 'Tim' }
-   * @param {integer} id
+   * @param {Number} id
    * @param {Object} object
-   * @returns
+   * @returns {Model}
    */
   static update(id, object) {
     const sanitizedObject = removeNullValues(
       new this.prototype.constructor(object)
     );
     const values = { id, ...sanitizedObject };
-    const query = QueryBuilder()
+    const queryBuilder = QueryBuilder()
       .update(this.__tablename__)
       .set(sanitizedObject.keys())
       .where("id")
       .returning("*");
-    return this.dbQuery(query, values, true);
+    return this.runQuery(queryBuilder, values, true);
   }
 
   /**
    * @description Query the model's table using an object, e.g. { id: 1, name: 'Tim' }
    * @param {Object} obj
-   * @returns A list of rows that matches the conditions { id: 1, name: 'Tim' }
+   * @returns {Array{Model}}
    */
   static where(obj) {
     const sanitizedObject = removeNullValues(
       new this.prototype.constructor(obj)
     );
-    const query = QueryBuilder()
+    const queryBuilder = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
       .where(sanitizedObject.keys());
-    return this.dbQuery(query, sanitizedObject);
+    return this.runQuery(queryBuilder, sanitizedObject);
   }
 
   /**
    * @description Deletes a row from the model's table
-   * @param {integer} id
-   * @returns The deleted row
+   * @param {Number} id
+   * @returns {Model}
    */
   static delete(id) {
-    const query = QueryBuilder()
+    const queryBuilder = QueryBuilder()
       .delete()
       .from(this.__tablename__)
       .where("id")
       .returning("*");
-    return this.dbQuery(query, { id }, true);
+    return this.runQuery(queryBuilder, { id }, true);
   }
 
   /**
    * @description Saves a row in the database
-   * @returns The saved row
+   * @returns {Model}
    */
   save() {
     const columns = this.keys().filter(
       (column) => !ReadOnlyColumns.includes(column)
     );
 
-    const updateQuery = QueryBuilder()
+    const updateQueryBuilder = QueryBuilder()
       .update(this.constructor.__tablename__)
       .set(columns)
       .where("id")
       .returning("*");
 
-    const insertQuery = QueryBuilder()
+    const insertQueryBuilder = QueryBuilder()
       .insert()
       .into(this.constructor.__tablename__)
       .values(columns)
       .returning("*");
 
-    const query = this.id ? updateQuery : insertQuery;
+    const queryBuilder = this.id ? updateQueryBuilder : insertQueryBuilder;
     // const values = [...columns.map((column) => this[column]), this.id];
-    return this.constructor.dbQuery(query, this, true);
+    return this.constructor.runQuery(queryBuilder, this, true);
   }
 
   /**
    * @description Deletes a row in the database
-   * @returns The deleted row
+   * @returns {Model}
    */
   delete() {
-    const query = QueryBuilder()
+    const queryBuilder = QueryBuilder()
       .delete()
       .from(this.constructor.__tablename__)
       .where("id")
       .returning("*");
-    return this.constructor.dbQuery(query, { id: this.id });
+    return this.constructor.runQuery(queryBuilder, { id: this.id });
   }
 
   /**
-   * @description Runs an SQL query on the model's table
-   * @param {string} query
-   * @param {Array<any>} values
+   * @description Runs an SQL queryBuilder on the model's table
+   * @param {QueryBuilder} queryBuilder
+   * @param {Object} values
    * @param {Boolean} singular
-   * @returns The result of the SQL query
+   * @returns {Array<Model> | Model}
    */
-  static dbQuery(query, values = {}, singular = false) {
+  static runQuery(queryBuilder, values = {}, singular = false) {
     const _Model = this.prototype.constructor;
-    const results = DB.prepare(query.build()).all({ ...values });
+    const results = DB.prepare(queryBuilder.build()).all({ ...values });
     if (singular) {
       return new _Model(results.first());
     }

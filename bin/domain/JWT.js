@@ -14,7 +14,7 @@ class _Jwt extends Model {
       .withNoTimeStamps()
       .values("jwt")
       .returning("*")
-    return this.dbQuery(query, { jwt });
+    return this.runQuery(query, { jwt });
   }
 }
 

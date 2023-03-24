@@ -9,6 +9,11 @@ const QueryAction = {
   DELETE: "DELETE FROM",
 };
 
+/**
+ * Returns a new SQLQueryBuilder object
+ * @returns {SQLQueryBuilder}
+ * @constructor
+ */
 export function QueryBuilder() {
   return new SQLQueryBuilder();
 }

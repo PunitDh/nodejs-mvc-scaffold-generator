@@ -474,6 +474,63 @@
         "defaultValue": "DATETIME('NOW')",
         "primaryKey": false
       }
+    ],
+    "sneakers": [
+      {
+        "id": null,
+        "name": "id",
+        "type": "INTEGER",
+        "notNull": false,
+        "primaryKey": true
+      },
+      {
+        "id": null,
+        "name": "name",
+        "type": "TEXT",
+        "notNull": false,
+        "primaryKey": false
+      },
+      {
+        "id": null,
+        "name": "color",
+        "type": "TEXT",
+        "notNull": false,
+        "primaryKey": false
+      },
+      {
+        "id": null,
+        "name": "shop_id",
+        "type": "INTEGER",
+        "notNull": false,
+        "primaryKey": false,
+        "foreignKey": {
+          "id": null,
+          "seq": null,
+          "table": "shops",
+          "Model": "Shop",
+          "model": "shop",
+          "from": "shop_id",
+          "to": "id",
+          "onUpdate": "CASCADE",
+          "onDelete": "CASCADE"
+        }
+      },
+      {
+        "id": null,
+        "name": "created_at",
+        "type": "DATE",
+        "notNull": false,
+        "defaultValue": "(DATETIME('NOW'))",
+        "primaryKey": false
+      },
+      {
+        "id": null,
+        "name": "updated_at",
+        "type": "DATE",
+        "notNull": false,
+        "defaultValue": "(DATETIME('NOW'))",
+        "primaryKey": false
+      }
     ]
   },
   "routers": [
@@ -484,6 +541,7 @@
     "employees",
     "movies",
     "theaters",
-    "users"
+    "users",
+    "sneakers"
   ]
 }

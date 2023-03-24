@@ -4,7 +4,7 @@ import "../utils/js_utils.js";
 class ObjectCollection {
   /**
    * Creates an ObjectCollection object that takes in a count and a class
-   * @param {Integer} count - The number of instances to be created
+   * @param {Number} count - The number of instances to be created
    * @param {Class} Model - The class of instances to be created
    */
   constructor(count, Model) {
@@ -15,7 +15,7 @@ class ObjectCollection {
 
   /**
    * Saves all instances of the model to the database
-   * @returns Saved instances as promises
+   * @returns {Array}
    */
   saveAll() {
     return this.instances.map((instance) => instance.save());
@@ -45,9 +45,9 @@ class ObjectCollection {
 
 /**
  * When applied with .withProps(), returns a number of specified objects with the prop values
- * @param {Integer} count - The number of instances to create
+ * @param {Number} count - The number of instances to create
  * @param {Class} ModelClass - The class of the instance to be created
- * @returns new ObjectCollection
+ * @returns {ObjectCollection}
  */
 export function CollectionOf(count, ModelClass) {
   return new ObjectCollection(count, ModelClass);
@@ -55,9 +55,9 @@ export function CollectionOf(count, ModelClass) {
 
 /**
  * When applied with .withProps(), returns a random number of specified objects with the prop values
- * @param {integer} maxCount - The max number of instances to create
+ * @param {Number} maxCount - The max number of instances to create
  * @param {Class} ModelClass - The class of the instance to be created
- * @returns new ObjectCollection
+ * @returns {ObjectCollection}
  */
 export function RandomCollectionOf(maxCount, ModelClass) {
   return new ObjectCollection(randomInteger(1, maxCount), ModelClass);

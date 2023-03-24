@@ -77,7 +77,7 @@ console.log(
     "templates",
     "db",
     "queries",
-    "createtable.sql.template"
+    "createtable.sql.handlebars"
   )(tableProps)
 );
 

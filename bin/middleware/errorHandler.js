@@ -14,9 +14,7 @@ export default function (err, req, res, next) {
     default:
   }
 
-  console.log({ err });
-
-  LOGGER.error(err.status || 400, err.stack);
+  LOGGER.error(err.status || 400, err.constructor.name, err.stack);
   req.flash(Flash.ERROR, errorMessage || err.message);
   return res.redirect(req.headers.referer || "/404");
 }

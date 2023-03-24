@@ -13,6 +13,13 @@ class ApplicationError extends Error {
   }
 }
 
+export class BadRequestError extends ApplicationError {
+  constructor() {
+    super(...arguments);
+    this.status = 400;
+  }
+}
+
 export class NotFoundError extends ApplicationError {
   constructor() {
     super(...arguments);
@@ -20,7 +27,7 @@ export class NotFoundError extends ApplicationError {
   }
 }
 
-export class UnauthorizedRequestError extends ApplicationError {
+export class UnauthorizedError extends ApplicationError {
   constructor() {
     super(...arguments);
     this.status = 401;

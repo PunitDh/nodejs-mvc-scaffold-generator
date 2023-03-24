@@ -44070,3 +44070,971 @@
     );
 [INFO] [25/03/2023, 01:04:23]: Successfully connected to database: 'database.db'
 [INFO] [25/03/2023, 01:04:23]: Server started on port 3000
+[QUERY] [25/03/2023, 01:20:16]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 01:20:16]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 01:20:16]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 01:20:16]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 01:20:16]: Server started on port 3000
+[QUERY] [25/03/2023, 01:25:45]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 01:25:45]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 01:25:45]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 01:25:45]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 01:25:45]: Server started on port 3000
+[QUERY] [25/03/2023, 02:24:56]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:24:56]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:24:56]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:24:56]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:24:56]: Server started on port 3000
+[INFO] [25/03/2023, 02:25:00]: Started GET "/users/" at 25/03/2023, 02:25:00
+[INFO] [25/03/2023, 02:25:00]: Completed 302 Found in 9.54 ms
+[INFO] [25/03/2023, 02:25:00]: Started GET "/users/login?referer=%2Fusers%2F" at 25/03/2023, 02:25:00
+[INFO] [25/03/2023, 02:25:00]: Completed 304 Not Modified in 5.46 ms
+[INFO] [25/03/2023, 02:25:03]: Started POST "/users/login?referer=/users/" at 25/03/2023, 02:25:03
+[QUERY] [25/03/2023, 02:25:03]: SELECT * FROM users WHERE email='test@test.codm';
+[ERROR] [25/03/2023, 02:25:03]: User not found
+[ERROR] [25/03/2023, 02:25:03]: 404 Error: User not found
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/routers/users.js:78:13
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:47:12)
+[INFO] [25/03/2023, 02:25:03]: Completed 302 Found in 7.82 ms
+[INFO] [25/03/2023, 02:25:03]: Started GET "/users/login?referer=%2Fusers%2F" at 25/03/2023, 02:25:03
+[INFO] [25/03/2023, 02:25:03]: Completed 200 OK in 2.59 ms
+[INFO] [25/03/2023, 02:25:19]: Started POST "/users/login?referer=/users/" at 25/03/2023, 02:25:19
+[QUERY] [25/03/2023, 02:25:19]: SELECT * FROM users WHERE email='test@test.com';
+[ERROR] [25/03/2023, 02:25:19]: Wrong password
+[ERROR] [25/03/2023, 02:25:19]: 401 Error: Wrong password
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/routers/users.js:85:13
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:47:12)
+[INFO] [25/03/2023, 02:25:19]: Completed 302 Found in 89.71 ms
+[INFO] [25/03/2023, 02:25:19]: Started GET "/users/login?referer=%2Fusers%2F" at 25/03/2023, 02:25:19
+[INFO] [25/03/2023, 02:25:19]: Completed 200 OK in 1.81 ms
+[QUERY] [25/03/2023, 02:25:39]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:25:39]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:25:39]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:25:39]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:25:39]: Server started on port 3000
+[QUERY] [25/03/2023, 02:25:48]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:25:48]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:25:48]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:25:48]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:25:48]: Server started on port 3000
+[QUERY] [25/03/2023, 02:26:11]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:26:11]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:26:11]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:26:11]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:26:11]: Server started on port 3000
+[QUERY] [25/03/2023, 02:26:57]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:26:57]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:26:57]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:26:57]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:26:57]: Server started on port 3000
+[INFO] [25/03/2023, 02:27:02]: Started POST "/users/login?referer=/users/" at 25/03/2023, 02:27:02
+[QUERY] [25/03/2023, 02:27:02]: SELECT * FROM users WHERE email='test@test.com';
+[ERROR] [25/03/2023, 02:27:02]: Wrong password
+[ERROR] [25/03/2023, 02:27:02]: 401 UnauthorizedError Error: Wrong password
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/routers/users.js:81:13
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:47:12)
+[INFO] [25/03/2023, 02:27:02]: Completed 302 Found in 81.91 ms
+[INFO] [25/03/2023, 02:27:02]: Started GET "/users/login?referer=%2Fusers%2F" at 25/03/2023, 02:27:02
+[INFO] [25/03/2023, 02:27:02]: Completed 304 Not Modified in 5.43 ms
+[INFO] [25/03/2023, 02:27:31]: Started POST "/users/login?referer=/users/" at 25/03/2023, 02:27:31
+[QUERY] [25/03/2023, 02:27:31]: SELECT * FROM users WHERE email='test@test.comd';
+[ERROR] [25/03/2023, 02:27:31]: User not found
+[ERROR] [25/03/2023, 02:27:31]: 404 NotFoundError Error: User not found
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/routers/users.js:76:13
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:47:12)
+[INFO] [25/03/2023, 02:27:31]: Completed 302 Found in 17.23 ms
+[INFO] [25/03/2023, 02:27:31]: Started GET "/users/login?referer=%2Fusers%2F" at 25/03/2023, 02:27:31
+[INFO] [25/03/2023, 02:27:31]: Completed 200 OK in 4.97 ms
+[INFO] [25/03/2023, 02:27:51]: Started POST "/users/login?referer=/users/" at 25/03/2023, 02:27:51
+[QUERY] [25/03/2023, 02:27:51]: SELECT * FROM users WHERE email='test@test.com';
+[QUERY] [25/03/2023, 02:27:51]: UPDATE users SET first_name='Test', last_name='Test', email='test@test.com', password='$2b$10$dL7QbekK50b1xVXm5MfeVeE21'/*+28 bytes*/, updated_at=DATETIME('NOW')  WHERE id=11.0 RETURNING *;
+[INFO] [25/03/2023, 02:27:51]: Completed 302 Found in 94.61 ms
+[INFO] [25/03/2023, 02:27:51]: Started GET "/users/" at 25/03/2023, 02:27:51
+[QUERY] [25/03/2023, 02:27:51]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [25/03/2023, 02:27:51]: SELECT * FROM users;
+[INFO] [25/03/2023, 02:27:51]: Completed 200 OK in 4.89 ms
+[INFO] [25/03/2023, 02:27:54]: Started GET "/users/7" at 25/03/2023, 02:27:54
+[QUERY] [25/03/2023, 02:27:54]: SELECT * FROM users WHERE id='7';
+[INFO] [25/03/2023, 02:27:54]: Completed 200 OK in 30.95 ms
+[INFO] [25/03/2023, 02:27:56]: Started GET "/users/" at 25/03/2023, 02:27:56
+[QUERY] [25/03/2023, 02:27:56]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [25/03/2023, 02:27:56]: SELECT * FROM users;
+[INFO] [25/03/2023, 02:27:56]: Completed 200 OK in 15.23 ms
+[INFO] [25/03/2023, 02:27:57]: Started GET "/users/7" at 25/03/2023, 02:27:57
+[QUERY] [25/03/2023, 02:27:57]: SELECT * FROM users WHERE id='7';
+[INFO] [25/03/2023, 02:27:57]: Completed 304 Not Modified in 15.77 ms
+[INFO] [25/03/2023, 02:27:58]: Started POST "/users/delete/7" at 25/03/2023, 02:27:58
+[INFO] [25/03/2023, 02:27:58]: Completed 302 Found in 4.75 ms
+[INFO] [25/03/2023, 02:27:58]: Started GET "/403" at 25/03/2023, 02:27:58
+[INFO] [25/03/2023, 02:27:58]: Completed 403 Forbidden in 11.04 ms
+[INFO] [25/03/2023, 02:28:04]: Started GET "/users/" at 25/03/2023, 02:28:04
+[QUERY] [25/03/2023, 02:28:04]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [25/03/2023, 02:28:04]: SELECT * FROM users;
+[INFO] [25/03/2023, 02:28:04]: Completed 304 Not Modified in 13.94 ms
+[INFO] [25/03/2023, 02:28:06]: Started POST "/users/delete/10" at 25/03/2023, 02:28:06
+[INFO] [25/03/2023, 02:28:06]: Completed 302 Found in 3.94 ms
+[INFO] [25/03/2023, 02:28:06]: Started GET "/403" at 25/03/2023, 02:28:06
+[INFO] [25/03/2023, 02:28:06]: Completed 403 Forbidden in 12.77 ms
+[INFO] [25/03/2023, 02:28:09]: Started POST "/users/delete/9" at 25/03/2023, 02:28:09
+[INFO] [25/03/2023, 02:28:09]: Completed 302 Found in 10.76 ms
+[INFO] [25/03/2023, 02:28:09]: Started GET "/403" at 25/03/2023, 02:28:09
+[INFO] [25/03/2023, 02:28:09]: Completed 403 Forbidden in 7.04 ms
+[INFO] [25/03/2023, 02:28:13]: Started POST "/users/delete/5" at 25/03/2023, 02:28:13
+[INFO] [25/03/2023, 02:28:13]: Completed 302 Found in 4.78 ms
+[INFO] [25/03/2023, 02:28:13]: Started GET "/403" at 25/03/2023, 02:28:13
+[INFO] [25/03/2023, 02:28:13]: Completed 403 Forbidden in 6 ms
+[INFO] [25/03/2023, 02:28:17]: Started GET "/users/edit/5" at 25/03/2023, 02:28:17
+[QUERY] [25/03/2023, 02:28:17]: SELECT * FROM users WHERE id='5';
+[INFO] [25/03/2023, 02:28:17]: Completed 200 OK in 22.04 ms
+[INFO] [25/03/2023, 02:28:19]: Started POST "/users/edit/5" at 25/03/2023, 02:28:19
+[QUERY] [25/03/2023, 02:28:19]: SELECT * FROM users WHERE id='5';
+[ERROR] [25/03/2023, 02:28:19]: 400 RangeError RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: { user: [User] }
+    at new NodeError (node:internal/errors:393:5)
+    at ServerResponse.writeHead (node:_http_server:343:11)
+    at ServerResponse.writeHead (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/on-headers/index.js:44:26)
+    at ServerResponse._implicitHeader (node:_http_server:334:8)
+    at writetop (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express-session/index.js:276:15)
+    at ServerResponse.end (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express-session/index.js:343:16)
+    at ServerResponse.redirect (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/response.js:978:10)
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/routers/users.js:48:18
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:144:13)
+[INFO] [25/03/2023, 02:28:19]: Completed 302 Found in 95.54 ms
+[INFO] [25/03/2023, 02:28:19]: Started GET "/users/edit/5" at 25/03/2023, 02:28:19
+[QUERY] [25/03/2023, 02:28:19]: SELECT * FROM users WHERE id='5';
+[INFO] [25/03/2023, 02:28:19]: Completed 200 OK in 2.52 ms
+[INFO] [25/03/2023, 02:28:23]: Started GET "/users/" at 25/03/2023, 02:28:23
+[QUERY] [25/03/2023, 02:28:23]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [25/03/2023, 02:28:23]: SELECT * FROM users;
+[INFO] [25/03/2023, 02:28:23]: Completed 304 Not Modified in 16.78 ms
+[QUERY] [25/03/2023, 02:30:13]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:30:13]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:30:13]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:30:13]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:30:13]: Server started on port 3000
+[QUERY] [25/03/2023, 02:30:31]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:30:31]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:30:31]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:30:31]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:30:31]: Server started on port 3000
+[QUERY] [25/03/2023, 02:30:48]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:30:48]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:30:48]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:30:48]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:30:48]: Server started on port 3000
+[INFO] [25/03/2023, 02:31:15]: Started GET "/users/edit/5" at 25/03/2023, 02:31:15
+[QUERY] [25/03/2023, 02:31:15]: SELECT * FROM users WHERE id='5';
+[INFO] [25/03/2023, 02:31:15]: Completed 200 OK in 21.98 ms
+[INFO] [25/03/2023, 02:31:16]: Started POST "/users/edit/5" at 25/03/2023, 02:31:16
+[QUERY] [25/03/2023, 02:31:16]: SELECT * FROM users WHERE id='5';
+[ERROR] [25/03/2023, 02:31:16]: Old password does not match
+[ERROR] [25/03/2023, 02:31:16]: 401 UnauthorizedError Error: Old password does not match
+    at file:///Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/routers/users.js:49:13
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:284:15
+    at param (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:365:14)
+    at param (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:376:14)
+    at Function.process_params (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:421:3)
+    at next (/Users/remadmin/Documents/projects/javascript/nodejs-mvc-scaffold-generator/node_modules/express/lib/router/index.js:280:10)
+[INFO] [25/03/2023, 02:31:16]: Completed 302 Found in 68.74 ms
+[INFO] [25/03/2023, 02:31:16]: Started GET "/users/edit/5" at 25/03/2023, 02:31:16
+[QUERY] [25/03/2023, 02:31:16]: SELECT * FROM users WHERE id='5';
+[INFO] [25/03/2023, 02:31:16]: Completed 200 OK in 3.43 ms
+[QUERY] [25/03/2023, 02:31:36]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:31:36]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:31:36]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:31:36]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:31:36]: Server started on port 3000
+[QUERY] [25/03/2023, 02:32:22]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:32:22]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:32:22]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:32:22]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:32:22]: Server started on port 3000
+[QUERY] [25/03/2023, 02:34:45]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:34:45]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:34:45]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:34:45]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:34:45]: Server started on port 3000
+[QUERY] [25/03/2023, 02:40:04]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:40:04]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:40:04]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:40:04]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:40:04]: Server started on port 3000
+[QUERY] [25/03/2023, 02:42:19]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:42:19]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:42:19]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:42:19]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:42:19]: Server started on port 3000
+[QUERY] [25/03/2023, 02:42:39]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:42:39]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:42:39]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:42:39]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:42:39]: Server started on port 3000
+[QUERY] [25/03/2023, 02:43:03]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:43:03]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:43:03]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:43:03]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:43:03]: Server started on port 3000
+[INFO] [25/03/2023, 02:43:09]: Started GET "/movies/" at 25/03/2023, 02:43:09
+[QUERY] [25/03/2023, 02:43:09]: SELECT * FROM movies;
+[INFO] [25/03/2023, 02:43:09]: Completed 304 Not Modified in 22.71 ms
+[INFO] [25/03/2023, 02:43:11]: Started GET "/search?q=te&maxResults=10&page=1" at 25/03/2023, 02:43:11
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:43:11]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:43:11]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:11]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:11]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:11]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:11]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:11]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:11]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:11]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:43:11]: Completed 200 OK in 34.25 ms
+[INFO] [25/03/2023, 02:43:13]: Started GET "/api/search?q=te" at 25/03/2023, 02:43:13
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:43:13]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:43:13]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:13]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:13]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:13]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:13]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:13]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:13]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:43:13]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:43:13]: Completed 200 OK in 24.13 ms
+[INFO] [25/03/2023, 02:43:17]: Started GET "/assets/js/bootstrap.bundle.min.js.map" at 25/03/2023, 02:43:17
+[INFO] [25/03/2023, 02:43:17]: Completed 404 Not Found in 7.59 ms
+[INFO] [25/03/2023, 02:43:17]: Started GET "/assets/css/bootstrap.min.css.map" at 25/03/2023, 02:43:17
+[INFO] [25/03/2023, 02:43:17]: Completed 404 Not Found in 8.65 ms
+[QUERY] [25/03/2023, 02:44:40]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:44:40]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:44:40]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:44:40]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:44:40]: Server started on port 3000
+[QUERY] [25/03/2023, 02:46:26]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:46:26]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:46:26]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:46:26]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:46:26]: Server started on port 3000
+[QUERY] [25/03/2023, 02:46:40]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:46:40]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:46:40]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:46:40]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:46:40]: Server started on port 3000
+[QUERY] [25/03/2023, 02:48:03]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:48:03]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:48:03]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:48:03]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:48:03]: Server started on port 3000
+[INFO] [25/03/2023, 02:48:09]: Started GET "/search?q=te&maxResults=10&page=1" at 25/03/2023, 02:48:09
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:48:09]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:48:09]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:09]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:09]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:09]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:09]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:09]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:09]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:09]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:48:09]: Completed 200 OK in 21.6 ms
+[INFO] [25/03/2023, 02:48:11]: Started GET "/api/search?q=te" at 25/03/2023, 02:48:11
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:48:11]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:48:11]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:11]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:11]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:11]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:11]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:11]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:11]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:48:11]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:48:11]: Completed 200 OK in 11.83 ms
+[QUERY] [25/03/2023, 02:49:41]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:49:41]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:49:41]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:49:41]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:49:41]: Server started on port 3000
+[INFO] [25/03/2023, 02:50:05]: Started GET "/api/search?q=te" at 25/03/2023, 02:50:05
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:50:05]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:50:05]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:05]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:05]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:05]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:05]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:05]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:05]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:05]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:50:05]: Completed 304 Not Modified in 14.65 ms
+[INFO] [25/03/2023, 02:50:06]: Started GET "/search?q=te&maxResults=10&page=1" at 25/03/2023, 02:50:06
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:50:06]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:50:06]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:06]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:06]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:06]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:06]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:06]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:06]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:06]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:50:06]: Completed 200 OK in 35.47 ms
+[INFO] [25/03/2023, 02:50:07]: Started GET "/blogs/63?referer=%2Fsearch%3Fq%3Dte%26maxResults%3D10%26page%3D1" at 25/03/2023, 02:50:07
+[QUERY] [25/03/2023, 02:50:07]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [25/03/2023, 02:50:07]: SELECT * FROM blogs WHERE id='63';
+[QUERY] [25/03/2023, 02:50:07]: SELECT * FROM comments WHERE blog_id=63.0;
+[INFO] [25/03/2023, 02:50:07]: Completed 200 OK in 36.55 ms
+[INFO] [25/03/2023, 02:50:09]: Started GET "/search?q=te&maxResults=10&page=1" at 25/03/2023, 02:50:09
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:50:09]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:50:09]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:09]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:09]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:09]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:09]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:09]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:09]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:09]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:50:09]: Completed 200 OK in 25.87 ms
+[QUERY] [25/03/2023, 02:50:38]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:50:38]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:50:38]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:50:38]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:50:38]: Server started on port 3000
+[INFO] [25/03/2023, 02:50:39]: Started GET "/blogs/63?referer=%2Fsearch%3Fq%3Dte%26maxResults%3D10%26page%3D1" at 25/03/2023, 02:50:39
+[QUERY] [25/03/2023, 02:50:39]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [25/03/2023, 02:50:39]: SELECT * FROM blogs WHERE id='63';
+[QUERY] [25/03/2023, 02:50:39]: SELECT * FROM comments WHERE blog_id=63.0;
+[INFO] [25/03/2023, 02:50:39]: Completed 200 OK in 31.53 ms
+[QUERY] [25/03/2023, 02:50:43]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:50:43]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:50:43]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:50:43]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:50:43]: Server started on port 3000
+[INFO] [25/03/2023, 02:50:48]: Started GET "/blogs/63?referer=%2Fsearch%3Fq%3Dte%26maxResults%3D10%26page%3D1" at 25/03/2023, 02:50:48
+[QUERY] [25/03/2023, 02:50:48]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [25/03/2023, 02:50:48]: SELECT * FROM blogs WHERE id='63';
+[QUERY] [25/03/2023, 02:50:48]: SELECT * FROM comments WHERE blog_id=63.0;
+[INFO] [25/03/2023, 02:50:48]: Completed 200 OK in 22.22 ms
+[INFO] [25/03/2023, 02:50:50]: Started GET "/search?q=te&maxResults=10&page=1" at 25/03/2023, 02:50:50
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:50:50]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:50:50]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:50]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:50]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:50]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:50]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:50]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:50]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:50]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:50:50]: Completed 200 OK in 30.61 ms
+[INFO] [25/03/2023, 02:50:51]: Started GET "/users/11?referer=%2Fsearch%3Fq%3Dte%26maxResults%3D10%26page%3D1" at 25/03/2023, 02:50:51
+[QUERY] [25/03/2023, 02:50:51]: SELECT * FROM users WHERE id='11';
+[INFO] [25/03/2023, 02:50:51]: Completed 200 OK in 20.37 ms
+[INFO] [25/03/2023, 02:50:53]: Started GET "/search?q=te&maxResults=10&page=1" at 25/03/2023, 02:50:53
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:50:53]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:50:53]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:53]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:53]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:53]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:53]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:53]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:53]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:50:53]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:50:53]: Completed 200 OK in 27.45 ms
+[QUERY] [25/03/2023, 02:51:03]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:51:03]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:51:03]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:51:03]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:51:03]: Server started on port 3000
+[INFO] [25/03/2023, 02:51:05]: Started GET "/users/11?referer=%2Fsearch%3Fq%3Dte%26maxResults%3D10%26page%3D1" at 25/03/2023, 02:51:05
+[QUERY] [25/03/2023, 02:51:05]: SELECT * FROM users WHERE id='11';
+[INFO] [25/03/2023, 02:51:05]: Completed 304 Not Modified in 17.49 ms
+[INFO] [25/03/2023, 02:51:06]: Started GET "/search?q=te&maxResults=10&page=1" at 25/03/2023, 02:51:06
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:51:06]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:51:06]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:51:06]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:51:06]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:51:06]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:51:06]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:51:06]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:51:06]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:51:06]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:51:06]: Completed 200 OK in 31.55 ms
+[QUERY] [25/03/2023, 02:52:04]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 02:52:04]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 02:52:04]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 02:52:04]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 02:52:04]: Server started on port 3000
+[INFO] [25/03/2023, 02:52:09]: Started GET "/animals/105?referer=%2Fsearch%3Fq%3Dte%26maxResults%3D10%26page%3D1" at 25/03/2023, 02:52:09
+[QUERY] [25/03/2023, 02:52:09]: SELECT * FROM animals WHERE id='105';
+[INFO] [25/03/2023, 02:52:09]: Completed 200 OK in 18.37 ms
+[INFO] [25/03/2023, 02:52:09]: Started GET "/animals/Wile_E_Coyo%3Cspan%20class='mark'%3Ete%3C/span%3E.webp" at 25/03/2023, 02:52:09
+[INFO] [25/03/2023, 02:52:10]: Completed 404 Not Found in 12.77 ms
+[INFO] [25/03/2023, 02:52:11]: Started GET "/search?q=te&maxResults=10&page=1" at 25/03/2023, 02:52:11
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:52:11]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:52:11]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:11]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:11]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:11]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:11]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:11]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:11]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:11]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:52:11]: Completed 200 OK in 26.49 ms
+[INFO] [25/03/2023, 02:52:13]: Started GET "/blogs/3?referer=%2Fsearch%3Fq%3Dte%26maxResults%3D10%26page%3D1" at 25/03/2023, 02:52:13
+[QUERY] [25/03/2023, 02:52:13]: SELECT * FROM _jwts WHERE jwt='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX'/*+284 bytes*/;
+[QUERY] [25/03/2023, 02:52:13]: SELECT * FROM blogs WHERE id='3';
+[QUERY] [25/03/2023, 02:52:13]: SELECT * FROM comments WHERE blog_id=3.0;
+[INFO] [25/03/2023, 02:52:13]: Completed 200 OK in 26.2 ms
+[INFO] [25/03/2023, 02:52:15]: Started GET "/search?q=te&maxResults=10&page=1" at 25/03/2023, 02:52:15
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:52:15]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:52:15]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:15]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:15]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:15]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:15]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:15]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:15]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:15]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:52:15]: Completed 200 OK in 28.75 ms
+[INFO] [25/03/2023, 02:52:20]: Started GET "/users/5?referer=%2Fsearch%3Fq%3Dte%26maxResults%3D10%26page%3D1" at 25/03/2023, 02:52:20
+[QUERY] [25/03/2023, 02:52:20]: SELECT * FROM users WHERE id='5';
+[INFO] [25/03/2023, 02:52:20]: Completed 200 OK in 19.92 ms
+[INFO] [25/03/2023, 02:52:21]: Started GET "/search?q=te&maxResults=10&page=1" at 25/03/2023, 02:52:21
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:52:21]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:52:21]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:21]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:21]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:21]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:21]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:21]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:21]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:21]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:52:21]: Completed 200 OK in 26.86 ms
+[INFO] [25/03/2023, 02:52:25]: Started GET "/search?q=te&maxResults=10&page=2" at 25/03/2023, 02:52:25
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:52:25]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:52:25]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:25]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:25]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:25]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:25]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:25]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:25]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:25]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:52:25]: Completed 200 OK in 27.19 ms
+[INFO] [25/03/2023, 02:52:27]: Started GET "/movies/3?referer=%2Fsearch%3Fq%3Dte%26maxResults%3D10%26page%3D2" at 25/03/2023, 02:52:27
+[QUERY] [25/03/2023, 02:52:27]: SELECT * FROM movies WHERE id='3';
+[INFO] [25/03/2023, 02:52:27]: Completed 200 OK in 21.86 ms
+[INFO] [25/03/2023, 02:52:29]: Started GET "/search?q=te&maxResults=10&page=2" at 25/03/2023, 02:52:29
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA table_list
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA foreign_key_list('theaters')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA table_info('theaters')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA foreign_key_list('animals')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA table_info('animals')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA foreign_key_list('comments')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA table_info('comments')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA foreign_key_list('users')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA table_info('users')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA foreign_key_list('movies')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA table_info('movies')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA foreign_key_list('employees')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA table_info('employees')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA foreign_key_list('blogs')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA table_info('blogs')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA foreign_key_list('companies')
+[QUERY] [25/03/2023, 02:52:29]: PRAGMA table_info('companies')
+[QUERY] [25/03/2023, 02:52:29]: SELECT * FROM theaters WHERE name LIKE '%' || 'te' || '%'  OR location LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:29]: SELECT * FROM animals WHERE name LIKE '%' || 'te' || '%'  OR color LIKE '%' || 'te' || '%'  OR image LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:29]: SELECT * FROM comments WHERE blog_id LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:29]: SELECT * FROM users WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR email LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:29]: SELECT * FROM movies WHERE name LIKE '%' || 'te' || '%'  OR year LIKE '%' || 'te' || '%'  OR theater_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:29]: SELECT * FROM employees WHERE first_name LIKE '%' || 'te' || '%'  OR last_name LIKE '%' || 'te' || '%'  OR title LIKE '%' || 'te' || '%'  OR salary LIKE '%' || 'te' || '%'  OR sick_leave_hours LIKE '%' || 'te' || '%'  OR annual_leave_hours LIKE '%' || 'te' || '%'  OR company_id LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:29]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[QUERY] [25/03/2023, 02:52:29]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
+[INFO] [25/03/2023, 02:52:29]: Completed 200 OK in 23.41 ms

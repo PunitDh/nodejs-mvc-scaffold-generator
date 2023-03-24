@@ -136,7 +136,7 @@ const {{router}} = Router();
     );
     return res
       .status(200)
-      .render("{{router}}/{{model}}", { {{model}}: res.locals.marked({{model}}) });
+      .render("{{router}}/{{model}}", { {{model}} });
   } catch (e) {
     next(e);
   }

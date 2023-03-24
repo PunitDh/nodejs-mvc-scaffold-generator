@@ -8,7 +8,7 @@ import SETTINGS from "./settings.js";
  * @param {Number} maxStringLength - The maximum length of the resulting text, after which it will be shortened and appended with "...".
  * @returns {Object} An object containing the marked HTML text and the number of occurrences of the search term.
  */
-export function markHTML(text, term, maxStringLength) {
+function markHTML(text, term, maxStringLength) {
   const regex = new RegExp(`(${term})`, "gi");
   const stringified = text?.toString();
   const count = (stringified?.match(regex) || []).length;

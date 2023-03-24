@@ -2,7 +2,7 @@ import { TERMINAL_COLORS } from "../bin/constants.js";
 import Handlebars from "../bin/utils/handlebars.js";
 
 const logMessage = Handlebars.compileFile(
-  "./bin/templates/logger/message.template"
+  "./bin/templates/logger/message.handlebars"
 )({
   method: "GET",                                            // req.method
   path: "/users",                                           // req.url

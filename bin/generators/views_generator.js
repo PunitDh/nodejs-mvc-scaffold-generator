@@ -88,7 +88,7 @@ export function generateViews(command) {
       );
     });
   } catch (e) {
-    LOGGER.error(`Unable to be generate router for '${model}'`, e);
+    LOGGER.error(`Unable to be generate router for '${model}'`, e.stack);
     throw e;
   }
 

@@ -11,9 +11,7 @@ import "../bin/utils/js_utils.js";
 
 // const objects = Object.keys(Object.prototype).sort();
 const types = [Array, String, Number, Date, Object];
-const sorted = [Array, String, Number, Date, Object].map((Type) =>
-  Object.keys(Type.prototype).sort()
-);
+const sorted = types.map((Type) => Object.keys(Type.prototype).sort());
 
 console.log(sorted);
 

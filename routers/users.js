@@ -120,7 +120,7 @@ users.post("/delete/:id", (req, res) => {
   try {
     if (res.locals.currentUser.id !== parseInt(req.params.id)) {
       req.flash(Flash.ERROR, "You are not authorized to perform this action");
-      return res.status(403).redirect(req.headers.referer);
+      return res.status(403).redirect("/403");
     }
     User.delete(req.params.id);
     req.flash(Flash.SUCCESS, "User has been deleted");

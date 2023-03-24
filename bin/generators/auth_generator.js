@@ -98,7 +98,7 @@ export function generateAuth(command) {
     const tableName = getTableNameFromModel(model);
     generateSQLMigrationFile(action, "", table, tableName, createdMigration);
   } catch (e) {
-    LOGGER.error(`Unable to be generate model '${model}'`, e);
+    LOGGER.error(`Unable to be generate model '${model}'`, e.stack);
   }
 
   function modelExists(model) {

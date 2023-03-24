@@ -29,7 +29,7 @@ app.set("view engine", "ejs");
 // Package Middleware
 app.use(express.static(path.join(PATHS.root, SETTINGS.views.location)));
 app.use(json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   session({
@@ -46,6 +46,14 @@ app.use(appUtils());
 app.use("/", appRouter);
 
 app.use(errorHandler);
+
+app.get("/403", function (req, res) {
+  res.status(403).render("pages/403");
+});
+
+app.get("/401", function (req, res) {
+  res.status(401).render("pages/401");
+});
 
 app.get("*", function (req, res) {
   res.status(404).render("pages/404");

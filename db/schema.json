@@ -153,77 +153,55 @@
     ],
     "comments": [
       {
-        "id": null,
+        "id": 0,
         "name": "id",
         "type": "INTEGER",
         "notNull": false,
+        "defaultValue": null,
         "primaryKey": true
       },
       {
-        "id": null,
-        "name": "body",
-        "type": "TEXT",
-        "notNull": true,
-        "primaryKey": false
-      },
-      {
-        "id": null,
-        "name": "count",
-        "type": "INTEGER",
-        "notNull": false,
-        "defaultValue": "1",
-        "primaryKey": false
-      },
-      {
-        "id": null,
+        "id": 1,
         "name": "blog_id",
         "type": "INTEGER",
         "notNull": false,
+        "defaultValue": null,
         "primaryKey": false,
         "foreignKey": {
-          "id": null,
-          "seq": null,
+          "id": 0,
+          "seq": 0,
           "table": "blogs",
           "Model": "Blog",
           "model": "blog",
           "from": "blog_id",
           "to": "id",
-          "onUpdate": "CASCADE",
-          "onDelete": "SET NULL"
+          "onUpdate": "NO ACTION",
+          "onDelete": "NO ACTION",
+          "match": "NONE"
         }
       },
       {
-        "id": null,
-        "name": "user_id",
-        "type": "INTEGER",
+        "id": 2,
+        "name": "body",
+        "type": "TEXT",
         "notNull": false,
-        "primaryKey": false,
-        "foreignKey": {
-          "id": null,
-          "seq": null,
-          "table": "users",
-          "Model": "User",
-          "model": "user",
-          "from": "user_id",
-          "to": "id",
-          "onUpdate": "SET DEFAULT",
-          "onDelete": "RESTRICT"
-        }
-      },
-      {
-        "id": null,
-        "name": "created_at",
-        "type": "NUMERIC",
-        "notNull": false,
-        "defaultValue": "(DATETIME('NOW'))",
+        "defaultValue": null,
         "primaryKey": false
       },
       {
-        "id": null,
+        "id": 3,
+        "name": "created_at",
+        "type": "NUMERIC",
+        "notNull": false,
+        "defaultValue": null,
+        "primaryKey": false
+      },
+      {
+        "id": 4,
         "name": "updated_at",
         "type": "NUMERIC",
         "notNull": false,
-        "defaultValue": "(DATETIME('NOW'))",
+        "defaultValue": null,
         "primaryKey": false
       }
     ],
@@ -474,63 +452,6 @@
         "defaultValue": "DATETIME('NOW')",
         "primaryKey": false
       }
-    ],
-    "sneakers": [
-      {
-        "id": null,
-        "name": "id",
-        "type": "INTEGER",
-        "notNull": false,
-        "primaryKey": true
-      },
-      {
-        "id": null,
-        "name": "name",
-        "type": "TEXT",
-        "notNull": false,
-        "primaryKey": false
-      },
-      {
-        "id": null,
-        "name": "color",
-        "type": "TEXT",
-        "notNull": false,
-        "primaryKey": false
-      },
-      {
-        "id": null,
-        "name": "shop_id",
-        "type": "INTEGER",
-        "notNull": false,
-        "primaryKey": false,
-        "foreignKey": {
-          "id": null,
-          "seq": null,
-          "table": "shops",
-          "Model": "Shop",
-          "model": "shop",
-          "from": "shop_id",
-          "to": "id",
-          "onUpdate": "CASCADE",
-          "onDelete": "CASCADE"
-        }
-      },
-      {
-        "id": null,
-        "name": "created_at",
-        "type": "DATE",
-        "notNull": false,
-        "defaultValue": "(DATETIME('NOW'))",
-        "primaryKey": false
-      },
-      {
-        "id": null,
-        "name": "updated_at",
-        "type": "DATE",
-        "notNull": false,
-        "defaultValue": "(DATETIME('NOW'))",
-        "primaryKey": false
-      }
     ]
   },
   "routers": [
@@ -541,7 +462,6 @@
     "employees",
     "movies",
     "theaters",
-    "users",
-    "sneakers"
+    "users"
   ]
 }

@@ -124,7 +124,7 @@ class SQLQueryBuilder {
       DB.all(query, [...arguments], function (err, rows) {
         LOGGER.query(query);
         if (err) {
-          LOGGER.error(err);
+          LOGGER.error(err.stack);
           return reject(err);
         }
         return resolve(rows);

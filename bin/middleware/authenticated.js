@@ -1,7 +1,7 @@
 import JWT from "jsonwebtoken";
 import _Jwt from "../domain/JWT.js";
-import {UnauthorizedRequestError} from "../errors.js";
-import {Flash} from "../constants.js";
+import { UnauthorizedRequestError } from "../errors.js";
+import { Flash } from "../constants.js";
 
 function authenticated(req, res, next) {
   const token = req.cookies.app;

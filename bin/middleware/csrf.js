@@ -11,12 +11,12 @@ export default function (active = true) {
       } else if (req.method.equalsIgnoreCase(HttpMethods.POST)) {
         if (req.body._csrf_token !== req.session._csrf_token) {
           req.flash(Flash.ERROR, "CSRF tokens do not match");
-          return res.redirect(req.headers.referer);
+          return res.redirect(req.headers.referer || "/401");
         }
         next();
       } else {
         req.flash(Flash.ERROR, "No CSRF token provided");
-        return res.redirect(req.headers.referer);
+        return res.redirect(req.headers.referer || "/401");
       }
     } else {
       next();

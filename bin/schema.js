@@ -10,26 +10,25 @@ import "./utils/js_utils.js";
   const schema = getSchema();
   const schemaTables = schema.tables.keys();
 
-  DB.all(`PRAGMA table_list`, function (_, tables) {
-    schema.routers = tables
-      .map((r) => r.name)
-      .filter((r) => !r.includes("sqlite_"))
-      .filter((r) => !r.includes(settings.database.migrations.table))
-      .filter((r) => !r.includes(settings.database.jwt.table))
-      .sort();
+  const tables = DB.pragma(`table_list`);
+  schema.routers = tables
+    .map((r) => r.name)
+    .filter((r) => !r.includes("sqlite_"))
+    .filter((r) => !r.includes(settings.database.migrations.table))
+    .filter((r) => !r.includes(settings.database.jwt.table))
+    .sort();
 
-    schemaTables.forEach((schemaTable) => {
-      if (!schema.routers.includes(schemaTable)) {
-        delete schema.tables[schemaTable];
-      }
-    });
+  schemaTables.forEach((schemaTable) => {
+    if (!schema.routers.includes(schemaTable)) {
+      delete schema.tables[schemaTable];
+    }
+  });
+  saveSchema(schema);
+
+  schema.routers.forEach((table) => {
+    LOGGER.info(`Updating schema for '${table}'`);
+    const columns = SQLiteColumn.getColumns(table);
+    schema.tables[table] = columns;
     saveSchema(schema);
-
-    schema.routers.forEach((table) => {
-      LOGGER.info(`Updating schema for '${table}'`);
-      const columns = SQLiteColumn.getColumns(table);
-      schema.tables[table] = columns;
-      saveSchema(schema);
-    });
   });
 })();

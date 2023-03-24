@@ -10,7 +10,6 @@ try {
     verbose: LOGGER.query,
   });
   DB.pragma("foreign_keys = ON");
-  LOGGER.info("Failed to set foreign key to ON");
   const migrationTableQuery = `CREATE TABLE IF NOT EXISTS ${settings.database.migrations.table} (
     version INTEGER PRIMARY KEY AUTOINCREMENT,
     filename TEXT,
@@ -31,7 +30,7 @@ try {
     `'${settings.database.name}'`
   );
 } catch (e) {
-  LOGGER.error("Failed to connect to database:", e);
+  LOGGER.error("Failed to connect to database:", e.stack);
 }
 
 export default DB;

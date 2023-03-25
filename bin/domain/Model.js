@@ -1,7 +1,7 @@
-import DB from "./db.js";
+
 
 import SQLiteColumn from "./domain/SQLiteColumn.js";
-import { ReadOnlyColumns, SearchExcludedColumns } from "./constants.js";
+import { ReadOnlyColumns } from "./constants.js";
 import SQLiteTable from "./domain/SQLiteTable.js";
 import {
   getTableNameFromModel,
@@ -10,6 +10,7 @@ import {
 import "./utils/js_utils.js";
 import { QueryBuilder } from "./builders/QueryBuilder.js";
 import { NotFoundError } from "./errors.js";
+import DB from "../db.js";
 
 /**
  * @description Base model class

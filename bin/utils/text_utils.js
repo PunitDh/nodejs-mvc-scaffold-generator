@@ -8,7 +8,7 @@ import SETTINGS from "./settings.js";
  * @param {Number} maxStringLength - The maximum length of the resulting text, after which it will be shortened and appended with "...".
  * @returns {Object} An object containing the marked HTML text and the number of occurrences of the search term.
  */
-export function markHTML(text, term, maxStringLength) {
+function markHTML(text, term, maxStringLength) {
   const regex = new RegExp(`(${term})`, "gi");
   const stringified = text?.toString();
   const count = (stringified?.match(regex) || []).length;
@@ -29,21 +29,17 @@ export function markHTML(text, term, maxStringLength) {
  * The function uses markHTML to mark the term in the object's values and
  * exclude SearchResultExcludedColumns from the search.
  * It also calculates a priority for each match based on the count of marked terms in the value.
- * @param {Object} object The object whose properties will be searched for the given term.
+ * @param {Object} dataObject The object whose properties will be searched for the given term.
  * @param {String} searchTerm The search term that will be marked in the values of the object's properties.
  * @param {Boolean} shortened: Whether to shorten the result
  * @returns {Object} An object with the priority of the search term in the values and the marked search term in the result object.
  */
-export function markSearchTermInObjectValues(
-  object,
-  searchTerm,
-  shortened = false
-) {
-  if (!searchTerm) return object;
+export function markSearchTerm(dataObject, searchTerm, shortened = false) {
+  if (!searchTerm) return dataObject;
   const result = {};
   let priority = 0;
   const { maxStringLength } = SETTINGS.views.pages.search;
-  object
+  dataObject
     .exclude(...SearchResultExcludedColumns)
     .entries()
     .forEach(([key, value]) => {

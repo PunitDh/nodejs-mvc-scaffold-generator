@@ -1,7 +1,6 @@
 import { Router } from "express";
-import SearchResult from "../bin/domain/SearchResult.js";
 import SETTINGS from "../bin/utils/settings.js";
-import { convertToMilliseconds } from "../bin/utils/num_utils.js";
+import SearchService from "../bin/service/SearchService.js";
 
 const pages = Router();
 
@@ -14,31 +13,23 @@ pages.get("/about", (_, res) => {
 });
 
 pages.get("/search", (req, res) => {
-  const startTime = process.hrtime();
   const { maxResults, page, q: query } = req.query;
-  const results = SearchResult.search(query, undefined, maxResults, page);
-  const resultsObj = {
-    results:
-      maxResults > 0
-        ? results.slice((page - 1) * maxResults, page * maxResults)
-        : results,
-    totalResults: results.length,
-    totalPages: maxResults > 0 ? Math.ceil(results.length / maxResults) : 1,
-    query: req.query.q,
+  const searchResponse = SearchService.search(
+    query,
+    undefined,
     maxResults,
-    page,
-    time: (() => {
-      const [seconds, nanoseconds] = process.hrtime(startTime);
-      return convertToMilliseconds(seconds, nanoseconds) / 1000;
-    })(),
-  };
-  return res.render("pages/search", resultsObj);
+    page
+  );
+  return res.render("pages/search", searchResponse);
 });
 
 pages.get("/api/search", (req, res) => {
   const { searchSuggestionLimit } = SETTINGS.views.pages.search;
-  const results = SearchResult.search(req.query.q, searchSuggestionLimit || 10);
-  return res.status(200).send(results);
+  const searchResponse = SearchService.search(
+    req.query.q,
+    searchSuggestionLimit || 10
+  );
+  return res.status(200).send(searchResponse.results);
 });
 
 export default pages;

@@ -33,7 +33,7 @@
       "index": {
         "excludedFields": ["id", "_csrf_token"]
       },
-      "new": {},
+      "_new": {},
       "edit": {},
       "singular": {},
       "navLinks": {

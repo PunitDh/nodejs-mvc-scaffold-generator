@@ -24,7 +24,7 @@ const newMigrations = migrationFiles
 
 const addedMigrations = newMigrations.map(({ filename, query }) => {
   DB.prepare(query).run();
-  _Migration.add(filename, query);
+  return _Migration.add(filename, query);
 });
 
 addedMigrations.forEach(({ version, query }) => {

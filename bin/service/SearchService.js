@@ -11,7 +11,7 @@ export default class SearchService {
    * @param {Number} limit - The maximum number of results to return.
    * @param {Number} maxResults - The maximum number of results per page
    * @param {Number} page - The current page number
-   * @returns {Array<SearchResult>} - An array of SearchResult objects.
+   * @returns {SearchResponse} - An array of SearchResult objects.
    */
   static search(searchTerm, limit, maxResults = 10, page = 1) {
     const startTime = process.hrtime();

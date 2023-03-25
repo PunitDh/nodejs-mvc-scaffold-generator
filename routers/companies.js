@@ -5,8 +5,6 @@ const companies = Router();
 
 const companiesController = new Controller(Company);
 
-// companies.route("/").get(companiesController.index());
-
 companies.get("/", companiesController.index());
 companies.get("/new", companiesController.newPage());
 companies.post("/new", companiesController.create());
@@ -15,89 +13,5 @@ companies.post("/edit/:id", companiesController.update());
 companies.get("/:id", companiesController.show());
 companies.post("/delete/:id", companiesController.destroy());
 
-// companies
-//   .route("/new")
-//   .get(companiesController.newPage())
-//   .post(companiesController.create());
-
-// companies
-//   .route("/edit/:id")
-//   .get(companiesController.edit())
-//   .post(companiesController.update());
-
-// companies.route("/:id").get(companiesController.show());
-
-// companies.route("/delete/:id").post(companiesController.destroy());
-
-// companies.get("/", (req, res) => {
-//   try {
-//     const companies = Company.all();
-//     return res.render("companies/index", { companies });
-//   } catch (e) {
-//     req.flash(Flash.ERROR, e.message);
-//   }
-// });
-
-// companies.get("/new", (req, res) => {
-//   try {
-//     const company = new Company();
-//     return res.render("companies/new", { company });
-//   } catch (e) {
-//     req.flash(Flash.ERROR, e.message);
-//     return res.redirect("/companies");
-//   }
-// });
-
-// companies.get("/edit/:id", (req, res) => {
-//   try {
-//     const company = Company.find(req.params.id);
-//     return res.render("companies/edit", { company });
-//   } catch (e) {
-//     req.flash(Flash.ERROR, e.message);
-//   }
-// });
-
-// companies.post("/edit/:id", (req, res) => {
-//   try {
-//     Company.update(req.params.id, req.body);
-//     req.flash(Flash.SUCCESS, "Company has been updated");
-//     return res.redirect(`/companies`);
-//   } catch (e) {
-//     req.flash(Flash.ERROR, e.message);
-//     return res.redirect(`/companies/edit/${req.params.id}`);
-//   }
-// });
-
-// companies.post("/delete/:id", (req, res) => {
-//   try {
-//     Company.delete(req.params.id);
-//     req.flash(Flash.SUCCESS, "Company has been deleted");
-//     return res.redirect("/companies");
-//   } catch (e) {
-//     req.flash(Flash.ERROR, e.message);
-//   }
-// });
-
-// companies.get("/:id", (req, res) => {
-//   try {
-//     const company = Company.find(req.params.id);
-//     return res.render("companies/company", {
-//       company: res.locals.marked(company),
-//     });
-//   } catch (e) {
-//     req.flash(Flash.ERROR, e.message);
-//   }
-// });
-
-// companies.post("/new", (req, res) => {
-//   try {
-//     Company.create(req.body);
-//     req.flash(Flash.SUCCESS, "Company has been added");
-//     return res.redirect(`/companies`);
-//   } catch (e) {
-//     req.flash(Flash.ERROR, e.message);
-//     return res.redirect("companies/new");
-//   }
-// });
-
+// router.get("/new").to(companiesController.index())
 export default companies;

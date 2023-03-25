@@ -6,7 +6,7 @@ import { DateFormats, LayoutPages } from "../constants.js";
 import { randomChoice, randomInteger } from "../utils/num_utils.js";
 import {
   getQueryFromURIComponent,
-  markSearchTermInObjectValues,
+  markSearchTerm,
 } from "../utils/text_utils.js";
 import _Jwt from "../domain/JWT.js";
 
@@ -53,7 +53,7 @@ export default function () {
         ? text.slice(0, maxStringLength) + "..."
         : text;
     res.locals.marked = (object) =>
-      markSearchTermInObjectValues(
+      markSearchTerm(
         object,
         getQueryFromURIComponent(res.locals.referer),
         false

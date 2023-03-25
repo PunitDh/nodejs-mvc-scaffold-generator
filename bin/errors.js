@@ -13,7 +13,7 @@ class ApplicationError extends Error {
   }
 }
 
-class GeneratorError extends ApplicationError {
+export class GeneratorError extends ApplicationError {
   constructor() {
     super(...arguments);
   }

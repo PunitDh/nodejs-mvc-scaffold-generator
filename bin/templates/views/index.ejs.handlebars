@@ -3,10 +3,12 @@
     <h1>{{heading}}</h1>
     <table class="table mb-4">
       <thead>
+      <tr>
         {{#indexColumns}}
         <th>{{Name}}</th>
         {{/indexColumns}}
         <th colspan="3">Actions</th>
+      </tr>
       </thead>
       <tbody>
         <% for (const it of {{router}}) { %>

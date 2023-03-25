@@ -736,7 +736,7 @@ Array.prototype.exists = function (predicate) {
       return true;
     }
   }
-  false;
+  return false;
 };
 
 /* ************************************************************************** /
@@ -959,7 +959,7 @@ String.prototype.capitalize = function () {
  * @returns {Array<String>}
  */
 String.prototype.words = function () {
-  return this.split(/[ ]{1,}/);
+  return this.split(/[ ]+/);
 };
 
 /**

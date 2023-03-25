@@ -1,5 +1,5 @@
-import Model from "../model.js";
 import { QueryBuilder } from "../builders/QueryBuilder.js";
+import Model from "./Model.js";
 
 class _Jwt extends Model {
   constructor(data = {}) {

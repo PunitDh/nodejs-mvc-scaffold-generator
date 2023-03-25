@@ -45038,3 +45038,73 @@
 [QUERY] [25/03/2023, 02:52:29]: SELECT * FROM blogs WHERE title LIKE '%' || 'te' || '%'  OR body LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
 [QUERY] [25/03/2023, 02:52:29]: SELECT * FROM companies WHERE name LIKE '%' || 'te' || '%'  OR address LIKE '%' || 'te' || '%'  OR number_of_employees LIKE '%' || 'te' || '%'  ORDER BY updated_at DESC;
 [INFO] [25/03/2023, 02:52:29]: Completed 200 OK in 23.41 ms
+[QUERY] [25/03/2023, 11:19:29 pm]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 11:19:29 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 11:19:29 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 11:19:29 pm]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 11:19:29 pm]: Server started on port 3000
+[QUERY] [25/03/2023, 11:21:37 pm]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 11:21:37 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 11:21:37 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 11:21:37 pm]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 11:21:37 pm]: Server started on port 3000
+[QUERY] [25/03/2023, 11:21:41 pm]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 11:21:41 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 11:21:41 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 11:21:41 pm]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 11:21:41 pm]: Server started on port 3000
+[QUERY] [25/03/2023, 11:21:44 pm]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 11:21:44 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 11:21:44 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 11:21:44 pm]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 11:21:45 pm]: Server started on port 3000
+[QUERY] [25/03/2023, 11:21:47 pm]: PRAGMA foreign_keys = ON
+[QUERY] [25/03/2023, 11:21:47 pm]: CREATE TABLE IF NOT EXISTS _migrations (
+    version INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename TEXT,
+    query TEXT,
+    created_at NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[QUERY] [25/03/2023, 11:21:47 pm]: CREATE TABLE IF NOT EXISTS _jwts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    jwt TEXT,
+    last_used NUMERIC DEFAULT (DATETIME('NOW'))
+    );
+[INFO] [25/03/2023, 11:21:47 pm]: Successfully connected to database: 'database.db'
+[INFO] [25/03/2023, 11:21:47 pm]: Server started on port 3000

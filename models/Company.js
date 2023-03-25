@@ -1,4 +1,4 @@
-import Model from "../bin/model.js";
+import Model from "../bin/domain/Model.js";
 import Employee from "./Employee.js";
 
 class Company extends Model {

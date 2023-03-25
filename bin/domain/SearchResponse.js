@@ -8,7 +8,7 @@ export default class SearchResponse {
    * @param {String} query
    * @param {Number} maxResults
    * @param {Number} page
-   * @param {Number} startTime
+   * @param {[number, number]} startTime
    */
   constructor(results, query, maxResults, page, startTime) {
     this.results =

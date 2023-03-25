@@ -1,0 +1,35 @@
+<form method="POST">
+  <div class="form-group d-flex row mb-2">
+    <label for="role" class="form-label">
+      <div class="mb-2 fw-bold">Role</div>
+      <input type="TEXT" value="<%= message.role %>" name="role"  class="form-control form-control" id="role" placeholder="Enter Role" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group d-flex row mb-2">
+    <label for="content" class="form-label">
+      <div class="mb-2 fw-bold">Content</div>
+      <input type="TEXT" value="<%= message.content %>" name="content"  class="form-control form-control" id="content" placeholder="Enter Content" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group d-flex row mb-2">
+    <label for="tokens" class="form-label">
+      <div class="mb-2 fw-bold">Tokens</div>
+      <input type="NUMERIC" value="<%= message.tokens %>" name="tokens"  class="form-control form-control" id="tokens" placeholder="Enter Tokens" autocomplete="off">
+    </label>
+  </div>
+  <div class="form-group d-flex row mb-2">
+    <label for="chat_id" class="form-label">
+      <div class="mb-2 fw-bold">Chat Id</div>
+      <select name="chat_id" class="form-select">
+        <% chats.forEach(chat => { %>
+          <option value="<%= chat.id %>"><%= chat.id %></option>
+        <% }) %>
+      </select>
+    </label>
+  </div>
+  <div class="form-group mb-2">
+    <%- include(locals.LayoutPages._csrf) %>
+    <button type="submit" class="btn btn-primary">Submit Message</button>
+    <a href="/messages" class="btn btn-danger">Back</a>
+  </div>
+</form>

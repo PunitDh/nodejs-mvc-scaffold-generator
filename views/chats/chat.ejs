@@ -1,0 +1,107 @@
+<%- include('./_head.ejs') %>
+<div class="container mt-4">
+  <h1>Chat</h1>
+  <table class="w-50 my-4">
+    <tbody>
+      <tr>
+        <td class="h6">Created At</td>
+        <td><%= formatDate(chat.created_at) %></td>
+      </tr>
+      <tr>
+        <td class="h6">Updated At</td>
+        <td><%= formatDate(chat.updated_at) %></td>
+      </tr>
+      <tr>
+        <td class="h6">Title</td>
+        <td><%- chat.title %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="container">
+    <h3>Messages</h3>
+    <section>
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center">
+          <div id="chat1" style="border-radius: 15px">
+            <div class="card-body">
+              <% for (message of messages) { %> <% if (message.role === 'user')
+              { %>
+              <div class="d-flex flex-row justify-content-start mb-4">
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                  alt="avatar 1"
+                  style="width: 45px; height: 100%"
+                />
+                <div
+                  class="p-3 ms-3"
+                  style="
+                    border-radius: 15px;
+                    background-color: rgba(57, 192, 237, 0.2);
+                  "
+                >
+                  <p class="small mb-0"><%= message.content %></p>
+                </div>
+              </div>
+              <% } %> <% if (message.role === 'assistant') { %>
+
+              <div class="d-flex flex-row justify-content-end mb-4">
+                <div
+                  class="p-3 me-3 border"
+                  style="border-radius: 15px; background-color: #fbfbfb"
+                >
+                  <p class="small mb-0"><%= message.content %></p>
+                </div>
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
+                  alt="avatar 1"
+                  style="width: 45px; height: 100%"
+                />
+              </div>
+              <% } %> <% } %>
+              <div class="form-outline">
+                <form action="/chats/message/" method="POST">
+                  <input type="hidden" name="chat_id" value="<%= chat.id %>" />
+                  <input type="hidden" name="role" value="user" />
+                  <input
+                    class="form-control mb-3"
+                    id="textAreaExample"
+                    rows="4"
+                    type="text"
+                    name="content"
+                    autocomplete="off"
+                  />
+                  <div class="d-flex justify-content-end">
+                    <%- include(locals.LayoutPages._csrf) %>
+                    <button type="submit" class="btn btn-success">
+                      Add message
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      window.onload = document.getElementById("textAreaExample").focus();
+    </script>
+
+    <div class="form-group mb-2">
+      <div class="d-flex align-items-center" style="gap: 1rem">
+        <a href="/chats/edit/<%= chat.id %>" class="btn btn-primary"
+          >Edit Chat</a
+        >
+        <form action="/chats/delete/<%= chat.id %>" method="POST">
+          <%- include(locals.LayoutPages._csrf) %>
+          <button type="submit" class="btn btn-danger">Delete Chat</button>
+        </form>
+        <a href="<%= locals.referer || '/chats' %>" class="btn btn-danger"
+          >Back</a
+        >
+      </div>
+    </div>
+  </div>
+  <%- include(locals.LayoutPages._tail) %>
+</div>

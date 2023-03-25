@@ -26,3 +26,9 @@ app.use("/theaters", theaters);
 
 import movies from "./routers/movies.js";
 app.use("/movies", movies);
+
+import chats from "./routers/chats.js";
+app.use("/chats", chats);
+
+import messages from "./routers/messages.js";
+app.use("/messages", messages);

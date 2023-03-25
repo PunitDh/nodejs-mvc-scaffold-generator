@@ -452,14 +452,120 @@
         "defaultValue": "DATETIME('NOW')",
         "primaryKey": false
       }
+    ],
+    "chats": [
+      {
+        "id": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notNull": false,
+        "defaultValue": null,
+        "primaryKey": true
+      },
+      {
+        "id": 1,
+        "name": "title",
+        "type": "TEXT",
+        "notNull": false,
+        "defaultValue": null,
+        "primaryKey": false
+      },
+      {
+        "id": 2,
+        "name": "created_at",
+        "type": "DATE",
+        "notNull": false,
+        "defaultValue": "DATETIME('NOW')",
+        "primaryKey": false
+      },
+      {
+        "id": 3,
+        "name": "updated_at",
+        "type": "DATE",
+        "notNull": false,
+        "defaultValue": "DATETIME('NOW')",
+        "primaryKey": false
+      }
+    ],
+    "messages": [
+      {
+        "id": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notNull": false,
+        "defaultValue": null,
+        "primaryKey": true
+      },
+      {
+        "id": 1,
+        "name": "role",
+        "type": "TEXT",
+        "notNull": false,
+        "defaultValue": null,
+        "primaryKey": false
+      },
+      {
+        "id": 2,
+        "name": "content",
+        "type": "TEXT",
+        "notNull": false,
+        "defaultValue": null,
+        "primaryKey": false
+      },
+      {
+        "id": 3,
+        "name": "tokens",
+        "type": "NUMERIC",
+        "notNull": false,
+        "defaultValue": null,
+        "primaryKey": false
+      },
+      {
+        "id": 4,
+        "name": "chat_id",
+        "type": "INTEGER",
+        "notNull": false,
+        "defaultValue": null,
+        "primaryKey": false,
+        "foreignKey": {
+          "id": 0,
+          "seq": 0,
+          "table": "chats",
+          "Model": "Chat",
+          "model": "chat",
+          "from": "chat_id",
+          "to": "id",
+          "onUpdate": "CASCADE",
+          "onDelete": "CASCADE",
+          "match": "NONE"
+        }
+      },
+      {
+        "id": 5,
+        "name": "created_at",
+        "type": "DATE",
+        "notNull": false,
+        "defaultValue": "DATETIME('NOW')",
+        "primaryKey": false
+      },
+      {
+        "id": 6,
+        "name": "updated_at",
+        "type": "DATE",
+        "notNull": false,
+        "defaultValue": "DATETIME('NOW')",
+        "primaryKey": false
+      }
     ]
   },
   "routers": [
     "animals",
     "blogs",
+    "chats",
     "comments",
     "companies",
     "employees",
+    "messages",
     "movies",
     "theaters",
     "users"

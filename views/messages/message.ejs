@@ -1,0 +1,44 @@
+<%- include('./_head.ejs') %>
+<div class="container mt-4">
+  <h1>Message</h1>
+  <table class="w-50 my-4">
+    <tbody>
+      <tr>
+        <td class="h6">Role</td>
+        <td><%- message.role %></td>
+      </tr>
+      <tr>
+        <td class="h6">Content</td>
+        <td><%- message.content %></td>
+      </tr>
+      <tr>
+        <td class="h6">Tokens</td>
+        <td><%- message.tokens %></td>
+      </tr>
+      <tr>
+        <td class="h6">Chat Id</td>
+        <td><%- message.chat_id %></td>
+      </tr>
+      <tr>
+        <td class="h6">Created At</td>
+        <td><%= formatDate(message.created_at) %></td>
+      </tr>
+      <tr>
+        <td class="h6">Updated At</td>
+        <td><%= formatDate(message.updated_at) %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="form-group mb-2">
+    <div class="d-flex align-items-center" style="gap: 1rem">
+      <a href="/messages/edit/<%= message.id %>" class="btn btn-primary">Edit Message</a>
+      <form action="/messages/delete/<%= message.id %>" method="POST">
+        <%- include(locals.LayoutPages._csrf) %>
+        <button type="submit" class="btn btn-danger">Delete Message</button>
+      </form>
+      <a href="<%= locals.referer || '/messages' %>" class="btn btn-danger">Back</a>
+    </div>
+  </div>
+</div>
+<%- include(locals.LayoutPages._tail) %>

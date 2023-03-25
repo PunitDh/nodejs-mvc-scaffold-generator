@@ -1,16 +1,15 @@
+import DB from "../db.js";
 
-
-import SQLiteColumn from "./domain/SQLiteColumn.js";
-import { ReadOnlyColumns } from "./constants.js";
-import SQLiteTable from "./domain/SQLiteTable.js";
+import SQLiteColumn from "./SQLiteColumn.js";
+import { ReadOnlyColumns } from "../constants.js";
+import SQLiteTable from "./SQLiteTable.js";
 import {
   getTableNameFromModel,
   removeNullValues,
-} from "./utils/model_utils.js";
-import "./utils/js_utils.js";
-import { QueryBuilder } from "./builders/QueryBuilder.js";
-import { NotFoundError } from "./errors.js";
-import DB from "../db.js";
+} from "../utils/model_utils.js";
+import "../utils/js_utils.js";
+import { QueryBuilder } from "../builders/QueryBuilder.js";
+import { NotFoundError } from "../errors.js";
 
 /**
  * @description Base model class

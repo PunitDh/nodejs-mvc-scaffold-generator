@@ -1,5 +1,5 @@
-import Model from "../model.js";
 import { QueryBuilder } from "../builders/QueryBuilder.js";
+import Model from "./Model.js";
 
 class _Migration extends Model {
   constructor({ version, filename, query, created_at }) {
@@ -15,7 +15,7 @@ class _Migration extends Model {
       .insertInto(this.__tablename__)
       .withNoTimeStamps()
       .values("filename", "query")
-      .returning("*")
+      .returning("*");
     return this.runQuery(sqlQuery, { filename, query }, true);
   }
 }

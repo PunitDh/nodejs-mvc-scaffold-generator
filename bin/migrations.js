@@ -14,7 +14,8 @@ const migrationFiles = fs.readdirSync(migrationPath);
 const newMigrations = migrationFiles
   .filter(
     (filename) =>
-      !currentMigrations.some((migration) => migration.filename === filename)
+      !currentMigrations.some((migration) => migration.filename === filename) &&
+      filename.includes(".sql")
   )
   .map((filename) => ({
     filename,

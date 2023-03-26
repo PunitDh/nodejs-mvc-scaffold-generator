@@ -10,10 +10,6 @@ const QueryAction = {
 ("UPDATE animals SET name=$name, legs=$legs WHERE id=$id");
 ("DELETE FROM animals where id=id");
 
-function QueryBuilder() {
-  return new SQLQueryBuilder();
-}
-
 class SQLQueryBuilder {
   constructor() {
     return this;

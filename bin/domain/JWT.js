@@ -1,4 +1,4 @@
-import { QueryBuilder } from "../builders/QueryBuilder.js";
+import { SQLQueryBuilder } from "../builders/SQLQueryBuilder.js";
 import Model from "./Model.js";
 
 class _Jwt extends Model {
@@ -9,7 +9,7 @@ class _Jwt extends Model {
   }
 
   static add(jwt) {
-    const query = QueryBuilder()
+    const query = new SQLQueryBuilder()
       .insertInto(this.__tablename__)
       .withNoTimeStamps()
       .values("jwt")

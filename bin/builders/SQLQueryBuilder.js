@@ -9,18 +9,23 @@ const QueryAction = {
   DELETE: "DELETE FROM",
 };
 
-/**
- * Returns a new SQLQueryBuilder object
- * @returns {SQLQueryBuilder}
- * @constructor
- */
-export function QueryBuilder() {
-  return new SQLQueryBuilder();
-}
+const AggregateFunctions = {
+  DISTINCT: "DISTINCT",
+  COUNT: "COUNT",
+  MIN: "MIN",
+  MAX: "MAX",
+  AVG: "AVG",
+  TOTAL: "TOTAL",
+  SUM: "SUM",
+  ABS: "ABS",
+  ROUND: "ROUND",
+  SIGN: "SIGN",
+};
 
-class SQLQueryBuilder {
+export class SQLQueryBuilder {
   constructor() {
     this.timestamps = true;
+    this.aggregates = [];
     return this;
   }
 
@@ -31,6 +36,26 @@ class SQLQueryBuilder {
       this.columns = [...arguments];
     }
     this.action = QueryAction.SELECT;
+    return this;
+  }
+
+  distinct() {
+    this.aggregates.push(AggregateFunctions.DISTINCT);
+    return this;
+  }
+
+  count() {
+    this.aggregates.push(AggregateFunctions.COUNT);
+    return this;
+  }
+
+  min() {
+    this.aggregates.push(AggregateFunctions.MIN);
+    return this;
+  }
+
+  max() {
+    this.aggregates.push(AggregateFunctions.MAX);
     return this;
   }
 
@@ -69,7 +94,7 @@ class SQLQueryBuilder {
     return this;
   }
 
-  where(columns) {
+  where(...columns) {
     this.whereArgs = columns;
     return this;
   }
@@ -134,23 +159,31 @@ class SQLQueryBuilder {
 
   build() {
     const whereClause = this.whereArgs?.length
-      ? ` WHERE ${this.whereArgs
-          .map((col) => `${col.name} ${col.operator} (${col._id.join(", ")})`)
-          .join(" AND ")}`
+      ? ` WHERE ${this.whereArgs.map((col) => `${col}=$${col}`).join(" AND ")}`
       : "";
+
     const returningClause = this.returningValue
       ? ` RETURNING ${this.returningValue.join(", ")}`
       : "";
+
     const columns = this.columns?.join(", ");
+    const aggregates = this.aggregates
+      .map((aggregate) => `${aggregate}(`)
+      .join("");
+    const aggregateClose = ")".repeat(this.aggregates.length);
     const values = this.columns?.map((col) => `$${col}`).join(", ");
+
     const setClause =
       values &&
       ` SET ${this.columns?.map((col) => `${col}=$${col}`).join(", ")}`;
+
     const limitClause = this.lim ? ` LIMIT ${this.lim}` : "";
+
     const orderBy = this.order?.columns
       .map((column, i) => `${column} ${this.order.type[i]}`)
       .join(", ");
     const orderClause = orderBy ? ` ORDER BY ${orderBy}` : "";
+
     const timestamps = this.timestamps
       ? {
           columns: ", created_at, updated_at",
@@ -161,7 +194,7 @@ class SQLQueryBuilder {
 
     switch (this.action) {
       case QueryAction.SELECT:
-        return `${this.action} ${columns} FROM ${this.table}${whereClause}${orderClause}${limitClause};\n`;
+        return `${this.action} ${aggregates}${columns}${aggregateClose} FROM ${this.table}${whereClause}${orderClause}${limitClause};\n`;
       case QueryAction.INSERT:
         return `${this.action} ${this.table} (${columns}${timestamps.columns}) VALUES (${values}${timestamps.values})${returningClause};\n`;
       case QueryAction.UPDATE:

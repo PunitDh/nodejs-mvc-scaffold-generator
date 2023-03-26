@@ -1,4 +1,4 @@
-import { QueryBuilder } from "../builders/QueryBuilder.js";
+import { SQLQueryBuilder } from "../builders/SQLQueryBuilder.js";
 import Model from "./Model.js";
 
 class _Migration extends Model {
@@ -11,7 +11,7 @@ class _Migration extends Model {
   }
 
   static add(filename, query) {
-    const sqlQuery = QueryBuilder()
+    const sqlQuery = new SQLQueryBuilder()
       .insertInto(this.__tablename__)
       .withNoTimeStamps()
       .values("filename", "query")

@@ -9,7 +9,7 @@ import {
   removeNullValues,
 } from "../utils/model_utils.js";
 import "../utils/js_utils.js";
-import { QueryBuilder } from "../builders/QueryBuilder.js";
+import { SQLQueryBuilder } from "../builders/SQLQueryBuilder.js";
 import { NotFoundError } from "../errors.js";
 
 /**
@@ -63,7 +63,7 @@ class Model {
    * @returns {Array<Model>}
    */
   static all() {
-    const query = QueryBuilder().select("*").from(this.__tablename__);
+    const query = new SQLQueryBuilder().select("*").from(this.__tablename__);
     return this.runQuery(query);
   }
 
@@ -73,7 +73,7 @@ class Model {
    * @returns {Model}
    */
   static first(n) {
-    const query = QueryBuilder()
+    const query = new SQLQueryBuilder()
       .select("*")
       .from(this.__tablename__)
       .limit(n || 1);
@@ -86,7 +86,7 @@ class Model {
    * @returns {Model}
    */
   static last(n) {
-    const query = QueryBuilder()
+    const query = new SQLQueryBuilder()
       .select("*")
       .from(this.__tablename__)
       .orderBy({ id: "DESC" })
@@ -100,7 +100,7 @@ class Model {
    * @returns {Model}
    */
   static find(id) {
-    const query = QueryBuilder()
+    const query = new SQLQueryBuilder()
       .select("*")
       .from(this.__tablename__)
       .where("id");
@@ -153,7 +153,7 @@ class Model {
     const sanitizedObject = removeNullValues(
       new this.prototype.constructor(object)
     );
-    const queryBuilder = QueryBuilder()
+    const queryBuilder = new SQLQueryBuilder()
       .insert()
       .into(this.__tablename__)
       .values(sanitizedObject.keys())
@@ -172,7 +172,7 @@ class Model {
       new this.prototype.constructor(object)
     );
     const values = { id, ...sanitizedObject };
-    const queryBuilder = QueryBuilder()
+    const queryBuilder = new SQLQueryBuilder()
       .update(this.__tablename__)
       .set(sanitizedObject.keys())
       .where("id")
@@ -183,19 +183,20 @@ class Model {
   /**
    * @description Query the model's table using an object, e.g. { id: 1, name: 'Tim' }
    * @param {Object} obj
-   * @returns {Array{Model}}
+   * @returns {Array<Model>}
    */
   static where(obj) {
     const sanitizedObject = removeNullValues(
       new this.prototype.constructor(obj)
     );
     const [columns, values] = parseWhereArgs(sanitizedObject);
-    const queryBuilder = QueryBuilder()
+    const queryBuilder = new SQLQueryBuilder()
       .select("*")
       .from(this.__tablename__)
-      .where(columns);
+      .where(sanitizedObject.keys());
+    console.log(queryBuilder.build());
 
-    return this.runQuery(queryBuilder, values);
+    return this.runQuery(queryBuilder, sanitizedObject);
   }
 
   /**
@@ -204,7 +205,7 @@ class Model {
    * @returns {Model}
    */
   static delete(id) {
-    const queryBuilder = QueryBuilder()
+    const queryBuilder = new SQLQueryBuilder()
       .delete()
       .from(this.__tablename__)
       .where("id")
@@ -221,13 +222,13 @@ class Model {
       (column) => !ReadOnlyColumns.includes(column)
     );
 
-    const updateQueryBuilder = QueryBuilder()
+    const updateQueryBuilder = new SQLQueryBuilder()
       .update(this.constructor.__tablename__)
       .set(columns)
       .where("id")
       .returning("*");
 
-    const insertQueryBuilder = QueryBuilder()
+    const insertQueryBuilder = new SQLQueryBuilder()
       .insert()
       .into(this.constructor.__tablename__)
       .values(columns)
@@ -243,7 +244,7 @@ class Model {
    * @returns {Model}
    */
   delete() {
-    const queryBuilder = QueryBuilder()
+    const queryBuilder = new SQLQueryBuilder()
       .delete()
       .from(this.constructor.__tablename__)
       .where("id")
@@ -253,18 +254,28 @@ class Model {
 
   /**
    * @description Runs an SQL queryBuilder on the model's table
-   * @param {QueryBuilder} queryBuilder
+   * @param {SQLQueryBuilder} queryBuilder
    * @param {Object} values
    * @param {Boolean} singular
    * @returns {Array<Model> | Model}
    */
   static runQuery(queryBuilder, values = {}, singular = false) {
     const _Model = this.prototype.constructor;
-    const results = DB.prepare(queryBuilder.build()).all({ ...values });
+    const results = this.runRawQuery(queryBuilder.build(), values);
     if (singular) {
       return new _Model(results.first());
     }
     return results.map((value) => new _Model(value));
+  }
+
+  /**
+   * Runs a raw SQL query on the database
+   * @param {String} query
+   * @param {Array} values
+   * @returns {*}
+   */
+  static runRawQuery(query, values = {}) {
+    return DB.prepare(query).all(values);
   }
 }
 

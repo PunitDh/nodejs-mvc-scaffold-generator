@@ -17,7 +17,7 @@ function hashPassword(password, saltRounds) {
 
 /**
  *
- * @param {Integer} saltRounds
+ * @param {Number} saltRounds
  * @returns {String}
  */
 function generateSalt(saltRounds) {
@@ -66,12 +66,4 @@ const hashed = hashPassword(password, saltRounds);
 
 const verified = verifyPassword("Password1234~!", hashed);
 console.log({ hashed, verified });
-
-const x = { a: 1, b: 2, c: 3, d: { e: 4, f: 5 } };
-const y = x.copy({ b: 8 });
-
-x.a = 4;
-x.d.e = 7;
-
-const n = ["aaa", "bbbb", "dddd", "ccccc", "ff"];
-console.log(n.sortBy(x => x.length));
+// console.log(n.sortBy(x => x.length));

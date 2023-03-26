@@ -727,7 +727,7 @@ Array.prototype.range = function () {
 
 /**
  * Checks if an item exists in the array that matches the given predicate
- * @param {Function} predicate 
+ * @param {Function} predicate
  * @returns {Boolean}
  */
 Array.prototype.exists = function (predicate) {
@@ -737,6 +737,28 @@ Array.prototype.exists = function (predicate) {
     }
   }
   return false;
+};
+
+/**
+ * Returns the first 'n' elements in an array
+ * @param {Number} n
+ * @returns {Array}
+ */
+Array.prototype.head = function (n) {
+  return n ? (n > this.length ? this : this.slice(0, n)) : [this[0]];
+};
+
+/**
+ * Returns the last 'n' elements in an array
+ * @param {Number} n
+ * @returns {Array}
+ */
+Array.prototype.tail = function (n) {
+  return n
+    ? n > this.length
+      ? this
+      : this.slice(this.length - n, this.length)
+    : [this[this.length - 1]];
 };
 
 /* ************************************************************************** /

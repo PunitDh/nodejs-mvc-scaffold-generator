@@ -27,37 +27,38 @@
             <div class="card-body">
               <% for (message of messages) { %> <% if (message.role === 'user')
               { %>
-              <div class="d-flex flex-row justify-content-start mb-4">
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                  alt="avatar 1"
-                  style="width: 45px; height: 100%"
-                />
-                <div
-                  class="p-3 ms-3"
-                  style="
-                    border-radius: 15px;
-                    background-color: rgba(57, 192, 237, 0.2);
-                  "
-                >
-                  <p class="small mb-0"><%= message.content %></p>
+                <div class="d-flex flex-row justify-content-end mb-4">
+                  <div
+                    class="p-3 me-3 border"
+                    style="border-radius: 15px; background-color: rgba(57, 192, 237, 0.2)"
+                  >
+                    <p class="small mb-0"><%= message.content %></p>
+                  </div>
+                  
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                    alt="avatar 1"
+                    style="width: 45px; height: 100%"
+                  />
                 </div>
-              </div>
               <% } %> <% if (message.role === 'assistant') { %>
-
-              <div class="d-flex flex-row justify-content-end mb-4">
-                <div
-                  class="p-3 me-3 border"
-                  style="border-radius: 15px; background-color: #fbfbfb"
-                >
-                  <p class="small mb-0"><%= message.content %></p>
+                <div class="d-flex flex-row justify-content-start mb-4">
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
+                    alt="avatar 1"
+                    style="width: 45px; height: 100%"
+                  />
+                  <div
+                    class="p-3 ms-3"
+                    style="
+                      border-radius: 15px;
+                      background-color: #fbfbfb;
+                    "
+                  >
+                    <p class="small mb-0"><%= message.content %></p>
+                  </div>
                 </div>
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
-                  alt="avatar 1"
-                  style="width: 45px; height: 100%"
-                />
-              </div>
+              
               <% } %> <% } %>
               <div class="form-outline">
                 <form action="/chats/message/" method="POST">

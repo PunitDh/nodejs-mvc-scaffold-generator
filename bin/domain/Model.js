@@ -1,10 +1,11 @@
 import DB from "../db.js";
 
 import SQLiteColumn from "./SQLiteColumn.js";
-import { ReadOnlyColumns, SearchExcludedColumns } from "../constants.js";
+import { ReadOnlyColumns } from "../constants.js";
 import SQLiteTable from "./SQLiteTable.js";
 import {
   getTableNameFromModel,
+  parseWhereArgs,
   removeNullValues,
 } from "../utils/model_utils.js";
 import "../utils/js_utils.js";
@@ -67,21 +68,30 @@ class Model {
   }
 
   /**
-   * The first item in the table
+   * Returns the first 'n' rows in the table
+   * @param {Number} n
    * @returns {Model}
    */
-  static first() {
-    const query = QueryBuilder().select("*").from(this.__tablename__).limit(1);
-    return this.runQuery(query, {}, true);
+  static first(n) {
+    const query = QueryBuilder()
+      .select("*")
+      .from(this.__tablename__)
+      .limit(n || 1);
+    return this.runQuery(query);
   }
 
   /**
-   * Returns The last item in the table
+   * Returns the last 'n' rows in the table
+   * @param {*} n
    * @returns {Model}
    */
-  static last() {
-    const result = this.all();
-    return result[result.length - 1];
+  static last(n) {
+    const query = QueryBuilder()
+      .select("*")
+      .from(this.__tablename__)
+      .orderBy({ id: "DESC" })
+      .limit(n || 1);
+    return this.runQuery(query).reverse();
   }
 
   /**
@@ -103,7 +113,7 @@ class Model {
   /**
    * @description Query the model using an object, e.g. { id: 1, name: 'Tim' }
    * @param {Object} obj
-   * @returns {Model}
+   * @returns {Model} Returns only the first result
    */
   static findBy(obj) {
     const result = this.where(obj);
@@ -179,11 +189,13 @@ class Model {
     const sanitizedObject = removeNullValues(
       new this.prototype.constructor(obj)
     );
+    const [columns, values] = parseWhereArgs(sanitizedObject);
     const queryBuilder = QueryBuilder()
       .select("*")
       .from(this.__tablename__)
-      .where(sanitizedObject.keys());
-    return this.runQuery(queryBuilder, sanitizedObject);
+      .where(columns);
+
+    return this.runQuery(queryBuilder, values);
   }
 
   /**

@@ -69,8 +69,8 @@ class SQLQueryBuilder {
     return this;
   }
 
-  where() {
-    this.where = [...arguments];
+  where(columns) {
+    this.whereArgs = columns;
     return this;
   }
 
@@ -133,8 +133,10 @@ class SQLQueryBuilder {
   }
 
   build() {
-    const whereClause = this.where?.length
-      ? ` WHERE ${this.where.map((col) => `${col}=$${col}`).join(" AND ")}`
+    const whereClause = this.whereArgs?.length
+      ? ` WHERE ${this.whereArgs
+          .map((col) => `${col.name} ${col.operator} (${col._id.join(", ")})`)
+          .join(" AND ")}`
       : "";
     const returningClause = this.returningValue
       ? ` RETURNING ${this.returningValue.join(", ")}`
@@ -159,7 +161,7 @@ class SQLQueryBuilder {
 
     switch (this.action) {
       case QueryAction.SELECT:
-        return `${this.action} ${columns} FROM ${this.table}${whereClause}${limitClause}${orderClause};\n`;
+        return `${this.action} ${columns} FROM ${this.table}${whereClause}${orderClause}${limitClause};\n`;
       case QueryAction.INSERT:
         return `${this.action} ${this.table} (${columns}${timestamps.columns}) VALUES (${values}${timestamps.values})${returningClause};\n`;
       case QueryAction.UPDATE:

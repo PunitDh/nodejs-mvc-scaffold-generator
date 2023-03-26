@@ -66,9 +66,9 @@ chats.post("/delete/:id", (req, res, next) => {
 chats.get("/:id", (req, res, next) => {
   try {
     const chat = Chat.find(req.params.id);
-    const messages = chat.messages.map((message) =>
-      message.exclude("id", "updated_at", "chat_id")
-    );
+    const messages = chat.messages
+      .map((message) => message.exclude("id", "updated_at", "chat_id"))
+      .tail(10);
     return res.render("chats/chat", { chat, messages });
   } catch (e) {
     next(e);

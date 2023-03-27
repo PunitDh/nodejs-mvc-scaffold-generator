@@ -248,7 +248,7 @@ Array.prototype.toLowerCase = function () {
  * @returns {Number}
  */
 Array.prototype.sum = function () {
-  return this.reduce((acc, cur) => parseFloat(acc) + parseFloat(cur), 0);
+  return this.reduce((acc, cur) => +acc + cur, 0);
 };
 
 /**
@@ -395,7 +395,7 @@ Array.prototype.floor = function () {
 /**
  * Returns whether none of the items match the given predicate
  * @param {Function} predicate
- * @returns {boolean}
+ * @returns {Boolean}
  */
 Array.prototype.none = function (predicate) {
   if (predicate) {
@@ -408,6 +408,35 @@ Array.prototype.none = function (predicate) {
   } else {
     return this.length === 0;
   }
+};
+
+/**
+ * Checks if an object exists inside an array using a deep comparison
+ * @param {Object} object
+ * @returns {Boolean}
+ */
+Array.prototype.includesObject = function (object) {
+  for (const item of this) {
+    if (typeof item === "object") {
+      if (object.equals(item)) {
+        return true;
+      }
+    } else {
+      if (item === object) {
+        return true;
+      }
+    }
+  }
+  return false;
+};
+
+/**
+ * Deletes any given number of elements from an array
+ * @param {*} element
+ * @returns {Array}
+ */
+Array.prototype.delete = function (...elements) {
+  return this.filter((item) => !elements.includes(item));
 };
 
 /**
@@ -424,12 +453,26 @@ Array.prototype.random = function () {
  * @param {Number} sampleSize
  * @returns {Array}
  */
-Array.prototype.sample = function (sampleSize) {
+Array.prototype.sample = function (sampleSize, repeat = true) {
   const sample = [];
 
-  while (sample.length < sampleSize) {
-    const index = Math.floor(Math.random() * this.length);
-    sample.push(this[index]);
+  if (repeat) {
+    while (sample.length < sampleSize) {
+      const index = Math.floor(Math.random() * this.length);
+      sample.push(this[index]);
+    }
+  } else {
+    let duplicateArray = [...this];
+    if (sampleSize > this.length) {
+      const errorMessage = `Sample size of '${sampleSize}' is greater than the array length of '${this.length}'`;
+      throw new Error(errorMessage);
+    }
+    while (sample.length < sampleSize) {
+      const index = Math.floor(Math.random() * duplicateArray.length);
+      const elem = duplicateArray[index];
+      duplicateArray = duplicateArray.filter((n) => n !== elem);
+      sample.push(elem);
+    }
   }
   return sample;
 };
@@ -544,7 +587,7 @@ Array.prototype.partition = function (predicate) {
  */
 Array.prototype.sortBy = function (selector) {
   const newArray = this.map((n) => n);
-  return newArray.sort((a, b) => selector(a) - selector(b));
+  return newArray.sort((a, b) => (selector(a) > selector(b) ? 1 : -1));
 };
 
 /**
@@ -554,7 +597,7 @@ Array.prototype.sortBy = function (selector) {
  */
 Array.prototype.sortByDescending = function (selector) {
   const newArray = this.map((n) => n);
-  return newArray.sort((a, b) => selector(b) - selector(a));
+  return newArray.sort((a, b) => (selector(a) > selector(b) ? -1 : 1));
 };
 
 /**
@@ -572,10 +615,7 @@ Array.prototype.add = function (element) {
  * @returns {Number}
  */
 Array.prototype.mean = function () {
-  return (
-    this.reduce((acc, cur) => parseFloat(acc) + parseFloat(cur), 0) /
-    this.length
-  );
+  return this.reduce((acc, cur) => +acc + cur, 0) / this.length;
 };
 
 /**
@@ -615,12 +655,9 @@ Array.prototype.mode = function () {
  * @example [3,4,8,7,6].stdev() ==> 1.8547236990991407
  */
 Array.prototype.stdev = function () {
-  const mean =
-    this.reduce((acc, cur) => parseFloat(acc) + parseFloat(cur)) / this.length;
+  const mean = this.reduce((acc, cur) => +acc + cur) / this.length;
   return Math.sqrt(
-    this.map((n) => (n - mean) ** 2).reduce(
-      (a, b) => parseFloat(a) + parseFloat(b)
-    ) / this.length
+    this.map((n) => (n - mean) ** 2).reduce((a, b) => +a + b) / this.length
   );
 };
 
@@ -727,7 +764,7 @@ Array.prototype.range = function () {
 
 /**
  * Checks if an item exists in the array that matches the given predicate
- * @param {Function} predicate 
+ * @param {Function} predicate
  * @returns {Boolean}
  */
 Array.prototype.exists = function (predicate) {
@@ -737,6 +774,28 @@ Array.prototype.exists = function (predicate) {
     }
   }
   return false;
+};
+
+/**
+ * Returns the first 'n' elements in an array
+ * @param {Number} n
+ * @returns {Array}
+ */
+Array.prototype.head = function (n) {
+  return n ? (n > this.length ? this : this.slice(0, n)) : [this[0]];
+};
+
+/**
+ * Returns the last 'n' elements in an array
+ * @param {Number} n
+ * @returns {Array}
+ */
+Array.prototype.tail = function (n) {
+  return n
+    ? n > this.length
+      ? this
+      : this.slice(this.length - n, this.length)
+    : [this[this.length - 1]];
 };
 
 /* ************************************************************************** /
@@ -797,44 +856,66 @@ Object.prototype.equals = function (other) {
   if (this === other) {
     return true;
   }
-
-  const thisKeys = Object.keys(this);
-  const otherKeys = Object.keys(other);
-
-  if (otherKeys.length !== thisKeys.length) {
+  if (typeof this !== typeof other) {
     return false;
   }
-
+  if (this.constructor !== other.constructor) {
+    return false;
+  }
+  const thisKeys = Object.keys(this);
+  const otherKeys = Object.keys(other);
+  if (thisKeys.length !== otherKeys.length) {
+    return false;
+  }
   for (const key of thisKeys) {
-    if (!other.hasOwnProperty(key)) {
+    if (!otherKeys.includes(key)) {
       return false;
     }
-    if (typeof this[key] !== typeof other[key]) {
+    const thisValue = this[key];
+    const otherValue = other[key];
+    if (typeof thisValue !== typeof otherValue) {
       return false;
     }
-    if (Array.isArray(this[key]) !== Array.isArray(other[key])) {
+    if (Array.isArray(thisValue) !== Array.isArray(otherValue)) {
       return false;
     }
-    if (isObject(this[key]) === isObject(other[key])) {
-      if (!this[key].equals(other[key])) {
+    if (typeof thisValue === "object" && !Array.isArray(thisValue)) {
+      if (thisValue !== null && !thisValue.equals(otherValue)) {
         return false;
       }
-    } else {
-      if (this[key] !== other[key]) {
+    }
+    if (Array.isArray(thisValue)) {
+      if (thisValue.length !== otherValue.length) {
+        return false;
+      }
+      for (const [idx, item] of thisValue.entries()) {
+        if (typeof item === "object") {
+          if (!item.equals(otherValue[idx])) {
+            return false;
+          }
+        } else {
+          if (item !== otherValue[idx]) {
+            return false;
+          }
+        }
+      }
+    }
+    if (typeof thisValue === "symbol" || typeof thisValue === "function") {
+      if (thisValue.toString() !== otherValue.toString()) {
+        return false;
+      }
+    } else if (typeof thisValue !== "object") {
+      if (thisValue !== otherValue) {
         return false;
       }
     }
   }
   return true;
-
-  function isObject(obj) {
-    return obj !== null && typeof obj === "object";
-  }
 };
 
 /**
  * Returns the key value pairs inside the object as an array of arrays
- * @returns {Array<Array<*, *>>}
+ * @returns {Array<Array<String, any>>}
  */
 Object.prototype.entries = function () {
   return this && Object.entries(this);
@@ -869,6 +950,14 @@ Object.prototype.sanitize = function () {
       )
     )
   );
+};
+
+/**
+ * Converts an object to a map
+ * @returns {Map}
+ */
+Object.prototype.toMap = function () {
+  return new Map(Object.entries(this));
 };
 
 /**
@@ -931,7 +1020,7 @@ Object.prototype.counts = function () {
     counts[key] = value.length;
   });
   counts._totalCounts = Object.values(counts).reduce(
-    (acc, cur) => parseFloat(acc) + parseFloat(cur),
+    (acc, cur) => +acc + cur,
     0
   );
   return counts;
@@ -1499,6 +1588,8 @@ Number.prototype.times = function (predicate) {
     predicate(i);
   }
 };
+
+Number.prototype.repeat = Number.prototype.times;
 
 /**
  * Performs the predicate function an n number of times and returns the result

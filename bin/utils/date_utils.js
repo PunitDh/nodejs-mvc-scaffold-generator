@@ -1,6 +1,6 @@
 /**
  * Returns the epoch time of the current date
- * @returns {number}
+ * @returns {Number}
  */
 export function getNewDate() {
   return new Date().getTime();

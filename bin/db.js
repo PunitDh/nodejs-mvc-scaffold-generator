@@ -7,7 +7,7 @@ import { PATHS } from "./constants.js";
 let DB;
 try {
   DB = new Database(join(PATHS.root, PATHS.instance, settings.database.name), {
-    verbose: LOGGER.query,
+    verbose: settings.logger.query ? LOGGER.query : false,
   });
   DB.pragma("foreign_keys = ON");
   const migrationTableQuery = `CREATE TABLE IF NOT EXISTS ${settings.database.migrations.table} (

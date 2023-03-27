@@ -275,7 +275,7 @@ class Model {
    * @returns {*}
    */
   static runRawQuery(query, values = {}) {
-    return DB.prepare(query).all(values);
+    return DB.prepare(query).all({ ...values });
   }
 }
 

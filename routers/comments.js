@@ -2,6 +2,7 @@ import { Router } from "express";
 import Comment from "../models/Comment.js";
 import csrf from "../bin/middleware/csrf.js";
 import Blog from "../models/Blog.js";
+import { Flash } from "../bin/constants.js";
 const comments = Router();
 
 comments.use(csrf());
@@ -38,7 +39,7 @@ comments.get("/edit/:id", (req, res, next) => {
 comments.post("/edit/:id", (req, res, next) => {
   try {
     Comment.update(req.params.id, req.body);
-    req.flash("success", "Comment has been updated");
+    req.flash(Flash.SUCCESS, "Comment has been updated");
     return res.redirect(`/comments`);
   } catch (e) {
     next(e);
@@ -48,7 +49,7 @@ comments.post("/edit/:id", (req, res, next) => {
 comments.post("/delete/:id", (req, res, next) => {
   try {
     Comment.delete(req.params.id);
-    req.flash("success", "Comment has been deleted");
+    req.flash(Flash.SUCCESS, "Comment has been deleted");
     return res.redirect("/comments");
   } catch (e) {
     next(e);
@@ -69,7 +70,7 @@ comments.get("/:id", (req, res, next) => {
 comments.post("/new", (req, res, next) => {
   try {
     Comment.create(req.body);
-    req.flash("success", "Comment has been added");
+    req.flash(Flash.SUCCESS, "Comment has been added");
     return res.redirect(`/comments`);
   } catch (e) {
     next(e);

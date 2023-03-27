@@ -8,6 +8,7 @@ class Message extends Model {
     this.content = data.content;
     this.tokens = data.tokens;
     this.chat_id = data.chat_id;
+    this.model = data.model;
   }
 
   get chat() {

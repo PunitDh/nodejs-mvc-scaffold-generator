@@ -1,5 +1,6 @@
 import { DateFormats } from "../bin/constants.js";
 import "../bin/utils/js_utils.js";
+import Message from "../models/Message.js";
 
 const nums = [1, 2, 3, 4, 5, 6];
 const num2 = [4.5, 5.3, 6.1, 7.6, 8.4, 9.3];
@@ -127,4 +128,41 @@ const actualInv = inventory.groupBy(({ type }) => type);
 
 console.log(expectedInv.equals(actualInv));
 
-console.log([1, { l: 1 }, 2n, [undefined], null, true].equals([1, { l: 1 }, 2n, [undefined], null, true]));
+console.log(
+  [1, { l: 1 }, 2n, [undefined], null, true].equals([
+    1,
+    { l: 1 },
+    2n,
+    [undefined],
+    null,
+    true,
+  ])
+);
+
+let obj1 = {
+  a: 1,
+  b: {
+    c: 2,
+  },
+};
+
+let obj2 = {
+  a: 1,
+  b: {
+    c: 2,
+  },
+};
+
+const message = Message.find(5);
+
+const message2 = new Message({
+  id: 5,
+  created_at: "2023-03-26 01:30:47",
+  updated_at: "2023-03-26 01:30:47",
+  role: "user",
+  content:
+    "Can you write a function in JavaScript that adds two numbers together?",
+  tokens: 13,
+  chat_id: 1,
+});
+console.log(message.equals(message2));

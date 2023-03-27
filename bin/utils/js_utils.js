@@ -248,7 +248,7 @@ Array.prototype.toLowerCase = function () {
  * @returns {Number}
  */
 Array.prototype.sum = function () {
-  return this.reduce((acc, cur) => parseFloat(acc) + parseFloat(cur), 0);
+  return this.reduce((acc, cur) => +acc + cur, 0);
 };
 
 /**
@@ -615,10 +615,7 @@ Array.prototype.add = function (element) {
  * @returns {Number}
  */
 Array.prototype.mean = function () {
-  return (
-    this.reduce((acc, cur) => parseFloat(acc) + parseFloat(cur), 0) /
-    this.length
-  );
+  return this.reduce((acc, cur) => +acc + cur, 0) / this.length;
 };
 
 /**
@@ -658,12 +655,9 @@ Array.prototype.mode = function () {
  * @example [3,4,8,7,6].stdev() ==> 1.8547236990991407
  */
 Array.prototype.stdev = function () {
-  const mean =
-    this.reduce((acc, cur) => parseFloat(acc) + parseFloat(cur)) / this.length;
+  const mean = this.reduce((acc, cur) => +acc + cur) / this.length;
   return Math.sqrt(
-    this.map((n) => (n - mean) ** 2).reduce(
-      (a, b) => parseFloat(a) + parseFloat(b)
-    ) / this.length
+    this.map((n) => (n - mean) ** 2).reduce((a, b) => +a + b) / this.length
   );
 };
 
@@ -865,6 +859,9 @@ Object.prototype.equals = function (other) {
   if (typeof this !== typeof other) {
     return false;
   }
+  if (this.constructor !== other.constructor) {
+    return false;
+  }
   const thisKeys = Object.keys(this);
   const otherKeys = Object.keys(other);
   if (thisKeys.length !== otherKeys.length) {
@@ -1023,7 +1020,7 @@ Object.prototype.counts = function () {
     counts[key] = value.length;
   });
   counts._totalCounts = Object.values(counts).reduce(
-    (acc, cur) => parseFloat(acc) + parseFloat(cur),
+    (acc, cur) => +acc + cur,
     0
   );
   return counts;

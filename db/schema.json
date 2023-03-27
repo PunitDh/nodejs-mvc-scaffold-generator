@@ -555,6 +555,14 @@
         "notNull": false,
         "defaultValue": "DATETIME('NOW')",
         "primaryKey": false
+      },
+      {
+        "id": 7,
+        "name": "model",
+        "type": "TEXT",
+        "notNull": false,
+        "defaultValue": null,
+        "primaryKey": false
       }
     ]
   },

@@ -78,18 +78,19 @@ chats.get("/:id", (req, res, next) => {
 chats.post("/message", async (req, res, next) => {
   try {
     const message = new Message(req.body);
-    const response = await openai(req.body.content);
-    const { prompt_tokens, completion_tokens } = response.usage;
+    const response = await openai.completeWithDaVinci(req.body.content);
+    const { prompt_tokens, completion_tokens, model } = response;
     message.tokens = prompt_tokens;
     const answer = new Message({
       role: "assistant",
-      content: response.choices[0].text,
+      content: response.answer,
       tokens: completion_tokens,
       chat_id: req.body.chat_id,
+      model,
     });
     message.save();
     answer.save();
-    req.flash("success", "Message has been added");
+    req.flash(Flash.SUCCESS, "Message has been added");
     return res.redirect(`/chats/${req.body.chat_id}`);
   } catch (e) {
     next(e);

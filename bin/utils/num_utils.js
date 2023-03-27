@@ -46,8 +46,8 @@ export class ImaginaryNumber extends Number {
    */
   plus(number) {
     return new ImaginaryNumber(
-      parseFloat(this.real) + parseFloat(number.real),
-      parseFloat(this.imaginary) + parseFloat(number.imaginary)
+      +this.real + +number.real,
+      +this.imaginary + +number.imaginary
     );
   }
 
@@ -57,8 +57,8 @@ export class ImaginaryNumber extends Number {
    */
   minus(number) {
     return new ImaginaryNumber(
-      parseFloat(this.real) - parseFloat(number.real),
-      parseFloat(this.imaginary) - parseFloat(number.imaginary)
+      +this.real - number.real,
+      +this.imaginary - number.imaginary
     );
   }
 

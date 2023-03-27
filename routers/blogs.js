@@ -3,6 +3,7 @@ import Blog from "../models/Blog.js";
 import Comment from "../models/Comment.js";
 import authenticated from "../bin/middleware/authenticated.js";
 import csrf from "../bin/middleware/csrf.js";
+import { Flash } from "../bin/constants.js";
 const blogs = Router();
 
 blogs.use(authenticated);
@@ -38,7 +39,7 @@ blogs.get("/edit/:id", (req, res, next) => {
 blogs.post("/edit/:id", (req, res, next) => {
   try {
     Blog.update(req.params.id, req.body);
-    req.flash("success", "Blog has been updated");
+    req.flash(Flash.SUCCESS, "Blog has been updated");
     return res.redirect(`/blogs`);
   } catch (e) {
     next(e);
@@ -48,7 +49,7 @@ blogs.post("/edit/:id", (req, res, next) => {
 blogs.post("/delete/:id", (req, res, next) => {
   try {
     Blog.delete(req.params.id);
-    req.flash("success", "Blog has been deleted");
+    req.flash(Flash.SUCCESS, "Blog has been deleted");
     return res.redirect("/blogs");
   } catch (e) {
     next(e);
@@ -73,7 +74,7 @@ blogs.get("/:id", (req, res, next) => {
 blogs.post("/new", (req, res, next) => {
   try {
     Blog.create(req.body);
-    req.flash("success", "Blog has been added");
+    req.flash(Flash.SUCCESS, "Blog has been added");
     return res.redirect(`/blogs`);
   } catch (e) {
     next(e);
@@ -83,7 +84,7 @@ blogs.post("/new", (req, res, next) => {
 blogs.post("/comment", (req, res, next) => {
   try {
     Comment.create(req.body);
-    req.flash("success", "Comment has been added");
+    req.flash(Flash.SUCCESS, "Comment has been added");
     return res.redirect(`/blogs/${req.body.blog_id}`);
   } catch (e) {
     next(e);

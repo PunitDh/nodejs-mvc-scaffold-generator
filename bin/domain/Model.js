@@ -82,7 +82,7 @@ class Model {
 
   /**
    * Returns the last 'n' rows in the table
-   * @param {*} n
+   * @param {Number} n
    * @returns {Model}
    */
   static last(n) {
@@ -91,7 +91,7 @@ class Model {
       .from(this.__tablename__)
       .orderBy({ id: "DESC" })
       .limit(n || 1);
-    return this.runQuery(query).reverse();
+    return this.runQuery(query, null, true);
   }
 
   /**
@@ -171,10 +171,10 @@ class Model {
     const sanitizedObject = removeNullValues(
       new this.prototype.constructor(object)
     );
-    const values = { id, ...sanitizedObject };
+    const values = { id, updated_at: "DATETIME('now')", ...sanitizedObject };
     const queryBuilder = new SQLQueryBuilder()
       .update(this.__tablename__)
-      .set(sanitizedObject.keys())
+      .set(sanitizedObject.keys().add("updated_at"))
       .where("id")
       .returning("*");
     return this.runQuery(queryBuilder, values, true);
@@ -182,12 +182,12 @@ class Model {
 
   /**
    * @description Query the model's table using an object, e.g. { id: 1, name: 'Tim' }
-   * @param {Object} obj
+   * @param {Object} keyValuePairs
    * @returns {Array<Model>}
    */
-  static where(obj) {
+  static where(keyValuePairs) {
     const sanitizedObject = removeNullValues(
-      new this.prototype.constructor(obj)
+      new this.prototype.constructor(keyValuePairs)
     );
     const [columns, values] = parseWhereArgs(sanitizedObject);
     const queryBuilder = new SQLQueryBuilder()
@@ -224,7 +224,7 @@ class Model {
 
     const updateQueryBuilder = new SQLQueryBuilder()
       .update(this.constructor.__tablename__)
-      .set(columns)
+      .set(columns.add("updated_at"))
       .where("id")
       .returning("*");
 
@@ -236,7 +236,7 @@ class Model {
 
     const queryBuilder = this.id ? updateQueryBuilder : insertQueryBuilder;
     // const values = [...columns.map((column) => this[column]), this.id];
-    return this.constructor.runQuery(queryBuilder, this, true);
+    return this.constructor.runQuery(queryBuilder, { updated_at: "DATETIME('now')", ...this }, true);
   }
 
   /**
@@ -271,8 +271,8 @@ class Model {
   /**
    * Runs a raw SQL query on the database
    * @param {String} query
-   * @param {Array} values
-   * @returns {*}
+   * @param {Object} values
+   * @returns {Array<Model> | Model}
    */
   static runRawQuery(query, values = {}) {
     return DB.prepare(query).all({ ...values });

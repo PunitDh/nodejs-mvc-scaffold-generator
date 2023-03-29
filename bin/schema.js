@@ -1,7 +1,7 @@
 import DB from "./db.js";
 import SQLiteColumn from "./domain/SQLiteColumn.js";
 import LOGGER from "./logger.js";
-import { getSchema, saveSchema } from "./utils/schema_utils.js";
+import {getSchema, saveSchema} from "./utils/schema_utils.js";
 import settings from "./utils/settings.js";
 import "./utils/js_utils.js";
 
@@ -27,8 +27,7 @@ import "./utils/js_utils.js";
 
   schema.routers.forEach((table) => {
     LOGGER.info(`Updating schema for '${table}'`);
-    const columns = SQLiteColumn.getColumns(table);
-    schema.tables[table] = columns;
+    schema.tables[table] = SQLiteColumn.getColumns(table);
     saveSchema(schema);
   });
 })();

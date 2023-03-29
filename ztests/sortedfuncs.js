@@ -940,26 +940,6 @@ Object.prototype.keys = function () {
   return this && Object.keys(this);
 };
 
-Object.prototype.max = function () {
-  if (!this) return;
-  const max = Math.max(...Object.values(this));
-  for (const [key, value] of Object.entries(this)) {
-    if (value === max) {
-      return { [key]: value };
-    }
-  }
-};
-
-Object.prototype.min = function () {
-  if (!this) return;
-  const min = Math.min(...Object.values(this));
-  for (const [key, value] of Object.entries(this)) {
-    if (value === min) {
-      return { [key]: value };
-    }
-  }
-};
-
 Object.prototype.sanitize = function () {
   return (
     this &&

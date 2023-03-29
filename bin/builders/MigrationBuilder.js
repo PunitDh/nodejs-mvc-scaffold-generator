@@ -40,16 +40,26 @@ export class MigrationColumn {
     return this.withConstraints(constraint);
   }
 
-  withConstraints() {
-    this.constraints?.push(...[...arguments].map((arg) => arg.toUpperCase()));
+  withConstraints(...constraints) {
+    this.constraints?.push(...constraints.map((arg) => arg.toUpperCase()));
     return this;
   }
 
+  /**
+   * Sets the order in which the columns will be sorted
+   * @param {Number} order
+   * @returns {MigrationColumn}
+   */
   withOrder(order) {
     this.order = order;
     return this;
   }
 
+  /**
+   * Parses constraints set on a column
+   * @param {Array<String>} constraints
+   * @returns {*[]}
+   */
   parseConstraints(constraints) {
     const parsedConstraints = [];
     const upperCaseConstraints = constraints.map((constraint) =>
@@ -85,6 +95,13 @@ export class MigrationColumn {
 }
 
 export class MigrationForeignKey {
+  /**
+   * Creates a foreign key in a migration
+   * @param {String} otherModel
+   * @param {String} otherColumn
+   * @param {SQLForeignKeyActions} onDelete
+   * @param {SQLForeignKeyActions} onUpdate
+   */
   constructor(otherModel, otherColumn, onDelete, onUpdate) {
     this.thisColumn = getForeignKeyColumnName(otherModel);
     this.otherTable = getTableNameFromModel(otherModel);
@@ -147,11 +164,10 @@ export class MigrationBuilder {
   /**
    * Use this function (and only this function) to add columns
    */
-  addColumns() {
-    const columns = [...arguments];
+  addColumns(...columns) {
     for (const argument of columns) {
       if (!this.columns.exists((column) => column.name === argument.name)) {
-        this.columns.push(...arguments);
+        this.columns.push(...columns);
       }
     }
     this.columns.sort((a, b) => a.order - b.order);
@@ -288,11 +304,11 @@ export class MigrationBuilder {
 
   /**
    * Assigns multiple columns to the migration
-   * @arguments {...MigrationColumn}
+   * @param {MigrationColumn | Array<MigrationColumn>} columns
    * @returns {MigrationBuilder}
    */
-  withColumns() {
-    [...arguments].forEach((column) => {
+  withColumns(...columns) {
+    columns.forEach((column) => {
       if (column.isForeignKey) {
         this.withForeignKey(column.otherTable);
       } else {
@@ -310,7 +326,7 @@ export class MigrationBuilder {
 
   /**
    * Assigns a foreign key to the migration
-   * @param {string | MigrationForeignKey} otherModel
+   * @param {String | MigrationForeignKey} otherModel
    * @returns {MigrationBuilder}
    */
   withForeignKey(otherModel) {
@@ -342,13 +358,6 @@ export class MigrationBuilder {
     return this;
   }
 
-  withExcludeColumns() {
-    const columnNames = [...arguments];
-    const filteredColumns = this.columns.filter(
-      (column) => !columnNames.includes(column.name)
-    );
-    return this.withColumns(...filteredColumns);
-  }
 
   build() {
     return this;
@@ -371,6 +380,10 @@ export class MigrationBuilder {
     return this;
   }
 
+  /**
+   * Converts the migration to an object to be saved in the schema json file
+   * @returns {Array<Object>}
+   */
   toSchemaFormat() {
     return this.columns?.map((column) =>
       column
@@ -383,6 +396,10 @@ export class MigrationBuilder {
     );
   }
 
+  /**
+   * Converts the migration to be used by a Handlebars template
+   * @returns {MigrationBuilder}
+   */
   toTemplateFormat() {
     const filteredColumns = this.columns.filter(
       (column) => !ReadOnlyColumns.includes(column.name)

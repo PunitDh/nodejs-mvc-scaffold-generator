@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Configuration, OpenAIApi } from "openai";
+import "../bin/utils/js_utils.js";
 
 const configuration = new Configuration({
   organization: "org-n29yNYBQeVUBjvrMRjxSUl3n",
@@ -18,7 +19,7 @@ class OpenAIResponse {
     this.id = id;
     this.created = created;
     this.model = model;
-    this.answer = choices[0].text || choices[0].message.content;
+    this.answer = choices.first().text || choices.first().message.content;
     this.prompt_tokens = prompt_tokens;
     this.completion_tokens = completion_tokens;
     this.total_tokens = total_tokens;

@@ -53,8 +53,8 @@ function hashWithSalt(password, salt) {
  */
 function verifyPassword(inputPassword, hashedPassword) {
   const [, , saltLength, saltedPassword] = hashedPassword.split("$");
-  const salt = saltedPassword.substring(0, saltLength);
-  const password = saltedPassword.substring(saltLength);
+  const salt = saltedPassword.substring(0, +saltLength);
+  const password = saltedPassword.substring(+saltLength);
   const calculatedHash = hashWithSalt(inputPassword, salt);
   return calculatedHash === password;
 }

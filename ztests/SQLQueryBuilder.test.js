@@ -41,13 +41,19 @@ const test = new SQLQueryBuilder()
   .where("id")
   .build();
 
-const count = new SQLQueryBuilder()
+const aggregates = new SQLQueryBuilder()
   .select()
   .distinct()
   .count()
   .max()
   .min()
+    .avg()
+    .total()
+    .sum()
+    .sign().abs().round()
   .from("animals")
   .build();
 
-console.log(select, insert, update, del, test, count);
+
+
+console.log(select, insert, update, del, test, aggregates);

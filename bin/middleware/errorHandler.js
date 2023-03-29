@@ -9,6 +9,7 @@ export default function (err, req, res, next) {
     case "SQLITE_CONSTRAINT_FOREIGNKEY":
       errorMessage =
         "Unable to perform this action due to a foreign key constraint failure";
+      break;
     case DatabaseError:
       break;
     default:

@@ -1,5 +1,4 @@
 import DB from "../db.js";
-import LOGGER from "../logger.js";
 import "../utils/js_utils.js";
 
 const QueryAction = {
@@ -29,89 +28,217 @@ export class SQLQueryBuilder {
     return this;
   }
 
-  select() {
-    if (arguments.length === 0) {
+  /**
+   * Sets the query action to 'SELECT' and sets the columns
+   * @param {String | Array} columns
+   * @returns {SQLQueryBuilder}
+   */
+  select(...columns) {
+    if (columns.length === 0) {
       this.columns = ["*"];
     } else {
-      this.columns = [...arguments];
+      this.columns = columns;
     }
     this.action = QueryAction.SELECT;
     return this;
   }
 
+  /**
+   * Aggregate function for distinct(x)
+   * @returns {SQLQueryBuilder}
+   */
   distinct() {
     this.aggregates.push(AggregateFunctions.DISTINCT);
     return this;
   }
 
+  /**
+   * Aggregate function for count
+   * @returns {SQLQueryBuilder}
+   */
   count() {
     this.aggregates.push(AggregateFunctions.COUNT);
     return this;
   }
 
+  /**
+   * Aggregate function for min
+   * @returns {SQLQueryBuilder}
+   */
   min() {
     this.aggregates.push(AggregateFunctions.MIN);
     return this;
   }
 
+  /**
+   * Aggregate function for max(x)
+   * @returns {SQLQueryBuilder}
+   */
   max() {
     this.aggregates.push(AggregateFunctions.MAX);
     return this;
   }
 
+  /**
+   * Aggregate function for avg(x)
+   * @returns {SQLQueryBuilder}
+   */
+  avg() {
+    this.aggregates.push(AggregateFunctions.AVG);
+    return this;
+  }
+
+  /**
+   * Aggregate function for total(x)
+   * @returns {SQLQueryBuilder}
+   */
+  total() {
+    this.aggregates.push(AggregateFunctions.TOTAL);
+    return this;
+  }
+
+  /**
+   * Aggregate function for sum(x)
+   * @returns {SQLQueryBuilder}
+   */
+  sum() {
+    this.aggregates.push(AggregateFunctions.SUM);
+    return this;
+  }
+
+  /**
+   * Aggregate function for sign(x)
+   * @returns {SQLQueryBuilder}
+   */
+  sign() {
+    this.aggregates.push(AggregateFunctions.SIGN);
+    return this;
+  }
+
+  /**
+   * Aggregate function for absolute value abs(x)
+   * @returns {SQLQueryBuilder}
+   */
+  abs() {
+    this.aggregates.push(AggregateFunctions.ABS);
+    return this;
+  }
+
+  /**
+   * Aggregate function for round(x)
+   * @returns {SQLQueryBuilder}
+   */
+  round() {
+    this.aggregates.push(AggregateFunctions.ROUND);
+    return this;
+  }
+
+  /**
+   * Starts an 'INSERT INTO' query
+   * @param {String} table
+   * @returns {SQLQueryBuilder}
+   */
   insertInto(table) {
     return this.insert().into(table);
   }
 
+  /**
+   * Specifies that no timestamps be included in a query
+   * @returns {SQLQueryBuilder}
+   */
   withNoTimeStamps() {
     this.timestamps = false;
     return this;
   }
 
+  /**
+   * Sets the query action to INSERT
+   * @returns {SQLQueryBuilder}
+   */
   insert() {
     this.action = QueryAction.INSERT;
     return this;
   }
 
+  /**
+   * Sets the query action to UPDATE
+   * @param {String} table
+   * @returns {SQLQueryBuilder}
+   */
   update(table) {
     this.table = table;
     this.action = QueryAction.UPDATE;
     return this;
   }
 
+  /**
+   * Sets the query action to DELETE
+   * @returns {SQLQueryBuilder}
+   */
   delete() {
     this.action = QueryAction.DELETE;
     return this;
   }
 
+  /**
+   * Chaining function for 'SELECT * FROM'
+   * @param {String} table
+   * @returns {SQLQueryBuilder}
+   */
   from(table) {
     this.table = table;
     return this;
   }
 
+  /**
+   * Chaining function for 'INSERT INTO'
+   * @param {String} table
+   * @returns {SQLQueryBuilder}
+   */
   into(table) {
     this.table = table;
     return this;
   }
 
+  /**
+   * Sets the where clause in a query
+   * @param {String | Array} columns
+   * @returns {SQLQueryBuilder}
+   */
   where(...columns) {
     this.whereArgs = columns;
     return this;
   }
 
+  /**
+   * Starts a DELETE FROM query
+   * @param {String} table
+   * @returns {SQLQueryBuilder}
+   */
   deleteFrom(table) {
     return this.delete().from(table);
   }
 
-  set() {
-    if (typeof arguments[0] === "object" && arguments[0] instanceof Array) {
-      this.columns = [...arguments[0]];
+  /**
+   * Sets the values in an UPDATE query
+   * @param {*} values
+   * @returns {SQLQueryBuilder}
+   */
+  set(...values) {
+    if (typeof values.first() === "object" && values.first() instanceof Array) {
+      this.columns = values.first();
     } else {
-      this.columns = [...arguments];
+      this.columns = values;
     }
     return this;
   }
 
+  /**
+   * Sets the order that results need to be returned in
+   * @param {Object} obj
+   * @example orderBy({ id: "DESC" })
+   * @returns {SQLQueryBuilder}
+   */
   orderBy(obj) {
     this.order = {
       columns: obj.keys(),
@@ -120,41 +247,52 @@ export class SQLQueryBuilder {
     return this;
   }
 
-  values() {
-    if (typeof arguments[0] === "object" && arguments[0] instanceof Array) {
-      this.columns = [...arguments[0]];
+  /**
+   * Sets the values in a INSERT query
+   * @param {*} vals
+   * @returns {SQLQueryBuilder}
+   */
+  values(...vals) {
+    if (typeof vals.first() === "object" && vals.first() instanceof Array) {
+      this.columns = [...vals.first()];
     } else {
-      this.columns = [...arguments];
+      this.columns = vals;
     }
     return this;
   }
 
-  returning() {
-    if (arguments.length === 0) {
+  /**
+   * Sets the 'RETURNING' value for the query
+   * @param {String | Array} columns
+   * @returns {SQLQueryBuilder}
+   */
+  returning(...columns) {
+    if (columns.length === 0) {
       this.returningValue = ["*"];
     } else {
-      this.returningValue = [...arguments];
+      this.returningValue = columns;
     }
     return this;
   }
 
+  /**
+   * Sets the limit of the number of results
+   * @param {Number} lim
+   * @returns {SQLQueryBuilder}
+   */
   limit(lim) {
     this.lim = lim;
     return this;
   }
 
-  execute() {
-    return new Promise((resolve, reject) => {
-      const query = this.build();
-      DB.all(query, [...arguments], function (err, rows) {
-        LOGGER.query(query);
-        if (err) {
-          LOGGER.error(err.stack);
-          return reject(err);
-        }
-        return resolve(rows);
-      });
-    });
+  /**
+   * Executes the SQL query on the database
+   * @param {Object} values
+   * @returns {*}
+   */
+  execute(values) {
+    const query = this.build();
+    return DB.prepare(query).all(values);
   }
 
   build() {

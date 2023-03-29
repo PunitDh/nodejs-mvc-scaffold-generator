@@ -3,7 +3,7 @@ import SETTINGS from "./utils/settings.js";
 
 /**
  * A list of SQL Column types
- * @type {{BLOB: string, FLOAT: string, DECIMAL: string, TEXT: string, EMAIL: string, INT: string, NCHAR: string, NVARCHAR: string, "DOUBLE PRECISION": string, "VARYING CHARACTER": string, TIMESTAMP: string, CHARACTER: string, DOUBLE: string, TINYINT: string, "NATIVE CHARACTER": string, INTEGER: string, "UNSIGNED BIG INT": string, INT2: string, NUMERIC: string, NUMBER: string, CLOB: string, NULL: string, BIGINT: string, MEDIUMINT: string, INT8: string, BOOLEAN: string, DATE: string, DATETIME: string, PASSWORD: string, SMALLINT: string, VARCHAR: string, REAL: string, STRING: string}}
+ * @type {Object}
  */
 export const SQLColumnTypes = {
   INT: "INTEGER",

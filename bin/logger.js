@@ -12,8 +12,7 @@ const LogType = {
   test: "test",
 };
 
-function logMessage() {
-  const [type, color, ...messageFrags] = arguments;
+function logMessage(type, color, ...messageFrags) {
   const message = `[${type.toUpperCase()}] [${new Date().toLocaleString()}]: ${messageFrags.join(
     " "
   )}`;

@@ -6,7 +6,7 @@
 
 /**
  * Returns the first element in the array or the first element that matches the predicate
- * @param {Function} predicate
+ * @param {Function | null} predicate
  * @returns {*}
  */
 Array.prototype.first = function (predicate) {
@@ -183,7 +183,7 @@ Array.prototype.match = function (predicate, nth) {
  * Performs an async await operation on an array and returns the resultant array.
  * Note: The result must be awaited, i.e. The 'await' keyword must be used before it
  * @param {Function} callback
- * @returns Array<Promise>
+ * @returns {Array}
  */
 Array.prototype.mapAsync = async function (callback) {
   let result = [];
@@ -206,7 +206,7 @@ Array.prototype.forEachAsync = async function (callback) {
 
 /**
  * Takes in a number of arguments and excludes them from the array
- * @returns Array
+ * @returns {Array}
  */
 Array.prototype.exclude = function () {
   const exclusions = [...arguments];
@@ -215,7 +215,7 @@ Array.prototype.exclude = function () {
 
 /**
  * Returns the distinct elements in an array
- * @returns Array
+ * @returns {Array}
  */
 Array.prototype.distinct = function () {
   return Array.from(new Set(this));
@@ -223,13 +223,13 @@ Array.prototype.distinct = function () {
 
 /**
  * Returns the distinct elements in an array
- * @returns Array
+ * @returns {Array}
  */
 Array.prototype.unique = Array.prototype.distinct;
 
 /**
  * Converts all elements in the array to upper case
- * @returns Array<String>
+ * @returns {Array<String>}
  */
 Array.prototype.toUpperCase = function () {
   return [...arguments].map((arg) => arg.toUpperCase());
@@ -237,7 +237,7 @@ Array.prototype.toUpperCase = function () {
 
 /**
  * Converts all elements in the array to lower case
- * @returns Array<String>
+ * @returns {Array<String>}
  */
 Array.prototype.toLowerCase = function () {
   return [...arguments].map((arg) => arg.toLowerCase());
@@ -261,7 +261,7 @@ Array.prototype.product = function () {
 
 /**
  * Checks whether an array is empty
- * @returns Boolean
+ * @returns {Boolean}
  */
 Array.prototype.isEmpty = function () {
   return this.length === 0;
@@ -269,7 +269,7 @@ Array.prototype.isEmpty = function () {
 
 /**
  * Checks whether an array is empty
- * @returns Boolean
+ * @returns {Boolean}
  */
 Array.prototype.isNotEmpty = function () {
   return this.length > 0;
@@ -278,7 +278,7 @@ Array.prototype.isNotEmpty = function () {
 /**
  * Chunks an array into specified size
  * @param {Number} size
- * @returns Array<Array<any>>
+ * @returns {Array<Array<any>>}
  */
 Array.prototype.chunked = function (size) {
   const chunkedArray = [];
@@ -305,7 +305,7 @@ Array.prototype.includesAll = function () {
 /**
  * Finds intersection between two arrays
  * @param {Array} array
- * @returns Array
+ * @returns {Array}
  */
 Array.prototype.intersection = function (array) {
   return array.filter((item) => this.includes(item));
@@ -432,7 +432,7 @@ Array.prototype.includesObject = function (object) {
 
 /**
  * Deletes any given number of elements from an array
- * @param {*} element
+ * @param {*} elements
  * @returns {Array}
  */
 Array.prototype.delete = function (...elements) {
@@ -451,6 +451,7 @@ Array.prototype.random = function () {
 /**
  * Returns a randomly chosen sample of elements within the array
  * @param {Number} sampleSize
+ * @param {Boolean} repeat
  * @returns {Array}
  */
 Array.prototype.sample = function (sampleSize, repeat = true) {
@@ -512,7 +513,7 @@ Array.prototype.filterNotUndefined = function () {
 /**
  * Checks whether all the elements in the array matches a given element
  * @param {Function} predicate
- * @param thisArg
+ * @param {*} thisArg
  * @returns {Boolean}
  */
 Array.prototype.all = function (predicate, thisArg = undefined) {
@@ -522,7 +523,7 @@ Array.prototype.all = function (predicate, thisArg = undefined) {
 /**
  * Checks whether any of the elements in the array matches a given element
  * @param {Function} predicate
- * @param thisArg
+ * @param {*} thisArg
  * @returns {Boolean}
  */
 Array.prototype.any = function (predicate, thisArg = undefined) {
@@ -629,7 +630,7 @@ Array.prototype.median = function () {
 };
 
 /**
- * Returns the mode (most frequently occuring element) of the array
+ * Returns the mode (most frequently occurring element) of the array
  * @returns {*}
  */
 Array.prototype.mode = function () {
@@ -806,7 +807,7 @@ Array.prototype.tail = function (n) {
 
 /**
  * Returns a deep copy of the original object, while also assigning new values to its properties
- * @param {Object} newParams
+ * @param {Object?} newParams
  * @returns {Object}
  */
 Object.prototype.copy = function (newParams) {
@@ -828,7 +829,7 @@ Object.prototype.copy = function (newParams) {
  */
 Object.prototype.exclude = function () {
   if (!this) return {};
-  const newObj = this.copy();
+  const newObj = this && this.copy();
   [...arguments].forEach((argument) => {
     delete newObj[argument];
   });
@@ -1448,6 +1449,11 @@ Date.prototype.daysSince = function (date) {
   return (this.getTime() - date.getTime()) / (1000 * 3600 * 24);
 };
 
+/**
+ * Formats the date according to strftime format
+ * @param {String} sFormat
+ * @returns {String}
+ */
 Date.prototype.strfTime = function (sFormat) {
   if (typeof sFormat !== "string") {
     return "";
@@ -1673,7 +1679,12 @@ Number.prototype.isOdd = function () {
   return this % 2 === 1;
 };
 
+/**
+ * Returns the factorial of a number
+ * @returns {Number}
+ */
 Number.prototype.factorial = function () {
+  if (this < 0) { return null }
   let factorial = 1;
   for (let i = 1; i <= this; i++) {
     factorial *= i;

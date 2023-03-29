@@ -27,8 +27,7 @@ import "./utils/js_utils.js";
 
   schema.routers.forEach((table) => {
     LOGGER.info(`Updating schema for '${table}'`);
-    const columns = SQLiteColumn.getColumns(table);
-    schema.tables[table] = columns;
+    schema.tables[table] = SQLiteColumn.getColumns(table);
     saveSchema(schema);
   });
 })();

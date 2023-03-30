@@ -1,6 +1,6 @@
-import {Router} from "express";
+import { Router } from "express";
 import Animal from "../models/Animal.js";
-import {Flash} from "../bin/constants.js";
+import { Flash } from "../bin/constants.js";
 import csrf from "../bin/middleware/csrf.js";
 import upload from "../bin/middleware/upload.js";
 import fs from "fs";
@@ -65,7 +65,7 @@ animals.get("/:id", (req, res, next) => {
     const animal = Animal.find(req.params.id);
     return res.render("animals/animal", { animal: res.locals.marked(animal) });
   } catch (e) {
-    next(e)
+    next(e);
   }
 });
 

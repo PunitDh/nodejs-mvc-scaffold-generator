@@ -22,6 +22,27 @@
     </tbody>
   </table>
 
+  <div class="container mb-4">
+    <h3>Movies</h3>
+    <% if (movies.length) { %>
+    <% for (const movie of movies) { %>
+    <table class="w-50 my-4">
+      <tbody>
+        <% Object.entries(movie).reverse().forEach(([key, value]) => { %>
+        <tr>
+          <td class="h6"><%= capitalize(key) %></td>
+          <td><%= dateFields.includes(key) ? formatDate(value) : value %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% } %> <% } else { %>
+        <div>
+          No movies
+        </div>
+      <% } %> 
+  </div>
+
   <div class="form-group mb-2">
     <div class="d-flex align-items-center" style="gap: 1rem">
       <a href="/theaters/edit/<%= theater.id %>" class="btn btn-primary">Edit Theater</a>

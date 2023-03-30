@@ -1,4 +1,4 @@
-import Model from "../bin/domain/Model.js"
+import Model from "../bin/domain/Model.js";
 import Theater from "./Theater.js";
 
 class Movie extends Model {
@@ -10,7 +10,7 @@ class Movie extends Model {
   }
 
   get theater() {
-    return Theater.find(this.id);
+    return Theater.find(this.theater_id);
   }
 }
 

@@ -1,8 +1,8 @@
 <%- include('./_head.ejs') %>
-  <div class="container mt-4">
-    <h1>Animals</h1>
-    <table class="table mb-4">
-      <thead>
+<div class="container mt-4">
+  <h1>Animals</h1>
+  <table class="table mb-4">
+    <thead>
       <tr>
         <th>Name</th>
         <th>Created At</th>
@@ -11,29 +11,31 @@
         <th>Image</th>
         <th colspan="3">Actions</th>
       </tr>
-      </thead>
-      <tbody>
-        <% for (const it of animals) { %>
-        <tr>
-          <td><%= it.name %></td>
-          <td><%= formatDate(it.created_at) %></td>
-          <td><%= formatDate(it.updated_at) %></td>
-          <td><%= it.color %></td>
-          <td><img src="<%= it.image %>" alt="<%= it.name %>" /></td>
-          <td><a href="/animals/<%= it.id %>" class="btn btn-primary">Show</a></td>
-          <td><a href="/animals/edit/<%= it.id %>" class="btn btn-success">Edit</a></td>
-          <td>
-            <form action="/animals/delete/<%= it.id %>" method="POST">
-              <%- include(locals.LayoutPages._csrf) %>
-              <button type="submit" class="btn btn-danger">
-                Delete
-              </button>
-            </form>
-          </td>
-        </tr>
-        <% } %>
-      </tbody>
-    </table>
-    <a href="/animals/new" class="btn btn-primary">New Animal</a>
-  </div>
-  <%- include('../_layouts/_tail.ejs') %>
+    </thead>
+    <tbody>
+      <% for (const it of animals) { %>
+      <tr>
+        <td><%= it.name %></td>
+        <td><%= formatDate(it.created_at) %></td>
+        <td><%= formatDate(it.updated_at) %></td>
+        <td><%= it.color %></td>
+        <td><img src="<%= it.image %>" alt="<%= it.name %>" /></td>
+        <td>
+          <a href="/animals/<%= it.id %>" class="btn btn-primary">Show</a>
+        </td>
+        <td>
+          <a href="/animals/edit/<%= it.id %>" class="btn btn-success">Edit</a>
+        </td>
+        <td>
+          <form action="/animals/delete/<%= it.id %>" method="POST">
+            <%- include(locals.LayoutPages._csrf) %>
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <a href="/animals/new" class="btn btn-primary">New Animal</a>
+</div>
+<%- include('../_layouts/_tail.ejs') %>

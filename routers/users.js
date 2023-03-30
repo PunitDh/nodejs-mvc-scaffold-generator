@@ -15,7 +15,7 @@ const users = Router();
 
 users.get("/", authenticated, (req, res, next) => {
   try {
-    const users = User.all()?.map((user) => user.exclude("password"));
+    const users = User.all();
     return res.render("users/index", { users });
   } catch (e) {
     next(e);

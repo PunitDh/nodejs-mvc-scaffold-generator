@@ -1,6 +1,6 @@
-import { SearchExcludedColumns } from "../constants.js";
 import "../utils/js_utils.js";
 import { markSearchTerm } from "../utils/text_utils.js";
+import SETTINGS from "../utils/settings.js";
 
 class SearchResult {
   /**
@@ -12,11 +12,12 @@ class SearchResult {
    * @param {Object} data - A single row of data from the database
    */
   constructor(searchTerm, maxResults, page, table, data) {
+    const { searchExcludedColumns } = SETTINGS.views.search;
     this.table = table;
     const { result, priority } = markSearchTerm(data, searchTerm, true);
     this.priority = priority;
     this.data = result;
-    const resultColumns = data.keys().exclude(...SearchExcludedColumns);
+    const resultColumns = data.keys().exclude(...searchExcludedColumns);
     this.title = `${this.table.capitalize()} - ${data[resultColumns.first()]}`;
     const urlSearchParam = new URLSearchParams();
     urlSearchParam.append(

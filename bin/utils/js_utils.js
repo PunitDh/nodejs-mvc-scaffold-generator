@@ -668,15 +668,15 @@ Array.prototype.stdev = function () {
  * @example ['apple', 'apple', 'orange', 'banana', 'banana', 'banana'].counts() ==> { apple: 2, orange: 1, banana: 3 }
  */
 Array.prototype.counts = function () {
-  const counts = {};
+  const cts = {};
   for (let i = 0; i < this.length; i++) {
-    if (counts[this[i]]) {
-      counts[this[i]] += 1;
+    if (cts[this[i]]) {
+      cts[this[i]] += 1;
     } else {
-      counts[this[i]] = 1;
+      cts[this[i]] = 1;
     }
   }
-  return counts;
+  return cts;
 };
 
 /**
@@ -829,11 +829,10 @@ Object.prototype.copy = function (newParams) {
  */
 Object.prototype.exclude = function () {
   if (!this) return {};
-  const newObj = this && this.copy();
   [...arguments].forEach((argument) => {
-    delete newObj[argument];
+    delete this[argument];
   });
-  return newObj;
+  return this;
 };
 
 /**
@@ -1684,10 +1683,296 @@ Number.prototype.isOdd = function () {
  * @returns {Number}
  */
 Number.prototype.factorial = function () {
-  if (this < 0) { return null }
+  if (this < 0) {
+    return null;
+  }
   let factorial = 1;
   for (let i = 1; i <= this; i++) {
     factorial *= i;
   }
   return factorial;
+};
+
+/**
+ * Finds all the factors of a number
+ * @returns {Array}
+ */
+Number.prototype.factors = function () {
+  const fcts = [];
+  for (let i = 1; i <= this; i++) {
+    if (this % i === 0) {
+      fcts.push(i);
+    }
+  }
+  return fcts;
+};
+
+Number.prototype.toEnglish = function () {
+  const dictionary = {
+    1: "One",
+    2: "Two",
+    3: "Three",
+    4: "Four",
+    5: "Five",
+    6: "Six",
+    7: "Seven",
+    8: "Eight",
+    9: "Nine",
+    10: "Ten",
+    11: "Eleven",
+    12: "Twelve",
+    13: "Thirteen",
+    14: "Fourteen",
+    15: "Fifteen",
+    16: "Sixteen",
+    17: "Seventeen",
+    18: "Eighteen",
+    19: "Nineteen",
+    20: "Twenty",
+    30: "Thirty",
+    40: "Forty",
+    50: "Fifty",
+    60: "Sixty",
+    70: "Seventy",
+    80: "Eighty",
+    90: "Ninety",
+    100: "Hundred",
+  };
+  const bigNums = [
+    "Thousand",
+    "Million",
+    "Billion",
+    "Trillion",
+    "Quadrillion",
+    "Quintrillion",
+    "Sextillion",
+    "Septillion",
+    "Octillion",
+    "Nonillion",
+    "Decillion",
+  ];
+  const sign = Math.sign(this);
+  const number = Math.abs(this);
+  const [integer, decimal] = number.toString().split(".");
+  const chunks = integer.split("").reverse().chunked(3);
+
+  if (number === 0) {
+    return "Zero";
+  }
+
+  const lastDigits = (num, n) =>
+    num.toString().slice(num.toString().length - n);
+
+  function parseThreeDigits(num) {
+    if (num < 10) {
+      return dictionary[num];
+    }
+    const twoPlaces = lastDigits(num, 2);
+    let twoPlacesEnglish = dictionary[twoPlaces];
+    if (!twoPlacesEnglish) {
+      const [tens, ones] = twoPlaces.split("");
+      const tensEnglish = dictionary[tens * 10] || "";
+      const onesEnglish = dictionary[ones] || "";
+      twoPlacesEnglish =
+        parseInt(twoPlaces) > 0 ? `${tensEnglish} ${onesEnglish}` : "";
+    }
+    let hundredth = "",
+      hundredthEnglish;
+    if (num >= 100) {
+      hundredth = Math.floor(num / 100);
+      hundredthEnglish = `${dictionary[hundredth]} ${
+        dictionary[(hundredth * 100) / hundredth]
+      }${twoPlaces > 0 ? " and " : ""}`;
+      return `${hundredthEnglish}${twoPlacesEnglish}`;
+    }
+    return twoPlacesEnglish;
+  }
+
+  const hundredthChunks = chunks.map((chunk) =>
+    parseThreeDigits(chunk.reverse().join(""))
+  );
+
+  const integerEnglish =
+    (sign < 0 ? "Minus " : "") +
+    hundredthChunks
+      .map((digit, index) => {
+        if (index === 0) return digit;
+        if (digit) return `${digit} ${bigNums[index - 1]}`;
+      })
+      .filter(Boolean)
+      .reverse()
+      .join(", ");
+
+  const decimalEnglish = decimal
+    ?.split("")
+    .map((digit) => {
+      if (digit === "0") return "Zero";
+      return dictionary[digit];
+    })
+    .join(" ");
+
+  if (decimal) {
+    return `${integerEnglish} Point ${decimalEnglish}`;
+  }
+  return integerEnglish;
+};
+
+/* ************************************************************************** /
+/ *************************************************************************** /
+/ ***************************** Math Extensions ***************************** /
+/ *************************************************************************** /
+/ ************************************************************************** */
+
+Math.randInt = function (min, max, step = 1) {
+  return Math.floor((Math.random() * (max - min + 1) + min) / step) * step;
+};
+
+Math.degToRad = function (deg) {
+  return (deg * Math.PI) / 180;
+};
+
+Math.radToDeg = function (rad) {
+  return (rad * 180) / Math.PI;
+};
+
+/**
+ * Calculates the cartesian distance between two points
+ * @param {Number} x1
+ * @param {Number} y1
+ * @param {Number} x2
+ * @param {Number} y2
+ */
+Math.distance = function (x1, y1, x2, y2) {
+  return Math.sqrt((y2 - y1) ** 2 + (x2 - x1) ** 2);
+};
+
+Math.interpolate = function (x1, y1, x2, y2, x) {
+  return y1 + ((x - x1) * (y2 - y1)) / (x2 - x1);
+};
+
+Math.quadratic = function (a, b, c) {
+  const s = Math.sqrt(Math.pow(b, 2) - 4 * a * c);
+  console.log(s);
+  return [(-b + s) / (2 * a), (-b - s) / (2 * a)];
+};
+
+Math.lerp = Math.interpolate;
+
+Math.LCM = function (...nums) {
+  let lcm =
+    (nums.first() * nums.second()) / Math.GCD(nums.first(), nums.second());
+  if (nums.length > 2) {
+    return Math.LCM(lcm, ...nums.slice(2));
+  }
+  return lcm;
+};
+
+Math.GCD = function (...nums) {
+  const factors = [];
+  for (const num of nums) {
+    factors.push(num.factors());
+  }
+  return factors
+    .reduce((acc, cur) => acc.intersection(cur), factors.first())
+    .max();
+};
+
+Math.HCF = Math.GCD;
+
+/* ************************************************************************** /
+/ *************************************************************************** /
+/ ******************************* Conversions ******************************* /
+/ *************************************************************************** /
+/ ************************************************************************** */
+Math.C = 299792458;
+
+Math.Conversions = {
+  celciusToFahrenheit: function (celcius) {
+    return (celcius * 9) / 5 + 32;
+  },
+  fahrenheitToCelcius: function (fahrenheit) {
+    return ((fahrenheit - 32) / 9) * 5;
+  },
+  celciusToKelvin: function (celcius) {
+    return celcius + 273;
+  },
+  kelvinToCelcius: function (kelvin) {
+    return kelvin - 273;
+  },
+  kelvinToFahrenheit: function (kelvin) {
+    return this.celciusToFahrenheit(this.kelvinToCelcius(kelvin));
+  },
+  fahrenheitToKelvin: function (fahrenheit) {
+    return this.celciusToKelvin(this.fahrenheitToCelcius(fahrenheit));
+  },
+  inchToCm: function (inch) {
+    return inch * 2.54000508;
+  },
+  cmToInch: function (cm) {
+    return cm / 2.54000508;
+  },
+  mileToKm: function (mile) {
+    return mile * 1.609344;
+  },
+  kmToMile: function (km) {
+    return km / 1.609344;
+  },
+
+  /**
+   * Converts kilometers per hour to meters per second
+   * @param {Number} kmph
+   * @returns {Number}
+   */
+  kmphToMps: function (kmph) {
+    return kmph / 3.6;
+  },
+
+  /**
+   * Converts meter per second to kmph
+   * @param {Number} mps
+   * @returns {Number}
+   */
+  mpsToKmph: function (mps) {
+    return mps * 3.6;
+  },
+
+  ftToMeter: function (ft) {
+    return ft / 3.28084;
+  },
+
+  metersToFeet: function (meters) {
+    return meters * 3.28084;
+  },
+
+  kgToLb: function (kg) {
+    return kg * 2.20462;
+  },
+
+  lbToKg: function (lb) {
+    return lb / 2.20462;
+  },
+
+  stoneToKg: function (stone) {
+    return stone * 6.35029;
+  },
+
+  kgToStone: function (kg) {
+    return kg / 6.35029;
+  },
+
+  lyToKm: function (ly) {
+    return ly * 9460730777119.56;
+  },
+
+  kmToLy: function (km) {
+    return km / 9460730777119.56;
+  },
+
+  lyToParsec: function (ly) {
+    return ly / 3.26156;
+  },
+
+  parsecToLy: function (parsec) {
+    return parsec * 3.26156;
+  },
 };

@@ -1,8 +1,8 @@
-import { SearchExcludedColumns } from "../constants.js";
 import DB from "../db.js";
 import SQLiteTable from "../domain/SQLiteTable.js";
 import SearchResponse from "../domain/SearchResponse.js";
 import SearchResult from "../domain/SearchResult.js";
+import SETTINGS from "../utils/settings.js";
 
 export default class SearchService {
   /**
@@ -14,12 +14,13 @@ export default class SearchService {
    * @returns {SearchResponse} - An array of SearchResult objects.
    */
   static search(searchTerm, limit, maxResults = 10, page = 1) {
+    const { searchExcludedColumns } = SETTINGS.views.search;
     const startTime = process.hrtime();
     const tables = SQLiteTable.getAllTables();
     const results = tables
       .map((table) => {
         const searchQuery = table.columns
-          .filter((column) => !SearchExcludedColumns.includes(column.name))
+          .filter((column) => !searchExcludedColumns.includes(column.name))
           .map((column) => `${column.name} LIKE '%' || $searchTerm || '%' `)
           .join(" OR ");
         const query = `SELECT * FROM ${table.name} WHERE ${searchQuery} ORDER BY updated_at DESC;`;

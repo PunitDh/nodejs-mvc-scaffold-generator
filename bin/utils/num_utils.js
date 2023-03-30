@@ -128,3 +128,33 @@ class AngleNotation {
     this.angle = angle;
   }
 }
+
+export class Vector {
+  constructor(...nums) {
+    const chars = "abcdefghijklmnopqrstuvwxyz";
+    nums.forEach((num, i) => {
+      this[chars[i]] = num;
+    });
+  }
+
+  dot(vector) {
+    let product = 0;
+    Object.keys(vector).forEach((key) => {
+      product += +(this[key] * vector[key]);
+    });
+    return product;
+  }
+
+  cross(vector) {
+    const result = new Vector();
+    const keys = Object.keys(vector);
+    const [a1, a2, a3] = Object.values(this);
+    const [b1, b2, b3] = Object.values(vector);
+
+    result[keys[0]] = a2 * b3 - a3 * b2;
+    result[keys[1]] = a3 * b1 - a1 * b3;
+    result[keys[2]] = a1 * b2 - a2 * b1;
+
+    return result;
+  }
+}

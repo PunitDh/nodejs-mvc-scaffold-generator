@@ -21,7 +21,7 @@
         ><%= page+1 %></a
       >
     </li>
-    <% } %> <% if (parseInt(page) === totalPages) { %>
+    <% } %> <% if (parseInt(page) >= totalPages) { %>
     <li class="page-item disabled">
       <span class="page-link">Next</span>
     </li>

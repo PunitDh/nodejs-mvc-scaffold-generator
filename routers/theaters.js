@@ -65,8 +65,10 @@ theaters.post("/delete/:id", (req, res, next) => {
 theaters.get("/:id", (req, res, next) => {
   try {
     const theater = Theater.find(req.params.id);
+    const { movies } = theater;
     return res.render("theaters/theater", {
       theater: res.locals.marked(theater),
+      movies,
     });
   } catch (e) {
     next(e);

@@ -223,23 +223,6 @@ export const ReadOnlyColumns = [
   "_csrf_token",
 ];
 
-export const SearchExcludedColumns = [
-  "id",
-  "created_at",
-  "updated_at",
-  "password",
-  "_csrf_token",
-];
-
-/**
- * The list of columns that are to be excluded from search results
- * @type {string[]}
- */
-export const SearchResultExcludedColumns = Object.freeze([
-  "password",
-  "_csrf_token",
-]);
-
 // export const SearchResultTitleColumns = ['name', 'title', 'first_name', 'firstname', 'last_name', 'lastname']
 
 /**

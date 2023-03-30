@@ -2,12 +2,12 @@ import { SQLQueryBuilder } from "../builders/SQLQueryBuilder.js";
 import Model from "./Model.js";
 
 class _Migration extends Model {
-  constructor({ version, filename, query, created_at }) {
+  constructor(data = {}) {
     super();
-    this.version = version;
-    this.created_at = created_at;
-    this.query = query;
-    this.filename = filename;
+    this.version = data.version;
+    this.created_at = data.created_at;
+    this.query = data.query;
+    this.filename = data.filename;
   }
 
   static add(filename, query) {

@@ -4,7 +4,10 @@ import {{Model}} from "../{{location}}/{{Model}}.js";
 import {{Model}} from "../{{../location}}/{{Model}}.js";
 {{/foreignKeys}}
 import { Flash } from "../bin/constants.js";
+import csrf from "../bin/middleware/csrf.js";
 const {{route}} = Router();
+
+{{route}}.use(csrf());
 
 {{route}}.get("/", (req, res, next) => {
   try {

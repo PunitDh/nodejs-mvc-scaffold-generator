@@ -1,4 +1,4 @@
-import Model from "../bin/domain/Model.js"
+import Model from "../bin/domain/Model.js";
 
 class User extends Model {
   constructor(data = {}) {

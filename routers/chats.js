@@ -3,7 +3,10 @@ import Chat from "../models/Chat.js";
 import { Flash } from "../bin/constants.js";
 import Message from "../models/Message.js";
 import openai from "../plugins/openai.js";
+import csrf from "../bin/middleware/csrf.js";
 const chats = Router();
+
+chats.use(csrf());
 
 chats.get("/", (req, res, next) => {
   try {

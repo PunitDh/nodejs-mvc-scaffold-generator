@@ -1,4 +1,4 @@
-import { SearchResultExcludedColumns } from "../constants.js";
+import MarkedSearchResult from "../domain/MarkedSearchResult.js";
 import SETTINGS from "./settings.js";
 
 /**
@@ -27,20 +27,21 @@ function markHTML(text, term, maxStringLength) {
  * @description Marks the search term in the values of the given object's properties
  * and returns the result object with the marked search term.
  * The function uses markHTML to mark the term in the object's values and
- * exclude SearchResultExcludedColumns from the search.
+ * exclude searchResultExcludedColumns from the search.
  * It also calculates a priority for each match based on the count of marked terms in the value.
  * @param {Object} dataObject The object whose properties will be searched for the given term.
  * @param {String} searchTerm The search term that will be marked in the values of the object's properties.
  * @param {Boolean} shortened: Whether to shorten the result
- * @returns {Object} An object with the priority of the search term in the values and the marked search term in the result object.
+ * @returns {MarkedSearchResult} An object with the priority of the search term in the values and the marked search term in the result object.
  */
 export function markSearchTerm(dataObject, searchTerm, shortened = false) {
   if (!searchTerm) return dataObject;
   const result = {};
   let priority = 0;
-  const { maxStringLength } = SETTINGS.views.pages.search;
+  const { maxStringLength, searchResultExcludedColumns } =
+    SETTINGS.views.pages.search;
   dataObject
-    .exclude(...SearchResultExcludedColumns)
+    .exclude(...searchResultExcludedColumns)
     .entries()
     .forEach(([key, value]) => {
       const { text, count } = markHTML(
@@ -51,7 +52,7 @@ export function markSearchTerm(dataObject, searchTerm, shortened = false) {
       priority += count;
       result[key] = text;
     });
-  return { priority, result };
+  return new MarkedSearchResult(result, priority);
 }
 
 export function getQueryFromURIComponent(uriComponent) {

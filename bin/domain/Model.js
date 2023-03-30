@@ -236,7 +236,11 @@ class Model {
 
     const queryBuilder = this.id ? updateQueryBuilder : insertQueryBuilder;
     // const values = [...columns.map((column) => this[column]), this.id];
-    return this.constructor.runQuery(queryBuilder, { updated_at: "DATETIME('now')", ...this }, true);
+    return this.constructor.runQuery(
+      queryBuilder,
+      { updated_at: "DATETIME('now')", ...this },
+      true
+    );
   }
 
   /**

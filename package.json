@@ -12,6 +12,7 @@
     "db:seed": "chmod u+x ./bin/generators/db_seed.sh && ./bin/generators/db_seed.sh",
     "model:generate": "node ./bin/generators/generate_model.js",
     "router:generate": "node ./bin/generators/generate_router.js",
+    "controller:generate": "node ./bin/generators/generate_router.js",
     "views:generate": "node ./bin/generators/generate_views.js",
     "migration:generate": "node ./bin/generators/generate_migration.js",
     "scaffold:generate": "chmod u+x ./bin/generators/scaffold_generate.sh && ./bin/generators/scaffold_generate.sh",

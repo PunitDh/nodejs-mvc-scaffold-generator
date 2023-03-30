@@ -34,7 +34,7 @@
         "excludedFields": ["id", "created_at", "updated_at", "_csrf_token"]
       },
       "index": {
-        "excludedFields": ["id", "_csrf_token"]
+        "excludedFields": ["id", "password", "_csrf_token"]
       },
       "_new": {},
       "edit": {},
@@ -44,7 +44,15 @@
       },
       "search": {
         "maxStringLength": 50,
-        "searchSuggestionLimit": 10
+        "searchSuggestionLimit": 10,
+        "searchExcludedColumns": [
+          "id",
+          "password",
+          "created_at",
+          "updated_at",
+          "_csrf_token"
+        ],
+        "searchResultExcludedColumns": ["password", "_csrf_token"]
       }
     }
   }

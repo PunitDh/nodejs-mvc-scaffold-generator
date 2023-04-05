@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS animals (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT,
+  color TEXT,
+  created_at DATE DEFAULT (DATETIME('NOW')),
+  updated_at DATE DEFAULT (DATETIME('NOW'))
+);

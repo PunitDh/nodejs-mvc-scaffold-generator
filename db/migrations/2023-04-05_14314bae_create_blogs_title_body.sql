@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS blogs (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT,
+  body TEXT,
+  created_at DATE DEFAULT (DATETIME('NOW')),
+  updated_at DATE DEFAULT (DATETIME('NOW'))
+);

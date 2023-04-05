@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS messages (
   role TEXT,
   content TEXT,
   tokens NUMERIC,
+  model TEXT,
   chat_id INTEGER,
   created_at DATE DEFAULT (DATETIME('NOW')),
   updated_at DATE DEFAULT (DATETIME('NOW')),

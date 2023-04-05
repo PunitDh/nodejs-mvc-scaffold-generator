@@ -14,45 +14,55 @@ import { generateCsrfToken } from "../bin/utils/token_generator.js";
 const lorem = new LoremIpsum();
 const maxCount = 10;
 
-const animals = RandomCollectionOf(maxCount, Animal).withProps({
-  name: () => faker.animal.type().capitalize(),
-  color: () => faker.color.human().capitalize(),
-});
-// .saveAll();
+String.prototype.capitalize = function () {
+  return this.split(/_| /)
+    .map((part) => part[0]?.toUpperCase() + part.slice(1).toLowerCase())
+    .join(" ");
+};
 
-const blogs = RandomCollectionOf(maxCount, Blog).withProps({
-  title: () => lorem.generateWords(3).capitalize(),
-  body: () => lorem.generateSentences(5),
-});
-// .saveAll();
+const animals = RandomCollectionOf(maxCount, Animal)
+  .withProps({
+    name: () => faker.animal.type().capitalize(),
+    color: () => faker.color.human().capitalize(),
+  })
+  .saveAll();
 
-const blogIds = (await Blog.all()).map((blog) => blog.id);
+const blogs = RandomCollectionOf(maxCount, Blog)
+  .withProps({
+    title: () => lorem.generateWords(3).capitalize(),
+    body: () => lorem.generateSentences(5),
+  })
+  .saveAll();
 
-const comments = RandomCollectionOf(maxCount, Comment).withProps({
-  blog_id: () => randomChoice(blogIds),
-  body: () => lorem.generateSentences(1),
-});
-// .saveAll();
+const blogIds = Blog.all().map((blog) => blog.id);
 
-const companies = RandomCollectionOf(maxCount, Company).withProps({
-  name: () => faker.company.name().capitalize(),
-  address: () =>
-    `${faker.address.streetAddress()}, ${faker.address.city()}, ${faker.address.state()}, ${faker.address.zipCode()}`,
-  number_of_employees: () => randomInteger(5, 150),
-});
-//.saveAll();
+const comments = RandomCollectionOf(maxCount, Comment)
+  .withProps({
+    blog_id: () => randomChoice(blogIds),
+    body: () => lorem.generateSentences(1),
+  })
+  .saveAll();
 
-const users = RandomCollectionOf(maxCount, User).withProps(() => {
-  const first_name = () => faker.name.firstName();
-  const last_name = () => faker.name.lastName();
-  return {
-    first_name,
-    last_name,
-    email: () => faker.internet.email(first_name(), last_name()),
-    password: () => hashed("1234"),
-    _csrf_token: () => generateCsrfToken(),
-  };
-});
-// .saveAll();
+const companies = RandomCollectionOf(maxCount, Company)
+  .withProps({
+    name: () => faker.company.name().capitalize(),
+    address: () =>
+      `${faker.address.streetAddress()}, ${faker.address.city()}, ${faker.address.state()}, ${faker.address.zipCode()}`,
+    number_of_employees: () => randomInteger(5, 150),
+  })
+  .saveAll();
+
+const users = RandomCollectionOf(maxCount, User)
+  .withProps(() => {
+    const first_name = () => faker.name.firstName();
+    const last_name = () => faker.name.lastName();
+    return {
+      first_name,
+      last_name,
+      email: () => faker.internet.email(first_name(), last_name()),
+      password: () => hashed("1234"),
+    };
+  })
+  .saveAll();
 
 console.log(animals, blogs, blogIds, comments, companies, users);

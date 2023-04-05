@@ -1,7 +1,7 @@
 import { randomInteger } from "../utils/num_utils.js";
 import "../utils/js_utils.js";
 
-class ObjectCollection {
+export class ObjectCollection {
   /**
    * Creates an ObjectCollection object that takes in a count and a class
    * @param {Number} count - The number of instances to be created
@@ -34,7 +34,7 @@ class ObjectCollection {
       .fill(null)
       .map(() => {
         const instance = new this.Model();
-        resultObj.entries().forEach(([key, value]) => {
+        Object.entries(resultObj).forEach(([key, value]) => {
           instance[key] = typeof value === "function" ? value() : value;
         });
         this.instances.push(instance);
